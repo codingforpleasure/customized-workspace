@@ -48,6 +48,7 @@ windows:
       # Synchronize all panes of this window, can be enabled before or after the pane commands run.
       # 'before' represents legacy functionality and will be deprecated in a future release, in favour of 'after'
       # synchronize: after
+      # should add: tmux set pane-border-format "#P: #{pane_current_command}" 
       panes:
         - source ~/bzdev-venv/bin/activate && cd ./bzdev && python ./bzdev.py env sync --id 91
         - source ~/bzdev-venv/bin/activate && cd ./bzdev && python ./bzdev.py env xdebug
