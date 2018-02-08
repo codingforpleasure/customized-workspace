@@ -51,6 +51,6 @@ windows:
       panes:
         - source ~/bzdev-venv/bin/activate && cd ./bzdev && python ./bzdev.py env sync --id 91
         - source ~/bzdev-venv/bin/activate && cd ./bzdev && python ./bzdev.py env xdebug
-        - source ~/bzdev-venv/bin/activate && cd ./bzdev && kubectl exec -it `kubectl get pods | grep dpl-bza | awk '{print $1}'` bash  && tail /var/log/blazemeter/php_errors.log
+        - source ~/bzdev-venv/bin/activate && cd ./bzdev && kubectl exec -it `kubectl get pods | grep dpl-bza | awk '{print $1}'` bash  && watch tail -n 20 /var/log/blazemeter/php_errors.log
   - server: 
   - logs:
