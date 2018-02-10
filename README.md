@@ -2,7 +2,17 @@
 
 
 Hotkeys:
+- Command + a = PREFIX
 
+- PREFIX + r = Reload the configuration file (tmux.conf)
+
+- PREFIX + k = Kill tmux server
+
+- PREFIX + \ = Creates vertical split
+
+- PREFIX + - = Creates horizontal split
+
+- PREFIX + : = Run Command in tmux
 
 ## prerequisites
 - tmuxinator (Create and manage tmux sessions easily)
