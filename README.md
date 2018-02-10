@@ -1,6 +1,11 @@
 # customized-workspace
 
 
+## prerequisites
+- tmuxinator (Create and manage tmux sessions easily)
+- tmux-themepack (https://github.com/jimeh/tmux-themepack)
+- fonts for the theme (https://github.com/powerline/fonts)
+
 Hotkeys:
 - Command + a = PREFIX
 
@@ -13,10 +18,6 @@ Hotkeys:
 - PREFIX + - = Creates horizontal split
 
 - PREFIX + : = Run Command in tmux
-
-## prerequisites
-- tmuxinator (Create and manage tmux sessions easily)
-
 
 
 In this repository you can find:
