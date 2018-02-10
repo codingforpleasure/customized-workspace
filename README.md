@@ -17,10 +17,10 @@ Hotkeys:
 
 - PREFIX + - = Creates horizontal split
 
-- PREFIX + : = Run Command in tmux
+- PREFIX + : = Run command in tmux
 
 
 In this repository you can find:
- - tmux.conf - Holds the configuration enviroment of tmux
+ - tmux.conf - Holds the configuration enviroment of tmux (should be located in the ~ directory)
  - backend-work - A template which consists multiple panes in each window for viewing easily various logs. main paurpose is to 
-                  easily diagnose the system.
+                  easily diagnose the system (should be located in )
