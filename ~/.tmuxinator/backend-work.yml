@@ -1,7 +1,7 @@
 # ~/.tmuxinator/backend-work.yml
 
 name: backend-work
-root: ~/repos/
+root: ~/
 
 # Optional tmux socket
 # socket_name: foo
@@ -43,18 +43,13 @@ root: ~/repos/
 # post: tmux -CC attach -t backend-work
 
 windows:
-  - Debug/Logs:
-      layout: tiled
+  - editor:
+      layout: main-vertical
       # Synchronize all panes of this window, can be enabled before or after the pane commands run.
       # 'before' represents legacy functionality and will be deprecated in a future release, in favour of 'after'
       # synchronize: after
-      # should add: tmux set pane-border-format "#P: #{pane_current_command}"
-      # should add: export TERM=xterm for clearing the pods screen
-
       panes:
-          - source ~/bzdev-venv/bin/activate && cd ./bzdev && python ./bzdev.py env sync --id 91
-          - source ~/bzdev-venv/bin/activate && cd ./bzdev && python ./bzdev.py env xdebug
-          - source ~/bzdev-venv/bin/activate && cd ./bzdev && kubectl exec -it `kubectl get pods | grep dpl-bza | awk '{print $1}'` bash && watch tail -n 20 /var/log/blazemeter/php_errors.log
-          - source ~/bzdev-venv/bin/activate && cd ./bzdev && kubectl exec -it `kubectl get pods | grep dpl-bza | awk '{print $1}'` bash  && watch tail -n 20 /var/log/blazemeter/error.log
-          - source ~/bzdev-venv/bin/activate && cd ./bzdev && kubectl exec -it `kubectl get pods | grep dpl-bza | awk '{print $1}'` bash  && watch tail -n 20 /var/log/blazemeter/blazemeter.log
-  - Console:
+        - vim
+        - guard
+  - server: bundle exec rails s
+  - logs: tail -f log/development.log
