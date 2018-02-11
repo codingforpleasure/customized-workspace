@@ -1,14 +1,15 @@
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/cohgi01/.oh-my-zsh
+  export ZSH=/Users/cohgi01/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="robbyrussell"
-
+# ZSH_THEME="robbyrussell"
+ZSH_THEME="af-magic"
 # Set list of themes to load
 # Setting this variable when ZSH_THEME=random
 # cause zsh load theme from this variable instead of
@@ -64,6 +65,8 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
+export EDITOR='vim'
+#export TMUXINATOR_CONFIG='~/.tmuxinator'
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -92,4 +95,9 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias ll="gls -la --color=auto --group-directories-first"
+
+alias  tkill="tmux kill-server"
+alias  mmux="tmuxinator backend-work2"
+export BZDEV_ENV_ID=91
+source ~/.bin/tmuxinator.zsh
+source ~/bzdev-venv/bin/activate
