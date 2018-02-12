@@ -52,9 +52,9 @@ windows:
       # should add: export TERM=xterm for clearing the pods screen
 
       panes:
-          - source ~/bzdev-venv/bin/activate && cd ./bzdev && python ./bzdev.py env sync --id 91
-          - source ~/bzdev-venv/bin/activate && cd ./bzdev && python ./bzdev.py env xdebug
-          - source ~/bzdev-venv/bin/activate && cd ./bzdev && kubectl exec -it `kubectl get pods | grep dpl-bza | awk '{print $1}'` bash -- -c 'TERM=xterm watch tail -n 20 /var/log/blazemeter/php_errors.log'
-          - source ~/bzdev-venv/bin/activate && cd ./bzdev && kubectl exec -it `kubectl get pods | grep dpl-bza | awk '{print $1}'` bash -- -c 'TERM=xterm watch watch tail -n 20 /var/log/blazemeter/error.log'
-          - source ~/bzdev-venv/bin/activate && cd ./bzdev && kubectl exec -it `kubectl get pods | grep dpl-bza | awk '{print $1}'` bash -- -c 'TERM=xterm watch tail -n 20 /var/log/blazemeter/blazemeter.log'
+          - source ~/bzdev-venv/bin/activate && printf '\033]2;Sync code...\033\\' && tmux set -g pane-border-format "#{pane_index} \\#T" && cd ./bzdev && python ./bzdev.py env sync --id 91
+          - source ~/bzdev-venv/bin/activate && printf '\033]2;Xdebug state\033\\' && tmux set -g pane-border-format "#{pane_index} \\#T" && cd ./bzdev && python ./bzdev.py env xdebug
+          - source ~/bzdev-venv/bin/activate && printf '\033]2;php_errors.log\033\\' && tmux set -g pane-border-format "#{pane_index} \\#T" && cd ./bzdev && kubectl exec -it `kubectl get pods | grep dpl-bza | awk '{print $1}'` bash -- -c 'TERM=xterm watch tail -n 20 /var/log/blazemeter/php_errors.log'
+          - source ~/bzdev-venv/bin/activate && printf '\033]2;error.log\033\\' && tmux set -g pane-border-format "#{pane_index} \\#T" && cd ./bzdev && kubectl exec -it `kubectl get pods | grep dpl-bza | awk '{print $1}'` bash -- -c 'TERM=xterm watch watch tail -n 20 /var/log/blazemeter/error.log'
+          - source ~/bzdev-venv/bin/activate && printf '\033]2;blazemeter.log\033\\' && tmux set -g pane-border-format "#{pane_index} \\#T" &&  cd ./bzdev && kubectl exec -it `kubectl get pods | grep dpl-bza | awk '{print $1}'` bash -- -c 'TERM=xterm watch tail -n 20 /var/log/blazemeter/blazemeter.log'
   - Console:
