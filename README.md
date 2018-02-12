@@ -2,7 +2,8 @@
 
 
 ## prerequisites
-- tmuxinator (Create and manage tmux sessions easily)
+- tmux (I'm using tmux 2.6)
+- tmuxinator - Create and manage tmux sessions easily (I'm using tmuxinator 0.10.1)
 - tmux-themepack (https://github.com/jimeh/tmux-themepack)
 - fonts for the theme (https://github.com/powerline/fonts)
 
@@ -24,3 +25,7 @@ In this repository you can find:
  - tmux.conf - Holds the configuration enviroment of tmux (should be located in the ~ directory)
  - backend-work - A template which consists multiple panes in each window for viewing easily various logs. main paurpose is to 
                   easily diagnose the system (should be located in )
+
+
+For running it, enter:
+tmuxinator backend-work
