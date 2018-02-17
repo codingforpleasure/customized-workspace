@@ -20,6 +20,10 @@ Hotkeys:
 
 - PREFIX + : = Run command in tmux
 
+- PREFIX + <arrows> = navigate between panes
+ 
+- PREFIX + <window number> = Jump to the Corresponding window number
+
 
 In this repository you can find:
  - tmux.conf - Holds the configuration enviroment of tmux (should be located in the ~ directory)
