@@ -8,11 +8,16 @@
 - fonts for the theme (https://github.com/powerline/fonts)
 
 Hotkeys:
+
+
+
+Command description | Hotkey
+------------ | -------------
+Reload the configuration file (tmux.conf) | PREFIX + r
+Kill tmux server | PREFIX + k
+
+
 - Command + a = PREFIX
-
-- PREFIX + r = Reload the configuration file (tmux.conf)
-
-- PREFIX + k = Kill tmux server
 
 - PREFIX + \ = Creates vertical split
 
