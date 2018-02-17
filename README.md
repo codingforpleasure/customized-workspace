@@ -10,26 +10,18 @@
 Hotkeys:
 
 
+- Command + a = PREFIX
 
 Command description | Hotkey
 ------------ | -------------
 Reload the configuration file (tmux.conf) | PREFIX + r
 Kill tmux server | PREFIX + k
-
-
-- Command + a = PREFIX
-
-- PREFIX + \ = Creates vertical split
-
-- PREFIX + - = Creates horizontal split
-
-- PREFIX + : = Run command in tmux
-
-- PREFIX + <arrows> = navigate between panes
- 
-- PREFIX + <window number> = Jump to the Corresponding window number
-
-- PREFIX + c = Create new window
+Creates vertical split | PREFIX + \
+Creates horizontal split | PREFIX + -
+Run command in tmux | PREFIX + :
+Navigate between panes | PREFIX + <arrows> 
+Jump to the specific window number | PREFIX + <window number>
+Create new window | PREFIX + c
 
 
 In this repository you can find:
