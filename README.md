@@ -22,7 +22,7 @@ Run command in tmux | PREFIX + \:
 Navigate between panes | PREFIX + \<arrows\> 
 Jump to the specific window number | PREFIX + \<window number\>
 Create new window | PREFIX + c
-
+choose a session from a list | Prefix + s
 
 In this repository you can find:
  - tmux.conf - Holds the configuration enviroment of tmux (should be located in the ~ directory)
