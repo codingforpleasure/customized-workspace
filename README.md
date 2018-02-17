@@ -24,6 +24,8 @@ Hotkeys:
  
 - PREFIX + <window number> = Jump to the Corresponding window number
 
+- PREFIX + c = Create new window
+
 
 In this repository you can find:
  - tmux.conf - Holds the configuration enviroment of tmux (should be located in the ~ directory)
