@@ -25,6 +25,7 @@ Create new window | PREFIX + c
 Choose a session from a list | PREFIX + s
 
 Copying and pasting:
+
 Command description | Hotkey
 ------------ | -------------
 Copy-mode | PREFIX + Esc
