@@ -24,6 +24,13 @@ Jump to the specific window number | PREFIX + \<window number\>
 Create new window | PREFIX + c
 Choose a session from a list | PREFIX + s
 
+Copying and pasting:
+Command description | Hotkey
+------------ | -------------
+Copy-mode | PREFIX + Esc
+marking text | v (in Copy mode)
+copying/yanking text | y (in Copy mode)
+
 In this repository you can find:
  - tmux.conf - Holds the configuration enviroment of tmux (should be located in the ~ directory)
  - backend-work - A template which consists multiple panes in each window for viewing easily various logs. main paurpose is to 
