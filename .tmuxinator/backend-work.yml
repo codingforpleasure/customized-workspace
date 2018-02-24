@@ -1,4 +1,5 @@
-# ~/.tmuxinator/backend-work.yml
+# The path to this file should be either:
+# ~/.tmuxinator/backend-work.yml   Or   ~/.config/tmuxinator/backend-work.yml
 
 name: backend-work
 root: ~/repos/
