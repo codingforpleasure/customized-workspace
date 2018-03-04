@@ -1,14 +1,46 @@
-# customized-workspace
+# Project Title
 
+Makes your workflow much simpler and faster
 
-## prerequisites
+## Getting Started
+
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+
+### Prerequisites
+
+What things you need to install the software and how to install them
+
+```
 - tmux (I'm using tmux 2.6)
 - tmuxinator - Create and manage tmux sessions easily (I'm using tmuxinator 0.10.1)
 - tmux-themepack (https://github.com/jimeh/tmux-themepack)
 - fonts for the theme (https://github.com/powerline/fonts)
+```
 
-Hotkeys:
+Soon I'll be posting a script for doing all those installs in a snap of a finger.
 
+### Installing
+
+A step by step series of examples that tell you have to get a development env running
+
+clone this repo
+
+```
+git clone https://github.com/codingforpleasure/customized-workspace.git
+```
+
+In this repository you can find:
+ - tmux.conf - Holds the configuration enviroment of tmux (should be located in the ~ directory)
+ - backend-work - A template which consists multiple panes in each window for viewing easily various logs. main paurpose is to 
+                  easily diagnose the system (should be located in )
+
+```
+until finished
+```
+
+End with an example of getting some data out of the system or using it for a little demo
+
+## Get familiar with the hotkeys:
 
 - Command + a = PREFIX
 
@@ -32,12 +64,54 @@ Copy-mode | PREFIX + Esc
 marking text | v (in Copy mode)
 copying/yanking text | y (in Copy mode)
 
-In this repository you can find:
- - tmux.conf - Holds the configuration enviroment of tmux (should be located in the ~ directory)
- - backend-work - A template which consists multiple panes in each window for viewing easily various logs. main paurpose is to 
-                  easily diagnose the system (should be located in )
 
+### Break down into end to end tests
 
-For running it, enter:
+Explain what these tests test and why
+
+```
+Give an example
+```
+
+### And coding style tests
+
+Explain what these tests test and why
+
+```
+Give an example
+```
+
+## Running
 
 tmuxinator backend-work
+
+## Built With
+
+* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
+* [Maven](https://maven.apache.org/) - Dependency Management
+* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+
+## Contributing
+
+Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
+
+## Versioning
+
+We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
+
+## Authors
+
+* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/CodingForpleasure)
+
+See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+
+## Acknowledgments
+
+* Hat tip to anyone who's code was used
+* Inspiration
+* etc
+
