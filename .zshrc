@@ -100,4 +100,3 @@ alias  tkill="tmux kill-server"
 alias  mmux="tmuxinator backend-work2"
 export BZDEV_ENV_ID=91
 source ~/.bin/tmuxinator.zsh
-source ~/bzdev-venv/bin/activate
