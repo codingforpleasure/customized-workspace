@@ -44,7 +44,7 @@ root: ~/repos/
 # post: tmux -CC attach -t backend-work
 
 windows:
-  - Debug/Logs:
+  - XDebug + Sync:
       layout: tiled
       # Synchronize all panes of this window, can be enabled before or after the pane commands run.
       # 'before' represents legacy functionality and will be deprecated in a future release, in favour of 'after'
@@ -53,10 +53,13 @@ windows:
       # should add: export TERM=xterm for clearing the pods screen
 
       panes:
-          - source ~/bzdev-venv/bin/activate && printf '\033]2;Sync code...\033\\' && tmux set -g pane-border-format "#{pane_index} \\#T" && cd ./bzdev && python ./bzdev.py env sync --id 91
-          - source ~/bzdev-venv/bin/activate && printf '\033]2;Xdebug state\033\\' && tmux set -g pane-border-format "#{pane_index} \\#T" && cd ./bzdev && python ./bzdev.py env xdebug
-          - source ~/bzdev-venv/bin/activate && printf '\033]2;php_errors.log\033\\' && tmux set -g pane-border-format "#{pane_index} \\#T" && cd ./bzdev && kubectl exec -it `kubectl get pods | grep dpl-bza | awk '{print $1}'` bash -- -c 'TERM=xterm watch tail -n 20 /var/log/blazemeter/php_errors.log'
-          - source ~/bzdev-venv/bin/activate && printf '\033]2;error.log\033\\' && tmux set -g pane-border-format "#{pane_index} \\#T" && cd ./bzdev && kubectl exec -it `kubectl get pods | grep dpl-bza | awk '{print $1}'` bash -- -c 'TERM=xterm watch tail -n 20 /var/log/blazemeter/error.log'
-          - source ~/bzdev-venv/bin/activate && printf '\033]2;blazemeter.log\033\\' && tmux set -g pane-border-format "#{pane_index} \\#T" &&  cd ./bzdev && kubectl exec -it `kubectl get pods | grep dpl-bza | awk '{print $1}'` bash -- -c 'TERM=xterm watch tail -n 20 /var/log/blazemeter/blazemeter.log'
+          - printf '\033]2;Sync code...\033\\' && tmux set -g pane-border-format "#{pane_index} \\#T" && bzdev env sync --id 91
+          - printf '\033]2;Xdebug state\033\\' && tmux set -g pane-border-format "#{pane_index} \\#T" && bzdev env xdebug
+  - php_errors.log:
+      layout: tiled
+      panes:
+          - kubectl exec -i $(kubectl get pods -l role=bza -o jsonpath="{.items[0].metadata.name}") -- sh -c "tail -f /var/log/blazemeter/php_errors.log"  | grcat php_error_color.config
+  - blazemeter.log:
+            kubectl exec -i $(kubectl get pods -l role=bza -o jsonpath="{.items[0].metadata.name}") -- sh -c "tail -f /var/log/blazemeter/blazemeter.log.json" | jq -r          
   - Console: cd ~/repos/a.blazemeter.com/ && clear
   - vim: 
