@@ -10,7 +10,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 The things you need to install are:
 
-```
+
 - tmux (I'm using tmux 2.6)
 - tmuxinator - Create and manage tmux sessions easily (I'm using tmuxinator 0.10.1)
 - tmux-themepack [link](https://github.com/jimeh/tmux-themepack)
@@ -18,8 +18,8 @@ The things you need to install are:
 - generic colouriser (brew install grc)
 - Command-line productivity booster (brew install fasd)
 - git Autocomplete [link](https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.zsh)
-[contributors](https://github.com/your/project/contributors)
-```
+
+
 
 Soon I'll be posting a script for doing all those installs in a snap of a finger.
 
