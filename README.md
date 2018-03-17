@@ -13,10 +13,11 @@ The things you need to install are:
 ```
 - tmux (I'm using tmux 2.6)
 - tmuxinator - Create and manage tmux sessions easily (I'm using tmuxinator 0.10.1)
-- tmux-themepack (https://github.com/jimeh/tmux-themepack)
-- fonts for the theme (https://github.com/powerline/fonts)
+- tmux-themepack [link](https://github.com/jimeh/tmux-themepack)
+- fonts for the theme [link](https://github.com/powerline/fonts)
 - generic colouriser (brew install grc)
 - Command-line productivity booster (brew install fasd)
+- git Autocomplete [link](https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.zsh)
 ```
 
 Soon I'll be posting a script for doing all those installs in a snap of a finger.
