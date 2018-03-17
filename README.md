@@ -15,6 +15,7 @@ What things you need to install the software and how to install them
 - tmuxinator - Create and manage tmux sessions easily (I'm using tmuxinator 0.10.1)
 - tmux-themepack (https://github.com/jimeh/tmux-themepack)
 - fonts for the theme (https://github.com/powerline/fonts)
+- generic colouriser (brew install grc)
 ```
 
 Soon I'll be posting a script for doing all those installs in a snap of a finger.
