@@ -18,6 +18,7 @@ The things you need to install are:
 - generic colouriser (brew install grc)
 - Command-line productivity booster (brew install fasd)
 - git Autocomplete [link](https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.zsh)
+[contributors](https://github.com/your/project/contributors)
 ```
 
 Soon I'll be posting a script for doing all those installs in a snap of a finger.
