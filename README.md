@@ -16,6 +16,7 @@ What things you need to install the software and how to install them
 - tmux-themepack (https://github.com/jimeh/tmux-themepack)
 - fonts for the theme (https://github.com/powerline/fonts)
 - generic colouriser (brew install grc)
+- Command-line productivity booster (brew install fasd)
 ```
 
 Soon I'll be posting a script for doing all those installs in a snap of a finger.
