@@ -53,7 +53,7 @@ windows:
       # should add: export TERM=xterm for clearing the pods screen
 
       panes:
-          - printf '\033]2;Sync code...\033\\' && tmux set -g pane-border-format "#{pane_index} \\#T" && bzdev env sync --id 91
+          - printf '\033]2;Sync code...\033\\' && tmux set -g pane-border-format "#{pane_index} \\#T" && bzdev env sync --id $BZDEV_ENV_ID
           - printf '\033]2;Xdebug state\033\\' && tmux set -g pane-border-format "#{pane_index} \\#T" && bzdev env xdebug
   - php_errors.log:
       layout: tiled
