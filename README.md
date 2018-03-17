@@ -8,7 +8,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-What things you need to install the software and how to install them
+The things you need to install are:
 
 ```
 - tmux (I'm using tmux 2.6)
@@ -97,7 +97,7 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 ## Authors
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/CodingForpleasure)
+* **Gil Cohen** - *Initial work* - [CodingForPleasure](https://github.com/CodingForpleasure)
 
 See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
 
