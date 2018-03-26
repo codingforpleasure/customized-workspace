@@ -97,6 +97,12 @@ export EDITOR='vim'
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 alias  tkill="tmux kill-server"
-alias  mmux="tmuxinator backend-work2"
+alias ll="ls -la"
+alias  mmux="tmuxinator backend-work"
+#alias  history="fc -li 100"
+alias  k="kubectl"
+alias tunnel-develop='kubectl get pods -l role=mongo -o jsonpath="{.items[0].metadata.name}"'
+alias port-forward-develop='kubectl port-forward "$(tunnel-develop)" 27018:27017'
 export BZDEV_ENV_ID=91
+fpath=(~/.zsh $fpath)
 source ~/.bin/tmuxinator.zsh
