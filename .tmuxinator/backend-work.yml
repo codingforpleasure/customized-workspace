@@ -44,6 +44,7 @@ root: ~/repos/
 # post: tmux -CC attach -t backend-work
 
 windows:
+  - Console: cd ~/repos/a.blazemeter.com/ && clear
   - XDebug + Sync:
       layout: tiled
       # Synchronize all panes of this window, can be enabled before or after the pane commands run.
@@ -59,10 +60,9 @@ windows:
       layout: tiled
       panes:
           - kubectl exec -i $(kubectl get pods -l role=bza -o jsonpath="{.items[0].metadata.name}") -- sh -c "tail -f /var/log/blazemeter/php_errors.log"  | grcat php_error_color.config
+  - pods-state:
+          - watch -n 3 'kubectl get pods'      
   - blazemeter.log:
             kubectl exec -i $(kubectl get pods -l role=bza -o jsonpath="{.items[0].metadata.name}") -- sh -c "tail -f /var/log/blazemeter/blazemeter.log.json" | jq -r          
   - bza:
         kubectl exec -i $(kubectl get pods -l role=bza -o jsonpath="{.items[0].metadata.name}") -it bash
-
-  - Console: cd ~/repos/a.blazemeter.com/ && clear
-  - vim: 
