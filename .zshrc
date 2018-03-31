@@ -118,4 +118,4 @@ eval "$(fasd --init auto)"    # Get fasd working, initialization code
 
 export PATH="/usr/local/opt/mongodb@3.4/bin:$PATH"
 export PATH="~/useful-scripts:$PATH"
-alias unit-tests="zsh unit-test-environment.zsh"
+alias unit-tests="zsh ~/useful-scripts/unit-test-environment.zsh"
