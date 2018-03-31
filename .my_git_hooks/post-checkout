@@ -19,6 +19,16 @@ colorful_echo()
 
 # Should remove leftovers from mondator output:
 # rm -rf src/blazemeter/Model/Base
-colorful_echo yellow "You have moved branch, running make"
+# Running make only in context of swithiching branches
+# and not in case of restoring working tree files.
+# so the flag moved_branch indicating whether the checkout was a branch checkout 
+# (changing branches, flag=1). 
 
-make
+moved_branch=$3
+
+if [ $moved_branch -eq 1 ]
+then
+	new_branch_name=`git branch | grep \* | cut -d ' ' -f2`
+	colorful_echo yellow "You have moved to branch:\n${new_branch_name}\nrunning make..."
+	make
+fi
