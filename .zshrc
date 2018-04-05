@@ -105,17 +105,28 @@ alias  k="kubectl"
 alias tunnel-develop='kubectl get pods -l role=mongo -o jsonpath="{.items[0].metadata.name}"'
 alias port-forward-develop='kubectl port-forward "$(tunnel-develop)" 27018:27017'
 
+# https://kubernetes.io/docs/reference/kubectl/cheatsheet/
+source <(kubectl completion zsh)
+
+# k get pods --all-namespaces  | grep jenkins-qa
 alias port-forward-qa="kubectl --namespace=ns-jenkins port-forward dpl-mongo-79-jenkins-qa-3717381995-xrnzq 27019:27017"
 
 
 alias port-forward-ci="kubectl --namespace=ns-jenkins port-forward dpl-mongo-67-jenkins-ci-2339133084-f2rdb 27018:27017"
 
 #export DISABLE_AUTO_TITLE=true
-export BZDEV_ENV_ID=91
+
 fpath=(~/.zsh $fpath)
 source ~/.bin/tmuxinator.zsh
 eval "$(fasd --init auto)"    # Get fasd working, initialization code
 
 export PATH="/usr/local/opt/mongodb@3.4/bin:$PATH"
 export PATH="~/useful-scripts:$PATH"
+export PATH="/usr/local/opt/php@5.6/sbin:$PATH"
+export BZDEV_ENV_ID=91
+
 alias unit-tests="zsh ~/useful-scripts/unit-test-environment.zsh"
+
+
+export PATH="/usr/local/opt/php@5.6/bin:$PATH"
+

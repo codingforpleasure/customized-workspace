@@ -26,23 +26,29 @@ colorful_echo()
 		echo -e "$text"
 }
 
-get_time=`date | awk '{print $4}'`	
+if [ -n "$TMUX" ];
+then
+	get_time=`date | awk '{print $4}'`	
 
-colorful_echo yellow "[${get_time}]: Bringing down local-db ( Both mongo server and Redis-server)"
+	colorful_echo yellow "[${get_time}]: Bringing down local-db ( Both mongo server and Redis-server)"
 
-pkill -9 mongod
-pkill -9 redis-server
+	pkill -9 mongod
+	pkill -9 redis-server
+	colorful_echo green "[${get_time}]: Bringing up local-db both mongo server and Redis-server."
 
-colorful_echo green "[${get_time}]: Bringing up local-db both mongo server and Redis-server."
+	name='backend-work'
+	window_number='7'
+	window_name='db-unit-test'
 
-name='backend-work'
-window_number='7'
-window_name='db-unit-test'
+	tmux new-window -t $name:$window_number -n $window_name
+	tmux select-window -t $name:$window_number
+	tmux split-window -v -t $name:$window_number
 
-tmux new-window -t $name:$window_number -n $window_name
-tmux select-window -t $name:$window_number
-tmux split-window -v -t $name:$window_number
+	# Now run the processess
+	tmux send-keys -t $name:$window_number.1 'mongod --verbose' C-m #C-m is like pressing Enter
+	tmux send-keys -t $name:$window_number.2 'redis-server' C-m
+else
+	colorful_echo red "You should be in TMUX ( tmux ROCKS! ),\notherwise this script won't work."
+fi
 
-# Now run the processess
-tmux send-keys -t $name:$window_number.1 'mongod --verbose' C-m #C-m is like pressing Enter
-tmux send-keys -t $name:$window_number.2 'redis-server' C-m
+
