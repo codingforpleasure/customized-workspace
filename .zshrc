@@ -120,13 +120,14 @@ fpath=(~/.zsh $fpath)
 source ~/.bin/tmuxinator.zsh
 eval "$(fasd --init auto)"    # Get fasd working, initialization code
 
+export PATH="/usr/local/opt/php@5.6/bin:$PATH"
 export PATH="/usr/local/opt/mongodb@3.4/bin:$PATH"
 export PATH="~/useful-scripts:$PATH"
 export PATH="/usr/local/opt/php@5.6/sbin:$PATH"
 export BZDEV_ENV_ID=91
 
-alias unit-tests="zsh ~/useful-scripts/unit-test-environment.zsh"
-
-
-export PATH="/usr/local/opt/php@5.6/bin:$PATH"
-
+alias unit-tests-db="zsh ~/useful-scripts/unit-test-environment.zsh"
+alias get-php-errors="zsh ~/useful-scripts/get-php-errors.zsh"
+alias smart-tail="zsh ~/useful-scripts/smart-tail.zsh"
+alias connect-bza-pod="zsh ~/useful-scripts/connect-bza-pod.zsh"
+alias connect-mongo-pod="zsh ~/useful-scripts/connect-mongo-pod.zsh"
