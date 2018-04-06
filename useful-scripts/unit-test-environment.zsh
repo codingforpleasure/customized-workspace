@@ -50,5 +50,3 @@ then
 else
 	colorful_echo red "You should be in TMUX ( tmux ROCKS! ),\notherwise this script won't work."
 fi
-
-
