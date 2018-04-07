@@ -42,9 +42,9 @@ In this repository you can find:
  - Some useful scripts
 
 ## Running
-
+```
 tmuxinator backend-work
-
+```
 ## Bring-up unit-test environment
 
 ```
@@ -75,23 +75,6 @@ Command description | Hotkey
 Copy-mode | PREFIX + Esc
 marking text | v (in Copy mode)
 copying/yanking text | y (in Copy mode)
-
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
 
 ## Contributing
 
