@@ -37,7 +37,7 @@ In this repository you can find:
  - tmux.conf - Holds the configuration enviroment of tmux (should be located in the ~ directory)
  - backend-work - A template which consists multiple panes in each window for viewing easily various logs. main paurpose is to 
                   easily diagnose the system (should be located in ~/.config/tmuxinamtor/backend-work.yml)
- -.zshrc - configured to work well on the home directory.
+ - .zshrc - configured, works well. place it in the home directory.
  - git hooks (makes life easier)
  - Some useful scripts
 
