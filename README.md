@@ -2,7 +2,7 @@
 
 Makes your workflow much simpler and faster
 
-<img src="https://github.com/codingforpleasure/customized-workspace/blob/master/images/demo_tmux.gif" width="2000" height="800" />
+<img src="https://github.com/codingforpleasure/customized-workspace/blob/master/images/demo_tmux.gif" width="2000" height="600" />
 
 ## Getting Started
 
