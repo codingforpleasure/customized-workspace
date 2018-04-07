@@ -6,7 +6,7 @@ Makes your workflow much simpler and faster
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
 ### Prerequisites
 
@@ -27,8 +27,6 @@ Soon I'll be posting a script for doing all those installs in a snap of a finger
 
 ### Installing
 
-A step by step series of examples that tell you have to get a development env running
-
 clone this repo
 
 ```
@@ -38,13 +36,21 @@ git clone https://github.com/codingforpleasure/customized-workspace.git
 In this repository you can find:
  - tmux.conf - Holds the configuration enviroment of tmux (should be located in the ~ directory)
  - backend-work - A template which consists multiple panes in each window for viewing easily various logs. main paurpose is to 
-                  easily diagnose the system (should be located in )
+                  easily diagnose the system (should be located in ~/.config/tmuxinamtor/backend-work.yml)
+ -.zshrc - configured to work well on the home directory.
+ - git hooks (makes life easier)
+ - Some useful scripts
+
+## Running
+
+tmuxinator backend-work
+
+## Bring-up unit-test environment
 
 ```
-until finished
+unit-tests-db
 ```
-
-End with an example of getting some data out of the system or using it for a little demo
+* You can even easily add this command to the git push hook I have added.
 
 ## Get familiar with the hotkeys:
 
@@ -86,10 +92,6 @@ Explain what these tests test and why
 ```
 Give an example
 ```
-
-## Running
-
-tmuxinator backend-work
 
 ## Contributing
 
