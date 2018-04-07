@@ -38,6 +38,7 @@ In this repository you can find:
  - backend-work - A template which consists multiple panes in each window for viewing easily various logs. main paurpose is to 
                   easily diagnose the system (should be located in ~/.config/tmuxinamtor/backend-work.yml)
  - .zshrc - configured, works well. place it in the home directory.
+ - multitail.conf - Coloring specific words by regex, should be placed in ~/.config/multitail directory.
  - git hooks (makes life easier)
  - Some useful scripts
 
