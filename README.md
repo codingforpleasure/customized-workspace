@@ -51,7 +51,7 @@ tmuxinator backend-work
 ```
 unit-tests-db
 ```
-* You can even easily add this command to the git pre-push hook which was added here.
+`You can even easily add this command to the git pre-push hook which was added here.`
 
 ## Get familiar with the hotkeys:
 
@@ -100,4 +100,3 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 * Hat tip to anyone who's code was used
 * Inspiration
 * etc
-
