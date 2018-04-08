@@ -39,7 +39,7 @@ In this repository you can find:
                   easily diagnose the system (should be located in ~/.config/tmuxinamtor/backend-work.yml)
  - .zshrc - configured, works well. place it in the home directory.
  - multitail.conf - Coloring specific words by regex, should be placed in ~/.config/multitail directory.
- - git hooks (makes life easier)
+ - git hooks (makes life easier) -  [Link](https://github.com/codingforpleasure/customized-workspace/tree/master/.my_git_hooks)
  - Some useful scripts
 
 ## Running
@@ -51,7 +51,7 @@ tmuxinator backend-work
 ```
 unit-tests-db
 ```
-* You can even easily add this command to the git push hook I have added.
+* You can even easily add this command to the git pre-push hook which was added here.
 
 ## Get familiar with the hotkeys:
 
