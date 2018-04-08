@@ -28,7 +28,6 @@ Soon I'll be posting a script for doing all those installs in a snap of a finger
 ### Installing
 
 clone this repo
-
 ```
 git clone https://github.com/codingforpleasure/customized-workspace.git
 ```
@@ -47,7 +46,6 @@ In this repository you can find:
 tmuxinator backend-work
 ```
 ## Bring-up unit-test environment
-
 ```
 unit-tests-db
 ```
