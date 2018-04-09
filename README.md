@@ -72,6 +72,7 @@ Copying and pasting:
 Command description | Hotkey
 ------------ | -------------
 Copy-mode | PREFIX + Esc
+Search for text | / (in Copy mode)
 marking text | v (in Copy mode)
 copying/yanking text | y (in Copy mode)
 
