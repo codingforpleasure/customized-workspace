@@ -45,23 +45,20 @@ root: ~/repos/
 
 windows:
   - Console: cd ~/repos/a.blazemeter.com/ && clear
-  - Sync:
+  - Sync: bzdev env sync --id $BZDEV_ENV_ID
       # Synchronize all panes of this window, can be enabled before or after the pane commands run.
       # 'before' represents legacy functionality and will be deprecated in a future release, in favour of 'after'
       # synchronize: after
       # should add: tmux set pane-border-format "#P: #{pane_current_command}"
       # should add: export TERM=xterm for clearing the pods screen
+      #- printf '\033]2;Sync code...\033\\' && tmux set -g pane-border-format "#{pane_index} \\#T" && bzdev env sync --id $BZDEV_ENV_ID
+      #- printf '\033]2;Xdebug state\033\\' && tmux set -g pane-border-format "#{pane_index} \\#T" && bzdev env xdebug
+          
+  - php_errors.log: get-php-errors | smart-tail error enable-popup enable-text-2-speech
 
-          #- printf '\033]2;Sync code...\033\\' && tmux set -g pane-border-format "#{pane_index} \\#T" && bzdev env sync --id $BZDEV_ENV_ID
-          #- printf '\033]2;Xdebug state\033\\' && tmux set -g pane-border-format "#{pane_index} \\#T" && bzdev env xdebug
-          - bzdev env sync --id $BZDEV_ENV_ID
-  - php_errors.log:
-      layout: tiled
-      panes:
-          - kubectl exec -i $(kubectl get pods -l role=bza -o jsonpath="{.items[0].metadata.name}") -- sh -c "tail -f /var/log/blazemeter/php_errors.log"  | grcat php_error_color.config
-  - pods-state:
-          - watch -n 3 'kubectl get pods'      
+  - pods-state: watch -n 3 'kubectl get pods'      
+
   - blazemeter.log:
-            kubectl exec -i $(kubectl get pods -l role=bza -o jsonpath="{.items[0].metadata.name}") -- sh -c "tail -f /var/log/blazemeter/blazemeter.log.json" | jq -r          
-  - bza:
-        kubectl exec -i $(kubectl get pods -l role=bza -o jsonpath="{.items[0].metadata.name}") -it bash
+            kubectl exec -i $(kubectl get pods -l role=bza -o jsonpath="{.items[0].metadata.name}") -- sh -c "tail -f /var/log/blazemeter/blazemeter.log.json" | jq -r
+  
+  - bza: connect-bza-pod
