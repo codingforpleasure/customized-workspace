@@ -37,16 +37,15 @@ then
 	colorful_echo green "[${get_time}]: Bringing up local-db both mongo server and Redis-server."
 
 	name='backend-work'
-	window_number='7'
 	window_name='db-unit-test'
 
-	tmux new-window -t $name:$window_number -n $window_name
-	tmux select-window -t $name:$window_number
-	tmux split-window -v -t $name:$window_number
+	tmux new-window -t $name -n $window_name
+	tmux select-window -t $name
+	tmux split-window -v -t $name
 
 	# Now run the processess
-	tmux send-keys -t $name:$window_number.1 'mongod --verbose' C-m #C-m is like pressing Enter
-	tmux send-keys -t $name:$window_number.2 'redis-server' C-m
+	tmux send-keys -t $window_name.1 'mongod --verbose' C-m #C-m is like pressing Enter
+	tmux send-keys -t $window_name.2 'redis-server' C-m
 else
 	colorful_echo red "You should be in TMUX ( tmux ROCKS! ),\notherwise this script won't work."
 fi
