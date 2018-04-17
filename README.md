@@ -2,9 +2,11 @@
 
 Makes your workflow much simpler and faster
 
+<img src="https://github.com/codingforpleasure/customized-workspace/blob/master/images/demo_tmux.gif" width="2000" height="600" />
+
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
 ### Prerequisites
 
@@ -25,10 +27,7 @@ Soon I'll be posting a script for doing all those installs in a snap of a finger
 
 ### Installing
 
-A step by step series of examples that tell you have to get a development env running
-
 clone this repo
-
 ```
 git clone https://github.com/codingforpleasure/customized-workspace.git
 ```
@@ -36,13 +35,21 @@ git clone https://github.com/codingforpleasure/customized-workspace.git
 In this repository you can find:
  - tmux.conf - Holds the configuration enviroment of tmux (should be located in the ~ directory)
  - backend-work - A template which consists multiple panes in each window for viewing easily various logs. main paurpose is to 
-                  easily diagnose the system (should be located in )
+                  easily diagnose the system (should be located in ~/.config/tmuxinamtor/backend-work.yml)
+ - .zshrc - configured, works well. place it in the home directory.
+ - multitail.conf - Coloring specific words by regex, should be placed in ~/.config/multitail directory.
+ - git hooks (makes life easier) -  [Link](https://github.com/codingforpleasure/customized-workspace/tree/master/.my_git_hooks)
+ - Some useful scripts
 
+## Running
 ```
-until finished
+tmuxinator backend-work
 ```
-
-End with an example of getting some data out of the system or using it for a little demo
+## Bring-up unit-test environment
+```
+unit-tests-db
+```
+`You can even easily add this command to the git pre-push hook which was added here.`
 
 ## Get familiar with the hotkeys:
 
@@ -65,29 +72,9 @@ Copying and pasting:
 Command description | Hotkey
 ------------ | -------------
 Copy-mode | PREFIX + Esc
+Search for text | / (in Copy mode)
 marking text | v (in Copy mode)
 copying/yanking text | y (in Copy mode)
-
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-## Running
-
-tmuxinator backend-work
 
 ## Contributing
 
@@ -112,4 +99,3 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 * Hat tip to anyone who's code was used
 * Inspiration
 * etc
-
