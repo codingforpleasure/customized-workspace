@@ -23,6 +23,8 @@ The things you need to install are:
 - terminal-notifier (brew install terminal-notifier)
 - multitail (brew install multitail)
 - pyenv - Managing easily and switching between multiple versions of Python
+
+
 Soon I'll be posting a script for doing all those installs in a snap of a finger.
 
 ### Installing
