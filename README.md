@@ -22,7 +22,7 @@ The things you need to install are:
 - git Autocomplete - [link](https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.zsh)
 - terminal-notifier (brew install terminal-notifier)
 - multitail (brew install multitail)
-
+- pyenv - Managing easily and switching between multiple versions of Python
 Soon I'll be posting a script for doing all those installs in a snap of a finger.
 
 ### Installing
