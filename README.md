@@ -16,6 +16,7 @@ The things you need to install are:
 - tmux (I'm using tmux 2.6)
 - tmuxinator - Create and manage tmux sessions easily (I'm using tmuxinator 0.10.1)
 - tmux-themepack - [link](https://github.com/jimeh/tmux-themepack)
+- tmnux-plugin manager - [link](https://github.com/tmux-plugins/tpm)
 - fonts for the theme - [link](https://github.com/powerline/fonts)
 - generic colouriser (brew install grc)
 - Command-line productivity booster (brew install fasd)
