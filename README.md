@@ -65,6 +65,7 @@ Kill tmux server | PREFIX + k
 Creates vertical split | PREFIX + \
 Creates horizontal split | PREFIX + -
 Run command in tmux | PREFIX + \:
+Move to next window | PREFIX + n
 Navigate between panes | PREFIX + \<arrows\> 
 Jump to the specific window number | PREFIX + \<window number\>
 Create new window | PREFIX + c
