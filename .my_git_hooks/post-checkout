@@ -17,12 +17,13 @@ colorful_echo()
 		echo -e "$text"
 }
 
-# Should remove leftovers from mondator output:
-# rm -rf src/blazemeter/Model/Base
 # Running make only in context of swithiching branches
 # and not in case of restoring working tree files.
 # so the flag moved_branch indicating whether the checkout was a branch checkout 
 # (changing branches, flag=1). 
+
+# TODO: Should remove leftovers from mondator output:
+# rm -rf src/blazemeter/Model/Base
 
 moved_branch=$3
 
