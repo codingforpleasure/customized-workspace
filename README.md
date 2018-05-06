@@ -69,6 +69,7 @@ Move to next window | PREFIX + n
 Navigate between panes | PREFIX + \<arrows\> 
 Jump to the specific window number | PREFIX + \<window number\>
 Create new window | PREFIX + c
+Rename window name | PREFIX + , 
 Choose a session from a list | PREFIX + s
 
 Copying and pasting:
