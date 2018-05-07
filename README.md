@@ -14,8 +14,8 @@ The things you need to install are:
 
 
 - tmux (I'm using tmux 2.6)
-- tmuxinator - Create and manage tmux sessions easily (I'm using tmuxinator 0.10.1)
-               With autocomplete [link](https://github.com/tmuxinator/tmuxinator/blob/master/completion/tmuxinator.zsh)
+- tmuxinator - Create and manage tmux sessions easily (I'm using tmuxinator 0.10.1),
+               with autocomplete [link](https://github.com/tmuxinator/tmuxinator/blob/master/completion/tmuxinator.zsh)
 - tmux-themepack - [link](https://github.com/jimeh/tmux-themepack)
 - tmnux-plugin manager - [link](https://github.com/tmux-plugins/tpm)
 - fonts for the theme - [link](https://github.com/powerline/fonts)
