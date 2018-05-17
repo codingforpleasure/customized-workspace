@@ -24,7 +24,7 @@ The things you need to install are:
 - git Autocomplete - [link](https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.zsh)
 - terminal-notifier (brew install terminal-notifier)
 - multitail (brew install multitail)
-- hub - cli tool for github (brew install hub, alias git=hub)
+- hub - cli tool for github (brew install hub && alias git=hub)
 - pyenv - Managing easily and switching between multiple versions of Python
 
 
