@@ -63,7 +63,7 @@ Command description | Hotkey
 ------------ | -------------
 Reload the configuration file (tmux.conf) | PREFIX + r
 Kill tmux server | PREFIX + k
-Creates vertical split | PREFIX + \
+Creates vertical split | PREFIX + |
 Creates horizontal split | PREFIX + -
 Run command in tmux | PREFIX + \:
 Move to next window | PREFIX + n
