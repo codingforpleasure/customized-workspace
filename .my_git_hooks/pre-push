@@ -36,6 +36,9 @@ if (echo $git_last_commit | grep -ic $keywords_before_smart_push ) ; then
 
     echo ""
     if [ "$ans" = 'y' ] ; then
+    	# Executing a script which brings up Redis and Mongo.
+    	zsh ~/useful-scripts/unit-test-environment.zsh
+    	
     	colorful_echo yellow "Running all tests"
     	make all test
     else 
