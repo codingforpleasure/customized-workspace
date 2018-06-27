@@ -99,7 +99,7 @@ export EDITOR='vim'
 export SHELL='/usr/bin/zsh'
 
 # I would like the MAN pages to be colorful. so should export
-# enviroment variable make sure most is installed if not, 
+# enviroment variable make sure most is installed if not,
 # install it via:  apt-get install most.
 
 if [ -e /usr/bin/most ]; then
@@ -123,15 +123,37 @@ else
         "\n${BRed}you should install \"grc\" by entering:\"apt-get install grc\" ${NC}\n"
 fi
 
+# Download the appropriate completion file from here:
+# https://github.com/tmuxinator/tmuxinator/tree/master/completion
+# and source the file:
 
 source ~/.bin/tmuxinator.zsh
 
 # Execute sublime editor
-alias sub="subl"
+alias sublime="subl"
+alias ll="ls -la --color --human-readable --group-directories-first"
+
+# Git, jump to the repo's root directory (where the .git resides):
+# FIX THIS SOOOON!
+# alias cdg="cd `git rev-parse --show-toplevel`"
+# alias cdr="cd `git rev-parse --show-toplevel`"
+
+# Going on the safe side asks confirmation before permanently remove files:
+alias rm="rm -i"
+
+
+
+alias tes='tesseract'
+alias histg="history | grep "
 
 # Execute android-studio
-alias and="~/android-studio/bin/studio.sh"
-alias android="~/android-studio/bin/studio.sh"
+alias and="~/android-studio/bin/studio.sh &"
+alias android="~/android-studio/bin/studio.sh &"
 
 # Execute Android Debug Bridge (adb)
 alias adb='~/Android/Sdk/platform-tools/adb'
+
+# A great tool for bash scripting:
+# ShellCheck, a static analysis tool for shell scripts, should install for sure!
+# https://www.youtube.com/watch?v=lbMsFXMnqNY
+# https://github.com/koalaman/shellcheck

@@ -7,9 +7,6 @@
 -- Few remarks:
 -- If target is a local directory, take care that it is an absolute pathname
 
-
-
-
 function FolderExists(strFolderName)
 	local fileHandle, strError = io.open(strFolderName,"r")
 	if fileHandle ~= nil then
@@ -27,13 +24,17 @@ end
 
 
 homeDir=os.getenv("HOME")
-destDir= "/dst-try/" -- IMPORTANT note: directory between SLASHES
 
--- making sure the destination folders exist, otherwise it won't copy the files from the source
-if FolderExists(homeDir..destDir ..".config") == true then
+-- IMPORTANT note:
+-- pay attention to the slashes in destDir otherwise it will fail
+destDir=homeDir .. "/myGitRepositories/customized-workspace/Ubuntu"
+
+-- making sure the destination folder .config exist,
+-- otherwise it won't copy the files from the source
+if FolderExists(destDir .."/.config") == true then
 else
 	print(".config folder is created since it's missing.")
-	os.execute("mkdir -p ".. homeDir .. destDir .. ".config")
+	os.execute("mkdir -p ".. destDir .. "/.config")
 end
 
 
@@ -50,7 +51,7 @@ settings {
 sync {
     default.direct,
     source  = homeDir,
-    target  = homeDir .. "/dst-try/",
+    target  = destDir,
     rsync = { _extra = { "--files-from=" .. homeDir .. "/.config/lsyncd/files.list" } }
 }
 
@@ -58,33 +59,33 @@ sync {
 sync {
     default.direct,
     source  = homeDir .. "/.config/multitail/",
-    target  = homeDir .. destDir .. ".config/multitail",
+    target  = destDir .. "/.config/multitail",
 }
 
 -- 3) Backing-up all existing project configuration files for tmuxinator
 sync {
     default.direct,
     source  = homeDir .. "/.config/tmuxinator",
-    target  = homeDir .. destDir .. ".config/tmuxinator",
+    target  = destDir .. "/.config/tmuxinator",
 }
 
 -- 4) Backing-up all existing project configuration files for terminator
 sync {
     default.direct,
     source  = homeDir .. "/.config/terminator",
-    target  = homeDir .. destDir .. ".config/terminator",
+    target  = destDir .. "/.config/terminator",
 }
 
 -- 5) Backing-up sublime configurations
 sync {
     default.direct,
     source  = homeDir .. "/.config/sublime-text-3/Packages/User",
-    target  = homeDir .. destDir .. ".config/sublime-text-3/Packages/User",
+    target  = destDir .. "/.config/sublime-text-3/Packages/User",
 }
 
 -- 6) Backing-up lsyncd configurations
 sync {
     default.direct,
     source  = homeDir .. "/.config/lsyncd",
-    target  = homeDir .. destDir .. ".config/lsyncd",
+    target  = destDir .. "/.config/lsyncd",
 }

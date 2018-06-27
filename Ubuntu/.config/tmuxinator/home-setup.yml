@@ -1,4 +1,6 @@
-name: android-setup
+# ~/.tmuxinator/home-setup.yml
+
+name: home-setup
 root: ~/
 
 # Optional tmux socket
@@ -41,13 +43,10 @@ root: ~/
 # post: tmux -CC attach -t home-setup
 
 windows:
-  - nothingSpecialYet:
+  - mySQL:
       # run the server: sudo systemctl start mysql.
-  - logs:
-     cd ~/.AndroidStudio3.1/system/log && cat ./idea.log | grep error
-  - projects:
-     cd ~/AndroidStudioProjects
-  - shell-on-android:
-     adb shell
+      mysql --auto-rehash -u root -p
+  - python:
+      cd ~
   - youtube:
       mpsyt
