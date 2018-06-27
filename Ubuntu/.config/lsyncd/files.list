@@ -1,6 +1,3 @@
-a.txt
-aa.txt
-b.txt
-bb.txt
-c.txt
-cc.txt
+.zshrc
+.tmux.conf
+.vimrc
