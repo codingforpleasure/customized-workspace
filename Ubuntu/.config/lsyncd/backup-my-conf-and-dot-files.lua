@@ -42,7 +42,6 @@ destDir=homeDir .. "/myGitRepositories/customized-workspace/Ubuntu"
 if FolderExists(destDir .."/.config") == true then
 else
 	print(".config folder is created since it's missing.")
-	--os.execute("mkdir -p ".. destDir .. "/.config")
     os.execute("mkdir -p ".. destDir .. "/.config/sublime-text-3/Packages/User")
 end
 
@@ -101,6 +100,6 @@ sync {
  --    (Preferences.sublime-settings and linters)
 sync {
     default.direct,
-    source  = "/home/gil_diy/.config/sublime-text-3/Packages/User",
-    target  = "/home/gil_diy/myGitRepositories/customized-workspace/Ubuntu/.config/sublime-text-3/Packages/User",
+    source  = homeDir .. "/.config/sublime-text-3/Packages/User",
+    target  = destDir .. "/.config/sublime-text-3/Packages/User",
 }
