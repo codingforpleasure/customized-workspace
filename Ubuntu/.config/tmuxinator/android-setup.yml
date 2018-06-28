@@ -41,7 +41,7 @@ root: ~/
 # post: tmux -CC attach -t home-setup
 
 windows:
-  - nothingSpecialYet:
+  - shell:
       # run the server: sudo systemctl start mysql.
   - logs:
      cd ~/.AndroidStudio3.1/system/log && cat ./idea.log | grep error

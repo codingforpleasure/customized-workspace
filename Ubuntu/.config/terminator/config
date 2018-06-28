@@ -6,13 +6,41 @@
 [keybindings]
 [layouts]
   [[default]]
-    [[[child1]]]
-      parent = window0
+    [[[child0]]]
+      fullscreen = False
+      last_active_term = 6827f359-1912-4855-a007-de3f07c249f0
+      last_active_window = True
+      maximised = True
+      order = 0
+      parent = ""
+      position = 49:24
+      size = 3391, 1416
+      title = gil_diy@gilSpeedyLaptop: ~
+      type = Window
+    [[[terminal1]]]
+      order = 0
+      parent = child0
       profile = default
       type = Terminal
-    [[[window0]]]
+      uuid = 6827f359-1912-4855-a007-de3f07c249f0
+  [[tmuxinator-start]]
+    [[[child0]]]
+      fullscreen = False
+      last_active_term = 6827f359-1912-4855-a007-de3f07c249f0
+      last_active_window = True
+      maximised = True
+      order = 0
       parent = ""
+      position = 49:24
+      size = 3391, 1416
+      title = gil_diy@gilSpeedyLaptop: ~
       type = Window
+    [[[terminal1]]]
+      order = 0
+      parent = child0
+      profile = default
+      type = Terminal
+      uuid = 6827f359-1912-4855-a007-de3f07c249f0
 [plugins]
 [profiles]
   [[default]]

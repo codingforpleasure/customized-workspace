@@ -129,22 +129,22 @@ fi
 
 source ~/.bin/tmuxinator.zsh
 
+######## Aliases ########
 # Execute sublime editor
 alias sublime="subl"
 alias ll="ls -la --color --human-readable --group-directories-first"
 
 # Git, jump to the repo's root directory (where the .git resides):
-# FIX THIS SOOOON!
-# alias cdg="cd `git rev-parse --show-toplevel`"
-# alias cdr="cd `git rev-parse --show-toplevel`"
+## alias cdg="cd `git rev-parse --show-toplevel`" ##PROBLEM
 
-# Going on the safe side asks confirmation before permanently remove files:
-alias rm="rm -i"
-
-
+alias rm="rm -i"               # Prompt before permanently remove files
+alias cp="cp -i"               # Prompt before overwrite
+alias make="make --just-print" # Print the commands that would be executed, but do not execute them.
 
 alias tes='tesseract'
 alias histg="history | grep "
+alias ls='ls -la --color'
+alias watch='watch --color'
 
 # Execute android-studio
 alias and="~/android-studio/bin/studio.sh &"
@@ -153,7 +153,9 @@ alias android="~/android-studio/bin/studio.sh &"
 # Execute Android Debug Bridge (adb)
 alias adb='~/Android/Sdk/platform-tools/adb'
 
+alias ubuntu='cd ~/myGitRepositories/customized-workspace/Ubuntu'
+
 # A great tool for bash scripting:
 # ShellCheck, a static analysis tool for shell scripts, should install for sure!
-# https://www.youtube.com/watch?v=lbMsFXMnqNY
+# A nice demostration is here: https://www.youtube.com/watch?v=lbMsFXMnqNY
 # https://github.com/koalaman/shellcheck

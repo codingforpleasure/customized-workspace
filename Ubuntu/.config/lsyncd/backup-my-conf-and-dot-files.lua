@@ -3,6 +3,9 @@
 -- And a great resource is written here too with nicely written examples:
 -- http://axkibe.github.io/lsyncd/manual/config/file/
 
+-- For checking the lsyncd daemon is running, enter:
+-- service --status-all | grep lsyncd
+
 
 -- Few remarks:
 -- If target is a local directory, take care that it is an absolute pathname
@@ -25,8 +28,13 @@ end
 
 homeDir=os.getenv("HOME")
 
--- IMPORTANT note:
--- pay attention to the slashes in destDir otherwise it will fail
+if homeDir == nill then
+    homeDir="/home/gil_diy"
+end
+
+
+-- -- IMPORTANT note:
+-- -- pay attention to the slashes in destDir otherwise it will fail
 destDir=homeDir .. "/myGitRepositories/customized-workspace/Ubuntu"
 
 -- making sure the destination folder .config exist,
@@ -34,11 +42,9 @@ destDir=homeDir .. "/myGitRepositories/customized-workspace/Ubuntu"
 if FolderExists(destDir .."/.config") == true then
 else
 	print(".config folder is created since it's missing.")
-	os.execute("mkdir -p ".. destDir .. "/.config")
+	--os.execute("mkdir -p ".. destDir .. "/.config")
+    os.execute("mkdir -p ".. destDir .. "/.config/sublime-text-3/Packages/User")
 end
-
-
-print("Backing-up your files!")
 
 settings {
    logfile    = "/tmp/lsyncd.log",
@@ -46,23 +52,31 @@ settings {
    nodaemon   = false, -- Running as a daemon
 }
 
-
 -- 1) Backing-up all relevant precious dot files
+--    Notice the 'filter' feature was added into the latest revision 2.2.3,
+--    So you should build from source and not from debian package manager.
+--    I'm using (Lua 5.2.4)
 sync {
-    default.direct,
-    source  = homeDir,
-    target  = destDir,
-    rsync = { _extra = { "--files-from=" .. homeDir .. "/.config/lsyncd/files.list" } }
+    default.rsync,
+    source = homeDir,
+    target = destDir,
+    delay = 3,
+    filter = {
+        '+ /.tmux.conf',
+        '+ /.zshrc',
+        '+ /.vimrc',
+        '- /**',
+    },
 }
 
 -- 2) Backing-up all multi-tail configurations files
 sync {
     default.direct,
-    source  = homeDir .. "/.config/multitail/",
+    source  = homeDir .. "/.config/multitail",
     target  = destDir .. "/.config/multitail",
 }
 
--- 3) Backing-up all existing project configuration files for tmuxinator
+-- -- 3) Backing-up all existing project configuration files for tmuxinator
 sync {
     default.direct,
     source  = homeDir .. "/.config/tmuxinator",
@@ -76,16 +90,17 @@ sync {
     target  = destDir .. "/.config/terminator",
 }
 
--- 5) Backing-up sublime configurations
-sync {
-    default.direct,
-    source  = homeDir .. "/.config/sublime-text-3/Packages/User",
-    target  = destDir .. "/.config/sublime-text-3/Packages/User",
-}
-
--- 6) Backing-up lsyncd configurations
+-- -- 5) Backing-up lsyncd configurations
 sync {
     default.direct,
     source  = homeDir .. "/.config/lsyncd",
     target  = destDir .. "/.config/lsyncd",
+}
+
+ -- 6) Backing-up sublime configurations
+ --    (Preferences.sublime-settings and linters)
+sync {
+    default.direct,
+    source  = "/home/gil_diy/.config/sublime-text-3/Packages/User",
+    target  = "/home/gil_diy/myGitRepositories/customized-workspace/Ubuntu/.config/sublime-text-3/Packages/User",
 }

@@ -1,0 +1,14 @@
+{
+	"ensure_newline_at_eof_on_save": true,
+	"font_options":
+	[
+		"gray_antialias"
+	],
+	"font_size": 14,
+	"ignored_packages":
+	[
+		"SublimeLinter-shellcheck",
+		"Vintage"
+	],
+	"trim_trailing_white_space_on_save": true
+}
