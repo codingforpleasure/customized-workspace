@@ -38,7 +38,7 @@ ZSH_THEME="powerlevel9k/powerlevel9k"
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
+ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 # COMPLETION_WAITING_DOTS="true"
@@ -98,6 +98,11 @@ source $ZSH/oh-my-zsh.sh
 export EDITOR='vim'
 export SHELL='/usr/bin/zsh'
 
+# Take a look here, as a reference:
+# https://github.com/robbyrussell/oh-my-zsh/blob/master/lib/history.zsh
+HISTSIZE=50000
+SAVEHIST=10000
+
 # I would like the MAN pages to be colorful. so should export
 # enviroment variable make sure most is installed if not,
 # install it via:  apt-get install most.
@@ -126,33 +131,23 @@ fi
 # Download the appropriate completion file from here:
 # https://github.com/tmuxinator/tmuxinator/tree/master/completion
 # and source the file:
-
 source ~/.bin/tmuxinator.zsh
 
 ######## Aliases ########
-# Execute sublime editor
-alias sublime="subl"
 alias ll="ls -la --color --human-readable --group-directories-first"
-
-# Git, jump to the repo's root directory (where the .git resides):
-## alias cdg="cd `git rev-parse --show-toplevel`" ##PROBLEM
-
-alias rm="rm -i"               # Prompt before permanently remove files
-alias cp="cp -i"               # Prompt before overwrite
-alias make="make --just-print" # Print the commands that would be executed, but do not execute them.
-
-alias tes='tesseract'
+alias cdg='cd $(git rev-parse --show-toplevel)' # jump to repo's root directory (where the .git resides)
+alias rm="rm -i"               					# Prompt before permanently remove files
+alias cp="cp -i"               					# Prompt before overwrite
+alias make="make --just-print" 					# Print the commands that would be executed, but do not execute them.
 alias histg="history | grep "
-alias ls='ls -la --color'
-alias watch='watch --color'
+alias watchl='watch --color ls -la --color'		# list and watch files and folders with color
 
-# Execute android-studio
-alias and="~/android-studio/bin/studio.sh &"
-alias android="~/android-studio/bin/studio.sh &"
-
-# Execute Android Debug Bridge (adb)
-alias adb='~/Android/Sdk/platform-tools/adb'
-
+alias sublime="subl"					 		 # Execute sublime editor
+alias android="~/android-studio/bin/studio.sh &" # Execute Android-studio easily
+alias adb='~/Android/Sdk/platform-tools/adb' 	 # Execute Android Debug Bridge (adb)
+alias exif="EXIF.py"							# extract Exif metadata from tiff and jpeg files
+alias dis='display'
+alias tes='tesseract'
 alias ubuntu='cd ~/myGitRepositories/customized-workspace/Ubuntu'
 
 # A great tool for bash scripting:
