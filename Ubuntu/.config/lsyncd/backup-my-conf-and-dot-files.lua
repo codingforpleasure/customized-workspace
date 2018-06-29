@@ -66,6 +66,9 @@ sync {
         '+ /.vimrc',
         '- /**',
     },
+    rsync = {
+        binary = homeDir .. "/.config/lsyncd/handler.sh"
+    }
 }
 
 -- 2) Backing-up all multi-tail configurations files
