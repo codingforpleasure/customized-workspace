@@ -62,6 +62,12 @@ HIST_STAMPS="mm/dd/yyyy"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   git
+  web-search
+  copybuffer
+  history-substring-search
+  extract
+  systemd
+  debian
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -135,26 +141,25 @@ source ~/.bin/tmuxinator.zsh
 
 ######## Aliases ########
 alias ll="ls -la --color --human-readable --group-directories-first"
-alias rm="rm -i"               					# Prompt before permanently remove files
-alias cp="cp -i"               					# Prompt before overwrite
-alias make="make --just-print" 					# Print the commands that would be executed, but do not execute them.
+alias rm="rm -i"				# Prompt before permanently remove files
+alias cp="cp -i"               			# Prompt before overwrite
+alias make="make --just-print" 			# Print the commands that would be executed, but do not execute them.
 
-alias histg="history | grep "					# Combine history with grep
+alias histg="history | grep "			# Combine history with grep
 alias lsg="ll | grep "                          # Combine list files with grep
-alias psg="ps | grep "							# Combine ps with grep
+alias psg="ps | grep "				# Combine ps with grep
+alias locate="sudo updatedb; locate "		# Combine locate with grep
+alias watchl='watch --color ls -la --color'	# list and watch files and folders with color
 
-alias watchl='watch --color ls -la --color'		# list and watch files and folders with color
-
-alias sublime="subl"					 		 # Execute sublime editor
-alias android="~/android-studio/bin/studio.sh &" # Execute Android-studio easily
-alias adb='~/Android/Sdk/platform-tools/adb' 	 # Execute Android Debug Bridge (adb)
-alias exif="EXIF.py"							 # extract Exif metadata from tiff and jpeg files
+alias sublime="subl"				# Execute sublime editor
+alias android="~/android-studio/bin/studio.sh &"# Execute Android-studio easily
+alias adb='~/Android/Sdk/platform-tools/adb' 	# Execute Android Debug Bridge (adb)
+alias exif="EXIF.py"				# extract Exif metadata from tiff and jpeg files
 alias dis='display'
 alias tes='tesseract'
 
-
 alias ubuntu='cd ~/myGitRepositories/customized-workspace/Ubuntu'
-alias gitrep='cd ~/myGitRepositories'			 # Go to my repos collection
+alias gitrep='cd ~/myGitRepositories'		# Go to my repos collection
 alias cdg='cd $(git rev-parse --show-toplevel)' # jump to repo's root directory (where the .git resides)
 
 # A great tool for bash scripting:
