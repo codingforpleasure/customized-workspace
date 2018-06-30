@@ -161,6 +161,7 @@ alias tes='tesseract'
 alias ubuntu='cd ~/myGitRepositories/customized-workspace/Ubuntu'
 alias gitrep='cd ~/myGitRepositories'		# Go to my repos collection
 alias cdg='cd $(git rev-parse --show-toplevel)' # jump to repo's root directory (where the .git resides)
+alias ga="git add --interactive"		# Add modified contents in the working tree interactively to the index
 
 # A great tool for bash scripting:
 # ShellCheck, a static analysis tool for shell scripts, should install for sure!
