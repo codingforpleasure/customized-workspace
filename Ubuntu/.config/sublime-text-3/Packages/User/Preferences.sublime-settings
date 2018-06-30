@@ -4,7 +4,7 @@
 	[
 		"gray_antialias"
 	],
-	"font_size": 17,
+	"font_size": 14,
 	"ignored_packages":
 	[
 		"SublimeLinter-shellcheck",
