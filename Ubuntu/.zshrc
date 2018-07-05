@@ -101,6 +101,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# subl fail with editor
 export EDITOR='vim'
 export SHELL='/usr/bin/zsh'
 
@@ -143,11 +144,15 @@ source ~/.bin/tmuxinator.zsh
 alias ll="ls -la --color --human-readable --group-directories-first"
 alias rm="rm -i"				# Prompt before permanently remove files
 alias cp="cp -i"               			# Prompt before overwrite
+alias 'crontab -r'='crontab -i' 		# Prompt before actually removing the crontab
 alias make="make --just-print" 			# Print the commands that would be executed, but do not execute them.
 
 alias histg="history | grep "			# Combine history with grep
 alias lsg="ll | grep "                          # Combine list files with grep
-alias psg="ps | grep "				# Combine ps with grep
+
+alias psg="ps ax | grep "				# Combine ps with grep
+alias top="htop"
+
 alias locate="sudo updatedb; locate "		# Combine locate with grep
 alias watchl='watch --color ls -la --color'	# list and watch files and folders with color
 
@@ -170,3 +175,14 @@ alias ga="git add --interactive"		# Add modified contents in the working tree in
 
 # Execute tmuxinator on startup
 tmuxinator android-setup
+
+# Assuming you have fzf (A command-fuzzy liner) installed on your workstation:
+# https://github.com/junegunn/fzf
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+export FZF_DEFAULT_OPS="--extended"
+
+# Assuming fs is installed on your envionment:
+# Taken from here: https://github.com/sharkdp/fd
+export FZF_DEFAULT_COMMAND="fd --type f"
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
