@@ -166,7 +166,7 @@ alias adb='~/Android/Sdk/platform-tools/adb' 	# Execute Android Debug Bridge (ad
 alias exif="EXIF.py"				# extract Exif metadata from tiff and jpeg files
 alias dis='display'
 alias tes='tesseract'
-alias du='du ----summarize --human-readable' # Disk space usage nicer output
+alias du='du --summarize --human-readable' # Disk space usage nicer output
 
 
 alias ubuntu='cd ~/myGitRepositories/customized-workspace/Ubuntu'
@@ -174,11 +174,11 @@ alias gitrep='cd ~/myGitRepositories'		# Go to my repos collection
 alias cdg='cd $(git rev-parse --show-toplevel)' # jump to repo's root directory (where the .git resides)
 alias ga="git add --interactive"		# Add modified contents in the working tree interactively to the index
 alias gadd="git add --interactive"    # Add modified contents in the working tree interactively to the index
+alias rsync="rsync --verbose \
+             --progress \
+             --human-readable \
+             --archive"
 
-# A great tool for bash scripting:
-# ShellCheck, a static analysis tool for shell scripts, should install for sure!
-# A nice demostration is here: https://www.youtube.com/watch?v=lbMsFXMnqNY
-# https://github.com/koalaman/shellcheck
 
 # Execute tmuxinator on startup
 tmuxinator android-setup
@@ -189,7 +189,12 @@ tmuxinator android-setup
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export FZF_DEFAULT_OPS="--extended"
 
-# Assuming fs is installed on your envionment:
+# Assuming fs is installed on your environment:
 # Taken from here: https://github.com/sharkdp/fd
 export FZF_DEFAULT_COMMAND="fd --type f"
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+
+# A great tool for bash scripting:
+# ShellCheck, a static analysis tool for shell scripts, should install for sure!
+# A nice demostration is here: https://www.youtube.com/watch?v=lbMsFXMnqNY
+# https://github.com/koalaman/shellcheck
