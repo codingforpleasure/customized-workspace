@@ -1,5 +1,8 @@
 # If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+# export PATH=$HOME/bin:/usr/local/bin:$
+
+# Adding some scripts for increasing my productivity
+PATH=$PATH:$HOME/my_useful_scripts
 
 # Path to your oh-my-zsh installation.
   export ZSH=/home/gil_diy/.oh-my-zsh
@@ -153,7 +156,8 @@ alias lsg="ll | grep "                          # Combine list files with grep
 alias psg="ps ax | grep "				# Combine ps with grep
 alias top="htop"
 
-alias locate="sudo updatedb; locate "		# Combine locate with grep
+alias locate="sudo updatedb; locate "		# locate
+alias locateh="locate $0 | grep $PWD "   # locate here under the current folder
 alias watchl='watch --color ls -la --color'	# list and watch files and folders with color
 
 alias sublime="subl"				# Execute sublime editor
@@ -162,11 +166,14 @@ alias adb='~/Android/Sdk/platform-tools/adb' 	# Execute Android Debug Bridge (ad
 alias exif="EXIF.py"				# extract Exif metadata from tiff and jpeg files
 alias dis='display'
 alias tes='tesseract'
+alias du='du ----summarize --human-readable' # Disk space usage nicer output
+
 
 alias ubuntu='cd ~/myGitRepositories/customized-workspace/Ubuntu'
 alias gitrep='cd ~/myGitRepositories'		# Go to my repos collection
 alias cdg='cd $(git rev-parse --show-toplevel)' # jump to repo's root directory (where the .git resides)
 alias ga="git add --interactive"		# Add modified contents in the working tree interactively to the index
+alias gadd="git add --interactive"    # Add modified contents in the working tree interactively to the index
 
 # A great tool for bash scripting:
 # ShellCheck, a static analysis tool for shell scripts, should install for sure!
