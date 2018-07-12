@@ -88,12 +88,16 @@ awk '/^[0-9]/ { print }' my_data.txt
 ```bash
 awk '/[0-9]$/ { print }' my_data.txt
 ```
-**Example #6: Print the second column when the delimeter is now colon**
+**Example #6: Prints the second column when the delimeter is now colon**
 ```bash
 awk -F: '{ print $2 }' my_data.txt
 ```
 > **important to notice I have used the -F for declaring a new field sperator.**
 
+**Example #7: Prints the second column from line 4 (skips the first 3 lines).**
+```bash
+awk  'NR>3 { print $2 }' my_data.txt
+```
 # Tips for Sublime
 
 
