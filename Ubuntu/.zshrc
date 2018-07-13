@@ -5,7 +5,7 @@
 PATH=$PATH:$HOME/my_useful_scripts
 
 # Path to your oh-my-zsh installation.
-  export ZSH=/home/gil_diy/.oh-my-zsh
+export ZSH=/home/gil_diy/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -71,7 +71,7 @@ plugins=(
   extract
   systemd
   debian
-)
+  )
 
 source $ZSH/oh-my-zsh.sh
 
@@ -121,7 +121,7 @@ if [ -e /usr/bin/most ]; then
 	export PAGER="most"
 else
 	echo -e "\n${BWhite}For color manual pages, install \"most\" by entering: ${NC}"  \
-        "\n${BRed}\"apt-get install most\" ${NC}\n"
+  "\n${BRed}\"apt-get install most\" ${NC}\n"
 fi
 
 # A great extension for colorizing tools
@@ -135,7 +135,7 @@ if [ -e /usr/bin/grc ]; then
 	alias ps='grc ps aux'
 else
 	echo -e "\n${BWhite}For colorizing linux tools (ping/netstat/tail/ps) ${NC},"  \
-        "\n${BRed}you should install \"grc\" by entering:\"apt-get install grc\" ${NC}\n"
+  "\n${BRed}you should install \"grc\" by entering:\"apt-get install grc\" ${NC}\n"
 fi
 
 # Download the appropriate completion file from here:
@@ -144,28 +144,42 @@ fi
 source ~/.bin/tmuxinator.zsh
 
 ######## Aliases ########
-alias ll="ls -la --color --human-readable --group-directories-first"
-alias rm="rm -i"				# Prompt before permanently remove files
+
+alias ll="ls -la --color \
+                 --human-readable \
+                 --group-directories-first" # list files nicely
+
+alias rm="rm -i"				            # Prompt before permanently remove files
 alias cp="cp -i"               			# Prompt before overwrite
+alias scp="scp -r"                  # Secure copy with recursively copy so it means entire directories.
+alias ssh="ssh -x"                  # Ssh with enabled X11 forwarding
 alias 'crontab -r'='crontab -i' 		# Prompt before actually removing the crontab
-alias make="make --just-print" 			# Print the commands that would be executed, but do not execute them.
+alias make=my-make 		              #
 
-alias histg="history | grep "			# Combine history with grep
-alias lsg="ll | grep "                          # Combine list files with grep
+alias histg="history | grep "			  # Combine history with grep
+alias lsg="ll | grep "              # Combine list files with grep
 
-alias psg="ps ax | grep "				# Combine ps with grep
+alias psg="ps ax | grep "				    # Combine ps with grep
 alias top="htop"
 
 alias locate="sudo updatedb; locate "		# locate
-alias locateh="locate $0 | grep $PWD "   # locate here under the current folder
+
+alias locateh=locate-here           # locate here under the current folder
 alias watchl='watch --color ls -la --color'	# list and watch files and folders with color
 
-alias sublime="subl"				# Execute sublime editor
+alias sublime="subl"				        # Execute sublime editor
+alias charm="charm &"
+alias pycharm="charm"
+alias pyCharm="charm"
+alias PyCharm="charm"
+
 alias android="~/android-studio/bin/studio.sh &"# Execute Android-studio easily
 alias adb='~/Android/Sdk/platform-tools/adb' 	# Execute Android Debug Bridge (adb)
-alias exif="EXIF.py"				# extract Exif metadata from tiff and jpeg files
-alias dis='display'
-alias tes='tesseract'
+alias straceg=strace-and-grep $1 $2
+
+alias exif="EXIF.py "				        # extract Exif metadata from tiff and jpeg files
+alias dis='display '
+alias tes='tesseract '
 alias du='du --summarize --human-readable' # Disk space usage nicer output
 
 
@@ -175,9 +189,9 @@ alias cdg='cd $(git rev-parse --show-toplevel)' # jump to repo's root directory 
 alias ga="git add --interactive"		# Add modified contents in the working tree interactively to the index
 alias gadd="git add --interactive"    # Add modified contents in the working tree interactively to the index
 alias rsync="rsync --verbose \
-             --progress \
-             --human-readable \
-             --archive"
+              --progress \
+              --human-readable \
+              --archive"
 
 
 # Execute tmuxinator on startup
@@ -198,3 +212,52 @@ export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 # ShellCheck, a static analysis tool for shell scripts, should install for sure!
 # A nice demostration is here: https://www.youtube.com/watch?v=lbMsFXMnqNY
 # https://github.com/koalaman/shellcheck
+
+# A great tool which provides display and control of Android devices connected on USB,
+# is "scrcpy" (go to the github repo and install it) .
+
+
+#$LD_LIBRARY_PATH:/usr/lib:
+#export LD_LIBRARY_PATH=/home/gil_diy/.local/lib/python3.6/site-packages:/usr/lib/x86_64-linux-gnu/
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib/
+
+
+###### Functions ######
+
+function strace-and-grep() {
+
+  # since strace prints its traces on standard error, not on standard output
+  # if [[ $1=="adb" ]]; then
+  #   echo "Grepping: $3"
+
+  # fi
+
+  echo "Binary file: $1"
+  echo "Grepping: $2"
+}
+
+function locate-here(){
+  # Locate files under the current directory
+  locate $1 | grep $PWD
+}
+
+function my-make(){
+  /usr/bin/make --just-print
+  echo $fg_bold[red] "Attention: Ran dry-run (Printed the commands that would be executed)"
+
+  if [[ "no" == $(ask_yes_or_no "would you like now to run make, now?") ]]
+  then
+    echo "Skipped."
+    exit 0
+  fi
+  make
+}
+
+
+function ask_yes_or_no() {
+    read "?answer$1 ([y]es or [N]o): "
+    case $(echo $answer | tr '[A-Z]' '[a-z]') in
+        y|yes) echo "yes" ;;
+        *)     echo "no" ;;
+    esac
+}
