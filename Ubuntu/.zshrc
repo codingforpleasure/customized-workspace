@@ -244,18 +244,18 @@ function locate-here(){
 function my-make(){
   /usr/bin/make --just-print
   echo $fg_bold[red] "Attention: Ran dry-run (Printed the commands that would be executed)"
-
+  echo $fg_bold[white]
   if [[ "no" == $(ask_yes_or_no "would you like now to run make, now?") ]]
   then
     echo "Skipped."
     exit 0
   fi
-  make
+  /usr/bin/make
 }
 
 
 function ask_yes_or_no() {
-    read "?answer$1 ([y]es or [N]o): "
+    read "answer?$1 ([y]es or [N]o): "
     case $(echo $answer | tr '[A-Z]' '[a-z]') in
         y|yes) echo "yes" ;;
         *)     echo "no" ;;
