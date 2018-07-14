@@ -159,9 +159,10 @@ alias make=my-make 		              #
 alias histg="history | grep "			  # Combine history with grep
 alias lsg="ll | grep "              # Combine list files with grep
 
-alias psg="ps ax | grep "				    # Combine ps with grep
-alias top="htop"
+alias pgrep="pgrep --list-full"			# lookup a process
+alias psg="pgrep --list-full"       # lookup a process
 
+alias top="htop"                    # Execute the interactive process viewer
 alias locate="sudo updatedb; locate "		# locate
 
 alias locateh=locate-here           # locate here under the current folder
