@@ -88,7 +88,7 @@ SUM=$((A1 + An)*n/2)
 >**you can use all the standard operators inside of $(( )) for arithmetic expressions**
 
 
-** (7) Testing for File Characteristics **
+**(7) Testing for File Characteristics**
 
 Option | Description
 ------------ | -------------
@@ -126,7 +126,7 @@ else
 	echo "cannot cd into $DIRPLACE"
 fi
 ```
-** (8) Looping for a While **
+**(8) Looping for a While**
 
 >**Use the while looping construct for arithmetic conditions:**
 
@@ -157,7 +157,7 @@ done
 ```
 
 
-** (9) Looping with a Count **
+**(9) Looping with a Count**
 ```bash
 for (( i=0, j=0 ; i+j < 10 ; i++, j++ ))
 do
@@ -166,7 +166,7 @@ done
 ```
 
 
-** (10) Finding All Your MP3 Files **
+**(10) Finding All Your MP3 Files**
 ```bash
 find . -name '*.mp3' -print -exec mv '{}' ~/songs \;
 ```
@@ -174,4 +174,26 @@ or even better use xargs:
 
 ```bash
 find . -name '*.mp3' -print0 | xargs -i -0 mv '{}' ~/songs
+```
+
+**(11) Using Functions: Parameters and Return Values**
+
+```bash
+# define the function:
+function max ()
+{
+	local HIDN
+	if [ $1 -gt $2 ]
+	then
+		BIGR=$1
+	else
+		BIGR=$2
+	fi
+	HIDN=5
+}
+
+# call the function:
+max 128 $SIM
+# use the result:
+echo $BIGR
 ```
