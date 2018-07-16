@@ -176,13 +176,17 @@ alias PyCharm="charm"
 
 alias android="~/android-studio/bin/studio.sh &"# Execute Android-studio easily
 alias adb='~/Android/Sdk/platform-tools/adb' 	# Execute Android Debug Bridge (adb)
+
+# Prints all amdroid packages
+# (Great reference: https://developer.android.com/studio/command-line/adb#pm)
+alias ls-my-android-packages='adb shell pm list packages codingforpleasure'
+alias rm-android-app='adb shell pm uninstall '
 alias straceg=strace-and-grep $1 $2
 
 alias exif="EXIF.py "				        # extract Exif metadata from tiff and jpeg files
 alias dis='display '
 alias tes='tesseract '
 alias du='du --summarize --human-readable' # Disk space usage nicer output
-
 
 alias ubuntu='cd ~/myGitRepositories/customized-workspace/Ubuntu'
 alias gitrep='cd ~/myGitRepositories'		# Go to my repos collection
