@@ -20,4 +20,4 @@ adb shell ls -R / |
 
                 echo "$dir/$line"
             fi
-    done | grep -e "$1"
+    done | grep --color=always -e "$1"
