@@ -52,11 +52,11 @@ if [[ $res ]]; then
 	colorful_echo cyan "\nPlease fix the commit message"
 	rv=$(choose "Would you like to ignore this warnings?") #
 
-    if [ $rv ]
+    if [ $rv = 0 ]
     then
-        colorful_echo yellow  "Aborting commit\n"
-    else
         colorful_echo yellow  "Ignoring warnings\n"
+    else
+        colorful_echo yellow  "Aborting commit\n"
     fi
 
 	return $rv
