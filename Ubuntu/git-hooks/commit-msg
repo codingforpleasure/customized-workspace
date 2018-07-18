@@ -1,0 +1,66 @@
+#!/usr/bin/env zsh
+
+
+colorful_echo()
+{
+	  local code="\033["
+		case "$1" in
+					red    ) color="${code}1;31m";;
+					green  ) color="${code}1;32m";;
+					yellow ) color="${code}1;33m";;
+					blue   ) color="${code}1;34m";;
+					purple ) color="${code}1;35m";;
+					cyan   ) color="${code}1;36m";;
+					gray   ) color="${code}0;37m";;
+					*) local text="$1"
+		esac
+		[ -z "$text" ] && local text="$color$2${code}0m"
+		echo -ne "$text"
+}
+
+function choose {
+
+
+	local prompt="$1"
+	local default="n"
+	local answer
+
+	vared -p "$prompt" -c answer
+	[ -z "$answer" ] && answer="$default"
+
+	case "$answer" in
+		[yY1] ) echo 0
+			;;
+		[nN0] ) echo 1
+			;;
+		*	  ) printf "%b" "Unexpected answer '$answer'!" >&2 ;;
+	esac
+
+}
+
+colorful_echo cyan "Checking commit message spelling...\n"
+
+commit_msg=$(cat "${1:?Missing commit message file}")
+
+# I'm assuming you have a aspell (spell checker) installed on your system
+res=$(echo  $commit_msg | aspell --list)
+
+if [[ $res ]]; then
+	colorful_echo cyan "Misspelling was found in your commit message\n"
+	colorful_echo yellow "Incorrect words were: \n"
+	colorful_echo red  $res
+	colorful_echo cyan "\nPlease fix the commit message"
+	rv=$(choose "Would you like to ignore this warnings?") #
+
+    if [ $rv ]
+    then
+        colorful_echo yellow  "Aborting commit\n"
+    else
+        colorful_echo yellow  "Ignoring warnings\n"
+    fi
+
+	return $rv
+fi
+
+exit 0
+
