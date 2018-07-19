@@ -177,7 +177,7 @@ alias PyCharm="charm"
 alias android="~/android-studio/bin/studio.sh &"# Execute Android-studio easily
 alias adb='~/Android/Sdk/platform-tools/adb' 	# Execute Android Debug Bridge (adb)
 
-# Prints all amdroid packages
+# Prints all android packages
 # (Great reference: https://developer.android.com/studio/command-line/adb#pm)
 alias ls-my-android-packages='adb shell pm list packages codingforpleasure'
 alias rm-android-app='adb shell pm uninstall '
@@ -190,13 +190,38 @@ alias du='du --summarize --human-readable' # Disk space usage nicer output
 
 alias ubuntu='cd ~/myGitRepositories/customized-workspace/Ubuntu'
 alias gitrep='cd ~/myGitRepositories'		# Go to my repos collection
-alias cdg='cd $(git rev-parse --show-toplevel)' # jump to repo's root directory (where the .git resides)
-alias ga="git add --interactive"		# Add modified contents in the working tree interactively to the index
-alias gadd="git add --interactive"    # Add modified contents in the working tree interactively to the index
+
 alias rsync="rsync --verbose \
               --progress \
               --human-readable \
               --archive"
+
+### some git aliases ###
+alias cdg='cd $(git rev-parse --show-toplevel)' # jump to repo's root directory (where the .git resides)
+alias hookg='cd $(git rev-parse --show-toplevel)/.git/hooks'
+alias ghook='hookg'
+alias ga="git add --interactive"		# Add modified contents in the working tree interactively to the index
+alias gadd="git add --interactive"    # Add modified contents in the working tree interactively to the index
+alias gaa='git add --all'
+alias gapa='git add --patch'
+alias gau='git add --update'
+alias gap='git apply'
+alias master='git checkout master'
+alias dev='git checkout dev'
+alias back='git checkout -'
+alias new='git checkout -b'
+alias checkout='git checkout'
+alias branch='git branch'
+alias branches='git branch -a'
+alias rmbranch='git branch -D'
+alias unstage='git reset HEAD'
+alias unstageall='git reset HEAD .'
+alias undo='git reset --soft HEAD^'
+alias undopush='git push -f origin HEAD^:master'
+alias gc='git commit'
+alias stash='git stash -k -u'
+alias stashall='git stash --include-untracked'
+alias pop='git stash pop'
 
 
 # Execute tmuxinator on startup
