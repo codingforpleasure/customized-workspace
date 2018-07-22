@@ -1,6 +1,30 @@
 # Bash tips and tricks
 
 
+
+
+## **Bash scripting Conventions**
+Variables in a bash script are often written as all-uppercase names, though that is not
+required—just a common practice.
+
+```bash
+MYVAR="something"
+echo $MYVAR
+```
+
+bash variable syntax:
+First, in the assignment, the name=value syntax is straightforward enough,
+but there cannot be any spaces around the equals sign.
+
+The second aspect of shell variable syntax worth noting is the use of the dollar sign
+( $ ) to get the value of the variable. some people would argue that
+always using the braces is a good habit so you never have to worry about when they
+are needed or not, and provides a consistent look throughout your scripts.
+
+
+The exception to this is using variables inside a $(( )) expression
+
+
 **(1) Telling Whether a Command Succeeded or Not**
 ```bash
 # somecommand
@@ -178,22 +202,61 @@ find . -name '*.mp3' -print0 | xargs -i -0 mv '{}' ~/songs
 
 **(11) Using Functions: Parameters and Return Values**
 
+>You must invoke the function inside a $() , capturing the output
+>and using the result, or it will be wasted on the screen.
+>Attention in bash the are no return statment in function context
+>so you should just echo the return value.
+
+
 ```bash
-# define the function:
-function max ()
+function max()
 {
-	local HIDN
 	if [ $1 -gt $2 ]
 	then
-		BIGR=$1
+		echo $1
 	else
-		BIGR=$2
-	fi
-	HIDN=5
+		echo $2
 }
 
-# call the function:
-max 128 $SIM
-# use the result:
-echo $BIGR
+my_number1=56
+my_number2=89
+
+larger=$(max $my_number1 $my_number2) #Invoking the function
+
+echo "$larger is a larger number"
+```
+
+**(12) Saving or Grouping Output from Several Commands**
+
+>Use braces { } to group these commands together; then redirection applies to the output from all commands in the group.
+
+
+>There are two very subtle catches here. The braces are actually
+>reserved words, so they must be surrounded by whitespace. Also,
+>the trailing semicolon is required before the closing brace.
+
+
+```bash
+{ pwd; ls; cd ../elsewhere; pwd; ls; } > /tmp/all.out
+```
+
+```bash
+all_packages_names=$( adb shell pm list packages codingforpleasure | awk -F: '{ print $2 }' )
+```
+
+```bash
+num_rows=$( echo "$all_packages_names" | wc -l )
+```
+
+**(13) Switch case in bash**
+```bash
+case "$answer" in
+	[yY1] ) eval "$choice_yes"
+		# error check
+	;;
+	[nN0] ) eval "$choice_no"
+		# error check
+	;;
+	*	  ) printf "%b" "Unexpected answer '$answer'!" >&2 ;;
+esac
 ```
