@@ -5,23 +5,26 @@ Table of Contents
    * [Table of Contents](#table-of-contents)
       * [Bash tips and tricks](#bash-tips-and-tricks)
          * [Bash scripting Conventions](#bash-scripting-conventions)
-      * [Basic to advance debugging techniques](#basic-to-advance-debugging-techniques)
+      * [<em><strong>Basic to Advance debugging techniques</strong></em>](#basic-to-advance-debugging-techniques)
          * [Telling Whether a Command Succeeded or Not](#telling-whether-a-command-succeeded-or-not)
+         * [Displaying Error Messages When Failures Occur](#displaying-error-messages-when-failures-occur)
          * [Seeing All Variable Values (Avoid echoing each one by hand)](#seeing-all-variable-values-avoid-echoing-each-one-by-hand)
+         * [Debugging on the entire script](#debugging-on-the-entire-script)
+         * [Debugging on part of a shell script](#debugging-on-part-of-a-shell-script)
          * [You need to know how many parameters the script was invoked with.](#you-need-to-know-how-many-parameters-the-script-was-invoked-with)
-      * [Control Flow statements](#control-flow-statements)
+      * [<em><strong>Control Flow statements</strong></em>](#control-flow-statements)
          * [Switch case in bash](#switch-case-in-bash)
          * [Looping Over Arguments Passed to a Script](#looping-over-arguments-passed-to-a-script)
          * [Looping for a While](#looping-for-a-while)
          * [Looping with a Count](#looping-with-a-count)
          * [Using Functions: Parameters and Return Values](#using-functions-parameters-and-return-values)
          * [Using Array Variables](#using-array-variables)
-      * [Operations on files](#operations-on-files)
+      * [<em><strong>Operations on files</strong></em>](#operations-on-files)
          * [Testing for File Characteristics](#testing-for-file-characteristics)
          * [Finding All Your MP3 Files](#finding-all-your-mp3-files)
          * [Saving or Grouping Output from Several Commands](#saving-or-grouping-output-from-several-commands)
-
-
+      * [<em><strong>Useful snippets for daily-work</strong></em>](#useful-snippets-for-daily-work)
+         * [Running All Scripts in a Directory](#running-all-scripts-in-a-directory)
 
 ## Bash tips and tricks
 
@@ -57,8 +60,14 @@ somecommand
 ...
 if (( $? == 0 )) ; then echo failed ; else echo OK; fi
 ```
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
 
-## Basic to advance debugging techniques
+## *__Basic to Advance debugging techniques__*
 
 ### Telling Whether a Command Succeeded or Not
 ```bash
@@ -72,16 +81,47 @@ $ echo $?
 1
 ```
 
+### Displaying Error Messages When Failures Occur
+>There are cases that if statements tend to distract from the visual flow of statements
 
-
-### Seeing All Variable Values (Avoid echoing each one by hand)
->**set command to see the values of all variables and function definitions in the
-current shell.**
 ```bash
-# set
+cmd || printf "%b" "cmd failed. You're on your own\n"
+```
+>or if we want to have the exit happen only on error:
 
+```bash
+cmd || { printf "%b" "FAILED.\n" ; exit 1 ; }
 ```
 
+### Seeing All Variable Values (Avoid echoing each one by hand)
+>set command to see the values of all variables and function definitions in the current shell,
+For seeing which variables have been exported and what values they have.
+
+>Use the `env` (or `export -p` ) command to see only those variables that have been exported and would be available to a subshell.
+>In bash version 4 or newer, you can also use the `declare -p` command.
+
+### Debugging on the entire script
+>Start up the subshell with the -x option, which will run the entire script in debug mode.
+>Traces of each command plus its arguments are printed to standard output after the commands have been expanded but before they are executed.
+
+```bash
+bash -x testingScript.sh
+```
+
+### Debugging on part of a shell script
+>Using the `set` Bash built-in you can run in normal script ran in debug mode
+
+```bash
+set -x			# activate debugging from here
+#
+# Your tested block of code
+#
+set +x			# stop debugging from here
+```
+> For getting more info regarding the lines numbers enter this in the shell, before executing the script:
+```bash
+export PS4='+xtrace Line number:$LINENO:'
+```
 
 ### You need to know how many parameters the script was invoked with.
 
@@ -107,9 +147,14 @@ or this too:
 || { echo "Uh-oh, ummm, RUN AWAY! " ; exit 120; }
 ```
 
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
 
-
-## Control Flow statements
+## *__Control Flow statements__*
 
 ### Switch case in bash
 ```bash
@@ -216,7 +261,14 @@ SUM=$((A1 + An)*n/2)
 ```
 >**you can use all the standard operators inside of $(( )) for arithmetic expressions**
 
-## Operations on files
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+## *__Operations on files__*
 ### Testing for File Characteristics
 
 Option | Description
@@ -287,5 +339,28 @@ all_packages_names=$( adb shell pm list packages codingforpleasure | awk -F: '{ 
 
 ```bash
 num_rows=$( echo "$all_packages_names" | wc -l )
+```
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+## *__Useful snippets for daily-work__*
+### Running All Scripts in a Directory
+
+> If it is a file (the -f test) and has execute permissions set (the -x test),
+> the shell will then try to run that script.
+
+```bash
+for SCRIPT in /path/to/scripts/dir/*
+do
+	if [ -f "$SCRIPT" -a -x "$SCRIPT" ]
+	then
+		$SCRIPT
+	fi
+done
 ```
 
