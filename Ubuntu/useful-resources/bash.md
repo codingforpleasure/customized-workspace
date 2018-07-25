@@ -25,6 +25,9 @@ Table of Contents
          * [Saving or Grouping Output from Several Commands](#saving-or-grouping-output-from-several-commands)
       * [<em><strong>Useful snippets for daily-work</strong></em>](#useful-snippets-for-daily-work)
          * [Running All Scripts in a Directory](#running-all-scripts-in-a-directory)
+         * [Setting Default Values for arguments](#setting-default-values-for-arguments)
+
+Created by [gh-md-toc](https://github.com/ekalinin/github-markdown-toc)
 
 ## Bash tips and tricks
 
@@ -364,3 +367,17 @@ do
 done
 ```
 
+### Setting Default Values for arguments
+>You have a shell script that takes arguments supplied on the command line. You’d like
+to provide default values so that the most common values can be used without the
+user needing to type them every time.
+
+**Use the ${:-} syntax when referring to the parameter, and use it to supply a default value:**
+
+```bash
+PATH_TO_INSTALL=${1:-/usr/local}
+```
+>The `:-` operator says that if the specified parameter (here, $1 ) is not set or is null,
+whatever follows ( /usr/local in my example) should be used as the value. Otherwise, it will
+use the value that is already set. It can be used on any shell variable,
+not just the positional parameters ( $1 , $2 , $3 , etc.)
