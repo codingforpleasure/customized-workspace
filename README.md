@@ -12,7 +12,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 The things you need to install are:
 
-
+- zsh (I'm using 5.3 from source)
 - tmux (I'm using tmux 2.6)
 - tmuxinator - Create and manage tmux sessions easily (I'm using tmuxinator 0.10.1),
                with autocomplete [link](https://github.com/tmuxinator/tmuxinator/blob/master/completion/tmuxinator.zsh)
@@ -26,6 +26,8 @@ The things you need to install are:
 - multitail (brew install multitail)
 - hub - cli tool for github (brew install hub && alias git=hub)
 - pyenv - Managing easily and switching between multiple versions of Python
+- github-markdown-toc - Easily generate Table Of Content for given markdown file.
+
 
 
 Soon I'll be posting a script for doing all those installs in a snap of a finger.
@@ -39,7 +41,7 @@ git clone https://github.com/codingforpleasure/customized-workspace.git
 
 In this repository you can find:
  - tmux.conf - Holds the configuration enviroment of tmux (should be located in the ~ directory)
- - backend-work - A template which consists multiple panes in each window for viewing easily various logs. main paurpose is to 
+ - backend-work - A template which consists multiple panes in each window for viewing easily various logs. main paurpose is to
                   easily diagnose the system (should be located in ~/.config/tmuxinamtor/backend-work.yml)
  - .zshrc - configured, works well. place it in the home directory.
  - multitail.conf - Coloring specific words by regex, should be placed in ~/.config/multitail directory.
@@ -69,11 +71,11 @@ Creates horizontal split | PREFIX + -
 Run command in tmux | PREFIX + \:
 Move to next window | PREFIX + n
 Move to the previous window | PREFIX + l
-Navigate between panes | PREFIX + \<arrows\> 
+Navigate between panes | PREFIX + \<arrows\>
 Jump to the specific window number | PREFIX + \<window number\>
 Create new window | PREFIX + c (**c**reate window)
 Close window | PREFIX + &
-Rename window name | PREFIX + , 
+Rename window name | PREFIX + ,
 Choose a session from a list | PREFIX + s
 
 Copying and pasting:
@@ -91,7 +93,7 @@ Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c6
 
 ## Versioning
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
+We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags).
 
 ## Authors
 
