@@ -26,8 +26,8 @@ Table of Contents
       * [<em><strong>Useful snippets for daily-work</strong></em>](#useful-snippets-for-daily-work)
          * [Running All Scripts in a Directory](#running-all-scripts-in-a-directory)
          * [Setting Default Values for arguments](#setting-default-values-for-arguments)
-
-Created by [gh-md-toc](https://github.com/ekalinin/github-markdown-toc)
+         * [“Daemon-izing” Your Script](#daemon-izing-your-script)
+         * [Reusing Code with Includes and Sourcing](#reusing-code-with-includes-and-sourcing)
 
 ## Bash tips and tricks
 
@@ -368,7 +368,7 @@ done
 ```
 
 ### Setting Default Values for arguments
->You have a shell script that takes arguments supplied on the command line. You’d like
+You have a shell script that takes arguments supplied on the command line. You’d like
 to provide default values so that the most common values can be used without the
 user needing to type them every time.
 
@@ -377,7 +377,39 @@ user needing to type them every time.
 ```bash
 PATH_TO_INSTALL=${1:-/usr/local}
 ```
->The `:-` operator says that if the specified parameter (here, $1 ) is not set or is null,
+The `:-` operator says that if the specified parameter (here, $1 ) is not set or is null,
 whatever follows ( /usr/local in my example) should be used as the value. Otherwise, it will
 use the value that is already set. It can be used on any shell variable,
 not just the positional parameters ( $1 , $2 , $3 , etc.)
+
+### “Daemon-izing” Your Script
+Sometimes you want a script to run as a daemon, in the background and never ending. To do this properly you need to be able to detach your script from its controlling
+TTY—that is, from the terminal session used to start the daemon. Simply putting an
+ampersand on the command isn’t enough. If you start your daemon script on a
+remote system via an SSH (or similar) session, you’ll notice that when you log out,
+the SSH session doesn’t end and your window is hung until that script ends.
+```bash
+nohup mydaemonscript 0<&-1>/dev/null 2>&1 &
+```
+We use the nohup command so that the script is run without being interrupted by a
+hangup signal when we log off.
+
+### Reusing Code with Includes and Sourcing
+Use the bash shell’s source command or POSIX’s single period (.) to read in the contents of that configuration file.
+
+```bash
+$ cat myprefs.cfg
+SCRATCH_DIR=/var/tmp
+IMG_FMT=png
+SND_FMT=ogg
+$
+```
+
+In the actual script write:
+```bash
+# use the user prefs
+source $HOME/myprefs.cfg
+cd ${SCRATCH_DIR:-/tmp}
+echo You prefer $IMG_FMT image files
+echo You prefer $SND_FMT sound files
+```
