@@ -1,5 +1,6 @@
 <!--ts-->
    * [Text manipulation tools](#text-manipulation-tools)
+      * [<strong>The difference between tr, sed, awk</strong>:](#the-difference-between-tr-sed-awk)
       * [<strong>tr (translate or delete characters)</strong>](#tr-translate-or-delete-characters)
          * [Example #1: maps character b to character <code>d</code>:](#example-1-maps-character-b-to-character-d)
          * [Example #2: maps each character to it's uppercase form:](#example-2-maps-each-character-to-its-uppercase-form)
@@ -20,11 +21,27 @@
          * [Example #7: Prints the second column when the delimeter is now colon](#example-7-prints-the-second-column-when-the-delimeter-is-now-colon)
          * [Example #8: Prints the second column from line 4 (skips the first 3 lines).](#example-8-prints-the-second-column-from-line-4-skips-the-first-3-lines)
 
-<!-- Added by: gil_diy, at: 2018-07-27T18:03+03:00 -->
+<!-- Added by: gil_diy, at: 2018-07-27T18:27+03:00 -->
 
 <!--te-->
 
 # Text manipulation tools
+
+## **The difference between tr, sed, awk**:
+To characterize the three tools crudely:
+
+- [x] _**tr**_ works on characters (changes or deletes them).
+- [x] _**sed**_ works on lines (modifies words or other parts of lines, or inserts or deletes lines).
+- [x] _**awk**_ work on records with fields(by default whitespace separated fields on a line, but may be changed see examples).
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
 
 ## **tr (translate or delete characters)**
 ### Example #1: maps character `b` to character `d`:
