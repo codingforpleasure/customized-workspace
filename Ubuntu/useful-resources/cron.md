@@ -56,7 +56,7 @@ if asterisk will appear in the minute field so it will presents
 #### Example #1: Run cronjob on specific times
 
 Minute | Hour | Date | Month | DOW (Day Of the Week)  | command
-------|----- | ----|-----|--	----|---------
+------|----- | ----|-----|------|---------
 12,46 |  1,2,20 | 7,29 | MAR,AUG | 3,5 | job #1
 
 Explanation:
@@ -81,7 +81,7 @@ Minute | Hour | Date | Month | DOW (Day Of the Week)  | command
 
 Minute | Hour | Date | Month | DOW (Day Of the Week)  | command
 ------|----- | ----|-----|------|---------
-* |  * | * | * | * | job #1
+\* |  * | * | * | * | job #1
 
 #### Example #4: Run a cron job on every hour
 
@@ -95,10 +95,10 @@ Minute | Hour | Date | Month | DOW (Day Of the Week)  | command
 ------|----- | ----|-----|------|---------
 */5 |  * | * | * | * | job #1
 
-** Pay attention: here I have used a step value of 5 which generates the following series:**
+*Pay attention: here I have used a step value of 5 which generates the following series:*
 0,5,10,15,20,25,30,35,40,45,50,55
 
-** make sure the step value you pick  devides into the range you picked without any remainders, cause otherwise you'll get uneven intervals.**
+*make sure the step value you pick  devides into the range you picked without any remainders, cause otherwise you'll get uneven intervals.*
 
 
 #### Example #6: Run a cron job on 09:30 and on 17:30, from Sunday To Thursday
@@ -122,7 +122,7 @@ The second entry will start at midnight with offset of 90 minutes from our first
 
 #### Example #8: Run a cron job on 21:30 only on the last day of each month
 
-This task is a bit tricky since there are days which consist of 28/29/30/31 days, so i'll be adding an if statement condition before executing the shell script.
+This task is a bit tricky since there are months which consist of 28/29/30/31 days, so i'll be adding an if statement condition before executing the shell script.
 
 Minute | Hour | Date | Month | DOW   | command
 ------|----- | ----|-----|------|---------
@@ -135,4 +135,4 @@ You can use the `env` command (for running a program in a modified environemnt)
 
 Minute | Hour | Date | Month | DOW   | command
 ------|----- | ----|-----|------|---------
-* |  * | * | * | * |  `env <environment-name> && /tmp/myscript.sh`
+\* |  * | * | * | * |  `env <environment-name> && /tmp/myscript.sh`
