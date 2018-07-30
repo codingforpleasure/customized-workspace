@@ -79,3 +79,9 @@ The first entry will start at midnight:    0		       3		6		9		12		15		18		21
 
 The second entry will start at midnight with offset of 90 minutes from our first cron job entry:
   01:30	  04:30	07:30	10:30	13:30	16:30	19:30	22:30
+
+**Example #6: Run a cron job on 21:30 only on the last day of each month**
+
+Minute | Hour | Date | Month | DOW   | command
+------|----- | ----|-----|------|---------
+30 |  21 | 28-31 | * | * | `test $(date -d tomorrow +%d) -eq 1 && /tmp/myscript.sh`
