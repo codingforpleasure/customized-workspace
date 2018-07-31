@@ -17,8 +17,9 @@ Table of Contents
             * [Example #7: Run a cron job every 90 minutes](#example-7-run-a-cron-job-every-90-minutes)
             * [Example #8: Run a cron job on 21:30 only on the last day of each month](#example-8-run-a-cron-job-on-2130-only-on-the-last-day-of-each-month)
             * [Example #9: Setting environment properly for resolving crontab issues](#example-9-setting-environment-properly-for-resolving-crontab-issues)
+            * [Example #10: Run cronjob in random times with step size of 4 hours](#example-10-run-cronjob-in-random-times-with-step-size-of-4-hours)
 
-<!-- Added by: gil_diy, at: 2018-07-31T08:56+03:00 -->
+<!-- Added by: gil_diy, at: 2018-07-31T14:39+03:00 -->
 
 <!--te-->
 
@@ -161,3 +162,14 @@ Minute | Hour | Date | Month | DOW   | command
 
 
 > Make sure your environment is set in the script: myscript.sh
+
+#### Example #10: Run cronjob in random times with step size of 4 hours
+
+Minute | Hour | Date | Month | DOW   | command
+------|----- | ----|-----|------|---------
+0 |  */4 | * | * | * | `delay=$(($RANDOM%60)) && sleep $delay && /tmp/myscript.sh`
+
+
+I'm padding the cron job time execution with interval's size of 0-60 seconds,
+
+you can easily put the logic in the bash script itself.
