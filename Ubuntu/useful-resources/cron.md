@@ -3,21 +3,22 @@ Table of Contents
 =================
 
 <!--ts-->
-  * [Cron tips and tricks](#cron-tips-and-tricks)
-     * [Basic commands in crontab](#basic-commands-in-crontab)
-     * [Delving into the cron table:](#delving-into-the-cron-table)
-     * [Useful examples:](#useful-examples)
-        * [Example #1: Run cronjob on specific times](#example-1-run-cronjob-on-specific-times)
-        * [Example #2: Creating ranges](#example-2-creating-ranges)
-        * [Example #3: Run a cron job on every minute](#example-3-run-a-cron-job-on-every-minute)
-        * [Example #4: Run a cron job on every hour](#example-4-run-a-cron-job-on-every-hour)
-        * [Example #5: Run a cron job on every five minutes](#example-5-run-a-cron-job-on-every-five-minutes)
-        * [Example #6: Run a cron job on 09:30 and on 17:30, from Sunday To Thursday](#example-6-run-a-cron-job-on-0930-and-on-1730-from-sunday-to-thursday)
-        * [Example #7: Run a cron job every 90 minutes](#example-7-run-a-cron-job-every-90-minutes)
-        * [Example #8: Run a cron job on 21:30 only on the last day of each month](#example-8-run-a-cron-job-on-2130-only-on-the-last-day-of-each-month)
-        * [Example #9: Setting environment](#example-9-setting-environment)
+   * [Table of Contents](#table-of-contents)
+      * [Cron tips and tricks](#cron-tips-and-tricks)
+         * [Basic commands in crontab](#basic-commands-in-crontab)
+         * [Delving into the cron table:](#delving-into-the-cron-table)
+         * [Useful examples:](#useful-examples)
+            * [Example #1: Run cronjob on specific times](#example-1-run-cronjob-on-specific-times)
+            * [Example #2: Creating ranges](#example-2-creating-ranges)
+            * [Example #3: Run a cron job on every minute](#example-3-run-a-cron-job-on-every-minute)
+            * [Example #4: Run a cron job on every hour](#example-4-run-a-cron-job-on-every-hour)
+            * [Example #5: Run a cron job on every five minutes](#example-5-run-a-cron-job-on-every-five-minutes)
+            * [Example #6: Run a cron job on 09:30 and on 17:30, from Sunday To Thursday](#example-6-run-a-cron-job-on-0930-and-on-1730-from-sunday-to-thursday)
+            * [Example #7: Run a cron job every 90 minutes](#example-7-run-a-cron-job-every-90-minutes)
+            * [Example #8: Run a cron job on 21:30 only on the last day of each month](#example-8-run-a-cron-job-on-2130-only-on-the-last-day-of-each-month)
+            * [Example #9: Setting environment properly for resolving crontab issues](#example-9-setting-environment-properly-for-resolving-crontab-issues)
 
-<!-- Added by: gil_diy, at: 2018-07-31T00:25+03:00 -->
+<!-- Added by: gil_diy, at: 2018-07-31T08:56+03:00 -->
 
 <!--te-->
 
@@ -129,10 +130,34 @@ Minute | Hour | Date | Month | DOW   | command
 30 |  21 | 28-31 | * | * | `test $(date -d tomorrow +%d) -eq 1 && /tmp/myscript.sh`
 
 
-#### Example #9: Setting environment
+#### Example #9: Setting environment properly for resolving crontab issues
+
+There are cases were crontab might fail although when you execute the script manually in runs flawlessly, so to figure it out what's wrong:
+you can simulate the exact environment by:
+
+`env --ignore-environment /bin/bash --noprofile --norc`
+
+This current environment is empty,
+then execute your script and see howcome it fails,
+this should give you an idea.
+Usually the reason would be some environment variables are not set:
+
+For resolving this issue you can export variables above the actual cron table
+(in the `crontab -e` screen) or in the beginning of your script:
+
+**Resolving BUG** #1: Exporting the Path so geckodriver will be found
+`export PATH=$PATH:/usr/local/bin/`
+
+**Resolving BUG** #2: I kept getting "Error: no display specified", so you should set this:
+`export DISPLAY=:0;`
+
 
 You can use the `env` command (for running a program in a modified environemnt)
 
+
 Minute | Hour | Date | Month | DOW   | command
 ------|----- | ----|-----|------|---------
-\* |  * | * | * | * |  `env <environment-name> && /tmp/myscript.sh`
+\* |  * | * | * | * |  /tmp/myscript.sh
+
+
+> Make sure your environment is set in the script: myscript.sh
