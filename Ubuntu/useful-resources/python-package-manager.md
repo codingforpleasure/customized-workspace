@@ -28,10 +28,6 @@ Table of Contents
 - [x] pypenv
 - [x] pipenv :thumbsup:
 
-```bash
-pip install virtualenv
-```
-
 For installing pip packages in isolated manner,
 for getting full control which package to install for each environment you create. Each project has different dependencies, therefore we need to create environment for each project.
 
@@ -71,6 +67,8 @@ for example:
 $ pip install django
 ```
 will install django to my system, a much better approach will be to use virtual env for a project.
+
+comment: usually you would have some pip versions installed on your system, make sure you use the correct one. I prefer using the latest one on my system (`pip3.6`).
 
 ### virtualenv (Python Environment Manager)
 separate different environments for different projects
