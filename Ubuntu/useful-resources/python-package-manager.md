@@ -28,11 +28,6 @@ Table of Contents
 - [x] pypenv
 - [x] pipenv :thumbsup:
 
-
-envpip install -r requirements.txt
-
-Virtualenv or Anaconda serve the same aim.
-
 ```bash
 pip install virtualenv
 ```
@@ -66,7 +61,6 @@ Description | command
 -------------|-------------
 List packages on your global site packages|  **pip list**
 Install new package|  **pip install** &lt;package-name&gt;
-
 Install new package with specific version |**pip install** &lt;package-name&gt;**==**&lt;version number&gt;
 Install list of requirements | **pip install -r** requirements.txt
 Uninstall package|  **pip uninstall** &lt;package-name&gt;
@@ -102,6 +96,10 @@ Exit the active environment | **deactivate**
 
 
 ### Anaconda (Package Manager + Environment Manager + Additional Scientific Libraries)
+
+
+Virtualenv or Anaconda serve the same aim, although brings more to the table.
+
 
 #### useful commands
 
