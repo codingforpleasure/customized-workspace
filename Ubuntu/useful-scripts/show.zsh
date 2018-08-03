@@ -1,28 +1,28 @@
 #!/bin/bash
 
 
-num_captchas=$(($(ls ./output | wc -l) + 3)) # Adding extra row
-echo "num_captchas = ${num_captchas}"
-num_stages=4
+NUM_CAPTCHAS=$(($(ls ./output_phases | wc -l) + 3)) # Adding extra row
 
-single_image_width=300
-single_image_height=75
+NUM_STAGES=4
 
-
-fixed_width=$((num_stages * single_image_width))
-fixed_height=$((num_captchas * single_image_height))
-
-echo "fixed_height = ${fixed_height}"
-echo "fixed_width = ${fixed_width}"
-
-filename=$(date +"%T").png
-
-echo "${filename}"
+SINGLE_IMAGE_WIDTH=300
+SINGLE_IMAGE_HEIGHT=75
 
 
-feh -i --recursive --thumb-width ${single_image_width} \
-		--thumb-height ${single_image_height}  \
-		--limit-width "${fixed_width}" \
-		--limit-height "${fixed_height}" \
-		--output "${filename}" ./output_montage &
+FIXED_WIDTH=$((NUM_STAGES * SINGLE_IMAGE_WIDTH))
+FIXED_HEIGHT=$((NUM_CAPTCHAS * SINGLE_IMAGE_HEIGHT))
 
+OUTPUT_DIR="output_montage"
+INPUT_DIR="output_phases"
+MONTAGE_ID=$(($(ls "${OUTPUT_DIR}" | wc -l) + 1)) # Adding extra row
+FILENAME="${MONTAGE_ID}-montage-"$(date +"%T").png
+
+
+feh --index \
+	--recursive \
+	--thumb-width "${SINGLE_IMAGE_WIDTH}" \
+	--output "./${OUTPUT_DIR}/${FILENAME}" \
+	--thumb-height "${SINGLE_IMAGE_HEIGHT}"  \
+	--limit-width "${FIXED_WIDTH}" \
+	--limit-height "${FIXED_HEIGHT}" \
+	output_phases &
