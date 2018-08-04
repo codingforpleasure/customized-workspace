@@ -21,6 +21,19 @@ Display all images in grid size of NxM size| `feh -i --limit-width` &lt;N x imag
 Save created montage to file (Works both on Index mode and Motage mode) | `feh --index --recursive --output my-collection.png`
 
 
+
+### Useful functions
+
+Description | command
+------------------------------------|-----
+Load image | img = **cv2.imread**( _path-to-file_ )
+Write image to disk | **cv2.imwrite**( _/codingForPleasure/example.png, img_ )
+Convert to grayscale | grayImg = **cv2.cvtColor**(_img, **cv2.COLOR_BGR2GRAY**_)
+Threshold | thresholdImg = **cv2.threshold**(_grayImg, &lt;threshold value&gt; ,&lt;max value&gt; **cv2.THRESH_BINARY_INV** \| **cv2.THRESH_OTSU**_ )
+Retrievie contours | **cv2.findContours**(_img, **cv2.RETR_EXTERNAL**, **cv2.CHAIN_APPROX_SIMPLE**_)
+
+
+
 ###Threshold
 
 ###Contours
@@ -48,5 +61,3 @@ Current Contour | Next contour in same hierarchy level under largest contour whi
 **7**           |                                     |                |                                                     |
 **8**           |                                     |                |                                                     |
 **9**           |                                     |                |                                                     |
-
-
