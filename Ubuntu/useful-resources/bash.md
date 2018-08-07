@@ -2,6 +2,7 @@
 Table of Contents
 =================
 
+<!--ts-->
    * [Table of Contents](#table-of-contents)
       * [Bash tips and tricks](#bash-tips-and-tricks)
          * [Bash scripting Conventions](#bash-scripting-conventions)
@@ -13,6 +14,7 @@ Table of Contents
          * [Debugging on part of a shell script](#debugging-on-part-of-a-shell-script)
          * [You need to know how many parameters the script was invoked with.](#you-need-to-know-how-many-parameters-the-script-was-invoked-with)
       * [<em><strong>Control Flow statements</strong></em>](#control-flow-statements)
+         * [Ternary operator (short form of if condition)](#ternary-operator-short-form-of-if-condition)
          * [Switch case in bash](#switch-case-in-bash)
          * [Looping Over Arguments Passed to a Script](#looping-over-arguments-passed-to-a-script)
          * [Looping for a While](#looping-for-a-while)
@@ -28,6 +30,10 @@ Table of Contents
          * [Setting Default Values for arguments](#setting-default-values-for-arguments)
          * [“Daemon-izing” Your Script](#daemon-izing-your-script)
          * [Reusing Code with Includes and Sourcing](#reusing-code-with-includes-and-sourcing)
+
+<!-- Added by: gil_diy, at: 2018-08-07T13:34+03:00 -->
+
+<!--te-->
 
 ## Bash tips and tricks
 
@@ -159,6 +165,19 @@ or this too:
 
 ## *__Control Flow statements__*
 
+### Ternary operator (short form of if condition)
+```bash
+case "$b" in
+	5) a=$c ;;
+	*) a=$d ;;
+esac
+```
+Or
+
+```bash
+ [[ $b = 5 ]] && a="$c" || a="$d"
+```
+
 ### Switch case in bash
 ```bash
 case "$answer" in
@@ -223,6 +242,13 @@ do
 done
 ```
 
+loop over alphabetical characters:
+```bash
+for char in {A..Z}; do
+    mkdir $char
+done
+```
+you can also do this: `mkdir {A..Z}`
 
 ### Using Functions: Parameters and Return Values
 
