@@ -106,3 +106,11 @@ sync {
     source  = homeDir .. "/.config/sublime-text-3/Packages/User",
     target  = destDir .. "/.config/sublime-text-3/Packages/User",
 }
+
+
+ -- 7) Backing-up my useful scripts
+sync {
+    default.direct,
+    source  = homeDir .. "/my_useful_scripts",
+    target  = destDir .. "/useful-scripts",
+}
