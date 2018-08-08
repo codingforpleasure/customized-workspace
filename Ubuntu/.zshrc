@@ -4,6 +4,9 @@
 # Adding some scripts for increasing my productivity
 PATH=$PATH:$HOME/my_useful_scripts
 
+# Adding some anconda to my path
+PATH="/home/gil_diy/anaconda3/bin:$PATH"
+
 # Path to your oh-my-zsh installation.
 export ZSH=/home/gil_diy/.oh-my-zsh
 
@@ -41,7 +44,7 @@ ZSH_THEME="powerlevel9k/powerlevel9k"
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
-ENABLE_CORRECTION="true"
+# ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 # COMPLETION_WAITING_DOTS="true"
@@ -71,6 +74,8 @@ plugins=(
   extract
   systemd
   debian
+  pip
+  pipenv
   )
 
 source $ZSH/oh-my-zsh.sh
@@ -145,6 +150,7 @@ source ~/.bin/tmuxinator.zsh
 
 ######## Aliases ########
 
+alias help=helper                 # Assuming tldr client in installed on your system
 alias ll="ls -la --color \
                  --human-readable \
                  --group-directories-first" # list files nicely
@@ -154,7 +160,7 @@ alias cp="cp -i"               			# Prompt before overwrite
 alias scp="scp -r"                  # Secure copy with recursively copy so it means entire directories.
 alias ssh="ssh -x"                  # Ssh with enabled X11 forwarding
 alias 'crontab -r'='crontab -i' 		# Prompt before actually removing the crontab
-alias make=my-make 		              #
+#alias make=my-make 		              #
 
 alias histg="history | grep "			  # Combine history with grep
 alias lsg="ll | grep "              # Combine list files with grep
@@ -163,7 +169,8 @@ alias pgrep="pgrep --list-full"			# lookup a process
 alias psg="pgrep --list-full"       # lookup a process
 
 alias top="htop"                    # Execute the interactive process viewer
-alias locate="sudo updatedb; locate "		# locate
+alias locate="sudo updatedb; locate --ignore-case "
+#alias findz=
 
 alias locateh=locate-here           # locate here under the current folder
 alias watchl='watch --color ls -la --color'	# list and watch files and folders with color
@@ -173,6 +180,7 @@ alias charm="charm &"
 alias pycharm="charm"
 alias pyCharm="charm"
 alias PyCharm="charm"
+alias firefox="firefox --ProfileManager" # For Controlling my browser environment
 
 alias android="~/android-studio/bin/studio.sh &"# Execute Android-studio easily
 alias adb='~/Android/Sdk/platform-tools/adb' 	# Execute Android Debug Bridge (adb)
@@ -188,13 +196,15 @@ alias dis='display '
 alias tes='tesseract '
 alias du='du --summarize --human-readable' # Disk space usage nicer output
 
-alias ubuntu='cd ~/myGitRepositories/customized-workspace/Ubuntu'
-alias gitrep='cd ~/myGitRepositories'		# Go to my repos collection
+alias display='feh -i' #impressive_display
+
 
 alias rsync="rsync --verbose \
               --progress \
               --human-readable \
               --archive"
+
+alias toc-markdown-generate='gh-md-toc --insert '  # Generates Table-Of-Content for a given markdown
 
 ### some git aliases ###
 alias cdg='cd $(git rev-parse --show-toplevel)' # jump to repo's root directory (where the .git resides)
@@ -219,10 +229,15 @@ alias unstageall='git reset HEAD .'
 alias undo='git reset --soft HEAD^'
 alias undopush='git push -f origin HEAD^:master'
 alias gc='git commit'
+alias gca='git commit --amend -m'
+alias push='git push'
 alias stash='git stash -k -u'
 alias stashall='git stash --include-untracked'
 alias pop='git stash pop'
 
+# Aliases for paths
+alias ubuntu='cd ~/myGitRepositories/customized-workspace/Ubuntu'
+alias gitrep='cd ~/myGitRepositories'   # Go to my repos collection
 
 # Execute tmuxinator on startup
 tmuxinator android-setup
@@ -271,21 +286,33 @@ function locate-here(){
   locate $1 | grep $PWD
 }
 
-function my-make(){
-  if [ $# -eq 0 ]; then
-    /usr/bin/make --just-print
-    echo $fg_bold[red] "\n Attention: just ran dry-run (Printed the commands that would be executed)"
-    echo $fg_bold[white]
-    if [[ "no" == $(ask_yes_or_no " Would you like now to run make, now?") ]]
-    then
-      echo "Skipped."
-      exit 0
+function helper(){
+
+    if [ $# -eq 0 ]; then
+      echo $fg_bold[red] "add argument!!"
+      exit 1
     fi
-    /usr/bin/make
-  else
-    /usr/bin/make "$@"
-  fi
+
+    tldr $1
+    python `which doc-helper.py` $1
+
 }
+
+# function my-make(){
+#   if [ $# -eq 0 ]; then
+#     /usr/bin/make --just-print
+#     echo $fg_bold[red] "\n Attention: just ran dry-run (Printed the commands that would be executed)"
+#     echo $fg_bold[white]
+#     if [[ "no" == $(ask_yes_or_no " Would you like now to run make, now?") ]]
+#     then
+#       echo "Skipped."
+#       exit 0
+#     fi
+#     /usr/bin/make
+#   else
+#     /usr/bin/make "$@"
+#   fi
+# }
 
 
 function ask_yes_or_no() {
@@ -295,3 +322,12 @@ function ask_yes_or_no() {
         *)     echo "no" ;;
     esac
 }
+
+#
+# TODO function description
+# @param  TODO The first parameter
+# @return
+#function_impresive_display() {
+#  feh -l | awk '{ print $3" "$4" "$8 }'
+#
+#}
