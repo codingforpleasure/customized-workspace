@@ -7,6 +7,9 @@ PATH=$PATH:$HOME/my_useful_scripts
 # Adding some anconda to my path
 PATH="/home/gil_diy/anaconda3/bin:$PATH"
 
+# Adding my documentations to my path
+DOC_PATH="/home/gil_diy/myGitRepositories/customized-workspace/Ubuntu/useful-resources/"
+
 # Path to your oh-my-zsh installation.
 export ZSH=/home/gil_diy/.oh-my-zsh
 
@@ -206,6 +209,11 @@ alias rsync="rsync --verbose \
 
 alias toc-markdown-generate='gh-md-toc --insert '  # Generates Table-Of-Content for a given markdown
 
+# My documnetation tweaks
+alias doc-edit=documentation-edit $1
+alias doc-ls=documentation-list
+
+
 ### some git aliases ###
 alias cdg='cd $(git rev-parse --show-toplevel)' # jump to repo's root directory (where the .git resides)
 alias hookg='cd $(git rev-parse --show-toplevel)/.git/hooks'
@@ -237,6 +245,7 @@ alias pop='git stash pop'
 
 # Aliases for paths
 alias ubuntu='cd ~/myGitRepositories/customized-workspace/Ubuntu'
+alias myscripts='cd ~/my_useful_scripts'
 alias gitrep='cd ~/myGitRepositories'   # Go to my repos collection
 
 # Execute tmuxinator on startup
@@ -269,7 +278,7 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib/
 
 ###### Functions ######
 
-function strace-and-grep() {
+function strace-and-grep(){
 
   # since strace prints its traces on standard error, not on standard output
   # if [[ $1=="adb" ]]; then
@@ -280,6 +289,26 @@ function strace-and-grep() {
   echo "Binary file: $1"
   echo "Grepping: $2"
 }
+
+function documentation-list(){
+	echo $fg_bold[cyan]"All documentations listed below:"$fg_bold[white]
+	echo ""
+	ls -1 ${DOC_PATH}
+	echo ""
+}
+
+function documentation-edit(){
+	if [ $# -eq 0 ]; then
+		echo $fg_bold[red] "add argument!!"
+		exit 1
+	fi
+
+	# search for file in directory if found the execute then edit it.
+
+	local FILENAME=$1.md
+	/usr/bin/subl ${DOC_PATH}/"${FILENAME}"
+}
+
 
 function locate-here(){
   # Locate files under the current directory
@@ -298,23 +327,6 @@ function helper(){
 
 }
 
-# function my-make(){
-#   if [ $# -eq 0 ]; then
-#     /usr/bin/make --just-print
-#     echo $fg_bold[red] "\n Attention: just ran dry-run (Printed the commands that would be executed)"
-#     echo $fg_bold[white]
-#     if [[ "no" == $(ask_yes_or_no " Would you like now to run make, now?") ]]
-#     then
-#       echo "Skipped."
-#       exit 0
-#     fi
-#     /usr/bin/make
-#   else
-#     /usr/bin/make "$@"
-#   fi
-# }
-
-
 function ask_yes_or_no() {
     read "answer?$1 ([y]es or [N]o): "
     case $(echo $answer | tr '[A-Z]' '[a-z]') in
@@ -331,3 +343,20 @@ function ask_yes_or_no() {
 #  feh -l | awk '{ print $3" "$4" "$8 }'
 #
 #}
+
+
+# function my-make(){
+#   if [ $# -eq 0 ]; then
+#     /usr/bin/make --just-print
+#     echo $fg_bold[red] "\n Attention: just ran dry-run (Printed the commands that would be executed)"
+#     echo $fg_bold[white]
+#     if [[ "no" == $(ask_yes_or_no " Would you like now to run make, now?") ]]
+#     then
+#       echo "Skipped."
+#       exit 0
+#     fi
+#     /usr/bin/make
+#   else
+#     /usr/bin/make "$@"
+#   fi
+# }
