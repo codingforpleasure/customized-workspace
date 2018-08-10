@@ -1,45 +1,38 @@
 <!--ts-->
 <!--te-->
 
-
-## FEH (image viewer aimed mostly at console users)
-
-### How to install?
-```bash
-$ sudo apt-get install feh
-```
-
-### How to use it?
-Description | command
-------------------------------------|-----
-Display all png images in grid order (Montage mode)  | `feh --montage ./*.png --title "My example"`
-Display all png images with filenames in grid order  (Index mode) | `feh --`index ./*.png --title "My example"`
-Gel list of all images' properties (Width, Height, Pixels, Alpha) in directory | `feh --list`
-Display all images in grid order but remain original size-fixed value (Montage mode/Index mode) | `feh --montage --thumb-width 160 --thumb-height 60 .`
-Display all images in all subdirectories in recursive manner (useful for Montage mode/Index mode) | `feh --index --recursive .`
-Display all images in grid size of NxM size| `feh -i --limit-width` &lt;N x image-height&gt; `--limit-height` &lt;M x image-width&gt;
-Save created montage to file (Works both on Index mode and Motage mode) | `feh --index --recursive --output my-collection.png`
-
-
-
-### Useful functions
+### Useful functions in open CV
 
 Description | command
 ------------------------------------|-----
 Load image | img = **cv2.imread**( _path-to-file_ )
-Write image to disk | **cv2.imwrite**( _/codingForPleasure/example.png, img_ )
+Write image to disk | **cv2.imwrite**( _/codingForPleasure/example.png_, _img_ )
+Display image | **cv2.imshow**( _window-title_ , _img_ )
+Get image size | rows, columns , _ = **cv2.shape()**
 Convert to grayscale | grayImg = **cv2.cvtColor**(_img, **cv2.COLOR_BGR2GRAY**_)
 Threshold | thresholdImg = **cv2.threshold**(_grayImg, &lt;threshold value&gt; ,&lt;max value&gt; **cv2.THRESH_BINARY_INV** \| **cv2.THRESH_OTSU**_ )
-Retrievie contours | **cv2.findContours**(_img, **cv2.RETR_EXTERNAL**, **cv2.CHAIN_APPROX_SIMPLE**_)
+Retrieve contours | im2, contours, hierarchy = **cv2.findContours**(_img, **cv2.RETR_EXTERNAL**, **cv2.CHAIN_APPROX_SIMPLE**_)
+Calculate contour | area = **cv2.contourArea**(contour)
+Resize image | **cv2.resize**(_letter, **(100, 100)**_)
+Draw a rectangle on an image | cv2.rectangle(img, (x, y), (x + w, y + h), color, thickness)
 
 
+### Contour Approximation Method
 
-###Threshold
+Flag | Meaning
+-----|-------------------
+CHAIN_APPROX_NONE | all the boundary points are stored (maximum accuracy but the tradeoff is memory consumption).
+CHAIN_APPROX_SIMPLE | removes all redundant points and compresses the contour, thereby saving memory
+CHAIN_APPROX_TC89_KCOS |
+CHAIN_APPROX_TC89_L1 |
 
-###Contours
 
+### Useful functions in PIL (Python Imaging Library)
 
-im2, contours, hierarchy = cv2.findContours(thresh, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
+Description | command
+------------------------------------|-----
+show image | img.show()
+
 
 ## Contours Hierarchy
 
