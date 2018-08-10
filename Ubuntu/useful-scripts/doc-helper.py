@@ -6,11 +6,15 @@ if __name__ == '__main__':
 
     commands = {'aspell': 'not-found.html',
                 'awk': 'awk.html',
+                'bash': 'bash.html',
                 'sed': 'sed.html',
                 'tr': 'tr.html',
                 'cut': 'not-found.html',
+                'find': 'not-found.html',
                 'lsof': 'not-found.html',
-                'xargs': 'not-found.html',
+                'xargs': 'xargs.html',
+                'exec' : 'not-found.html',
+                'seq': 'not-found.html',
                 'sort': 'not-found.html',
                 'uniq': 'not-found.html',
                 'paste': 'not-found.html',
@@ -27,7 +31,10 @@ if __name__ == '__main__':
                 'split': 'not-found.html',
                 'tee': 'not-found.html',
                 'yes': 'not-found.html',
+                'dd' : 'not-found.html',
                 'pandoc': 'not-found.html',
+                'opencv': 'opencv.html',
+                'feh': 'feh.html'
                 }
 
     if len(sys.argv) > 1:
