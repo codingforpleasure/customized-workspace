@@ -20,18 +20,17 @@ colorful_echo()
 }
 
 
-if [[ ! -f "$GRIP" ]]; then
+if [[ ! -e "$GRIP" ]]; then
 	colorful_echo red "grip package is not installed on youe system."
 	exit 1
 else
 	colorful_echo purple "Exporting files from markdown to html"
 fi
 
-
-PATH=$(pwd)
+MD_DIRECTORY=${1:-${DOC_MD_PATH}} # DOC_MD_PATH was exported in zshrc
 OUTPUT_DIR='/home/gil_diy/my_documentation_helper'
 
-for MARKDOWN_FILENAME_PATH in ${PATH}/*.md
+for MARKDOWN_FILENAME_PATH in ${MD_DIRECTORY}/*.md
 do
 	FILENAME=$(/usr/bin/basename ${MARKDOWN_FILENAME_PATH})
 	OUTPUT_FILENAME=${FILENAME/md/html}
