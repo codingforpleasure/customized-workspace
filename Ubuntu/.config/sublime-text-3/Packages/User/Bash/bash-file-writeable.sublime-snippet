@@ -1,0 +1,10 @@
+<snippet>
+	<content><![CDATA[
+# Check if file is writeable
+if [[ -w "\$INFILE" ]]; then
+	echo "File writable!"
+fi
+]]></content>
+	<tabTrigger>file-is-writeable</tabTrigger>
+	<scope>source.shell</scope>
+</snippet>

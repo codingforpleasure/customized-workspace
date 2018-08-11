@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+MYRA=(first second third home)
+echo runners on \${MYRA[0]} and \${MYRA[2]}
+]]></content>
+	<tabTrigger>array</tabTrigger>
+	<scope>source.shell</scope>
+</snippet>
