@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+<!--ts-->
+<!--te-->
+]]></content>
+	<tabTrigger>toc</tabTrigger>
+	<scope>text.html.markdown</scope>
+</snippet>
