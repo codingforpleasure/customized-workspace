@@ -8,7 +8,7 @@ PATH=$PATH:$HOME/my_useful_scripts
 PATH="/home/gil_diy/anaconda3/bin:$PATH"
 
 # Adding my documentations to my path
-DOC_PATH="/home/gil_diy/myGitRepositories/customized-workspace/Ubuntu/useful-resources/"
+export DOC_MD_PATH="/home/gil_diy/myGitRepositories/customized-workspace/Ubuntu/useful-resources/"
 
 # Path to your oh-my-zsh installation.
 export ZSH=/home/gil_diy/.oh-my-zsh
@@ -153,7 +153,8 @@ source ~/.bin/tmuxinator.zsh
 
 ######## Aliases ########
 
-alias help=helper                 # Assuming tldr client in installed on your system
+alias s="echo \$fg_bold[yellow] \"Sourcing ~\.zshrc\" && source ~/.zshrc"
+
 alias ll="ls -la --color \
                  --human-readable \
                  --group-directories-first" # list files nicely
@@ -173,20 +174,16 @@ alias psg="pgrep --list-full"       # lookup a process
 
 alias top="htop"                    # Execute the interactive process viewer
 alias locate="sudo updatedb; locate --ignore-case "
-#alias findz=
 
 alias locateh=locate-here           # locate here under the current folder
 alias watchl='watch --color ls -la --color'	# list and watch files and folders with color
 
 alias sublime="subl"				        # Execute sublime editor
-alias charm="charm &"
-alias pycharm="charm"
-alias pyCharm="charm"
-alias PyCharm="charm"
+alias {pycharm,charm}="nohup charm  > /dev/null &"
 alias firefox="firefox --ProfileManager" # For Controlling my browser environment
 
-alias android="~/android-studio/bin/studio.sh &"# Execute Android-studio easily
-alias adb='~/Android/Sdk/platform-tools/adb' 	# Execute Android Debug Bridge (adb)
+alias android="~/android-studio/bin/studio.sh &" # Execute Android-studio easily
+alias adb='~/Android/Sdk/platform-tools/adb' 	 # Execute Android Debug Bridge (adb)
 
 # Prints all android packages
 # (Great reference: https://developer.android.com/studio/command-line/adb#pm)
@@ -210,8 +207,11 @@ alias rsync="rsync --verbose \
 alias toc-markdown-generate='gh-md-toc --insert '  # Generates Table-Of-Content for a given markdown
 
 # My documnetation tweaks
+alias help=helper                 # Assuming tldr client in installed on your system
+alias doc-view=helper
 alias doc-edit=documentation-edit $1
 alias doc-ls=documentation-list
+
 
 
 ### some git aliases ###
@@ -247,6 +247,7 @@ alias pop='git stash pop'
 alias ubuntu='cd ~/myGitRepositories/customized-workspace/Ubuntu'
 alias myscripts='cd ~/my_useful_scripts'
 alias gitrep='cd ~/myGitRepositories'   # Go to my repos collection
+alias snippe{t,s}='cd ~/.config/sublime-text-3/Packages/User'
 
 # Execute tmuxinator on startup
 tmuxinator android-setup
@@ -293,7 +294,7 @@ function strace-and-grep(){
 function documentation-list(){
 	echo $fg_bold[cyan]"All documentations listed below:"$fg_bold[white]
 	echo ""
-	ls -1 ${DOC_PATH}
+	ls -1 ${DOC_MD_PATH}
 	echo ""
 }
 
@@ -306,7 +307,7 @@ function documentation-edit(){
 	# search for file in directory if found the execute then edit it.
 
 	local FILENAME=$1.md
-	/usr/bin/subl ${DOC_PATH}/"${FILENAME}"
+	/usr/bin/subl ${DOC_MD_PATH}/"${FILENAME}"
 }
 
 
