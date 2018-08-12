@@ -7,6 +7,7 @@ if __name__ == '__main__':
     commands = {'aspell': 'not-found.html',
                 'awk': 'awk.html',
                 'bash': 'bash.html',
+                'cron':'cron.html',
                 'sed': 'sed.html',
                 'tr': 'tr.html',
                 'cut': 'not-found.html',
@@ -34,7 +35,10 @@ if __name__ == '__main__':
                 'dd' : 'not-found.html',
                 'pandoc': 'not-found.html',
                 'opencv': 'opencv.html',
-                'feh': 'feh.html'
+                'feh': 'feh.html',
+                'printf': 'printf.html',
+                'echo': 'echo.html',
+                'numpy':'numpy.html'
                 }
 
     if len(sys.argv) > 1:

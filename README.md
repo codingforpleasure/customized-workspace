@@ -27,7 +27,8 @@ The things you need to install are:
 - hub - cli tool for github (brew install hub && alias git=hub)
 - pyenv - Managing easily and switching between multiple versions of Python
 - github-markdown-toc - Easily generate Table Of Content for given markdown file.
-
+- feh - A great image viewer and cataloguer from terminal
+- tdlr - Simplified and community-driven man pages [Link](https://github.com/tldr-pages/tldr)
 
 
 Soon I'll be posting a script for doing all those installs in a snap of a finger.

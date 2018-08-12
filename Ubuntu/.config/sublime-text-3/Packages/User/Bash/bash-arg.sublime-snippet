@@ -1,8 +1,0 @@
-<snippet>
-	<content><![CDATA[
-echo "Num arguemnts passed to the script" $#
-if (( \$# == 0 )) ; then echo failed ; else echo OK; fi
-]]></content>
-	<tabTrigger>arg-num</tabTrigger>
-	<scope>source.shell</scope>
-</snippet>

@@ -8,7 +8,7 @@ Table of Contents
          * [virtualenv (Python Environment Manager)](#virtualenv-python-environment-manager)
             * [how to install?](#how-to-install)
             * [useful commands](#useful-commands)
-         * [Anaconda (Package Manager   Environment Manager   Additional Scientific Libraries)](#anaconda-package-manager--environment-manager--additional-scientific-libraries)
+         * [Anaconda (Package Manager + Environment Manager + Additional Scientific Libraries)](#anaconda-package-manager--environment-manager--additional-scientific-libraries)
             * [useful commands](#useful-commands-1)
          * [pyenv (Python Version Manager)](#pyenv-python-version-manager)
          * [pipenv (Package Manager + Environment Manager + Python Version Manager) <g-emoji class="g-emoji" alias=" 1" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f44c.png">👍</g-emoji>](#pipenv-package-manager--environment-manager--python-version-manager-thumbsup)
@@ -34,21 +34,11 @@ for getting full control which package to install for each environment you creat
 
 For example:
 one environment for `Web Development` with one set of libraries:
-Flask
-requests
-Jinja2
-SQLAlchemy
-MarkupSafe
+Flask, requests, Jinja2, SQLAlchemy, MarkupSafe.
 
+A second environment for `Data Science` with different set of libraries :
+tensorflow, jupyter, matplotlib, numpy, pandas - _**Creating environment for specific purposes!**_
 
-and a second environment for `Data Science` with different set of libraries :
-tensorflow
-jupyter
-matplotlib
-numpy
-pandas
-
-Creating environment for specific purposes.
 
 
 ### pip (Python Package Manager)
@@ -69,6 +59,8 @@ $ pip install django
 will install django to my system, a much better approach will be to use virtual env for a project.
 
 comment: usually you would have some pip versions installed on your system, make sure you use the correct one. I prefer using the latest one on my system (`pip3.6`).
+
+Tip: Enable Auto Completion for pip in Zsh
 
 ### virtualenv (Python Environment Manager)
 separate different environments for different projects
@@ -144,4 +136,6 @@ and after setting things up:
 
 **Pipfile.lock** - you can easily see the package dependencies, and all hashes
 
-it will enter into the virtual environment
+If you are using pycharm (2018), it's supports pipenv right out of the box,
+BUT it's more recommended to install your packages from the shell with pipenv,
+since I have noticed sometimes Pycharm fails.

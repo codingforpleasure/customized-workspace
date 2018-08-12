@@ -4,6 +4,7 @@
 
 while :
 do
+	echo "$line"
 	TIME_TO_WORK=${1:-1500} # Default time 25 minutes (1500 seconds)
 	TIME_TO_WORK_in_MINUTES=$((TIME_TO_WORK/60))
 	DURTION_BREAK=${2:-300} # Default time 5 minutes (300 seconds)

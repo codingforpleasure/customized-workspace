@@ -27,6 +27,19 @@ CHAIN_APPROX_TC89_KCOS |
 CHAIN_APPROX_TC89_L1 |
 
 
+
+### Extracting connected components from binary image
+* Connected components in binary images are areas of non-zero values.
+* different components don't touch each other, there are zeros around each one.
+* Finding connected components in an image is much faster then finding all contours.So it's possible to quickly exclude all irrelevant paths of the image according to connected commponent features.
+
+
+Description | command
+------------------------------------|-----
+Get some important information about each connected component, such as the bounding box, area, and center of mass (also known as centroid) |_, output, stats, _ = **cv2.connectedComponentsWithStats**(img, connectivity=4)
+ | group_areas = stats[1:, cv2.CC_STAT_AREA]    # (ignoring 0, which is the background id)
+ | **cv2.connectedComponents**(img, connectivity=4)
+
 ### Useful functions in PIL (Python Imaging Library)
 
 Description | command

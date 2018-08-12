@@ -56,5 +56,18 @@ $ find . -name '.md' | xargs grep CodingForPleasure
 $ ls | xargs  -t  -I  {} mv {} {}.old
 ```
 
+ -I Replace occurrences of replace-str in the initial-arguments with names read from standard input
+
+
+
+### Example #7: Create directory for each month with month's abbreviation
+```bash
+$ printf '%s\n' {1..12}/01 | xargs -I {} date -d {} +%b | xargs mkdir --
+```
+
+### Example #8: Create directories for each fruit with  given a fruit.txt
+```bash
+$ cat fruit.txt | sort | uniq | xargs -I {} mkdir -p ~/Dekstop/fruits/{}
+```
 
 [Good reference](http://www.unixmantra.com/2013/12/xargs-all-in-one-tutorial-guide.html)

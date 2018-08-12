@@ -1,7 +1,0 @@
-<snippet>
-	<content><![CDATA[
-PATH_TO_INSTALL=\${1:-/usr/local}
-]]></content>
-	<tabTrigger>defualt</tabTrigger>
-	<scope>source.shell</scope>
-</snippet>

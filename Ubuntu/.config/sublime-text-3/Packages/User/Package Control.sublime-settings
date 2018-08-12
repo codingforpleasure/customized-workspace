@@ -5,14 +5,27 @@
 	],
 	"installed_packages":
 	[
+		"Bash Snippets",
 		"Dotfiles Syntax Highlighting",
 		"LuaComplete",
+		"Makefile Improved",
+		"Makefile Plus",
 		"MarkdownPreview",
 		"Package Control",
+		"PackageResourceViewer",
+		"Scala Snippets",
+		"Scala Syntax",
+		"Scalafmt",
+		"Scalex Documentation Search",
 		"sublimelint",
 		"SublimeLinter",
 		"SublimeLinter-contrib-bashate",
+		"SublimeLinter-php",
 		"SublimeLinter-shellcheck",
 		"SummitLinter"
+	],
+	"repositories":
+	[
+		"https://raw.github.com/Janfy/Sublime-Bash-Snippets/master/packages.json"
 	]
 }

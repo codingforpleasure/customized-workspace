@@ -30,8 +30,9 @@ Table of Contents
          * [Setting Default Values for arguments](#setting-default-values-for-arguments)
          * [“Daemon-izing” Your Script](#daemon-izing-your-script)
          * [Reusing Code with Includes and Sourcing](#reusing-code-with-includes-and-sourcing)
+         * [Brace-Expansion](#brace-expansion)
 
-<!-- Added by: gil_diy, at: 2018-08-07T13:34+03:00 -->
+<!-- Added by: gil_diy, at: 2018-08-10T14:52+03:00 -->
 
 <!--te-->
 
@@ -438,4 +439,29 @@ source $HOME/myprefs.cfg
 cd ${SCRATCH_DIR:-/tmp}
 echo You prefer $IMG_FMT image files
 echo You prefer $SND_FMT sound files
+```
+### Brace-Expansion
+
+Brace expansion is a mechanism by which arbitrary strings may be generated:
+
+```bash
+$ echo a{d,c,b}e
+ade ace abe
+```
+
+```bash
+$ mv ~/folder/file.{txt,sh}
+```
+
+```bash
+$ mkdir /usr/local/src/bash/{old,new,dist,bugs}
+```
+```bash
+$ mkdir month-{1..12}
+```
+
+Brace expansions may be nested. The results of each expanded string are not sorted; left to right order is preserved
+
+```bash
+$ chown root /usr/{ucb/{ex,edit},lib/{ex?.?*,how_ex}}
 ```

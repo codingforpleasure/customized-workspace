@@ -1,7 +1,0 @@
-<snippet>
-	<content><![CDATA[
-[[ \$b = 5 ]] && a="\$c" || a="\$d"
-]]></content>
-	<tabTrigger>tenrary</tabTrigger>
-	<scope>source.shell</scope>
-</snippet>

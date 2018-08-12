@@ -1,12 +1,27 @@
 {
+	"added_words":
+	[
+		"django",
+		"env",
+		"virtualenv",
+		"pipenv",
+		"sudo",
+		"Uninstall",
+		"lockfile",
+		"uninstall",
+		"conda",
+		"tensorflow",
+		"preffer"
+	],
 	"ensure_newline_at_eof_on_save": true,
 	"font_options":
 	[
 		"gray_antialias"
 	],
-	"font_size": 14,
+	"font_size": 18,
 	"ignored_packages":
 	[
+		"Makefile",
 		"SublimeLinter-shellcheck",
 		"Vintage"
 	],

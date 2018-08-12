@@ -44,10 +44,12 @@ windows:
   - shell:
       clear
   - logs:
-     cd ~/.AndroidStudio3.1/system/log/my-logs && get-android-log.sh
+     cd ~/.AndroidStudio3.1/system/log/my-logs #&& get-android-log.sh
   - projects:
      cd ~/AndroidStudioProjects
   - shell-on-android:
-     adb shell
+     #adb shell
+  - Pomodoro-timer:
+      ~/my_useful_scripts/run-pomodoro-timer.zsh
   - youtube:
       mpsyt

@@ -37,15 +37,17 @@ if [[ $SINGLE_IMAGE_WIDTH -lt $THRESHOLD_WIDTH ]]; then
 fi
 
 SINGLE_IMAGE_HEIGHT=$(identify -ping -format '%h' ${FILE})
-FIXED_WIDTH=$(( $SINGLE_IMAGE_WIDTH * $GRID_NUM_COLUMNS + 200))
+PADDING_FIXED_WIDTH=$(( $GRID_NUM_COLUMNS*20 ))
+FIXED_WIDTH=$(( $SINGLE_IMAGE_WIDTH * $GRID_NUM_COLUMNS + $PADDING_FIXED_WIDTH + 100))
 FIXED_HEIGHT=$(( $SINGLE_IMAGE_HEIGHT * ($GRID_NUM_ROWS + 1) + 200  )) # Padding since I'm keeping space for captions
 FILENAME=$(echo montage-"$(date +"%T").png" | tr : -)
 
 colorful_echo yellow "A thumbnail file was exported: ${FILENAME}"
 
-# Implemeting a Sliding window for passing the corresoponding files to feh
+# Implementing a Sliding window for passing the corresoponding files to feh
 
-for (( i = 0; i < $NUM_ITERATIONS; i++ )); do
+echo $NUM_ITERATIONS
+for (( i = 0; i <= $NUM_ITERATIONS; i++ )); do
 	TAIL_LIST_LENGTH=$(( ${NUM_OF_IMAGES} - ${i}*${TOTAL_PRESENTED_IN_GRID} ))
 	LIST_OF_FILES=$( ls | tail -n ${TAIL_LIST_LENGTH} | head -n ${TOTAL_PRESENTED_IN_GRID} )
 

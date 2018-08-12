@@ -248,6 +248,7 @@ alias ubuntu='cd ~/myGitRepositories/customized-workspace/Ubuntu'
 alias myscripts='cd ~/my_useful_scripts'
 alias gitrep='cd ~/myGitRepositories'   # Go to my repos collection
 alias snippe{t,s}='cd ~/.config/sublime-text-3/Packages/User'
+alias rsnippet='cd ~/.R/snippets'
 
 # Execute tmuxinator on startup
 tmuxinator android-setup

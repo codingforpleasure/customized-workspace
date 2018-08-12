@@ -1,7 +1,0 @@
-<snippet>
-	<content><![CDATA[
-SUM=\$((A1 + An)*n/2)
-]]></content>
-	<tabTrigger>arithmetic</tabTrigger>
-	<scope>source.shell</scope>
-</snippet>
