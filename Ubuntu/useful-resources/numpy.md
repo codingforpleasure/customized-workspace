@@ -79,7 +79,7 @@ let's assume we have an array:
 ```
 
 Description | command   | result
-------------------------------------|-----|
+-----------|------------|-----|
 Compute sum of elements | np.sum(vec) | 45
 Compute product of elements | np.prod(vec) | 362,880
 Compute median of elements | np.mean(vec) | 4.5
