@@ -25,13 +25,10 @@ Draw a rectangle on an image | **cv2.rectangle**(img, (x, y), (x + w, y + h), co
 ### Logical Operations on Images
 
 
-### Thresholding
+### Thresholding Types
 
-#### binary thresholding
-let's say threshold set to 50
-
-if pixel > threshold
-	pixel = max_val
+**Binary:**  `if pixel > threshold
+	pixel = max_val`
 else
 	pixel = 0
 
@@ -40,7 +37,18 @@ so in code:
 max_val = 255
 cv2.threshold(img,th,max_val, THRESHOLD_BINARY)
 ```
-Let's see few more types of thresold:
+
+Let's see some few more types of thresold:
+
+**Binary Inv:**`if pixel > threshold pixel = 0 else pixel = max_val`
+
+**Zero:** `if pixel < threshold pixel = 0 `
+
+**Zero Inv:** `if pixel > threshold pixel = 0 `
+
+**Trunc:** `if pixel > threshold pixel = 0 `
+
+![](images/thresholding_example.png?raw=true)
 
 
 ### Contour Approximation Method

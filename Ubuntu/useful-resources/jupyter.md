@@ -6,7 +6,7 @@
 Description | command
 ------------------------------------|-----
 Run | **jupyter notebook**
-
+Shutdown | **jupyter notebook stop**
 
 #### Magic Commands in junyper notebook
 
