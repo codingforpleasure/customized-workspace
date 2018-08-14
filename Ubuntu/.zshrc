@@ -324,9 +324,8 @@ function helper(){
       exit 1
     fi
 
-    tldr $1
     python `which doc-helper.py` $1
-
+    tldr $1
 }
 
 function ask_yes_or_no() {
