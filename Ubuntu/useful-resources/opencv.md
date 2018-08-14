@@ -12,9 +12,35 @@ Get image size | rows, columns , _ = **cv2.shape()**
 Convert to grayscale | grayImg = **cv2.cvtColor**(_img, **cv2.COLOR_BGR2GRAY**_)
 Threshold | thresholdImg = **cv2.threshold**(_grayImg, &lt;threshold value&gt; ,&lt;max value&gt; **cv2.THRESH_BINARY_INV** \| **cv2.THRESH_OTSU**_ )
 Retrieve contours | im2, contours, hierarchy = **cv2.findContours**(_img, **cv2.RETR_EXTERNAL**, **cv2.CHAIN_APPROX_SIMPLE**_)
-Calculate contour | area = **cv2.contourArea**(contour)
+Calculate contour's area | area = **cv2.contourArea**(contour)
+Get the dimentions of a bounding rectangle | (x,y,w,h) = **cv2.boundingRect**(contour)
 Resize image | **cv2.resize**(_letter, **(100, 100)**_)
-Draw a rectangle on an image | cv2.rectangle(img, (x, y), (x + w, y + h), color, thickness)
+Draw a rectangle on an image | **cv2.rectangle**(img, (x, y), (x + w, y + h), color, thickness)
+
+
+### Colorspaces in OpenCV
+
+### Arithmetic Operations on Images
+
+### Logical Operations on Images
+
+
+### Thresholding
+
+#### binary thresholding
+let's say threshold set to 50
+
+if pixel > threshold
+	pixel = max_val
+else
+	pixel = 0
+
+so in code:
+```python
+max_val = 255
+cv2.threshold(img,th,max_val, THRESHOLD_BINARY)
+```
+Let's see few more types of thresold:
 
 
 ### Contour Approximation Method
@@ -37,8 +63,19 @@ CHAIN_APPROX_TC89_L1 |
 Description | command
 ------------------------------------|-----
 Get some important information about each connected component, such as the bounding box, area, and center of mass (also known as centroid) |_, output, stats, _ = **cv2.connectedComponentsWithStats**(img, connectivity=4)
- | group_areas = stats[1:, cv2.CC_STAT_AREA]    # (ignoring 0, which is the background id)
  | **cv2.connectedComponents**(img, connectivity=4)
+ | **connectivity=4** means 4-connected pixels are neighbors to every pixel that touches one of their edges (These pixels are connected horizontally and vertically).
+ |**connectivity=8** means 8-connected pixels are neighbors to every pixel that touches one of their edges or corners. These pixels are connected horizontally, vertically, and diagonally
+| group_areas = stats[1:, cv2.CC_STAT_AREA]    # (ignoring 0, which is the background id)
+| You can easily retrieve:
+CC_STAT_LEFT
+CC_STAT_TOP
+CC_STAT_WIDTH
+CC_STAT_HEIGHT
+CC_STAT_AREA
+
+
+
 
 ### Useful functions in PIL (Python Imaging Library)
 
@@ -49,21 +86,5 @@ show image | img.show()
 
 ## Contours Hierarchy
 
-
+Great resource:
 https://docs.opencv.org/3.4.0/d9/d8b/tutorial_py_contours_hierarchy.html
-
-
-#### Example #1: cv2.RETR_CCOMP
-
-Current Contour | Next contour in same hierarchy level under largest contour which was revealed | Previous contour | parent not necessarily from the same hierarchy |
-----------------|--------------------------------------|------------------|-----------------------------------------------------|
-**0**           |                    3                 |       -1         | -1                                                    |
-**1**           |                    2                 |       -1         |  0                                                   |
-**2**           |                    -1(??)            |       -1         |                                                     |
-**3**           |                   5                  |                |                                                     |
-**4**           |                                     |                |                                                     |
-**5**           |                                     |                |                                                     |
-**6**           |                                     |                |                                                     |
-**7**           |                                     |                |                                                     |
-**8**           |                                     |                |                                                     |
-**9**           |                                     |                |                                                     |
