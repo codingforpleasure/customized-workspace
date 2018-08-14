@@ -1,3 +1,5 @@
-Ubuntu/.config/sublime-text-3/Packages/User/Package Control.cache/
+Ubuntu/.config/sublime-text-3/Packages/User/Package Control.cache
 Ubuntu/.config/sublime-text-3/Packages/User/Preferences.sublime-settings.0.bak
 *.html
+*toc*
+*orig*
