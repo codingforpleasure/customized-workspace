@@ -19,6 +19,7 @@ if __name__ == '__main__':
                 'sort': 'not-found.html',
                 'uniq': 'not-found.html',
                 'paste': 'not-found.html',
+                'parallel': 'parallel',
                 'join': 'not-found.html',
                 'basename': 'not-found.html',
                 'cmp': 'not-found.html',
@@ -38,7 +39,8 @@ if __name__ == '__main__':
                 'feh': 'feh.html',
                 'printf': 'printf.html',
                 'echo': 'echo.html',
-                'numpy':'numpy.html'
+                'numpy':'numpy.html',
+                'matplotlib': 'matplotlib.html'
                 }
 
     if len(sys.argv) > 1:
