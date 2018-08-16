@@ -72,22 +72,22 @@
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="gc_dict_get_items" value="list(a_dict.items())" description="Gets Dictionary's items (value+key)" toReformat="false" toShortenFQNames="true">
+  <template name="gc_dict_get_items" value="a_dict = {'Task_1': 'Wash dishes', 'Task_2': 'Ride Bicycle', 'Task_3': 'GYM time'}&#10;print(list(a_dict.items()))" description="Gets Dictionary's items (value+key)" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="gc_dict_get_keys" value="list(a_dict.keys())" description="Get dictionry's keys" toReformat="false" toShortenFQNames="true">
+  <template name="gc_dict_get_keys" value="a_dict = {'Task_1': 'Wash dishes', 'Task_2': 'Ride Bicycle', 'Task_3': 'GYM time'}&#10;print(list(a_dict.keys()))" description="Get dictionry's keys" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="gc_dict_get_values" value="list(a_dict.values())" description="Get Dictionary's values" toReformat="false" toShortenFQNames="true">
+  <template name="gc_dict_get_values" value="a_dict = {'Task_1': 'Wash dishes', 'Task_2': 'Ride Bicycle', 'Task_3': 'GYM time'}&#10;print(list(a_dict.values()))" description="Get Dictionary's values" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="gc_dict_iterate_dictionary" value="for cur_key, cur_valule in my_dict.items():" description="Iterating on a dictionary" toReformat="false" toShortenFQNames="true">
+  <template name="gc_dict_iterate_dictionary" value="a_dict = {'Task_1': 'Wash dishes', 'Task_2': 'Ride Bicycle', 'Task_3': 'GYM time'}&#10;for cur_key, cur_value in a_dict.items():&#10;    print(cur_key)&#10;    print(cur_value)" description="Iterating on a dictionary" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="Python" value="true" />
     </context>
