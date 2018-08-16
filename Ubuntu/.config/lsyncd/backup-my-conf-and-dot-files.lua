@@ -99,7 +99,7 @@ sync {
     target  = destDir .. "/.config/lsyncd",
 }
 
- -- 6) Backing-up sublime configurations
+ -- 6) Backing-up sublime configurations + snippets
  --    (Preferences.sublime-settings and linters)
 sync {
     default.direct,
@@ -113,4 +113,11 @@ sync {
     default.direct,
     source  = homeDir .. "/my_useful_scripts",
     target  = destDir .. "/useful-scripts",
+}
+
+ -- 7) Backing-up my PyCharm snippets for python
+sync {
+    default.direct,
+    source  = homeDir .. "/.config/PyCharmCE2018/config/templates",
+    target  = destDir .. "/.config/PyCharmCE2018/config/templates",
 }
