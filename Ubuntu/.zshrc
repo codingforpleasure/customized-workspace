@@ -153,11 +153,15 @@ source ~/.bin/tmuxinator.zsh
 
 ######## Aliases ########
 
-alias s="echo \$fg_bold[yellow] \"Sourcing ~\.zshrc\" && source ~/.zshrc"
+alias s=source_me
 
 alias ll="ls -la --color \
                  --human-readable \
                  --group-directories-first" # list files nicely
+
+alias pdfgrep="pdfgrep  --recursive \
+                        --page-number \
+                        --include \"*.pdf\" "
 
 alias rm="rm -i"				            # Prompt before permanently remove files
 alias cp="cp -i"               			# Prompt before overwrite
@@ -279,6 +283,11 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib/
 
 
 ###### Functions ######
+
+function source_me() {
+   echo $fg_bold[yellow]"Sourcing ~\.zshrc"
+   source ~/.zshrc
+}
 
 function strace-and-grep(){
 
