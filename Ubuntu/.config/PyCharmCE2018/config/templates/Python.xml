@@ -1,0 +1,125 @@
+<templateSet group="Python">
+  <template name="gcfor" value="words = ['cat', 'window', 'defenestrate']&#10;&#10;for $ELEM in words:&#10;    print($ELEM, len($ELEM))" description="for loop" toReformat="false" toShortenFQNames="true" />
+  <template name="gcshow" value="cv2.imshow('image',$1$)&#10;cv2.waitKey(0)&#10;cv2.destroyAllWindows()" description="Display an image in a window" toReformat="false" toShortenFQNames="true">
+    <variable name="1" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="gcrec" value="cv2.rectangle(image, (x, y), (x + w, y + h), 100, 2)" description="draws a rectangle outline or filled" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="p" value="print(&quot;$1$ = &quot; + str($1$) + &quot; .&quot;)" description="print a variable's value" toReformat="false" toShortenFQNames="true">
+    <variable name="1" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="gccount" value="a_list = ['a', 'b', 'y', 'a', 'v', 'c', 'c', 'y']&#10;print(a_list.count('a'))" description="Count the number of appearances in a list/tuple" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="gcindex" value="a_list = ['b', 'y', 'a', 'v', 'c', 'c', 'y']&#10;print(a_list.index('a'))" description="Gets the index of a specfic value (first appearance) in a list" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="gcremove" value="# Works for both list/set&#10;a_list = ['a', 'b', 'new', 'd', 'new']&#10;a_list.remove('new')" description="Takes a value and removes the first occurrence of that value from the list/set" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="gcdelete" value="a_list = ['a', 'b', 'new', 'd', 'new']&#10;del a_list[1]&#10;print(a_list)" description="Delete a specific item from a list/dict  based on positional index." toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="gcpop" value="a_list = ['a', 'b', 'new', 'd', 'new']&#10;print(&quot;The popped element is: &quot; + a_list.pop())&#10;print(&quot;The new list is: &quot; + str(a_list))" description="Pops the last element from the list" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="gctype" value="a_set = {1, 2}&#10;print(type(a_set))" description="Shows the type of the object" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="gcupdate" value="a_set = {&quot;glasses&quot;, &quot;table&quot;, &quot;bird&quot;}&#10;a_set.update({&quot;wine&quot;, &quot;short&quot;})&#10;print(a_set)" description="Throws into a set objects" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="R" value="true" />
+    </context>
+  </template>
+  <template name="gcclear" value="a_list = ['a', 'b', 'new', 'd', 'new']&#10;a_list.clear()&#10;print(a_list)" description="Removes all elements from a list/set/dict" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="p2" value="print(&quot;$1$ = &quot; + str($1$) +&#10;      &quot;, $2$ = &quot; + str($2$) + &quot; .&quot;)" description="Prints two variables" toReformat="false" toShortenFQNames="true">
+    <variable name="1" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="2" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="p3" value="print(&quot;$1$ = &quot; + str($1$) +&#10;      &quot;, $2$ = &quot; + str($2$) +&#10;      &quot;, $3$ = &quot; + str($3$) + &quot; .&quot;)" description="Print 3 variables" toReformat="false" toShortenFQNames="true">
+    <variable name="1" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="2" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="3" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="gc_dict_get_items" value="list(a_dict.items())" description="Gets Dictionary's items (value+key)" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="gc_dict_get_keys" value="list(a_dict.keys())" description="Get dictionry's keys" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="gc_dict_get_values" value="list(a_dict.values())" description="Get Dictionary's values" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="gc_dict_iterate_dictionary" value="for cur_key, cur_valule in my_dict.items():" description="Iterating on a dictionary" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="gcmap-with-lambda" value="myFruits = ['apple', 'orAnge', 'Banana']&#10;output = list(map(lambda w: [w.upper(), w.lower(), len(w)], myFruits))&#10;print(&quot;After Applying map:&quot; + str(output))" description="Apply map with lambda function" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="gczip" value="abc_8 = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H']&#10;num_9 = range(9)&#10;print(dict(zip(num_9, abc_8)))&#10;" description="Zip things together" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="gcfilter" value="myList = list(range(-5, 5))&#10;print(&quot;After filter holds only positive:&quot; + str(list(filter((lambda x: x &gt; 0), myList))))" description="Filters out elements when condition is false" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="gcsplit" value="sentence = 'The quick brown fox jumps over the lazy dog'&#10;words = sentence.split(sep=' ')&#10;print(words)" description="Splits string according to seperator" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="gcjoin" value="a_list = ['os=linux', 'cpu_vendor=intel', 'ide=intellij', 'distribution=Ubuntu']&#10;print(&quot;;&quot;.join(a_list))" description="Join strings in a list" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="gcfind-substring" value="str_long = &quot;Once upon a time there was a prince&quot;&#10;str_short = &quot;time&quot;&#10;print(&quot;The word: &quot; + str_short + &quot;, starts in index &quot; + str(str_long.find(str_short, 0, len(str_long))))" description="Returns the index of the substring in the string" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+</templateSet>
