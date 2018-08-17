@@ -1,0 +1,9 @@
+<snippet>
+	<content><![CDATA[
+<p align="center">
+  <img src="${1:images/labeling_example.png}" title="${2:tool tip here}">
+</p>
+]]></content>
+	<tabTrigger>img-center</tabTrigger>
+	<scope>text.html.markdown</scope>
+</snippet>
