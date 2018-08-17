@@ -26,6 +26,7 @@ Draw a rectangle on an image | **cv2.rectangle**(img, (x, y), (x + w, y + h), co
 
 ### Thresholding Types
 
+#### User configured the threshold manualy
 **Binary:**  `if pixel > threshold
 	pixel = max_val`
 else
@@ -39,18 +40,48 @@ cv2.threshold(img,th,max_val, THRESHOLD_BINARY)
 
 Let's see some few more types of thresold:
 
-**Binary Inv:**`if pixel > threshold pixel = 0 else pixel = max_val`
+**THRESH_BINARY_INV:**`if pixel > threshold pixel = 0 else pixel = max_val`
 
-**Zero:** `if pixel < threshold pixel = 0 `
+**THRESH_TOZERO:** `if pixel < threshold pixel = 0 `
 
-**Zero Inv:** `if pixel > threshold pixel = 0 `
+**THRESH_TOZERO_INV:** `if pixel > threshold pixel = 0 `
 
-**Trunc:** `if pixel > threshold pixel = 0 `
+**THRESH_TRUNC:** `if pixel > threshold pixel = 0 `
 
 <p align="center">
   <img src="images/thresholding_example.png" title="Labeled connected component">
 </p>
 
+
+
+What about those two: THRESH_TRIANGLE, THRESH_MASK ?
+
+
+
+
+#### Automaticaly calculate the threshold (THRESH_OTSU)
+
+Will automatically calculate the appropriate threshold and then apply then apply the binarization algorithm we are using with it.
+Is used to **automatically** perform clustering-based image thresholding,
+The algorithm assumes that the image contains two classes of pixels following bi-modal histogram (foreground pixels and background pixels), it then calculates the optimum threshold separating the two classes so that their combined spread (intra-class variance) is minimal, or equivalently (because the sum of pairwise squared distances is constant), so that their inter-class variance is maximal.
+
+To apply THRESH_OTSU second argueumnt (threshold) should be set to zero, and should add the THRESH_OTSU flag:
+
+cv2.threshold(img,0,max_val, THRESHOLD_BINARY + THRESH_OTSU)
+
+http://www.labbookpages.co.uk/software/imgProc/otsuThreshold.html
+
+#### Adaptive thresholding
+
+When the THRESH_OTSU approach fails, we should consider adaptive thresholding:
+
+```python
+block_size = 513
+constant = 2
+
+th1 = cv2.adaptiveThreshold(img, 255, cv2.ADAPTIVE_THRESH_MEAN_C, cv2.THRESH_BINARY, block_size, constant)
+th2 = cv2.adaptiveThreshold (img, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY, block_size, constant)
+```
 ### Contour Approximation Method
 
 Flag | Meaning
