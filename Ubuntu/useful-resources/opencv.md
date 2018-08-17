@@ -24,7 +24,6 @@ Draw a rectangle on an image | **cv2.rectangle**(img, (x, y), (x + w, y + h), co
 
 ### Logical Operations on Images
 
-
 ### Thresholding Types
 
 **Binary:**  `if pixel > threshold
@@ -48,8 +47,9 @@ Let's see some few more types of thresold:
 
 **Trunc:** `if pixel > threshold pixel = 0 `
 
-![](images/thresholding_example.png?raw=true)
-
+<p align="center">
+  <img src="images/thresholding_example.png" title="Labeled connected component">
+</p>
 
 ### Contour Approximation Method
 
@@ -76,12 +76,43 @@ Get some important information about each connected component, such as the bound
  |**connectivity=8** means 8-connected pixels are neighbors to every pixel that touches one of their edges or corners. These pixels are connected horizontally, vertically, and diagonally
 | group_areas = stats[1:, cv2.CC_STAT_AREA]    # (ignoring 0, which is the background id)
 | You can easily retrieve:
+
+
+As mentioned before the **connectedComponentsWithStat** function returns 4 values.
+
+The **second value** is a marix of the original image's size, which every pixel holds the label it belongs to the corresponding connected component.
+
+The **third value** is a tuple (&lt;label&gt;,&lt;property-value-of-the-label&gt;)
+
+&lt;property-value-of-the-label&gt; can hold one of the following values:
+
 CC_STAT_LEFT
+
 CC_STAT_TOP
+
 CC_STAT_WIDTH
+
 CC_STAT_HEIGHT
+
 CC_STAT_AREA
 
+**Let's take an example, see below:**
+
+There are 4 connected components, **largest one is '1, let's focus on it** :
+
+<p align="center">
+  <img src="images/labeling_example.png" width="256" title="Labeled connected component">
+</p>
+
+it's **CC_STAT_LEFT** is 1
+
+it's **CC_STAT_TOP** is 1
+
+it's **CC_STAT_WIDTH** is 7
+
+it's **CC_STAT_HEIGHT** is 6
+
+it's **CC_STAT_AREA** is 19
 
 
 
