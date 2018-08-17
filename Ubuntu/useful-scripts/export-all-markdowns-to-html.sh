@@ -1,6 +1,9 @@
-#!/bin/bash
+#!/bin/zsh
 
-GRIP='/usr/local/bin/grip'
+GRIP="/usr/local/bin/grip"
+IMG_DIR="${HOME}/myGitRepositories/customized-workspace/Ubuntu/useful-resources/images"
+MD_DIRECTORY=${1:-${DOC_MD_PATH}} # DOC_MD_PATH was exported in zshrc
+OUTPUT_DIR='/home/gil_diy/my_documentation_helper'
 
 colorful_echo()
 {
@@ -27,8 +30,12 @@ else
 	colorful_echo purple "Exporting files from markdown to html"
 fi
 
-MD_DIRECTORY=${1:-${DOC_MD_PATH}} # DOC_MD_PATH was exported in zshrc
-OUTPUT_DIR='/home/gil_diy/my_documentation_helper'
+if [[ -e "$IMG_DIR" ]]; then
+	colorful_echo purple "Found image directory"
+	cp -r "${IMG_DIR}" "${OUTPUT_DIR}"
+else
+	colorful_echo purple "No directory images was found. "
+fi
 
 for MARKDOWN_FILENAME_PATH in ${MD_DIRECTORY}/*.md
 do
