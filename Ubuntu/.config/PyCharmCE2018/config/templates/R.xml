@@ -1,0 +1,19 @@
+<templateSet group="R">
+  <template name="gcrtapply" value="# Description: tapply() is a very powerful function that l. by deafault we&#10;# simplify the result.&#10;# if we would like to get a list the fourth argument would be: simplify = FALSE.&#10;# Example below: Given a vector of numbers, one simple operation is to take group means.&#10;&#10;# Generating random numbers with different distributions&#10;$list$ &lt;- c(rnorm(10), runif(10), rnorm(10, 1)) &#10;# defining some groups&#10;$groups$&lt;- gl(3, 10) &#10;# Applying the mean function on each group&#10;res &lt;- tapply($list$, $groups$, $function$)" description="breaks a vector into GROUPS and then apply a function to each of the GROUPS" toReformat="false" toShortenFQNames="true">
+    <variable name="list" expression="" defaultValue="&quot;my_list&quot;" alwaysStopAt="true" />
+    <variable name="groups" expression="" defaultValue="&quot;groups&quot;" alwaysStopAt="true" />
+    <variable name="function" expression="" defaultValue="&quot;mean&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="R" value="true" />
+    </context>
+  </template>
+  <template name="gccomment" value="############################################################&#10;# Function name: $var$&#10;# Description:   $var2$&#10;# &#10;# Output:        $3$&#10;# Arguments:     $4$&#10;#&#10;#&#10;############################################################" description="R comment" toReformat="false" toShortenFQNames="true">
+    <variable name="var" expression="" defaultValue="&quot;Works?&quot;" alwaysStopAt="true" />
+    <variable name="var2" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="3" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="4" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="R" value="true" />
+    </context>
+  </template>
+</templateSet>
