@@ -1,8 +1,13 @@
 <snippet>
 	<content><![CDATA[
 # Check if file is a directory
-if [[ -L "\$INFILE" ]]; then
-	echo "File is a directory"
+DIR_NAME="/home/\$USER"
+echo "\${DIR_NAME}"
+
+if [[ -d "\${DIR_NAME}" ]]; then
+ 	echo "File is a directory"
+else
+	echo "File is a not directory"
 fi
 ]]></content>
 	<tabTrigger>file-is-directory</tabTrigger>

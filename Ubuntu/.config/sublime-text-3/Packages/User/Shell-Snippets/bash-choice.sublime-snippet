@@ -1,0 +1,36 @@
+<snippet>
+	<content><![CDATA[
+function choose {
+	local prompt="\$1"
+	local default="n"
+	local answer
+
+	vared -p "$prompt" -c answer
+	[ -z "\$answer" ] && answer="\$default"
+
+	case "\$answer" in
+		[yY1] ) echo 0
+			;;
+		[nN0] ) echo 1
+			;;
+		*	  ) printf "%b" "Unexpected answer '$answer'!" >&2 ;;
+	esac
+
+}
+
+
+
+rv=\$(choose "Would you like to ignore this warnings?") #
+
+if [ \$rv = 0 ]
+then
+    colorful_echo yellow  "Ignoring warnings\n"
+else
+    colorful_echo yellow  "Aborting commit\n"
+fi
+
+
+]]></content>
+	<tabTrigger>choice</tabTrigger>
+	<scope>source.shell</scope>
+</snippet>
