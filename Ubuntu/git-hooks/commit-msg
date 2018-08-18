@@ -1,5 +1,4 @@
-#!/usr/bin/env zsh
-
+#!/bin/bash
 
 colorful_echo()
 {
@@ -18,49 +17,28 @@ colorful_echo()
 		echo -ne "$text"
 }
 
-function choose {
-
-
-	local prompt="$1"
-	local default="n"
-	local answer
-
-	vared -p "$prompt" -c answer
-	[ -z "$answer" ] && answer="$default"
-
-	case "$answer" in
-		[yY1] ) echo 0
-			;;
-		[nN0] ) echo 1
-			;;
-		*	  ) printf "%b" "Unexpected answer '$answer'!" >&2 ;;
-	esac
-
-}
-
+TMP_FILE=`mktemp`
 colorful_echo cyan "Checking commit message spelling...\n"
 
 commit_msg=$(cat "${1:?Missing commit message file}")
 
+echo "${commit_msg}" > "${TMP_FILE}"
+
+# Allows me to read user input below, assigns stdin to keyboard
+exec < /dev/tty
+
 # I'm assuming you have a aspell (spell checker) installed on your system
-res=$(echo  $commit_msg | aspell --list)
+# invoke aspell and check for typos
+/usr/bin/aspell check "${TMP_FILE}"
 
-if [[ $res ]]; then
-	colorful_echo cyan "Misspelling was found in your commit message\n"
-	colorful_echo yellow "Incorrect words were: \n"
-	colorful_echo red  $res
-	colorful_echo cyan "\nPlease fix the commit message"
-	rv=$(choose "Would you like to ignore this warnings?") #
+COMMIT_MSG_NEW=$(cat $TMP_FILE )
 
-    if [ $rv = 0 ]
-    then
-        colorful_echo yellow  "Ignoring warnings\n"
-    else
-        colorful_echo yellow  "Aborting commit\n"
-    fi
-
-	return $rv
+if [[ "$COMMIT_MSG_NEW" != "$commit_msg" ]]; then
+	colorful_echo gray "Found few typos in original message: "
+	colorful_echo red "\"${commit_msg}\"\n"
+	colorful_echo gray "Fixed commit message: "
+	colorful_echo cyan "\"${COMMIT_MSG_NEW}\"\n"
+	commit_msg=${COMMIT_MSG_NEW}
 fi
 
 exit 0
-
