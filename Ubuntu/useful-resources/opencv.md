@@ -1,5 +1,34 @@
 <!--ts-->
+   * [An OpenCV glimpse](#an-opencv-glimpse)
+      * [Basics](#basics)
+         * [Useful functions in open CV](#useful-functions-in-open-cv)
+         * [Colorspaces in OpenCV](#colorspaces-in-opencv)
+         * [Arithmetic Operations on Images](#arithmetic-operations-on-images)
+            * [Addition](#addition)
+            * [Substruction](#substruction)
+            * [Addition](#addition-1)
+         * [Logical Operations on images](#logical-operations-on-images)
+         * [Thresholding Types](#thresholding-types)
+            * [Threshold set manualy](#threshold-set-manualy)
+            * [Threshold calculated automaticaly (THRESH_OTSU)](#threshold-calculated-automaticaly-thresh_otsu)
+            * [Adaptive thresholding](#adaptive-thresholding)
+         * [Morphological Transformations](#morphological-transformations)
+            * [Erosion](#erosion)
+            * [Dilation](#dilation)
+            * [Gradient (For determining the borders)](#gradient-for-determining-the-borders)
+            * [Structuring Element (elliptical/circular shaped kernels)](#structuring-element-ellipticalcircular-shaped-kernels)
+         * [Contour Approximation Method](#contour-approximation-method)
+         * [Contours Hierarchy](#contours-hierarchy)
+         * [Extracting connected components from binary image](#extracting-connected-components-from-binary-image)
+         * [distance transform](#distance-transform)
+         * [Useful functions in PIL (Python Imaging Library)](#useful-functions-in-pil-python-imaging-library)
+
+<!-- Added by: gil_diy, at: 2018-08-18T11:58+03:00 -->
+
 <!--te-->
+# An OpenCV glimpse
+
+## Basics
 
 ### Useful functions in open CV
 
@@ -22,11 +51,28 @@ Draw a rectangle on an image | **cv2.rectangle**(img, (x, y), (x + w, y + h), co
 
 ### Arithmetic Operations on Images
 
-### Logical Operations on Images
+apply a simple arithmation operation on each pixel of the image
+#### Addition
+**Commutative operation**
+#### Substruction
+#### Addition
+### Logical Operations on images
 
+```python
+img1 = cv2.imread(imgpath1, 1)
+img2 = cv2.imread(imgpath2, 1)
+
+img1 = cv2.cvtColor(img1, cv2.COLOR_BGR2RGB)
+img2 = cv2.cvtColor(img2, cv2.COLOR_BGR2RGB)
+
+img3 = cv2.bitwise_not(img1)
+img4 = cv2.bitwise_and(img1, img2)
+img5 = cv2.bitwise_or(img1, img2)
+img6 = cv2.bitwise_xor(img1, img2)
+```
 ### Thresholding Types
 
-#### User configured the threshold manualy
+#### Threshold set manualy
 **Binary:**  `if pixel > threshold
 	pixel = max_val`
 else
@@ -59,9 +105,9 @@ What about those two: THRESH_TRIANGLE, THRESH_MASK ?
 
 
 
-#### Automaticaly calculate the threshold (THRESH_OTSU)
+#### Threshold calculated automaticaly (THRESH_OTSU)
 
-Will automatically calculate the appropriate threshold and then apply then apply the binarization algorithm we are using with it.
+Will automatically calculate the appropriate threshold and then apply the binarization algorithm we are using with it.
 Is used to **automatically** perform clustering-based image thresholding,
 The algorithm assumes that the image contains two classes of pixels following bi-modal histogram (foreground pixels and background pixels), it then calculates the optimum threshold separating the two classes so that their combined spread (intra-class variance) is minimal, or equivalently (because the sum of pairwise squared distances is constant), so that their inter-class variance is maximal.
 
@@ -82,7 +128,48 @@ constant = 2
 th1 = cv2.adaptiveThreshold(img, 255, cv2.ADAPTIVE_THRESH_MEAN_C, cv2.THRESH_BINARY, block_size, constant)
 th2 = cv2.adaptiveThreshold (img, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY, block_size, constant)
 ```
+
+
+### Morphological Transformations
+
+Should apply those transformations on black and white images
+
+#### Erosion
+```python
+erosion = cv2.erode(binary_inv, kernel, iterations = 1)
+```
+#### Dilation
+```python
+dilation = cv2.dilate(binary_inv, kernel, iterations = 1)
+```
+#### Gradient (For determining the borders)
+
+```python
+gradient = cv2.morphologyEx(binary_inv, cv2.MORPH_GRADIENT, kernels)
+```
+
+#### Structuring Element (elliptical/circular shaped kernels)
+```python
+kernel = cv2.getStructuringElement(cv2.MORPH_CROSS,(5, 5))
+```
+
+<!-- MORPH_BLACKHAT = 6
+MORPH_CLOSE = 3
+MORPH_CROSS = 1
+MORPH_DILATE = 1
+MORPH_ELLIPSE = 2
+MORPH_ERODE = 0
+MORPH_GRADIENT = 4
+MORPH_HITMISS = 7
+MORPH_OPEN = 2
+MORPH_RECT = 0
+MORPH_TOPHAT = 5 -->
+
 ### Contour Approximation Method
+```python
+kernel = kernel = np.ones((5,5),np.uint8)
+gradient = cv2.morphologyEx(binary_inv, cv2.morphologyEx, cv2.MORPH_GRADIENT, kernel)
+```
 
 Flag | Meaning
 -----|-------------------
@@ -91,7 +178,10 @@ CHAIN_APPROX_SIMPLE | removes all redundant points and compresses the contour, t
 CHAIN_APPROX_TC89_KCOS |
 CHAIN_APPROX_TC89_L1 |
 
+### Contours Hierarchy
 
+Great resource:
+https://docs.opencv.org/3.4.0/d9/d8b/tutorial_py_contours_hierarchy.html
 
 ### Extracting connected components from binary image
 * Connected components in binary images are areas of non-zero values.
@@ -101,12 +191,11 @@ CHAIN_APPROX_TC89_L1 |
 
 Description | command
 ------------------------------------|-----
-Get some important information about each connected component, such as the bounding box, area, and center of mass (also known as centroid) |_, output, stats, _ = **cv2.connectedComponentsWithStats**(img, connectivity=4)
+Get some important information about each connected component, such as the bounding box, area, and center of mass (also known as centroid) |_, labels, stats, _ = **cv2.connectedComponentsWithStats**(img, connectivity=4)
  | **cv2.connectedComponents**(img, connectivity=4)
  | **connectivity=4** means 4-connected pixels are neighbors to every pixel that touches one of their edges (These pixels are connected horizontally and vertically).
  |**connectivity=8** means 8-connected pixels are neighbors to every pixel that touches one of their edges or corners. These pixels are connected horizontally, vertically, and diagonally
 | group_areas = stats[1:, cv2.CC_STAT_AREA]    # (ignoring 0, which is the background id)
-| You can easily retrieve:
 
 
 As mentioned before the **connectedComponentsWithStat** function returns 4 values.
@@ -129,7 +218,7 @@ CC_STAT_AREA
 
 **Let's take an example, see below:**
 
-There are 4 connected components, **largest one is '1, let's focus on it** :
+There are 4 connected components, **largest one holds label '1, let's focus on it** :
 
 <p align="center">
   <img src="images/labeling_example.png" width="256" title="Labeled connected component">
@@ -147,14 +236,13 @@ it's **CC_STAT_AREA** is 19
 
 
 
+### distance transform
+
+https://homepages.inf.ed.ac.uk/rbf/HIPR2/distance.htm
+
 ### Useful functions in PIL (Python Imaging Library)
 
 Description | command
 ------------------------------------|-----
 show image | img.show()
 
-
-## Contours Hierarchy
-
-Great resource:
-https://docs.opencv.org/3.4.0/d9/d8b/tutorial_py_contours_hierarchy.html
