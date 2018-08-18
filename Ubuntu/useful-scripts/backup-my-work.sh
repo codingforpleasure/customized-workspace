@@ -18,5 +18,8 @@ DST="${DIR_NAME}/backup-${COMPUTER_NAME}"
 				--update  \
 				--human-readable \
 				--progress \
-				~/my_documentation_helper ~/myGitRepositories ~/PycharmProjects ~/AndroidStudioProjects
+				~/my_documentation_helper \
+				~/myGitRepositories \
+				~/PycharmProjects \
+				~/AndroidStudioProjects \
 				"${DIR_NAME}/backup-${COMPUTER_NAME}"
