@@ -20,7 +20,7 @@ if __name__ == '__main__':
                 'uniq': 'not-found.html',
                 'paste': 'not-found.html',
                 'parallel': 'parallel',
-                'join': 'not-found.html',
+                'join': 'join.html',
                 'basename': 'not-found.html',
                 'cmp': 'not-found.html',
                 'curl': 'not-found.html',
@@ -40,7 +40,9 @@ if __name__ == '__main__':
                 'printf': 'printf.html',
                 'echo': 'echo.html',
                 'numpy':'numpy.html',
-                'matplotlib': 'matplotlib.html'
+                'matplotlib': 'matplotlib.html',
+                'rsync' : 'rsync.html',
+                'apt': 'apt.html'
                 }
 
     if len(sys.argv) > 1:
