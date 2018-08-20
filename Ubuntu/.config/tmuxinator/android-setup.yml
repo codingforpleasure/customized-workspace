@@ -49,7 +49,9 @@ windows:
      cd ~/AndroidStudioProjects && clear
   - shell-on-android:
      #adb shell
-  - Pomodoro-timer:
-      ~/my_useful_scripts/run-pomodoro-timer.zsh
+  - useful-resources:
+      cd ~/myGitRepositories/customized-workspace/Ubuntu/useful-resources && clear
   - Books:
       cd ~/Books && clear
+  - Pomodoro-timer:
+      ~/my_useful_scripts/run-pomodoro-timer.zsh
