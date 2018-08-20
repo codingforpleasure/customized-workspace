@@ -1,20 +1,21 @@
 <!--ts-->
-  * [<strong>sed (stream editor for filtering and transforming text)</strong>](#sed-stream-editor-for-filtering-and-transforming-text)
-     * [<strong>Selective Print</strong>](#selective-print)
-        * [Example #1: Warm-up - Print everything through sed:](#example-1-warm-up---print-everything-through-sed)
-        * [Example #2: Print specific lines (line 6 to 8):](#example-2-print-specific-lines-line-6-to-8)
-        * [Example #3: Print lines with "80/tcp" in /etc/services:](#example-3-print-lines-with-80tcp-in-etcservices)
-        * [Example #4: Print only lines with ports in a script "/tcp":](#example-4-print-only-lines-with-ports-in-a-script-tcp)
-     * [<strong>Selective Delete</strong>](#selective-delete)
-        * [Example #5: Deletes a line which holds specific word like Lions:](#example-5-deletes-a-line-which-holds-specific-word-like-lions)
-        * [Example #6: Print everything through sed but delete lines 3-5 output:](#example-6-print-everything-through-sed-but-delete-lines-3-5-output)
-     * [<strong>Selective Substitute</strong>](#selective-substitute)
-        * [Example #7: Substitute a specific word with other word (like Lions with Zebras):](#example-7-substitute-a-specific-word-with-other-word-like-lions-with-zebras)
-        * [Example #8: Substitute a specific word with other word globally (like Lions with Zebras):](#example-8-substitute-a-specific-word-with-other-word-globally-like-lions-with-zebras)
-        * [Example #9: Substitute a specific word not case sensitive globally (like Lions with Zebras):](#example-9-substitute-a-specific-word-not-case-sensitive-globally-like-lions-with-zebras)
-        * [Example #10: Substitute a specific word only on lines 3-5:](#example-10-substitute-a-specific-word-only-on-lines-3-5)
+   * [<strong>sed (stream editor for filtering and transforming text)</strong>](#sed-stream-editor-for-filtering-and-transforming-text)
+      * [<strong>Selective Print</strong>](#selective-print)
+         * [Example #1: Warm-up - Print everything through sed:](#example-1-warm-up---print-everything-through-sed)
+         * [Example #2: Print specific lines (line 6 to 8):](#example-2-print-specific-lines-line-6-to-8)
+         * [Example #3: Print lines with "80/tcp" in /etc/services:](#example-3-print-lines-with-80tcp-in-etcservices)
+         * [Example #4: Print only lines with ports in a script "/tcp":](#example-4-print-only-lines-with-ports-in-a-script-tcp)
+      * [<strong>Selective Delete</strong>](#selective-delete)
+         * [Example #5: Deletes a line which holds specific word like Lions:](#example-5-deletes-a-line-which-holds-specific-word-like-lions)
+         * [Example #6: Print everything through sed but delete lines 3-5 output:](#example-6-print-everything-through-sed-but-delete-lines-3-5-output)
+      * [<strong>Selective Substitute</strong>](#selective-substitute)
+         * [Example #7: Substitute a specific word with other word (like Lions with Zebras):](#example-7-substitute-a-specific-word-with-other-word-like-lions-with-zebras)
+         * [Example #8: Substitute a specific word with other word globally (like Lions with Zebras):](#example-8-substitute-a-specific-word-with-other-word-globally-like-lions-with-zebras)
+         * [Example #9: Substitute a specific word not case sensitive globally (like Lions with Zebras):](#example-9-substitute-a-specific-word-not-case-sensitive-globally-like-lions-with-zebras)
+         * [Example #10: Substitute a specific word only on lines 3-5:](#example-10-substitute-a-specific-word-only-on-lines-3-5)
+         * [Example #11: Append a spcific string to each line in a file:](#example-11-append-a-spcific-string-to-each-line-in-a-file)
 
-<!-- Added by: gil_diy, at: 2018-08-11T14:34+03:00 -->
+<!-- Added by: gil_diy, at: 2018-08-20T08:42+03:00 -->
 
 <!--te-->
 
@@ -102,3 +103,11 @@ $ cat data.txt | sed -r 's/Lions/Zebras/gi'
 ```bash
 $ cat data.txt | sed -r '3,5 s/Lions/Zebras/gi'
 ```
+
+#### Example #11: Append a spcific string to each line in a file:
+
+```bash
+$ sed -e 's/$/my specific string/' -i my_file.txt
+```
+
+**Reminder: With regular expressions end of the line is symboled by `$` (dollar sign) and the beginning of line by `^` (caret sign)   .**
