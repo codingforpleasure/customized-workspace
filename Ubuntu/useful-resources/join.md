@@ -1,6 +1,6 @@
 # Join
 
-##Join lines of two files
+## Join lines of two files
 
 
 ### Example 1: demonstrating join command:
@@ -25,7 +25,7 @@
 join file1.txt file2.txt
 ```
 
-**Output: **
+**Output:**
 ```text
 1 Tall Short
 2 Black White
