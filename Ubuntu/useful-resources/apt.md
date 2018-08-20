@@ -22,3 +22,11 @@ List all packages on the system |  sudo dpkg --get-selections
 List all files regarding a package |   dpkg -L &lt;pkg name&gt;
 Find the a missing file to which package it belongs to | apt-file &lt;file-name&gt;
 Get package dependencies | apt-cache rdepends &lt;pkg name&gt;
+Get source code package from official repository | sudo apt-get source &lt;pkg name&gt;
+
+
+* Ensure source repo is included in:
+```bash
+/etc/apt/sources.list
+```
+The source code would be downloaded into: /usr/src/&lt;`pkg name and version`&gt;
