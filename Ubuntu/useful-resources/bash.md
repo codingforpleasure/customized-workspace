@@ -465,3 +465,11 @@ Brace expansions may be nested. The results of each expanded string are not sort
 ```bash
 $ chown root /usr/{ucb/{ex,edit},lib/{ex?.?*,how_ex}}
 ```
+
+```bash
+$ echo {{a..c},{1..3}}  # produces this: a b c 1 2 3
+```
+
+```bash
+$ echo {a..c},{1..3}    # produces this (Cartesian product): a,1 a,2 a,3 b,1 b,2 b,3 c,1 c,2 c,3
+```
