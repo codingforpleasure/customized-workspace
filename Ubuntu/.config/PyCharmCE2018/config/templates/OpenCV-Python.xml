@@ -23,4 +23,15 @@
       <option name="Python" value="true" />
     </context>
   </template>
+  <template name="gc-cv2-rec" value="cv2.rectangle(image, (x, y), (x + w, y + h), 100, 2)" description="draws a rectangle outline or filled" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="gc-cv2-show" value="cv2.imshow('image',$1$)&#10;cv2.waitKey(0)&#10;cv2.destroyAllWindows()" description="Display an image in a window" toReformat="false" toShortenFQNames="true">
+    <variable name="1" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
 </templateSet>

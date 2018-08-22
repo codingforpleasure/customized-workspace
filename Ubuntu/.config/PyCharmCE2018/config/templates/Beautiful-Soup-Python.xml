@@ -38,4 +38,18 @@
       <option name="Python" value="true" />
     </context>
   </template>
+  <template name="gc-bs-get-elements-by-class" value="$DIVS_COLLECTION$ = soup.findAll(&quot;div&quot;, {&quot;class&quot;: &quot;$CLASS_NAME$&quot;})&#10;&#10;# you can also write:&#10;# $DIVS_COLLECTION$ = soup.find_all(&quot;div&quot;, class_=$CLASS_NAME$) &#10;" description="Find elements by class name" toReformat="false" toShortenFQNames="true">
+    <variable name="DIVS_COLLECTION" expression="" defaultValue="&quot;mydivs&quot;" alwaysStopAt="true" />
+    <variable name="CLASS_NAME" expression="" defaultValue="&quot;class_name_here&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="gc-get-tags-filtered-by-regex" value="import re&#10;&#10;for tag in cl.find_all('$TAG_TYPE$', href=re.compile(&quot;$REGEX$&quot;)):&#10;        print(tag.text)" description="Filter specific tags against that regular expression" toReformat="false" toShortenFQNames="true">
+    <variable name="TAG_TYPE" expression="" defaultValue="a" alwaysStopAt="true" />
+    <variable name="REGEX" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
 </templateSet>

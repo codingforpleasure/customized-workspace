@@ -1,16 +1,5 @@
 <templateSet group="Python">
   <template name="gcfor" value="words = ['cat', 'window', 'defenestrate']&#10;&#10;for $ELEM in words:&#10;    print($ELEM, len($ELEM))" description="for loop" toReformat="false" toShortenFQNames="true" />
-  <template name="gcshow" value="cv2.imshow('image',$1$)&#10;cv2.waitKey(0)&#10;cv2.destroyAllWindows()" description="Display an image in a window" toReformat="false" toShortenFQNames="true">
-    <variable name="1" expression="" defaultValue="" alwaysStopAt="true" />
-    <context>
-      <option name="Python" value="true" />
-    </context>
-  </template>
-  <template name="gcrec" value="cv2.rectangle(image, (x, y), (x + w, y + h), 100, 2)" description="draws a rectangle outline or filled" toReformat="false" toShortenFQNames="true">
-    <context>
-      <option name="Python" value="true" />
-    </context>
-  </template>
   <template name="p" value="print(&quot;$1$ = &quot; + str($1$) + &quot; .&quot;)" description="print a variable's value" toReformat="false" toShortenFQNames="true">
     <variable name="1" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
@@ -118,6 +107,21 @@
     </context>
   </template>
   <template name="gcfind-substring" value="str_long = &quot;Once upon a time there was a prince&quot;&#10;str_short = &quot;time&quot;&#10;print(&quot;The word: &quot; + str_short + &quot;, starts in index &quot; + str(str_long.find(str_short, 0, len(str_long))))" description="Returns the index of the substring in the string" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="p1" value="print(&quot;$1$ = &quot; + str($1$) + &quot; .&quot;)" description="print a variable's value" toReformat="false" toShortenFQNames="true">
+    <variable name="1" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="p4" value="print(&quot;$1$ = &quot; + str($1$) +&#10;      &quot;, $2$ = &quot; + str($2$) +&#10;      &quot;, $3$ = &quot; + str($3$) +&#10;      &quot;, $4$ = &quot; + str($4$) + &quot; .&quot;)" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="1" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="2" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="3" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="4" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="Python" value="true" />
     </context>
