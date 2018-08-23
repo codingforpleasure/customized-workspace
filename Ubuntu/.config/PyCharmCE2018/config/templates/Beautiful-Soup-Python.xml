@@ -52,4 +52,11 @@
       <option name="Python" value="true" />
     </context>
   </template>
+  <template name="gc-bs-get-all-tags-by-style" value="group_tds_by_style = soup.find_all(&quot;$TAG_TYPE$&quot;, attrs={'style': '$ACTUAL_STYLE$'})&#10;" description="Retrieve specific tags by their style" toReformat="false" toShortenFQNames="true">
+    <variable name="TAG_TYPE" expression="" defaultValue="&quot;td&quot;" alwaysStopAt="true" />
+    <variable name="ACTUAL_STYLE" expression="" defaultValue="&quot;vertical-align:top;text-align:right;&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
 </templateSet>
