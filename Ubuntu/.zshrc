@@ -124,9 +124,9 @@ SAVEHIST=10000
 # I would like the MAN pages to be colorful. so should export
 # enviroment variable make sure most is installed if not,
 # install it via:  apt-get install most.
-
+# I'm invoking most with -c switch for conducting a search in a manual with case sesitive manner.
 if [ -e /usr/bin/most ]; then
-	export PAGER="most"
+	export PAGER="most -c"
 else
 	echo -e "\n${BWhite}For color manual pages, install \"most\" by entering: ${NC}"  \
   "\n${BRed}\"apt-get install most\" ${NC}\n"
@@ -154,6 +154,7 @@ source ~/.bin/tmuxinator.zsh
 ######## Aliases ########
 
 alias s=source_me
+alias c=count_lines
 
 alias ll="ls -la --color \
                  --human-readable \
@@ -184,7 +185,7 @@ alias watchl='watch --color ls -la --color'	# list and watch files and folders w
 
 alias sublime="subl"				        # Execute sublime editor
 alias {pycharm,charm}="nohup charm  > /dev/null &"
-alias firefox="firefox --ProfileManager" # For Controlling my browser environment
+alias firefox="firefox --ProfileManager &" # For setting my current working profile
 
 alias android="~/android-studio/bin/studio.sh &" # Execute Android-studio easily
 alias adb='~/Android/Sdk/platform-tools/adb' 	 # Execute Android Debug Bridge (adb)
@@ -202,7 +203,6 @@ alias du='du --summarize --human-readable' # Disk space usage nicer output
 
 alias display='feh -i' #impressive_display
 
-
 alias rsync="rsync --verbose \
               --progress \
               --human-readable \
@@ -215,8 +215,6 @@ alias help=helper                 # Assuming tldr client in installed on your sy
 alias doc-view=helper
 alias doc-edit=documentation-edit $1
 alias doc-ls=documentation-list
-
-
 
 ### some git aliases ###
 alias cdg='cd $(git rev-parse --show-toplevel)' # jump to repo's root directory (where the .git resides)
@@ -289,6 +287,11 @@ function source_me() {
    source ~/.zshrc
 }
 
+function count_lines() {
+  num=$(ll | wc -l)
+  echo $fg_bold[green] "Number of lines: $num"
+}
+
 function strace-and-grep(){
 
   # since strace prints its traces on standard error, not on standard output
@@ -327,7 +330,6 @@ function locate-here(){
 }
 
 function helper(){
-
     if [ $# -eq 0 ]; then
       echo $fg_bold[red] "add argument!!"
       exit 1
