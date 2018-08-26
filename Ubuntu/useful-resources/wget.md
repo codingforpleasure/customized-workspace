@@ -25,8 +25,10 @@ wget --no-directories -r -P /save/location --accept jpg,png <address dst>
 -P = sets the directory prefix where all files and directories are saved to.
 
 
-#### Example 5: Download multiple files
+#### Example 5: You have a file that contains the URLs you want to download? Use the ‘--input-file’:
 ```bash
 $ wget --input-file file-names.txt
 ```
-* Each URL needs to be on a separate line in the file **file-names.txt**
+
+great resource:
+https://www.gnu.org/software/wget/manual/html_node/Advanced-Usage.html
