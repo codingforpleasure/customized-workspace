@@ -1,5 +1,5 @@
 <templateSet group="Beautiful-Soup-Python">
-  <template name="gc-bs-setup" value="url = &quot;$ADDRESS$&quot;&#10;content = urllib.request.urlopen(url).read()&#10;soup = bs.BeautifulSoup(content, '$PARSER_TYPE$')" description="Set url and parser using beautifulsoup" toReformat="false" toShortenFQNames="true">
+  <template name="gc-bs-setup" value="url = &quot;$ADDRESS$&quot;&#10;content = urllib.request.urlopen(url).read()&#10;soup = BeautifulSoup(content, '$PARSER_TYPE$')" description="Set url and parser using beautifulsoup" toReformat="false" toShortenFQNames="true">
     <variable name="ADDRESS" expression="" defaultValue="&quot;http://en.wikipedia.org/wiki/Billboard_Year-End_Hot_100_singles_of_1970&quot;" alwaysStopAt="true" />
     <variable name="PARSER_TYPE" expression="" defaultValue="&quot;html.parser&quot;" alwaysStopAt="true" />
     <context>
