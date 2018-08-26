@@ -155,6 +155,7 @@ source ~/.bin/tmuxinator.zsh
 
 alias s=source_me
 alias c=count_lines
+alias ag='ag --hidden'              # Search in hidden directories too (assuming .agignore was respected).
 
 alias ll="ls -la --color \
                  --human-readable \
