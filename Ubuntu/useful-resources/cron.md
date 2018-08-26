@@ -34,6 +34,7 @@ List cron table entries | crontab -l
 Edit crontab via your editor (according to `VISUAL` or `EDITOR` environment variables) | crontab -e
 Remove the crontab | crontab -r
 Edit another user crontab | sudo crontab -u &lt;username&gt;
+re-run cron daemon | sudo service cron start
 
 **you can also set your editor by `select-editor` command.**
 
