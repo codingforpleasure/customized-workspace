@@ -18,9 +18,9 @@ Table of Contents
             * [Example #8: Run a cron job on 21:30 only on the last day of each month](#example-8-run-a-cron-job-on-2130-only-on-the-last-day-of-each-month)
             * [Example #9: Setting environment properly for resolving crontab issues](#example-9-setting-environment-properly-for-resolving-crontab-issues)
             * [Example #10: Run cronjob in random times with step size of 4 hours](#example-10-run-cronjob-in-random-times-with-step-size-of-4-hours)
-         * [Debugging cron jobs in failures](#debuging-cron-jobs-failures)
+         * [Debugging cron jobs in failures](#debugging-cron-jobs-in-failures)
 
-<!-- Added by: gil_diy, at: 2018-08-28T00:20+03:00 -->
+<!-- Added by: gil_diy, at: 2018-08-28T01:53+03:00 -->
 
 <!--te-->
 
@@ -184,3 +184,20 @@ Start the following command for having the same environment as the one used by c
 env -i /bin/bash --noprofile --norc
 ```
 Then start your script and see why it fails. This should give you an idea.
+
+Sometimes the environment are not setup properly so here is a wrapper script I wrote:
+```bash
+#!/bin/bash
+
+# Setting up all environment variables:
+export LC_ALL=C.UTF-8
+export LANG=C.UTF-8
+export PATH=$PATH:/usr/local/bin/
+
+# I kept getting "Error: no display specified", so you should set this:
+export DISPLAY=:0;
+
+# Final step execute the script
+cd ~/PycharmProjects/example
+/usr/local/bin/pipenv run python main.py
+```
