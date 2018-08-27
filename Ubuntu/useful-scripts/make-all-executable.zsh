@@ -20,14 +20,11 @@ colorful_echo()
 }
 
 
-USER_GROUP=`whoami`
 for SCRIPT in ./*
 do
 	if [ -f "$SCRIPT" ]
 	then
 		colorful_echo cyan "$SCRIPT is set to be executable file"
 		chmod +x $SCRIPT
-		chown $USER_GROUP $SCRIPT
-		chgrp $USER_GROUP $SCRIPT
 	fi
 done
