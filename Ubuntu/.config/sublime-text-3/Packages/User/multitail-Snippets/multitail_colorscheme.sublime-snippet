@@ -1,0 +1,39 @@
+<snippet>
+	<content><![CDATA[
+# Great resource:
+# https://github.com/flok99/multitail/blob/master/multitail.conf
+
+# color: [fg],[bg],[attribute[/otherattribute]][|other colorpair+attribute]
+# Possible colors:
+# red, green, yellow, blue, magenta, cyan and white.
+# afterwards refer it to the file by the --config option:
+# i.e: multitail --config ~/.config/multitail/multitail.conf
+
+colorscheme:${1:my-cron-color-scheme}
+# 1. Mark praticular words
+cs_re:${2:green},,bold:${3:CRON}
+
+# 2. The numbers following the stack trace
+#cs_re:white,,bold:[0-9]{1,2}\.
+
+# 3. Error Messages (case senstivie)
+cs_re:white,red,bold:Error
+
+# 4. Coloring filenames
+cs_re:red,,bold:[A-Za-z0-9]+\.java
+
+# 5. Path of files
+cs_re:cyan:[A-Za-z0-9\/\.\-]+\/
+
+# 6. Time code in every line.
+cs_re:yellow:[0-9]{2}:[0-9]{2}:[0-9]{2}
+
+# 7. IP-Address (IPv4)
+cs_re:magenta:[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}
+
+]]></content>
+
+<tabTrigger>multitail</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>
