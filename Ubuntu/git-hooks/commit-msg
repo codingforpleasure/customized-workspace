@@ -20,9 +20,9 @@ colorful_echo()
 TMP_FILE=`mktemp`
 colorful_echo cyan "Checking commit message spelling...\n"
 
-commit_msg=$(cat "${1:?Missing commit message file}")
+COMMIT_MSG=$(cat "${1:?Missing commit message file}")
 
-echo "${commit_msg}" > "${TMP_FILE}"
+echo "${COMMIT_MSG}" > "${TMP_FILE}"
 
 # Allows me to read user input below, assigns stdin to keyboard
 exec < /dev/tty
@@ -33,12 +33,13 @@ exec < /dev/tty
 
 COMMIT_MSG_NEW=$(cat $TMP_FILE )
 
-if [[ "$COMMIT_MSG_NEW" != "$commit_msg" ]]; then
+if [[ "$COMMIT_MSG_NEW" != "$COMMIT_MSG" ]]; then
 	colorful_echo gray "Found few typos in original message: "
 	colorful_echo red "\"${commit_msg}\"\n"
 	colorful_echo gray "Fixed commit message: "
 	colorful_echo cyan "\"${COMMIT_MSG_NEW}\"\n"
-	commit_msg=${COMMIT_MSG_NEW}
+	COMMIT_MSG=${COMMIT_MSG_NEW}
+	echo "${COMMIT_MSG}" > $1
 fi
 
 exit 0
