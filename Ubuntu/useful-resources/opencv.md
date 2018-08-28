@@ -6,12 +6,16 @@
          * [Arithmetic Operations on Images](#arithmetic-operations-on-images)
             * [Addition](#addition)
             * [Substruction](#substruction)
-            * [Addition](#addition-1)
          * [Logical Operations on images](#logical-operations-on-images)
          * [Thresholding Types](#thresholding-types)
             * [Threshold set manualy](#threshold-set-manualy)
             * [Threshold calculated automaticaly (THRESH_OTSU)](#threshold-calculated-automaticaly-thresh_otsu)
             * [Adaptive thresholding](#adaptive-thresholding)
+         * [Geometric Transformations](#geometric-transformations)
+            * [Scale an image](#scale-an-image)
+            * [Shift/Tranaslate an image](#shifttranaslate-an-image)
+            * [Rotate an image](#rotate-an-image)
+            * [Affine transformation (Shear)](#affine-transformation-shear)
          * [Morphological Transformations](#morphological-transformations)
             * [Erosion](#erosion)
             * [Dilation](#dilation)
@@ -23,7 +27,7 @@
          * [distance transform](#distance-transform)
          * [Useful functions in PIL (Python Imaging Library)](#useful-functions-in-pil-python-imaging-library)
 
-<!-- Added by: gil_diy, at: 2018-08-18T11:58+03:00 -->
+<!-- Added by: gil_diy, at: 2018-08-29T02:25+03:00 -->
 
 <!--te-->
 # An OpenCV glimpse
@@ -43,7 +47,7 @@ Threshold | thresholdImg = **cv2.threshold**(_grayImg, &lt;threshold value&gt; ,
 Retrieve contours | im2, contours, hierarchy = **cv2.findContours**(_img, **cv2.RETR_EXTERNAL**, **cv2.CHAIN_APPROX_SIMPLE**_)
 Calculate contour's area | area = **cv2.contourArea**(contour)
 Get the dimentions of a bounding rectangle | (x,y,w,h) = **cv2.boundingRect**(contour)
-Resize image | **cv2.resize**(_letter, **(100, 100)**_)
+Resize image | **cv2.resize**(_img, **(100, 100)**_)
 Draw a rectangle on an image | **cv2.rectangle**(img, (x, y), (x + w, y + h), color, thickness)
 
 
@@ -55,7 +59,6 @@ apply a simple arithmation operation on each pixel of the image
 #### Addition
 **Commutative operation**
 #### Substruction
-#### Addition
 ### Logical Operations on images
 
 ```python
@@ -129,6 +132,45 @@ th1 = cv2.adaptiveThreshold(img, 255, cv2.ADAPTIVE_THRESH_MEAN_C, cv2.THRESH_BIN
 th2 = cv2.adaptiveThreshold (img, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY, block_size, constant)
 ```
 
+### Geometric Transformations
+
+
+<p align="center">
+  <img src="images/transformations_example.png" title="Transformations examples:">
+</p>
+
+#### Scale an image
+Scale scales a set of points up or down in the x and y directions.
+
+```python
+cv2.resize(img1, None,...)
+```
+#### Shift/Tranaslate an image
+Shift/Translate moes a set of points a fixed distance in x anf y
+
+```python
+T = np.float32([[1,0,50],[0,1,-50]])
+cv2.warpAffine(img1,T, (columns,rows))
+```
+#### Rotate an image
+
+cv2.getRotationMatrix2D(center, angle, scale)
+ - returns a **rotation matrix**.
+
+```python
+rows, columns, channels = img1.shape
+
+# Generate an rotation matrix clockwise by 45 degress and remain the same size (scale factor = 1):
+R = cv2.getRotationMatrix2D((columns/2, rows/2), 45, 1)
+
+# Now apply the rotation matrix on the image
+output = cv2.warpAffine(img1, R ,(columns,rows))
+
+
+
+```
+#### Affine transformation (Shear)
+Shear offsets a set of points a distance proportional to their x and y coordinates.
 
 ### Morphological Transformations
 
