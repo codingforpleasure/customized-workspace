@@ -8,7 +8,8 @@
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="gc-cv2-threshold" value="gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)&#10;max_val = $MAX_VAL$&#10;_, thresh = cv2.threshold(gray, 0, $MAX_VAL$, cv2.$THRESH_TYPE$ | cv2.THRESH_OTSU)" description="Thresholding" toReformat="false" toShortenFQNames="true">
+  <template name="gc-cv2-threshold" value="gray = cv2.cvtColor($IMAGE_NAME$, cv2.COLOR_BGR2GRAY)&#10;max_val = $MAX_VAL$&#10;_, thresh = cv2.threshold(gray, 0, $MAX_VAL$, cv2.$THRESH_TYPE$ | cv2.THRESH_OTSU)" description="Thresholding" toReformat="false" toShortenFQNames="true">
+    <variable name="IMAGE_NAME" expression="" defaultValue="&quot;img&quot;" alwaysStopAt="true" />
     <variable name="MAX_VAL" expression="" defaultValue="&quot;255&quot;" alwaysStopAt="true" />
     <variable name="THRESH_TYPE" expression="" defaultValue="&quot;THRESH_BINARY_INV&quot;" alwaysStopAt="true" />
     <context>
@@ -28,8 +29,30 @@
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="gc-cv2-show" value="cv2.imshow('image',$1$)&#10;cv2.waitKey(0)&#10;cv2.destroyAllWindows()" description="Display an image in a window" toReformat="false" toShortenFQNames="true">
-    <variable name="1" expression="" defaultValue="" alwaysStopAt="true" />
+  <template name="gc-cv2-show" value="cv2.imshow(&quot;$IMG_TITLE$&quot;,$IMG_NAME$)&#10;cv2.waitKey(0)&#10;cv2.destroyAllWindows()" description="Display an image in a window" toReformat="false" toShortenFQNames="true">
+    <variable name="IMG_TITLE" expression="" defaultValue="&quot;Window's title&quot;" alwaysStopAt="true" />
+    <variable name="IMG_NAME" expression="" defaultValue="&quot;my_image&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="gc-cv2-load-image" value="img= cv2.imread(&quot;$IMG_PATH$&quot;)" description="load image from disk" toReformat="false" toShortenFQNames="true">
+    <variable name="IMG_PATH" expression="" defaultValue="&quot;~/images/img.png&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="gc-cv2-save-image" value="cv2.imwrite(&quot;$IMG_PATH$&quot;, $IMG_NAME$)" description="Write image into disk (save it as image file)." toReformat="false" toShortenFQNames="true">
+    <variable name="IMG_PATH" expression="" defaultValue="&quot;~/codingForPleasure/example.png&quot;" alwaysStopAt="true" />
+    <variable name="IMG_NAME" expression="" defaultValue="&quot;my_image&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="gc-cv2-rotate-image" value="rows, columns, channels = $IMG_NAME$.shape&#10;&#10;# Generate an rotation matrix clockwise by $DEG$ degress and rescale sizw with factor = $RESCALE_VALUE$:&#10;R = cv2.getRotationMatrix2D((columns / 2, rows / 2), $DEG$, $RESCALE_VALUE$)&#10;&#10;# Now apply the rotation matrix on the image&#10;output = cv2.warpAffine($IMG_NAME$, R, (columns, rows))" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="IMG_NAME" expression="" defaultValue="&quot;my_image&quot;" alwaysStopAt="true" />
+    <variable name="DEG" expression="" defaultValue="&quot;45&quot;" alwaysStopAt="true" />
+    <variable name="RESCALE_VALUE" expression="" defaultValue="&quot;1&quot;" alwaysStopAt="true" />
     <context>
       <option name="Python" value="true" />
     </context>

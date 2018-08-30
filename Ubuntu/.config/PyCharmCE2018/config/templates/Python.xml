@@ -126,4 +126,10 @@
       <option name="Python" value="true" />
     </context>
   </template>
+  <template name="gccomment" value="#################################################&#10;# Description: $FILL$&#10;#&#10;#&#10;#################################################" description="Adding comment" toReformat="false" toShortenFQNames="true">
+    <variable name="FILL" expression="" defaultValue="&quot;Fill out the blanks&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
 </templateSet>

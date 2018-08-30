@@ -35,6 +35,7 @@ if __name__ == '__main__':
                 'yes': 'not-found.html',
                 'dd' : 'not-found.html',
                 'pandoc': 'not-found.html',
+                'pandas': 'pandas.html',
                 'opencv': 'opencv.html',
                 'feh': 'feh.html',
                 'printf': 'printf.html',
@@ -42,7 +43,12 @@ if __name__ == '__main__':
                 'numpy':'numpy.html',
                 'matplotlib': 'matplotlib.html',
                 'rsync' : 'rsync.html',
-                'apt': 'apt.html'
+                'apt': 'apt.html',
+                'wget': 'wget.html',
+                'python-package-manager' : 'python-package-manager.html',
+                'pipenv' : 'pipenv.html',
+                'python-regex' : 'python-regex.html',
+                'nlp':'nlp.html'
                 }
 
     if len(sys.argv) > 1:
