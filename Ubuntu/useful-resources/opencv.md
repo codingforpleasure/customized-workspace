@@ -2,18 +2,18 @@
    * [An OpenCV glimpse](#an-opencv-glimpse)
       * [Basics](#basics)
          * [Useful functions in open CV](#useful-functions-in-open-cv)
-         * [Colorspaces in OpenCV](#colorspaces-in-opencv)
+         * [Color-spaces in OpenCV](#color-spaces-in-opencv)
          * [Arithmetic Operations on Images](#arithmetic-operations-on-images)
             * [Addition](#addition)
             * [Substruction](#substruction)
          * [Logical Operations on images](#logical-operations-on-images)
          * [Thresholding Types](#thresholding-types)
-            * [Threshold set manualy](#threshold-set-manualy)
-            * [Threshold calculated automaticaly (THRESH_OTSU)](#threshold-calculated-automaticaly-thresh_otsu)
+            * [Threshold set manually](#threshold-set-manually)
+            * [Threshold calculated automatically (THRESH_OTSU)](#threshold-calculated-automatically-thresh_otsu)
             * [Adaptive thresholding](#adaptive-thresholding)
          * [Geometric Transformations](#geometric-transformations)
             * [Scale an image](#scale-an-image)
-            * [Shift/Tranaslate an image](#shifttranaslate-an-image)
+            * [Shift/Translate an image](#shifttranslate-an-image)
             * [Rotate an image](#rotate-an-image)
             * [Affine transformation (Shear)](#affine-transformation-shear)
          * [Morphological Transformations](#morphological-transformations)
@@ -22,14 +22,22 @@
             * [Gradient (For determining the borders)](#gradient-for-determining-the-borders)
             * [Structuring Element (elliptical/circular shaped kernels)](#structuring-element-ellipticalcircular-shaped-kernels)
          * [Contour Approximation Method](#contour-approximation-method)
+         * [Bounding Shapes](#bounding-shapes)
+            * [Bounding rectangle](#bounding-rectangle)
+               * [Straight Bounding Rectangle](#straight-bounding-rectangle)
+               * [Rotated Rectangle](#rotated-rectangle)
+            * [Minimum Enclosing Circle](#minimum-enclosing-circle)
+            * [Fitting an Ellipse](#fitting-an-ellipse)
+            * [Fitting a Line](#fitting-a-line)
          * [Contours Hierarchy](#contours-hierarchy)
          * [Extracting connected components from binary image](#extracting-connected-components-from-binary-image)
          * [distance transform](#distance-transform)
          * [Useful functions in PIL (Python Imaging Library)](#useful-functions-in-pil-python-imaging-library)
 
-<!-- Added by: gil_diy, at: 2018-08-29T02:25+03:00 -->
+<!-- Added by: gil_diy, at: 2018-08-30T11:01+03:00 -->
 
 <!--te-->
+
 # An OpenCV glimpse
 
 ## Basics
@@ -38,20 +46,20 @@
 
 Description | command
 ------------------------------------|-----
-Load image | img = **cv2.imread**( _path-to-file_ )
-Write image to disk | **cv2.imwrite**( _/codingForPleasure/example.png_, _img_ )
-Display image | **cv2.imshow**( _window-title_ , _img_ )
+Load image | img = **cv2.imread**( "_path-to-file_" )
+Write image to disk | **cv2.imwrite**( "_/codingForPleasure/example.png_", _img_ )
+Display image | **cv2.imshow**( "_window-title_" , _img_ )
 Get image size | rows, columns , _ = **cv2.shape()**
 Convert to grayscale | grayImg = **cv2.cvtColor**(_img, **cv2.COLOR_BGR2GRAY**_)
 Threshold | thresholdImg = **cv2.threshold**(_grayImg, &lt;threshold value&gt; ,&lt;max value&gt; **cv2.THRESH_BINARY_INV** \| **cv2.THRESH_OTSU**_ )
 Retrieve contours | im2, contours, hierarchy = **cv2.findContours**(_img, **cv2.RETR_EXTERNAL**, **cv2.CHAIN_APPROX_SIMPLE**_)
 Calculate contour's area | area = **cv2.contourArea**(contour)
-Get the dimentions of a bounding rectangle | (x,y,w,h) = **cv2.boundingRect**(contour)
+Get the dimensions of a bounding rectangle | (x,y,w,h) = **cv2.boundingRect**(contour)
 Resize image | **cv2.resize**(_img, **(100, 100)**_)
 Draw a rectangle on an image | **cv2.rectangle**(img, (x, y), (x + w, y + h), color, thickness)
 
 
-### Colorspaces in OpenCV
+### Color-spaces in OpenCV
 
 ### Arithmetic Operations on Images
 
@@ -75,7 +83,7 @@ img6 = cv2.bitwise_xor(img1, img2)
 ```
 ### Thresholding Types
 
-#### Threshold set manualy
+#### Threshold set manually
 **Binary:**  `if pixel > threshold
 	pixel = max_val`
 else
@@ -87,7 +95,7 @@ max_val = 255
 cv2.threshold(img,th,max_val, THRESHOLD_BINARY)
 ```
 
-Let's see some few more types of thresold:
+Let's see some few more types of threshold:
 
 **THRESH_BINARY_INV:**`if pixel > threshold pixel = 0 else pixel = max_val`
 
@@ -108,13 +116,13 @@ What about those two: THRESH_TRIANGLE, THRESH_MASK ?
 
 
 
-#### Threshold calculated automaticaly (THRESH_OTSU)
+#### Threshold calculated automatically (THRESH_OTSU)
 
 Will automatically calculate the appropriate threshold and then apply the binarization algorithm we are using with it.
 Is used to **automatically** perform clustering-based image thresholding,
 The algorithm assumes that the image contains two classes of pixels following bi-modal histogram (foreground pixels and background pixels), it then calculates the optimum threshold separating the two classes so that their combined spread (intra-class variance) is minimal, or equivalently (because the sum of pairwise squared distances is constant), so that their inter-class variance is maximal.
 
-To apply THRESH_OTSU second argueumnt (threshold) should be set to zero, and should add the THRESH_OTSU flag:
+To apply THRESH_OTSU second argument (threshold) should be set to zero, and should add the THRESH_OTSU flag:
 
 cv2.threshold(img,0,max_val, THRESHOLD_BINARY + THRESH_OTSU)
 
@@ -145,8 +153,8 @@ Scale scales a set of points up or down in the x and y directions.
 ```python
 cv2.resize(img1, None,...)
 ```
-#### Shift/Tranaslate an image
-Shift/Translate moes a set of points a fixed distance in x anf y
+#### Shift/Translate an image
+Shift/Translate does a set of points a fixed distance in x and y
 
 ```python
 T = np.float32([[1,0,50],[0,1,-50]])
@@ -160,7 +168,7 @@ cv2.getRotationMatrix2D(center, angle, scale)
 ```python
 rows, columns, channels = img1.shape
 
-# Generate an rotation matrix clockwise by 45 degress and remain the same size (scale factor = 1):
+# Generate an rotation matrix clockwise by 45 degrees and remain the same size (scale factor = 1):
 R = cv2.getRotationMatrix2D((columns/2, rows/2), 45, 1)
 
 # Now apply the rotation matrix on the image
@@ -220,6 +228,52 @@ CHAIN_APPROX_SIMPLE | removes all redundant points and compresses the contour, t
 CHAIN_APPROX_TC89_KCOS |
 CHAIN_APPROX_TC89_L1 |
 
+
+### Bounding Shapes
+
+#### Bounding rectangle
+##### Straight Bounding Rectangle
+
+```python
+x,y,w,h = cv2.boundingRect(cnt)
+cv2.rectangle(img,(x,y),(x+w,y+h),(0,255,0),2)
+```
+##### Rotated Rectangle
+
+In this case bounding rectangle is drawn with minimum area, so it considers the rotation also.
+It returns a Box2D structure which contains following details -
+`(center (x,y), (width, height), angle of rotation )`
+
+```python
+rect = cv2.minAreaRect(cnt)
+box = cv2.boxPoints(rect)
+box = np.int0(box)
+cv2.drawContours(img,[box],0,(0,0,255),2)
+```
+#### Minimum Enclosing Circle
+```python
+(x,y),radius = cv2.minEnclosingCircle(cnt)
+center = (int(x),int(y))
+radius = int(radius)
+cv2.circle(img,center,radius,(0,255,0),2)
+```
+#### Fitting an Ellipse
+```pyton
+ellipse = cv2.fitEllipse(cnt)
+cv2.ellipse(img,ellipse,(0,255,0),2)
+```
+
+#### Fitting a Line
+image contains a set of white points. We can approximate a straight line to it.
+
+```python
+rows,cols = img.shape[:2]
+[vx,vy,x,y] = cv2.fitLine(cnt, cv2.DIST_L2,0,0.01,0.01)
+lefty = int((-x*vy/vx) + y)
+righty = int(((cols-x)*vy/vx)+y)
+cv2.line(img,(cols-1,righty),(0,lefty),(0,255,0),2)
+```
+
 ### Contours Hierarchy
 
 Great resource:
@@ -228,7 +282,7 @@ https://docs.opencv.org/3.4.0/d9/d8b/tutorial_py_contours_hierarchy.html
 ### Extracting connected components from binary image
 * Connected components in binary images are areas of non-zero values.
 * different components don't touch each other, there are zeros around each one.
-* Finding connected components in an image is much faster then finding all contours.So it's possible to quickly exclude all irrelevant paths of the image according to connected commponent features.
+* Finding connected components in an image is much faster then finding all contours.So it's possible to quickly exclude all irrelevant paths of the image according to connected component features.
 
 
 Description | command
