@@ -1,0 +1,19 @@
+<templateSet group="matplotlib">
+  <template name="gc-plot" value="import matplotlib.pyplot as plt&#10;import numpy as np&#10;&#10;x = np.linspace(start=$START$, stop=$STOP$, num=$NUM_SAMPLES$)&#10;&#10;plt.plot(x, $FUNC_OF_X$, '-')&#10;plt.plot(x, $FUNC2_OF_X$, '--')&#10;plt.show()&#10;&#10;import matplotlib.pyplot as plt&#10;import numpy as np&#10;&#10;plt.style.use('seaborn-whitegrid')&#10;&#10;fig = plt.figure()&#10;ax = plt.axes()&#10;x = np.linspace(start=$START$, stop=$STOP$, num=$NUM_SAMPLES$)&#10;&#10;plt.xlabel(&quot;x&quot;)&#10;plt.ylabel(&quot;sin(x)&quot;)&#10;plt.plot(x, $FUNC_OF_X$, color='$COLOR1$', linestyle='$LINE_STYLE1$', label='$LABEL1$')&#10;plt.plot(x, $FUNC2_OF_X$, color='$COLOR2$', linestyle='$LINE_STYLE2$', label='$LABEL2$')&#10;plt.title(&quot;$TITLE$&quot;)&#10;plt.xlim(10, 0)&#10;plt.ylim(1.8, -1.8)&#10;plt.show()&#10;" description="Plot graph" toReformat="false" toShortenFQNames="true">
+    <variable name="START" expression="" defaultValue="&quot;0&quot;" alwaysStopAt="true" />
+    <variable name="STOP" expression="" defaultValue="&quot;10&quot;" alwaysStopAt="true" />
+    <variable name="NUM_SAMPLES" expression="" defaultValue="&quot;100&quot;" alwaysStopAt="true" />
+    <variable name="FUNC_OF_X" expression="" defaultValue="&quot;np.sin(x)&quot;" alwaysStopAt="true" />
+    <variable name="FUNC2_OF_X" expression="" defaultValue="&quot;np.cos(x)&quot;" alwaysStopAt="true" />
+    <variable name="COLOR1" expression="" defaultValue="&quot;red&quot;" alwaysStopAt="true" />
+    <variable name="LINE_STYLE1" expression="" defaultValue="solid" alwaysStopAt="true" />
+    <variable name="LABEL1" expression="" defaultValue="&quot;sin(x)&quot;" alwaysStopAt="true" />
+    <variable name="COLOR2" expression="" defaultValue="&quot;blue&quot;" alwaysStopAt="true" />
+    <variable name="LINE_STYLE2" expression="" defaultValue="&quot;red&quot;" alwaysStopAt="true" />
+    <variable name="LABEL2" expression="" defaultValue="&quot;cos(x)&quot;" alwaysStopAt="true" />
+    <variable name="TITLE" expression="" defaultValue="&quot;A simple plot&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+</templateSet>
