@@ -1,0 +1,17 @@
+<templateSet group="numpy-Python">
+  <template name="gc-np-remove-elemants" value="$RES$ = np.delete($DATA$,$INDEXES$)" description="Delete items from an array" toReformat="false" toShortenFQNames="true">
+    <variable name="RES" expression="" defaultValue="&quot;train_target &quot;" alwaysStopAt="true" />
+    <variable name="DATA" expression="" defaultValue="&quot;data&quot;" alwaysStopAt="true" />
+    <variable name="INDEXES" expression="" defaultValue="&quot;test_idx&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="gc-np-concatenate" value="np.concatenate(($VEC1$,$VEC2$),axis=0)" description="Concatenate arrays" toReformat="false" toShortenFQNames="true">
+    <variable name="VEC1" expression="" defaultValue="&quot;vec1&quot;" alwaysStopAt="true" />
+    <variable name="VEC2" expression="" defaultValue="&quot;vec2&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+</templateSet>
