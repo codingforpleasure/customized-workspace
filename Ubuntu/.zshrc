@@ -120,7 +120,6 @@ export SHELL='/usr/bin/zsh'
 # https://github.com/robbyrussell/oh-my-zsh/blob/master/lib/history.zsh
 HISTSIZE=50000
 SAVEHIST=10000
-
 # I would like the MAN pages to be colorful. so should export
 # enviroment variable make sure most is installed if not,
 # install it via:  apt-get install most.
@@ -158,13 +157,14 @@ alias c=count_lines
 alias ag='ag --hidden'              # Search in hidden directories too (assuming .agignore was respected).
 
 alias ll="ls -la --color \
-                 --human-readable \
+run                 --human-readable \
                  --group-directories-first" # list files nicely
 
 alias pdfgrep="pdfgrep  --recursive \
                         --page-number \
                         --include \"*.pdf\" "
 
+alias run="pipenv run python "      # Executing python script faster with pipenv
 alias rm="rm -i"				            # Prompt before permanently remove files
 alias cp="cp -i"               			# Prompt before overwrite
 alias scp="scp -r"                  # Secure copy with recursively copy so it means entire directories.
@@ -173,6 +173,7 @@ alias 'crontab -r'='crontab -i' 		# Prompt before actually removing the crontab
 #alias make=my-make 		              #
 
 alias histg="history | grep "			  # Combine history with grep
+alias history=" history -E"
 alias lsg="ll | grep "              # Combine list files with grep
 
 alias pgrep="pgrep --list-full"			# lookup a process
@@ -211,7 +212,7 @@ alias rsync="rsync --verbose \
 
 alias toc-markdown-generate='gh-md-toc --insert '  # Generates Table-Of-Content for a given markdown
 
-# My documnetation tweaks
+# My documentation tweaks
 alias help=helper                 # Assuming tldr client in installed on your system
 alias doc-view=helper
 alias doc-edit=documentation-edit $1
@@ -269,11 +270,11 @@ export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
 # A great tool for bash scripting:
 # ShellCheck, a static analysis tool for shell scripts, should install for sure!
-# A nice demostration is here: https://www.youtube.com/watch?v=lbMsFXMnqNY
+# A nice demonstration is here: https://www.youtube.com/watch?v=lbMsFXMnqNY
 # https://github.com/koalaman/shellcheck
 
 # A great tool which provides display and control of Android devices connected on USB,
-# is "scrcpy" (go to the github repo and install it) .
+# is "scrcpy" (go to the github repo and install it).
 
 
 #$LD_LIBRARY_PATH:/usr/lib:
