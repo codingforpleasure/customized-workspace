@@ -115,7 +115,7 @@ sync {
     target  = destDir .. "/useful-scripts",
 }
 
- -- 7) Backing-up my PyCharm snippets for python
+ -- 7) Backing-up my PyCharm snippets for different programming languages
 sync {
     default.direct,
     source  = homeDir .. "/.config/PyCharmCE2018/config/templates",
