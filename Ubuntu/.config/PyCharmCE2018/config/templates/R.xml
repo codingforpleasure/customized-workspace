@@ -16,4 +16,39 @@
       <option name="R" value="true" />
     </context>
   </template>
+  <template name="gc-r-apply" value="# Description: Applys the function once on every column or row&#10;# First arg: Holds the data.&#10;# Second arg: Holds the column or row (row =1, col = 2)&#10;# Third arg: Aggregate function. &#10;my_data &lt;- matrix(1:12,3,4)&#10;result &lt;- apply(my_data,2,mean)" description="Apply" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="R" value="true" />
+    </context>
+  </template>
+  <template name="gc-r-tapply" value="# Description: tapply() lets you break a vector into GROUPS and then apply some function to each of the GROUPS.&#10;# if we would like to get a list the fourth argument would be: simplify = FALSE.&#10;# Example below: Given a vector of numbers, one simple operation is to take group means.&#10;&#10;# Generating random numbers with different distributions&#10;my_list &lt;- c(rnorm(10), runif(10), rnorm(10, 1)) &#10;# defining some groups&#10;groups &lt;- gl(3, 10) &#10;# Applying the mean function on each group&#10;res &lt;- tapply(my_list, groups, mean)" description="Apply aggregate function on each subgroup" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="R" value="true" />
+    </context>
+  </template>
+  <template name="gc-r-rapply" value="# Description: rapply aims to apply a function operation recursivley on nested structures&#10;# Example below: nested list (not preserving the original structure)&#10;&#10;x=list(1,list(2,3),4,list(5,list(6,7)))&#10;str(x)&#10;rapply(x,function(x){x^2},class=c(&quot;numeric&quot;))" description="apply a function operation recursivley on nested structures" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="R" value="true" />
+    </context>
+  </template>
+  <template name="gc-r-filter" value="library(dplyr)&#10;my_data &lt;- data.frame(student_name = c(&quot;Gil&quot;,&quot;Shay&quot;,&quot;Itamar&quot;), grade = c(90,95,70));&#10;&#10;high_scores&lt;- filter(my_data, grade &gt;= 85)" description="Filter function" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="R" value="true" />
+    </context>
+  </template>
+  <template name="gc-r-unique" value="library(dplyr)&#10;my_data &lt;- data.frame(student_name = c(&quot;Gil&quot;,&quot;Shay&quot;,&quot;Itamar&quot;,&quot;Gil&quot;),&#10;            grade = c(90,95,70,90));&#10;&#10;scores&lt;- unique(my_data)" description="unique" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="R" value="true" />
+    </context>
+  </template>
+  <template name="gc-r-unite" value="library(tidyr)&#10;#### Example : Creating the dataframe - Input ######&#10;my_data &lt;- data.frame(City= c(&quot;Tel Aviv&quot;,&quot;Ramat Gan&quot;,&quot;New York&quot;),First_name=c(&quot;Gil&quot;,&quot;Shay&quot;,&quot;Itamar&quot;),Last_name=c(&quot;Tamari&quot;,&quot;Cohen&quot;,&quot;Skalim&quot;));&#10;&#10;###Concatenate between two columns#####&#10;res_1&lt;- unite(my_data,&quot;Full_name&quot;,First_name,Last_name,sep = &quot; &quot;)&#10;&#10;###Concatenate between three columns#####&#10;res_2  &lt;- unite(my_data,&quot;Full_name&quot;,First_name,Last_name,City ,sep = &quot; &quot;)" description="unite" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="R" value="true" />
+    </context>
+  </template>
+  <template name="gc-r-seperate" value="library(tidyr)&#10;#### Example : Creating the dataframe - Input ######&#10;my_data &lt;- data.frame(City= c(&quot;Tel Aviv&quot;,&quot;Ramat Gan&quot;,&quot;New York&quot;),Full_name=c(&quot;Gil Tamar&quot;,&quot;Shay Cohen&quot;,&quot;Itamar Skalim&quot;));&#10;### Separate between two columns#####&#10;res_1 &lt;- separate(my_data, Full_name, c(&quot;First name&quot;,&quot;Last Name&quot;),sep = &quot; &quot;)" description="Sepearate column into multiple columns" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="R" value="true" />
+    </context>
+  </template>
 </templateSet>
