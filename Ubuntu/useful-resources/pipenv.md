@@ -11,7 +11,7 @@ Description | command
 Install a package|  **pipenv install** &lt;package-name&gt;
 Uninstall a package|  **pipenv uninstall** &lt;package-name&gt;
 Generate a lockfile | **pipenv lock**
-Run a given command from the virtualenv, with any arguments forwarded|   **pipenv run** python manage.py runserver
+Run a given command from the virtualenv, with any arguments forwarded|   **pipenv run python** manage.py runserver
 Spawn a shell with the virtualenv activated|   **pipenv shell**
 Locate the project| **pipenv `--`where**
 Locate the virtualenv| **pipenv `--`venv**
