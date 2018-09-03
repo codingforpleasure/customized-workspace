@@ -51,4 +51,9 @@
       <option name="R" value="true" />
     </context>
   </template>
+  <template name="gc-r-init-matrix" value="# Initialize a matrix&#10;mat = matrix(data = c(1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3), nrow = 4, ncol = 3) # By column&#10;mat = matrix(data = c(1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3), nrow = 4, ncol = 3, byrow = TRUE) # By row&#10;" description="Init matrix" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="R" value="true" />
+    </context>
+  </template>
 </templateSet>
