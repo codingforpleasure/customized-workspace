@@ -152,12 +152,14 @@ source ~/.bin/tmuxinator.zsh
 
 ######## Aliases ########
 
+alias r=rotate_image                # Rotate image
 alias s=source_me
 alias c=count_lines
+alias i=get_info                    # Get size and dpi of image
 alias ag='ag --hidden'              # Search in hidden directories too (assuming .agignore was respected).
 
 alias ll="ls -la --color \
-run                 --human-readable \
+                 --human-readable \
                  --group-directories-first" # list files nicely
 
 alias pdfgrep="pdfgrep  --recursive \
@@ -283,6 +285,15 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib/
 
 
 ###### Functions ######
+
+function rotate_image(){
+  convert $1 -rotate $2 rotated_$2_$1
+  echo "Output image: rotated_$2_$1"
+}
+
+function get_info() {
+  identify -format "Image size:%w x %h \nImage DPI: %x x %y\n" $1
+}
 
 function source_me() {
    echo $fg_bold[yellow]"Sourcing ~\.zshrc"
