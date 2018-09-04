@@ -1,40 +1,7 @@
 <!--ts-->
-   * [An OpenCV glimpse](#an-opencv-glimpse)
-      * [Basics](#basics)
-         * [Useful functions in open CV](#useful-functions-in-open-cv)
-         * [Color-spaces in OpenCV](#color-spaces-in-opencv)
-         * [Arithmetic Operations on Images](#arithmetic-operations-on-images)
-            * [Addition](#addition)
-            * [Substruction](#substruction)
-         * [Logical Operations on images](#logical-operations-on-images)
-         * [Thresholding Types](#thresholding-types)
-            * [Threshold set manually](#threshold-set-manually)
-            * [Threshold calculated automatically (THRESH_OTSU)](#threshold-calculated-automatically-thresh_otsu)
-            * [Adaptive thresholding](#adaptive-thresholding)
-         * [Geometric Transformations](#geometric-transformations)
-            * [Scale an image](#scale-an-image)
-            * [Shift/Translate an image](#shifttranslate-an-image)
-            * [Rotate an image](#rotate-an-image)
-            * [Affine transformation (Shear)](#affine-transformation-shear)
-         * [Morphological Transformations](#morphological-transformations)
-            * [Erosion](#erosion)
-            * [Dilation](#dilation)
-            * [Gradient (For determining the borders)](#gradient-for-determining-the-borders)
-            * [Structuring Element (elliptical/circular shaped kernels)](#structuring-element-ellipticalcircular-shaped-kernels)
-         * [Contour Approximation Method](#contour-approximation-method)
-         * [Bounding Shapes](#bounding-shapes)
-            * [Bounding rectangle](#bounding-rectangle)
-               * [Straight Bounding Rectangle](#straight-bounding-rectangle)
-               * [Rotated Rectangle](#rotated-rectangle)
-            * [Minimum Enclosing Circle](#minimum-enclosing-circle)
-            * [Fitting an Ellipse](#fitting-an-ellipse)
-            * [Fitting a Line](#fitting-a-line)
-         * [Contours Hierarchy](#contours-hierarchy)
-         * [Extracting connected components from binary image](#extracting-connected-components-from-binary-image)
-         * [distance transform](#distance-transform)
-         * [Useful functions in PIL (Python Imaging Library)](#useful-functions-in-pil-python-imaging-library)
 
-<!-- Added by: gil_diy, at: 2018-08-30T11:01+03:00 -->
+
+<!-- Added by: gil_diy, at: 2018-09-04T20:41+03:00 -->
 
 <!--te-->
 
@@ -58,8 +25,31 @@ Get the dimensions of a bounding rectangle | (x,y,w,h) = **cv2.boundingRect**(co
 Resize image | **cv2.resize**(_img, **(100, 100)**_)
 Draw a rectangle on an image | **cv2.rectangle**(img, (x, y), (x + w, y + h), color, thickness)
 
+## Draw on screen
 
+* top-left corner and bottom-right corner of rectangle
+
+
+```python
+x1, x2 = 200, 300
+y1, y2 = 100, 400
+cv2.rectangle(img, (x1, y1), (x2, y2), (0, 255, 0), 3)
+```
 ### Color-spaces in OpenCV
+
+#### **Gray**
+liminates color information translating
+to shades of gray: this color space is extremely useful for intermediate
+processing, such as face detection.
+
+#### **BGR**
+blue-green-red color space, in which each pixel is a three-element
+array, each value representing the blue, green, and red colors:
+
+#### **HSV**
+hue is a color tone, saturation is the intensity of a color, and value
+represents its darkness
+
 
 ### Arithmetic Operations on Images
 
@@ -92,7 +82,7 @@ else
 so in code:
 ```python
 max_val = 255
-cv2.threshold(img,th,max_val, THRESHOLD_BINARY)
+cv2.threshold(img,th,max_val, cv2.THRESH_BINARY)
 ```
 
 Let's see some few more types of threshold:
@@ -124,7 +114,7 @@ The algorithm assumes that the image contains two classes of pixels following bi
 
 To apply THRESH_OTSU second argument (threshold) should be set to zero, and should add the THRESH_OTSU flag:
 
-cv2.threshold(img,0,max_val, THRESHOLD_BINARY + THRESH_OTSU)
+cv2.threshold(img,0,max_val, cv2.THRESH_BINARY + cv2.THRESH_OTSU)
 
 http://www.labbookpages.co.uk/software/imgProc/otsuThreshold.html
 
@@ -140,8 +130,60 @@ th1 = cv2.adaptiveThreshold(img, 255, cv2.ADAPTIVE_THRESH_MEAN_C, cv2.THRESH_BIN
 th2 = cv2.adaptiveThreshold (img, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY, block_size, constant)
 ```
 
+### blurring/smoothening techniques
+
+#### Averaging
+It simply takes the average of all the pixels under kernel area and replace the central element.
+
+```python
+   kernel = (5,5)
+   blur = cv2.blur(img,kernel)
+```
+
+#### Gaussian Blurring
+
+When Should I use it?
+**Gaussian blurring is highly effective in removing gaussian noise from the image.**
+
+We should specify the kernel size and **we also should specify the standard deviation in X and Y direction, sigmaX and sigmaY respectively**. if only sigmaX is specified, sigmaY is taken as same as sigmaX. If both are given as zeros, they are calculated from kernel size.
+
+
+
+```python
+ kernel = (5,5)
+ blur = cv2.GaussianBlur(img,kernel,0)
+```
+
+#### medianBlur
+
+When should I use it?
+**This is highly effective against salt-and-pepper noise in the images**
+
+takes median of all the pixels under kernel area and central element is replaced with this median value. **Its kernel size should be a positive odd integer.**
+
+
+```python
+median = cv2.medianBlur(img,5)
+```
+
+#### Bilateral Filtering
+
+When should I use it?
+**is highly effective in noise removal while keeping edges sharp. But the operation is slower compared to other filters. So the end result would be the texture on the surface is gone, but edges are still preserved.**
+
+```python
+blur = cv2.bilateralFilter(img,9,75,75)
+```
+
+
 ### Geometric Transformations
 
+
+### Edge detection
+
+```python
+   cv2.imwrite("canny.jpg", cv2.Canny(img, 200, 300))
+```
 
 <p align="center">
   <img src="images/transformations_example.png" title="Transformations examples:">
@@ -183,6 +225,8 @@ Shear offsets a set of points a distance proportional to their x and y coordinat
 ### Morphological Transformations
 
 Should apply those transformations on black and white images
+
+In OpenCV there a are many predefined filters which use a **kernel**. kernel is a set of weights, which determine how each output pixel is calculated from a neighborhood of input pixels. Another term for a kernel is a convolution matrix. It mixes up or convolves the pixels in a region. Similarly, a kernel-based filter may be called a convolution filter.
 
 #### Erosion
 ```python
