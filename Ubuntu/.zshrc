@@ -2,10 +2,14 @@
 # export PATH=$HOME/bin:/usr/local/bin:$
 
 # Adding some scripts for increasing my productivity
-PATH=$PATH:$HOME/my_useful_scripts
+export PATH=$PATH:$HOME/my_useful_scripts
+
+# Adding inteliji-idea and fllutter
+export PATH=$PATH:/opt/idea-IC-182.4129.33/bin/
+export PATH=~/flutter/bin:$PATH
 
 # Adding some anconda to my path
-PATH="/home/gil_diy/anaconda3/bin:$PATH"
+export PATH="/home/gil_diy/anaconda3/bin:$PATH"
 
 # Adding my documentations to my path
 export DOC_MD_PATH="/home/gil_diy/myGitRepositories/customized-workspace/Ubuntu/useful-resources/"
