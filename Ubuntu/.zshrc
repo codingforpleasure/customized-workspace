@@ -155,7 +155,7 @@ fi
 source ~/.bin/tmuxinator.zsh
 
 ######## Aliases ########
-
+# alias a='subl ~/.zshrc'
 alias r=rotate_image                # Rotate image
 alias s=source_me
 alias c=count_lines
@@ -193,6 +193,7 @@ alias watchl='watch --color ls -la --color'	# list and watch files and folders w
 
 alias sublime="subl"				        # Execute sublime editor
 alias {pycharm,charm}="nohup charm  > /dev/null &"
+alias idea="nohup idea.sh  > /dev/null &"
 alias firefox="firefox --ProfileManager &" # For setting my current working profile
 
 alias android="~/android-studio/bin/studio.sh &" # Execute Android-studio easily
