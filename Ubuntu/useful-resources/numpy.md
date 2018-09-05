@@ -36,6 +36,37 @@ timeit my_array**2
 ```
 **If you'll run it, you can easily see the numpy array is much much faster than the list!!**
 
+
+#### Data representation
+
+Data is stored in multidimensional Numy arrays, also called **tensors** .
+tensor is a container for data and a generalization of matrices to an arbitrary number of dimensions.
+
+
+**(note that in the context of tensors, a dimension is often called an axis)**
+
+Description | result | x.ndim
+-----------|------------|-----
+Scalars (0D tensors) | x = np.array(12) | 0
+Vectors (1D tensors) | x = np.array([12,3,6,14]) |  1
+Matrices (2D tensors) | x = np.array([[12,3,6,14],[5,16,18,79]]) | 2
+Cubes (3D tensors) | x = np.array([ [[12,3,6,14],[5,16,18,79]] ,  [[1,3,0,1],[0,16,3,79]] , [[3,3,3,7],[0,0,18,9]] ]) | 3
+
+
+Type | Real world example
+-----|-------------------
+Vector (2D tensors)| (samples, features)
+Timeseries (3D tensors)| (samples, timestamps, features)
+Images (4D tensors) | (samples, height, width, channels)
+Video (5D tensors)| (samples, frames, height, width, channels)
+
+
+##### Key attributes
+
+1. **Number of axes (rank)** - Number of dimensions
+2. **Shape** - A tuple of integers that describes how many dimensions the tensor **has along each axis**
+3. **Data type (usually called **dtype**)** - This is the type of the data contianed in the tensor,
+float32, uint8, float64 etc..
 #### Creating
 
 Description | command
@@ -256,3 +287,13 @@ np.argmax(my_array, axis = 1)  # Find max in each row: array([1, 0, 1])
 my_vec = np.array([1,5,3,56,4,7,43])
 indexes = np.argsort(mt_vec) # result: array([0, 2, 4, 1, 5, 6, 3])
 ```
+
+####random
+
+```python
+seed = 1
+np.random.seed = seed
+np.random.shuffle(messages)
+```
+
+reshape
