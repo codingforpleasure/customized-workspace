@@ -154,76 +154,83 @@ fi
 # and source the file:
 source ~/.bin/tmuxinator.zsh
 
+
+if [ -f ~/.zsh_aliases ]; then
+    source ~/.zsh_aliases
+else
+    print ".zsh_aliases was not found."
+fi
+
 ######## Aliases ########
 # alias a='subl ~/.zshrc'
-alias r=rotate_image                # Rotate image
-alias s=source_me
-alias c=count_lines
-alias i=get_info                    # Get size and dpi of image
-alias ag='ag --hidden'              # Search in hidden directories too (assuming .agignore was respected).
+# alias r=rotate_image                # Rotate image
+# alias s=source_me
+# alias c=count_lines
+# alias i=get_info                    # Get size and dpi of image
+# alias ag='ag --hidden'              # Search in hidden directories too (assuming .agignore was respected).
 
-alias ll="ls -la --color \
-                 --human-readable \
-                 --group-directories-first" # list files nicely
+# alias ll="ls -la --color \
+#                  --human-readable \
+#                  --group-directories-first" # list files nicely
 
-alias pdfgrep="pdfgrep  --recursive \
-                        --page-number \
-                        --include \"*.pdf\" "
+# alias pdfgrep="pdfgrep  --recursive \
+#                         --page-number \
+#                         --include \"*.pdf\" "
 
-alias run="pipenv run python "      # Executing python script faster with pipenv
-alias rm="rm -i"				            # Prompt before permanently remove files
-alias cp="cp -i"               			# Prompt before overwrite
-alias scp="scp -r"                  # Secure copy with recursively copy so it means entire directories.
-alias ssh="ssh -x"                  # Ssh with enabled X11 forwarding
-alias 'crontab -r'='crontab -i' 		# Prompt before actually removing the crontab
-#alias make=my-make 		              #
+# alias run="pipenv run python "      # Executing python script faster with pipenv
+# alias rm="rm -i"				            # Prompt before permanently remove files
+# alias cp="cp -i"               			# Prompt before overwrite
+# alias scp="scp -r"                  # Secure copy with recursively copy so it means entire directories.
+# alias ssh="ssh -x"                  # Ssh with enabled X11 forwarding
+# alias 'crontab -r'='crontab -i' 		# Prompt before actually removing the crontab
+# #alias make=my-make 		              #
 
-alias histg="history | grep "			  # Combine history with grep
-alias history=" history -E"
-alias lsg="ll | grep "              # Combine list files with grep
+# alias histg="history | grep "			  # Combine history with grep
+# alias history=" history -E"
+# alias lsg="ll | grep "              # Combine list files with grep
 
-alias pgrep="pgrep --list-full"			# lookup a process
-alias psg="pgrep --list-full"       # lookup a process
+# alias pgrep="pgrep --list-full"			# lookup a process
+# alias psg="pgrep --list-full"       # lookup a process
 
-alias top="htop"                    # Execute the interactive process viewer
-alias locate="sudo updatedb; locate --ignore-case "
+# alias top="htop"                    # Execute the interactive process viewer
+# alias locate="sudo updatedb; locate --ignore-case "
 
-alias locateh=locate-here           # locate here under the current folder
-alias watchl='watch --color ls -la --color'	# list and watch files and folders with color
+# alias locateh=locate-here           # locate here under the current folder
+# alias watchl='watch --color ls -la --color'	# list and watch files and folders with color
 
-alias sublime="subl"				        # Execute sublime editor
-alias {pycharm,charm}="nohup charm  > /dev/null &"
-alias idea="nohup idea.sh  > /dev/null &"
-alias firefox="firefox --ProfileManager &" # For setting my current working profile
+# alias sublime="subl"				        # Execute sublime editor
+# alias {pycharm,charm}="nohup charm  > /dev/null &"
+# alias idea="nohup idea.sh  > /dev/null &"
+# alias firefox="firefox --ProfileManager &" # For setting my current working profile
 
-alias android="~/android-studio/bin/studio.sh &" # Execute Android-studio easily
-alias adb='~/Android/Sdk/platform-tools/adb' 	 # Execute Android Debug Bridge (adb)
+# alias android="~/android-studio/bin/studio.sh &" # Execute Android-studio easily
+# alias adb='~/Android/Sdk/platform-tools/adb' 	 # Execute Android Debug Bridge (adb)
 
-# Prints all android packages
-# (Great reference: https://developer.android.com/studio/command-line/adb#pm)
-alias ls-my-android-packages='adb shell pm list packages codingforpleasure'
-alias rm-android-app='adb shell pm uninstall '
-alias straceg=strace-and-grep $1 $2
+# # Prints all android packages
+# # (Great reference: https://developer.android.com/studio/command-line/adb#pm)
+# alias ls-my-android-packages='adb shell pm list packages codingforpleasure'
+# alias rm-android-app='adb shell pm uninstall '
+# alias straceg=strace-and-grep $1 $2
 
-alias exif="EXIF.py "				        # extract Exif metadata from tiff and jpeg files
-alias dis='display '
-alias tes='tesseract '
-alias du='du --summarize --human-readable' # Disk space usage nicer output
+# alias exif="EXIF.py "				        # extract Exif metadata from tiff and jpeg files
+# alias dis='display '
+# alias tes='tesseract '
+# alias du='du --summarize --human-readable' # Disk space usage nicer output
 
-alias display='feh -i' #impressive_display
+# alias display='feh -i' #impressive_display
 
-alias rsync="rsync --verbose \
-              --progress \
-              --human-readable \
-              --archive"
+# alias rsync="rsync --verbose \
+#               --progress \
+#               --human-readable \
+#               --archive"
 
-alias toc-markdown-generate='gh-md-toc --insert '  # Generates Table-Of-Content for a given markdown
+# alias toc-markdown-generate='gh-md-toc --insert '  # Generates Table-Of-Content for a given markdown
 
-# My documentation tweaks
-alias help=helper                 # Assuming tldr client in installed on your system
-alias doc-view=helper
-alias doc-edit=documentation-edit $1
-alias doc-ls=documentation-list
+# # My documentation tweaks
+# alias help=helper                 # Assuming tldr client in installed on your system
+# alias doc-view=helper
+# alias doc-edit=documentation-edit $1
+# alias doc-ls=documentation-list
 
 ### some git aliases ###
 alias cdg='cd $(git rev-parse --show-toplevel)' # jump to repo's root directory (where the .git resides)
