@@ -1,0 +1,101 @@
+print ".zsh_functions was invoked"
+
+function rotate_image(){
+  convert $1 -rotate $2 rotated_$2_$1
+  echo "Output image: rotated_$2_$1"
+}
+
+function get_info() {
+  identify -format "Image size:%w x %h \nImage DPI: %x x %y\n" $1
+}
+
+function source_me() {
+   echo $fg_bold[yellow]"Sourcing ~\.zshrc"
+   source ~/.zshrc
+}
+
+function count_lines() {
+  num=$(ll | wc -l)
+  echo $fg_bold[green] "Number of lines: $num"
+}
+
+function strace-and-grep(){
+
+  # since strace prints its traces on standard error, not on standard output
+  # if [[ $1=="adb" ]]; then
+  #   echo "Grepping: $3"
+
+  # fi
+
+  echo "Binary file: $1"
+  echo "Grepping: $2"
+}
+
+function documentation-list(){
+	echo $fg_bold[cyan]"All documentations listed below:"$fg_bold[white]
+	echo ""
+	ls -1 ${DOC_MD_PATH}
+	echo ""
+}
+
+function documentation-edit(){
+	if [ $# -eq 0 ]; then
+		echo $fg_bold[red] "add argument!!"
+		exit 1
+	fi
+
+	# search for file in directory if found the execute then edit it.
+
+	local FILENAME=$1.md
+	/usr/bin/subl ${DOC_MD_PATH}/"${FILENAME}"
+}
+
+
+function locate-here(){
+  # Locate files under the current directory
+  locate $1 | grep $PWD
+}
+
+function helper(){
+    if [ $# -eq 0 ]; then
+      echo $fg_bold[red] "add argument!!"
+      exit 1
+    fi
+
+    python `which doc-helper.py` $1
+    tldr $1
+}
+
+function ask_yes_or_no() {
+    read "answer?$1 ([y]es or [N]o): "
+    case $(echo $answer | tr '[A-Z]' '[a-z]') in
+        y|yes) echo "yes" ;;
+        *)     echo "no" ;;
+    esac
+}
+
+#
+# TODO function description
+# @param  TODO The first parameter
+# @return
+#function_impresive_display() {
+#  feh -l | awk '{ print $3" "$4" "$8 }'
+#
+#}
+
+
+# function my-make(){
+#   if [ $# -eq 0 ]; then
+#     /usr/bin/make --just-print
+#     echo $fg_bold[red] "\n Attention: just ran dry-run (Printed the commands that would be executed)"
+#     echo $fg_bold[white]
+#     if [[ "no" == $(ask_yes_or_no " Would you like now to run make, now?") ]]
+#     then
+#       echo "Skipped."
+#       exit 0
+#     fi
+#     /usr/bin/make
+#   else
+#     /usr/bin/make "$@"
+#   fi
+# }
