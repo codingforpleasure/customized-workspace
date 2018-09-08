@@ -63,6 +63,8 @@ sync {
     filter = {
         '+ /.tmux.conf',
         '+ /.zshrc',
+        '+ /.zsh_aliases',
+        '+ /.zsh_functions',
         '+ /.vimrc',
         '- /**',
     },
