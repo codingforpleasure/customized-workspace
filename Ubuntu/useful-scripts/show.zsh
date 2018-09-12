@@ -46,13 +46,16 @@ FILENAME=$(echo montage-"$(date +"%T").png" | tr : -)
 for (( i = 0; i < $NUM_ITERATIONS + 1; i++ )); do
 	LIST_OF_FILES=""
 	TAIL_LIST_LENGTH=$(( ${NUM_OF_IMAGES} - ${i}*${TOTAL_PRESENTED_IN_GRID} ))
-	LIST_OF_FILES=$( ls | tail -n ${TAIL_LIST_LENGTH} | head -n ${TOTAL_PRESENTED_IN_GRID})
+	LIST_OF_FILES=$( ls | sort --numeric-sort |tail -n ${TAIL_LIST_LENGTH} | head -n ${TOTAL_PRESENTED_IN_GRID})
 	echo "${LIST_OF_FILES}" > "file_list${i}.txt"
 	NUM_OF_FILES=$(echo "$LIST_OF_FILES" | wc -w)
 	NUM_ROWS_NEW=$(( $NUM_OF_FILES / $GRID_NUM_COLUMNS ))
 	FIXED_HEIGHT=$(bc<<<"($NUM_ROWS_NEW + 2) * $SINGLE_IMAGE_HEIGHT")
 	FROM_IMG_NUM=$(( ${i}*${TOTAL_PRESENTED_IN_GRID} ))
 	UNTIL_IMG_NUM=$(( FROM_IMG_NUM + NUM_OF_FILES ))
+	TITLE="${FROM_IMG_NUM} - ${UNTIL_IMG_NUM} images from total of ${NUM_OF_IMAGES} images (Dim: ${NUM_ROWS_NEW}x${GRID_NUM_COLUMNS}) ."
+	echo "TITLE: ${TITLE}"
+
 	feh --index \
 		--quiet \
 		--recursive \
@@ -66,4 +69,9 @@ for (( i = 0; i < $NUM_ITERATIONS + 1; i++ )); do
 		#--output "./${FILENAME}"
 
 	rm file_list${i}.txt
+
+	# TODO: Set the window always on top, less annoying,
+	# Have used the -r option followed with the target window name
+	#wmctrl -r "${TITLE}" -b add,above
+	wmctrl -r Home -b add,above
 done
