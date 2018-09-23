@@ -4,9 +4,10 @@
 # Adding some scripts for increasing my productivity
 export PATH=$PATH:$HOME/my_useful_scripts
 
-# Adding inteliji-idea and fllutter
+# Adding inteliji-idea, Datagrip and fllutter
 export PATH=$PATH:/opt/idea-IC-182.4129.33/bin/
-export PATH=~/flutter/bin:$PATH
+export PATH=$PATH:/opt/DataGrip-2018.2.4/bin/
+export PATH=$PATH:~/flutter/bin/
 
 # Adding some anconda to my path
 export PATH="/home/gil_diy/anaconda3/bin:$PATH"
