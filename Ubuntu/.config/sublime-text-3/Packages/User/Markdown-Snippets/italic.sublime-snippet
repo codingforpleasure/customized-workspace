@@ -1,0 +1,8 @@
+<snippet>
+<content><![CDATA[
+_${0:$TM_SELECTED_TEXT}_
+]]></content>
+	<tabTrigger>italic</tabTrigger>
+	<scope>text.html.markdown</scope>
+	<description>Make the current text selection italic</description>
+</snippet>

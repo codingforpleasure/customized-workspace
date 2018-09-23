@@ -1,0 +1,8 @@
+<snippet>
+<content><![CDATA[
+**${0:$TM_SELECTED_TEXT}**
+]]></content>
+	<tabTrigger>bold</tabTrigger>
+	<scope>text.html.markdown</scope>
+	<description>Make the current text selection bold</description>
+</snippet>
