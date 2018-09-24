@@ -22,6 +22,11 @@ List all packages on the system |  sudo dpkg --get-selections
 List all files regarding a package |   dpkg -L &lt;pkg name&gt;
 Find the a missing file to which package it belongs to | apt-file &lt;file-name&gt;
 Get package dependencies | apt-cache rdepends &lt;pkg name&gt;
+Remove broken packages in ubuntu | sudo dpkg `--`remove `--`force-remove-reinstreq &lt;pkg name&gt;
+Remove packages that were automatically installed to satisfy dependencies for some package and that are no more needed | sudo apt-get autoremove
+Cleans **all** archives ( .deb files) which resides in /var/cache/apt/archives/ | sudo apt-get clean
+Cleans only package files that can no longer be downloaded, and are largely useless (subset of the clean command)| sudo apt-get autoclean
+Overwrite one package's file with another's file and install package |sudo dpkg -i `--`force-overwrite &lt;deb located&gt;
 Get source code package from official repository | sudo apt-get source &lt;pkg name&gt;
 
 
@@ -30,3 +35,13 @@ Get source code package from official repository | sudo apt-get source &lt;pkg n
 /etc/apt/sources.list
 ```
 The source code would be downloaded into: /usr/src/&lt;`pkg name and version`&gt;
+
+**What the difference between clean / autoclean / autoremove?**
+
+We all have a habit of installing and uninstalling softwares, therefore the cache space might grow. While installing a package the archives (.deb files) are downloaded and are get stored in `/var/cache/apt/`.
+
+`apt get clean` removes all those archive (.deb) files.
+
+`apt get autoclean` removes only package files that can no longer be downloaded, and are largely useless.
+
+You can easily check the effect on your system by checking disk space before and after: `du -h /var/cache/apt/` .
