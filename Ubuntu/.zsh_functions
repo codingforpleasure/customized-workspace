@@ -56,6 +56,11 @@ function locate-here(){
   locate $1 | grep $PWD
 }
 
+function cat-hebrew(){
+  # View hebrew file
+  cat $1 | bidiv
+}
+
 function helper(){
     if [ $# -eq 0 ]; then
       echo $fg_bold[red] "add argument!!"

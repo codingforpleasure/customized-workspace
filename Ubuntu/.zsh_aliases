@@ -1,4 +1,4 @@
-echo "GILC .zsh_aliases was invoked"
+echo ".zsh_aliases was invoked"
 
 alias a='subl ~/.zshrc'
 alias r=rotate_image                # Rotate image
@@ -18,6 +18,7 @@ alias pdfgrep="pdfgrep  --recursive \
 alias run="pipenv run python "      # Executing python script faster with pipenv
 alias rm="rm -i"				            # Prompt before permanently remove files
 alias cp="cp -i"               			# Prompt before overwrite
+alias cath=cat-hebrew               # Cat hebrew text files
 alias scp="scp -r"                  # Secure copy with recursively copy so it means entire directories.
 alias ssh="ssh -x"                  # Ssh with enabled X11 forwarding
 alias 'crontab -r'='crontab -i' 		# Prompt before actually removing the crontab
