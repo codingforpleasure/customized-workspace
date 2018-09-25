@@ -14,7 +14,7 @@
 
 ** Step #1: **
 ```sql
-CREATE USER <'usrname'>@'<ip_address>' IDENTIFIED WITH mysql_native_password BY '<password>'
+CREATE USER <'usrname'>@'<ip_address>' IDENTIFIED WITH mysql_native_password BY '<password>';
 ```
 **Step #2:**
 
