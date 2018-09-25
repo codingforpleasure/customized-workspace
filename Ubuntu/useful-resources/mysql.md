@@ -18,16 +18,13 @@ CREATE USER <'usrname'>@'<ip_address>' IDENTIFIED WITH mysql_native_password BY 
 ```
 **Step #2:**
 
-**GRANT ALL PRIVILEGES ON** &lt;database-name&gt;.&lt;table-name&gt; TO '&lt;username&gt;'@'&lt;ip-address&gt;';
-
 ```sql
-GRANT ALL PRIVILEGES ON '<usrname>'@'<ip_address>' IDENTIFIED WITH mysql_native_password BY '<password>';
+GRANT ALL PRIVILEGES ON <database_name>.<table_name> TO '<username>'@'<ip-address>';
 ```
 
 
-
-**Tip:** To grant access to **all databases and tables** use:
+**Tip:**For granting access to **all databases and tables** use `*.*`:
 
 ```sql
-GRANT ALL PRIVILEGES ON *.* TO '<username>' @ '<ip-address>';
+GRANT ALL PRIVILEGES ON *.* TO '<username>'@'<ip-address>';
 ```
