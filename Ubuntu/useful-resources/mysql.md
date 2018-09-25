@@ -13,14 +13,21 @@
 ### Grant access to another person from your local network:
 
 ** Step #1: **
-**CREATE USER** &lt;'usrname'&gt; **@** '&lt;ip_address&gt;' **IDENTIFIED WITH mysql_native_password BY** &lt;'password&gt;';
-
+```sql
+CREATE USER <'usrname'>@'<ip_address>' IDENTIFIED WITH mysql_native_password BY '<password>'
+```
 **Step #2:**
+
 **GRANT ALL PRIVILEGES ON** &lt;database-name&gt;.&lt;table-name&gt; TO '&lt;username&gt;'@'&lt;ip-address&gt;';
 
+```sql
+GRANT ALL PRIVILEGES ON '<usrname>'@'<ip_address>' IDENTIFIED WITH mysql_native_password BY '<password>';
+```
 
 
 
 **Tip:** To grant access to **all databases and tables** use:
 
-**GRANT ALL PRIVILEGES ON** ** \*.\* ** **TO** '&lt;username&gt;' **@** '&lt;ip-address&gt;';
+```sql
+GRANT ALL PRIVILEGES ON *.* TO '<username>' @ '<ip-address>';
+```
