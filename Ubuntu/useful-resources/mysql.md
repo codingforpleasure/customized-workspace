@@ -12,7 +12,7 @@
 ## mysql admin operations:
 ### Grant access to another person from your local network:
 
-** Step #1: **
+**Step #1:**
 ```sql
 CREATE USER '<usrname>'@'<ip_address>' IDENTIFIED WITH mysql_native_password BY '<password>';
 ```
@@ -23,7 +23,7 @@ GRANT ALL PRIVILEGES ON <database_name>.<table_name> TO '<username>'@'<ip-addres
 ```
 
 
-**Tip:**For granting access to **all databases and tables** use `*.*`:
+**Tip:** For granting access to **all databases and tables** use `*.*`:
 
 ```sql
 GRANT ALL PRIVILEGES ON *.* TO '<username>'@'<ip-address>';
