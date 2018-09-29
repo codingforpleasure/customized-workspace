@@ -11,6 +11,12 @@ alias ll="ls -la --color \
                  --human-readable \
                  --group-directories-first" # list files nicely
 
+alias watch="watch --interval 0.5 \
+					--color "
+
+alias df="df --human-readable \
+			 --print-type | sort --human-numeric-sort"
+
 alias pdfgrep="pdfgrep  --recursive \
                         --page-number \
                         --include \"*.pdf\" "
