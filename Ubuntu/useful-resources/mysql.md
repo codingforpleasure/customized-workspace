@@ -53,3 +53,6 @@ make sure the variable value is **empty** by inserting last line:
 `secure_file_priv=""`
 
 in the file: `/etc/mysql/mysql.conf.d/mysqld.cnf`
+
+and finally simply restart the service:
+`sudo service mysql restart`
