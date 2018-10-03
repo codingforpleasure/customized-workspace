@@ -24,12 +24,15 @@ The things you need to install are:
 - git Autocomplete - [link](https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.zsh)
 - terminal-notifier (brew install terminal-notifier)
 - multitail (brew install multitail)
+- glogg (gui tail with UTF-8 support)
 - hub - cli tool for github (brew install hub && alias git=hub)
 - pyenv - Managing easily and switching between multiple versions of Python
 - github-markdown-toc - Easily generate Table Of Content for given markdown file.
 - feh - A great image viewer and cataloguer from terminal
 - tdlr - Simplified and community-driven man pages [Link](https://github.com/tldr-pages/tldr)
 - recoll - indexer for files (I mostly use it for searching terms in multiple pdf-books)
+- mycli - MySQL client with AutoCompletion and Syntax Highlighting [Link](https://github.com/dbcli/myclip)
+- Great resource for new completion scripts in zsh [Link](https://github.com/zsh-users/zsh-completions)
 
 Soon I'll be posting a script for doing all those installs in a snap of a finger.
 
