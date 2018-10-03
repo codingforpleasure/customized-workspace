@@ -1,0 +1,60 @@
+#compdef helper
+
+_helper() {
+	_1st_arguments=(
+				"aspell:Open Source spell checker"
+                "awk: AWK is a programming language designed for text processing and typically used as a data extraction and reporting tool."
+                "basename: asename prints file name NAME with any leading directory components removed"
+				"bash: Bash tips & tricks"
+				"cmp: Compare two files byte by byte"
+				"cron: Job scheduler"
+				"curl: Tool for transferring data using various protocols."
+				"cut: Utility which is used to extract sections from each line of input"
+				"date: Print or set the system date and time"
+				"dd: Utility whose primary purpose is to convert and copy files."
+				"dirname: Dirname will retrieve the directory-path name from a pathname ignoring any trailing slashes"
+				"du: Used to estimate file space usage—space used under a particular directory or files on a file system."
+				"echo: simple exho command"
+				"exec: exec command"
+				"exit: exit command"
+				"feh: image viewer and cataloguer"
+				"find: find.html"
+				"join: join.html"
+				"json: Demostrating the command-line JSON processor - jq"
+				"lsof: List open files"
+				"matplotlib: matplotlib examples"
+				"nlp: natural language processing examples"
+				"nohup: Run so immune to hangups, with output to a non-tty"
+				"numpy: Numpy examples"
+				"opencv: Opencv examples"
+				"pandas: pandas.html"
+				"pandoc: not-found.html"
+				"parallel: parallel"
+				"paste: paste command"
+				"pipenv : pipenv.html"
+				"printf: printf.html"
+				"python-package-manager: pipenv summary"
+				"python-regex: Python regular expressions"
+				"rsync: Utility for efficiently transferring and synchronizing files across computer systems, by checking the timestamp and size of files"
+				"sed: Utility that parses and transforms text, using a simple, compact programming language"
+				"seq: Print a sequence of numbers"
+				"service: Run a System V init script"
+				"sort: Sort lines of text files"
+				"split: Split a file into pieces"
+				"tee: Read from standard input and write to standard output and files"
+				"top: Display Linux processes"
+				"tmux: Terminal multiplexer - rocks! :)"
+				"tr: Translate or delete characters"
+				"uniq: Report or omit repeated lines"
+				"wget: The non-interactive network downloader"
+				"xargs: Build and execute command lines from standard input"
+				)
+
+	local context state line expl
+	local -A opt_args
+
+	_arguments "*:: :->subcmds" && return 0
+	_describe -t commands "my commands" _1st_arguments -V1
+}
+
+_helper "$@"
