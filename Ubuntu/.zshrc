@@ -84,7 +84,12 @@ plugins=(
   debian
   pip
   pipenv
+  zsh-completions
   )
+
+# For activating bunch of new completion scripts in zsh which are located in:
+# ~/.oh-my-zsh/custom/plugins/zsh-completions
+autoload -U compinit && compinit
 
 source $ZSH/oh-my-zsh.sh
 
@@ -172,7 +177,7 @@ fi
 
 
 # Execute tmuxinator on startup
-tmuxinator android-setup
+#tmuxinator android-setup
 
 # Assuming you have fzf (A command-fuzzy liner) installed on your workstation:
 # https://github.com/junegunn/fzf
