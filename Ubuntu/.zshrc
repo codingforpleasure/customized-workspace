@@ -1,16 +1,26 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$
 
+# Adding java support
+export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-amd64
+export PATH=$PATH:$JAVA_HOME/bin
+
+# Adding elasticsearch support
+export PATH=$PATH:/usr/share/elasticsearch/bin
+
 # Adding some scripts for increasing my productivity
 export PATH=$PATH:$HOME/my_useful_scripts
 
-# Adding inteliji-idea, Datagrip and fllutter
+# Adding PyCharm to my path
+export PATH=$PATH:/opt/pycharm-community-2018.2.4/bin
+
+# Adding inteliji-idea, Datagrip and flutter
 export PATH=$PATH:/opt/idea-IC-182.4129.33/bin/
 export PATH=$PATH:/opt/DataGrip-2018.2.4/bin/
 export PATH=$PATH:~/flutter/bin/
 
 # Adding some anconda to my path
-export PATH="/home/gil_diy/anaconda3/bin:$PATH"
+# export PATH="/home/gil_diy/anaconda3/bin:$PATH"
 
 # Adding my documentations to my path
 export DOC_MD_PATH="/home/gil_diy/myGitRepositories/customized-workspace/Ubuntu/useful-resources/"
@@ -85,13 +95,14 @@ plugins=(
   pip
   pipenv
   zsh-completions
+  docker-compose
   )
+
+source $ZSH/oh-my-zsh.sh
 
 # For activating bunch of new completion scripts in zsh which are located in:
 # ~/.oh-my-zsh/custom/plugins/zsh-completions
 autoload -U compinit && compinit
-
-source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
