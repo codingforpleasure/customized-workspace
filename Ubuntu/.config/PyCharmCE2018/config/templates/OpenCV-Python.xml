@@ -29,7 +29,7 @@
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="gc-cv2-show" value="cv2.imshow(&quot;$IMG_TITLE$&quot;,$IMG_NAME$)&#10;cv2.waitKey(0)&#10;cv2.destroyAllWindows()" description="Display an image in a window" toReformat="false" toShortenFQNames="true">
+  <template name="gc-cv2-show" value="cv2.imshow(&quot;$IMG_TITLE$&quot;, $IMG_NAME$)&#10;cv2.moveWindow(&quot;$IMG_TITLE$&quot;, 0, 0)&#10;cv2.waitKey(0)&#10;cv2.destroyAllWindows()" description="Display an image in a window" toReformat="false" toShortenFQNames="true">
     <variable name="IMG_TITLE" expression="" defaultValue="&quot;Window's title&quot;" alwaysStopAt="true" />
     <variable name="IMG_NAME" expression="" defaultValue="&quot;my_image&quot;" alwaysStopAt="true" />
     <context>
