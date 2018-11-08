@@ -36,27 +36,32 @@ find  . -type f -perm 0777 -exec chmod 755 {}\;
 ```bash
 find  . -type f -perm 0777 -print0 | xrags -0 chmod 755
 ```
-###find and remove a single file
+### find and remove a single file
 ```bash
 find . -type f -name "abc.txt" -exec rm -f {}\;
 ```
-###find all hidden files:
+### find all hidden files:
 ```bash
 find / -type -f -name ".*"
 ```
-###find all the files that were MODIFIED 10 days modified back:
+### find all the files that were MODIFIED 10 days modified back:
 ```bash
 find / -mtime 10
 ```
-###find all the files that were ACCESSED 10 days modified back:
+### find all the files that were ACCESSED 10 days modified back:
 ```bash
 find / -atime 10
 ```
-###find all the files modified in the last 1 minute
+### find all the files modified in the last 1 minute
 ```bash
 find / -mmin 1
 ```
-### find files between those boundries 1M < size < 2M
+
+### Find all the files modified in the last 1 minute and avoid checking /proc directory and /etc
+```bash
+find / -type f  -path "/proc" -o -path /etc -prune -o -cmin -1
+```
+### Find files between those boundries 1M < size < 2M
 ```bash
 find / -size +1M -size -2M
 ```
@@ -68,3 +73,14 @@ find / -maxdepth 3 -name "*log"
 ```bash
 find . -name "*.txt" -exec grep -i "GIL" {} \;
 ```
+
+Simply specify whether you want the time to be greater, smaller, or equal to the time you want, using, respectively:
+find . -cmin +<time>
+find . -cmin -<time>
+find . -cmin  <time>
+
+# https://stackoverflow.com/questions/14132210/use-find-command-but-exclude-files-in-two-directories
+
+find . -cmin -60 -type f -not -path "./junk*"
+
+find . -cmin -60 -type f ! -path "*/junk2/*" ! -path "*/blabla/*"
