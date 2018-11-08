@@ -33,19 +33,19 @@ ALLOW_POPUP="enable-popup"
 ALLOW_TEXT_TO_SPEECH="enable-text-2-speech"
 MULTITAIL_CONF_PATH="~/.config/multitail/multitail.conf"
 
-keyword=$1
+KEYWORD=$1
 popup_notifier_state=$2
 audio_notifier_state=$3
 
 
 handler_on_match=""
 
-if [ -z ${keyword} ];
+if [ -z ${KEYWORD} ];
 then
-	keyword="(error)"
-	colorful_echo cyan "Keyword was not set, so looking for the default keyword: error"
+	KEYWORD="(error)"
+	colorful_echo cyan "KEYWORD was not set, so looking for the default KEYWORD: error"
 else
-	keyword="(${keyword})"
+	KEYWORD="(${KEYWORD})"
 fi
 
 if [ "$popup_notifier_state" = "$ALLOW_POPUP" ];
@@ -74,6 +74,6 @@ fi
 # TODO: should use: ${MULTITAIL_CONF_PATH}
 
 multitail --config ~/.config/multitail/multitail.conf \
-	-cS android-environment -eX ${keyword} ${handler_on_match} \
+	-cS android-environment -eX ${KEYWORD} ${handler_on_match} \
 	-j \
 	-H ${heartbeat_interval}
