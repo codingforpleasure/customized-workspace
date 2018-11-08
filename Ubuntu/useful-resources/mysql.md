@@ -94,9 +94,21 @@ So if we search student by name there would be two traverses:
 We also can and often do multiple indexes on a table in order to cover the difference ways or application might search for data in that table.
 
 
+Great reference is written here:
+[link]https://dev.mysql.com/doc/refman/8.0/en/mysql-indexes.html
+
 So in conclusion:
 
 **Use an index when a statement needs to access data by a criteria other than the primary key. This way we take the advantage of the tree structure of the index for quickly find the pointer to the data we need this way is much more efficient than scan all rows in the table**
 
 
+## Deep dive into the execution plan of queries
+By delving into the execution plan of a query we can notice which sub-operations are cost the most. after figuring out we might consider replace those **Cluster Index Scan** which are very expensive operation specially for big tables with huge amount of rows.
 
+
+in **Datagrip** it can easily be done by clicking `Explain Plain`,
+moreover you can get valuable info from the `performance_schema`.
+
+## Multiple-Column Indexes
+
+https://dev.mysql.com/doc/refman/8.0/en/multiple-column-indexes.html

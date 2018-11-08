@@ -11,14 +11,16 @@
 		"uninstall",
 		"conda",
 		"tensorflow",
-		"preffer"
+		"preffer",
+		"binarization",
+		"mysql"
 	],
 	"ensure_newline_at_eof_on_save": true,
 	"font_options":
 	[
 		"gray_antialias"
 	],
-	"font_size": 18,
+	"font_size": 22,
 	"ignored_packages":
 	[
 		"Makefile",

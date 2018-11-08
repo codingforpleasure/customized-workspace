@@ -24,6 +24,10 @@ Calculate contour's area | area = **cv2.contourArea**(contour)
 Get the dimensions of a bounding rectangle | (x,y,w,h) = **cv2.boundingRect**(contour)
 Resize image | **cv2.resize**(_img, **(100, 100)**_)
 Draw a rectangle on an image | **cv2.rectangle**(img, (x, y), (x + w, y + h), color, thickness)
+split each color to different layer| b,g,r = cv2.split(img)
+
+
+* findContours should opperate on black and white image **ONLY**
 
 ## Draw on screen
 
@@ -178,6 +182,8 @@ blur = cv2.bilateralFilter(img,9,75,75)
 
 ### Geometric Transformations
 
+I have noticed a great reference here:
+https://docs.opencv.org/3.0-beta/doc/py_tutorials/py_imgproc/py_geometric_transformations/py_geometric_transformations.html
 
 ### Edge detection
 
@@ -230,22 +236,36 @@ In OpenCV there a are many predefined filters which use a **kernel**. kernel is 
 
 #### Erosion
 ```python
+kernel = np.ones((5,5),np.uint8)
 erosion = cv2.erode(binary_inv, kernel, iterations = 1)
 ```
 #### Dilation
 ```python
+kernel = np.ones((5,5),np.uint8)
 dilation = cv2.dilate(binary_inv, kernel, iterations = 1)
 ```
 #### Gradient (For determining the borders)
 
 ```python
+kernel = np.ones((5,5),np.uint8)
 gradient = cv2.morphologyEx(binary_inv, cv2.MORPH_GRADIENT, kernels)
 ```
 
 #### Structuring Element (elliptical/circular shaped kernels)
+We manually created a structuring elements in the previous examples with help of Numpy. It is rectangular shape. But in some cases, you may need elliptical/circular shaped kernels.
+i.e:
+
 ```python
 kernel = cv2.getStructuringElement(cv2.MORPH_CROSS,(5, 5))
 ```
+
+\# | Structure element
+----|-------------------
+1 | MORPH_RECT
+2 | MORPH_ELLIPSE
+3 | MORPH_CROSS
+3 | MORPH_TOPHAT
+
 
 <!-- MORPH_BLACKHAT = 6
 MORPH_CLOSE = 3

@@ -1,7 +1,7 @@
 <!--ts-->
 <!--te-->
 
-Used to convert between different character encodings. "It can convert from any of these encodings to any other, through Unicode conversion
+Used to convert between different character encodings. "It can convert from any of these encodings to any other, through Unicode conversion.
 
 **Useful especially when transfering hebrew text from windows to Linux:**
 

@@ -1,8 +1,0 @@
-<snippet>
-	<content><![CDATA[
-  &lt;${0:$TM_SELECTED_TEXT}&gt;
-]]></content>
-	<tabTrigger>angle</tabTrigger>
-	<scope>text.html.markdown</scope>
-	<description>wraps current selection with angle brackets for markdown</description>
-</snippet>

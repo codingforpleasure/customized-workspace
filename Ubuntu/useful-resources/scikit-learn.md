@@ -41,4 +41,7 @@ Linear models (LinReg, LogReg, Lasso, Ridged, etc)
 ### KNN (K Nearest Neighbours)
 ### Support Vector machine
 
+## Binarizing label features
 
+There are another way to work with categorical variables.
+Instead of dealng with categorical variables use OneHotEncode, we might use LabelBinarizer.

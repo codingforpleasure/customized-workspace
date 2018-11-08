@@ -20,6 +20,7 @@ Checks if all dependencies are satisfied| **pipenv check**
 Initialize a Python 2 virtual environment | **pipenv `--`two**
 Initialize a Python 3 virtual environment | **pipenv `--`three**
 Print a pretty graph of all your installed dependencies | **pipenv graph**
+Upgrade pipenv | **pip install `--`upgrade pipenv**
 
 It will automatically create a virtual env for this project,
 and after setting things up:
@@ -31,3 +32,8 @@ and after setting things up:
 If you are using pycharm (2018), it's supports pipenv right out of the box,
 BUT it's more recommended to install your packages from the shell with pipenv,
 since I have noticed sometimes Pycharm fails.
+
+It is recommended to update pipenv for once in a while:
+```bash
+pip install --upgrade pipenv
+```
