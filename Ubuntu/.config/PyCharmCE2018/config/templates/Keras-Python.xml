@@ -1,0 +1,17 @@
+<templateSet group="Keras-Python">
+  <template name="gc-keras-add-layer" value="model = $MODEL_TYPE$ # The Sequential model is a linear stack of layers&#10;model.add(Conv2D(20, (5, 5), padding=&quot;same&quot;, input_shape=($MODEL_HEIGHT$, $MODEL_WIDTH$, 1), activation=&quot;relu&quot;))" description="Adding a layer into  the neural networks" toReformat="false" toShortenFQNames="true">
+    <variable name="MODEL_TYPE" expression="" defaultValue="&quot;Sequential()&quot;" alwaysStopAt="true" />
+    <variable name="MODEL_HEIGHT" expression="" defaultValue="&quot;MODEL_SHAPE[0]&quot;" alwaysStopAt="true" />
+    <variable name="MODEL_WIDTH" expression="" defaultValue="&quot;MODEL_SHAPE[1]&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="gc-keras-net-type-dense" value="# The net is Dense, meaning that each neuron in a layer is connected to&#10;# all neurons located in the previous layer and to all the neurons in the following layer.&#10;$NUM_OF_FEATURES$=8 &#10;$NUM_OF_NEURONS$ = 12&#10;Dense(, input_dim=$NUM_OF_FEATURES$, kernel_initializer='random_uniform')" description="Dense type layer" toReformat="false" toShortenFQNames="true">
+    <variable name="NUM_OF_FEATURES" expression="" defaultValue="&quot;n_features&quot;" alwaysStopAt="true" />
+    <variable name="NUM_OF_NEURONS" expression="" defaultValue="&quot;n_neurons&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+</templateSet>

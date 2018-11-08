@@ -1,0 +1,10 @@
+<templateSet group="Sklearn-Python">
+  <template name="gc-sci-kit-learn-train-test-split" value="# Create a training-test split&#10;(X_train, X_test, Y_train, Y_test) = train_test_split($DATA$, $LABELS$, test_size=$SIZE$, random_state=0)" description="grdg" toReformat="false" toShortenFQNames="true">
+    <variable name="DATA" expression="" defaultValue="&quot;data&quot;" alwaysStopAt="true" />
+    <variable name="LABELS" expression="" defaultValue="&quot;labels&quot;" alwaysStopAt="true" />
+    <variable name="SIZE" expression="" defaultValue="&quot;0.25&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+</templateSet>
