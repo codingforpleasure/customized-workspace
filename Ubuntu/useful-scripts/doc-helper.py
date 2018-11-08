@@ -18,6 +18,9 @@ if __name__ == '__main__':
                 'dirname': 'not-found.html',
                 'du': 'not-found.html',
                 'echo': 'echo.html',
+                'elasticsearch' : 'es.html',
+                'es' : 'es.html',
+                'elastic-search' : 'es.html',
                 'exec' : 'not-found.html',
                 'exit': 'not-found.html',
                 'feh': 'feh.html',
@@ -47,12 +50,14 @@ if __name__ == '__main__':
                 'split': 'not-found.html',
                 'tee': 'not-found.html',
                 'top': 'not-found.html',
+                'tmux': 'tmux.html',
                 'tr': 'tr.html',
                 'uniq': 'not-found.html',
                 'wget': 'wget.html',
                 'xargs': 'xargs.html',
                 'yes': 'not-found.html'
                 }
+
 
     if len(sys.argv) > 1:
         topic_name = str(sys.argv[1]).lower()
