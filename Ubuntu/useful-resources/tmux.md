@@ -11,7 +11,7 @@
 <p align="center">
   <img src="images/tmux.png" width="256" title="Some tmux love!">
 </p>
-_The commands and hotkeys were configured by me, i'm using tmuxinator (similiar functionality is given by tmuxp)_
+*The commands and hotkeys were configured by me, i'm using tmuxinator (similiar functionality is given by tmuxp)*
 
 
 ## Get familiar with the hotkeys:
