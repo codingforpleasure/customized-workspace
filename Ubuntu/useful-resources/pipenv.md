@@ -9,6 +9,7 @@ $ sudo pip install pipenv
 Description | command
 -------------|-------------
 Install a package|  **pipenv install** &lt;package-name&gt;
+Install packages in case you have only `requirements.txt` file available | **pipenv install -r path/to/requirements.txt**
 Uninstall a package|  **pipenv uninstall** &lt;package-name&gt;
 Generate a lockfile | **pipenv lock**
 Run a given command from the virtualenv, with any arguments forwarded|   **pipenv run python** manage.py runserver
@@ -21,6 +22,7 @@ Initialize a Python 2 virtual environment | **pipenv `--`two**
 Initialize a Python 3 virtual environment | **pipenv `--`three**
 Print a pretty graph of all your installed dependencies | **pipenv graph**
 Upgrade pipenv | **pip install `--`upgrade pipenv**
+Install
 
 It will automatically create a virtual env for this project,
 and after setting things up:
