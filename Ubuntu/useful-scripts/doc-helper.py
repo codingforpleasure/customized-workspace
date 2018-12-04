@@ -14,7 +14,7 @@ if __name__ == '__main__':
                 'curl': 'not-found.html',
                 'cut': 'not-found.html',
                 'date': 'not-found.html',
-                'dd' : 'not-found.html',
+                'dd' : 'dd.html',
                 'dirname': 'not-found.html',
                 'du': 'not-found.html',
                 'echo': 'echo.html',
@@ -29,13 +29,14 @@ if __name__ == '__main__':
                 'json' : 'json.html',
                 'lsof': 'not-found.html',
                 'matplotlib': 'matplotlib.html',
+                'mfks':'mfks.html',
                 'nlp' : 'nlp.html',
                 'nohup': 'not-found.html',
                 'numpy':'numpy.html',
                 'opencv': 'opencv.html',
                 'pandas': 'pandas.html',
                 'pandoc': 'not-found.html',
-                'parallel': 'parallel',
+                'parallel': 'parallel.html',
                 'paste': 'not-found.html',
                 'pipenv' : 'pipenv.html',
                 'printf': 'printf.html',
@@ -45,18 +46,19 @@ if __name__ == '__main__':
                 'sed': 'sed.html',
                 'seq': 'not-found.html',
                 'service' : 'service.html',
-                'sort' : 'not-found.html',
                 'sort': 'sort.html',
                 'split': 'not-found.html',
-                'tee': 'not-found.html',
+                'tee': 'tee.html',
                 'top': 'not-found.html',
                 'tmux': 'tmux.html',
                 'tr': 'tr.html',
                 'uniq': 'not-found.html',
                 'wget': 'wget.html',
                 'xargs': 'xargs.html',
+                'pdb' : 'python-debugger.html',
                 'yes': 'not-found.html'
                 }
+
 
 
     if len(sys.argv) > 1:
