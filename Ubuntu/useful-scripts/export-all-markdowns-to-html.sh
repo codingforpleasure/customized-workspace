@@ -24,7 +24,7 @@ colorful_echo()
 
 
 if [[ ! -e "$GRIP" ]]; then
-	colorful_echo red "grip package is not installed on youe system."
+	colorful_echo red "grip package is not installed on your system."
 	exit 1
 else
 	colorful_echo purple "Exporting files from markdown to html"
@@ -42,5 +42,17 @@ do
 	FILENAME=$(/usr/bin/basename ${MARKDOWN_FILENAME_PATH})
 	OUTPUT_FILENAME=${FILENAME/md/html}
 	OUTPUT_FULL_PATH=${OUTPUT_DIR}/${OUTPUT_FILENAME}
+
+	if [ -e "$OUTPUT_FULL_PATH" ]
+	then
+		# html files already exists, check timestamp (nt means: `newer than`)
+		if [ "$OUTPUT_FULL_PATH" -nt "$MARKDOWN_FILENAME_PATH" ]
+		then
+			# no need to export a newer version
+			# echo "Skipping file"
+			continue
+		fi
+	fi
+	# echo "exporting"
 	${GRIP} ${MARKDOWN_FILENAME_PATH} --export ${OUTPUT_FULL_PATH}
 done
