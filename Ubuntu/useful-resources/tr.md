@@ -1,4 +1,7 @@
 ## **tr (translate or delete characters)**
+
+`Important remark`: tr substitutes individual characters, not strings (if strings is the case please use sed)
+
 ### Example #1: maps character `b` to character `d`:
 ```bash
  > echo big | tr b d
