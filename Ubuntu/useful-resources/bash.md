@@ -23,8 +23,9 @@ Table of Contents
          * [Using Array Variables](#using-array-variables)
       * [<em><strong>Operations on files</strong></em>](#operations-on-files)
          * [Testing for File Characteristics](#testing-for-file-characteristics)
-         * [Finding All Your MP3 Files](#finding-all-your-mp3-files)
+         * [Finding All Your MP3 Files and move it to a specific folder](#finding-all-your-mp3-files-and-move-it-to-a-specific-folder)
          * [Saving or Grouping Output from Several Commands](#saving-or-grouping-output-from-several-commands)
+         * [Compare the timestamp of two files, find the newer (latest version).](#compare-the-timestamp-of-two-files-find-the-newer-latest-version)
       * [<em><strong>Useful snippets for daily-work</strong></em>](#useful-snippets-for-daily-work)
          * [Running All Scripts in a Directory](#running-all-scripts-in-a-directory)
          * [Setting Default Values for arguments](#setting-default-values-for-arguments)
@@ -32,7 +33,7 @@ Table of Contents
          * [Reusing Code with Includes and Sourcing](#reusing-code-with-includes-and-sourcing)
          * [Brace-Expansion](#brace-expansion)
 
-<!-- Added by: gil_diy, at: 2018-08-10T14:52+03:00 -->
+<!-- Added by: gil_diy, at: 2018-12-05T15:28+02:00 -->
 
 <!--te-->
 
@@ -338,7 +339,7 @@ else
 fi
 ```
 
-### Finding All Your MP3 Files
+### Finding All Your MP3 Files and move it to a specific folder
 ```bash
 find . -name '*.mp3' -print -exec mv '{}' ~/songs \;
 ```
@@ -369,6 +370,13 @@ all_packages_names=$( adb shell pm list packages codingforpleasure | awk -F: '{ 
 
 ```bash
 num_rows=$( echo "$all_packages_names" | wc -l )
+```
+
+### Compare the timestamp of two files, find the newer (latest version).
+```bash
+FILE1='/home/gil_diy/playground_for_bash/version1.txt'
+FILE2='/home/gil_diy/playground_for_bash/version2.txt'
+[ $FILE1 -nt $FILE2 ] && echo "FILE1 is newer then FILE2"
 ```
 
 <br/>
