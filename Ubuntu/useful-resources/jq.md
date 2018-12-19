@@ -1,5 +1,5 @@
 <!--ts-->
-   * [json and jq](#json-and-jq)
+   * [jq (json processor)](#jq-json-processor)
       * [json short intro](#json-short-intro)
       * [jq ( Command-line JSON processor)](#jq--command-line-json-processor)
          * [<strong>Collection of jq tips</strong>:](#collection-of-jq-tips)
@@ -8,20 +8,24 @@
             * [Useful Tip #3: Get nested property value](#useful-tip-3-get-nested-property-value)
             * [Useful Tip #4: Flatting](#useful-tip-4-flatting)
             * [Useful Tip #5: Piping in jq itself](#useful-tip-5-piping-in-jq-itself)
-            * [Useful Tip #6: Check for field existence:](#useful-tip-6-check-for-field-existence)
+            * [Useful Tip #6: Check for field value existence:](#useful-tip-6-check-for-field-value-existence)
             * [Useful Tip #7: Map on list of elements (Apply function on each element)](#useful-tip-7-map-on-list-of-elements-apply-function-on-each-element)
             * [Useful Tip #8: Count number of elements in single JSON String](#useful-tip-8-count-number-of-elements-in-single-json-string)
             * [Useful Tip #9: Counting Array Elements in single JSON String](#useful-tip-9-counting-array-elements-in-single-json-string)
             * [Useful Tip #10: Counting Array Elements from File](#useful-tip-10-counting-array-elements-from-file)
             * [Useful Tip #11: Map a dict of elements (Apply function on each element)](#useful-tip-11-map-a-dict-of-elements-apply-function-on-each-element)
+         * [Set operations](#set-operations)
+            * [Union operation](#union-operation)
+            * [Intersection operation](#intersection-operation)
+            * [Subtract operation](#subtract-operation)
          * [<strong>Avoid common pitfalls:</strong>](#avoid-common-pitfalls)
             * [Useful Tip for pitfall #1: use single quotes](#useful-tip-for-pitfall-1-use-single-quotes)
          * [<strong>Great resources on the web</strong>](#great-resources-on-the-web)
 
-<!-- Added by: gil_diy, at: 2018-12-11T07:54+02:00 -->
+<!-- Added by: gil_diy, at: 2018-12-19T23:41+02:00 -->
 
 <!--te-->
-# json and jq
+# jq (json processor)
 
 ## json short intro
 JSON is a language-independent data format. It was derived from JavaScript, but as of 2017 many programming languages include code to generate and parse JSON-format data. The official Internet media type for JSON is application/json. JSON filenames use the extension .json
@@ -93,7 +97,7 @@ output:
 ```
 
 
-#### Useful Tip #6: Check for field existence:
+#### Useful Tip #6: Check for field value existence:
 
 ```bash
 echo '{"boy": "Ed"}' | jq '.girl == null'
@@ -139,6 +143,40 @@ output:
 }
 ```
 
+
+### Set operations
+
+
+#### Union operation
+
+```bash
+echo '{"group_a":["A","B","C","ABC"],"group_b":["B","D"]}' | jq .group_a+.group_b | jq 'unique'
+```
+
+#### Intersection operation
+
+
+```bash
+res_addition=`echo '{"group_a":["A","B","C","ABC"],"group_b":["B","D"]}' | jq .group_a+.group_b `
+res_union=`echo '{"group_a":["A","B","C","ABC"],"group_b":["B","D"]}' | jq .group_a+.group_b | jq 'unique' `
+
+echo '{"all":["A","B","C","ABC"],"some":["B","C"]}' | jq .all-.some
+```
+
+
+if the groups are unique use:
+```bash
+jq -cn '["a","b","e","c"] as $A | ["g","a","t","c"] as $B | $A - ($A - $B)'
+```
+
+```bash
+echo '{ "group_a" : ["a","b","e","c"], "group_b" : ["g","a","t","c"] }' | jq -c '.group_a - (.group_a - .group_b)'
+```
+#### Subtract operation
+```bash
+echo '{"all":["A","B","C","ABC"],"some":["B","C"]}' | jq .all-.some
+```
+pay attention: avoid spaces
 
 ### **Avoid common pitfalls:**
 
