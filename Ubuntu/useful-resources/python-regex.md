@@ -37,6 +37,11 @@ else:
 	print("No match!!")
 ```
 
+**Attnetion:** There are few more useful Python functions: findall, search
+
+(https://howchoo.com/g/zdvmogrlngz/python-regexes-findall-search-and-match)
+
+
 ## flags
 
 Flags | Description
