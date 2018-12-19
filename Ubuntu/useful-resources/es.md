@@ -480,3 +480,10 @@ Each bucket associated with a key.
 
 4. Pipeline (Aggregations that work on the output of other aggregations)
 
+## Elasticsearch plugins
+
+### Installing an Elasticsearch plugin:
+```bash
+sudo ./elasticsearch-plugin install file:///home/gil_diy/Downloads/elastic-search-hebrew
+/es_ik/elasticsearch-analysis-ik-6.4.2.zip
+```

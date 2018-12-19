@@ -23,6 +23,12 @@ es = Elasticsearch()
 ```
 ## Basic operations:
 
+### list all indexes in a cluster
+```python
+for index in es.indices.get('*'):
+  print(index)
+```
+
 ### Indexing single document
 ```python
 res = es.index(index="test-index", doc_type='tweet', id=1, body=doc)
