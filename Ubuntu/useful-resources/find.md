@@ -1,14 +1,24 @@
 <!--ts-->
-  * [Examples](#examples)
-     * [Find all txt files:](#find-all-txt-files)
-     * [Ignoring case sensitive (-iname):](#ignoring-case-sensitive--iname)
-     * [Find files based on their permissions:](#find-files-based-on-their-permissions)
-     * [find file with permission 777 and change the permission to 755](#find-file-with-permission-777-and-change-the-permission-to-755)
-     * [find files between those boundries 1M &lt; size &lt; 2M](#find-files-between-those-boundries-1m--size--2m)
-     * [find to limit the depth of subdirectories depth](#find-to-limit-the-depth-of-subdirectories-depth)
-     * [find "Gil" text in all the text files:](#find-gil-text-in-all-the-text-files)
+   * [find command](#find-command)
+      * [Examples](#examples)
+         * [Find all txt files:](#find-all-txt-files)
+         * [Ignoring case sensitive (-iname):](#ignoring-case-sensitive--iname)
+         * [Find files based on their permissions:](#find-files-based-on-their-permissions)
+         * [find file with permission 777 and change the permission to 755](#find-file-with-permission-777-and-change-the-permission-to-755)
+         * [find and remove a single file](#find-and-remove-a-single-file)
+         * [find all hidden files:](#find-all-hidden-files)
+         * [find all the files that were MODIFIED 10 days modified back:](#find-all-the-files-that-were-modified-10-days-modified-back)
+         * [find all the files that were ACCESSED 10 days modified back:](#find-all-the-files-that-were-accessed-10-days-modified-back)
+         * [find all the files modified in the last 1 minute](#find-all-the-files-modified-in-the-last-1-minute)
+         * [Find all the files modified in the last 1 minute and avoid checking /proc directory and /etc](#find-all-the-files-modified-in-the-last-1-minute-and-avoid-checking-proc-directory-and-etc)
+         * [Find files between those boundries 1M &lt; size &lt; 2M](#find-files-between-those-boundries-1m--size--2m)
+         * [Find to limit the depth of subdirectories depth](#find-to-limit-the-depth-of-subdirectories-depth)
+         * [Find "Gil" text in all the text files:](#find-gil-text-in-all-the-text-files)
+   * [<a href="https://stackoverflow.com/questions/14132210/use-find-command-but-exclude-files-in-two-directories" rel="nofollow">https://stackoverflow.com/questions/14132210/use-find-command-but-exclude-files-in-two-directories</a>](#httpsstackoverflowcomquestions14132210use-find-command-but-exclude-files-in-two-directories)
+         * [Find all empty files:](#find-all-empty-files)
+         * [Find all empty directories:](#find-all-empty-directories)
 
-<!-- Added by: gil_diy, at: 2018-09-02T17:08+03:00 -->
+<!-- Added by: gil_diy, at: 2018-12-19T23:44+02:00 -->
 
 <!--te-->
 
@@ -40,6 +50,13 @@ find  . -type f -perm 0777 -print0 | xrags -0 chmod 755
 ```bash
 find . -type f -name "abc.txt" -exec rm -f {}\;
 ```
+
+or
+
+```bash
+find . -type f -name "abc.txt" -delete
+```
+
 ### find all hidden files:
 ```bash
 find / -type -f -name ".*"
@@ -65,11 +82,11 @@ find / -type f  -path "/proc" -o -path /etc -prune -o -cmin -1
 ```bash
 find / -size +1M -size -2M
 ```
-### find to limit the depth of subdirectories depth
+### Find to limit the depth of subdirectories depth
 ```bash
 find / -maxdepth 3 -name "*log"
 ```
-### find "Gil" text in all the text files:
+### Find "Gil" text in all the text files:
 ```bash
 find . -name "*.txt" -exec grep -i "GIL" {} \;
 ```
@@ -84,3 +101,13 @@ find . -cmin  <time>
 find . -cmin -60 -type f -not -path "./junk*"
 
 find . -cmin -60 -type f ! -path "*/junk2/*" ! -path "*/blabla/*"
+
+
+### Find all empty files:
+```bash
+find /tmp -type f -empty
+```
+### Find all empty directories:
+```bash
+find /tmp -type d -empty
+```
