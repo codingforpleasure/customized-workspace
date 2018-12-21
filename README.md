@@ -32,6 +32,7 @@ The things you need to install are:
 - tdlr - Simplified and community-driven man pages [Link](https://github.com/tldr-pages/tldr)
 - recoll - indexer for files (I mostly use it for searching terms in multiple pdf-books)
 - mycli - MySQL client with AutoCompletion and Syntax Highlighting [Link](https://github.com/dbcli/myclip)
+- ptpython - python shell with AutoCompletion and Syntax Highlighting [Link](https://github.com/prompt-toolkit/ptpython)
 - Great resource for new completion scripts in zsh [Link](https://github.com/zsh-users/zsh-completions)
 
 Soon I'll be posting a script for doing all those installs in a snap of a finger.
