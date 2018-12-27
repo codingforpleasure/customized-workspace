@@ -16,7 +16,7 @@
 
 ## Get familiar with the hotkeys:
 
-- Command + a = PREFIX
+- Ctrl + a = PREFIX
 
 Command description | Hotkey
 ------------ | -------------
@@ -26,13 +26,14 @@ Creates vertical split | PREFIX + \|
 Creates horizontal split | PREFIX + -
 Run command in tmux ( **enter command mode** ) | PREFIX + \:
 Move to next window | PREFIX + n
-Move to the previous window | PREFIX + l
+Move to the previous window | PREFIX + p
 Navigate between panes | PREFIX + &lt;arrows&gt;
 Jump to the specific window number | PREFIX + &lt;window number&gt;
 Create new window | PREFIX + c (**c**reate window)
 Close window | PREFIX + &
 Rename window name | PREFIX + ,
 Choose a session from a list | PREFIX + s
+
 
 
 **Copying and pasting:**
@@ -53,4 +54,9 @@ Resize the active pane strech it either Down/Up/Left/Right | resize-pane -D/U/L/
 Lists all current opened windows with their panes| list-windows
 
 * **Attention:** make sure you're **in command mode** .
+
+
+
+---------------------------------------
+* **On mac just switch the Ctrl with Cmd**
 
