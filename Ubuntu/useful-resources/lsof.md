@@ -1,6 +1,17 @@
 <!--ts-->
 <!--te-->
 
+# lsof
+
 lsof is a command meaning "list open files", which is used in many Unix-like systems to report a list of all open files and the processes that opened them
 
-should add in the future a well documented description.
+
+
+Description | Command
+------------|-----
+ Find out process has been using this file?  |  lsof \<path-to-file>
+ Find out the processes which are using  specific so (shared object) file  |  lsof \<path-to-so-file>
+ Get all files a specific process has been using |  lsof -p \<pid>
+ Get a list of all shared libraries files a specific process has been using | lsof -p <pid>  \|  grep \.so
+ Get the log files which a specific process using | lsof -p <pid>  \|  grep log
+ Get all processes which are listening on port 80 (linux sockets) | lsof -i 80
