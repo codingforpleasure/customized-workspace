@@ -14,6 +14,8 @@ Table of Contents
          * [Debugging on part of a shell script](#debugging-on-part-of-a-shell-script)
          * [You need to know how many parameters the script was invoked with.](#you-need-to-know-how-many-parameters-the-script-was-invoked-with)
       * [<em><strong>Control Flow statements</strong></em>](#control-flow-statements)
+         * [If condition in bash](#if-condition-in-bash)
+         * [Logical operators](#logical-operators)
          * [Ternary operator (short form of if condition)](#ternary-operator-short-form-of-if-condition)
          * [Switch case in bash](#switch-case-in-bash)
          * [Looping Over Arguments Passed to a Script](#looping-over-arguments-passed-to-a-script)
@@ -33,7 +35,7 @@ Table of Contents
          * [Reusing Code with Includes and Sourcing](#reusing-code-with-includes-and-sourcing)
          * [Brace-Expansion](#brace-expansion)
 
-<!-- Added by: gil_diy, at: 2018-12-05T15:28+02:00 -->
+<!-- Added by: gil_diy, at: 2018-12-25T04:31+02:00 -->
 
 <!--te-->
 
@@ -166,6 +168,20 @@ or this too:
 <br/>
 
 ## *__Control Flow statements__*
+
+### If condition in bash
+```bash
+if [ -e "1.json" ]
+then
+	echo "1.json exist"
+fi
+```
+
+### Logical operators
+```bash
+if [ "$varA" = 1 ] && { [ "$varB" = "t1" ] || [ "$varC" = "t2" ]; }; then
+```
+
 
 ### Ternary operator (short form of if condition)
 ```bash
