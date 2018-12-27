@@ -14,11 +14,12 @@
          * [Find files between those boundries 1M &lt; size &lt; 2M](#find-files-between-those-boundries-1m--size--2m)
          * [Find to limit the depth of subdirectories depth](#find-to-limit-the-depth-of-subdirectories-depth)
          * [Find "Gil" text in all the text files:](#find-gil-text-in-all-the-text-files)
-   * [<a href="https://stackoverflow.com/questions/14132210/use-find-command-but-exclude-files-in-two-directories" rel="nofollow">https://stackoverflow.com/questions/14132210/use-find-command-but-exclude-files-in-two-directories</a>](#httpsstackoverflowcomquestions14132210use-find-command-but-exclude-files-in-two-directories)
          * [Find all empty files:](#find-all-empty-files)
-         * [Find all empty directories:](#find-all-empty-directories)
+         * [Find all only leaf directories:](#find-all-only-leaf-directories)
+         * [Find all :](#find-all-)
+   * [<a href="https://stackoverflow.com/questions/14132210/use-find-command-but-exclude-files-in-two-directories" rel="nofollow">https://stackoverflow.com/questions/14132210/use-find-command-but-exclude-files-in-two-directories</a>](#httpsstackoverflowcomquestions14132210use-find-command-but-exclude-files-in-two-directories)
 
-<!-- Added by: gil_diy, at: 2018-12-19T23:44+02:00 -->
+<!-- Added by: gil_diy, at: 2018-12-23T16:32+02:00 -->
 
 <!--te-->
 
@@ -96,10 +97,7 @@ find . -cmin +<time>
 find . -cmin -<time>
 find . -cmin  <time>
 
-# https://stackoverflow.com/questions/14132210/use-find-command-but-exclude-files-in-two-directories
-
 find . -cmin -60 -type f -not -path "./junk*"
-
 find . -cmin -60 -type f ! -path "*/junk2/*" ! -path "*/blabla/*"
 
 
@@ -107,7 +105,14 @@ find . -cmin -60 -type f ! -path "*/junk2/*" ! -path "*/blabla/*"
 ```bash
 find /tmp -type f -empty
 ```
-### Find all empty directories:
+
+### Find all only leaf directories:
 ```bash
-find /tmp -type d -empty
+find dir -type d -links 2
 ```
+
+
+### Find all :
+
+
+# https://stackoverflow.com/questions/14132210/use-find-command-but-exclude-files-in-two-directories
