@@ -16,8 +16,9 @@
             * [Example #9: Substitute a specific word not case sensitive globally (like Lions with Zebras):](#example-9-substitute-a-specific-word-not-case-sensitive-globally-like-lions-with-zebras)
             * [Example #10: Substitute a specific word only on lines 3-5:](#example-10-substitute-a-specific-word-only-on-lines-3-5)
             * [Example #11: Append a spcific string to each line in a file:](#example-11-append-a-spcific-string-to-each-line-in-a-file)
+            * [Example #12: Remove empty lines in a file](#example-12-remove-empty-lines-in-a-file)
 
-<!-- Added by: gil_diy, at: 2018-12-19T23:49+02:00 -->
+<!-- Added by: gil_diy, at: 2018-12-31T18:39+02:00 -->
 
 <!--te-->
 
@@ -117,6 +118,7 @@ $ cat data.txt | sed -r 's/Lions/Zebras/gi'
 
 **i stands for insensitive-case**
 
+
 #### Example #10: Substitute a specific word only on lines 3-5:
 
 ```bash
@@ -132,5 +134,11 @@ $ sed -e 's/$/my specific string/' -i my_file.txt
 **Reminder: With regular expressions end of the line is symboled by `$` (dollar sign) and the beginning of line by `^` (caret sign)   .**
 
 
-**Use -i to edit files in-place instead of printing
-to standard output**
+**Use -i to edit files in-place instead of printing to standard output**
+
+#### Example #12: Remove empty lines in a file
+
+
+```bash
+$ cat data.txt | sed '/^[[:space:]]*$/d'
+```
