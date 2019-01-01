@@ -1,6 +1,6 @@
 <snippet>
 	<content><![CDATA[
-<p align="center">
+<p align="center"> <!-- style="width:400px;" -->
   <img src="${1:images/labeling_example.png}" title="${2:tool tip here}">
 </p>
 ]]></content>
