@@ -4,5 +4,5 @@
 ]]></content>
 	<tabTrigger>url</tabTrigger>
 	<scope>text.html.markdown</scope>
-	<description>wraps current selection with angle brackets for markdown</description>
+	<description>Adds links to external website</description>
 </snippet>

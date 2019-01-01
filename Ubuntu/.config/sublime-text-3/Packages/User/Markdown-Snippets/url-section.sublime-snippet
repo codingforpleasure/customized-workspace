@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+[Link](#snippets)
+]]></content>
+	<tabTrigger>url2</tabTrigger>
+	<scope>text.html.markdown</scope>
+	<description>link to a specific section on your the current document</description>
+</snippet>
