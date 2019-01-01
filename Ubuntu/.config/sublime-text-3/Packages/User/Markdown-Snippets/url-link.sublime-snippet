@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+[Link](http://www.my-website.com)
+]]></content>
+	<tabTrigger>url</tabTrigger>
+	<scope>text.html.markdown</scope>
+	<description>wraps current selection with angle brackets for markdown</description>
+</snippet>
