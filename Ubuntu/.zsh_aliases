@@ -1,15 +1,31 @@
 echo ".zsh_aliases was invoked"
 
+# A great extension for colorizing tools
+# should install download the "Generic Colouriser" installer
+# taken from here: http://korpus.juls.savba.sk/~garabik/software/grc/
+
+if [ -e /usr/bin/grc ]; then
+  alias netstat='grc netstat'
+  alias ping='grc ping'
+  alias tail='grc tail'
+  alias ps='grc ps aux'
+else
+  echo -e "\n${BWhite}For colorizing linux tools (ping/netstat/tail/ps) ${NC},"  \
+  "\n${BRed}you should install \"grc\" by entering:\"apt-get install grc\" ${NC}\n"
+fi
+
 alias a='subl ~/.zshrc'
 alias r=rotate_image                # Rotate image
 alias s=source_me
 alias c=count_lines
 alias i=get_info                    # Get size and dpi of image
 alias ag='ag --hidden'              # Search in hidden directories too (assuming .agignore was respected).
-
+alias {python-cli,py-cli}=ptpython
 alias ll="ls -la --color \
                  --human-readable \
-                 --group-directories-first" # list files nicely
+                 --group-directories-first" \
+                 --sort time \
+                 --reverse  # list files nicely
 
 alias watch="watch --interval 0.5 \
 					--color "
@@ -23,10 +39,15 @@ alias pdfgrep="pdfgrep  --recursive \
                         --page-number \
                         --include \"*.pdf\" "
 
+alias tks='tmux kill-session -t '
+alias tas='tmux attach-session -t '
+alias tls='tmux list-session'
+
 alias lsblk='lsblk --paths --fs --all'
 alias dd='dd status=progress '
 alias run="pipenv run python "      # Executing python script faster with pipenv
 alias rm="rm -i"				            # Prompt before permanently remove files
+alias rme="ls -la | grep -v $1 | xargs rm " # Remove all files Except a single file in current directory.
 alias cp="cp -i"               			# Prompt before overwrite
 alias cath=cat-hebrew               # Cat hebrew text files
 alias scp="scp -r"                  # Secure copy with recursively copy so it means entire directories.
@@ -47,8 +68,10 @@ alias locate="sudo updatedb; locate --ignore-case "
 alias locateh=locate-here           # locate here under the current folder
 alias watchl='watch --color ls -la --color'	# list and watch files and folders with color
 
-alias sublime="subl"				        # Execute sublime editor
+alias {sublime,sl}="subl"				        # Execute sublime editor
 alias {pycharm,charm}="nohup pycharm.sh  > /dev/null &"
+alias {datagrip,dg}="nohup datagrip.sh  > /dev/null &"
+alias {clion,lion}="nohup clion.sh  > /dev/null &"
 alias webstorm="nohup webstorm  > /dev/null &"
 alias idea="nohup idea.sh  > /dev/null &"
 alias firefox="firefox --ProfileManager &" # For setting my current working profile
@@ -70,9 +93,9 @@ alias du='du --summarize --human-readable' # Disk space usage nicer output
 alias display='feh -i' #impressive_display
 
 alias rsync="rsync --verbose \
-              --progress \
-              --human-readable \
-              --archive"
+	              --progress \
+	              --human-readable \
+	              --archive"
 
 alias toc-markdown-generate='gh-md-toc --insert '  # Generates Table-Of-Content for a given markdown
 
@@ -84,8 +107,8 @@ alias doc-ls=documentation-list
 
 ### some git aliases ###
 alias cdg='cd $(git rev-parse --show-toplevel)' # jump to repo's root directory (where the .git resides)
-alias hookg='cd $(git rev-parse --show-toplevel)/.git/hooks'
-alias ghook='hookg'
+alias {hookg,ghook}='cd $(git rev-parse --show-toplevel)/.git/hooks'
+alias git-diff='git difftool -Y '
 alias ga="git add --interactive"		# Add modified contents in the working tree interactively to the index
 alias gadd="git add --interactive"    # Add modified contents in the working tree interactively to the index
 alias gaa='git add --all'
@@ -117,3 +140,10 @@ alias myscripts='cd ~/my_useful_scripts'
 alias gitrep='cd ~/myGitRepositories'   # Go to my repos collection
 alias snippe{t,s}='cd ~/.config/sublime-text-3/Packages/User'
 alias rsnippet='cd ~/.R/snippets'
+
+
+if [ -f ~/.zsh_books_aliases ]; then
+    source ~/.zsh_books_aliases
+else
+    print ".zsh_books_aliases was not found."
+fi

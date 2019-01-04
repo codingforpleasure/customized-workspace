@@ -14,6 +14,10 @@ export PATH=$PATH:$HOME/my_useful_scripts
 # Adding PyCharm to my path
 export PATH=$PATH:/opt/pycharm-community-2018.2.4/bin
 
+# Adding CLion to my path
+export PATH=$PATH:/opt/clion-2018.3.2/bin
+
+
 # Adding inteliji-idea, Datagrip and flutter
 export PATH=$PATH:/opt/idea-IC-182.4129.33/bin/
 export PATH=$PATH:/opt/DataGrip-2018.2.4/bin/
@@ -23,10 +27,15 @@ export PATH=$PATH:~/flutter/bin/
 # export PATH="/home/gil_diy/anaconda3/bin:$PATH"
 
 # Adding my documentations to my path
-export DOC_MD_PATH="/home/gil_diy/myGitRepositories/customized-workspace/Ubuntu/useful-resources/"
+export DOC_MD_PATH=$HOME/myGitRepositories/customized-workspace/Ubuntu/useful-resources/
 
 # Path to your oh-my-zsh installation.
-export ZSH=/home/gil_diy/.oh-my-zsh
+export ZSH=$HOME/.oh-my-zsh
+
+
+# goodreads:
+export alias total_shelfs_4M=$HOME/PycharmProjects/get_info_from_goodreads/all_shelves_on_goodreads/01_raw_data
+
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -141,6 +150,7 @@ export SHELL='/usr/bin/zsh'
 # https://github.com/robbyrussell/oh-my-zsh/blob/master/lib/history.zsh
 HISTSIZE=50000
 SAVEHIST=10000
+
 # I would like the MAN pages to be colorful. so should export
 # enviroment variable make sure most is installed if not,
 # install it via:  apt-get install most.
@@ -150,20 +160,6 @@ if [ -e /usr/bin/most ]; then
 else
 	echo -e "\n${BWhite}For color manual pages, install \"most\" by entering: ${NC}"  \
   "\n${BRed}\"apt-get install most\" ${NC}\n"
-fi
-
-# A great extension for colorizing tools
-# should install download the "Generic Colouriser" installer
-# taken from here: http://korpus.juls.savba.sk/~garabik/software/grc/
-
-if [ -e /usr/bin/grc ]; then
-	alias netstat='grc netstat'
-	alias ping='grc ping'
-	alias tail='grc tail'
-	alias ps='grc ps aux'
-else
-	echo -e "\n${BWhite}For colorizing linux tools (ping/netstat/tail/ps) ${NC},"  \
-  "\n${BRed}you should install \"grc\" by entering:\"apt-get install grc\" ${NC}\n"
 fi
 
 # Download the appropriate completion file from here:
@@ -186,6 +182,12 @@ else
 fi
 
 
+if [ -d ~/.cargo ]; then
+  source $HOME/.cargo/env
+else
+  print "Cargo – Rust's build automation system was not found on your system."
+  print "Check if Rust installed on your system (rustc --version)."
+fi
 
 # Execute tmuxinator on startup
 #tmuxinator android-setup
