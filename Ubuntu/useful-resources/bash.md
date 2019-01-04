@@ -13,6 +13,12 @@ Table of Contents
          * [Debugging on the entire script](#debugging-on-the-entire-script)
          * [Debugging on part of a shell script](#debugging-on-part-of-a-shell-script)
          * [You need to know how many parameters the script was invoked with.](#you-need-to-know-how-many-parameters-the-script-was-invoked-with)
+      * [<em><strong>Array in bash</strong></em>](#array-in-bash)
+         * [Delclaring array](#delclaring-array)
+         * [Printing an array's contents](#printing-an-arrays-contents)
+         * [Referencing a specific cell](#referencing-a-specific-cell)
+         * [Casting string to array](#casting-string-to-array)
+         * [Getting number of elements in array](#getting-number-of-elements-in-array)
       * [<em><strong>Control Flow statements</strong></em>](#control-flow-statements)
          * [If condition in bash](#if-condition-in-bash)
          * [Logical operators](#logical-operators)
@@ -35,7 +41,7 @@ Table of Contents
          * [Reusing Code with Includes and Sourcing](#reusing-code-with-includes-and-sourcing)
          * [Brace-Expansion](#brace-expansion)
 
-<!-- Added by: gil_diy, at: 2018-12-25T04:31+02:00 -->
+<!-- Added by: gil_diy, at: 2019-01-04T16:25+02:00 -->
 
 <!--te-->
 
@@ -166,6 +172,38 @@ or this too:
 <br/>
 <br/>
 <br/>
+
+## *__Array in bash__*
+
+### Delclaring array
+
+```bash
+MY_ARRAY=(1983 1999 2018)
+```
+
+### Printing an array's contents
+
+```bash
+echo ${MY_ARRAY[*]}
+```
+
+### Referencing a specific cell
+
+```bash
+echo ${MY_ARRAY[1]}
+```
+**Attention:** index starts from one and not zero.
+
+### Casting string to array
+
+```bash
+INPUT='Happy Joy Accomplishment conquer'
+ARR=(${INPUT})
+```
+### Getting number of elements in array
+```bash
+ARRAY_LENGTH=${#MY_ARRAY[@]}
+```
 
 ## *__Control Flow statements__*
 
