@@ -1,4 +1,8 @@
+<p align="center"> <!-- style="width:400px;" -->
+  <img src="images/bash_logo.png" title="tool tip here">
+</p>
 
+<!-- <img src="images/zsh_logo.png" title="tool tip here"> -->
 Table of Contents
 =================
 
@@ -12,7 +16,7 @@ Table of Contents
          * [Seeing All Variable Values (Avoid echoing each one by hand)](#seeing-all-variable-values-avoid-echoing-each-one-by-hand)
          * [Debugging on the entire script](#debugging-on-the-entire-script)
          * [Debugging on part of a shell script](#debugging-on-part-of-a-shell-script)
-         * [You need to know how many parameters the script was invoked with.](#you-need-to-know-how-many-parameters-the-script-was-invoked-with)
+         * [You need to know how many arguments the script was invoked with.](#you-need-to-know-how-many-arguments-the-script-was-invoked-with)
       * [<em><strong>Array in bash</strong></em>](#array-in-bash)
          * [Delclaring array](#delclaring-array)
          * [Printing an array's contents](#printing-an-arrays-contents)
@@ -40,8 +44,9 @@ Table of Contents
          * [“Daemon-izing” Your Script](#daemon-izing-your-script)
          * [Reusing Code with Includes and Sourcing](#reusing-code-with-includes-and-sourcing)
          * [Brace-Expansion](#brace-expansion)
+      * [<em><strong>Great reference</strong></em>](#great-reference)
 
-<!-- Added by: gil_diy, at: 2019-01-04T16:25+02:00 -->
+<!-- Added by: gil_diy, at: 2019-01-05T15:23+02:00 -->
 
 <!--te-->
 
@@ -142,7 +147,9 @@ set +x			# stop debugging from here
 export PS4='+xtrace Line number:$LINENO:'
 ```
 
-### You need to know how many parameters the script was invoked with.
+### You need to know how many arguments the script was invoked with.
+
+`$# =  number of arguments`
 
 ```bash
 if (( $# < 3 ))
@@ -259,6 +266,17 @@ do
 done
 ```
 >**The $* refers to all the arguments supplied on the command line**
+
+short summary:
+
+syntax | result
+------------|-----
+ $* | $1 $2 $3 ... $\{N}
+ $@ | $1 $2 $3 ... $\{N}
+ "$*" | "$1c$2c$3c...c$\{N}"
+ "$@" | "$1" "$2" "$3" ... "$\{N}"
+
+
 
 ### Looping for a While
 
@@ -535,3 +553,8 @@ $ echo {{a..c},{1..3}}  # produces this: a b c 1 2 3
 ```bash
 $ echo {a..c},{1..3}    # produces this (Cartesian product): a,1 a,2 a,3 b,1 b,2 b,3 c,1 c,2 c,3
 ```
+## *__Great reference__*
+
+(1) [Bash-hackers](http://wiki.bash-hackers.org/start)
+
+(2) [Improve productivity with zsh](https://opensource.com/article/18/9/tips-productivity-zsh)
