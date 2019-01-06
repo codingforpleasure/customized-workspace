@@ -11,7 +11,9 @@ function get_info() {
 
 function source_me() {
    echo $fg_bold[yellow]"Sourcing ~\.zshrc"
-   source ~/.zshrc
+
+   # Sourcing all panes in all windows
+   tmux_send_keys_all
 }
 
 function count_lines() {
@@ -78,6 +80,17 @@ function ask_yes_or_no() {
         *)     echo "no" ;;
     esac
 }
+
+
+function tmux_send_keys_all() {
+  for _window in $(tmux list-windows -F '#I'); do
+    for _pane in $(tmux list-panes -t ${_window} -F '#P'); do
+      tmux send-keys -t ${_window}.${_pane} "source ~/.zshrc" Enter
+    done
+  done
+}
+
+
 
 #
 # TODO function description
