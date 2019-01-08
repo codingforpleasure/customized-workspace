@@ -69,11 +69,12 @@ alias locateh=locate-here           # locate here under the current folder
 alias watchl='watch --color ls -la --color'	# list and watch files and folders with color
 
 alias {sublime,sl}="subl"				        # Execute sublime editor
-alias {pycharm,charm}="nohup pycharm.sh  > /dev/null &"
-alias {datagrip,dg}="nohup datagrip.sh  > /dev/null &"
-alias {clion,lion}="nohup clion.sh  > /dev/null &"
-alias webstorm="nohup webstorm  > /dev/null &"
-alias idea="nohup idea.sh  > /dev/null &"
+alias gogogo='fork_without_block pycharm.sh'
+alias {pycharm,charm}='fork_without_block pycharm.sh'
+alias {datagrip,dg}='fork_without_block datagrip.sh'
+alias {clion,lion}='fork_without_block clion.sh'
+alias webstorm='fork_without_block webstorm'
+alias idea='fork_without_block idea.sh'
 alias firefox="firefox --ProfileManager &" # For setting my current working profile
 
 alias android="~/android-studio/bin/studio.sh &" # Execute Android-studio easily
@@ -142,8 +143,13 @@ alias snippe{t,s}='cd ~/.config/sublime-text-3/Packages/User'
 alias rsnippet='cd ~/.R/snippets'
 
 
+
+
 if [ -f ~/.zsh_books_aliases ]; then
     source ~/.zsh_books_aliases
 else
     print ".zsh_books_aliases was not found."
 fi
+
+# Aliases for frontend development
+alias vscode=code

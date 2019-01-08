@@ -91,6 +91,12 @@ function tmux_send_keys_all() {
 }
 
 
+function fork_without_block() {
+  # $1 is the application name
+  # $2 is the filename
+  nohup $1 $2  > /dev/null &
+}
+
 
 #
 # TODO function description
