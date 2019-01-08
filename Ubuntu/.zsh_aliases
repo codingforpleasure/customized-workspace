@@ -69,7 +69,6 @@ alias locateh=locate-here           # locate here under the current folder
 alias watchl='watch --color ls -la --color'	# list and watch files and folders with color
 
 alias {sublime,sl}="subl"				        # Execute sublime editor
-alias gogogo='fork_without_block pycharm.sh'
 alias {pycharm,charm}='fork_without_block pycharm.sh'
 alias {datagrip,dg}='fork_without_block datagrip.sh'
 alias {clion,lion}='fork_without_block clion.sh'
@@ -141,9 +140,6 @@ alias myscripts='cd ~/my_useful_scripts'
 alias gitrep='cd ~/myGitRepositories'   # Go to my repos collection
 alias snippe{t,s}='cd ~/.config/sublime-text-3/Packages/User'
 alias rsnippet='cd ~/.R/snippets'
-
-
-
 
 if [ -f ~/.zsh_books_aliases ]; then
     source ~/.zsh_books_aliases
