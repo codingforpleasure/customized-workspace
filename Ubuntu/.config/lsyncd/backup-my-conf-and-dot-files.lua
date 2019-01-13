@@ -123,3 +123,11 @@ sync {
     source  = homeDir .. "/.config/PyCharmCE2018/config/templates",
     target  = destDir .. "/.config/PyCharmCE2018/config/templates",
 }
+
+
+ -- 8) Bacing-up my vscode settings
+ sync {
+    default.direct,
+    source  = homeDir .. "/.config/Code/User/settings.json",
+    target  = destDir .. "/.config/Code/User/settings.json",
+}

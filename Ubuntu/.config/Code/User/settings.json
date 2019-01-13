@@ -1,0 +1,6 @@
+{
+  "editor.formatOnSave": true,
+  "window.zoomLevel": 1,
+  "prettier.printWidth": 80,
+  "prettier.requireConfig": true
+}
