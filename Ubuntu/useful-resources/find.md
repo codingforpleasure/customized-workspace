@@ -93,13 +93,14 @@ find . -name "*.txt" -exec grep -i "GIL" {} \;
 ```
 
 Simply specify whether you want the time to be greater, smaller, or equal to the time you want, using, respectively:
+```bash
 find . -cmin +<time>
 find . -cmin -<time>
 find . -cmin  <time>
 
 find . -cmin -60 -type f -not -path "./junk*"
 find . -cmin -60 -type f ! -path "*/junk2/*" ! -path "*/blabla/*"
-
+```
 
 ### Find all empty files:
 ```bash
@@ -110,6 +111,20 @@ find /tmp -type f -empty
 ```bash
 find dir -type d -links 2
 ```
+
+### Find all files named sample.txt which are larger then 4 Bytes:
+
+```bash
+find dir -name sample.txt -size +4c
+```
+
+ Symbol | Unit measurment
+------------|-----
+ c | For Bytes
+ k | For Kilobytes (units of 1024 Bytes)
+ M | For Megabytes
+ G | For Gigabytes
+
 
 
 ### Find all :
