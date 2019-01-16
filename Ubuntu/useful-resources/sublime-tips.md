@@ -1,12 +1,20 @@
 <!--ts-->
+   * [Tips for Sublime](#tips-for-sublime)
+      * [Authors](#authors)
+
+<!-- Added by: gil_diy, at: 2019-01-16T07:48+02:00 -->
+
 <!--te-->
 
 # Tips for Sublime
 
 Purpose | command example
 ------------ | -------------
+Multiediting | Ctrl + click on specific places with the mouse
 Get markdown options | Ctrl+shift+p
 Show console | ctrl+`
+for Uppercase | Ctrl+k+u
+for Lowercase | Ctrl+k+l
 
 
 For debugging enter into the sublime's console:
@@ -15,7 +23,7 @@ For disable debugging mode enter in the command:
 sublime.log_commands(False)
  All list of **packages** for **sublime** resides in:
 ```bash
-~/.config/sublime-text-3/Installed Packages
+ll ~/.config/sublime-text-3/Installed Packages
 ```
 
 
