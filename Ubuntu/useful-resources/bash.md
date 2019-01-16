@@ -553,6 +553,14 @@ $ echo {{a..c},{1..3}}  # produces this: a b c 1 2 3
 ```bash
 $ echo {a..c},{1..3}    # produces this (Cartesian product): a,1 a,2 a,3 b,1 b,2 b,3 c,1 c,2 c,3
 ```
+
+## Tricks
+
+Description | demonstration
+------------|-----
+ Will always return your PID | $$
+ Will give a random number each time | $RANDOM
+
 ## *__Great reference__*
 
 (1) [Bash-hackers](http://wiki.bash-hackers.org/start)
