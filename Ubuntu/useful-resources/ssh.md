@@ -19,10 +19,15 @@
 ## ssh server
 sshd is the server (OpenSSH daemon)
 
-make sure on  the server the OpenSSH is installed and running:
+make sure on the server the OpenSSH is installed and running:
 
 ```bash
 service sshd status
+```
+
+if it doesn't exist, install it:
+```bash
+sudo apt install openssh-server
 ```
 
 ## ssh client
