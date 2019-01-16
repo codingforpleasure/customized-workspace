@@ -5,9 +5,10 @@
       * [Example #3: maps each character in the set abcdefghi to character <code>_</code>:](#example-3-maps-each-character-in-the-set-abcdefghi-to-character-_)
       * [Example #4: maps each character in the set [a-z] to character <code>x</code> (it's case sensitive of-course):](#example-4-maps-each-character-in-the-set-a-z-to-character-x-its-case-sensitive-of-course)
       * [Example #5: deleting specific characters:](#example-5-deleting-specific-characters)
-      * [Example #6: sqeezing repeated characters:](#example-6-sqeezing-repeated-characters)
+      * [Example #6: Sqeezing repeated characters:](#example-6-sqeezing-repeated-characters)
+      * [Example #7: Translate braces into parenthesis](#example-7-translate-braces-into-parenthesis)
 
-<!-- Added by: gil_diy, at: 2019-01-02T13:05+02:00 -->
+<!-- Added by: gil_diy, at: 2019-01-03T18:55+02:00 -->
 
 <!--te-->
 
@@ -49,9 +50,15 @@
 ```
 > **Would be great for deleting all spaces**
 
-## Example #6: sqeezing repeated characters:
+## Example #6: Sqeezing repeated characters:
 ```bash
  > echo "nice    works.        looks great" | tr --squeeze-repeats " "
  > nice works. looks great
 ```
 > **Would be great for deleting unnecessary spaces**
+
+## Example #7: Translate braces into parenthesis
+
+```bash
+ > tr '{}' '()' < inputfile > outputfile
+```
