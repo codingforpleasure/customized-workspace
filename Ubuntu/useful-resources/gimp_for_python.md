@@ -4,11 +4,15 @@ In the menu:
 Filter -> Python-Fu-> Console
 
 ## useful functions:
-'gimp_image_resize'
-'gimp_image_scale'
-'gimp_item_transform_scale'
-'gimp-item-transform-perspective'
-'file-jpeg-save'
+`gimp_image_resize`
+
+`gimp_image_scale`
+
+`gimp_item_transform_scale`
+
+`gimp-item-transform-perspective`
+
+`file-jpeg-save`
 
 ## Links:
 [Link-1](https://ntcore.com/?p=509)
