@@ -1,5 +1,8 @@
 # Automating gimp operations with python
 
+In the menu:
+Filter -> Python-Fu-> Console
+
 ## useful functions:
 'gimp_image_resize'
 'gimp_image_scale'
