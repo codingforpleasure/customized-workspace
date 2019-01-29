@@ -1,5 +1,25 @@
 <!--ts-->
+   * [Javascript in a nutshell](#javascript-in-a-nutshell)
+      * [Var vs Let vs Const](#var-vs-let-vs-const)
+         * [var](#var)
+         * [let](#let)
+         * [const](#const)
+      * [Objects](#objects)
+      * [this](#this)
+      * [Arrow Funcs](#arrow-funcs)
+      * [template literals](#template-literals)
+      * [Destructuring](#destructuring)
+      * [Spread](#spread)
+      * [Classes](#classes)
+         * [basic class](#basic-class)
+         * [basic inheritance](#basic-inheritance)
+      * [Modules](#modules)
+
+<!-- Added by: gil_diy, at: 2019-01-29T11:48+02:00 -->
+
 <!--te-->
+
+# Javascript in a nutshell
 
 ## Var vs Let vs Const
 
@@ -202,6 +222,8 @@ const teacher = new Teacher('Gil','Bsc');
 ```
 
 ## Modules
+
+The object we define in a module are private by default so they are not accessiable from outside.
 
 * Step 1: Put every class in a seperate js file.
 * Step 2:  For making the class to be visiable outside we should export the class.
