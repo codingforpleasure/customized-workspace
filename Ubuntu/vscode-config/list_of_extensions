@@ -1,0 +1,10 @@
+code --install-extension burkeholland.simple-react-snippets
+code --install-extension CoenraadS.bracket-pair-colorizer
+code --install-extension dbaeumer.vscode-eslint
+code --install-extension donjayamanne.githistory
+code --install-extension dsznajder.es7-react-js-snippets
+code --install-extension eg2.tslint
+code --install-extension esbenp.prettier-vscode
+code --install-extension kumar-harsh.graphql-for-vscode
+code --install-extension PeterJausovec.vscode-docker
+code --install-extension stringham.move-ts
