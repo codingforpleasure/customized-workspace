@@ -21,13 +21,14 @@ Make text **bold** | mark the text and press ctrl + b
 Make text _itlaic_ | mark the text and press ctrl + i
 Comment text | mark the text and press ctrl + /
 
-
 ## Snippets
 
 Snippet description| how to invoke the snippet?
 ------------|-----
+ Add table | `tb`
  Add angle brackets | `angle`
  Add space for table of content | `toc`
  Add space for image in the center | `img-center`
  Add link to url | `url`
  Add link to a specific section in current markdown document | `url2` ( i.e: [Link](#hotkeys) )
+
