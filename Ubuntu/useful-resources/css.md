@@ -21,6 +21,7 @@
       * [SASS Variables](#sass-variables)
       * [SASS Map](#sass-map)
       * [Function in SASS](#function-in-sass)
+      * [Mixins](#mixins)
    * [HTML](#html)
       * [HTML tags](#html-tags)
       * [HTML lists](#html-lists)
@@ -28,7 +29,7 @@
          * [Unorder list](#unorder-list)
       * [Font awesome](#font-awesome)
 
-<!-- Added by: gil_diy, at: 2019-02-24T15:02+02:00 -->
+<!-- Added by: gil_diy, at: 2019-02-24T16:21+02:00 -->
 
 <!--te-->
 
@@ -365,10 +366,35 @@ body {
 ```
 
 
+## Mixins
+
+If you are targetting to both mobile and desktop,
+than you should make a decision in which state we should move from **mobile design** to **desktop design**.
 
 
+```css
+
+$desktop: 840px;
+
+@mixin desktop {
+    // The threshold:
+	@media (min-width: #{$desktop}) {
+		@content;
+	}
+}
 
 
+    #bg {
+        clip-path: polygon(100% 0, 100% 82%, 45% 100%, 0 100%, 0 0);
+        width: 100%;
+        height: 100%;
+
+		// Using the mixin for changing the layout
+        @include desktop {
+            clip-path: polygon(0 0, 75% 0, 55% 100%, 0% 100%);
+        }
+	}
+```
 # HTML
 
 ## HTML tags
