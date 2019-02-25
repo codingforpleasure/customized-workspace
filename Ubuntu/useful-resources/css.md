@@ -1,5 +1,6 @@
 <!--ts-->
    * [CSS](#css)
+      * [CSS Units](#css-units)
       * [CSS Variables](#css-variables)
       * [Colors](#colors)
       * [Gradient](#gradient)
@@ -29,12 +30,64 @@
          * [Unorder list](#unorder-list)
       * [Font awesome](#font-awesome)
 
-<!-- Added by: gil_diy, at: 2019-02-24T16:21+02:00 -->
+<!-- Added by: gil_diy, at: 2019-02-25T12:07+02:00 -->
 
 <!--te-->
 
 # CSS
 Great resource, the book: **"CSS Visual Dictionary"**
+
+## CSS Units
+
+[Great tutorial](https://www.youtube.com/watch?v=qrduUUdxBSY)
+
+
+**Terminology:**
+
+* The **viewport** is the user's visible area of a web page.
+
+Unit | Full name / Category | Description
+------------|-----|---
+px | Pixels | Fixed pixels
+% | Precenatges | Make the child percentage of the parent
+em | Font-sizes | Relative to their parents elements
+rem | Font-sizes | Relative to the font size of the **root element** of the document, the rem is constant throughout the document.|-
+px | Pixels | -
+vw | viewport width |-
+vh | viewport height |-
+vw | viewport width |-
+vmin | viewport minimum |-
+vmax | viewport maximum | -
+
+
+**Example of rem:**
+
+```css
+html{
+	font-size:10px; // By default the font size is 16px in the browser
+}
+
+p{
+	font-size:2rem; // Multiplies 2*10 so we will get 20px
+}
+```
+
+**Example of em:**
+
+```html
+html{
+	font-size:10px; // By default the font size is 16px in the browser
+}
+
+.box {
+	font-size:2em; // Multiplies 2*10 so we will get 20px (The box' parent is html)
+}
+
+p{
+	font-size:2em; // Multiplies 2*(2*10) so we will get 40px (The p's parent is box)
+}
+```
+
 
 ## CSS Variables
 
@@ -318,6 +371,8 @@ Or you install two valuaeable extensions in vscode:
 
 * `Live server`
 
+* If your are using SASS install the extension: [Link](https://marketplace.visualstudio.com/items?itemName=robinbentley.sass-indented)
+
 
 ## SASS Variables
 
@@ -424,4 +479,5 @@ $desktop: 840px;
 ```
 ## Font awesome
 [Link](https://origin.fontawesome.com/icons/youtube?style=brands)
+
 
