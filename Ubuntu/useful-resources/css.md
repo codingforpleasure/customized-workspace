@@ -1,6 +1,7 @@
 <!--ts-->
    * [CSS](#css)
       * [CSS Units](#css-units)
+      * [Position Property](#position-property)
       * [CSS Variables](#css-variables)
       * [Colors](#colors)
       * [Gradient](#gradient)
@@ -22,6 +23,7 @@
       * [SASS Variables](#sass-variables)
       * [SASS Map](#sass-map)
       * [Function in SASS](#function-in-sass)
+      * [Importing](#importing)
       * [Mixins](#mixins)
    * [HTML](#html)
       * [HTML tags](#html-tags)
@@ -30,7 +32,7 @@
          * [Unorder list](#unorder-list)
       * [Font awesome](#font-awesome)
 
-<!-- Added by: gil_diy, at: 2019-02-25T12:07+02:00 -->
+<!-- Added by: gil_diy, at: 2019-02-27T11:09+02:00 -->
 
 <!--te-->
 
@@ -74,7 +76,7 @@ p{
 
 **Example of em:**
 
-```html
+```css
 html{
 	font-size:10px; // By default the font size is 16px in the browser
 }
@@ -87,7 +89,16 @@ p{
 	font-size:2em; // Multiplies 2*(2*10) so we will get 40px (The p's parent is box)
 }
 ```
+## Position Property
 
+Type | Description
+------------|-----
+static | The elements follow the normal document flow (our block level elements)
+absolute | Is positioned relative to the nearest positioned parent (parent is the containing element).
+relative | Will cause it to be adjusted away from its **normal position** by setting `top` , `left`,etc.
+fixed |  Is positioned relative to the viewport, which means it **always stays in the same place even if the page is scrolled** .
+
+Important: After you use the `position` property, use `top` and `left` properties.
 
 ## CSS Variables
 
@@ -167,15 +178,17 @@ Positioning an image | `background-position: center`
 
 Description | Example
 ------------|-----
-Add flex (mandatory before applying the other properties of flex) | `display: flex `
-Setting flex direction ( **by default it's row**)| `flex-direction: row | row-reverse | column | column-reverse;`
+Add flex (mandatory before applying the other properties of flex) makes the children flex items | `display: flex `
+Setting elements one beside the other on the smae row ( **by default it's row**)| `flex-direction: row | row-reverse;`
+Setting the elements stack one above the other | `flex-direction: column | column-reverse;`
 Setting alignment to the center (**Horizontal axis**) | `justify-content: center`
-Set alignment to the right (**Horizontal axis**) | `justify-content: flex-end`
 Set alignment to the left  (**Horizontal axis**) | `justify-content: flex-start`
-Set space around each element (**Horizontal axis**) | `justify-content: space-around`
-Set space between every pair of elements (**Horizontal axis**) | `justify-content: space-between`
+Set alignment to the right (**Horizontal axis**) | `justify-content: flex-end`
+Setting alignment to the center (**Vertical axis**) | `align-items: center`
 Set alignment to the top  (**Vertical axis**) | `align-items: flex-start`
 Set alignment to the buttom  (**Vertical axis**) | `align-items: flex-end`
+Set space around each element (**Horizontal axis**) | `justify-content: space-around`
+Set space between every pair of elements (**Horizontal axis**) | `justify-content: space-between`
 Streching elements ( **Vertical axis**
 Set how items will be wrapped ([Link](https://youtu.be/hwbqquXww-U?list=PL4-IK0AVhVjMSb9c06AjRlTpvxL3otpUd&t=269)) | `flex-wrap: nowrap | wrap | wrap-reverse;`
 
@@ -367,7 +380,8 @@ Compiling from SCSS to css can be done here: [Link](https://www.sassmeister.com/
 
 Or you install two valuaeable extensions in vscode:
 
-* `Live Sass Compiler` very useful and easy.
+* `Live Sass Compiler` very useful and easy
+  In vscode open the scss file and (Ctrl+Shift+p -> `Live Sass: Watch Sass`)
 
 * `Live server`
 
@@ -419,7 +433,11 @@ body {
     background-color: color(primary);
 }
 ```
+## Importing
 
+```css
+@import url('https://fonts.googleapis.com/css?family=Merriweather:300,900|Six+Caps');
+```
 
 ## Mixins
 
