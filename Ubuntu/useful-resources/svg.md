@@ -36,8 +36,9 @@ html land | SVG land
 
 ## Tools for SVG
 
-[sublime SVG snippets](https://packagecontrol.io/packages/SVG-Snippets) - Very useful
+* [sublime SVG snippets](https://packagecontrol.io/packages/SVG-Snippets) - Very useful
 
+* [prettify SVG code](https://jakearchibald.github.io/svgomg/)
 
 ## Tools overview for the job:
 * GSAP (GreenSock), example:
