@@ -6,10 +6,12 @@
       * [Colors](#colors)
       * [Gradient](#gradient)
       * [Image](#image)
+      * [Polygon](#polygon)
       * [Flex <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" rel="nofollow">(Reference)</a>](#flex-reference)
       * [Styling Text](#styling-text)
       * [Styling Links](#styling-links)
       * [Selectors](#selectors)
+      * [Text properties](#text-properties)
       * [Playing with boxes](#playing-with-boxes)
          * [Margins (<a href="https://youtu.be/M6coJNLFBWI?list=PL4-IK0AVhVjM0xE0K2uZRvsM7LkIhsPT-&amp;t=246" rel="nofollow">Link</a>)](#margins-link)
          * [Padding](#padding)
@@ -19,20 +21,17 @@
       * [2D Transforms](#2d-transforms)
       * [List style](#list-style)
       * [Useful shape tool](#useful-shape-tool)
+      * [Animation](#animation)
+         * [Example 1: Animating movement and opacity](#example-1-animating-movement-and-opacity)
+         * [Example 2: Animating color transition](#example-2-animating-color-transition)
    * [SCSS (Sassy CSS)](#scss-sassy-css)
       * [SASS Variables](#sass-variables)
       * [SASS Map](#sass-map)
       * [Function in SASS](#function-in-sass)
       * [Importing](#importing)
       * [Mixins](#mixins)
-   * [HTML](#html)
-      * [HTML tags](#html-tags)
-      * [HTML lists](#html-lists)
-         * [Order list](#order-list)
-         * [Unorder list](#unorder-list)
-      * [Font awesome](#font-awesome)
 
-<!-- Added by: gil_diy, at: 2019-02-27T11:09+02:00 -->
+<!-- Added by: gil_diy, at: 2019-03-07T09:13+02:00 -->
 
 <!--te-->
 
@@ -56,7 +55,7 @@ em | Font-sizes | Relative to their parents elements
 rem | Font-sizes | Relative to the font size of the **root element** of the document, the rem is constant throughout the document.|-
 px | Pixels | -
 vw | viewport width |-
-vh | viewport height |-
+vh | viewport height | Should be x% from the viewport height
 vw | viewport width |-
 vmin | viewport minimum |-
 vmax | viewport maximum | -
@@ -89,6 +88,7 @@ p{
 	font-size:2em; // Multiplies 2*(2*10) so we will get 40px (The p's parent is box)
 }
 ```
+
 ## Position Property
 
 Type | Description
@@ -98,7 +98,15 @@ absolute | Is positioned relative to the nearest positioned parent (parent is th
 relative | Will cause it to be adjusted away from its **normal position** by setting `top` , `left`,etc.
 fixed |  Is positioned relative to the viewport, which means it **always stays in the same place even if the page is scrolled** .
 
-Important: After you use the `position` property, use `top` and `left` properties.
+Important: After you use the `position` property, use `top`,`left`,`right` properties.
+
+Nice trick:
+In case you want **the center of the element to line up with the center of its parent**:
+
+`
+transform: translate(-50%, -50%);
+`
+
 
 ## CSS Variables
 
@@ -129,6 +137,14 @@ Description | Example
 Specify color with hex value | `background: #FF0000;`
 Specify color with RGB | `background: RGB(250,247,20)`
 Specify color with RGB with Transparency, Alpha channel (0 to 1 scale) | `background: RGB(250,247,20, 0.5);`
+Specify no color | `background: none;`
+
+The `background:none` can be useful with:
+```css
+border:none;
+background:none;
+outline: none;
+```
 
 
 
@@ -139,6 +155,7 @@ You can also use: **colorpicker**
 Description | Example
 ------------|-----
 Linear Gradient from left to right | `background-image: linear-gradient(to right, #a25b5b, #692e4c);`
+Linear Gradient from left to right with opacity | `background-image: linear-gradient(to right, rgba(126, 213, 111, 0.8), rgba(40, 180, 131, 0.8));`
 Linear Gradient from left to right | `radial-gradient`
  | `background-image: repeating-linear-gradient(white 100px, black 200px, white 300px);`
  | `background-image: repeating-radial-gradient(white 100px, black 200px, white 300px);`
@@ -161,6 +178,7 @@ to top left|
 Description | Example
 ------------|-----
 Set image background | `background-image: url("../img/hamster.jpg");`
+Set Background size cover | `background-size: cover;`
 Set no repetition of the image | `background-repeat: no-repeat;`
 Set repeat on the X-axis | `background-repeat: repeat-x;`
 Set repeat on the Y-axis | `background-repeat: repeat-y;`
@@ -169,6 +187,18 @@ Positioning an image | `background-position: center`
 
 
 [Nice background patterns](https://www.toptal.com/designers/subtlepatterns/)
+
+
+## Polygon
+
+specify the coordinates(either px or percentage) of the polygen, clockwise order. i.e:
+
+```css
+clip-path: polygon(0 0, 100% 0 , 100% 200px, 0 100%)
+```
+
+[Useful tool](https://bennettfeely.com/clippy/)
+
 
 ## Flex [(Reference)](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 
@@ -256,6 +286,7 @@ a: hover {
 
 Description | Example
 ------------|-----
+Select all (universal selector) | `* { margin: 0; padding:0}`
 Select all paragraphs and all h1's and color text in green | `p, h1 { color: green; }`
 Select specific class-name | `.my_class { color: green; }`
 Select the paragraphs that are **inside** `my_class` | `.my_class p { color: green; }`
@@ -263,7 +294,19 @@ Select the paragraphs that are **inside** `my_class` | `.my_class p { color: gre
 Select the paragraphs that are inside body-text | `.body-tex`
 
 
+## Text properties
 
+Property | Value
+------------|-----
+text-align | center | left | right
+text-decoration | none | underline | line-through | overline
+text-transform | uppercase | lowercase | capitalize
+text-indent | Property is used to specify the indentation of the first line of a text
+letter-spacing | Specify the space between the characters in a text
+line-height | Property is used to specify the space between lines
+direction | rtl | ltr
+word-spacing | Property is used to specify the space between the words in a text
+text-shadow | text-shadow: <horizontal> <vertical> <shadow color>;
 
 ## Playing with boxes
 
@@ -327,10 +370,16 @@ to top left|
 
 Description | example
 ------------|-----
-Set rounded corners (Controls ths radius of the corner's curve on bioth X and Y axis) | `border-radius: 20px;`
+Set rounded corners (Controls ths radius of the corner's curve on both X and Y axis) | `border-radius: 20px;`
+Set rounded corners so it would look exactly like a circle | `border-radius: 50%;`
 Add shadow around a wide element | `box-shadow: 5px 5px 10px #000`
 Add glowing effect | `box-shadow: 0 0 10px #FFF`
 
+
+Great reference to resources:
+
+[css-tricks (border-radius)](https://css-tricks.com/almanac/properties/b/border-radius/)
+[css-tricks (box-shadow)](https://css-tricks.com/almanac/properties/b/box-shadow/)
 
 ### Floats & Clears
 
@@ -361,6 +410,8 @@ Setting the rotation origin in top right corner | `transform-origin: 100% 0;`
 
 
 
+
+
 ## List style
 
 Description | example
@@ -373,6 +424,59 @@ Style list with image bullets| `list-style-image: url(../img/icon.png);`
 ## Useful shape tool
 
 [Link](https://bennettfeely.com/clippy/)
+
+
+## Animation
+
+
+Property | Duration
+------------|-----
+ animation-name |
+ animation-duration | Defines how long time an animation should take to complete
+ animation-delay | A delay for the start of an animation
+ animation-iteration-count | The number of times an animation should run **or** use "infinite"
+ animation-timing-function | specifies the speed curve of the animation
+
+
+### Example 1: Animating movement and opacity
+
+.my-title{
+    display:block;
+    font-size: 60px;
+
+    animation-name: moveInFromLeft; /* Must bind the animation to an element */
+    animation-duration: 1s;
+}
+
+@keyframes moveInFromLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+### Example 2: Animating color transition
+
+/* The element to apply the animation to */
+
+div {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  animation-name: colorTransition;
+  animation-duration: 4s;
+}
+
+@keyframes colorTransition {
+  from {background-color: red;}
+  to {background-color: yellow;}
+}
+
 
 # SCSS (Sassy CSS)
 
@@ -468,34 +572,3 @@ $desktop: 840px;
         }
 	}
 ```
-# HTML
-
-## HTML tags
-
-[List of html tags](https://www.w3schools.com/tags/ref_byfunc.asp)
-
-## HTML lists
-
-### Order list
-```html
-<ol>
-	<li>iterm number 1</li>
-	<li>iterm number 2</li>
-	<li>iterm number 3</li>
-	<li>iterm number 4</li>
-</ol>
-```
-
-### Unorder list
-```html
-<ul>
-	<li>iterm number 1</li>
-	<li>iterm number 2</li>
-	<li>iterm number 3</li>
-	<li>iterm number 4</li>
-</ul>
-```
-## Font awesome
-[Link](https://origin.fontawesome.com/icons/youtube?style=brands)
-
-
