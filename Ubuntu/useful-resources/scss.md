@@ -21,9 +21,10 @@
             * [For Loop](#for-loop)
             * [For each](#for-each)
          * [Conditional Directives](#conditional-directives)
+         * [Inheritance](#inheritance)
          * [Media queries](#media-queries)
 
-<!-- Added by: gil_diy, at: 2019-03-11T10:15+02:00 -->
+<!-- Added by: gil_diy, at: 2019-03-11T10:49+02:00 -->
 
 <!--te-->
 
@@ -197,7 +198,7 @@ body {
 
 ### Mixins
 
-Allows to create reusable styles, so you can use those mimixs to mix them into your other designs.
+Allows to create reusable styles, so you can use those mixins to mix them into your other designs.
 
 
 #### Example #1:
@@ -408,6 +409,59 @@ body {
 	}
 }
 ```
+
+
+Another example for changing/switching the theme:
+
+```css
+$theme: Dark;
+
+// === COLORS ===
+// Allowed values: Dark, Light, Default
+
+$theme: Dark;
+
+$text-color: #222222;
+$theme-color: #170a48;
+$secondary-color: #f27731;
+$trenary-color: #ccf962;
+$link-color: $secondary-color;
+$menu-item-color: white;
+
+@if $theme == Dark {
+	$text-color: #fff;
+	body-background-color: #22222a;
+	$theme-color: #42424a;
+	$secondary-color: #c24721;
+	$trenary-color: #698932;
+	$link-color: $secondary-color;
+	$menu-item-color: white;
+} @else if $theme == Light {
+	$text-color: #000;
+	body-background-color: #fff;
+	$theme-color: #372a27;
+	$secondary-color: #d26741;
+	$trenary-color: #b9da63;
+	$link-color: $secondary-color;
+	$menu-item-color: white;
+}
+
+
+```
+### Inheritance
+
+```css
+.error {
+	color: red;
+}
+
+.critical-error {
+	@extend .error;
+	bottom: 1px solid red;
+	font-weight: bold;
+}
+```
+
 
 
 ### Media queries
