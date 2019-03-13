@@ -74,6 +74,8 @@ alias {datagrip,dg}='fork_without_block datagrip.sh'
 alias {clion,lion}='fork_without_block clion.sh'
 alias webstorm='fork_without_block webstorm'
 alias idea='fork_without_block idea.sh'
+alias {ink,inkscape}='fork_without_block inkscape' # Even nicer than illustrator
+
 alias firefox="firefox --ProfileManager &" # For setting my current working profile
 
 alias android="~/android-studio/bin/studio.sh &" # Execute Android-studio easily
