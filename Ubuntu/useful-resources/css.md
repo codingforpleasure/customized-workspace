@@ -24,14 +24,8 @@
       * [Animation](#animation)
          * [Example 1: Animating movement and opacity](#example-1-animating-movement-and-opacity)
          * [Example 2: Animating color transition](#example-2-animating-color-transition)
-   * [SCSS (Sassy CSS)](#scss-sassy-css)
-      * [SASS Variables](#sass-variables)
-      * [SASS Map](#sass-map)
-      * [Function in SASS](#function-in-sass)
-      * [Importing](#importing)
-      * [Mixins](#mixins)
 
-<!-- Added by: gil_diy, at: 2019-03-07T09:13+02:00 -->
+<!-- Added by: gil_diy, at: 2019-03-13T23:37+02:00 -->
 
 <!--te-->
 
@@ -401,15 +395,20 @@ Limit the width of the element | `max-width: 1000px`
 
 
 ## 2D Transforms
- Description | Example
-------------|-----
-Move the element on it's X and Y axis | `transform: translate(30px,10px);`
-Rotating an element around its center | `transform: rotate(45deg);`
+
+* Useful for animating shapes in SVG.
+
+
+ Description | Example | Demo
+------------|-----|---
+Move the element on it's X and Y axis | `transform: translate(30px,10px);` | [Link](https://www.w3schools.com/csSref/playit.asp?filename=playcss_transform_translate)
+Rotating an element around its center | `transform: rotate(45deg);` | [Link](https://www.w3schools.com/csSref/playit.asp?filename=playcss_transform_rotate)
 Setting the rotation origin in top left corner | `transform-origin: 0 0;`
 Setting the rotation origin in top right corner | `transform-origin: 100% 0;`
+Scale element's size | `scale(2,0.5)`| [Link](https://www.w3schools.com/csSref/playit.asp?filename=playcss_transform_scale)
+skew transformation along the X-axis | `skewX(20deg)` | [Link](https://www.w3schools.com/csSref/playit.asp?filename=playcss_transform_skew)
 
-
-
+[Reference](https://www.w3schools.com/csSref/css3_pr_transform.asp)
 
 
 ## List style
@@ -439,7 +438,7 @@ Property | Duration
 
 
 ### Example 1: Animating movement and opacity
-
+```svg
 .my-title{
     display:block;
     font-size: 60px;
@@ -459,9 +458,12 @@ Property | Duration
         transform: translateX(0);
     }
 }
+```
 
 ### Example 2: Animating color transition
 
+
+```svg
 /* The element to apply the animation to */
 
 div {
@@ -477,98 +479,4 @@ div {
   to {background-color: yellow;}
 }
 
-
-# SCSS (Sassy CSS)
-
-Compiling from SCSS to css can be done here: [Link](https://www.sassmeister.com/)
-
-Or you install two valuaeable extensions in vscode:
-
-* `Live Sass Compiler` very useful and easy
-  In vscode open the scss file and (Ctrl+Shift+p -> `Live Sass: Watch Sass`)
-
-* `Live server`
-
-* If your are using SASS install the extension: [Link](https://marketplace.visualstudio.com/items?itemName=robinbentley.sass-indented)
-
-
-## SASS Variables
-
-```css
-$my-color: green;
-
-body {
-    color: $my-color;
-}
-```
-
-## SASS Map
-
-```css
-$my-color: green;
-
-$colors: (
-    primary: #005DFF,
-    accent: #FFF6BB
-)
-
-
-body {
-    background-color: map-get($colors,primary);
-    color: $my-color;
-}
-```
-
-
-## Function in SASS
-
-
-```css
-$colors: (
-    primary: #005DFF,
-    accent: #FFF6BB
-);
-
-@function color($color-name){
-    @return map-get($colors,$color-name);
-}
-
-body {
-    background-color: color(primary);
-}
-```
-## Importing
-
-```css
-@import url('https://fonts.googleapis.com/css?family=Merriweather:300,900|Six+Caps');
-```
-
-## Mixins
-
-If you are targetting to both mobile and desktop,
-than you should make a decision in which state we should move from **mobile design** to **desktop design**.
-
-
-```css
-
-$desktop: 840px;
-
-@mixin desktop {
-    // The threshold:
-	@media (min-width: #{$desktop}) {
-		@content;
-	}
-}
-
-
-    #bg {
-        clip-path: polygon(100% 0, 100% 82%, 45% 100%, 0 100%, 0 0);
-        width: 100%;
-        height: 100%;
-
-		// Using the mixin for changing the layout
-        @include desktop {
-            clip-path: polygon(0 0, 75% 0, 55% 100%, 0% 100%);
-        }
-	}
 ```
