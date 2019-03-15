@@ -32,6 +32,22 @@
 # CSS
 Great resource, the book: **"CSS Visual Dictionary"**
 
+## CSS Selectors
+
+ | Selector's description | Demo
+------------|-----|---
+.intro | Selects all elements with class="intro" |
+\#firstname | Selects the element with id="firstname" |
+* | Selects all elements |
+p | Selects all <p> elements |
+div, p | Selects all <div> elements **and** all <p> elements |
+div p | Selects all <p> elements **inside** <div> elements |
+div > p | Selects all <p> elements where the parent is a <div> element |
+:nth-child(n) | selector matches every element that is the nth child, regardless of type, of its parent. |  [Link](https://www.w3schools.com/csSref/tryit.asp?filename=trycss3_nth-child)
+
+
+[CSS Selectors reference](https://www.w3schools.com/csSref/css_selectors.asp)
+
 ## CSS Units
 
 [Great tutorial](https://www.youtube.com/watch?v=qrduUUdxBSY)
@@ -403,8 +419,8 @@ Limit the width of the element | `max-width: 1000px`
 ------------|-----|---
 Move the element on it's X and Y axis | `transform: translate(30px,10px);` | [Link](https://www.w3schools.com/csSref/playit.asp?filename=playcss_transform_translate)
 Rotating an element around its center | `transform: rotate(45deg);` | [Link](https://www.w3schools.com/csSref/playit.asp?filename=playcss_transform_rotate)
-Setting the rotation origin in top left corner | `transform-origin: 0 0;`
-Setting the rotation origin in top right corner | `transform-origin: 100% 0;`
+Setting the rotation origin in top right corner | `transform-origin: top right;` | [Link](https://codepen.io/Codingforpleasure/pen/oVEBjg)
+Setting the rotation origin in top left corner | `transform-origin: top left;` | [Link](https://codepen.io/Codingforpleasure/pen/oVEBjg)
 Scale element's size | `scale(2,0.5)`| [Link](https://www.w3schools.com/csSref/playit.asp?filename=playcss_transform_scale)
 skew transformation along the X-axis | `skewX(20deg)` | [Link](https://www.w3schools.com/csSref/playit.asp?filename=playcss_transform_skew)
 
