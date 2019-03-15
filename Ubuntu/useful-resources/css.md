@@ -1,5 +1,6 @@
 <!--ts-->
    * [CSS](#css)
+      * [CSS Selectors](#css-selectors)
       * [CSS Units](#css-units)
       * [Position Property](#position-property)
       * [CSS Variables](#css-variables)
@@ -25,7 +26,7 @@
          * [Example 1: Animating movement and opacity](#example-1-animating-movement-and-opacity)
          * [Example 2: Animating color transition](#example-2-animating-color-transition)
 
-<!-- Added by: gil_diy, at: 2019-03-13T23:37+02:00 -->
+<!-- Added by: gil_diy, at: 2019-03-15T23:08+02:00 -->
 
 <!--te-->
 
@@ -34,15 +35,15 @@ Great resource, the book: **"CSS Visual Dictionary"**
 
 ## CSS Selectors
 
- | Selector's description | Demo
+ Selctor type | Selector's description | Demo
 ------------|-----|---
 .intro | Selects all elements with class="intro" |
 \#firstname | Selects the element with id="firstname" |
 * | Selects all elements |
-p | Selects all <p> elements |
-div, p | Selects all <div> elements **and** all <p> elements |
-div p | Selects all <p> elements **inside** <div> elements |
-div > p | Selects all <p> elements where the parent is a <div> element |
+p | Selects all &lt;p&gt; elements |
+div, p | Selects all &lt;div&gt; elements **and** all &lt;p&gt; elements |
+div p | Selects all &lt;p&gt; elements **inside** &lt;div&gt; elements |
+div > p | Selects all &lt;p&gt; elements where the parent is a &lt;div&gt; element |
 :nth-child(n) | selector matches every element that is the nth child, regardless of type, of its parent. |  [Link](https://www.w3schools.com/csSref/tryit.asp?filename=trycss3_nth-child)
 
 
@@ -421,11 +422,17 @@ Move the element on it's X and Y axis | `transform: translate(30px,10px);` | [Li
 Rotating an element around its center | `transform: rotate(45deg);` | [Link](https://www.w3schools.com/csSref/playit.asp?filename=playcss_transform_rotate)
 Setting the rotation origin in top right corner | `transform-origin: top right;` | [Link](https://codepen.io/Codingforpleasure/pen/oVEBjg)
 Setting the rotation origin in top left corner | `transform-origin: top left;` | [Link](https://codepen.io/Codingforpleasure/pen/oVEBjg)
+Setting the rotation origin with percent | `transform-origin: 20% 40%;` | [Link](https://www.w3schools.com/csSref/css3_pr_transform-origin.asp)
 Scale element's size | `scale(2,0.5)`| [Link](https://www.w3schools.com/csSref/playit.asp?filename=playcss_transform_scale)
 skew transformation along the X-axis | `skewX(20deg)` | [Link](https://www.w3schools.com/csSref/playit.asp?filename=playcss_transform_skew)
 
 [Reference](https://www.w3schools.com/csSref/css3_pr_transform.asp)
 
+**Important comment for SVG animation:**
+
+Set the property: `transform-box: fill-box;`
+<br>and the property `transform-origin` in the SVG element ([code example](https://codepen.io/Codingforpleasure/pen/KEoLVd)).
+<br>Otherwise it won't work!!!
 
 ## List style
 
