@@ -39,15 +39,29 @@ Great resource, the book: **"CSS Visual Dictionary"**
 ------------|-----|---
 .intro | Selects all elements with class="intro" |
 \#firstname | Selects the element with id="firstname" |
-* | Selects all elements |
+\* | Selects all elements |
 p | Selects all &lt;p&gt; elements |
 div, p | Selects all &lt;div&gt; elements **and** all &lt;p&gt; elements |
 div p | Selects all &lt;p&gt; elements **inside** &lt;div&gt; elements |
 div > p | Selects all &lt;p&gt; elements where the parent is a &lt;div&gt; element |
 :nth-child(n) | selector matches every element that is the nth child, regardless of type, of its parent. |  [Link](https://www.w3schools.com/csSref/tryit.asp?filename=trycss3_nth-child)
 
-
 [CSS Selectors reference](https://www.w3schools.com/csSref/css_selectors.asp)
+
+
+### Selector Specificity
+[Easily check your selector specificity](https://specificity.keegan.st/)
+The higher score the more accurate your selector is.
+
+IDs > Classes, attributes and pseudo-classes > Elements and pseudo-elements
+
+[Reference](https://youtu.be/c0kfcP_nD9E)
+
+
+
+
+
+
 
 ## CSS Units
 
@@ -99,6 +113,21 @@ p{
 	font-size:2em; // Multiplies 2*(2*10) so we will get 40px (The p's parent is box)
 }
 ```
+
+## calc()
+### Use case #1: when we mix units
+
+```css
+
+.container {
+  max-width: 800px;
+  width: calc(100vw - 2em);
+  margin: 0 auto;
+}
+
+```
+
+
 
 ## Position Property
 
@@ -450,6 +479,8 @@ Style list with image bullets| `list-style-image: url(../img/icon.png);`
 
 ## Animation
 
+Useful extention for Chrome browser: [keyframes](https://keyframes.app/) ([Demo](https://www.youtube.com/watch?v=H598jXvQhLw))
+
 
 Property | Duration
 ------------|-----
@@ -503,3 +534,23 @@ div {
 }
 
 ```
+
+
+
+
+[priceless](https://stackoverflow.com/questions/15139090/setting-transform-origin-on-svg-group-not-working-in-firefox)
+@PatrickGrey's answer worked perfectly for me, but I needed to handle a much more complex SVG with several paths. I was able to accomplish this fix using Inkscape, but it was a multi-step process. I recommend doing this with the Inkscape XML Editor open so you can watch what's happening.
+
+    Select the elements you want to transform and choose Object > Group to make a new group. Drag this group so that it is centered over the top left corner of the document. This applies a transform="translate(…, …)" attribute to the group.
+
+    Choose Object > Ungroup from the menu. This will "flatten" the transform attribute, applying any coordinate transformations to the elements in the group.
+
+    The original elements should still be selected. Choose Object > Group to put them back into a group. If you are using CSS to transform the elements, add your ID or class attribute to this group (The XML editor comes in handy for this bit, or you can modify the group's ID by right-clicking it and choosing Object Properties. Classes will need to be added through the XML editor or later in your text editor.).
+
+    With the group selected, choose Object > Group again. This creates a new group around the original group.
+
+    Drag this new group to the correct location in the document. If you inspect the DOM using the XML editor, you'll see the transform="translate(…, …)" is added to the outer group.
+
+    Any CSS transforms can now be applied to the inner group, and they will be handled consistently by Chrome and Firefox.
+
+Thanks to @PatrickGrey.co.uk for the initial insight. The trickiest part was figuring out how to apply the initial transform to the complex object's coordinates without resorting to hair pulling and extensive maths. The "Group, move, Ungroup" trick was documented a few places on StackOverflow, but I'd forgotten it until today. Hopefully these steps can save someone else a fair amount of grief.
