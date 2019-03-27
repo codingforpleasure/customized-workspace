@@ -1,7 +1,10 @@
 <!--ts-->
    * [CSS](#css)
       * [CSS Selectors](#css-selectors)
+         * [Selector Specificity](#selector-specificity)
       * [CSS Units](#css-units)
+      * [calc()](#calc)
+         * [Use case #1: when we mix units](#use-case-1-when-we-mix-units)
       * [Position Property](#position-property)
       * [CSS Variables](#css-variables)
       * [Colors](#colors)
@@ -23,10 +26,12 @@
       * [List style](#list-style)
       * [Useful shape tool](#useful-shape-tool)
       * [Animation](#animation)
-         * [Example 1: Animating movement and opacity](#example-1-animating-movement-and-opacity)
-         * [Example 2: Animating color transition](#example-2-animating-color-transition)
+         * [Example 1: Progress bar](#example-1-progress-bar)
+         * [animation properties](#animation-properties)
+         * [Example 2: Animating movement and opacity <strong>with keyframes</strong>](#example-2-animating-movement-and-opacity-with-keyframes)
+         * [Example 3: Animating color transition](#example-3-animating-color-transition)
 
-<!-- Added by: gil_diy, at: 2019-03-15T23:08+02:00 -->
+<!-- Added by: gil_diy, at: 2019-03-27T17:15+02:00 -->
 
 <!--te-->
 
@@ -442,8 +447,10 @@ Limit the width of the element | `max-width: 1000px`
 
 ## 2D Transforms
 
-* Useful for animating shapes in SVG.
+* Useful for animating shapes in SVG ([Link](https://css-tricks.com/transforms-on-svg-elements/))
 
+[Demonstrating transforms](https://codepen.io/Codingforpleasure/pen/vPMVzv)
+[Demonstrating Perspective](https://codepen.io/Codingforpleasure/pen/WmWYLX)
 
  Description | Example | Demo
 ------------|-----|---
@@ -482,6 +489,26 @@ Style list with image bullets| `list-style-image: url(../img/icon.png);`
 Useful extention for Chrome browser: [keyframes](https://keyframes.app/) ([Demo](https://www.youtube.com/watch?v=H598jXvQhLw))
 
 
+### Example 1: Progress bar
+
+```svg
+#my-progress{
+    background: #3A84D6;
+    border-radius: 25px;
+    height:35px;
+    width:0px;
+}
+
+#my-progress: hover {
+    transition: all 0.1s ease;
+	width:125px;
+}
+```
+
+All existed properties after **transitions**  will take effect in 0.1s.
+
+### animation properties
+
 Property | Duration
 ------------|-----
  animation-name |
@@ -491,7 +518,7 @@ Property | Duration
  animation-timing-function | specifies the speed curve of the animation
 
 
-### Example 1: Animating movement and opacity
+### Example 2: Animating movement and opacity **with keyframes**
 ```svg
 .my-title{
     display:block;
@@ -514,7 +541,7 @@ Property | Duration
 }
 ```
 
-### Example 2: Animating color transition
+### Example 3: Animating color transition
 
 
 ```svg
