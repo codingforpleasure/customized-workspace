@@ -47,3 +47,6 @@ The `wait(status)` system call has two purposes.
 ## execve()
 system call loads a new program (pathname, with argument list argv, and environment list envp) into a process’s memory.
 The existing program text is discarded, and the stack, data, and heap segments are freshly created for the new program.
+
+
+[Nice reference](https://www.geeksforgeeks.org/difference-fork-exec/)
