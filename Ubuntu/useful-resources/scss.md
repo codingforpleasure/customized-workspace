@@ -84,6 +84,24 @@ body {
 }
 ```
 
+### Ampersand (adding another class)
+
+
+The & comes in handy when you're nesting and you want to create a **more specific selector**, like an element that has *both* of two classes, like this:
+```css
+.some-class.another-class { }
+```
+
+would look like this:
+```css
+.some-class {
+  &.another-class {}
+}
+```
+
+
+[ampersand link](https://css-tricks.com/the-sass-ampersand/)
+
 ### Importing
 
 Is for making our code more modular:
