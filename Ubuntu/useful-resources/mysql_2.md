@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="images/mysql.png" width="256" title="Some mysql love!">
+  <img src="images/mysql/mysql.png" width="256" title="Some mysql love!">
 </p>
 
 <!--ts-->
@@ -46,25 +46,48 @@
          * [Drop indexing on existing table](#drop-indexing-on-existing-table)
    * [INFORMATION_SCHEMA](#information_schema)
       * [Finding specific column among all tables](#finding-specific-column-among-all-tables)
+      * [Finding <strong>function</strong> and <strong>procedure</strong>](#finding-function-and-procedure)
       * [Show tables schema of specific database](#show-tables-schema-of-specific-database)
       * [Get table name and the table_type as : system_view, base table, view](#get-table-name-and-the-table_type-as--system_view-base-table-view)
       * [Get the number of tables in the database](#get-the-number-of-tables-in-the-database)
+      * [Retrieves all views over the database](#retrieves-all-views-over-the-database)
       * [Finding all partitions](#finding-all-partitions)
       * [Get the index information for a given table](#get-the-index-information-for-a-given-table)
    * [User-Defined Functions (UDF)](#user-defined-functions-udf)
       * [Create function](#create-function)
       * [Delete function](#delete-function)
       * [Execute function](#execute-function)
+      * [Creating multiple tables using stored procedure](#creating-multiple-tables-using-stored-procedure)
+      * [Deleting multiple table using stored procedure](#deleting-multiple-table-using-stored-procedure)
    * [User-Defined Variables (UDV)](#user-defined-variables-udv)
       * [Example of using Variables](#example-of-using-variables)
+   * [Views](#views)
+      * [creating a view](#creating-a-view)
    * [REGEXP](#regexp)
       * [List the books names which starts with specific word](#list-the-books-names-which-starts-with-specific-word)
       * [List the books names which ends with specific word](#list-the-books-names-which-ends-with-specific-word)
       * [Number of books we have in the "book_name_in_english" column](#number-of-books-we-have-in-the-book_name_in_english-column)
       * [Cutting the user mail address to pieces - by using "SUBSTRING_INDEX" function](#cutting-the-user-mail-address-to-pieces---by-using-substring_index-function)
       * [Here we used the REGEXP and the like function in the select statement  - very nice](#here-we-used-the-regexp-and-the-like-function-in-the-select-statement----very-nice)
+   * [JSON in mysql](#json-in-mysql)
+      * [Basic Operations](#basic-operations)
+         * [Create json array](#create-json-array)
+         * [Create key-value](#create-key-value)
+         * [Extract values from json](#extract-values-from-json)
+         * [Get number of elements in json](#get-number-of-elements-in-json)
+         * [Remove Quotes from a JSON Document](#remove-quotes-from-a-json-document)
+         * [Merging json documents and preserving element's order](#merging-json-documents-and-preserving-elements-order)
+      * [Integrating json documents with mysql tables](#integrating-json-documents-with-mysql-tables)
+         * [Create a table linked to a json document](#create-a-table-linked-to-a-json-document)
+         * [Insert values into json document](#insert-values-into-json-document)
+         * [Retrieving json document in a mysql format table](#retrieving-json-document-in-a-mysql-format-table)
+         * [Retrieving json document in a mysql format table with filtering](#retrieving-json-document-in-a-mysql-format-table-with-filtering)
+         * [Aggregates a result set as a single JSON array whose elements consist of the rows](#aggregates-a-result-set-as-a-single-json-array-whose-elements-consist-of-the-rows)
+         * [Reading two columns or expressions and shows them as a single JSON object](#reading-two-columns-or-expressions-and-shows-them-as-a-single-json-object)
+         * [Converting json table to json file format document (Useful)](#converting-json-table-to-json-file-format-document-useful)
+   * [References](#references)
 
-<!-- Added by: gil, at: 2018-12-31T16:09+02:00 -->
+<!-- Added by: gil, at: 2019-01-08T16:23+02:00 -->
 
 <!--te-->
 
@@ -97,7 +120,7 @@ Explanation between the difference between "ENUM" to "SET":
 ## Joins
 
 <p align="center">
-  <img src="images/tables_author_genre.png" width="500" title="Some mysql love!">
+  <img src="images/mysql/tables_author_genre.png" width="500" title="Some mysql love!">
 </p>
 
 ### Inner join
@@ -110,7 +133,7 @@ Explanation between the difference between "ENUM" to "SET":
 **output**
 
 author_name | genre_name
------ | --------- 
+----- | ---------
 shay cohen	|Drama
 Gil cohen	|Romance
 gil cohen	|Science fiction
@@ -128,7 +151,7 @@ shay cohen	|Drama
 **output**
 
 author_name | genre_id | genre_id | genre_name
------ | ---|---|--- 
+----- | ---|---|---
 shay cohen|	|7	|7	|Drama
 Gil cohen|	8	|8	|Romance
 gil cohen|	4	|4	|Science fiction
@@ -146,7 +169,7 @@ Omri Ror|	22	|	|
 **output**
 
 author_name | genre_id | genre_id | genre_name
------ | ---|---|--- 
+----- | ---|---|---
 shay cohen	|7	|7	|Drama
 Gil cohen	|8	|8	|Romance
 gil cohen	|4	|4	|Science fiction
@@ -162,7 +185,7 @@ shay cohen	|7	|7	|Drama
 
 
 ### Right outer join
-```sql 
+```sql
 	select *
 	from author_tb
 	right outer join genre_tb
@@ -173,7 +196,7 @@ shay cohen	|7	|7	|Drama
 **output**
 
 author_name | genre_id | genre_id | genre_name
------ | ---|---|--- 
+----- | ---|---|---
 	||2	|Tragedy
 	||3	|Fantasy
 	||5	|Adventure
@@ -184,7 +207,7 @@ author_name | genre_id | genre_id | genre_name
 
 
 ### Left outer join
-```sql  
+```sql
 	select *
 	from author_tb
 	left outer join genre_tb
@@ -195,8 +218,8 @@ author_name | genre_id | genre_id | genre_name
 **output**
 
 author_name | genre_id | genre_id | genre_name
------ | ---|---|--- 
-Omri Ror |	22	||	
+----- | ---|---|---
+Omri Ror |	22	||
 
 ### Full outer Join ( Using "Union" Mysql does't have Full outer Join)
 ```sql
@@ -225,10 +248,10 @@ order by n desc;
 ```
 ## sub-queries
 
-### Subqueries in the SELECT clause 
+### Subqueries in the SELECT clause
 
 
-### Subqueries in the FROM clause 
+### Subqueries in the FROM clause
 ```sql
 select *
 from (select *
@@ -248,24 +271,24 @@ where book_id in (select book_id
 ### LIMIT function
 When should we use the "LIMIT"?
 In case we want only certain rows from a result set, such as the first row, the last five rows, or rows
-21 through 40. 
+21 through 40.
 Here we will Use a LIMIT with an ORDER BY.
 
 #### Example #1: Find the earliest/latest birthday within a calendar year
 ```sql
 SELECT name, DATE_FORMAT(birth,'%m-%d') AS birthday
-FROM profile 
+FROM profile
 ORDER BY birthday LIMIT 1;
 ```
 
-#### Example #2 : Retrieve rows from **middle** result set, use the **two-argument** form of LIMIT. 
+#### Example #2 : Retrieve rows from **middle** result set, use the **two-argument** form of LIMIT.
 
 First Argument indicates how many rows to skip
 Second Argument indicates how many to rows to retrieve
 **What is the third-smallest or third-largest value?**
 ```sql
-SELECT * 
-FROM profile 
+SELECT *
+FROM profile
 ORDER BY birth LIMIT 2,1;
 ```
 Example number 3 :
@@ -276,11 +299,11 @@ Calculating LIMIT Values from Expressions -- ask gil page 125
 
 ### Cloning a whole table
 <!-- ```sql
-CREATE TABLE new_table LIKE original_table; 
+CREATE TABLE new_table LIKE original_table;
 ``` -->
 Cloning the contents to be the same as the original table:
 ```sql
-INSERT INTO new_table SELECT * FROM original_table;; 
+INSERT INTO new_table SELECT * FROM original_table;;
 ```
 
 ### Cloning part of a table which matches a specific condition:
@@ -292,9 +315,9 @@ INSERT INTO mail2 SELECT * FROM mail WHERE srcuser = 'barb';
 <!-- **Important to remember:** --
 Using "CREATE TABLE … LIKE"  :
 
-1) Doesn't copy *foreign key definitions* 
+1) Doesn't copy *foreign key definitions*
 
-2) Doesn't copy any *DATA DIRECTORY* 
+2) Doesn't copy any *DATA DIRECTORY*
 
 3) Doesn't copy *INDEX DIRECTORY table options* that the table might use saving a Query Result in a Table -->
 
@@ -311,7 +334,7 @@ INSERT INTO dst_tbl(column1_dst, column2_dst) SELECT val, name FROM src_tbl;
 
 ### Using temporary tables
 
-#### Add a COLUMN for an existing table + and adding AUTO_INCREMENT 
+#### Add a COLUMN for an existing table + and adding AUTO_INCREMENT
 ```sql
 ALTER TABLE foreign_author_tb
 ADD COLUMN foreign_author_id INT AUTO_INCREMENT PRIMARY KEY;
@@ -371,7 +394,7 @@ This is a variant of LIST partitioning BUT:
 1. Enables the use of **multiple columns** as partition keys
 2. The columns of data types **can be other than integer types** to be used as partitioning columns.
 
-## 
+##
 ```sql
 CREATE TABLE employee_4
 (
@@ -405,7 +428,7 @@ from employee_4 partition (pRegion_2);
 A partition is assigned a list of values. If the partitioning **key has one of these values**, the partition is chosen. For example, all rows where the column Country is either Iceland, Norway, Sweden, Finland or Denmark could build a partition for the Nordic countries.
 
 
-**Attention:** In MySQL 8.0, it is possible to match against **only a list of integers** 
+**Attention:** In MySQL 8.0, it is possible to match against **only a list of integers**
 
 ```sql
 CREATE TABLE employees_2 (
@@ -491,7 +514,7 @@ INSERT INTO employees_5 (id,first_name, hired, separated, store_id)
   (14,'Michal', '1984-01-01', '1989-06-01', '12');
 ```
 **Attention:** for retrieving the partitions names in all tables you can use the INFORMATION SCHEMA.
-including a [link to the header](#finding-all-partitions). 
+including a [link to the header](#finding-all-partitions).
 By default the partition names are given as: p0,..,pn
 
 
@@ -546,7 +569,7 @@ The b-tree creates under the hood a tree of **intermediate nodes** which assist 
 
 
 <p align="center">
-  <img src="images/clustered-index-structure.png" width="700" title="Some mysql love!">
+  <img src="images/mysql/clustered-index-structure.png" width="700" title="Some mysql love!">
 </p>
 
 * In case we execute a query on a table which **was not indexed**, the operation will be **costly (CPU,IO)**  - this scan is named: **Full Scan (All)**.
@@ -595,7 +618,12 @@ SELECT TABLE_NAME
 FROM   AdventureWorks2012_Data.INFORMATION_SCHEMA.COLUMNS
 WHERE  COLUMN_NAME = 'BusinessEntityID'
 ```
-
+## Finding **function** and **procedure**
+```sql
+SELECT ROUTINE_TYPE, ROUTINE_NAME
+FROM INFORMATION_SCHEMA.ROUTINES
+WHERE ROUTINE_SCHEMA = 'shay_practice_mysql';
+```
 ## Show tables schema of specific database
 ```sql
 SELECT * ##`table_schema`
@@ -616,9 +644,13 @@ SELECT count(*) AS totalTables
 FROM INFORMATION_SCHEMA.TABLES
 WHERE TABLE_SCHEMA = 'db_playground';
 ```
+## Retrieves all views over the database
+```sql
+SELECT  *
+FROM    INFORMATION_SCHEMA.VIEWS
+```
 
-## Finding all partitions 
-
+## Finding all partitions
 ```sql
 SELECT TABLE_NAME,PARTITION_NAME,TABLE_ROWS,AVG_ROW_LENGTH,DATA_LENGTH
 FROM INFORMATION_SCHEMA.PARTITIONS
@@ -664,6 +696,59 @@ drop function my_dummy_function;
 SELECT book_id, book_name,author_id, my_dummy_function(author_id)
 FROM book_info;
 ```
+## Creating multiple tables using stored procedure
+```sql
+DROP PROCEDURE sp_creating_multiple_tables;
+```
+```sql
+DELIMITER $$
+CREATE PROCEDURE sp_creating_multiple_tables(database_look_for VARCHAR(255), IN tables_names json)
+BEGIN
+  DECLARE len INT DEFAULT JSON_LENGTH(tables_names);
+  DECLARE i INT DEFAULT 0;
+  DECLARE array_at VARCHAR(5);
+  WHILE i < len DO
+    set @array_at = concat('$[', i, ']');
+    set @table_name = concat('table_',JSON_UNQUOTE(JSON_EXTRACT(tables_names, @array_at)),'_class');
+    set @string_of_table_names := CONCAT('CREATE TABLE ', @table_name, ' (pupil_id               int unsigned auto_increment primary key,\
+                                                                          pupil_name             VARCHAR(200),\
+                                                                          class_name             VARCHAR(200));');
+    PREPARE stmt from @string_of_table_names;
+
+    EXECUTE stmt;
+    set i = i + 1;
+  END WHILE;
+END $$
+DELIMITER ;
+```
+```sql
+set @list_names := JSON_ARRAY('shay', 'gil','lital','lior','or','yarden','yakov','ahuva');
+```
+```sql
+CALL sp_creating_multiple_tables('db_playground', @list_names);
+```
+
+## Deleting multiple table using stored procedure
+```sql
+DROP PROCEDURE sp_dropping_multiple_tables;
+
+DELIMITER $$
+CREATE PROCEDURE sp_dropping_multiple_tables(database_look_for VARCHAR(255), table_name_regex VARCHAR(255))
+BEGIN
+  SELECT @string_of_table_names := CONCAT('drop table ', GROUP_CONCAT(TABLE_NAME))
+  FROM information_schema.tables
+  WHERE TABLE_SCHEMA = database_look_for
+    AND TABLE_NAME REGEXP table_name_regex;
+
+  PREPARE stmt from @string_of_table_names;
+  EXECUTE stmt;
+  DROP prepare stmt;
+END $$
+DELIMITER ;
+```
+```sql
+CALL sp_dropping_multiple_tables('db_playground', '^table_[a-z]+_*[a-z]*_class$');
+```
 
 # User-Defined Variables (UDV)
 ## Example of using Variables
@@ -678,10 +763,13 @@ WHERE year_published=@min_year_published OR
       year_published=@max_year_published;
 ```
 
+# Views
+## creating a view
+
 
 
 # REGEXP
-## List the books names which starts with specific word 
+## List the books names which starts with specific word
 ```sql
 SELECT book_name_in_english
 FROM simania_and_crawler_foreign_tb
@@ -696,7 +784,7 @@ FROM simania_and_crawler_foreign_tb
 WHERE book_name_in_english REGEXP 'God$';
 ```
 
-## Number of books we have in the "book_name_in_english" column 
+## Number of books we have in the "book_name_in_english" column
 ```sql
 SELECT distinct (book_name_in_english)
 FROM simania_and_crawler_foreign_tb
@@ -704,7 +792,7 @@ WHERE book_name_in_english REGEXP '[a-z]'
 ```
 
 
-## Cutting the user mail address to pieces - by using "SUBSTRING_INDEX" function 
+## Cutting the user mail address to pieces - by using "SUBSTRING_INDEX" function
 ```sql
 SET @email = 'shaycohen@hotmail.com';
 SELECT @email,
@@ -718,4 +806,194 @@ SELECT book_name_in_hebrew, book_name_in_hebrew LIKE 'בית%', book_name_in_heb
 FROM simania_and_crawler_foreign_tb;
 ```
 
+# JSON in mysql
 
+## Basic Operations
+
+###  Create json array
+```sql
+set @data:=JSON_ARRAY('new-york', 'orlando', 'new-jersey');
+```
+
+### Create key-value
+
+Create list of key-value pairs and returns a JSON object containing those pairs
+
+```sql
+SET @data = JSON_OBJECT('private_name', 'Yossi','family_name','Cohen');
+SELECT @data;
+```
+
+**Output:**
+
+```json
+{"family_name": "Cohen", "private_name": "Yossi"}
+```
+
+
+### Extract values from json
+
+* Single values:
+```sql
+SELECT JSON_EXTRACT(@data, '$[1]')
+```
+
+* Multiple values:
+
+```sql
+SELECT JSON_EXTRACT(@data, '$[1 to 2]')
+```
+
+* Extracting the values from jsons maps:
+```sql
+SELECT JSON_EXTRACT('{"France": "Paris", "Israel": "Jerusalem", "America": ["New-York", "Miami", "LA"]}', '$.*');
+```
+
+
+**Reminder:** index array starts from zero.
+
+### Get number of elements in json
+```sql
+select @len:=json_length(@data);
+```
+
+### Remove Quotes from a JSON Document
+```sql
+SET @Person_Name = '"Shay Cohen"';
+SELECT
+  @Person_Name Original,
+  JSON_UNQUOTE(@Person_Name) Unquoted;
+```
+
+### Merging json documents and preserving element's order
+
+```sql
+SELECT JSON_MERGE_PRESERVE('{ "a": 1, "b": 2 }','{ "a": 3, "c": 4 }','{ "a": 5, "d": 6 }');
+```
+
+**Output**
+
+```json
+{"a": [1, 3, 5], "b": 2, "c": 4, "d": 6}
+```
+
+## Integrating json documents with mysql tables
+
+### Create a table linked to a json document
+```sql
+CREATE TABLE my_table_from_document(json_col JSON);
+```
+### Insert values into json document
+```sql
+INSERT INTO my_table_from_document VALUES (
+    '{ "people": [
+        { "name":"John Smith",  "address":"780 Mission St, San Francisco, CA 94103"},
+        { "name":"Sally Brown",  "address":"75 37th Ave S, St Cloud, MN 94103"},
+        { "name":"John Johnson",  "address":"1262 Roosevelt Trail, Raymond, ME 04071"}
+     ] }');
+```
+
+**Output json document**
+
+```json
+{"people": [{"name": "John Smith", "address": "780 Mission St, San Francisco, CA 94103"}, {"name": "Sally Brown", "address": "75 37th Ave S, St Cloud, MN 94103"}, {"name": "John Johnson", "address": "1262 Roosevelt Trail, Raymond, ME 04071"}]}
+```
+
+
+### Retrieving json document in a mysql format table
+```sql
+SELECT people.*
+FROM my_document,
+     JSON_TABLE(json_col, '$.people[*]' COLUMNS (
+                name_col VARCHAR(40)  PATH '$.name',
+                address_col VARCHAR(100) PATH '$.address')
+     ) people;
+```
+**Output json Table**
+
+name_col | address_col
+----- | ---------
+John Smith | 780 Mission St, San Francisco, CA 94103
+Sally Brown | 75 37th Ave S, St Cloud, MN 94103
+John Johnson | 1262 Roosevelt Trail, Raymond, ME 04071
+
+
+### Retrieving json document in a mysql format table with filtering
+```sql
+SELECT people.*
+FROM my_tb,
+     JSON_TABLE(json_col, '$.people[*]' COLUMNS (
+                name_col VARCHAR(40)  PATH '$.name',
+                address_col VARCHAR(100) PATH '$.address')
+     ) people
+WHERE people.name LIKE 'John%';
+```
+
+**Output json Table**
+
+name_col | address_col
+----- | ---------
+John Smith | 780 Mission St, San Francisco, CA 94103
+John Johnson | 1262 Roosevelt Trail, Raymond, ME 04071
+
+
+### Aggregates a result set as a single JSON array whose elements consist of the rows
+
+**MySQL Format table**
+
+Given the following mysql table:
+
+id | attribute | attribute
+----- | --------- | ---------
+2 |color|red
+2|fabric|American
+3|color|green
+3|shape|square
+
+**After Aggregation operation**
+
+```sql
+SELECT o_id, JSON_ARRAYAGG(attribute) AS attributes
+FROM Classifier
+GROUP BY id;
+```
+_Output_
+
+id | attribute
+----- | ---------
+2 | ["color", "fabric"]
+3 | ["color", "shape"]
+
+
+### Reading two columns or expressions and shows them as a single JSON object
+*Using JSON_OBJECTAGG*
+```sql
+SELECT id, JSON_OBJECTAGG(attribute, value) AS attributes_and_value
+FROM Classifier
+GROUP BY id;
+```
+
+_Output_
+
+id | attributes_and_value
+----- | ---------
+2 | \{"color": "red", "fabric": "American"\}
+3 | \{"color": "green", "shape": "square"\}
+
+
+
+
+### Converting json table to json file format document (Useful)
+
+```sql
+SELECT JSON_OBJECT("people", JSON_ARRAYAGG(JSON_OBJECT("name", name_col, "address", address_col))) json_doc
+FROM my_tb,
+     JSON_TABLE(json_col, '$.people[*]' COLUMNS (
+                name_col VARCHAR(40)  PATH '$.name',
+                address_col VARCHAR(100) PATH '$.address')
+     ) people
+WHERE people.name LIKE 'John%';
+```
+
+# References
+[mysql-json-functions](http://dasini.net/blog/2018/07/23/30-mins-with-mysql-json-functions/)
