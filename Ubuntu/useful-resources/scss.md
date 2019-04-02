@@ -58,6 +58,14 @@ Or you install two valuaeable extensions in vscode:
 * If your are using SASS install the extension: [Link](https://marketplace.visualstudio.com/items?itemName=robinbentley.sass-indented)
 
 
+### Configuring `Live Sass Compiler`
+
+According to this [Link](https://github.com/ritwickdey/vscode-live-sass-compiler/blob/master/docs/faqs.md)
+
+Make sure the css file which was generated matches the path you mentioned in the index.html.
+
+To generate the config easily run the script `create-config-scss`
+which will create a `.vscode` and in it is the config file.
 
 
 ```css
