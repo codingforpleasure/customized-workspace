@@ -2,8 +2,11 @@
    * [SCSS (Sassy CSS)](#scss-sassy-css)
       * [Comparison of SCSS to SASS](#comparison-of-scss-to-sass)
       * [Setup](#setup)
+         * [Configuring Live Sass Compiler](#configuring-live-sass-compiler)
+      * [Good habits](#good-habits)
       * [Powerful capabilities:](#powerful-capabilities)
          * [Variables](#variables)
+         * [Ampersand (adding another class)](#ampersand-adding-another-class)
          * [Importing](#importing)
          * [Partials](#partials)
          * [Map](#map)
@@ -24,7 +27,7 @@
          * [Inheritance](#inheritance)
          * [Media queries](#media-queries)
 
-<!-- Added by: gil_diy, at: 2019-03-11T10:49+02:00 -->
+<!-- Added by: gil_diy, at: 2019-04-06T10:42+03:00 -->
 
 <!--te-->
 
@@ -79,6 +82,9 @@ which will create a `.vscode` and in it is the config file.
 	}
 }
 ```
+## Good habits
+
+[Link](https://medium.com/@osternaud_clem/organize-your-sass-files-b2c2513f3fcf)
 
 ## Powerful capabilities:
 
