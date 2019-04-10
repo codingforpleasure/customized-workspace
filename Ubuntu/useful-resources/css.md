@@ -12,6 +12,9 @@
       * [Image](#image)
       * [Polygon](#polygon)
       * [Flex <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" rel="nofollow">(Reference)</a>](#flex-reference)
+      * [Grid](#grid)
+      * [Create shapes](#create-shapes)
+         * [Create circle in the center of the screen:](#create-circle-in-the-center-of-the-screen)
       * [Styling Text](#styling-text)
       * [Styling Links](#styling-links)
       * [Selectors](#selectors)
@@ -31,7 +34,7 @@
          * [Example 2: Animating movement and opacity <strong>with keyframes</strong>](#example-2-animating-movement-and-opacity-with-keyframes)
          * [Example 3: Animating color transition](#example-3-animating-color-transition)
 
-<!-- Added by: gil_diy, at: 2019-03-27T17:15+02:00 -->
+<!-- Added by: gil_diy, at: 2019-03-28T10:17+02:00 -->
 
 <!--te-->
 
@@ -50,7 +53,7 @@ div, p | Selects all &lt;div&gt; elements **and** all &lt;p&gt; elements |
 div p | Selects all &lt;p&gt; elements **inside** &lt;div&gt; elements |
 div > p | Selects all &lt;p&gt; elements where the parent is a &lt;div&gt; element |
 :nth-child(n) | selector matches every element that is the nth child, regardless of type, of its parent. |  [Link](https://www.w3schools.com/csSref/tryit.asp?filename=trycss3_nth-child)
-
+.my-class:target | This target pseudo class will let you style the thing that was the target of the link which was clicked
 [CSS Selectors reference](https://www.w3schools.com/csSref/css_selectors.asp)
 
 
@@ -127,7 +130,7 @@ p{
 .container {
   max-width: 800px;
   width: calc(100vw - 2em);
-  margin: 0 auto;
+  margin: 0 auto; //Center things in the horizontal axis
 }
 
 ```
@@ -170,10 +173,6 @@ body {
    color: var(--my-primary-color);
 }
 ```
-
-Title1 | Title2
-------------|-----
- element | element-description
 
 
 ## Colors
@@ -234,13 +233,15 @@ Positioning an image | `background-position: center`
 [Nice background patterns](https://www.toptal.com/designers/subtlepatterns/)
 
 
-## Polygon
+## Polygon (For creating any type of shape)
 
 specify the coordinates(either px or percentage) of the polygen, clockwise order. i.e:
 
 ```css
 clip-path: polygon(0 0, 100% 0 , 100% 200px, 0 100%)
 ```
+
+[Clip-path demostration](https://youtu.be/QY7Rj8aZcZk?t=480)
 
 [Useful tool](https://bennettfeely.com/clippy/)
 
@@ -278,6 +279,38 @@ Description | Example
 
 [Link](https://medium.com/@js_tut/flexbox-the-animated-tutorial-8075cbe4c1b2)
 
+
+## Grid
+
+`display: grid`
+
+Description | Example
+------------|-----
+ Centers elements in the grid| `place-items`
+
+
+## Create shapes
+
+### Create circle in the center of the screen:
+```css
+.one__icon{
+    background: rgba(0,0,0,.3);
+    color: rgba(0,0,0,.3);
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;    // Position the shape in center of the horiznotal axis
+    border-radius: 50%; //  Creates a circle
+    display: grid;       // Essential for `place-items` property
+    place-items: center; // Shorthand to both justify-items and align-items together
+}
+
+```
+
+* comments: `place-items: center` is a shorthand to both:
+
+    `justify-items: center` and `align-items:center` together.
+
+### Create
 
 ## Styling Text
 
@@ -338,6 +371,24 @@ Select the paragraphs that are **inside** `my_class` | `.my_class p { color: gre
 
 Select the paragraphs that are inside body-text | `.body-tex`
 
+## Pseudo Elements Before and After
+It adds to the element the a specific design before and after the element,
+**Attention:** The `content` field is essentional.
+
+### use cases
+#### Use case #1: Add quotation marks
+```css
+p::before{
+    content: open-quote; //Essetnial otherwise it won't work
+    color:red;
+}
+
+p::after{
+    content: close-quote;
+    color:red;
+}
+```
+#### Use case #2: Add hover tool-tip
 
 ## Text properties
 
@@ -424,6 +475,10 @@ Add glowing effect | `box-shadow: 0 0 10px #FFF`
 Great reference to resources:
 
 [css-tricks (border-radius)](https://css-tricks.com/almanac/properties/b/border-radius/)
+
+[Fancy border-radius](https://9elements.github.io/fancy-border-radius/)
+
+
 [css-tricks (box-shadow)](https://css-tricks.com/almanac/properties/b/box-shadow/)
 
 ### Floats & Clears
@@ -477,12 +532,6 @@ Description | example
 Style **order** list | `list-style-type: lower-roman | lower-alpha | upper-alpha;`
 Style **unorder** list | `list-style-type: circle | square | disc;`
 Style list with image bullets| `list-style-image: url(../img/icon.png);`
-
-
-## Useful shape tool
-
-[Link](https://bennettfeely.com/clippy/)
-
 
 ## Animation
 
