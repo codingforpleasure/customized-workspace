@@ -5,6 +5,8 @@ server <- function(input, output) {
     # generate bins based on input$bins from ui.R
     x    <- faithful[, 2] 
     bins <- seq(min(x), max(x), length.out = input$bins + 1)
+    
+    #  An example of a print debug:
     cat(file=stderr(), "drawing histogram with", input$bins, "bins", "\n")
     
     # Example using browser
