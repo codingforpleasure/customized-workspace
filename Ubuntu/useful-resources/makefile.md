@@ -1,4 +1,16 @@
 <!--ts-->
+   * [Makefile](#makefile)
+      * [few examples of makefiles:](#few-examples-of-makefiles)
+         * [Example #1:](#example-1)
+         * [Example #2:](#example-2)
+         * [Example #3:](#example-3)
+         * [Example #4:](#example-4)
+         * [Example #5:](#example-5)
+         * [Example $6:](#example-6)
+      * [References](#references)
+
+<!-- Added by: gil_diy, at: 2019-04-24T14:58+03:00 -->
+
 <!--te-->
 
 # Makefile
@@ -132,3 +144,9 @@ hellomake: $(OBJ)
 clean:
 	rm -f $(ODIR)/*.o *~ core $(INCDIR)/*~
 ```
+
+## References
+[Introduction to makefiles](https://physicscodingclub.github.io/slides/2017-08-25-intro_to_makefiles.pdf)
+[practical makefile](http://nuclear.mutantstargoat.com/articles/make/#practical-makefile)
+[makefile tutorial](https://makefiletutorial.com/)
+
