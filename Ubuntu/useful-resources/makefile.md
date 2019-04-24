@@ -147,6 +147,8 @@ clean:
 
 ## References
 [Introduction to makefiles](https://physicscodingclub.github.io/slides/2017-08-25-intro_to_makefiles.pdf)
+
 [practical makefile](http://nuclear.mutantstargoat.com/articles/make/#practical-makefile)
+
 [makefile tutorial](https://makefiletutorial.com/)
 
