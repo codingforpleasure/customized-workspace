@@ -1,15 +1,20 @@
 <!--ts-->
    * [Makefile](#makefile)
+      * [Automatic variables:](#automatic-variables)
+      * [Few Useful flags:](#few-useful-flags)
       * [few examples of makefiles:](#few-examples-of-makefiles)
          * [Example #1:](#example-1)
          * [Example #2:](#example-2)
          * [Example #3:](#example-3)
          * [Example #4:](#example-4)
          * [Example #5:](#example-5)
-         * [Example $6:](#example-6)
+         * [Example #6:](#example-6)
+         * [Example #4:](#example-4-1)
+         * [Example #5:](#example-5-1)
+         * [Example $6:](#example-6-1)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: 2019-04-24T14:58+03:00 -->
+<!-- Added by: gil_diy, at: 2019-04-25T11:12+03:00 -->
 
 <!--te-->
 
