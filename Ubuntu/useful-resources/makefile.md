@@ -16,6 +16,66 @@
 # Makefile
 A makefile is a file (by default named "Makefile") containing a set of directives used by a make build automation tool to generate a target/goal.
 
+
+Basic form of a rule is:
+
+```bash
+target: prerequisites
+	recipe
+```
+
+## Automatic variables:
+
+```bash
+%.o: %.c
+	$(CC) $(CFLAGS) -o $@ $^
+```
+
+**$@** and **$ˆ** are automatic variables:
+
+* $@ Expands to the name of the target
+* $^ expands to the names of all the prerequisites, separated by spaces
+
+Description | Automatic variable
+------------|-----
+Expands to the name of the target | $@
+The name of the first prerequisite | $<
+The names of all the prerequisites | $^
+Prerequisites listed more than once are duplicated in the order | $+
+
+For getting a better grasp run this, and see the actual output:
+```bash
+.PHONY: all
+
+all: hello world
+
+hello world: foo foo foo bar bar
+        @echo "== target: $@ =="
+        @echo $<
+        @echo $^
+        @echo $+
+
+foo:
+        @echo "Hello foo"
+
+bar:
+        @echo "Hello Bar"
+```
+
+## Few Useful flags:
+
+Description | how?
+------------|-----
+Tries to run N recipes at once - very useful for larger projects | `--jobs=N`
+N doesn't start new jobs if the load is more than N | `--load-average=N`
+Tells make to keep going even if there are **errors** - useful many errors as possible | `--keep-going`
+FILE use FILE instead of default makefile | `--file=FILE`
+DIRECTORY change DIRECTORY before doing anything | `--directory`
+Just print the recipes, instead of running them | `--dry-run`
+
+
+
+
 ## few examples of makefiles:
 
 ### Example #1:
@@ -26,9 +86,13 @@ hellomake: hellomake.c hellofunc.c
 
 
 ### Example #2:
+
+What if we sometimes want to compile with a different compiler?
+Therefore i'll be using variables
+
 ```bash
 CC=gcc
-CFLAGS=-I.
+CFLAGS=-I. -g -Wall
 
 hellomake: hellomake.o hellofunc.o
      $(CC) -o hellomake hellomake.o hellofunc.o
@@ -36,8 +100,56 @@ hellomake: hellomake.o hellofunc.o
 
 ### Example #3:
 ```bash
+CC = gcc
+# CFLAGS for C compile flags, CXXFLAGS for C++, FFLAGS for Fortran
+CFLAGS = -g -Wall
+# LDLIBS for libraries, LDFLAGS for linker flags (i.e. -L)
+LDLIBS = -lm
+all: program
+program: program.o foo.o
+	$(CC) $(CFLAGS) -o program program.o foo.o $(LDLIBS)
+
+program.o: program.c$(CC) $(CFLAGS) -c program.c
+
+foo.o: foo.c$(CC) $(CFLAGS) -c foo.c
+```
+
+### Example #4:
+We often want to compile from a clean start
+The conventional target for this is clean:
+```bash
+
+.PHONY: clean
+clean:
+	rm -fv *.o
+```
+
+* We use-fso that rm doesn’t error if a file doesn’t exist (more important if you usea variable here).
+
+* The .PHONY rule tells make that clean doesn’t produce a file named clean.
+
+
+### Example #5:
+```bash
+CC = gcc
+CFLAGS = -g -Wall
+LDLIBS = -lm
+
+all: program
+program: program.o foo.o
+	$(CC) $(CFLAGS) -o $@ $^ $(LDLIBS)
+
+%.o: %.c
+	$(CC) $(CFLAGS) -c -o $@ $^
+
+clean:
+	rm -fv *.o
+```
+
+### Example #6:
+```bash
 CFLAGS = -Wall
-LDFLAGS = -lm # not really needed for this exercise
+LDFLAGS = -lm # LDFLAGS for linker flags
 CC = gcc -std=c99
 ECHO = echo "going to compile for target $@"
 
@@ -146,6 +258,9 @@ clean:
 ```
 
 ## References
+
+[C Makefile cheatsheet](http://www.csheeet.com/en/latest/notes/c_make.html)
+
 [Introduction to makefiles](https://physicscodingclub.github.io/slides/2017-08-25-intro_to_makefiles.pdf)
 
 [practical makefile](http://nuclear.mutantstargoat.com/articles/make/#practical-makefile)
