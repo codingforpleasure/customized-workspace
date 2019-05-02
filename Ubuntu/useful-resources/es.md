@@ -58,6 +58,12 @@ sudo systemctl start elasticsearch.service
 sudo systemctl stop elasticsearch.service
 ```
 
+## Get Elasticsearch version from shell:
+
+```bash
+curl -XGET 'localhost:9200'
+```
+
 
 You can easily assure the server runs on your browser with:
 ```bash
@@ -483,7 +489,25 @@ Each bucket associated with a key.
 ## Elasticsearch plugins
 
 ### Installing an Elasticsearch plugin:
+
+For hebrew plugin:
+
 ```bash
 sudo ./elasticsearch-plugin install file:///home/gil_diy/Downloads/elastic-search-hebrew
 /es_ik/elasticsearch-analysis-ik-6.4.2.zip
 ```
+
+
+# Kibana
+
+## Starting and stopping the service:
+```bash
+sudo systemctl status kibana.service
+sudo systemctl start elasticsearch.service
+sudo systemctl stop elasticsearch.service
+```
+## Get kibana version
+```bash
+sudo /usr/share/kibana/bin/kibana --version
+```
+
