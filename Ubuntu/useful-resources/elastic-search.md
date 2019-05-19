@@ -14,12 +14,21 @@
          * [Update the document's content with curl](#update-the-documents-content-with-curl)
          * [Add a new field to an existed document with curl](#add-a-new-field-to-an-existed-document-with-curl)
          * [Deleting an index with curl](#deleting-an-index-with-curl)
+      * [Term Level queries](#term-level-queries)
+         * [Example #1:  Searching all documents with the field 'is_active' set to true.](#example-1--searching-all-documents-with-the-field-is_active-set-to-true)
+         * [Example #2:  Multiple terms](#example-2--multiple-terms)
+         * [Example #3:  Retrieve documents based on Documents' IDs](#example-3--retrieve-documents-based-on-documents-ids)
+         * [Example #4:  Matching documents with range values](#example-4--matching-documents-with-range-values)
+         * [Example #5:  Matching documents with range values](#example-5--matching-documents-with-range-values)
+         * [Example #6:  Look for terms to begin with a given prefix](#example-6--look-for-terms-to-begin-with-a-given-prefix)
+         * [Example #6:  Look for terms with a given wildcard](#example-6--look-for-terms-with-a-given-wildcard)
+         * [Example #7:  Look for terms with regex](#example-7--look-for-terms-with-regex)
          * [Search using query params](#search-using-query-params)
       * [Full Text searches](#full-text-searches)
          * [Search using the filter context](#search-using-the-filter-context)
       * [Aggregations](#aggregations)
 
-<!-- Added by: gil_diy, at: 2018-11-08T15:58+02:00 -->
+<!-- Added by: gil_diy, at: 2019-05-19T16:28+03:00 -->
 
 <!--te-->
 
@@ -253,6 +262,11 @@ curl -XDELETE 'localhost:9200/books/drama/1?pretty'
 curl -XDELETE 'localhost:9200/books?pretty'
 ```
 
+**Deleting all indices in a node:
+```bash
+curl -X DELETE "localhost:9200/*.*"
+curl -X DELETE "localhost:9200/*"
+```
 
 Bulk operations on documents:
 **retrieve multiple documents:**
@@ -306,6 +320,118 @@ How to insert all document from file into elasticsearch:
 curl -XPOST  -H 'Content-Type: application/json' 'localhost:9200/_bulk?pretty&refresh' --data-binary @"generated_for_elasticsearch.json"
 '
 ```
+
+
+## Term Level queries
+Basic Usage: for well data structured such as:
+a. dates
+b. numbers
+c. keywords fields.
+
+Term level queries find exact matches
+### Example #1:  Searching all documents with the field 'is_active' set to `true`.
+
+```bash
+GET /product/default/_search
+{
+	"query" : {
+		"term" : {
+		 "is_active" : true
+		}
+	}
+}
+```
+
+### Example #2:  Multiple terms
+The documents will match if it contains any of the supplied values within the field that we specify. we supply an array of terms
+```bash
+GET /product/default/_search
+{
+	"query" : {
+		"terms" : {
+		 "tags.keyword":[ "Soup", "Cake", "" ]
+		}
+	}
+}
+```
+
+### Example #3:  Retrieve documents based on Documents' IDs
+We will specify array of Document ID's we would like to fetch.
+this is useful if you want to fetch a number of documents whose IDs you already know.
+```bash
+GET /product/default/_search
+{
+	"query" : {
+		"ids" : {
+		 "values":[ 17385, 31520, 15974 ]
+		}
+	}
+}
+```
+
+### Example #4:  Matching documents with range values
+
+Movies which have scored rating of higher then 3 stars and less then 5 stars
+```bash
+GET /movies/default/_search
+{
+	"query" : {
+		"range" : {
+		 "movie_rating":{
+		 	"gte": 3,
+		 	"lte": 5
+		 }
+		}
+	}
+}
+```
+Another example with dates:
+```bash
+GET /movies/default/_search
+{
+	"query" : {
+		"range" : {
+		 "filmed":{
+		 	"gte": "01-01-2010",
+		 	"lte": "31-12-2010",
+		 	"format":"dd-MM-yyyy"
+		 }
+		}
+	}
+}
+```
+
+### Example #5:  Matching documents with range values
+
+
+### Example #6:  Look for terms to begin with a given prefix
+```bash
+GET /movies/default/_search
+{
+    "query": {
+      "prefix":{
+            "name.keyword": "Super"
+      }
+    }
+}
+```
+
+### Example #6:  Look for terms with a given wildcard
+```bash
+GET /movies/default/_search
+{
+    "query": {
+      "prefix":{
+            "name.keyword": "Su*man"
+      }
+    }
+}
+```
+You can also use `?` for any single character.
+**Attention**: Something you should be careful with is placing wildcards at the begining of a term. if you place an asterisk or a question mark at the beginning , This can lead to extremely slow queries so you should avoid doing this.
+
+
+### Example #7:  Look for terms with regex
 
 Query
 ### Search using query params
