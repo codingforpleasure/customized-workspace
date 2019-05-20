@@ -1,7 +1,7 @@
 # Markdown's snippets and hotkeys
 
 <p align="center">
-  <img src="images/markdown.png" title="A simple markdown intro" style="width:400px;">
+  <img src="images/markdown/markdown.png" title="A simple markdown intro" style="width:400px;">
 </p>
 
 <!--ts-->
