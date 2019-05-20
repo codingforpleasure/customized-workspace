@@ -19,16 +19,23 @@
          * [Example #2:  Multiple terms](#example-2--multiple-terms)
          * [Example #3:  Retrieve documents based on Documents' IDs](#example-3--retrieve-documents-based-on-documents-ids)
          * [Example #4:  Matching documents with range values](#example-4--matching-documents-with-range-values)
-         * [Example #5:  Matching documents with range values](#example-5--matching-documents-with-range-values)
-         * [Example #6:  Look for terms to begin with a given prefix](#example-6--look-for-terms-to-begin-with-a-given-prefix)
+         * [Example #5:  Look for terms to begin with a given prefix](#example-5--look-for-terms-to-begin-with-a-given-prefix)
          * [Example #6:  Look for terms with a given wildcard](#example-6--look-for-terms-with-a-given-wildcard)
          * [Example #7:  Look for terms with regex](#example-7--look-for-terms-with-regex)
+      * [Full text queries](#full-text-queries)
+         * [Example #1:  Flexible matching with the match query](#example-1--flexible-matching-with-the-match-query)
+         * [Example #2:  Matching phrases](#example-2--matching-phrases)
+         * [Example #2: Searching multiple fields](#example-2-searching-multiple-fields)
+      * [Improving search results](#improving-search-results)
+         * [Example #1: Proximity searches](#example-1-proximity-searches)
+         * [Example #2: Fuzzy match query (handling typos)](#example-2-fuzzy-match-query-handling-typos)
+         * [Example #3: Adding synonyms from a file](#example-3-adding-synonyms-from-a-file)
          * [Search using query params](#search-using-query-params)
-      * [Full Text searches](#full-text-searches)
+      * [Full Text queries](#full-text-queries-1)
          * [Search using the filter context](#search-using-the-filter-context)
       * [Aggregations](#aggregations)
 
-<!-- Added by: gil_diy, at: 2019-05-19T16:28+03:00 -->
+<!-- Added by: gil_diy, at: 2019-05-20T11:05+03:00 -->
 
 <!--te-->
 
@@ -328,7 +335,9 @@ a. dates
 b. numbers
 c. keywords fields.
 
-Term level queries find exact matches
+Term level queries find **exact matches** like on enums fields.
+**Reminder:** Something important to remember is that Term Level queries aare not analysed (Term Level queries with synonyms would not work).
+
 ### Example #1:  Searching all documents with the field 'is_active' set to `true`.
 
 ```bash
@@ -349,7 +358,7 @@ GET /product/default/_search
 {
 	"query" : {
 		"terms" : {
-		 "tags.keyword":[ "Soup", "Cake", "" ]
+		 "tags.keyword":[ "Soup", "Cake", "Wine" ]
 		}
 	}
 }
@@ -401,10 +410,7 @@ GET /movies/default/_search
 }
 ```
 
-### Example #5:  Matching documents with range values
-
-
-### Example #6:  Look for terms to begin with a given prefix
+### Example #5:  Look for terms to begin with a given prefix
 ```bash
 GET /movies/default/_search
 {
@@ -432,6 +438,146 @@ You can also use `?` for any single character.
 
 
 ### Example #7:  Look for terms with regex
+```bash
+GET /movies/default/_search
+{
+    "query": {
+      "regexp":{
+            "name.keyword": "Su[a-zA-Z]+r"
+      }
+    }
+}
+```
+Attention: Elasticsearch uses Lucene's regular expression engine which **is not perl compatible**.
+
+
+## Full text queries
+### Example #1:  Flexible matching with the match query
+```bash
+GET /recipe/default/_search
+{
+    "query": {
+      "match":{
+            "title": "Recepies with pasta or spaghetti"
+      }
+    }
+}
+```
+
+Comments:
+* You should notice in the results for the title only includes the term pasta and none of the other terms. The reason for that is that the match query is a Boolean query, what happens internally is that the terms are used boolean query with the **default operator of** **OR**.
+Since the default operator is **OR** all terms do not need to appear in the field they were searching, but the more terms that appear the higher the relevance.
+
+
+
+The default operator can be changed to **AND** operator for example:
+```bash
+GET /recipe/default/_search
+{
+    "query": {
+      "match":{
+            "title": {
+            	"query":"pasta spaghetti",
+            	"operator":"and"
+      		}
+    }
+}
+```
+So now **all terms** in the query must be present within a document's title field to match (The order of the terms appear doesn't matter) .
+Important to notice is that we still searching for terms and **not an entire sentence** so that's why some documents match, Remember the query that we entered matches query is analyzed by using the analyzer.
+This is of course different then the term level queries which are not analyzed.
+
+
+### Example #2:  Matching phrases
+
+```bash
+GET /recipe/default/_search
+{
+    "query": {
+		"match_phrase":{
+			"title": "spaghetti puttanesca"
+		}
+ 	}
+}
+```
+**Comments:**
+1. Here The order of the terms matters unlike the match query we saw before.
+2. Both the terms `spaghetti puttanesca` must appear in the title field in that order and with no other terms in between for this query to match.
+
+### Example #2: Searching multiple fields
+Here an example how we can search multiple fields within the same query.
+```bash
+GET /recipe/default/_search
+{
+    "query": {
+		"multi_match":{
+			"query":"pasta",
+			"fields":["title","description"]
+		}
+ 	}
+}
+```
+
+## Improving search results
+
+### Example #1: Proximity searches
+
+### Example #2: Fuzzy match query (handling typos)
+
+For example look for lobster, when we had a typo: `l0bster`
+```bash
+GET /product/default/_search
+{
+    "query": {
+		"match":{
+			"name":{
+				"query":"l0bster",
+				"fuzzines":"auto"
+		}
+ 	}
+}
+```
+We can see in the result is we get 5 matches since we're now allowing a number of characters to be inserted, deleted or substituted this way we make a query match a given document.
+Fuzziness is implemented by calculating [Levenstein distance](https://en.wikipedia.org/wiki/Levenshtein_distance#Example) (edit distance).
+
+Comments: by default `fuzzy_transpositions` is set to `true`.
+
+
+### Example #3: Adding synonyms from a file
+```bash
+PUT /synonyms
+{
+    "settings": {
+		"analysis":{
+			"filter":{
+				"synonym_test":{
+					"type": "synonym",
+					"synonyms_path" : "analysis/synonyms.txt"
+				}
+		},
+		"analyzer":{
+			"my_analyzer":{
+				"tokenizer":"standard",
+				"filter":{
+					"lowercase",
+					"synonym_test"
+				}
+			}
+		}
+ 	}
+}
+```
+The file `synonyms.txt` contains:
+```txt
+# This is a comment
+awful => terrible
+elasticsearch, logstash, kibana => elk
+weird, strange    <--------THIS LINE IS UNCLEAR FOR ME YET
+```
+
+
+
+[Intresting resource](https://www.peterbe.com/plog/synonyms-with-elasticsearch-dsl)
 
 Query
 ### Search using query params
@@ -505,7 +651,7 @@ curl -XGET 'localhost:9200/customers/_search?pretty' -d'
 ```
 
 
-## Full Text searches
+## Full Text queries
 
 1. Not an exact term match
 
