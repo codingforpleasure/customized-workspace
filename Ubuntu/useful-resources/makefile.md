@@ -3,18 +3,21 @@
       * [Automatic variables:](#automatic-variables)
       * [Few Useful flags:](#few-useful-flags)
       * [few examples of makefiles:](#few-examples-of-makefiles)
-         * [Example #1:](#example-1)
-         * [Example #2:](#example-2)
-         * [Example #3:](#example-3)
-         * [Example #4:](#example-4)
-         * [Example #5:](#example-5)
-         * [Example #6:](#example-6)
-         * [Example #4:](#example-4-1)
-         * [Example #5:](#example-5-1)
-         * [Example $6:](#example-6-1)
+         * [For C language](#for-c-language)
+            * [Example #1:](#example-1)
+            * [Example #2:](#example-2)
+            * [Example #3:](#example-3)
+            * [Example #4:](#example-4)
+            * [Example #5:](#example-5)
+            * [Example #6:](#example-6)
+            * [Example #7:](#example-7)
+            * [Example #8:](#example-8)
+            * [Example $6:](#example-6-1)
+         * [For CPP language](#for-cpp-language)
+            * [Example #1](#example-1-1)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: 2019-04-25T11:12+03:00 -->
+<!-- Added by: gil_diy, at: 2019-05-20T16:25+03:00 -->
 
 <!--te-->
 
@@ -83,14 +86,15 @@ Just print the recipes, instead of running them | `--dry-run`
 
 ## few examples of makefiles:
 
-### Example #1:
+### For C language
+#### Example #1:
 ```bash
 hellomake: hellomake.c hellofunc.c
      gcc -o hellomake hellomake.c hellofunc.c -I.
 ```
 
 
-### Example #2:
+#### Example #2:
 
 What if we sometimes want to compile with a different compiler?
 Therefore i'll be using variables
@@ -103,7 +107,7 @@ hellomake: hellomake.o hellofunc.o
      $(CC) -o hellomake hellomake.o hellofunc.o
 ```
 
-### Example #3:
+#### Example #3:
 ```bash
 CC = gcc
 # CFLAGS for C compile flags, CXXFLAGS for C++, FFLAGS for Fortran
@@ -119,7 +123,7 @@ program.o: program.c$(CC) $(CFLAGS) -c program.c
 foo.o: foo.c$(CC) $(CFLAGS) -c foo.c
 ```
 
-### Example #4:
+#### Example #4:
 We often want to compile from a clean start
 The conventional target for this is clean:
 ```bash
@@ -134,7 +138,7 @@ clean:
 * The .PHONY rule tells make that clean doesn’t produce a file named clean.
 
 
-### Example #5:
+#### Example #5:
 ```bash
 CC = gcc
 CFLAGS = -g -Wall
@@ -151,7 +155,7 @@ clean:
 	rm -fv *.o
 ```
 
-### Example #6:
+#### Example #6:
 ```bash
 CFLAGS = -Wall
 LDFLAGS = -lm # LDFLAGS for linker flags
@@ -204,7 +208,7 @@ test:
 
 ```
 
-### Example #4:
+#### Example #7:
 ```bash
 CC=gcc
 CFLAGS=-I.
@@ -217,7 +221,7 @@ hellomake: hellomake.o hellofunc.o
 	$(CC) -o hellomake hellomake.o hellofunc.o
 ```
 
-### Example #5:
+#### Example #8:
 ```bash
 CC=gcc
 CFLAGS=-I.
@@ -232,7 +236,7 @@ hellomake: $(OBJ)
 ```
 
 
-### Example $6:
+#### Example $6:
 ```bash
 IDIR =../include
 CC=gcc
@@ -260,6 +264,38 @@ hellomake: $(OBJ)
 
 clean:
 	rm -f $(ODIR)/*.o *~ core $(INCDIR)/*~
+```
+
+
+### For CPP language
+
+Good to know:
+
+standard | flags
+---------|-------
+ c++11 | gnu++0x
+ c++14 | gnu++1y
+
+
+#### Example #1
+```bash
+FILENAME=Main
+CC=g++
+CPPFLAGS=-I. -std=gnu++0x
+DEPS = LinkedList.h Stack.h Queue.h
+OBJ = LinkedList.o Stack.o Queue.o Main.o
+
+
+%.o: %.c
+	$(CC) -c -o $@ $< $(CPPFLAGS)
+
+$(FILENAME): $(OBJ)
+	$(CC) -o $@ $^ $(CPPFLAGS)
+
+.PHONY: clean
+clean:
+	rm -fv *.o $(FILENAME)
+
 ```
 
 ## References
