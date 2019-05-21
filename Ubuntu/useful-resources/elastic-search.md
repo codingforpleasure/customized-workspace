@@ -30,12 +30,14 @@
          * [Example #1: Proximity searches](#example-1-proximity-searches)
          * [Example #2: Fuzzy match query (handling typos)](#example-2-fuzzy-match-query-handling-typos)
          * [Example #3: Adding synonyms from a file](#example-3-adding-synonyms-from-a-file)
+         * [Example #4: Highlight matches in fields](#example-4-highlight-matches-in-fields)
+         * [Example #5: Stemming](#example-5-stemming)
          * [Search using query params](#search-using-query-params)
       * [Full Text queries](#full-text-queries-1)
          * [Search using the filter context](#search-using-the-filter-context)
       * [Aggregations](#aggregations)
 
-<!-- Added by: gil_diy, at: 2019-05-20T11:05+03:00 -->
+<!-- Added by: gil_diy, at: 2019-05-21T14:45+03:00 -->
 
 <!--te-->
 
@@ -575,9 +577,93 @@ elasticsearch, logstash, kibana => elk
 weird, strange    <--------THIS LINE IS UNCLEAR FOR ME YET
 ```
 
+You can easily check it by executing this and see the result:
+```bash
+POST /synonyms/_analyze
+{
+	"analyzer":"my_analyzer",
+	"text": "Elasticsearch"
+}
+```
 
+maybe should use:
+```bash
+POST /synonyms/_update_by_query
+```
 
 [Intresting resource](https://www.peterbe.com/plog/synonyms-with-elasticsearch-dsl)
+
+### Example #4: Highlight matches in fields
+
+```bash
+GET /product/default/_search
+{
+    "query": {
+		"match":{
+			"name":"Elasticsearch story"
+ 	},
+ 	"highlight":{
+		"fields":{
+			"name":{}
+		}
+ 	}
+}
+```
+if you would like to wrap the matching words with different tags,
+you should write it in the query, for example:
+
+```bash
+GET /product/default/_search
+{
+    "query": {
+		"match":{
+			"name":"Elasticsearch story"
+ 	},
+ 	"highlight":{
+		"pre_tags" : ["<strong>"],
+		"post_tags" : ["</strong>"],
+		"fields":{
+			"name":{}
+		}
+ 	}
+}
+```
+
+
+
+### Example #5: Stemming
+```bash
+PUT /product
+{
+	"Settings":{
+		"analysis":{
+			"filter":{
+				"synonym_test":{
+					"type":"synonym",
+					"synonyms":[
+						"firm => company",
+						"love, enjoy"
+					]
+				},
+				"stemmer_test":{
+					"type":"stemmer",
+					"name":"english"
+				}
+			},
+			"analyzer":{
+				"my_analyzer":{
+					"tokenizer":"standard",
+					"filter":[
+						"lowercase",
+						"synonym_test",
+						"stemmer_test"
+					]
+				}
+			}
+		}
+	}
+}
+```
 
 Query
 ### Search using query params
