@@ -32,12 +32,16 @@
          * [Example #3: Adding synonyms from a file](#example-3-adding-synonyms-from-a-file)
          * [Example #4: Highlight matches in fields](#example-4-highlight-matches-in-fields)
          * [Example #5: Stemming](#example-5-stemming)
-         * [Search using query params](#search-using-query-params)
+      * [Suggesters](#suggesters)
+         * [Completion suggester](#completion-suggester)
+         * [Term suggester](#term-suggester)
+         * [Phrase suggester](#phrase-suggester)
+      * [Search using query params](#search-using-query-params)
       * [Full Text queries](#full-text-queries-1)
          * [Search using the filter context](#search-using-the-filter-context)
       * [Aggregations](#aggregations)
 
-<!-- Added by: gil_diy, at: 2019-05-21T14:45+03:00 -->
+<!-- Added by: gil_diy, at: 2019-05-27T15:51+03:00 -->
 
 <!--te-->
 
@@ -97,7 +101,7 @@ Cluster collection of nodes.
 Nodes join a cluster using the cluster name.
 
 * A whole bunch of documents that need to be indexed so they can be searched
-* Documents are divided into categories or types.
+* Documents are divided into categories or types (types has been removed in elasticsearch 7.0).
 * All of these different of types documents make up an index
  A blog post will be one type of document
  A comment of a post will be another type of document.
@@ -109,6 +113,14 @@ So index is a Collection of similiar documents identified by name.
  * Shards means to split the idex across multiple nodes in the cluster.
   So Sharding an index means that every node will have a subset of your index data, so the search willl be executed in parallel on multiple nodes.
 * Sharding makes your application much faster by scaling search volume/throughput by searching multiple replicas at the same time.
+
+
+* Each index has Analyzers, each analyzer has:
+  zero or more character filters
+  one and only one tokenizer
+  zero or more token filters
+
+* You can also define analyzer gloabally instead of at the index level.
 
 
 ## Basic operations is Elasticsearch (CRUD):
@@ -655,7 +667,7 @@ PUT /product
 					"tokenizer":"standard",
 					"filter":[
 						"lowercase",
-						"synonym_test",
+	 					"synonym_test",
 						"stemmer_test"
 					]
 				}
@@ -665,8 +677,58 @@ PUT /product
 }
 ```
 
-Query
-### Search using query params
+
+## Suggesters
+
+Suggest similar looking terms, what it that means depends on suggester.
+
+### Completion suggester
+**properties:**
+
+* Provide autocomplete
+
+* Only works based on prefix
+
+* Stored as special data structure for speed [Finite-state_transducer](https://en.wikipedia.org/wiki/Finite-state_transducer) (Costly to build, Stored in memory)
+
+```bash
+GET /product/default/_search
+{
+  "suggester":{
+    "my_autocomplete":{
+      "prefix":"fo",
+      "completion":{
+      "field":"field_to_use"
+      }
+    }
+  }
+}
+```
+
+For avoiding duplicates, we should add: `"skip_duplicates": true`
+For Adding fuzziness, we should add: `"fuzzy": { "fuzziness": "auto" }`
+### Term suggester
+
+**properties:**
+* Correct a user's spelling
+* Suggestions are based on edit distance (How many characters need to be changed for a term to match)
+
+I stopped here:
+https://youtu.be/PQGlhbf7o7c?list=PLIuTyKmG6V7OAqTYZL_vkkxAo8JK6eGb8&t=1389
+
+```bash
+GET /product/default/_search
+{
+
+}
+```
+
+
+### Phrase suggester
+**properties:**
+
+
+## Search using query params
 
 a. Query Params
 b. REquest Body
