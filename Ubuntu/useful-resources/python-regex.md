@@ -3,9 +3,11 @@
       * [Matching](#matching)
       * [flags](#flags)
       * [Search and replace](#search-and-replace)
+         * [Simple substitute](#simple-substitute)
+         * [Advance replace](#advance-replace)
       * [Regular-expression patterns:](#regular-expression-patterns)
 
-<!-- Added by: gil_diy, at: 2018-08-29T00:28+03:00 -->
+<!-- Added by: gil_diy, at: 2019-05-29T17:08+03:00 -->
 
 <!--te-->
 
@@ -51,15 +53,31 @@ re.M | Makes $ match the end of a line (not just the end of the string ) and mak
 
 
 ## Search and replace
+
+### Simple substitute
 re.sub(pattern, repl, string, max=0)
 
 ```python
 #!/usr/bin/python
 import re
-phone = "2004-959-559 # This is Phone Number"
+phone = "2004-959-559" # This is Phone Number"
 # Remove anything other than digits
 num = re.sub(r'\D', "", phone)
 print("Phone Num : "  + str(num))
+```
+
+### Advance replace
+```python
+#!/usr/bin/python
+import re
+small_image_url = "https://images.gr-assets.com/books/1553383690s/2657.jpg"
+
+# Replace the s (stands for small) which appears after the digits to l (stands for Large)
+large_image_url = re.sub(r'(.+\d+)(s)(\/\d+.jpg)', r'\1l\3', small_image_url)
+
+
+# So the output would be: "https://images.gr-assets.com/books/1553383690l/2657.jpg"
+print("The new url is : "  + large_image_url)
 ```
 
 ## Regular-expression patterns:
