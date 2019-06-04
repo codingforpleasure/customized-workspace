@@ -18,6 +18,7 @@ alias a='subl ~/.zshrc'
 alias r=rotate_image                # Rotate image
 alias s=source_me
 alias c=count_lines
+alias e=are_equal                   # Checks if two files are equal/same content
 alias i=get_info                    # Get size and dpi of image
 alias ag='ag --hidden'              # Search in hidden directories too (assuming .agignore was respected).
 alias {python-cli,py-cli}=ptpython
@@ -59,8 +60,8 @@ alias histg="history | grep "			  # Combine history with grep
 alias history=" history -E"
 alias lsg="ll | grep "              # Combine list files with grep
 
-alias pgrep="pgrep --list-full"			# lookup a process
-alias psg="pgrep --list-full"       # lookup a process
+alias {pgrep,psg}="pgrep --list-full"			# lookup a process
+
 
 alias top="htop"                    # Execute the interactive process viewer
 alias locate="sudo updatedb; locate --ignore-case "
@@ -73,6 +74,7 @@ alias {pycharm,charm}='fork_without_block pycharm.sh'
 alias {datagrip,dg}='fork_without_block datagrip.sh'
 alias {clion,lion}='fork_without_block clion.sh'
 alias webstorm='fork_without_block webstorm'
+alias rstudio='fork_without_block rstudio'
 alias idea='fork_without_block idea.sh'
 alias {ink,inkscape}='fork_without_block inkscape' # Even nicer than illustrator
 
