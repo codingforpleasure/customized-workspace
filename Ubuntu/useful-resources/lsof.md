@@ -15,3 +15,14 @@ Description | Command
  Get a list of all shared libraries files a specific process has been using | lsof -p <pid>  \|  grep \.so
  Get the log files which a specific process using | lsof -p <pid>  \|  grep log
  Get all processes which are listening on port 80 (linux sockets) | lsof -i 80
+ Get all processes which are listening on port 5000 (linux sockets) | lsof -i :5000
+
+
+
+
+Kill all programs using port 5000,
+The `-t` option retrieves the pid of each process:
+
+```bash
+sudo lsof -t -i tcp:8000 | xargs kill -9
+```
