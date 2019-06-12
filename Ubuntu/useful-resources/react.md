@@ -267,6 +267,7 @@ export {helpful, sort, sing}
 
 In a different file, i can import it:
 ```javascript
+// Order does not matters because we are going by the exact name
 import {helpful, sort} from './helpers'
 
 // Invoking the functions I have used:
@@ -446,7 +447,8 @@ class App extends React.component {
  ------------|-----
 1 | functions' name must be in PascalCase
 2 | Each component in a seperate file
-
+3 | The name of the file should match the of the component
+4 | Make a CSS file for each React Component
 
 ## Webpack
 * Enables module importing/exporting
