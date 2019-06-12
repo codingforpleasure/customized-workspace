@@ -6,17 +6,21 @@
          * [create react app](#create-react-app)
       * [Run the server:](#run-the-server)
       * [Props/render](#propsrender)
-      * [What is the difference building components as functions vs components as functions?](#what-is-the-difference-building-components-as-functions-vs-components-as-functions)
+      * [What is the difference building components as functions vs class bases components?](#what-is-the-difference-building-components-as-functions-vs-class-bases-components)
       * [Orginizing the project:](#orginizing-the-project)
          * [Importing and exporting components to seperate files:](#importing-and-exporting-components-to-seperate-files)
             * [Default imports](#default-imports)
          * [export by name](#export-by-name)
       * [React fragment](#react-fragment)
          * [shorthand for fragments:](#shorthand-for-fragments)
+      * [Properties aka. Props](#properties-aka-props)
+         * [Default props](#default-props)
+      * [Styling in React](#styling-in-react)
       * [React snippets](#react-snippets)
       * [Conventions - Rule of thumbs](#conventions---rule-of-thumbs)
+      * [Webpack](#webpack)
 
-<!-- Added by: gil_diy, at: 2019-06-02T12:09+03:00 -->
+<!-- Added by: gil_diy, at: 2019-06-13T01:30+03:00 -->
 
 <!--te-->
 
@@ -55,6 +59,9 @@ or
 npx create-react-app my-demo-project
 ```
 
+**Note: ** Create react app is built on top of "Webpack"
+
+
 Simply enter the directory which was created and enter vscode:
 ```bash
 cd my-demo-project && code .
@@ -62,7 +69,7 @@ cd my-demo-project && code .
 
 ## Run the server:
 ```bash
-npm start run
+npm start
 ```
 
 check it is up and running with:
@@ -230,9 +237,43 @@ export default Body;
 
 Last step is importing the file `Body.js` in the original file `App.js`:
 
-`import GilBody from "./components/Body";`
+`import Body from "./components/Body";`
 
-With export default you can only export one thing.
+* With export default you can only export one thing.
+
+**Attention:** With the statement:
+```javascript
+import React from 'react';
+```
+
+we are actually importing a **module** class named `React` from the react folder which resides in `node_modules` directory.
+
+
+```javascript
+function helpful(){
+	console.log('exmaple of helpful')
+}
+
+function sort(){
+	console.log('exmaple of sort')
+}
+
+function sing(){
+	console.log('example of sing')
+}
+
+export {helpful, sort, sing}
+```
+
+In a different file, i can import it:
+```javascript
+import {helpful, sort} from './helpers'
+
+// Invoking the functions I have used:
+helpful();
+sort();
+```
+
 
 ### export by name
 For exporting multiple components from a single file
@@ -246,6 +287,8 @@ On the import your need to use the curly braces and tell it the exactly name, i.
 import {Body} from "./components/Body";
 ```
 
+
+##
 
 ## React fragment
 
@@ -368,12 +411,33 @@ class App extends React.component {
 ```
 
 
+## Styling in React
 
+
+Title1 | React way
+------------|-----
+ class | className
+
+
+
+```jsx
+class App extends React.component {
+	render() {
+
+		const colors = {fontSize: '50px', backgroundColor: 'purple' };
+
+		return (
+			<div className="Design">
+				<p style={colors}> Welcome There!</p>
+			<div>
+		);
+	}
+}
+```
 
 ## React snippets
 
 [Link](https://marketplace.visualstudio.com/items?itemName=xabikos.ReactSnippets)
-
 
 
 ## Conventions - Rule of thumbs
@@ -382,3 +446,12 @@ class App extends React.component {
  ------------|-----
 1 | functions' name must be in PascalCase
 2 | Each component in a seperate file
+
+
+## Webpack
+* Enables module importing/exporting
+* Packages up all CSS/images/JS into a single file for browser
+* Dramatically reduces number of HTTPS requests for preformance.
+* Hot reloading: when you change a source file, automatically reloads
+* Enables easy testing & deployment
+
