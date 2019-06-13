@@ -1,3 +1,5 @@
+<img src="./frontend/javascript-logo.jpg" alt="Javascript">
+
 <!--ts-->
    * [Javascript in a nutshell](#javascript-in-a-nutshell)
       * [Var vs Let vs Const](#var-vs-let-vs-const)
@@ -244,7 +246,7 @@ The object we define in a module are private by default so they are not accessia
 
 ## Useful functions in javascript
 
-[Reference]http://www.lukaszewczak.com/2015/02/js-array-method-quick-reference.html)
+[Reference](http://www.lukaszewczak.com/2015/02/js-array-method-quick-reference.html)
 
 ### reduce
 The reduce method is used to calculate a single value from an array.
@@ -262,7 +264,8 @@ function max(array){
 ```
 
 ### slice
-Slice method create new array which containes shallow copy of elements from original array.**This method does not change original array**.
+Slice method create new array which containes shallow copy of elements from original array.
+**This method does not change original array**.
 
 
 `Syntax: array.slice(begin, end)`
