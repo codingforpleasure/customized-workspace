@@ -8,14 +8,22 @@
       * [this](#this)
       * [Arrow Funcs](#arrow-funcs)
       * [template literals](#template-literals)
+      * [template strings](#template-strings)
       * [Destructuring](#destructuring)
       * [Spread](#spread)
       * [Classes](#classes)
          * [basic class](#basic-class)
          * [basic inheritance](#basic-inheritance)
       * [Modules](#modules)
+      * [Useful functions in javascript](#useful-functions-in-javascript)
+         * [reduce](#reduce)
+         * [slice](#slice)
+         * [splice](#splice)
+         * [map](#map)
+         * [forEach](#foreach)
+         * [every](#every)
 
-<!-- Added by: gil_diy, at: 2019-01-29T11:48+02:00 -->
+<!-- Added by: gil_diy, at: 2019-06-13T08:58+03:00 -->
 
 <!--te-->
 
@@ -43,7 +51,7 @@ With **let** that variable is **only accessable in that block** which it is defi
 const x = 1;
 x = 2; /* ERROR! */
 ```
-With **const** the variable **cannot be reassigned** and is **only accesiable in that block** which it is defined.
+With **const** the variable **cannot be reassigned** and is **only accessiable in that block** which it is defined.
 
 
 ## Objects
@@ -116,6 +124,10 @@ const items = colors.map(color => `<li>${color}</li>`)
 ```
 
 [Link more about template literals](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals)
+
+## template strings
+
+
 
 ## Destructuring
 ```javascript
@@ -229,3 +241,59 @@ The object we define in a module are private by default so they are not accessia
 * Step 2:  For making the class to be visiable outside we should export the class.
 
 * Step 3: Import the class
+
+## Useful functions in javascript
+
+[Reference]http://www.lukaszewczak.com/2015/02/js-array-method-quick-reference.html)
+
+### reduce
+The reduce method is used to calculate a single value from an array.
+Syntax: array.reduce(callback, initialValue)
+
+reduce executes callback function once for each element in the array, which receives four arguments:
+
+### slice
+### splice
+### map
+
+The map method transforms the array by applying a function to all of its elements and building a new array from the returned values. The new array will have the same length as the input array.
+
+array.map(callback)
+
+```javascript
+var array = [1, 2, 3, 4];
+var plusOne = array.map(function(el, index, orgArr) {
+            return el + 1;
+        });
+
+console.log(plusOne);
+//[2, 3, 4, 5]
+```
+### forEach
+
+Callback function takes three arguments:
+
+* currentValue – current element being processed
+* index – index of the current element array
+
+```javascript
+[10,20,30,40,50,60].forEach(function (element, index) {
+    console.log('Element: {', element, '}, index {', index,'}');
+});
+// Element: { 10 }, index { 0 }
+// Element: { 20 }, index { 1 }
+// Element: { 30 }, index { 2 }
+// Element: { 40 }, index { 3 }
+// Element: { 50 }, index { 4 }
+// Element: { 60 }, index { 5 }
+```
+### every
+
+If You want to check if all elements in array meet yours specific criteria you can use method every which will return false as soon as it find element which does not meet your criteria.
+
+```javascript
+[10,20,30,40,50,60].every(Number.isInteger);
+//true
+[10,20,30,40,'test',60].every(Number.isInteger);
+//false
+```
