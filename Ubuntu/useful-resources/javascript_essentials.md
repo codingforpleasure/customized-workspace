@@ -252,8 +252,60 @@ Syntax: array.reduce(callback, initialValue)
 
 reduce executes callback function once for each element in the array, which receives four arguments:
 
+
+```javascript
+var numbers = [12,34,23,56,78,34];
+function max(array){
+   function mathMax(a, b) {return Math.max(a, b);}
+   return array.reduce(mathMax);
+}
+```
+
 ### slice
-### splice
+Slice method create new array which containes shallow copy of elements from original array.**This method does not change original array**.
+
+
+`Syntax: array.slice(begin, end)`
+
+
+var array = 'Successful Project'.split('');
+console.log(array.slice(0,2))
+// ["S", "u"]
+console.log(array.slice(0,-3))
+// ["S","u","c","c","e","s","s","f","u","l"," ","P","r","o","j"]
+console.log(array.slice(-8))
+//["S","u","c","c","e","s","s","f","u","l"]
+
+
+## splice
+
+Splice change the original array by **removing** or **adding** new elements
+
+`Syntax: array.splice(start, deleteCount, item1, item2, ...)`
+
+```javascript
+var array = [1, 2, 3, 9, 10];
+
+// Adding items 4,5,6,7,8 from index 3.
+var removed = array.splice(3, 0, 4, 5, 6, 7, 8);
+
+// It modified the array
+console.log(array)
+// [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+console.log(removed)
+// []
+
+
+// Removing 5 items from index 3.
+removed = array.splice(3,5);
+console.log(array)
+// [1, 2, 3, 9, 10]
+
+console.log(removed)
+// [4, 5, 6, 7, 8]
+```
+
 ### map
 
 The map method transforms the array by applying a function to all of its elements and building a new array from the returned values. The new array will have the same length as the input array.
@@ -291,9 +343,21 @@ Callback function takes three arguments:
 
 If You want to check if all elements in array meet yours specific criteria you can use method every which will return false as soon as it find element which does not meet your criteria.
 
+`Syntax: array.every(callback);`
+
 ```javascript
 [10,20,30,40,50,60].every(Number.isInteger);
 //true
 [10,20,30,40,'test',60].every(Number.isInteger);
 //false
+```
+### some
+If You want to check wheater at least one element in array meets your specific criteria you can use method some which will return true as soon as it find element meeting this specific criteria.
+
+`Syntax: array.some(callback)`
+
+```javascript
+function ifElementBiggerThen30(element){ return element > 30;}
+[10,20,30,40,50,60].some(ifElementBiggerThen30);
+//true
 ```
