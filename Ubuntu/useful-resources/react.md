@@ -20,12 +20,15 @@
       * [Conventions - Rule of thumbs](#conventions---rule-of-thumbs)
       * [Webpack](#webpack)
 
-<!-- Added by: gil_diy, at: 2019-06-13T01:30+03:00 -->
-
+<!-- Added by: gil_diy, at: 2019-06-13T11:54+03:00 -->
 <!--te-->
 
 
+
 # React
+<p align="center">
+		<img src="./frontend/reactjs-logo.png" title="react cheatsheet">
+</p>
 
 ## Description
 At the heart of all react applications there are the components. a component is a piece of the user interface. When we build an application with react we build independed isolated reusable components and then compose and creat complex interfaces.
