@@ -16,11 +16,15 @@
       * [Properties aka. Props](#properties-aka-props)
          * [Default props](#default-props)
       * [Styling in React](#styling-in-react)
+      * [React states](#react-states)
+         * [Initial state](#initial-state)
+         * [Change/set a state](#changeset-a-state)
       * [React snippets](#react-snippets)
       * [Conventions - Rule of thumbs](#conventions---rule-of-thumbs)
       * [Webpack](#webpack)
 
-<!-- Added by: gil_diy, at: 2019-06-13T11:54+03:00 -->
+<!-- Added by: gil_diy, at: 2019-06-13T14:39+03:00 -->
+
 <!--te-->
 
 
@@ -438,6 +442,92 @@ class App extends React.component {
 	}
 }
 ```
+
+
+## React states
+
+inside a component you can't check the state easily by writing:
+
+```jsx
+console.log(this.state);
+```
+
+### Initial state
+If your component is **NOT** stateless, state should be initialized as soon as the component is created, otherwise if it's a stateless component you can omit the constructor function.
+
+So we set it in the constructor function:
+
+```jsx
+class ClickCount extends React.component {
+	constructor(props){
+		super(props);
+
+		/* Values we want to track: */
+		this.state = {
+			numClicks: 0 , //start at zero clicks
+			gameOver: false
+		};
+	}
+
+	render() {
+		return (
+			<div>
+				<h1> Your score is: {this.state.score}</h1>
+			<div>
+		);
+	}
+}
+```
+
+**Attention:**
+
+An alternative way to write this is to just write `state` no constructor needed here, the drawback is you should use Babel from **create-react-app** which is enabled by default.
+
+```jsx
+class ClickCount extends React.component {
+	state = {
+		numClicks: 0, //start at zero clicks
+		gameOver: false
+	};
+
+	render() {
+		return (
+			<div>
+				<h1> Your score is: {this.state.score}</h1>
+			<div>
+		);
+	}
+}
+```
+
+### Change/set a state
+
+* **this.setState()** is the built-in React method changing a component's state. you can call in any instance method except the constructor.
+
+* It's **Asynchronous** which means the component state will eventually
+update. React controls when the state will actually change, for performance reasons.
+
+* Components re-render when their state changes.
+
+```jsx
+class Game extends React.component {
+	state = {
+		numClicks: 0, //start at zero clicks
+		gameOver: false
+	};
+
+	render() {
+		this.setState({playerName: "Matt", score: 15})
+		return (
+			<div>
+				<h1> Your score is: {this.state.score}</h1>
+			<div>
+		);
+	}
+}
+```
+
+
 
 ## React snippets
 
