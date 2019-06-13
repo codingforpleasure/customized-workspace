@@ -267,7 +267,7 @@ Slice method create new array which containes shallow copy of elements from orig
 
 `Syntax: array.slice(begin, end)`
 
-
+```javascript
 var array = 'Successful Project'.split('');
 console.log(array.slice(0,2))
 // ["S", "u"]
@@ -275,7 +275,7 @@ console.log(array.slice(0,-3))
 // ["S","u","c","c","e","s","s","f","u","l"," ","P","r","o","j"]
 console.log(array.slice(-8))
 //["S","u","c","c","e","s","s","f","u","l"]
-
+```
 
 ## splice
 
