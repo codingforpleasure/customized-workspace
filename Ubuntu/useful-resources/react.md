@@ -516,8 +516,8 @@ class Game extends React.component {
 		gameOver: false
 	};
 
+	this.setState({playerName: "Matt", score: 15})
 	render() {
-		this.setState({playerName: "Matt", score: 15})
 		return (
 			<div>
 				<h1> Your score is: {this.state.score}</h1>
@@ -526,8 +526,81 @@ class Game extends React.component {
 	}
 }
 ```
+#### Change a state after time passed
+
+```jsx
+
+    roll(){
+        let idx1 = Math.floor(Math.random()*this.props.sides.length)
+        let idx2 = Math.floor(Math.random()*this.props.sides.length)
+        const newDice1 = this.props.sides[idx1]
+        const newDice2 = this.props.sides[idx2]
+
+        // Set state with new rolls
+        this.setState({dice1:newDice1, dice2:newDice2, isRolling:true});
+
+        //wait one second, then set rolling to false
+        setTimeout(()=>{
+            this.setState({isRolling:false})
+        },1000)
+    }
+```
+
+## React Events
+
+* In react, every JSX element has built-in attributes representing every
+kind of browser event.
+
+```jsx
+class Click extends React.component {
+	constructor(props){
+		super(props)l
+		this.state = { clicked: false };
+		this.handleClick = this.handleClick.bind(this);
+	}
+
+	handleClick(e){
+		this.setState({ clicked: true });
+	}
+
+	render() {
+		return (
+			<div>
+			<h1>{this.state.clicked ? 'clicked!!!!' : 'Not Clicked'}</h1>
+			<button onClick={this.handleClick}>Click Me!</button>
+			<div>
+		);
+	}
+}
+```
+
+Alternative way shorter would be:
+
+```jsx
+class Click extends React.component {
+	constructor(props){
+		super(props)l
+		this.state = { clicked: false };
+	}
+
+	// This way the binding is done behind the scene
+	handleClick = (e) => {
+		this.setState({ clicked: true });
+	}
+
+	render() {
+		return (
+			<div>
+			<h1>{this.state.clicked ? 'clicked!!!!' : 'Not Clicked'}</h1>
+			<button onClick={this.handleClick}>Click Me!</button>
+			<div>
+		);
+	}
+}
+```
 
 
+[Link](https://reactjs.org/docs/faq-functions.html)
 
 ## React snippets
 
