@@ -594,6 +594,40 @@ class Dice extends Component {
         },1000)
     }
 ```
+### mutating State with object updates
+
+Until now, we've been setting state to primitives: mainly numbers and strings.  But component state also commonly includes **objects, arrays, and arrays of objects**.
+
+```jsx
+this.state = {
+	todos:[
+		{ task: 'Do the Dishes', done: flase, id: 1},
+		{ task: 'Vacuum the floor', done: true, id: 2}
+	]
+};
+```
+For updating the state the correct approach would be to **make a new copy of the data structure** in question.
+
+```jsx
+completeTodo(id){
+
+const newTodos = this.state.todos.map(todo => {
+	if (todo.id === id){
+		//make a copy of the todo object with done -> true
+		return { ...todo.task, done: true };
+	}
+		return todo;
+	})
+
+	this.setState({
+		todos: newTodos //setState to the new array
+	});
+}
+```
+
+In summary:
+The safest way to update state is to make a copy of it, and then call **this.setState** with the new copy.
+
 
 ## React Events
 
