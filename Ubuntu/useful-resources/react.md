@@ -526,6 +526,55 @@ class Game extends React.component {
 	}
 }
 ```
+
+### Update state based of exisiting state
+
+It's recommended to use the `setState Callback form` (Attention: **Callback**)
+```jsx
+this.setState(curState => ({ count: curState.count + 1 }))
+```
+
+Basically you can describe your state updates abstractly as seperate
+functions.
+
+```jsx
+incrementCounter(curState){
+	return {count: curState.count + 1};
+}
+
+// Somewhere in the component
+this.setState(incrementCounter);
+```
+
+it's beneficial because testing your state chnages is as simple as testing
+a plain function:
+```jsx
+expect(incrementCounter({ count:0 })).toEqual( { count: 1 })
+```
+
+
+```jsx
+class Dice extends Component {
+	constructor(props){
+		super(props);
+		this.state = {score:0};
+	}
+
+	singleIncrement(){
+		this.setState(st => (return {st.score+1}))
+	}
+
+    render() {
+        return (
+            <div>
+            	<h1>Score is: {this.state.score}</h1>
+            	<button onClick={}></button>
+            </div>
+        );
+    }
+}
+```
+
 #### Change a state after time passed
 
 ```jsx
