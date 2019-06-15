@@ -28,11 +28,12 @@
          * [Form events](#form-events)
          * [Keyboard events](#keyboard-events)
       * [Method binding](#method-binding)
+      * [Passing functions to child components](#passing-functions-to-child-components)
       * [React snippets](#react-snippets)
       * [Conventions - Rule of thumbs](#conventions---rule-of-thumbs)
       * [Webpack](#webpack)
 
-<!-- Added by: gil_diy, at: 2019-06-15T10:46+03:00 -->
+<!-- Added by: gil_diy, at: 2019-06-15T10:57+03:00 -->
 
 <!--te-->
 
@@ -760,6 +761,10 @@ class Click extends React.component {
 }
 ```
 
+
+## Passing functions to child components
+
+So how we send "back up" to a parent component?
 
 
 [Link](https://reactjs.org/docs/faq-functions.html)
