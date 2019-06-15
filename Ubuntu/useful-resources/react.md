@@ -19,11 +19,20 @@
       * [React states](#react-states)
          * [Initial state](#initial-state)
          * [Change/set a state](#changeset-a-state)
+         * [Update state based of exisiting state](#update-state-based-of-exisiting-state)
+            * [Change a state after time passed](#change-a-state-after-time-passed)
+         * [mutating State with object updates](#mutating-state-with-object-updates)
+         * [Rules of thumbs when designing states](#rules-of-thumbs-when-designing-states)
+      * [React Events](#react-events)
+         * [Mouse events](#mouse-events)
+         * [Form events](#form-events)
+         * [Keyboard events](#keyboard-events)
+      * [Method binding](#method-binding)
       * [React snippets](#react-snippets)
       * [Conventions - Rule of thumbs](#conventions---rule-of-thumbs)
       * [Webpack](#webpack)
 
-<!-- Added by: gil_diy, at: 2019-06-13T14:39+03:00 -->
+<!-- Added by: gil_diy, at: 2019-06-15T10:46+03:00 -->
 
 <!--te-->
 
@@ -628,11 +637,23 @@ const newTodos = this.state.todos.map(todo => {
 In summary:
 The safest way to update state is to make a copy of it, and then call **this.setState** with the new copy.
 
+### Rules of thumbs when designing states
+
+* You want to store the least amount of data possible inside of your state.
+
+* **State should live on the parent**, in general, it makes more sense for a parent component to manage state and have a bunch of "dumb" stateless child display components.
 
 ## React Events
 
 * In react, every JSX element has built-in attributes representing every
 kind of browser event.
+
+### Mouse events
+[Reference](https://reactjs.org/docs/events.html#mouse-events)
+
+* onClick
+
+* onMouseOver
 
 ```jsx
 class Click extends React.component {
@@ -657,17 +678,51 @@ class Click extends React.component {
 }
 ```
 
+### Form events
+
+* onSubmit
+
+### Keyboard events
+
+* onKeyDown, onKeyUp, onKeyPress
+
 Alternative way shorter would be:
+
+```jsx
+class AnnoyingForm extends React.component {
+	handleKeyUP(evt){
+		if  (evt.keyCode === 56){
+			alert("*********** You have pressed Enter*********");
+		}
+		else{
+			alert("Boo");
+		}
+	}
+
+	render() {
+		return (
+			<div>
+			<h1>Try Typing in here:</h1>
+			<textArea onKeyUp={this.handleKeyUp}/>
+			<div>
+		);
+	}
+}
+```
+
+
+## Method binding
+
 
 ```jsx
 class Click extends React.component {
 	constructor(props){
 		super(props)l
 		this.state = { clicked: false };
+		this.handleClick = this.handleClick.bind(this);
 	}
 
-	// This way the binding is done behind the scene
-	handleClick = (e) => {
+	handleClick(e){
 		this.setState({ clicked: true });
 	}
 
@@ -681,6 +736,30 @@ class Click extends React.component {
 	}
 }
 ```
+
+or use the **arrow function** with no need to call `bind` explicitly.
+Assumption you are using `create-react-app` since it uses Babel, otherwise it won't work.
+
+```jsx
+class Click extends React.component {
+
+	// This syntax ensures `this` is bound within handleClick
+	// Warning: this is *experimental* syntax
+	handleClick = () => {
+		console.log('this is: ', this);
+	}
+
+	render() {
+		return (
+			<div>
+			<h1>{this.state.clicked ? 'clicked!!!!' : 'Not Clicked'}</h1>
+			<button onClick={this.handleClick}>Click Me!</button>
+			<div>
+		);
+	}
+}
+```
+
 
 
 [Link](https://reactjs.org/docs/faq-functions.html)
