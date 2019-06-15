@@ -765,6 +765,9 @@ class Click extends React.component {
 
 ## Passing functions to child components
 
+The basic idea:
+Children are often not stateful, but need to tell parents to change state.
+
 So how we send "back up" to a parent component?
 
 So how data flows?
@@ -775,7 +778,58 @@ So how data flows?
 * The parent function is called, usually setting new state.
 * The parent component is re-rendered along with its children.
 
+The Parent:
+```jsx
+class BetterNumberList extends React.component {
+	constructor(props){
+		super(props);
+		this.state = { nums: [1,2,3,4,5] };
+		this.remove = this.remove.bind(this);
+	}
 
+
+	remove(num){
+		this.setState(st => ({
+			nums: st.nums.filter(n => n !== num)
+		}));
+	}
+
+	render() {
+		let nums = this.state.nums.map(n => {
+			<BetterNumberItem value={n} remove={this.remove} />
+		});
+		return (
+			let nums = this.state.nums.map(n => (
+				)
+		);
+	}
+}
+```
+
+The Child:
+```jsx
+class BetterNumberItem extends React.component {
+
+	constructor(props){
+		super(props);
+		this.handleRemove = this.handleRemove.bind(this);
+	}
+
+
+	handleRemove(evt){
+		this.props.remove(this.props.value);
+	}
+
+	render() {
+		return (
+			<li>
+				{this.props.value}
+				<button OnClick={this.handleRemove}>Close</button>
+			</li>
+		);
+	}
+}
+```
 
 ## React snippets
 

@@ -263,6 +263,15 @@ function max(array){
 }
 ```
 
+Another example:
+
+```javascript
+let numbers = [12,34,23,56,78,34];
+let sum_weight = numbers.reduce((total, current) => total + current.baby_weight)
+```
+
+
+
 ### slice
 Slice method create new array which containes shallow copy of elements from original array.
 **This method does not change original array**.
@@ -280,7 +289,7 @@ console.log(array.slice(-8))
 //["S","u","c","c","e","s","s","f","u","l"]
 ```
 
-## splice
+### splice
 
 Splice change the original array by **removing** or **adding** new elements
 
@@ -324,6 +333,18 @@ var plusOne = array.map(function(el, index, orgArr) {
 console.log(plusOne);
 //[2, 3, 4, 5]
 ```
+
+### filter
+
+```javascript
+var words = ['spray', 'limit', 'elite', 'exuberant', 'destruction', 'present'];
+
+const result = words.filter(word => word.length > 6);
+
+console.log(result)
+//["exuberant", "destruction", "present"]
+```
+
 ### forEach
 
 Callback function takes three arguments:
