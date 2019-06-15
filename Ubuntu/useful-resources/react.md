@@ -33,7 +33,7 @@
       * [Conventions - Rule of thumbs](#conventions---rule-of-thumbs)
       * [Webpack](#webpack)
 
-<!-- Added by: gil_diy, at: 2019-06-15T10:57+03:00 -->
+<!-- Added by: gil_diy, at: 2019-06-15T11:00+03:00 -->
 
 <!--te-->
 
@@ -714,6 +714,7 @@ class AnnoyingForm extends React.component {
 
 ## Method binding
 
+[Link](https://reactjs.org/docs/faq-functions.html)
 
 ```jsx
 class Click extends React.component {
@@ -766,8 +767,15 @@ class Click extends React.component {
 
 So how we send "back up" to a parent component?
 
+So how data flows?
 
-[Link](https://reactjs.org/docs/faq-functions.html)
+* A parent component defines a function.
+* The function is passed as a prop to a child component.
+* The child component invokes the prop.
+* The parent function is called, usually setting new state.
+* The parent component is re-rendered along with its children.
+
+
 
 ## React snippets
 
