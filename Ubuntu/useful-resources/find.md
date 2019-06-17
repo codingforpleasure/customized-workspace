@@ -13,13 +13,15 @@
          * [Find all the files modified in the last 1 minute and avoid checking /proc directory and /etc](#find-all-the-files-modified-in-the-last-1-minute-and-avoid-checking-proc-directory-and-etc)
          * [Find files between those boundries 1M &lt; size &lt; 2M](#find-files-between-those-boundries-1m--size--2m)
          * [Find to limit the depth of subdirectories depth](#find-to-limit-the-depth-of-subdirectories-depth)
+         * [Find all directories within a <strong>specific</strong> depth level](#find-all-directories-within-a-specific-depth-level)
          * [Find "Gil" text in all the text files:](#find-gil-text-in-all-the-text-files)
          * [Find all empty files:](#find-all-empty-files)
          * [Find all only leaf directories:](#find-all-only-leaf-directories)
+         * [Find all files named sample.txt which are larger then 4 Bytes:](#find-all-files-named-sampletxt-which-are-larger-then-4-bytes)
          * [Find all :](#find-all-)
    * [<a href="https://stackoverflow.com/questions/14132210/use-find-command-but-exclude-files-in-two-directories" rel="nofollow">https://stackoverflow.com/questions/14132210/use-find-command-but-exclude-files-in-two-directories</a>](#httpsstackoverflowcomquestions14132210use-find-command-but-exclude-files-in-two-directories)
 
-<!-- Added by: gil_diy, at: 2018-12-23T16:32+02:00 -->
+<!-- Added by: gil_diy, at: 2019-06-18T01:02+03:00 -->
 
 <!--te-->
 
