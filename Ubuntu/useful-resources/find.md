@@ -87,6 +87,12 @@ find / -size +1M -size -2M
 ```bash
 find / -maxdepth 3 -name "*log"
 ```
+
+### Find all directories within a **specific** depth level
+```bash
+find . -maxdepth 2 -mindepth 2 -type d -exec basename {} \;
+```
+
 ### Find "Gil" text in all the text files:
 ```bash
 find . -name "*.txt" -exec grep -i "GIL" {} \;
