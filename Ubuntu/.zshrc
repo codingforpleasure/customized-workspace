@@ -24,7 +24,8 @@ export PATH=$PATH:/opt/DataGrip-2018.2.4/bin/
 export PATH=$PATH:~/flutter/bin/
 
 # Adding some anconda to my path
-# export PATH="/home/gil_diy/anaconda3/bin:$PATH"
+# in case you would like to run ipynb
+#export PATH="/home/gil_diy/anaconda3/bin:$PATH"
 
 # Adding my documentations to my path
 export DOC_MD_PATH=$HOME/myGitRepositories/customized-workspace/Ubuntu/useful-resources/
@@ -148,8 +149,8 @@ export SHELL='/usr/bin/zsh'
 
 # Take a look here, as a reference:
 # https://github.com/robbyrussell/oh-my-zsh/blob/master/lib/history.zsh
-HISTSIZE=50000
-SAVEHIST=10000
+HISTSIZE=500000
+SAVEHIST=100000
 
 # I would like the MAN pages to be colorful. so should export
 # enviroment variable make sure most is installed if not,

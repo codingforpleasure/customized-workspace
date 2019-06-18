@@ -21,6 +21,21 @@ function count_lines() {
   echo $fg_bold[green] "Number of lines: $num"
 }
 
+
+# For making sure two files' content is the same
+function are_equal() {
+
+	# $1 is the application name
+	# $2 is the filename
+
+	if cmp --silent "$1" "$2" ; then
+   		echo $fg_bold[green] "File are the same"
+	else
+   		echo $fg_bold[red] "File are different"
+	fi
+}
+
+
 function strace-and-grep(){
 
   # since strace prints its traces on standard error, not on standard output

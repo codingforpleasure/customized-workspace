@@ -69,7 +69,7 @@ alias locate="sudo updatedb; locate --ignore-case "
 alias locateh=locate-here           # locate here under the current folder
 alias watchl='watch --color ls -la --color'	# list and watch files and folders with color
 
-alias {sublime,sl}="subl"				        # Execute sublime editor
+alias {subl,sublime,sl}="sublime3"				        # Execute sublime editor
 alias {pycharm,charm}='fork_without_block pycharm.sh'
 alias {datagrip,dg}='fork_without_block datagrip.sh'
 alias {clion,lion}='fork_without_block clion.sh'
