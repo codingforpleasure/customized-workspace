@@ -33,7 +33,7 @@
       * [Conventions - Rule of thumbs](#conventions---rule-of-thumbs)
       * [Webpack](#webpack)
 
-<!-- Added by: gil_diy, at: 2019-06-15T11:00+03:00 -->
+<!-- Added by: gil_diy, at: 2019-06-15T14:55+03:00 -->
 
 <!--te-->
 
@@ -831,6 +831,119 @@ class BetterNumberItem extends React.component {
 }
 ```
 
+* If you need a parameter, pass it down to the child as a prop, then
+**bind in parent and child**.
+
+
+## Keys
+
+* Keys help React identify which items are changed/added/removed
+
+* Most often you  would use IDs from your data as keys
+
+```JSX
+let todoItems =  this.state.todos.map(todo =>
+	<li key={todo.id}>
+		{todo.text}
+	</li>
+);
+```
+
+if you don't have an id, you can generate via the libraries:
+`uuid` , `shortid`.
+
+## Lifecycle methods
+
+<p align="center">
+  <img src="./frontend/react-lifecycle.png" title="tool tip here">
+</p>
+
+[Taken from here](http://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/)
+
+The **very first thing** is that it runs the constructor, so we use the constructor we've been using it all the time to initialize our initial state to set the values that we start out with in the state and to bind event handlers.
+
+### componentDidMount
+
+* This method runs after the component is mounted.
+
+* "Mounting" is the first time the component is rendered to DOM.
+
+* This is good place to load any data via AJAX or set up subscriptions/timers.
+
+* componentDidMount runs **only after the first render**
+
+Example: Here we are simply getting the current seconds from whatever time is and then displaying it.
+
+```javascript
+class Timer extends Component {
+  constructor(props){
+    super(props);
+    this.state = {time: new Date()};
+    //console.log("IN Constructor");
+  }
+
+  // You can see componentDidMount will be called one time
+  componentDidMount(){
+    console.log("In component did mount");
+    this.timerID = setInterval(() => {
+      this.setState({time: new Date()})
+    },1000)
+  }
+
+  render(){
+    console.log("In Render");
+    return <h1>{this.state.time.getSeconds()}</h1>;
+  }
+
+}
+```
+
+### Loading data by making AJAX requests
+`https://api.github.com/zen`
+i'll be using the library `axios` for making the requests
+
+```javascript
+import React,{Component} from 'react';
+import axios from axios;
+
+class ZenQuote extends Component{
+
+  constructor(props){
+    super(props);
+    this.state = { quote:"" };
+  }
+
+  componentDidMount(){
+   // load data
+   axios.get("https://api.github.com/zen").then(response => {
+    this.setState({quote: response.data});
+    });
+  }
+
+  render(){
+    return (
+        <div>
+          <h1>Always remember...</h1>
+          <p>this.state.quote</p>
+        </div>
+      )
+  }
+}
+```
+### Loading data asynchronously
+
+### componentDidUpdate
+
+### componentWillUnmount
+
+
+## Hooks
+
+### UseEffect
+
+After the constructor, React calls render(). It tells React what should be displayed. React updates the DOM to matchthe output of render()
+
+
 ## React snippets
 
 [Link](https://marketplace.visualstudio.com/items?itemName=xabikos.ReactSnippets)
@@ -844,6 +957,10 @@ class BetterNumberItem extends React.component {
 2 | Each component in a seperate file
 3 | The name of the file should match the of the component
 4 | Make a CSS file for each React Component
+5 | Naming convention in parent: `action` in child: `handleAction`,
+ | i.e: if we pass the function 'add' from parent to the child, in the child there would be a `handleAdd` which will call the function `handleAdd` (**Passing functions to child components**)
+ 6 |  Do not set state in the constructor
+ 7 | Always your are fetching data try to put it in `componentDidMount()`
 
 ## Webpack
 * Enables module importing/exporting
