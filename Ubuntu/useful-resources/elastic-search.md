@@ -14,6 +14,8 @@
          * [Update the document's content with curl](#update-the-documents-content-with-curl)
          * [Add a new field to an existed document with curl](#add-a-new-field-to-an-existed-document-with-curl)
          * [Deleting an index with curl](#deleting-an-index-with-curl)
+      * [Basic operations](#basic-operations)
+         * [Get number of documents in an index](#get-number-of-documents-in-an-index)
       * [Term Level queries](#term-level-queries)
          * [Example #1:  Searching all documents with the field 'is_active' set to true.](#example-1--searching-all-documents-with-the-field-is_active-set-to-true)
          * [Example #2:  Multiple terms](#example-2--multiple-terms)
@@ -41,7 +43,7 @@
          * [Search using the filter context](#search-using-the-filter-context)
       * [Aggregations](#aggregations)
 
-<!-- Added by: gil_diy, at: 2019-05-27T15:51+03:00 -->
+<!-- Added by: gil_diy, at: 2019-07-02T11:23+03:00 -->
 
 <!--te-->
 
@@ -342,15 +344,31 @@ curl -XPOST  -H 'Content-Type: application/json' 'localhost:9200/_bulk?pretty&re
 '
 ```
 
+## Basic operations
+### Get number of documents in an index
+```bash
+GET /authors/author_doc/_count
+{
+  "query": {
+    "match_all": {}
+  }
+}
+```
+
+
 
 ## Term Level queries
 Basic Usage: for well data structured such as:
+
 a. dates
+
 b. numbers
+
 c. keywords fields.
 
 Term level queries find **exact matches** like on enums fields.
-**Reminder:** Something important to remember is that Term Level queries aare not analysed (Term Level queries with synonyms would not work).
+
+**Reminder:** Something important to remember is that Term Level queries are not analysed (Term Level queries with synonyms would not work).
 
 ### Example #1:  Searching all documents with the field 'is_active' set to `true`.
 
@@ -448,6 +466,7 @@ GET /movies/default/_search
 }
 ```
 You can also use `?` for any single character.
+
 **Attention**: Something you should be careful with is placing wildcards at the begining of a term. if you place an asterisk or a question mark at the beginning , This can lead to extremely slow queries so you should avoid doing this.
 
 
@@ -726,7 +745,13 @@ GET /product/default/_search
 
 ### Phrase suggester
 **properties:**
+* Like term suggester, only fancier.
+* based on N-GRAM language model:
 
+1. i.e if we using a gram size of 2 for the string "domain", then we will get these tokens: do, om, ma, ai, in
+
+2. When we want groups of words instead of groups of characters they're reffered to as **shingles**. i.e:
+ "Domain Driven Design" (minimum shingle size of 2, and maximum shingle size of 3)
 
 ## Search using query params
 
