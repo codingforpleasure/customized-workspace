@@ -20,9 +20,10 @@
             * [Subtract operation](#subtract-operation)
          * [<strong>Avoid common pitfalls:</strong>](#avoid-common-pitfalls)
             * [Useful Tip for pitfall #1: use single quotes](#useful-tip-for-pitfall-1-use-single-quotes)
+         * [Converting files from CSV to JSON and many more](#converting-files-from-csv-to-json-and-many-more)
          * [<strong>Great resources on the web</strong>](#great-resources-on-the-web)
 
-<!-- Added by: gil_diy, at: 2018-12-19T23:41+02:00 -->
+<!-- Added by: gil_diy, at: 2019-07-02T10:47+03:00 -->
 
 <!--te-->
 # jq (json processor)
@@ -184,10 +185,24 @@ pay attention: avoid spaces
 jq '||||'
 
 
+
+### Converting files from CSV to JSON and many more
+
+Install this:
+`sudo npm install -g d3-dsv`
+it will install bunch of tools one of them is: `csv2json`
+
+Afterwards you can use this tool easily:
+
+`csv2json input.csv > output.json`
+
+
 ### **Great resources on the web**
 
-**jq table:** http://hyperpolyglot.org/json
+**jq cookbook resource on github:** [Link](https://github.com/stedolan/jq/wiki/Cookbook#)
 
-**jq kickass manual **: https://www.systutorials.com/docs/linux/man/1-jq/
+**jq table:** [Link](http://hyperpolyglot.org/json)
+
+**jq kickass manual **: [Link](https://www.systutorials.com/docs/linux/man/1-jq/)
 
 
