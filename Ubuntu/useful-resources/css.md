@@ -50,11 +50,17 @@ Great resource, the book: **"CSS Visual Dictionary"**
 \* | Selects all elements |
 p | Selects all &lt;p&gt; elements |
 div, p | Selects all &lt;div&gt; elements **and** all &lt;p&gt; elements |
-div p | Selects all &lt;p&gt; elements **inside** &lt;div&gt; elements |
-div > p | Selects all &lt;p&gt; elements where the parent is a &lt;div&gt; element |
-:nth-child(n) | selector matches every element that is the nth child, regardless of type, of its parent. |  [Link](https://www.w3schools.com/csSref/tryit.asp?filename=trycss3_nth-child)
+div p | Selects all &lt;p&gt; elements **inside** &lt;div&gt; elements ([Link](https://css-tricks.com/child-and-sibling-selectors/ )) |
+div > p | Selects all &lt;p&gt; elements where the parent is a &lt;div&gt; element ([Link](https://css-tricks.com/child-and-sibling-selectors/ )) |
+:nth-child(n) | selector matches every element that is the nth child, regardless of type, of its parent. |  [Link](https://www.w3schools.com/csSref/tryit.asp?filename=trycss3_nth-child)|
+:nth-of-type(n)|  selector matches every element that is the nth child, of a particular type, of its parent | [Link](https://jsfiddle.net/2t3w0826/)
+img + p | Paragraphs that come immediately after any image ([adjacent sibling combinator](https://developer.mozilla.org/en-US/docs/Web/CSS/Adjacent_sibling_combinator))
 .my-class:target | This target pseudo class will let you style the thing that was the target of the link which was clicked
+input:focus | Select and style an input field when it gets focus ([Link](https://www.w3schools.com/cssref/sel_focus.asp))
 [CSS Selectors reference](https://www.w3schools.com/csSref/css_selectors.asp)
+
+
+[Online selectors training look here](https://flukeout.github.io/)
 
 
 ### Selector Specificity
