@@ -65,26 +65,16 @@ Or you install two valuaeable extensions in vscode:
 
 According to this [Link](https://github.com/ritwickdey/vscode-live-sass-compiler/blob/master/docs/faqs.md)
 
-Make sure the css file which was generated matches the path you mentioned in the index.html.
-
-To generate the config easily run the script `create-config-scss`
+To generate the config easily run the script `create-config-scss` (I have written this script)
 which will create a `.vscode` and in it is the config file.
 
+press `Watch Sass`, now if you will create a file with the extension .scss anywhere in the project hierarchy it will auto-generate the css output in the path `./dist/css`
 
-```css
-.container {
+Make sure the css file which was generated matches the path you mentioned in the index.html.
 
-	float: left;
-	width: 100%;
-
-	p {
-		color: #333;
-	}
-}
-```
 ## Good habits
 
-[Link](https://medium.com/@osternaud_clem/organize-your-sass-files-b2c2513f3fcf)
+Few tips regarding files and folders hierarchy: [Link](https://medium.com/@osternaud_clem/organize-your-sass-files-b2c2513f3fcf)
 
 ## Powerful capabilities:
 
@@ -98,8 +88,9 @@ body {
 }
 ```
 
-### Ampersand (adding another class)
+### Ampersand (parent selector)
 
+The ampersand (&) is the parent selector in SAAS, it is a shortcut to the elements immediate parent.
 
 The & comes in handy when you're nesting and you want to create a **more specific selector**, like an element that has *both* of two classes, like this:
 ```css
@@ -112,6 +103,8 @@ would look like this:
   &.another-class {}
 }
 ```
+
+In this example, the `&` resolves to `.some-class` because that is the immediate parent.
 
 
 [ampersand link](https://css-tricks.com/the-sass-ampersand/)
