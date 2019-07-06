@@ -137,6 +137,15 @@ would look like this:
 
 In this example, the `&` resolves to `.some-class` because that is the immediate parent.
 
+Another example:
+```css
+button{
+	background: white;
+	&:hover{
+		background:blue;
+	}
+}
+```
 
 [ampersand link](https://css-tricks.com/the-sass-ampersand/)
 
