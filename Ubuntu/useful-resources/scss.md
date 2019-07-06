@@ -6,7 +6,8 @@
       * [Good habits](#good-habits)
       * [Powerful capabilities:](#powerful-capabilities)
          * [Variables](#variables)
-         * [Ampersand (adding another class)](#ampersand-adding-another-class)
+         * [Nested elements](#nested-elements)
+         * [Ampersand (parent selector)](#ampersand-parent-selector)
          * [Importing](#importing)
          * [Partials](#partials)
          * [Map](#map)
@@ -27,7 +28,7 @@
          * [Inheritance](#inheritance)
          * [Media queries](#media-queries)
 
-<!-- Added by: gil_diy, at: 2019-04-06T10:42+03:00 -->
+<!-- Added by: gil_diy, at: 2019-07-06T23:46+03:00 -->
 
 <!--te-->
 
@@ -87,6 +88,36 @@ body {
     color: $my-color;
 }
 ```
+### Nested elements
+
+in ordinary css:
+```css
+header {
+	background: lightblue;
+	display:flex;
+	justifiy-content: center;
+}
+
+header button{
+	background: black;
+}
+```
+
+in Sass it can be written like this:
+
+```css
+header {
+	background: lightblue;
+	display:flex;
+	justifiy-content: center;
+	button{
+		background: black;
+	}
+}
+```
+
+
+
 
 ### Ampersand (parent selector)
 
