@@ -1,4 +1,15 @@
 <!--ts-->
+      * [Docker-compose](#docker-compose)
+      * [Docker](#docker)
+         * [Docker list all images](#docker-list-all-images)
+         * [Search for images in docker hub](#search-for-images-in-docker-hub)
+         * [Start container/s](#start-containers)
+         * [Stop running containers](#stop-running-containers)
+         * [Run a command in a container](#run-a-command-in-a-container)
+         * [Kill a container](#kill-a-container)
+
+<!-- Added by: gil_diy, at: 2019-07-12T22:40+03:00 -->
+
 <!--te-->
 
 docker images resides in the following path:
@@ -11,6 +22,8 @@ docker images resides in the following path:
 ```bash
     sudo usermod -a -G docker $USER
 ```
+
+## Docker-compose
 
 Let's rebuild our app now that we've made changes, using:
 ```bash
@@ -34,4 +47,39 @@ docker-compose up -d --build
 To view live logs from :
 ```bash
 docker-compose logs -f api
+```
+
+
+
+## Docker
+
+### Docker list all images
+
+```bash
+docker images
+```
+
+### Search for images in docker hub
+```bash
+docker search <image-name>
+```
+
+### Start container/s
+
+```bash
+docker start <container-name>
+```
+
+### Stop running containers
+```bash
+docker stop <container-name>
+```
+
+### Run a command in a container
+```bash
+docker run
+```
+### Kill a container
+```bash
+docker kill <container-name>
 ```
