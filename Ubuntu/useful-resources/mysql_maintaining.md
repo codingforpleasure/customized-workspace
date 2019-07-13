@@ -32,6 +32,22 @@ GRANT ALL PRIVILEGES ON <database_name>.<table_name> TO '<username>'@'<ip-addres
 GRANT ALL PRIVILEGES ON *.* TO '<username>'@'<ip-address>';
 ```
 
+
+### Dump sql which populates data into database:
+
+```sql
+mysql -u username -p password database_name < /path/to/your/file.sql
+```
+
+Another way will be:
+
+1. login to your mysql server:
+
+```sql
+use db_name;
+source /path/to/file.sql;
+```
+
 ### Dump csv file into mysql table
 
 ```sql
