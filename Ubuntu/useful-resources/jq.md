@@ -13,7 +13,8 @@
             * [Useful Tip #8: Count number of elements in single JSON String](#useful-tip-8-count-number-of-elements-in-single-json-string)
             * [Useful Tip #9: Counting Array Elements in single JSON String](#useful-tip-9-counting-array-elements-in-single-json-string)
             * [Useful Tip #10: Counting Array Elements from File](#useful-tip-10-counting-array-elements-from-file)
-            * [Useful Tip #11: Map a dict of elements (Apply function on each element)](#useful-tip-11-map-a-dict-of-elements-apply-function-on-each-element)
+            * [Useful Tip #11: Split an array of elements into chuncks](#useful-tip-11-split-an-array-of-elements-into-chuncks)
+            * [Useful Tip #12: Map a dict of elements (Apply function on each element)](#useful-tip-12-map-a-dict-of-elements-apply-function-on-each-element)
          * [Set operations](#set-operations)
             * [Union operation](#union-operation)
             * [Intersection operation](#intersection-operation)
@@ -23,7 +24,7 @@
          * [Converting files from CSV to JSON and many more](#converting-files-from-csv-to-json-and-many-more)
          * [<strong>Great resources on the web</strong>](#great-resources-on-the-web)
 
-<!-- Added by: gil_diy, at: 2019-07-02T10:47+03:00 -->
+<!-- Added by: gil_diy, at: 2019-07-15T12:23+03:00 -->
 
 <!--te-->
 # jq (json processor)
@@ -128,8 +129,15 @@ echo '[{"username":"user1"},{"username":"user2"}]' | jq '. | length'
 ```bash
 jq '. | length' test_file.json
 ```
+#### Useful Tip #11: Split an array of elements into chuncks
 
-#### Useful Tip #11: Map a dict of elements (Apply function on each element)
+let's say the group size is of size 3 (each group excpet the last one is holds 3 elements), therefore we write:
+
+```bash
+jq -nc '[1,2,3,4,5,6,7,8,9,10] | _nwise(3)'
+```
+
+#### Useful Tip #12: Map a dict of elements (Apply function on each element)
 
 ```bash
 echo 'map_values(.+1)'
