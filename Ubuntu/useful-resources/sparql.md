@@ -11,6 +11,7 @@
          * [Service - label](#service---label)
          * [Modifiers (Group by, Having, Order by, Limit)](#modifiers-group-by-having-order-by-limit)
       * [Aggregate functions](#aggregate-functions)
+      * [Filter](#filter)
       * [List of useful queries](#list-of-useful-queries)
          * [How to get the name of a specific Wikidata item?](#how-to-get-the-name-of-a-specific-wikidata-item)
          * [Get a long list of Wikidata English properties](#get-a-long-list-of-wikidata-english-properties)
@@ -19,7 +20,7 @@
          * [Get links to wikipedia](#get-links-to-wikipedia)
       * [Great references](#great-references)
 
-<!-- Added by: gil_diy, at: 2019-07-15T08:45+03:00 -->
+<!-- Added by: gil_diy, at: 2019-07-16T02:20+03:00 -->
 
 <!--te-->
 
@@ -124,6 +125,11 @@ You can fetch the label, alias, or description of entities you query,
 
 [Link](https://en.wikibooks.org/wiki/SPARQL/Aggregate_functions)
 
+
+## Filter
+
+[Filter](https://en.wikibooks.org/wiki/SPARQL/FILTER)
+
 ## List of useful queries
 
 ### How to get the name of a specific Wikidata item?
@@ -131,9 +137,11 @@ You can fetch the label, alias, or description of entities you query,
 ```SQL
 SELECT DISTINCT * WHERE {
   wd:Q19675 rdfs:label ?label .
-  FILTER (langMatches( lang(?label), "ES" ) )
+  FILTER (langMatches( lang(?label), "EN" ) )
 }
 ```
+
+Comment: `Q19675` - is the Louvre Museum!
 
 ### Get a long list of Wikidata English properties
 
@@ -210,8 +218,8 @@ SELECT ?cid ?country ?article WHERE {
 * CONTAINS
 
 ## Great references
+[Very useful examples](https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/queries/examples)
 
-[Filter](https://en.wikibooks.org/wiki/SPARQL/FILTER)
 
 
 
