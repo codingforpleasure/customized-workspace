@@ -6,6 +6,7 @@
          * [Find files based on their permissions:](#find-files-based-on-their-permissions)
          * [find file with permission 777 and change the permission to 755](#find-file-with-permission-777-and-change-the-permission-to-755)
          * [find and remove a single file](#find-and-remove-a-single-file)
+         * [find files with either extension c or cpp or h](#find-files-with-either-extension-c-or-cpp-or-h)
          * [find all hidden files:](#find-all-hidden-files)
          * [find all the files that were MODIFIED 10 days modified back:](#find-all-the-files-that-were-modified-10-days-modified-back)
          * [find all the files that were ACCESSED 10 days modified back:](#find-all-the-files-that-were-accessed-10-days-modified-back)
@@ -21,7 +22,7 @@
          * [Find all :](#find-all-)
    * [<a href="https://stackoverflow.com/questions/14132210/use-find-command-but-exclude-files-in-two-directories" rel="nofollow">https://stackoverflow.com/questions/14132210/use-find-command-but-exclude-files-in-two-directories</a>](#httpsstackoverflowcomquestions14132210use-find-command-but-exclude-files-in-two-directories)
 
-<!-- Added by: gil_diy, at: 2019-06-18T01:02+03:00 -->
+<!-- Added by: gil_diy, at: 2019-07-18T07:50+03:00 -->
 
 <!--te-->
 
@@ -51,13 +52,18 @@ find  . -type f -perm 0777 -print0 | xrags -0 chmod 755
 ```
 ### find and remove a single file
 ```bash
-find . -type f -name "abc.txt" -exec rm -f {}\;
+find . -type f -name "abc.txt" -delete
 ```
-
 or
 
 ```bash
-find . -type f -name "abc.txt" -delete
+find . -type f -name "abc.txt" -exec rm -f {}\;
+```
+
+
+### find files with either extension c or cpp or h
+```bash
+find . -name \*.cpp -o -name \*.c -o -name \*.h
 ```
 
 ### find all hidden files:
