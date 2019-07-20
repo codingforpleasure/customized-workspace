@@ -6,10 +6,15 @@
             * [Internal to Wikidata](#internal-to-wikidata)
             * [External prefixes](#external-prefixes)
          * [Sentence (Period, Semicolon, Comma)](#sentence-period-semicolon-comma)
+         * [Match few predicates](#match-few-predicates)
+         * [Match few Objects](#match-few-objects)
          * [Optional](#optional)
          * [Select statement](#select-statement)
          * [Service - label](#service---label)
-         * [Modifiers (Group by, Having, Order by, Limit)](#modifiers-group-by-having-order-by-limit)
+            * [Alias](#alias)
+         * [Modifiers (Group by, Having, Order by, Limit, Offset)](#modifiers-group-by-having-order-by-limit-offset)
+            * [limit](#limit)
+            * [offset](#offset)
       * [Aggregate functions](#aggregate-functions)
       * [Filter](#filter)
       * [List of useful queries](#list-of-useful-queries)
@@ -20,7 +25,7 @@
          * [Get links to wikipedia](#get-links-to-wikipedia)
       * [Great references](#great-references)
 
-<!-- Added by: gil_diy, at: 2019-07-16T02:20+03:00 -->
+<!-- Added by: gil_diy, at: 2019-07-20T18:11+03:00 -->
 
 <!--te-->
 
@@ -79,7 +84,42 @@ symbol | Meaning
 `[]` | Pair of brackets act as an **anonymous variable	**
 
 
+### Match few predicates
 
+In this example below we have in the predicate part: `Instance of` and `subclass of`
+```SQL
+SELECT DISTINCT ?horse ?horseLabel
+WHERE
+{
+	?horse wdt:P31/wdt:P279* wd:Q726 .     # "Instance of" and "sub-classes of"
+
+	SERVICE wikibase:label {
+		bd:serviceParam wikibase:language "en"
+	}
+}
+ORDER BY DESC(?horse)
+```
+
+### Match few Objects
+
+In this example below we have in the Object part: `Book` and `Literary work` and `Book series`:
+
+```SQL
+SELECT ?book ?url WHERE {
+
+VALUES (?value){
+  ( wd:Q571 )     # Book
+  ( wd:Q7725634 ) # Literary work
+  ( wd:Q277759 )  # Book series
+}
+?book wdt:P31 ?value .
+
+OPTIONAL {
+  ?url schema:about ?book .
+  ?url schema:inLanguage "en" .
+  ?url schema:isPartOf <https://en.wikipedia.org/> .
+}}
+```
 ### Optional
 
 [Link](https://en.wikibooks.org/wiki/SPARQL/OPTIONAL)
@@ -114,10 +154,45 @@ LIMIT ...
 
 ### Service - label
 You can fetch the label, alias, or description of entities you query,
-``` SQL
+#### Alias
+ A variable can be displayed with another name (Alias) by using AS, like (?child AS ?Child_of_Bach). Notice that the alias again should be a variable, and the combination should start and end with brackets.
+
+**For aliases of Labels the label should be defined explicitly in the SERVICE. Alternatively the variable could be named as requested there as well**
+
+```SQL
+SELECT (?child AS ?Child_of_Bach) (?childLabel AS ?Name)
+WHERE
+{
+# ?child  father   Bach
+  ?child wdt:P22 wd:Q1339.
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "en".
+                           ?child rdfs:label ?childLabel.
+                         }
+}
 ```
 
-### Modifiers (Group by, Having, Order by, Limit)
+### Modifiers (Group by, Having, Order by, Limit, Offset)
+
+#### limit
+
+Get only the first 10 entries in the result:
+
+```SQL
+{
+
+} limit 10
+```
+
+#### offset
+
+Skip the first 10 entries:
+
+```SQL
+{
+
+} offset 10
+```
+
 
 [Link](https://en.wikibooks.org/wiki/SPARQL/Modifiers)
 
