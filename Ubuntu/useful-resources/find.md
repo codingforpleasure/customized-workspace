@@ -2,27 +2,28 @@
    * [find command](#find-command)
       * [Examples](#examples)
          * [Find all txt files:](#find-all-txt-files)
-         * [Ignoring case sensitive (-iname):](#ignoring-case-sensitive--iname)
-         * [Find files based on their permissions:](#find-files-based-on-their-permissions)
+         * [Ignoring case sensitive (-iname)](#ignoring-case-sensitive--iname)
+         * [Find files based on their permissions](#find-files-based-on-their-permissions)
          * [find file with permission 777 and change the permission to 755](#find-file-with-permission-777-and-change-the-permission-to-755)
          * [find and remove a single file](#find-and-remove-a-single-file)
          * [find files with either extension c or cpp or h](#find-files-with-either-extension-c-or-cpp-or-h)
-         * [find all hidden files:](#find-all-hidden-files)
-         * [find all the files that were MODIFIED 10 days modified back:](#find-all-the-files-that-were-modified-10-days-modified-back)
-         * [find all the files that were ACCESSED 10 days modified back:](#find-all-the-files-that-were-accessed-10-days-modified-back)
+         * [find all hidden files](#find-all-hidden-files)
+         * [find all the files that were MODIFIED 10 days modified back](#find-all-the-files-that-were-modified-10-days-modified-back)
+         * [find all the files that were ACCESSED 10 days modified back](#find-all-the-files-that-were-accessed-10-days-modified-back)
          * [find all the files modified in the last 1 minute](#find-all-the-files-modified-in-the-last-1-minute)
          * [Find all the files modified in the last 1 minute and avoid checking /proc directory and /etc](#find-all-the-files-modified-in-the-last-1-minute-and-avoid-checking-proc-directory-and-etc)
          * [Find files between those boundries 1M &lt; size &lt; 2M](#find-files-between-those-boundries-1m--size--2m)
          * [Find to limit the depth of subdirectories depth](#find-to-limit-the-depth-of-subdirectories-depth)
          * [Find all directories within a <strong>specific</strong> depth level](#find-all-directories-within-a-specific-depth-level)
-         * [Find "Gil" text in all the text files:](#find-gil-text-in-all-the-text-files)
+         * [Find "Gil" text in all the text files](#find-gil-text-in-all-the-text-files)
+         * [Find all files match to a pattern and move them to a destination folder](#find-all-files-match-to-a-pattern-and-move-them-to-a-destination-folder)
          * [Find all empty files:](#find-all-empty-files)
          * [Find all only leaf directories:](#find-all-only-leaf-directories)
          * [Find all files named sample.txt which are larger then 4 Bytes:](#find-all-files-named-sampletxt-which-are-larger-then-4-bytes)
          * [Find all :](#find-all-)
    * [<a href="https://stackoverflow.com/questions/14132210/use-find-command-but-exclude-files-in-two-directories" rel="nofollow">https://stackoverflow.com/questions/14132210/use-find-command-but-exclude-files-in-two-directories</a>](#httpsstackoverflowcomquestions14132210use-find-command-but-exclude-files-in-two-directories)
 
-<!-- Added by: gil_diy, at: 2019-07-18T07:50+03:00 -->
+<!-- Added by: gil_diy, at: 2019-07-25T22:24+03:00 -->
 
 <!--te-->
 
@@ -33,11 +34,11 @@
 ```bash
 find /usr/ -type f -name '*.txt'
 ```
-### Ignoring case sensitive (-iname):
+### Ignoring case sensitive (-iname)
 ```bash
 find . -type f -iname abc.txt
 ```
-### Find files based on their permissions:
+### Find files based on their permissions
 ```bash
 find . -type f -perm 0777 -print
 ```
@@ -66,15 +67,15 @@ find . -type f -name "abc.txt" -exec rm -f {}\;
 find . -name \*.cpp -o -name \*.c -o -name \*.h
 ```
 
-### find all hidden files:
+### find all hidden files
 ```bash
 find / -type -f -name ".*"
 ```
-### find all the files that were MODIFIED 10 days modified back:
+### find all the files that were MODIFIED 10 days modified back
 ```bash
 find / -mtime 10
 ```
-### find all the files that were ACCESSED 10 days modified back:
+### find all the files that were ACCESSED 10 days modified back
 ```bash
 find / -atime 10
 ```
@@ -101,9 +102,15 @@ find / -maxdepth 3 -name "*log"
 find . -maxdepth 2 -mindepth 2 -type d -exec basename {} \;
 ```
 
-### Find "Gil" text in all the text files:
+### Find "Gil" text in all the text files
 ```bash
 find . -name "*.txt" -exec grep -i "GIL" {} \;
+```
+
+### Find all files match to a pattern and move them to a destination folder
+
+```bash
+find . -name "*myregex*" -exec mv -t <dst_directory> {} +
 ```
 
 Simply specify whether you want the time to be greater, smaller, or equal to the time you want, using, respectively:
