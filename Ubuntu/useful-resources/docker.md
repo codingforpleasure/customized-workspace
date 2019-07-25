@@ -2,16 +2,20 @@
       * [Docker-compose](#docker-compose)
       * [Docker](#docker)
          * [Docker list all images](#docker-list-all-images)
+         * [Remove docker image which resides on your harddrive:](#remove-docker-image-which-resides-on-your-harddrive)
          * [Search for images in docker hub](#search-for-images-in-docker-hub)
          * [Pull an image from docker hub](#pull-an-image-from-docker-hub)
          * [Start container/s](#start-containers)
          * [Show which containers are running](#show-which-containers-are-running)
          * [Stop running containers](#stop-running-containers)
          * [Restart a container](#restart-a-container)
+         * [Connect to a running container](#connect-to-a-running-container)
          * [Run a command in a container](#run-a-command-in-a-container)
+            * [Mount a directory in host into a docker container](#mount-a-directory-in-host-into-a-docker-container)
+         * [Remove a container](#remove-a-container)
          * [Kill a container](#kill-a-container)
 
-<!-- Added by: gil_diy, at: 2019-07-12T23:01+03:00 -->
+<!-- Added by: gil_diy, at: 2019-07-25T11:09+03:00 -->
 
 <!--te-->
 
@@ -61,6 +65,14 @@ docker-compose logs -f api
 ```bash
 docker images
 ```
+Attention: in the output the column `CREATED` is when the actual image was created and put on dockerhub
+
+
+### Remove docker image which resides on your harddrive:
+
+```bash
+docker rmi <IMAGE ID>
+```
 
 ### Search for images in docker hub
 ```bash
@@ -69,7 +81,7 @@ docker search <image-name>
 
 ### Pull an image from docker hub
 ```bash
-docker docker <image-name>
+docker pull <image-name>
 ```
 
 ### Start container/s
@@ -95,12 +107,25 @@ docker stop <container-name>
 docker restart <container-id>
 ```
 
+### Connect to a running container
+```bash
+docker attach <container-id>
+```
 
 ### Run a command in a container
 ```bash
 docker run -it <docker-image:tag> sh
 ```
+#### Mount a directory in host into a docker container
+
+
+### Remove a container
+```bash
+docker rm <container-name>
+```
+
 ### Kill a container
 ```bash
 docker kill <container-name>
 ```
+
