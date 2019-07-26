@@ -9,8 +9,9 @@
          * [Example 6: You have a file that contains the URLs you want to download? Use the ‘--input-file’:](#example-6-you-have-a-file-that-contains-the-urls-you-want-to-download-use-the---input-file)
          * [Example 7: Add random delay between requests:](#example-7-add-random-delay-between-requests)
          * [Example 8: Download only files with a specific regex](#example-8-download-only-files-with-a-specific-regex)
+         * [Example 9: Overcome 999 No Hacking (Change header)](#example-9-overcome-999-no-hacking-change-header)
 
-<!-- Added by: gil_diy, at: 2019-07-27T01:49+03:00 -->
+<!-- Added by: gil_diy, at: 2019-07-27T02:22+03:00 -->
 
 <!--te-->
 
@@ -69,6 +70,16 @@ wget --wait=seconds --random-wait
 
 ```bash
 wget --accept-regex 'review/.*\.pdf'
+```
+
+### Example 9: Overcome 999 No Hacking (Change header)
+
+HTTP request sent, awaiting response... 999 No Hacking
+
+```bash
+header='--header=User-Agent: Mozilla/5.0 (Windows NT 6.0) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.97 Safari/537.11'
+
+wget "$header" http://website.com -O index
 ```
 
 great resource:
