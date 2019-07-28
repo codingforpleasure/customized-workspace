@@ -4,11 +4,15 @@
          * [Series](#series)
          * [Dataframe](#dataframe)
             * [Converting from numpy to panda](#converting-from-numpy-to-panda)
+         * [Accesing an element in pandas:](#accesing-an-element-in-pandas)
       * [Importing data from CSV](#importing-data-from-csv)
       * [Retreive NaN values](#retreive-nan-values)
       * [Group by:](#group-by)
+      * [Concat Dataframes](#concat-dataframes)
+         * [Join two dataframes one <strong>below</strong> the other.](#join-two-dataframes-one-below-the-other)
+         * [Join two dataframes one <strong>besides</strong> the other.](#join-two-dataframes-one-besides-the-other)
 
-<!-- Added by: gil_diy, at: 2019-07-11T18:06+03:00 -->
+<!-- Added by: gil_diy, at: 2019-07-28T09:27+03:00 -->
 
 <!--te-->
 
@@ -117,3 +121,52 @@ my_groups.describe()
 ```
 
 [Reference](http://tiny.cc/h6hdaz)
+
+## Concat Dataframes
+
+### Join two dataframes one **below** the other.
+
+```python
+import pandas as pd
+
+israel_weather = pd.Dataframe({
+   'city':['Ramat-Gan', 'Tel-Aviv', 'Haifa'],
+   'tempature':['35','33','40'],
+   'humidity':[60,65,75]
+   })
+
+us_weather = pd.Dataframe({
+   'city':['New york', 'Boston', 'Los Angeles'],
+   'tempature':['25','29','30'],
+   'humidity':[40,25,55]
+   })
+
+df1 = pd.concat([israel_weather, us_weather], ignore_index = True)
+
+# create a sub-table
+df2 = pd.concat([israel_weather, us_weather], keys = ['Israel','US'])
+
+# Retrieve the Israel dataframe:
+df2.loc['Israel']
+```
+### Join two dataframes one **besides** the other.
+
+```python
+import pandas as pd
+
+tempature_df = pd.Dataframe({
+   'city':['New york', 'Boston', 'Los Angeles'],
+   'humidity':[60,65,75]
+   })
+
+windspeed_df = pd.Dataframe({
+   'city':['New york', 'Boston', 'Los Angeles'],
+   'widspeed':[7,12,9]
+   })
+
+# Axis =1 means concating dataframe beside one the other dataframe
+df1 = pd.concat([israel_weather, us_weather], axis = 1)
+
+# Retrieve the Israel dataframe:
+df2.loc['Israel']
+```
