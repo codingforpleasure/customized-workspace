@@ -76,6 +76,12 @@ my_2darray = np.array([[1, 2, 3], [4, 5, 6]])
 print(pd.dataframe(my_2darray,columns=['a','b','c']))
 ```
 
+### Accesing an element in pandas:
+```python
+print(my_df.iloc[row_num, col_num] )
+```
+
+
 ## Importing data from CSV
 
 ```python
@@ -89,16 +95,25 @@ movies.head()
 
 ## Group by:
 ```python
+# This will create a data frame object consists of
+# few tables each table is seperated for each city (we have splitted the data into smaller groups).
 my_groups = df.groupby('city')
 
-for city,city_df in g:
+# Running iteratively and retrieving the table for the corresponding group.
+for city,city_df in my_groups:
 	print(city)
 	print(city_df)
 
-
+# Get the dataframe of group city 'new york'
 my_groups.get_group('new york')
 
+
+# Apply the function max on each group:
+my_groups.max()
+
+
+# Get all the analytics in one shot (count, mean, std, min, max):
+my_groups.describe()
 ```
 
-Seeee:
-https://www.youtube.com/playlist?list=PLeo1K3hjS3uuASpe-1LjfG5f14Bnozjwy
+[Reference](http://tiny.cc/h6hdaz)
