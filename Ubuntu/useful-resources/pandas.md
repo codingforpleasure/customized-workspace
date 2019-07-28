@@ -170,3 +170,5 @@ df1 = pd.concat([israel_weather, us_weather], axis = 1)
 # Retrieve the Israel dataframe:
 df2.loc['Israel']
 ```
+
+[Reference](https://www.youtube.com/watch?v=WGOEFok1szA&list=PLeo1K3hjS3uuASpe-1LjfG5f14Bnozjwy&index=8)
