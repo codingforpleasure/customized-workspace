@@ -85,6 +85,17 @@ print(pd.dataframe(my_2darray,columns=['a','b','c']))
 print(my_df.iloc[row_num, col_num] )
 ```
 
+### Methods of slicing in pandas
+
+* `loc` get rows/columns with praticular **labels** (label-based indexing).
+
+* `iloc` get rows/columns at praticular **index** (it only takes integers).
+
+* `get_loc()` is and index method meaning "get the position of the label in this index"
+
+```python
+df.iloc[:df.index.get_loc('row_bla') + 1, :4]
+```
 
 ## Importing data from CSV
 
