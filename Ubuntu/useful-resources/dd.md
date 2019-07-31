@@ -4,9 +4,10 @@
          * [Create a file weights 512MB with only zeros:](#create-a-file-weights-512mb-with-only-zeros)
          * [Put ISO on my thumb-drive:](#put-iso-on-my-thumb-drive)
          * [Make blank drive:](#make-blank-drive)
-         * [For getting info during dd progression:](#for-getting-info-during-dd-progression)
+         * [Getting info during dd progression:](#getting-info-during-dd-progression)
+         * [Copy 1000 bytes from a file with a spcific offset](#copy-1000-bytes-from-a-file-with-a-spcific-offset)
 
-<!-- Added by: gil_diy, at: 2018-12-01T12:05+02:00 -->
+<!-- Added by: gil_diy, at: 2019-07-31T13:42+03:00 -->
 
 <!--te-->
 
@@ -40,7 +41,7 @@ unmount the thumbdrive via `umount` (mounting point in listed in lsblk).
 
 
 ```bash
-sudo dd if=~/Downloads/my_image.iso of=/dev/sdc
+dd if=~/Downloads/my_image.iso of=/dev/sdc
 ```
 
 so if next time you'll connect this thumbdrive this bootable iso will get mounted into your file system automatically by `udev`, you can easily make sure with lsblk.
@@ -57,4 +58,9 @@ just add `status=progress`:
 
 ```bash
 sudo dd status=progress if=~/Downloads/my_image.iso of=/dev/sdc
+```
+
+### Copy 1000 bytes from a file with a spcific offset
+```bash
+if=myfile bs=4096 skip=<my_offset_in_bytes> count=1000 iflag=skip_bytes,count_bytes
 ```
