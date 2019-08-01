@@ -2,6 +2,14 @@
 <!--te-->
 
 
+## The relationship between all terminalogy
+
+<p align="center">
+  <img src="images/machine-learning/machine_learning_terms.jpg" title="sigmoid">
+</p>
+
+
+
 ## Under and Over-fitting
 
 
@@ -28,13 +36,13 @@ is when you pick a function which is too complex (flexible)
 For Regression :
 
 <p align="center">
-  <img src="images/regression_example_over_under_fitting.png" title="sigmoid">
+  <img src="images/machine-learning/regression_example_over_under_fitting.png" title="sigmoid">
 </p>
 
 For Classification:
 
 <p align="center">
-  <img src="images/classifying_example_over_under_fitting.png" title="sigmoid">
+  <img src="images/machine-learning/classifying_example_over_under_fitting.png" title="sigmoid">
 </p>
 
 
