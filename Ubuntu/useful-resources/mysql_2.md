@@ -4,8 +4,11 @@
 
 <!--ts-->
    * [mysql cheetsheat](#mysql-cheetsheat)
+      * [Basic &amp; essential tips:](#basic--essential-tips)
+      * [Creating database](#creating-database)
       * [Creating tables](#creating-tables)
       * [Populating data into tables](#populating-data-into-tables)
+         * [How to import a .sql file in MySQL?](#how-to-import-a-sql-file-in-mysql)
       * [Joins](#joins)
          * [Inner join](#inner-join)
          * [Left join](#left-join)
@@ -47,6 +50,7 @@
    * [INFORMATION_SCHEMA](#information_schema)
       * [Finding specific column among all tables](#finding-specific-column-among-all-tables)
       * [Finding <strong>function</strong> and <strong>procedure</strong>](#finding-function-and-procedure)
+      * [Finding all empty/unempty tables in a database](#finding-all-emptyunempty-tables-in-a-database)
       * [Show tables schema of specific database](#show-tables-schema-of-specific-database)
       * [Get table name and the table_type as : system_view, base table, view](#get-table-name-and-the-table_type-as--system_view-base-table-view)
       * [Get the number of tables in the database](#get-the-number-of-tables-in-the-database)
@@ -85,14 +89,27 @@
          * [Aggregates a result set as a single JSON array whose elements consist of the rows](#aggregates-a-result-set-as-a-single-json-array-whose-elements-consist-of-the-rows)
          * [Reading two columns or expressions and shows them as a single JSON object](#reading-two-columns-or-expressions-and-shows-them-as-a-single-json-object)
          * [Converting json table to json file format document (Useful)](#converting-json-table-to-json-file-format-document-useful)
+   * [Database maintaining](#database-maintaining)
+      * [Create user](#create-user)
+      * [Removing user](#removing-user)
    * [References](#references)
 
-<!-- Added by: gil, at: 2019-01-08T16:23+02:00 -->
+<!-- Added by: gil_diy, at: 2019-08-02T00:47+03:00 -->
 
 <!--te-->
 
 # mysql cheetsheat
 
+
+## Basic & essential tips:
+
+1. Autocomplete and very efficient way is using `mycli`, so enter `mycli -u root`
+2. In case you are using `datagrip` all files resides at: `~/.DataGrip2018.2/config/projects`
+
+## Creating database
+```
+create database my_db;
+```
 
 ## Creating tables
 
@@ -116,6 +133,15 @@ Explanation between the difference between "ENUM" to "SET":
 
 
 ## Populating data into tables
+
+### How to import a .sql file in MySQL?
+
+You can also import an .sql file as an already connected user to the database manner :
+
+```sql
+mysql> use your_database_name;
+mysql> source fullpath_to_file.sql;
+```
 
 ## Joins
 
@@ -624,6 +650,15 @@ SELECT ROUTINE_TYPE, ROUTINE_NAME
 FROM INFORMATION_SCHEMA.ROUTINES
 WHERE ROUTINE_SCHEMA = 'shay_practice_mysql';
 ```
+
+## Finding all empty/unempty tables in a database
+```sql
+SELECT *
+FROM INFORMATION_SCHEMA.TABLES
+WHERE TABLE_ROWS =  '0'
+AND TABLE_SCHEMA = 'my_database_only'
+```
+
 ## Show tables schema of specific database
 ```sql
 SELECT * ##`table_schema`
@@ -994,6 +1029,12 @@ FROM my_tb,
      ) people
 WHERE people.name LIKE 'John%';
 ```
+
+
+# Database maintaining
+[Link](https://kyup.com/tutorials/create-new-user-grant-permissions-mysql/)
+## Create user
+## Removing user
 
 # References
 [mysql-json-functions](http://dasini.net/blog/2018/07/23/30-mins-with-mysql-json-functions/)
