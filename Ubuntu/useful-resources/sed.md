@@ -19,8 +19,9 @@
          * [Example #10: Substitute a specific word only on lines 3-5:](#example-10-substitute-a-specific-word-only-on-lines-3-5)
          * [Example #11: Append a spcific string to each line in a file:](#example-11-append-a-spcific-string-to-each-line-in-a-file)
          * [Example #12: Remove empty lines in a file](#example-12-remove-empty-lines-in-a-file)
+         * [Example #13: Prepend characters to the beginning of a file](#example-13-prepend-characters-to-the-beginning-of-a-file)
 
-<!-- Added by: gil_diy, at: 2019-08-03T22:31+03:00 -->
+<!-- Added by: gil_diy, at: 2019-08-04T00:50+03:00 -->
 
 <!--te-->
 
@@ -140,7 +141,14 @@ $ sed -e 's/$/my specific string/' -i my_file.txt
 
 ### Example #12: Remove empty lines in a file
 
-
 ```bash
 $ cat data.txt | sed '/^[[:space:]]*$/d'
 ```
+### Example #13: Prepend characters to the beginning of a file
+
+```bash
+sed -i '1s/^/my new charcters goes here\n/' ./my-file.json
+```
+
+* Using the `-i` flag for in-place editing
+* 1s/^ means the beginning of the first line
