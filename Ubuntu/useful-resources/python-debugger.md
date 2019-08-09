@@ -39,3 +39,9 @@ command | Description
  (d)own | Move your program down in the stack frame
  restart | Restart the current debugged program and debugging session
 
+
+
+
+* Mixing scripts inside packages is tricky and should be avoided if at all possible
+
+[Link](https://stackoverflow.com/questions/16981921/relative-imports-in-python-3)
