@@ -171,7 +171,84 @@ if __name__ == "__main__":
 
 ### Thread synchronization with semaphores
 
+```python
+import threading
+import time
+import random
+
+semaphore = threading.Semaphore(0)
+
+def consumer():
+	print('Consumer is waiting.')
+	## Acquire a semaphore
+	semaphore.acquire()
+	## The consumer ave access to the shared resource
+	print("Consumer notify : consumed item number %s " %item)
+
+def producer():
+	global item
+	time.sleep(10)
+	## create a random item
+	item = random.randint(0,1000)
+	print("producer notify: producted item number %s" %item)
+
+	## Release a semaphore, incrementing the internal counter by one.
+	## when it was zero on entry and another thread is waitingfor it
+	## to become larger than zero again, wake up that thread
+	semaphore.release()
+```
+
+
 ### Thread synchronization with a condition
+
+```python
+from threading import Thread, Condition
+import time
+
+items = []
+condition  = Condition()
+
+class consumer(Thread):
+	def __init__(self):
+		Thread.__init__(self)
+
+	def consume(self):
+		global condition
+		global items
+
+		condition.acquire()
+
+		if len(items) == 0:
+			condition.wait()
+			print("Consumer notify: no items to consume")
+		items.pop()
+		print("Consumer notify : consumed 1 item")
+		print("Consumer notify : items to consume are" +  str(len(items)))
+
+		condition.notify()
+		condition.release()
+
+
+class producer(Thread):
+	def __init__(self):
+		Thread.__init__(self)
+
+	def produce(self):
+		global condition
+		global items
+
+		condition.acquire()
+		if len(items) == 10:
+			condition.wait()
+			print("Producer notify : items produced are " + str(len(items)))
+			print("Producer notify : stop the production!!")
+
+		items.append(1)
+		print("Producer notify : total items produced " + str(len(items)))
+		condition.notify()
+		condition.release()
+
+```
 
 ### Thread synchronization with an event
 
@@ -181,4 +258,89 @@ if __name__ == "__main__":
 
 ### Evaluating the performance of multithread applications
 
+
+## Process-Based Parallelism
+
+### Spawning a process
+```python
+import multiprocessing
+
+def my_func(i):
+	print('called function in process: %s' %i)
+	return
+
+if __name__ == '__main__':
+	Process_jobs = []
+	for i in range(5):
+		p = multiprocessing.Process(target = my_func,args=(i,))
+		Process_jobs.append(p)
+		p.start()
+		p.join()
+```
+
+### naming a process
+```python
+import multiprocessing
+import time
+
+def foo(i):
+	name = multiprocessing.current_process().name
+	print("Starting %s \n" %name)
+	time.sleep(3)
+	print("Exiting %s \n" %name)
+	return
+
+if __name__ == '__main__':
+	process_with_name = multiprocessing.Process(name = 'foo_process', target = foo)
+	process_with_name.daemon = True
+	process_with_default_name = multiprocessing.Process(target = foo)
+	process_with_name.start()
+	process_with_default_name.start()
+```
+### Running process in the background
+
+```python
+import multiprocessing
+import time
+
+def foo(i):
+	name = multiprocessing.current_process().name
+	print("Starting %s \n" %name)
+	time.sleep(3)
+	print("Exiting %s \n" %name)
+	return
+
+if __name__ == '__main__':
+	background_process = multiprocessing.Process(name = 'background_process', target = foo)
+	background_process.daemon = True
+
+	No_background_process = multiprocessing.Process(name = 'No_background_process', target = foo)
+	No_background_process.daemon = False
+
+	background_process.start()
+	process_with_default_name.start()
+```
+
+### Killing a process
+```python
+import multiprocessing
+import time
+
+def foo():
+	print('Starting function')
+	time.sleep(0.1)
+	print('Finished function')
+
+if __name__=='__main__':
+	p = multiprocessing.Process(target=foo)
+	print('Process before execution', p, p.is_alive())
+
+	p.start()
+	print('Process running: ', p, p.is_alive())
+
+	p.terminate()
+	print('Process terminated: ', p, p.is_alive())
+
+	p.join()
+```
 
