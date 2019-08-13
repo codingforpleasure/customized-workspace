@@ -13,8 +13,18 @@
          * [Using the with event](#using-the-with-event)
          * [Thread communication using a queue](#thread-communication-using-a-queue)
          * [Evaluating the performance of multithread applications](#evaluating-the-performance-of-multithread-applications)
+      * [Process-Based Parallelism](#process-based-parallelism)
+         * [Spawning a process](#spawning-a-process)
+         * [naming a process](#naming-a-process)
+         * [Running process in the background](#running-process-in-the-background)
+         * [Killing a process](#killing-a-process)
+         * [Using a process in a subclass](#using-a-process-in-a-subclass)
+         * [Exchanging objects between processes](#exchanging-objects-between-processes)
+         * [Synchronizing processes](#synchronizing-processes)
+         * [Managing a state between processes](#managing-a-state-between-processes)
+         * [Using a process pool](#using-a-process-pool)
 
-<!-- Added by: gil_diy, at: 2019-08-12T23:47+03:00 -->
+<!-- Added by: gil_diy, at: 2019-08-13T13:13+03:00 -->
 
 <!--te-->
 
@@ -344,3 +354,49 @@ if __name__=='__main__':
 	p.join()
 ```
 
+### Using a process in a subclass
+
+```python
+
+```
+
+### Exchanging objects between processes
+
+```python
+
+```
+
+### Synchronizing processes
+
+```python
+
+```
+
+### Managing a state between processes
+
+```python
+
+```
+
+### Using a process pool
+We create a pool of four processes shown here and then we use the pool's map method
+to perform a simple calculation
+```python
+import multiprocessing
+
+def func_square(data)
+	result = data * data
+	return result
+
+
+if __name__ == '__main__':
+	inputs = list(range(0,100))
+	pool = multiprocessing.Pool(processes=4)
+	pool_outputs = pool.map(function_square, inputs)
+
+	pool.close()
+	pool.join()
+
+	print('Pool:  ', pool_outputs)
+
+```
