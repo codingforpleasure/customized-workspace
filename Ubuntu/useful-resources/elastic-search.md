@@ -7,6 +7,7 @@
       * [Basic operations is Elasticsearch (CRUD):](#basic-operations-is-elasticsearch-crud)
          * [Creating an index with curl](#creating-an-index-with-curl)
          * [Mapping scheme with curl](#mapping-scheme-with-curl)
+            * [Field datatypes](#field-datatypes)
          * [Listing all indices in my cluster with curl](#listing-all-indices-in-my-cluster-with-curl)
          * [Adding a new document to the new index we just have created with curl](#adding-a-new-document-to-the-new-index-we-just-have-created-with-curl)
          * [Retrieving document by id with curl](#retrieving-document-by-id-with-curl)
@@ -43,7 +44,7 @@
          * [Search using the filter context](#search-using-the-filter-context)
       * [Aggregations](#aggregations)
 
-<!-- Added by: gil_diy, at: 2019-07-02T11:23+03:00 -->
+<!-- Added by: gil_diy, at: 2019-08-20T07:34+03:00 -->
 
 <!--te-->
 
