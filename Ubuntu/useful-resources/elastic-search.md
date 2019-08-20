@@ -191,13 +191,26 @@ curl -XPUT 'localhost:9200/products?&pretty' -H 'Content-Type: application/json'
 
 
 
-Field datatypes
+#### Field datatypes
 
 Each field has a data type which can be:
 
 * a simple type like text, keyword, date, long, double, boolean or ip.
 * a type which supports the hierarchical nature of JSON such as object or nested.
 * a specialised type like geo_point, geo_shape, or completion.
+
+
+Type | Es-Type | Description
+-----|---------|------------
+String, VarChar | keyword | This is a text field that is not tokenizable
+String, VarChar, Text | text | This is a text field to be tokenizated
+Integer | integer | This is an integer (32 bit)
+long | long | This is a long value (64 bit)
+float | float | This is a floating-point number (32 bit)
+double | double | This is a floating-point number (64 bit)
+boolean | boolean | This is a boolean value: true or false
+date/datetime | date | This is a date or datetime value:`2013-12-25`, `2013-12-25T22:21:20`
+bytes/binary | binary | This includes some bytes that we are used for binary data, such as file or stream of bytes
 
 ### Listing all indices in my cluster with curl
 
