@@ -16,6 +16,7 @@
          * [Right outer join](#right-outer-join)
          * [Left outer join](#left-outer-join)
          * [Full outer Join ( Using "Union" Mysql does't have Full outer Join)](#full-outer-join--using-union-mysql-doest-have-full-outer-join)
+         * [Catersian Join](#catersian-join)
       * [Aggregate functions](#aggregate-functions)
       * [sub-queries](#sub-queries)
          * [Subqueries in the SELECT clause](#subqueries-in-the-select-clause)
@@ -92,9 +93,10 @@
    * [Database maintaining](#database-maintaining)
       * [Create user](#create-user)
       * [Removing user](#removing-user)
+   * [Useful website for coding online sql/mysql/postgresql](#useful-website-for-coding-online-sqlmysqlpostgresql)
    * [References](#references)
 
-<!-- Added by: gil_diy, at: 2019-08-02T00:47+03:00 -->
+<!-- Added by: gil_diy, at: 2019-08-28T15:43+03:00 -->
 
 <!--te-->
 
@@ -166,6 +168,7 @@ gil cohen	|Science fiction
 Yossi Levi	|Urban fiction
 shay cohen	|Drama
 
+**Note:**  INNER is optional above.  Simple JOIN is also considered as INNER JOIN
 
 ### Left join
 ```sql
@@ -260,6 +263,10 @@ Omri Ror |	22	||
 	on author_tb.genre_id = genre_tb.genre_id;
 ```
 
+### Catersian Join
+The CARTESIAN JOIN is also known as CROSS JOIN. In a CARTESIAN JOIN there is a join for each row of one table to every row of another table.
+https://www.geeksforgeeks.org/sql-join-cartesian-join-self-join/
+
 ## Aggregate functions
 ```sql
 SELECT publisher,
@@ -329,7 +336,7 @@ CREATE TABLE new_table LIKE original_table;
 ``` -->
 Cloning the contents to be the same as the original table:
 ```sql
-INSERT INTO new_table SELECT * FROM original_table;;
+INSERT INTO new_table SELECT * FROM original_table;
 ```
 
 ### Cloning part of a table which matches a specific condition:
@@ -1035,6 +1042,9 @@ WHERE people.name LIKE 'John%';
 [Link](https://kyup.com/tutorials/create-new-user-grant-permissions-mysql/)
 ## Create user
 ## Removing user
+
+# Useful website for coding online sql/mysql/postgresql
+[sqlfiddle](www.sqlfiddle.com)
 
 # References
 [mysql-json-functions](http://dasini.net/blog/2018/07/23/30-mins-with-mysql-json-functions/)
