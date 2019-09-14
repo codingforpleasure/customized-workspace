@@ -141,6 +141,15 @@ reminder:
 **POST:** only to update resource.
 
 
+### Get mapping for index
+
+
+Run this in kibana:
+```bash
+GET /<INDEX_NAME>/_mapping
+```
+By default when you index documents Elasticsearch does the dynamic mapping for you which means it auto configures the types.
+
 ### Mapping scheme with curl
 
 Mapping is the process of defining how a document, and the fields it contains, are stored and indexed.
@@ -359,6 +368,7 @@ curl -XPOST  -H 'Content-Type: application/json' 'localhost:9200/_bulk?pretty&re
 ```
 
 ## Basic operations
+
 ### Get number of documents in an index
 ```bash
 GET /authors/author_doc/_count
@@ -370,6 +380,18 @@ GET /authors/author_doc/_count
 ```
 
 
+### Debugging (using **_explain api**)
+
+```bash
+GET /authors/1/_explain
+{
+  "query":{
+    "term":{
+        "name":"johni"
+    }
+  }
+}
+```
 
 ## Term Level queries
 Basic Usage: for well data structured such as:
@@ -380,7 +402,7 @@ b. numbers
 
 c. keywords fields.
 
-Term level queries find **exact matches** like on enums fields.
+Term level queries find **exact matches** like on enums fields and are not analysed.
 
 **Reminder:** Something important to remember is that Term Level queries are not analysed (Term Level queries with synonyms would not work).
 
@@ -498,7 +520,61 @@ GET /movies/default/_search
 Attention: Elasticsearch uses Lucene's regular expression engine which **is not perl compatible**.
 
 
+### Example of query and filter contexts
+
+```bash
+GET /goodreads_index/_search
+{
+  "query": {
+    "bool": {
+      "must": { "match": { "title": "harry" }},
+      "filter": { "term":  { "language_code": "eng" }}
+    }
+  }
+}
+```
+
+[Great reference](https://www.elastic.co/guide/en/elasticsearch/reference/current/query-filter-context.html)
+
+### Example
+Search for 'harry' filtered by english language only and order them by ratings count.
+```bash
+GET /goodreads_index/_search
+{
+  "query": {
+    "function_score": {
+      "query": {
+        "bool": {
+          "must": {
+            "match": {
+              "title": "harry"
+            }
+          },
+          "filter": {
+            "term": {
+              "language_code": "eng"
+            }
+          }
+        }
+      },
+      "script_score": {
+        "script": "doc['ratings_count'].value"
+      }
+    }
+  }
+```
+
+
 ## Full text queries
+
+**Full text queries** is suitable for:
+* blog posts
+* articles
+* description
+
+Unlike term queries, **full text queries** are analysed, the same analyzer has been used during the indexing
+process and the search phase.
+
 ### Example #1:  Flexible matching with the match query
 ```bash
 GET /recipe/default/_search
@@ -534,6 +610,7 @@ So now **all terms** in the query must be present within a document's title fiel
 Important to notice is that we still searching for terms and **not an entire sentence** so that's why some documents match, Remember the query that we entered matches query is analyzed by using the analyzer.
 This is of course different then the term level queries which are not analyzed.
 
+* In a match query the order of the words is not relevant each word is search seperately and eventually we calculate the final score.
 
 ### Example #2:  Matching phrases
 
@@ -753,6 +830,26 @@ https://youtu.be/PQGlhbf7o7c?list=PLIuTyKmG6V7OAqTYZL_vkkxAo8JK6eGb8&t=1389
 GET /product/default/_search
 {
 
+}
+```
+
+
+### Function score query
+```bash
+GET /goodreads_index/_search
+{
+  "query": {
+    "function_score": {
+      "query": {
+        "match": {
+          "title": "harry"
+        }
+      },
+      "script_score": {
+        "script": "doc['ratings_count'].value"
+      }
+    }
+  }
 }
 ```
 
