@@ -15,6 +15,7 @@
             * [Useful Tip #10: Counting Array Elements from File](#useful-tip-10-counting-array-elements-from-file)
             * [Useful Tip #11: Split an array of elements into chuncks](#useful-tip-11-split-an-array-of-elements-into-chuncks)
             * [Useful Tip #12: Map a dict of elements (Apply function on each element)](#useful-tip-12-map-a-dict-of-elements-apply-function-on-each-element)
+            * [Useful Tip #13: Prettify a json file:](#useful-tip-13-prettify-a-json-file)
          * [Set operations](#set-operations)
             * [Union operation](#union-operation)
             * [Intersection operation](#intersection-operation)
@@ -24,7 +25,7 @@
          * [Converting files from CSV to JSON and many more](#converting-files-from-csv-to-json-and-many-more)
          * [<strong>Great resources on the web</strong>](#great-resources-on-the-web)
 
-<!-- Added by: gil_diy, at: 2019-07-15T12:23+03:00 -->
+<!-- Added by: gil_diy, at: 2019-09-16T16:02+03:00 -->
 
 <!--te-->
 # jq (json processor)
@@ -150,6 +151,12 @@ output:
   "b": 3,
   "c": 4
 }
+```
+
+#### Useful Tip #13: Prettify a json file:
+
+```bash
+jq . file.json > file_prettified.json
 ```
 
 
