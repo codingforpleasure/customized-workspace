@@ -38,6 +38,12 @@ The entire database is a set of "subject-predicate-object" triples.
 
 ### Understanding SPO (Subject, Predicate, Object) also known as a Semantic Triple
 
+The statement "The sky has the color blue", consists of a subject ("the sky"), a predicate ("has the color"), and an object ("blue").
+
+SPO or "subject, predicate, object" is known as a (Semantic) triple, or commonly referred to in Wikidata as a statement about data.
+
+SPO is also used as a form of basic syntax layout for querying RDF data structures, or any graph database or triplestore, such as the Wikidata Query Service (WDQS).
+
 Uses three tuple:
 <item property value>
 
@@ -172,6 +178,74 @@ WHERE
 ```
 
 ### Modifiers (Group by, Having, Order by, Limit, Offset)
+
+
+#### Group by
+
+Before the group by:
+
+```SQL
+SELECT ?mother ?motherLabel ?child ?childLabel
+WHERE
+{
+  ?child wdt:P22 wd:Q1339.# ?child has father Bach
+  ?child wdt:P25 ?mother.
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "en". }
+}
+```
+
+We can see each mother have few childs, so let's group by childrens of the same mother:
+```SQL
+SELECT ?mother ?motherLabel (COUNT(?child) AS ?children)
+        (GROUP_CONCAT(DISTINCT ?childLabel; SEPARATOR=", ") AS ?names)
+WHERE
+{
+  ?child wdt:P22 wd:Q1339.# ?child has father Bach
+  ?child wdt:P25 ?mother.
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "en".
+                          ?mother rdfs:label ?motherLabel.
+                          ?child  rdfs:label ?childLabel.
+                         }
+}
+GROUP BY ?mother ?motherLabel
+```
+
+another example:
+
+```SQL
+SELECT ?book ?bookName (GROUP_CONCAT(DISTINCT ?characterLabel; SEPARATOR = ", ") AS ?characters) WHERE {
+  VALUES ?value {
+    wd:Q571
+    wd:Q7725634
+    wd:Q277759
+  }
+  ?book wdt:P31 ?value;
+    wdt:P674 ?character.
+  SERVICE wikibase:label {
+    bd:serviceParam wikibase:language "en".
+    ?book rdfs:label ?bookName.
+    ?character rdfs:label ?characterLabel.
+
+  }
+}
+GROUP BY ?book ?bookName
+```
+
+#### Group_concat
+
+```SQL
+SELECT ?char ?charName (GROUP_CONCAT(DISTINCT ?typeLabel;separator=", ") AS ?types) (GROUP_CONCAT(DISTINCT ?universeLabel;separator=", ") AS ?universes)
+WHERE {
+	?char wdt:P1080 wd:Q931597;
+          wdt:P31 ?type ;
+          wdt:P1080 ?universe .
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en".
+                         ?char rdfs:label ?charName .
+                         ?universe rdfs:label ?universeLabel .
+                         ?type rdfs:label ?typeLabel .}
+} GROUP BY ?char ?charName
+```
+
 
 #### limit
 
