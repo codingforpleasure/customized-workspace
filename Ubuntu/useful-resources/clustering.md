@@ -4,10 +4,13 @@
          * [<strong>partitioned based clustering</strong>](#partitioned-based-clustering)
          * [<strong>Hierarchical Clustering</strong>](#hierarchical-clustering)
          * [<strong>Density-based Clustering</strong>](#density-based-clustering)
-         * [K-Means](#k-means)
+         * [Algorithms in depth:](#algorithms-in-depth)
+            * [K-Means](#k-means)
             * [How to evaluate k-mean?](#how-to-evaluate-k-mean)
+            * [Agglomerative (Hierarchical Clustering method)](#agglomerative-hierarchical-clustering-method)
+            * [<strong>DBSCAN (Density-Based Spatial of application with Noise)</strong>](#dbscan-density-based-spatial-of-application-with-noise)
 
-<!-- Added by: gil_diy, at: 2019-09-22T01:34+03:00 -->
+<!-- Added by: gil_diy, at: 2019-09-22T03:28+03:00 -->
 
 <!--te-->
 
@@ -58,20 +61,25 @@ The following algorithms are relatively efficient and are used for medium and la
 ### **Hierarchical Clustering**
 Are generally good to use for small size datasets:
 
+Hierarchical clustering algorithms build a hierarchy of clusters where each node is a cluster consisting of the clusters of its daughter nodes.
+
 * Produces trees of clusters
-* E.g Agglomerative, Divisive
+* Agglomerative - Is visualised in the end of the algorithm as a Dendrogram
+* Divisive (You start with all observations in a large cluster and break it
+down into smaller pieces think about divisive as dividing the cluster).
 
 ### **Density-based Clustering**
 
 Produces arbitrary shaped clusters
+
 * DBSCAN
 
 
+----------------
+### Algorithms in depth:
 
-Algorithms in depth:
 
-
-### K-Means
+#### K-Means
 
 **The simple algorithm:**
 
@@ -102,3 +110,63 @@ So a more rellevant approach would be run the clustering across the different va
 But the problem is that with increasing the number of clusters, the distance of centroids to data points will always reduce.
 This means increasing K will always decrease the error. So, the value of the metric as a function of K is plotted and the **elbow point** is determined where the rate of decrease sharply shifts. It is the right K for clustering.
 This method is called the **elbow method**.
+
+----
+
+#### Agglomerative (Hierarchical Clustering method)
+
+We start from buttom up, where each observation starts in its own cluster and
+pairs of clusters are merged together as they move up the hierarchy.
+This method builds the hierarchy from the individual elements by progressively merging clusters.
+
+The algorithm of **Agglomerative algorithm**:
+
+1. Create n clusters, one for each data point
+2. Compute the Proximity Matrix
+3. Repeat:
+
+		a. Merge the two closest clusters
+
+		b. Update the proximity matrix
+
+4. Until only a single cluster remains
+
+
+We can use different criteria to find the closest clusters and merge them.
+In general, it completely depends on the data type, dimensionality of data and
+most importantly, the domain knowledge of the data set.
+In fact, different approaches to defining the distance between clusters
+distinguish the different algorithms.
+As you might imagine, there are multiple ways we can do this.
+**single linkage clustering** - Single linkage is defined as the shortest distance between two points in each cluster, such as point a and b.
+
+**complete linkage clustering** - This time we are finding the longest distance between the points in each cluster, such as the distance between point a and b.
+
+**average linkage clustering or the mean distance** - This means we're looking at the average distance of each point from one cluster to every point in another cluster.
+
+**centroid linkage clustering** - Centroid is the average of the feature sets of points in a cluster. This linkage takes into account the centroid of each cluster when determining the minimum distance.
+
+---
+
+#### DBSCAN (Density-Based Spatial of application with Noise)
+
+* Density-based clustering algorithms are proper for arbitrary shape clusters.
+* Density-based clustering algorithms locate regions of high density that are separated from one another by regions of low density.
+* **Don't require the number of clusters** like in K-Mean.
+* It finds different arbitrary shaped clusters, it can **find the denser part of data-centered samples** by **ignoring less dense areas and noises** .
+* **Is one of the most common clustering algorithms** .
+* Works based on density of objects.
+
+The Algorithms needs two paramters:
+
+It works based on two parameters: **Epsilon** and **Minimum Points**:
+
+**Epsilon** determine a specified radius that if includes enough number of points within, we call it dense area
+**minimumSamples** determine the minimum number of data points we want in a neighborhood to define a cluster.
+
+During the algorithm run we mark outliers points.
+Main advantages of DBSCAN:
+
+1. Arbitrary shaped clusters
+2. Robust to outliers
+3. Does not require specification of the number of clusters
