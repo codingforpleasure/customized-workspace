@@ -2,8 +2,9 @@
    * [Feature Selection Techniques in Machine Learning](#feature-selection-techniques-in-machine-learning)
       * [Statistical test](#statistical-test)
       * [Feature importance](#feature-importance)
+      * [Correlation Matrix with Heatmap](#correlation-matrix-with-heatmap)
 
-<!-- Added by: gil_diy, at: 2019-09-23T15:35+03:00 -->
+<!-- Added by: gil_diy, at: 2019-09-23T16:17+03:00 -->
 
 <!--te-->
 
@@ -11,6 +12,33 @@
 # Feature Selection Techniques in Machine Learning
 
 **Feature Selection is one of the core concepts in machine learning which hugely impacts the performance of your model**
+I'd like to demostrate which features are affecing the actual price of a smartphone, so we will be taking a dataset about smartphones.
+
+Column number |feature name | Description
+--|----------|-----
+0 | **battery_power** | Total energy a battery can store in one time measured in mAh
+1 | **blue** | Has Bluetooth or not
+2 | **clock_speed** |  the speed at which microprocessor executes instructions
+3 | **dual_sim** | Has dual sim support or not
+4 | **fc** | Front Camera megapixels
+5 | **four_g** | Has 4G or not
+6 | **int_memory** | Internal Memory in Gigabytes
+7 | **m_dep** | Mobile Depth in cm
+8 | **mobile_wt** | Weight of mobile phone
+10| **n_cores** | Number of cores of the processor
+11| **pc** | Primary Camera megapixels
+12| **px_width** | Pixel Resolution Width
+13| **ram** | Random Access Memory in MegaBytes
+14| **sc_h** | Screen Height of mobile in cm
+15| **sc_w** | Screen Width of mobile in cm
+16| **talk_time** | the longest time that a single battery charge will last when you are
+17| **three_g** | Has 3G or not
+18| **touch_screen** | Has touch screen or not
+19| **wifi** | Has wifi or not
+
+**Target column**: **price_range**: This is the target variable with a value of:
+
+ 0(low cost), 1(medium cost), 2(high cost) and 3(very high cost).
 
 ## Statistical test
 
@@ -75,3 +103,35 @@ plt.show()
 <p align="center">
   <img src="./images/machine-learning/feature_selection2.png" width="600" title="bla!">
 </p>
+
+## Correlation Matrix with Heatmap
+
+Correlation states how the features are related to each other or the target variable.
+
+Correlation can be positive (increase in one value of feature increases the value of the target variable)
+or negative (increase in one value of feature decreases the value of the target variable).
+
+[Correlation reminder](https://en.wikipedia.org/wiki/Pearson_correlation_coefficient)
+
+```python
+import pandas as pd
+import numpy as np
+import seaborn as sns
+
+X = data.iloc[:,0:20]  #independent columns
+y = data.iloc[:,-1]    #target column i.e price range
+#get correlations of each features in dataset
+corrmat = data.corr()
+top_corr_features = corrmat.index
+plt.figure(figsize=(20,20))
+#plot heat map
+g=sns.heatmap(data[top_corr_features].corr(),annot=True,cmap="RdYlGn")
+```
+<p align="center">
+  <img src="./images/machine-learning/feature_selection3.png" width="900" title="bla!">
+</p>
+
+Based on this heatmap we can see easily notice about the last row
+price range, see how the price range is correlated with other features, ram is the highly correlated
+with price range followed by battery power, pixel height and width while m_dep, lock_speed and
+n_cores seems to be least correlated with price_range.
