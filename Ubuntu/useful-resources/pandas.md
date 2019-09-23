@@ -5,14 +5,19 @@
          * [Dataframe](#dataframe)
             * [Converting from numpy to panda](#converting-from-numpy-to-panda)
          * [Accesing an element in pandas:](#accesing-an-element-in-pandas)
+         * [Methods of slicing in pandas](#methods-of-slicing-in-pandas)
       * [Importing data from CSV](#importing-data-from-csv)
-      * [Retreive NaN values](#retreive-nan-values)
+      * [Get information of the data types for a dataframe](#get-information-of-the-data-types-for-a-dataframe)
+      * [Get statistics (count, mean, std, min, max))](#get-statistics-count-mean-std-min-max)
+      * [Datatypes conversions](#datatypes-conversions)
+      * [Retrieve NaN values](#retrieve-nan-values)
       * [Group by:](#group-by)
       * [Concat Dataframes](#concat-dataframes)
          * [Join two dataframes one <strong>below</strong> the other.](#join-two-dataframes-one-below-the-other)
          * [Join two dataframes one <strong>besides</strong> the other.](#join-two-dataframes-one-besides-the-other)
+         * [Printing data so all columns will be presented](#printing-data-so-all-columns-will-be-presented)
 
-<!-- Added by: gil_diy, at: 2019-07-28T09:27+03:00 -->
+<!-- Added by: gil_diy, at: 2019-09-23T22:46+03:00 -->
 
 <!--te-->
 
@@ -100,10 +105,31 @@ df.iloc[:df.index.get_loc('row_bla') + 1, :4]
 ## Importing data from CSV
 
 ```python
-movies = pd.read_csv('data/movies/csv')
-movies.head()
+movies_df = pd.read_csv('data/movies/csv')
+movies_df.head()
 ```
-## Retreive NaN values
+
+## Get information of the data types for a dataframe
+
+```python
+movies_df.info()
+```
+
+## Get statistics (count, mean, std, min, max))
+
+```python
+df[''].describe()
+```
+
+## Datatypes conversions
+
+```python
+movies_df['average rating'] = movies_df['average rating'].astype('float')
+movies_df['Date'] = pd.to_datetime(movies_df['Date'])
+movies_df['Star Ratings'] = movies_df['Star Ratings'].astype('int')
+```
+
+## Retrieve NaN values
 ```python
 <columnname>.notnull()
 ```
@@ -132,6 +158,12 @@ my_groups.describe()
 ```
 
 [Reference](http://tiny.cc/h6hdaz)
+
+<!-- ### Group by year in date column
+
+```python
+df.groupby(df['Date'].dt.year)
+``` -->
 
 ## Concat Dataframes
 
@@ -183,3 +215,10 @@ df2.loc['Israel']
 ```
 
 [Reference](https://www.youtube.com/watch?v=WGOEFok1szA&list=PLeo1K3hjS3uuASpe-1LjfG5f14Bnozjwy&index=8)
+
+### Printing data so all columns will be presented
+```python
+pd.set_option('display.max_rows', 500)
+pd.set_option('display.max_columns', 500)
+pd.set_option('display.width', 1000)
+```
