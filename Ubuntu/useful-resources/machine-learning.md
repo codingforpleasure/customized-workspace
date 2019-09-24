@@ -8,15 +8,18 @@
       * [<strong>Over fitting</strong>](#over-fitting)
       * [<strong>Under-fitting</strong>](#under-fitting)
       * [Regression algorithms](#regression-algorithms)
+      * [<strong>Non linear regression</strong>](#non-linear-regression)
       * [Regression accuracy](#regression-accuracy)
+      * [Classification algorithms in machine learning](#classification-algorithms-in-machine-learning)
+      * [K Nearest Neighbhors (KNN)](#k-nearest-neighbhors-knn)
 
-<!-- Added by: gil_diy, at: 2019-09-21T10:08+03:00 -->
+<!-- Added by: gil_diy, at: 2019-09-21T23:48+03:00 -->
 
 <!--te-->
 
 # Machine learning
 
-## The relationship between all terminalogy
+## The relationship between all terminalogy (illustration)
 
 <p align="center">
   <img src="images/machine-learning/machine_learning_terms.jpg" title="sigmoid">
@@ -215,3 +218,60 @@ In this situation, the average or median target value of
 the nearest neighbors is used to obtain the predicted value for the new case.
 For example, assume that you are predicting the price of a home based on its feature set, such as number of rooms, square footage, the year it was built, and so on.
 You can easily find the three nearest neighbor houses of course not only based on distance but also based on all the attributes and then predict the price of the house as the medium of neighbors.
+
+
+### Selecting the best model in scikit-learn using cross-validation
+
+
+**Steps for K-folded cross-validation**
+
+1. Split the dataset into K equal partitions (or "folds")
+
+2. Use fold 1 as **testing set** and the union of other folds as the **training set**
+
+3. Calculate **testing accuarcy**
+
+4. Repeat steps 2 and 3 K times, using a **different fold** as the testing set each time.
+
+5. Use the **average testing accuracy** as the estimate of out-of-sample accuracy.
+
+
+<p align="center">
+  <img src="images/machine-learning/5_folds_example.png" title="check it">
+</p>
+
+
+A great code example which demostrates what is done under the hood can be seen below:
+
+```python
+from sklearn.model_selection import cross_val_score
+
+kf = KFold(25,n_folds = 5, shuffle = False)
+
+```
+
+Advantages of **cross-validation**:
+
+* More accurate estimate of out-of-sample accuracy
+
+* More "efficient" use of data (every observation is used for both training and testing)
+
+
+
+Advantages of **train/test split**:
+
+* Runs K times faster than K-fold cross-validation
+
+* Simpler to examine the details results of testing process
+
+
+In python:
+
+```python
+from sklearn.model_selection import cross_val_score
+
+# We got a vector of 10 scores for each fold
+scores = cross_val_score(clf_knn, features, target, cv=10)
+```
+
+[Nice Reference](https://www.youtube.com/watch?v=6dbrR-WymjI)
