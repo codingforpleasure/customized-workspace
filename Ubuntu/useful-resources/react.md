@@ -5,6 +5,7 @@
       * [How to start my app super fast?](#how-to-start-my-app-super-fast)
          * [create react app](#create-react-app)
       * [Run the server:](#run-the-server)
+      * [Debug in vscode with Chrome](#debug-in-vscode-with-chrome)
       * [Props/render](#propsrender)
       * [What is the difference building components as functions vs class bases components?](#what-is-the-difference-building-components-as-functions-vs-class-bases-components)
       * [Orginizing the project:](#orginizing-the-project)
@@ -29,11 +30,20 @@
          * [Keyboard events](#keyboard-events)
       * [Method binding](#method-binding)
       * [Passing functions to child components](#passing-functions-to-child-components)
+      * [Keys](#keys)
+      * [Lifecycle methods](#lifecycle-methods)
+         * [componentDidMount](#componentdidmount)
+         * [Loading data by making AJAX requests](#loading-data-by-making-ajax-requests)
+         * [Loading data asynchronously](#loading-data-asynchronously)
+         * [componentDidUpdate](#componentdidupdate)
+         * [componentWillUnmount](#componentwillunmount)
+      * [Hooks](#hooks)
+         * [UseEffect](#useeffect)
       * [React snippets](#react-snippets)
       * [Conventions - Rule of thumbs](#conventions---rule-of-thumbs)
       * [Webpack](#webpack)
 
-<!-- Added by: gil_diy, at: 2019-06-15T14:55+03:00 -->
+<!-- Added by: gil_diy, at: 2019-09-15T12:39+03:00 -->
 
 <!--te-->
 
@@ -93,6 +103,10 @@ check it is up and running with:
 
 `localhost:3000`
 
+
+## Debug in vscode with Chrome
+
+[short video](https://www.youtube.com/watch?v=PJeNReqyH88) - Worked well!
 
 ## Props/render
 
@@ -931,8 +945,21 @@ class ZenQuote extends Component{
 }
 ```
 ### Loading data asynchronously
+```
+```
+
+
 
 ### componentDidUpdate
+
+```javascript
+componentDidUpdate(prevProps, prevState){
+	console.log(prevState.todos);
+	console.log(this.state.todos);
+}
+```
+
+
 
 ### componentWillUnmount
 

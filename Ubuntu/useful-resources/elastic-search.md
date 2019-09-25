@@ -3,9 +3,11 @@
       * [What is elasticsearch?](#what-is-elasticsearch)
       * [similar buzzwords](#similar-buzzwords)
       * [How do i start/stop Elasticsearch?](#how-do-i-startstop-elasticsearch)
+      * [Setting up the heap size for JVM?](#setting-up-the-heap-size-for-jvm)
       * [Elasticsearch terminology](#elasticsearch-terminology)
       * [Basic operations is Elasticsearch (CRUD):](#basic-operations-is-elasticsearch-crud)
          * [Creating an index with curl](#creating-an-index-with-curl)
+         * [Get mapping for index](#get-mapping-for-index)
          * [Mapping scheme with curl](#mapping-scheme-with-curl)
             * [Field datatypes](#field-datatypes)
          * [Listing all indices in my cluster with curl](#listing-all-indices-in-my-cluster-with-curl)
@@ -16,7 +18,9 @@
          * [Add a new field to an existed document with curl](#add-a-new-field-to-an-existed-document-with-curl)
          * [Deleting an index with curl](#deleting-an-index-with-curl)
       * [Basic operations](#basic-operations)
+         * [Get list of indices and their details](#get-list-of-indices-and-their-details)
          * [Get number of documents in an index](#get-number-of-documents-in-an-index)
+         * [Debugging (using <strong>_explain api</strong>)](#debugging-using-_explain-api)
       * [Term Level queries](#term-level-queries)
          * [Example #1:  Searching all documents with the field 'is_active' set to true.](#example-1--searching-all-documents-with-the-field-is_active-set-to-true)
          * [Example #2:  Multiple terms](#example-2--multiple-terms)
@@ -25,6 +29,8 @@
          * [Example #5:  Look for terms to begin with a given prefix](#example-5--look-for-terms-to-begin-with-a-given-prefix)
          * [Example #6:  Look for terms with a given wildcard](#example-6--look-for-terms-with-a-given-wildcard)
          * [Example #7:  Look for terms with regex](#example-7--look-for-terms-with-regex)
+         * [Example of query and filter contexts](#example-of-query-and-filter-contexts)
+         * [Example](#example)
       * [Full text queries](#full-text-queries)
          * [Example #1:  Flexible matching with the match query](#example-1--flexible-matching-with-the-match-query)
          * [Example #2:  Matching phrases](#example-2--matching-phrases)
@@ -35,16 +41,18 @@
          * [Example #3: Adding synonyms from a file](#example-3-adding-synonyms-from-a-file)
          * [Example #4: Highlight matches in fields](#example-4-highlight-matches-in-fields)
          * [Example #5: Stemming](#example-5-stemming)
+      * [Profiling (Debugging tool)](#profiling-debugging-tool)
       * [Suggesters](#suggesters)
          * [Completion suggester](#completion-suggester)
          * [Term suggester](#term-suggester)
+         * [Function score query](#function-score-query)
          * [Phrase suggester](#phrase-suggester)
       * [Search using query params](#search-using-query-params)
       * [Full Text queries](#full-text-queries-1)
          * [Search using the filter context](#search-using-the-filter-context)
       * [Aggregations](#aggregations)
 
-<!-- Added by: gil_diy, at: 2019-08-20T07:34+03:00 -->
+<!-- Added by: gil_diy, at: 2019-09-25T10:37+03:00 -->
 
 <!--te-->
 
@@ -98,6 +106,20 @@ Specify node name and cluster name on bringup:
 ```shell
 /bin/elasticsearch -Ecluster.name=gil_es -Enode.name=my_first_node
 ```
+
+## Setting up the heap size for JVM?
+
+If you run elasticsearch instance, then you should edit the file `/etc/elasticsearch/jvm.options`
+
+If you are working with docker-compose then the configuration should reside in `docker-compose.yml`,
+
+if you see this:
+```yaml
+environment:
+  - "ES_JAVA_OPTS=-Xms2900m -Xmx2900m"
+```
+you should see in the log `cgroups.hierarchy.override=/, -Xms2900m, -Xmx2900m`
+moreover look for `heap size` in the log.
 
 ## Elasticsearch terminology
 Cluster collection of nodes.
@@ -368,6 +390,11 @@ curl -XPOST  -H 'Content-Type: application/json' 'localhost:9200/_bulk?pretty&re
 ```
 
 ## Basic operations
+
+### Get list of indices and their details
+```bash
+  GET /_cat/indices?v
+```
 
 ### Get number of documents in an index
 ```bash
@@ -787,6 +814,19 @@ PUT /product
 }
 ```
 
+## Profiling (Debugging tool)
+
+The Profile API provides detailed timing information about the execution of individual components in a search request.
+It gives the user insight into how search requests are executed at a low level so that the user can understand why certain requests are slow,
+and take steps to improve them.
+
+Profile API, **Doesn’t measure**:
+
+* Network latency
+* Time spent in the search fetch phase
+* Time spent while the requests spends in queues
+* Time while merging shard responses on the coordinating node
+
 
 ## Suggesters
 
@@ -817,6 +857,7 @@ GET /product/default/_search
 
 For avoiding duplicates, we should add: `"skip_duplicates": true`
 For Adding fuzziness, we should add: `"fuzzy": { "fuzziness": "auto" }`
+
 ### Term suggester
 
 **properties:**
