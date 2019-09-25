@@ -109,7 +109,7 @@ Specify node name and cluster name on bringup:
 
 ## Setting up the heap size for JVM?
 
-If you run elasticsearch instance, then you should edit the file `/etc/elasticsearch/jvm.options`
+If you run elasticsearch instance, then you should edit the file `/etc/elasticsearch/jvm.options` ([Link](https://www.elastic.co/guide/en/elasticsearch/reference/current/heap-size.html))
 
 If you are working with docker-compose then the configuration should reside in `docker-compose.yml`,
 
