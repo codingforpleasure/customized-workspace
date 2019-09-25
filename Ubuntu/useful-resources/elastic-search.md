@@ -21,6 +21,7 @@
          * [Get list of indices and their details](#get-list-of-indices-and-their-details)
          * [Get number of documents in an index](#get-number-of-documents-in-an-index)
          * [Debugging (using <strong>_explain api</strong>)](#debugging-using-_explain-api)
+         * [Get the setting for a specific index](#get-the-setting-for-a-specific-index)
       * [Term Level queries](#term-level-queries)
          * [Example #1:  Searching all documents with the field 'is_active' set to true.](#example-1--searching-all-documents-with-the-field-is_active-set-to-true)
          * [Example #2:  Multiple terms](#example-2--multiple-terms)
@@ -46,13 +47,14 @@
          * [Completion suggester](#completion-suggester)
          * [Term suggester](#term-suggester)
          * [Function score query](#function-score-query)
+         * [How to set up a field for search-as-you-type](#how-to-set-up-a-field-for-search-as-you-type)
          * [Phrase suggester](#phrase-suggester)
       * [Search using query params](#search-using-query-params)
       * [Full Text queries](#full-text-queries-1)
          * [Search using the filter context](#search-using-the-filter-context)
       * [Aggregations](#aggregations)
 
-<!-- Added by: gil_diy, at: 2019-09-25T10:37+03:00 -->
+<!-- Added by: gil_diy, at: 2019-09-25T16:01+03:00 -->
 
 <!--te-->
 
@@ -418,6 +420,11 @@ GET /authors/1/_explain
     }
   }
 }
+```
+
+### Get the setting for a specific index
+```bash
+GET /authors/_settings
 ```
 
 ## Term Level queries
@@ -837,7 +844,7 @@ Suggest similar looking terms, what it that means depends on suggester.
 
 * Provide autocomplete
 
-* Only works based on prefix
+* Only works based **on prefix** (Not perefect at all)
 
 * Stored as special data structure for speed [Finite-state_transducer](https://en.wikipedia.org/wiki/Finite-state_transducer) (Costly to build, Stored in memory)
 
@@ -893,6 +900,70 @@ GET /goodreads_index/_search
   }
 }
 ```
+
+
+### How to set up a field for search-as-you-type
+
+```bash
+PUT my_index
+{
+  "settings": {
+    "analysis": {
+      "analyzer": {
+        "autocomplete": {
+          "tokenizer": "autocomplete",
+          "filter": [
+            "lowercase"
+          ]
+        },
+        "autocomplete_search": {
+          "tokenizer": "lowercase"
+        }
+      },
+      "tokenizer": {
+        "autocomplete": {
+          "type": "edge_ngram",
+          "min_gram": 2,
+          "max_gram": 10,
+          "token_chars": [
+            "letter"
+          ]
+        }
+      }
+    }
+  },
+  "mappings": {
+    "properties": {
+      "title": {
+        "type": "text",
+        "analyzer": "autocomplete",
+        "search_analyzer": "autocomplete_search"
+      }
+    }
+  }
+}
+
+PUT my_index/_doc/1
+{
+  "title": "Quick Foxes"
+}
+
+POST my_index/_refresh
+
+GET my_index/_search
+{
+  "query": {
+    "match": {
+      "title": {
+        "query": "Quick Fo",
+        "operator": "and"
+      }
+    }
+  }
+}
+```
+
+[Good-Reference](https://www.elastic.co/guide/en/elasticsearch/reference/current/analysis-edgengram-tokenizer.html)
 
 
 ### Phrase suggester
