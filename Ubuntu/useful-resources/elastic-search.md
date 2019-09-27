@@ -16,11 +16,12 @@
          * [Check the document existence but do not give the document content with curl](#check-the-document-existence-but-do-not-give-the-document-content-with-curl)
          * [Update the document's content with curl](#update-the-documents-content-with-curl)
          * [Add a new field to an existed document with curl](#add-a-new-field-to-an-existed-document-with-curl)
-         * [Deleting an index with curl](#deleting-an-index-with-curl)
-      * [Basic operations](#basic-operations)
+      * [Basic operations on indexes](#basic-operations-on-indexes)
          * [Get list of indices and their details](#get-list-of-indices-and-their-details)
          * [Get number of documents in an index](#get-number-of-documents-in-an-index)
-         * [Debugging (using <strong>_explain api</strong>)](#debugging-using-_explain-api)
+         * [Deleting an index](#deleting-an-index)
+         * [Get index settings](#get-index-settings)
+         * [Get index's mapping](#get-indexs-mapping)
          * [Get the setting for a specific index](#get-the-setting-for-a-specific-index)
       * [Term Level queries](#term-level-queries)
          * [Example #1:  Searching all documents with the field 'is_active' set to true.](#example-1--searching-all-documents-with-the-field-is_active-set-to-true)
@@ -54,7 +55,7 @@
          * [Search using the filter context](#search-using-the-filter-context)
       * [Aggregations](#aggregations)
 
-<!-- Added by: gil_diy, at: 2019-09-25T16:01+03:00 -->
+<!-- Added by: gil_diy, at: 2019-09-27T03:01+03:00 -->
 
 <!--te-->
 
@@ -324,19 +325,8 @@ Pay attention to the "_update" in the query.
 curl -XDELETE 'localhost:9200/books/drama/1?pretty'
 ```
 
-### Deleting an index with curl
 
-**Deleting an index**
 
-```bash
-curl -XDELETE 'localhost:9200/books?pretty'
-```
-
-**Deleting all indices in a node:
-```bash
-curl -X DELETE "localhost:9200/*.*"
-curl -X DELETE "localhost:9200/*"
-```
 
 Bulk operations on documents:
 **retrieve multiple documents:**
@@ -391,22 +381,47 @@ curl -XPOST  -H 'Content-Type: application/json' 'localhost:9200/_bulk?pretty&re
 '
 ```
 
-## Basic operations
+## Basic operations on indexes
 
 ### Get list of indices and their details
 ```bash
-  GET /_cat/indices?v
+GET /_cat/indices?v
 ```
 
 ### Get number of documents in an index
 ```bash
-GET /authors/author_doc/_count
+GET /my_index/_count
 {
   "query": {
     "match_all": {}
   }
 }
 ```
+
+You can easily see it with command `GET /_cat/indices?v` too.
+
+### Deleting an index
+
+**Deleting an index**
+
+```bash
+DELETE /my_index
+```
+
+**Deleting all indices in a node:
+```bash
+curl -X DELETE "localhost:9200/*.*"
+curl -X DELETE "localhost:9200/*"
+```
+
+### Get index settings
+```bash
+GET /my_index/_settings
+```
+
+### Get index's mapping
+```bash
+GET /my_index/_mapping
 
 
 ### Debugging (using **_explain api**)
@@ -424,7 +439,7 @@ GET /authors/1/_explain
 
 ### Get the setting for a specific index
 ```bash
-GET /authors/_settings
+GET /my_index/_settings
 ```
 
 ## Term Level queries
