@@ -9,11 +9,15 @@
       * [Loop](#loop)
       * [Collections](#collections)
          * [List](#list)
+      * [Set](#set)
+      * [Map](#map)
       * [Function](#function)
       * [Class](#class)
+         * [Inheritance](#inheritance)
+         * [Method overriding](#method-overriding)
       * [Exception Handling](#exception-handling)
 
-<!-- Added by: gil_diy, at: 2019-09-28T13:57+03:00 -->
+<!-- Added by: gil_diy, at: 2019-09-29T02:22+03:00 -->
 
 <!--te-->
 
@@ -73,6 +77,7 @@ numbers.forEach( (n) => print(n)); //Arrow function
 List names = ['Jack', 'Jill'];
 print(names[0]);
 print(names.length);
+
 ```
 ```bash
 var names = ['Jack','Jill',10,100.1];
@@ -91,20 +96,161 @@ for (var n in names){
 }
 ```
 
-```bash
+We can see when we assign one object to another object it's not copying the values, the effect we get is  `names2` points on `names`, as we can see below:
 
-List <String>
-var names2
+```bash
+List <String> names = ['Jack', 'Jill'];
+
+var names2 = names;
+
+for (var n in names2){
+	print(n);
+}
+```
+
+Copying the content of a list `names` to `names2` can be done with:
+```bash
+List <String> names = ['Jack', 'Jill'];
+
+var names2 = [...names];
+
+for (var n in names2){
+	print(n);
+}
+```
+## Set
+
+We can see easily that an element in a set cannot appear twice in a set
+
+```bash
+var my_set = {'table', 'sofa', 'chair', 'ladder', 'table'};
+
+for (var x in my_set) {
+	print(x)
+}
+```
+
+## Map
+
+For example initializing a map:
+
+```bash
+var books = {
+
+	 // key       : Value
+	'John green' : 'The fault in our stars',
+	'Dan brown'  : 'Daemon and angels',
+	'Ernest Hemingway' : 'The Old Man and the Sea'
+};
+
+print(books['Dan brown']);
+```
+
+
+Adding key:value to a map:
+```bash
+var food = Map();
+food['green'] = 'Cucumber';
+food['red'] = 'Apple';
+print(food['red']);
+
+
 ```
 
 
 ## Function
 
+
+
+
 ## Class
 
 ```bash
-class Num {
-	int num = 10;
+class Person {
+	String name;
+   int age;
+
+   Person(String name, [int age = 18]){
+      this.name = name;
+      this.age = age;
+   }
+
+   void showOutput(){
+      print(name);
+      print(age);
+   }
+}
+
+void main() {
+   Person person1 = Person('Omer');
+
+   person1.name = 'Gil'
+   person1.age = 35;
+   person1.showOutput();
+}
+```
+
+
+### Inheritance
+
+```bash
+class Vehicle {
+   String model;
+   int year;
+
+   Vehicle(this.model, this.year) {
+      print(this.model);
+      print(this.year);
+   }
+
+   void showOutput(){
+      print(model);
+      print(year);
+   }
+}
+
+class Car extends Vehicle {
+   double price;
+
+   Car(String model, int year, this.price): super(model, year);
+
+   void showOutput(){
+      super.showOutput();
+      print(this.price);
+   }
+}
+
+void main() {
+   var car1 = Car('Accord', 2014,150000);
+   car1.showOutput();
+}
+```
+### Method overriding
+
+```bash
+class X{
+   String name;
+
+   X(this.name);
+
+   void showOutput(){
+      print(this.name);
+   }
+
+   dynamic sqaure(dynamic val) {
+      return val * val;
+   }
+}
+
+class Y extends X{
+
+   Y(String name) : super(name);
+
+   @override
+   void showOutput(){
+      print(this.name);
+      print('Hello');
+   }
 }
 ```
 
