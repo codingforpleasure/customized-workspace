@@ -9,15 +9,15 @@
       * [Loop](#loop)
       * [Collections](#collections)
          * [List](#list)
-      * [Set](#set)
-      * [Map](#map)
+         * [Set](#set)
+         * [Map](#map)
       * [Function](#function)
       * [Class](#class)
          * [Inheritance](#inheritance)
          * [Method overriding](#method-overriding)
       * [Exception Handling](#exception-handling)
 
-<!-- Added by: gil_diy, at: 2019-09-29T02:22+03:00 -->
+<!-- Added by: gil_diy, at: 2019-09-29T02:23+03:00 -->
 
 <!--te-->
 
@@ -118,7 +118,7 @@ for (var n in names2){
 	print(n);
 }
 ```
-## Set
+### Set
 
 We can see easily that an element in a set cannot appear twice in a set
 
@@ -130,7 +130,7 @@ for (var x in my_set) {
 }
 ```
 
-## Map
+### Map
 
 For example initializing a map:
 
