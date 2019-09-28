@@ -91,6 +91,12 @@ for (var n in names){
 }
 ```
 
+```bash
+
+List <String>
+var names2
+```
+
 
 ## Function
 
