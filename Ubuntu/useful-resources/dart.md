@@ -1,10 +1,13 @@
 <!--ts-->
    * [Dart](#dart)
       * [Data Types](#data-types)
+      * [Types](#types)
       * [String, Type Conversion, Constant, null](#string-type-conversion-constant-null)
          * [Interpolate](#interpolate)
          * [Conversion](#conversion)
-         * [Contsnat](#contsnat)
+         * [Constant](#constant)
+            * [What the difference between final to <code>const</code>?](#what-the-difference-between-final-to-const)
+      * [Enum](#enum)
       * [Operators](#operators)
       * [Loop](#loop)
       * [Collections](#collections)
@@ -12,18 +15,27 @@
          * [Set](#set)
          * [Map](#map)
       * [Function](#function)
+         * [Passing function as an argument](#passing-function-as-an-argument)
       * [Class](#class)
          * [Inheritance](#inheritance)
          * [Method overriding](#method-overriding)
       * [Exception Handling](#exception-handling)
 
-<!-- Added by: gil_diy, at: 2019-09-29T02:23+03:00 -->
+<!-- Added by: gil_diy, at: 2019-10-01T12:06+03:00 -->
 
 <!--te-->
 
 # Dart
 
 ## Data Types
+
+Dart is a statically type langauge:
+
+Types
+----------
+int
+bool
+double
 
 
 ## String, Type Conversion, Constant, null
@@ -39,7 +51,7 @@ String piAsString = 3.14159.toStringAsFixed(2);
 assert(piAsString == '3.14')
 ```
 
-### Contsnat
+### Constant
 
 ```bash
 const aConstNum = 0; //int Constant
@@ -56,9 +68,32 @@ print(aConstString.runTimeType); // Checking the runtime type
 ```
 
 
+```bash
+final Color colour;
+```
 
+#### What the difference between `final` to `const`?
 
+```bash
+   const int myConst = 2; # Constant variables are immutable
+   final int myConst = 3; # Final variables are immutable
+```
 
+## Enum
+
+```bash
+enum CarType{
+   SUV,
+   beatle,
+   convertible,
+   coupe,
+}
+
+void main(){
+
+   Car myCar = Car(carStyle: CarType.convertible);
+}
+```
 ## Operators
 
 ## Loop
@@ -161,7 +196,60 @@ print(food['red']);
 ## Function
 
 
+### Passing function as an argument
 
+```bash
+void main(){
+   int result = calculator_example1(5,8, multiply);
+   print(result)
+
+   result = calculator_example2(5,8, multiply);
+   print(result)
+}
+
+int calculator_example1(int n1, int n2, function caclulation){
+   return caclulation(n1 , n2);
+}
+
+function calculator_example2 = (int n1, int n2, function caclulation){
+   return caclulation(n1 , n2);
+}
+
+int add(int n1, int n2){
+   return n1 + n2;
+}
+
+int multiply(int n1, int n2){
+   return n1 * n2;
+}
+```
+
+Passing function as an argument in a class
+```bash
+class Car{
+   //Members:
+   Function drive;
+
+   // Constructor
+   Car({this.drive});
+}
+
+void slowDrive(){
+   print("Driving slowly");
+}
+
+void fastDrive(){
+   print("Driving fast");
+}
+
+void main() {
+   Car myCar = Car(drive: slowDrive);
+   myCar.drive()
+
+   myCar.drive = fastDrive; # Upgrading my car, changing the function.
+}
+
+```
 
 ## Class
 
