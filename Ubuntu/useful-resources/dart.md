@@ -22,11 +22,14 @@
       * [Function](#function)
          * [Passing function as an argument](#passing-function-as-an-argument)
       * [Class](#class)
+         * [Private members](#private-members)
          * [Inheritance](#inheritance)
          * [Method overriding](#method-overriding)
       * [Exception Handling](#exception-handling)
+      * [Async programming](#async-programming)
+      * [Conventions](#conventions)
 
-<!-- Added by: gil_diy, at: 2019-10-01T12:06+03:00 -->
+<!-- Added by: gil_diy, at: 2019-10-02T15:10+03:00 -->
 
 <!--te-->
 
@@ -370,6 +373,82 @@ class Y extends X{
 ```
 
 ## Exception Handling
+
+## Async programming
+
+**Simple sync example:**
+
+```bash
+import 'dart:io';
+
+void main() {
+  performTasks();
+}
+
+void performTasks() {
+  task1();
+  task2();
+  task3();
+}
+
+void task1() {
+  String result = 'task 1 data';
+  print('Task 1 complete');
+}
+
+void task2() {
+  Duration threeSeconds = Duration(seconds: 3);
+  sleep(threeSeconds); // sleep is Synchronize function
+
+  String result = 'task 2 data';
+  print('Task 2 complete');
+}
+
+void task3() {
+  String result = 'task 3 data';
+  print('Task 3 complete');
+}
+```
+
+**Simple async example:**
+```bash
+import 'dart:io';
+
+void main() {
+  performTasks();
+}
+
+void performTasks() async {
+  task1();
+  String task2_Result = await task2();
+  task3();
+}
+
+void task1() {
+  String result = 'task 1 data';
+  print('Task 1 complete');
+}
+
+// Asynchronous programming in action
+// We have to wait before we actually get the result
+Future <String> task2() async {
+  Duration threeSeconds = Duration(seconds: 3);
+  String result;
+
+  // future means it's an Asynchronous method
+  Future.delayed(threeSeconds, () {
+    result = 'task 2 data';
+    print('Task 2 complete');
+  });
+
+  return result;
+}
+
+void task3() {
+  String result = 'task 3 data';
+  print('Task 3 complete');
+}
+```
 
 
 ## Conventions
