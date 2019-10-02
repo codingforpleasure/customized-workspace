@@ -270,6 +270,16 @@ void main() {
 
 ## Class
 
+### Private members
+private members of the class starts with underscore `_`.
+```bash
+class Person{
+   int _age;
+   ...
+   ...
+
+}
+```
 ```bash
 class Person {
 	String name;
@@ -364,7 +374,9 @@ class Y extends X{
 
 ## Conventions
 
-Constant should start with the character `k`.
+* Constant should start with the character `k`.
+
+* Class names are Pascal case, for example: `CalculatorBrain`.
 
 
 No matter the size of the column it will stretch:
