@@ -1,3 +1,8 @@
+
+<p align="center">
+  <img src="./images/dart/dart-logo.png" width="500" title="Binary Logistic Regression">
+</p>
+
 <!--ts-->
    * [Dart](#dart)
       * [Data Types](#data-types)
@@ -171,7 +176,6 @@ For example initializing a map:
 
 ```bash
 var books = {
-
 	 // key       : Value
 	'John green' : 'The fault in our stars',
 	'Dan brown'  : 'Daemon and angels',
@@ -192,7 +196,20 @@ print(food['red']);
 
 ```
 
+```bash
+Map<String, int> phoneBook = {
+   'Kyle': 835546546,
+   'Amy': 114545454,
+   'James': 98765321,
+   'Tim': 722938475,
+}
 
+main(){
+   print(phonebook['James']);
+   print(phonebook.keys);
+   print(phonebook.values);
+}
+```
 ## Function
 
 
@@ -345,5 +362,13 @@ class Y extends X{
 ## Exception Handling
 
 
+## Conventions
+
+Constant should start with the character `k`.
+
+
+No matter the size of the column it will stretch:
+
+crossAxisAlignment: crossAxisAlignment.stretch
 
 
