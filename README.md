@@ -2,8 +2,6 @@
 
 Makes your workflow much simpler and faster
 
-<img src="https://github.com/codingforpleasure/customized-workspace/blob/master/images/demo_tmux.gif" width="2000" height="600" />
-
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
@@ -32,7 +30,7 @@ The things you need to install are:
 - recoll - Indexer for files (I mostly use it for searching terms in multiple pdf-books)
 - mycli - MySQL client with AutoCompletion and Syntax Highlighting [Link](https://github.com/dbcli/myclip)
 - dutree - Great simple tool to analyze file system usage written in Rust [Link](https://github.com/nachoparker/dutree)
-- ptpython - python shell with AutoCompletion and Syntax Highlighting [Link](https://github.com/prompt-toolkit/ptpython)
+- ptpython - python shell with AutoCompletion and Syntax Highlighting it's a Python REPL [Link](https://github.com/prompt-toolkit/ptpython)
 - Great resource for new completion scripts in zsh [Link](https://github.com/zsh-users/zsh-completions)
 
 
