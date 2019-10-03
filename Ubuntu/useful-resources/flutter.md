@@ -5,9 +5,15 @@
       * [The correct file structure in flutter app](#the-correct-file-structure-in-flutter-app)
       * [Widget resource](#widget-resource)
       * [Hotkeys](#hotkeys)
+         * [Widget lifecycle](#widget-lifecycle)
+            * [Stateless widget](#stateless-widget)
+            * [Stateful widget](#stateful-widget)
          * [Useful](#useful)
+      * [Emulator](#emulator)
+      * [Permissions](#permissions)
+      * [Navigation](#navigation)
 
-<!-- Added by: gil_diy, at: 2019-09-30T10:31+03:00 -->
+<!-- Added by: gil_diy, at: 2019-10-03T18:48+03:00 -->
 
 <!--te-->
 
@@ -71,9 +77,74 @@ Shortcut | Description
 
 
 
+### Widget lifecycle
+
+
+
+#### Stateless widget
+
+#### Stateful widget
+
+* We can tap into each of these stages in the lifecycle if we wanted different things to happen at various times.
+
+**initState()** - which gets triggered when that state initally gets initialized.
+
+**build()** - which gets triggered when the widgets are actually built and will show up on screen.
+
+**deactivate()** -  which gets called when that statefull widget gets destroyed.
+
+
+### Setting state
+
+Example:
+
+```bash
+class _DicePageState extends State<DicePage> {
+  int leftDiceNumber = 3;
+  int rightDiceNumber = 2;
+
+  void changeDiceFace() {
+    setState(() {
+      leftDiceNumber = Random().nextInt(6) + 1;
+      rightDiceNumber = Random().nextInt(6) + 1;
+    });
+  }
+```
 
 ### Useful
 property | Title2
 ------------|-----
  mainAxisAlignment |
  verticalDirection | frg
+
+
+## Emulator
+
+```bash
+flutter emulators --launch sim
+```
+
+## Permissions
+
+OS | Path
+------------|-----
+ android | ./android/app/src/main/AndroidManifest.xml
+ ios | ./ios/Runner/Base.lproj/Info.plist
+
+
+## Navigation
+```bash
+Navigator.push(context, MaterialPageRoute(builder: (context) {
+  return myNewNextScreen();
+})
+```
+
+
+## Basic commands in flutter cli
+
+command | Description
+------------|-----
+`flutter run` | Run your Flutter app on an attached device
+`flutter install` | Install a Flutter app on an attached device.
+`flutter devices` | List all connected devices.
+`flutter clean` | Delete the build/ and .dart_tool/ directories.
