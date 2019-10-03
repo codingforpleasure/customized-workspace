@@ -8,12 +8,14 @@
          * [Widget lifecycle](#widget-lifecycle)
             * [Stateless widget](#stateless-widget)
             * [Stateful widget](#stateful-widget)
+         * [Setting state](#setting-state)
          * [Useful](#useful)
       * [Emulator](#emulator)
       * [Permissions](#permissions)
       * [Navigation](#navigation)
+      * [Basic commands in flutter cli](#basic-commands-in-flutter-cli)
 
-<!-- Added by: gil_diy, at: 2019-10-03T18:48+03:00 -->
+<!-- Added by: gil_diy, at: 2019-10-03T23:47+03:00 -->
 
 <!--te-->
 
