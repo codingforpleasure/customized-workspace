@@ -1,3 +1,7 @@
+<p align="center"> <!-- style="width:400px;" -->
+  <img src="images/flutter/logo.png" title="tool tip here">
+</p>
+
 <!--ts-->
    * [Flutter](#flutter)
       * [include packages:](#include-packages)
@@ -15,7 +19,7 @@
       * [Navigation](#navigation)
       * [Basic commands in flutter cli](#basic-commands-in-flutter-cli)
 
-<!-- Added by: gil_diy, at: 2019-10-03T23:47+03:00 -->
+<!-- Added by: gil_diy, at: 2019-10-04T00:02+03:00 -->
 
 <!--te-->
 
@@ -87,14 +91,16 @@ Shortcut | Description
 
 #### Stateful widget
 
-* We can tap into each of these stages in the lifecycle if we wanted different things to happen at various times.
+We can tap into each of these stages in the lifecycle if we wanted different things to happen at various times. I have listed here three common hooks:
 
-**initState()** - which gets triggered when that state initally gets initialized.
+* **initState()** - which gets triggered when that state initally gets initialized.
 
-**build()** - which gets triggered when the widgets are actually built and will show up on screen.
+* **build()** - which gets triggered when the widgets are actually built and will show up on screen.
 
-**deactivate()** -  which gets called when that statefull widget gets destroyed.
+* **deactivate()** -  which gets called when that statefull widget gets destroyed.
 
+
+**Comment:** There are more hooks, which i haven't mentioned here.
 
 ### Setting state
 
@@ -114,7 +120,8 @@ class _DicePageState extends State<DicePage> {
 ```
 
 ### Useful
-property | Title2
+
+Property | Description
 ------------|-----
  mainAxisAlignment |
  verticalDirection | frg
@@ -127,6 +134,9 @@ flutter emulators --launch sim
 ```
 
 ## Permissions
+
+
+You should list in the folowing files the permissions, which will be requested by the user:
 
 OS | Path
 ------------|-----
