@@ -40,10 +40,11 @@
       * [Hooks](#hooks)
          * [UseEffect](#useeffect)
       * [React snippets](#react-snippets)
+      * [Configuring proxy in React-app](#configuring-proxy-in-react-app)
       * [Conventions - Rule of thumbs](#conventions---rule-of-thumbs)
       * [Webpack](#webpack)
 
-<!-- Added by: gil_diy, at: 2019-09-15T12:39+03:00 -->
+<!-- Added by: gil_diy, at: 2019-10-04T02:41+03:00 -->
 
 <!--te-->
 
@@ -975,6 +976,21 @@ After the constructor, React calls render(). It tells React what should be displ
 
 [Link](https://marketplace.visualstudio.com/items?itemName=xabikos.ReactSnippets)
 
+## Configuring proxy in React-app
+
+in `package.json` insert `proxy`, i.e:
+
+```bash
+  "scripts": {
+    "start": "node scripts/start.js",
+    "build": "node scripts/build.js",
+    "test": "node scripts/test.js"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "proxy": "http://localhost:5000",
+```
 
 ## Conventions - Rule of thumbs
 
