@@ -17,8 +17,10 @@
       * [Loop](#loop)
       * [Collections](#collections)
          * [List](#list)
+            * [Generating a list](#generating-a-list)
          * [Set](#set)
          * [Map](#map)
+            * [Generating a map](#generating-a-map)
       * [Function](#function)
          * [Passing function as an argument](#passing-function-as-an-argument)
       * [Class](#class)
@@ -26,10 +28,11 @@
          * [Inheritance](#inheritance)
          * [Method overriding](#method-overriding)
       * [Exception Handling](#exception-handling)
+      * [Null Aware Operator](#null-aware-operator)
       * [Async programming](#async-programming)
       * [Conventions](#conventions)
 
-<!-- Added by: gil_diy, at: 2019-10-02T15:10+03:00 -->
+<!-- Added by: gil_diy, at: 2019-10-04T11:02+03:00 -->
 
 <!--te-->
 
@@ -161,6 +164,28 @@ for (var n in names2){
 	print(n);
 }
 ```
+
+#### Generating a list
+
+Generating an simple list:
+
+```bash
+var output = List.generate(5, (index) => index*index);
+print(output);
+```
+
+
+
+Generating an list of maps:
+
+```bash
+  var output = List.generate(5, (index) {
+    return {'name': 'bla' + index.toString(), 'price': Random().nextInt(100)};
+  });
+
+  print(output);
+```
+
 ### Set
 
 We can see easily that an element in a set cannot appear twice in a set
@@ -213,6 +238,17 @@ main(){
    print(phonebook.values);
 }
 ```
+
+
+#### Generating a map
+
+Here is an example for generating a map of
+```bash
+  var output = List.generate(5, (index) {
+    return {'name': 'bla' + index.toString(), 'price': Random().nextInt(100)};
+  });
+```
+
 ## Function
 
 
@@ -373,6 +409,23 @@ class Y extends X{
 ```
 
 ## Exception Handling
+
+```bash
+try {
+ 	double myStringAsADouble = double.parse(myString);
+ 	print(myStringAsADouble + 5);
+} catch (e) {
+	print(e);
+}
+```
+
+## Null Aware Operator
+
+```bash
+someVairable ?? defaultValue
+```
+
+So if someVairable equal to null, use the defaultValue.
 
 ## Async programming
 
