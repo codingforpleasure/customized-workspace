@@ -5,6 +5,7 @@
 
 <!--ts-->
    * [Dart](#dart)
+      * [Dart Keywords](#dart-keywords)
       * [Data Types](#data-types)
       * [Types](#types)
       * [String, Type Conversion, Constant, null](#string-type-conversion-constant-null)
@@ -18,6 +19,7 @@
       * [Collections](#collections)
          * [List](#list)
             * [Generating a list](#generating-a-list)
+      * [inbuilt list functions](#inbuilt-list-functions)
          * [Set](#set)
          * [Map](#map)
             * [Generating a map](#generating-a-map)
@@ -32,11 +34,16 @@
       * [Async programming](#async-programming)
       * [Conventions](#conventions)
 
-<!-- Added by: gil_diy, at: 2019-10-04T11:02+03:00 -->
+<!-- Added by: gil_diy, at: 2019-10-05T23:09+03:00 -->
 
 <!--te-->
 
 # Dart
+
+## Dart Keywords
+
+[Link](https://dart.dev/guides/language/language-tour#keywords)
+
 
 ## Data Types
 
@@ -185,6 +192,11 @@ Generating an list of maps:
 
   print(output);
 ```
+
+## inbuilt list functions
+
+[Link](https://codeburst.io/top-10-array-utility-methods-you-should-know-dart-feb2648ee3a2)
+
 
 ### Set
 
@@ -429,6 +441,15 @@ So if someVairable equal to null, use the defaultValue.
 
 ## Async programming
 
+Asynchronous operations let your program complete work while waiting for another operation to finish. Here are some common asynchronous operations:
+
+* Fetching data over a network.
+* Writing to a database.
+* Reading data from a file.
+
+[Great reference for asynchronous programming](https://dart.dev/codelabs/async-await)
+
+
 **Simple sync example:**
 
 ```bash
@@ -502,6 +523,8 @@ void task3() {
   print('Task 3 complete');
 }
 ```
+
+
 
 
 ## Conventions
