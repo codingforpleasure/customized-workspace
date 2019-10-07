@@ -49,3 +49,15 @@
 <p align="center">
   <img src="images/graphQL/graphql_5.png" width="900" title="graphql!">
 </p>
+
+
+## Terminology
+### Mutations
+
+## Playground
+
+interact with star-world data from starwars films, there for we use swapi:
+
+[SWAPI GraphQL API](https://graphql.org/swapi-graphql/?)
+
+[Link](https:swapi)
