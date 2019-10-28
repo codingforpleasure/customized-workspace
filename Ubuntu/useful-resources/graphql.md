@@ -1,4 +1,11 @@
 <!--ts-->
+   * [GraphQL](#graphql)
+      * [Terminology](#terminology)
+         * [Mutations](#mutations)
+      * [Playground](#playground)
+
+<!-- Added by: gil_diy, at: 2019-10-28T12:53+02:00 -->
+
 <!--te-->
 
 
