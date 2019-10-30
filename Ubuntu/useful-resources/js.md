@@ -1,6 +1,7 @@
 
 <!--ts-->
    * [Javascript in a nutshell](#javascript-in-a-nutshell)
+      * [Setting Debugging properly in vscode](#setting-debugging-properly-in-vscode)
       * [Var vs Let vs Const](#var-vs-let-vs-const)
          * [var](#var)
          * [let](#let)
@@ -19,17 +20,31 @@
       * [Useful functions in javascript](#useful-functions-in-javascript)
          * [reduce](#reduce)
          * [slice](#slice)
-      * [splice](#splice)
+         * [splice](#splice)
          * [map](#map)
+         * [filter](#filter)
          * [forEach](#foreach)
          * [every](#every)
          * [some](#some)
 
-<!-- Added by: gil_diy, at: 2019-06-13T11:49+03:00 -->
+<!-- Added by: gil_diy, at: 2019-10-30T17:31+02:00 -->
 
 <!--te-->
 
 # Javascript in a nutshell
+
+
+## Setting Debugging properly in vscode
+Open the library in vscode
+
+1. vscode will automatically create a directory `.vscode`
+2. Press on the Debug icon located in the vertical sidebar
+3. Add breakpoint the code
+4. Pick `Add configuration...`
+5. If the file you would like to debug is only a js file debug it with `Node.js`
+6. A configuration file will be created `.vscode/launch.json`
+7. **Make sure** in the `launch.json` file, the correct path is mentioned, otherwise it simply won't work.
+8. Press on "Start debugging"
 
 ## Var vs Let vs Const
 
