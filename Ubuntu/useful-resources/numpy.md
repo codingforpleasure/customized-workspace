@@ -339,8 +339,95 @@ np.random.seed = seed
 np.random.shuffle(messages)
 ```
 
-<!-- ## reshape
+## reshape
 
-make sure your matrices are the size you want it to be -->
+make sure your matrices are the size you want it to be
+
+```python
+# Argument: image - a numpy array of shape (length, height, depth)
+# Returns:   v -  a vector of shape (length*height*depth, 1)
+def image2vector(image):
+    v = image.reshape((np.prod(image.shape),1))
+    return v
+
+image = np.array([[[ 0.67826139,  0.29380381],
+        [ 0.90714982,  0.52835647],
+        [ 0.4215251 ,  0.45017551]],
+
+       [[ 0.92814219,  0.96677647],
+        [ 0.85304703,  0.52351845],
+        [ 0.19981397,  0.27417313]],
+
+       [[ 0.60659855,  0.00533165],
+        [ 0.10820313,  0.49978937],
+        [ 0.34144279,  0.94630077]]])
+
+print ("image2vector(image) = " + str(image2vector(image)))
+```
 
 
+### Multiplication:
+np.dot(a,b) performs a matrix multiplication on a and b,
+whereas "a*b" performs an element-wise multiplication.
+
+```python
+a = np.random.randn(4, 3) # a.shape = (4, 3)
+b = np.random.randn(3, 2) # b.shape = (3, 2)
+c = a*b
+```
+
+This **would fail** since **broadcast can't be done** .
+
+#### Vectorized dot product of vectors
+The dot product or scalar product is an algebraic operation that takes two equal-length sequences of numbers (usually coordinate vectors) and returns a single number.
+```python
+x1 = [9, 2, 5, 0, 0, 7, 5, 0, 0, 0, 9, 2, 5, 0, 0]
+x2 = [9, 2, 2, 9, 0, 9, 2, 5, 0, 0, 9, 2, 5, 0, 0]
+dot = np.dot(x1,x2)
+```
+#### Vectorized outer product
+
+The outer product of two coordinate vectors is a matrix. If the two vectors have dimensions n and m, then their outer product is an n × m matrix
+
+```python
+x1 = [9, 2, 5, 0, 0, 7, 5, 0, 0, 0, 9, 2, 5, 0, 0]
+x2 = [9, 2, 2, 9, 0, 9, 2, 5, 0, 0, 9, 2, 5, 0, 0]
+dot = np.outer(x1,x2)
+```
+
+it's equivalent to this:
+```python
+outer = np.zeros((len(x1),len(x2))) # we create a len(x1)*len(x2) matrix with only zeros
+for i in range(len(x1)):
+    for j in range(len(x2)):
+        outer[i,j] = x1[i]*x2[j]
+```
+
+#### Vectorized elementwise multiplication
+
+```python
+x1 = [9, 2, 5, 0, 0, 7, 5, 0, 0, 0, 9, 2, 5, 0, 0]
+x2 = [9, 2, 2, 9, 0, 9, 2, 5, 0, 0, 9, 2, 5, 0, 0]
+dot = np.multiply(x1,x2) # same as "a*b" which performs an element-wise multiplication.
+```
+
+it's equivalent to this:
+```python
+for i in range(len(x1)):
+    mul[i] = x1[i]*x2[i]
+```
+
+#### Vectorized general dot product
+```python
+x1 = [9, 2, 5, 0, 0, 7, 5, 0, 0, 0, 9, 2, 5, 0, 0]
+W = np.random.rand(3,len(x1)) # Random 3*len(x1) numpy array
+dot = np.dot(W,x1)
+```
+
+it's equivalent to this:
+```python
+gdot = np.zeros(W.shape[0])
+for i in range(W.shape[0]):
+    for j in range(len(x1)):
+        gdot[i] += W[i,j]*x1[j]
+```
