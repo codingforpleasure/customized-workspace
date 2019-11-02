@@ -1,18 +1,26 @@
 <!--ts-->
-  * [Introduction](#introduction)
-     * [Why use numpy?](#why-use-numpy)
-        * [Creating](#creating)
-        * [Retrieving info about an array](#retrieving-info-about-an-array)
-        * [Aggregation functions](#aggregation-functions)
-        * [Iterating easily over an array](#iterating-easily-over-an-array)
-        * [Fancy indexing](#fancy-indexing)
-           * [<strong>1. Select some rows</strong>](#1-select-some-rows)
-           * [<strong>2. Select some rows and specific column</strong>](#2-select-some-rows-and-specific-column)
-           * [<strong>3. Select some rows and columns</strong>](#3-select-some-rows-and-columns)
-           * [<strong>4. Some simple slicing</strong>](#4-some-simple-slicing)
-           * [<strong>5. argmin, argmax, argsort</strong>](#5-argmin-argmax-argsort)
+      * [Introduction](#introduction)
+         * [Why use numpy?](#why-use-numpy)
+            * [Data representation](#data-representation)
+               * [Key attributes](#key-attributes)
+            * [Creating](#creating)
+            * [Forming](#forming)
+               * [Stack 1-D arrays as columns into a 2-D array.](#stack-1-d-arrays-as-columns-into-a-2-d-array)
+            * [Retrieving info about an array](#retrieving-info-about-an-array)
+            * [Aggregation functions](#aggregation-functions)
+            * [Aggregation functions exmaple on matrix:](#aggregation-functions-exmaple-on-matrix)
+            * [Unique and Other Set Logic](#unique-and-other-set-logic)
+               * [sorted unique values in an array](#sorted-unique-values-in-an-array)
+            * [Iterating easily over an array](#iterating-easily-over-an-array)
+            * [Fancy indexing](#fancy-indexing)
+               * [<strong>1. Select some rows</strong>](#1-select-some-rows)
+               * [<strong>2. Select some rows and specific column</strong>](#2-select-some-rows-and-specific-column)
+               * [<strong>3. Select some rows and columns</strong>](#3-select-some-rows-and-columns)
+               * [<strong>4. Some simple slicing</strong>](#4-some-simple-slicing)
+               * [<strong>5. argmin, argmax, argsort</strong>](#5-argmin-argmax-argsort)
+      * [reshape](#reshape)
 
-<!-- Added by: gil_diy, at: 2018-08-13T23:18+03:00 -->
+<!-- Added by: gil_diy, at: 2019-11-02T13:43+02:00 -->
 
 <!--te-->
 
@@ -67,22 +75,34 @@ Video (5D tensors)| (samples, frames, height, width, channels)
 2. **Shape** - A tuple of integers that describes how many dimensions the tensor **has along each axis**
 3. **Data type (usually called **dtype**)** - This is the type of the data contianed in the tensor,
 float32, uint8, float64 etc..
+
 #### Creating
 
 Description | command
 ------------------------------------|-----
 Create Ndarray | np.array([1,3,5])
-. | np.array([[1,3,5],[11,31,215]])
+ | np.array([[1,3,5],[11,31,215]])
+ |
 Create Special Ndarray | np.zeros(10)  #one dimentional ndarray with 10 elements of value 0
-.| np.ones(2,3)  #two dimentional ndarray with 6 elements of value 1
+| np.ones(2,3)  #two dimentional ndarray with 6 elements of value 1
+|
 Create range of numbers in an Ndarray | np.arange(10)
+Create a **column** vector with **random** numbers | a = np.random.randn(5, 1)
+Create a **row** vector with **random** numbers | a = np.random.randn(1, 5)
 Rehsape arrays | np.arange(10).reshape(2, 5)
+|
 Concatenation, or joining of two arrays |  x = np.array([1, 2, 3])
-.| y = np.array([3, 2, 1])
-.| np.concatenate([x, y])
+| y = np.array([3, 2, 1])
+| np.concatenate([x, y])
+
+
+**Tip** : A greate way to make sure is by using assert:
+
+```python
+assert(a.shape == (5,1))
+```
 
 #### Forming
-
 
 #####
 
@@ -187,6 +207,26 @@ Find index of maximum value | np.argmax(vec) | 9
 Compute median value | np.median(vec) | 5
 Evaluate whether any elements are true | np.any(vec > 5) True
 Evaluate whether all elements are true | np.allnp.any(vec > -1) | True
+
+
+#### Aggregation functions exmaple on matrix:
+
+```python
+# Each column presents a fruit
+data = np.array([56.0, 0.0, 4.4, 68.0],
+				[1.2, 104.0, 52.0, 8.0],
+				[1.8, 135.0, 99.0, 0.9])
+
+print(data)
+
+# Let's sum up the colories for each fruit:
+cal = data.sum(axis=0)
+print(cal)
+
+precentage = 100*data/cal
+print(precentage)
+```
+
 
 #### Unique and Other Set Logic
 
@@ -296,4 +336,8 @@ np.random.seed = seed
 np.random.shuffle(messages)
 ```
 
-reshape
+## reshape
+
+make sure your matrices are the size you want it to be
+
+
