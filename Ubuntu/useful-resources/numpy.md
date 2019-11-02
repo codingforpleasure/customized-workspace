@@ -18,8 +18,14 @@
             * [<strong>3. Select some rows and columns</strong>](#3-select-some-rows-and-columns)
             * [<strong>4. Some simple slicing</strong>](#4-some-simple-slicing)
             * [<strong>5. argmin, argmax, argsort</strong>](#5-argmin-argmax-argsort)
+      * [reshape](#reshape)
+         * [Multiplication:](#multiplication)
+            * [Vectorized dot product of vectors](#vectorized-dot-product-of-vectors)
+            * [Vectorized outer product](#vectorized-outer-product)
+            * [Vectorized elementwise multiplication](#vectorized-elementwise-multiplication)
+            * [Vectorized general dot product](#vectorized-general-dot-product)
 
-<!-- Added by: gil_diy, at: 2019-11-02T14:02+02:00 -->
+<!-- Added by: gil_diy, at: 2019-11-02T23:55+02:00 -->
 
 <!--te-->
 
@@ -88,17 +94,27 @@ Create Special Ndarray | np.zeros(10)  #one dimentional ndarray with 10 elements
 Create range of numbers in an Ndarray | np.arange(10)
 Create a **column** vector with **random** numbers | a = np.random.randn(5, 1)
 Create a **row** vector with **random** numbers | a = np.random.randn(1, 5)
-Rehsape arrays | np.arange(10).reshape(2, 5)
+Rehsape array to matrix 2x5 | np.arange(10).reshape(2, 5)
+							| *** np.arange(10).reshape(2, -1)
 |
 Concatenation, or joining of two arrays |  x = np.array([1, 2, 3])
 | y = np.array([3, 2, 1])
 | np.concatenate([x, y])
 
 
-**Tip** : A greate way to make sure is by using assert:
+**Tip #1** : A greate way to make sure is by using assert:
 
 ```python
 assert(a.shape == (5,1))
+```
+
+*** **Tip #2**: When you are dealing with many dimensions and you would like to reshape it to you can enter the dimension size either rows or columns and the other will be -1, numpy will figure out what the value should be for rehsaping properly.
+
+```python
+# data.shape = (963,64,64,3)
+# for rehsaping it to 963 columns of length (64*64*3)
+data.reshape((-1,data.shape[0])
+
 ```
 
 ### Forming
@@ -341,7 +357,7 @@ np.random.shuffle(messages)
 
 ## reshape
 
-make sure your matrices are the size you want it to be
+Make sure your matrices are the size you want it to be
 
 ```python
 # Argument: image - a numpy array of shape (length, height, depth)
@@ -365,6 +381,11 @@ image = np.array([[[ 0.67826139,  0.29380381],
 print ("image2vector(image) = " + str(image2vector(image)))
 ```
 
+A trick when you want to flatten a matrix X of shape (a,b,c,d) to a matrix
+X_flatten of shape (b ∗∗ c ∗∗ d, a) is to use:
+```python
+X_flatten = X.reshape(X.shape[0], -1).T      # X.T is the transpose of X
+```
 
 ### Multiplication:
 np.dot(a,b) performs a matrix multiplication on a and b,
