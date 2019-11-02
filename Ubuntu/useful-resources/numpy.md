@@ -1,36 +1,35 @@
 <!--ts-->
-      * [Introduction](#introduction)
-         * [Why use numpy?](#why-use-numpy)
-            * [Data representation](#data-representation)
-               * [Key attributes](#key-attributes)
-            * [Creating](#creating)
-            * [Forming](#forming)
-               * [Stack 1-D arrays as columns into a 2-D array.](#stack-1-d-arrays-as-columns-into-a-2-d-array)
-            * [Retrieving info about an array](#retrieving-info-about-an-array)
-            * [Aggregation functions](#aggregation-functions)
-            * [Aggregation functions exmaple on matrix:](#aggregation-functions-exmaple-on-matrix)
-            * [Unique and Other Set Logic](#unique-and-other-set-logic)
-               * [sorted unique values in an array](#sorted-unique-values-in-an-array)
-            * [Iterating easily over an array](#iterating-easily-over-an-array)
-            * [Fancy indexing](#fancy-indexing)
-               * [<strong>1. Select some rows</strong>](#1-select-some-rows)
-               * [<strong>2. Select some rows and specific column</strong>](#2-select-some-rows-and-specific-column)
-               * [<strong>3. Select some rows and columns</strong>](#3-select-some-rows-and-columns)
-               * [<strong>4. Some simple slicing</strong>](#4-some-simple-slicing)
-               * [<strong>5. argmin, argmax, argsort</strong>](#5-argmin-argmax-argsort)
-      * [reshape](#reshape)
+   * [Numpy Introduction](#numpy-introduction)
+      * [Why use numpy?](#why-use-numpy)
+         * [Data representation](#data-representation)
+            * [Key attributes](#key-attributes)
+         * [Creating](#creating)
+         * [Forming](#forming)
+            * [Stack 1-D arrays as columns into a 2-D array.](#stack-1-d-arrays-as-columns-into-a-2-d-array)
+         * [Retrieving info about an array](#retrieving-info-about-an-array)
+         * [Aggregation functions](#aggregation-functions)
+         * [Aggregation functions exmaple on matrix:](#aggregation-functions-exmaple-on-matrix)
+         * [Unique and Other Set Logic](#unique-and-other-set-logic)
+            * [sorted unique values in an array](#sorted-unique-values-in-an-array)
+         * [Iterating easily over an array](#iterating-easily-over-an-array)
+         * [Fancy indexing](#fancy-indexing)
+            * [<strong>1. Select some rows</strong>](#1-select-some-rows)
+            * [<strong>2. Select some rows and specific column</strong>](#2-select-some-rows-and-specific-column)
+            * [<strong>3. Select some rows and columns</strong>](#3-select-some-rows-and-columns)
+            * [<strong>4. Some simple slicing</strong>](#4-some-simple-slicing)
+            * [<strong>5. argmin, argmax, argsort</strong>](#5-argmin-argmax-argsort)
 
-<!-- Added by: gil_diy, at: 2019-11-02T13:43+02:00 -->
+<!-- Added by: gil_diy, at: 2019-11-02T14:02+02:00 -->
 
 <!--te-->
 
 
-## Introduction
+# Numpy Introduction
 
 Numpy uses **ndarray** which is much more efficient way of storing and manipulating "numerical data" than the built-in Python data structure.
 
 
-### Why use numpy?
+## Why use numpy?
 
 Numpy arrays are much faster,
 let's see an example:
@@ -45,7 +44,7 @@ timeit my_array**2
 **If you'll run it, you can easily see the numpy array is much much faster than the list!!**
 
 
-#### Data representation
+### Data representation
 
 Data is stored in multidimensional Numy arrays, also called **tensors** .
 tensor is a container for data and a generalization of matrices to an arbitrary number of dimensions.
@@ -69,14 +68,14 @@ Images (4D tensors) | (samples, height, width, channels)
 Video (5D tensors)| (samples, frames, height, width, channels)
 
 
-##### Key attributes
+#### Key attributes
 
 1. **Number of axes (rank)** - Number of dimensions
 2. **Shape** - A tuple of integers that describes how many dimensions the tensor **has along each axis**
 3. **Data type (usually called **dtype**)** - This is the type of the data contianed in the tensor,
 float32, uint8, float64 etc..
 
-#### Creating
+### Creating
 
 Description | command
 ------------------------------------|-----
@@ -102,9 +101,7 @@ Concatenation, or joining of two arrays |  x = np.array([1, 2, 3])
 assert(a.shape == (5,1))
 ```
 
-#### Forming
-
-#####
+### Forming
 
 ```python
 a = np.array((1, 2, 3))
@@ -132,7 +129,7 @@ array([[1, 2, 5],
        [3, 4, 7]])
 ```
 
-##### Stack 1-D arrays as columns into a 2-D array.
+#### Stack 1-D arrays as columns into a 2-D array.
 ```python
 a = np.array((1, 2, 3))
 b = np.array((2, 3, 4))
@@ -145,7 +142,7 @@ array([[1, 2],
        [2, 3],
        [3, 4]])
 ```
-#### Retrieving info about an array
+### Retrieving info about an array
 
 ```python
 my_mat = np.array([[1,3,5],[6,16,2]])
@@ -176,7 +173,8 @@ Description | command
 ------------|---------
 Get array's dimensions | my_mat.ndim
 Get Shape | my_mat.shape # The returned tuple will hold ndim numbers
-.| i.e: for my_mat it returns: (2, 3)
+| i.e: for my_mat it returns: (2, 3)
+|
 Get number of elements in an array | my_mat.size
 Get data type in this array | my_mat.dtype
 
@@ -186,7 +184,7 @@ Description | command
 ------------|---------
 Get array's dimensions | my_mat.ndim
 
-#### Aggregation functions
+### Aggregation functions
 
 let's assume we have an array:
 ```python
@@ -208,8 +206,13 @@ Compute median value | np.median(vec) | 5
 Evaluate whether any elements are true | np.any(vec > 5) True
 Evaluate whether all elements are true | np.allnp.any(vec > -1) | True
 
+### Aggregation functions exmaple on matrix:
 
-#### Aggregation functions exmaple on matrix:
+For example:
+
+<p align="center" style="width:400px;" >
+  <img src="images/numpy/fruits.png" title="tool tip here">
+</p>
 
 ```python
 # Each column presents a fruit
@@ -223,14 +226,14 @@ print(data)
 cal = data.sum(axis=0)
 print(cal)
 
-precentage = 100*data/cal
+precentage = 100*data/cal # Using broadcasting
 print(precentage)
 ```
 
 
-#### Unique and Other Set Logic
+### Unique and Other Set Logic
 
-##### sorted unique values in an array
+#### sorted unique values in an array
 
 ```python
 names = np.array(['Bob', 'Joe', 'Will', 'Bob', 'Will', 'Joe', 'Joe'])
@@ -253,7 +256,7 @@ in1d(x,y) | Compute a boolean array indicating whether each element of x is cont
 setdiff1d(x, y) | Set difference, elements in x that are not in y
 
 
-#### Iterating easily over an array
+### Iterating easily over an array
 
 Avoid using nested loop,
 numpy has a built in function `ndindex`:
@@ -263,7 +266,7 @@ for i in np.ndindex(B.shape):
     print i, B[i]
 ```
 
-#### Fancy indexing
+### Fancy indexing
 
 Given the matrix:
 
@@ -271,18 +274,18 @@ Given the matrix:
 my_mat = np.array([[1,8,15,16],[17,58,854,11],[485,78,86,33]])
 ```
 
-##### **1. Select some rows**
+#### **1. Select some rows**
 ```python
 print(my_mat[[0,1,2], :])
 ```
 
-##### **2. Select some rows and specific column**
+#### **2. Select some rows and specific column**
 
 ```python
 print(my_mat[[0,1,2], 2])
 ```
 
-##### **3. Select some rows and columns**
+#### **3. Select some rows and columns**
 
 This:
 
@@ -304,14 +307,14 @@ So **a[np.ix_([0,1,2],[0,2])]** returns the array: **[a[0,0] a[0,2], [a[1,0], a[
 ```python
 print(my_mat[np.ix_([0,1,2],[0,2])])
 ```
-##### **4. Some simple slicing**
+#### **4. Some simple slicing**
 suppose one wanted to square all the negative values in an array. Short of writing a loop in python, one wants to be able to locate the negative values, extract them, square them, and put the new values where the old ones were:
 
 ```python
 result=original.copy()
 result[result<0] ** = 2
 ```
-##### **5. argmin, argmax, argsort**
+#### **5. argmin, argmax, argsort**
 
 Those functions returns the actual indexes:
 
@@ -328,7 +331,7 @@ my_vec = np.array([1,5,3,56,4,7,43])
 indexes = np.argsort(mt_vec) # result: array([0, 2, 4, 1, 5, 6, 3])
 ```
 
-####random
+###random
 
 ```python
 seed = 1
@@ -336,8 +339,8 @@ np.random.seed = seed
 np.random.shuffle(messages)
 ```
 
-## reshape
+<!-- ## reshape
 
-make sure your matrices are the size you want it to be
+make sure your matrices are the size you want it to be -->
 
 
