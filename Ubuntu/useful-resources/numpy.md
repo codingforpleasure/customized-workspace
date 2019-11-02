@@ -108,7 +108,7 @@ Concatenation, or joining of two arrays |  x = np.array([1, 2, 3])
 assert(a.shape == (5,1))
 ```
 
-*** **Tip #2**: When you are dealing with many dimensions and you would like to reshape it to you can enter the dimension size either rows or columns and the other will be -1, numpy will figure out what the value should be for rehsaping properly.
+*** **Tip #2**: When you are dealing with many dimensions and you would like to reshape it to you can enter the dimension size either rows or columns and the other will be -1, numpy will figure out what the value should be for rehsaping properly (well explained [here](https://stackoverflow.com/questions/18691084/what-does-1-mean-in-numpy-reshape))
 
 ```python
 # data.shape = (963,64,64,3)
