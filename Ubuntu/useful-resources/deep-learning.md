@@ -8,6 +8,8 @@
 
 <!--te-->
 
+[DEEP LEARNING GLOSSARY](http://www.wildml.com/deep-learning-glossary/)
+
 
 
 # RNN (Recurrent Neural Networks)

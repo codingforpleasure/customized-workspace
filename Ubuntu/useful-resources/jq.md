@@ -25,7 +25,7 @@
          * [Converting files from CSV to JSON and many more](#converting-files-from-csv-to-json-and-many-more)
          * [<strong>Great resources on the web</strong>](#great-resources-on-the-web)
 
-<!-- Added by: gil_diy, at: 2019-09-16T16:02+03:00 -->
+<!-- Added by: gil_diy, at: 2019-10-30T17:30+02:00 -->
 
 <!--te-->
 # jq (json processor)

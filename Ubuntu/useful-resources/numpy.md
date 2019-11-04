@@ -89,13 +89,14 @@ Create Ndarray | np.array([1,3,5])
  | np.array([[1,3,5],[11,31,215]])
  |
 Create Special Ndarray | np.zeros(10)  #one dimentional ndarray with 10 elements of value 0
-| np.ones(2,3)  #two dimentional ndarray with 6 elements of value 1
+| np.ones((2,3))  #two dimentional ndarray with 6 elements of value 1, **please notice** i'm passing tuple.
 |
 Create range of numbers in an Ndarray | np.arange(10)
 Create a **column** vector with **random** numbers | a = np.random.randn(5, 1)
 Create a **row** vector with **random** numbers | a = np.random.randn(1, 5)
+Create a matrix with **random** numbers | a = np.random.randn(5, 3) # 5 Rows, 3 columns
 Rehsape array to matrix 2x5 | np.arange(10).reshape(2, 5)
-							| *** np.arange(10).reshape(2, -1)
+							| np.arange(10).reshape(2, -1)      (**Read tip #2**)
 |
 Concatenation, or joining of two arrays |  x = np.array([1, 2, 3])
 | y = np.array([3, 2, 1])
@@ -183,6 +184,14 @@ To find the coordinates (row number, column number) just use `np.where(mat > 0)`
 (array([0, 1, 1, 2]), array([2, 0, 1, 0]))
 ```
 
+### Transpose a matrix/array
+
+
+
+```python
+array1 = np.array([[1.],[2.]])
+array1_transpose = array1.T
+```
 
 
 Description | command
@@ -400,20 +409,38 @@ c = a*b
 This **would fail** since **broadcast can't be done** .
 
 #### Vectorized dot product of vectors
-The dot product or scalar product is an algebraic operation that takes two equal-length sequences of numbers (usually coordinate vectors) and returns a single number.
+The dot product or **scalar product** is an algebraic operation that takes two equal-length sequences of numbers (usually coordinate vectors) and returns a single number.
 ```python
-x1 = [9, 2, 5, 0, 0, 7, 5, 0, 0, 0, 9, 2, 5, 0, 0]
-x2 = [9, 2, 2, 9, 0, 9, 2, 5, 0, 0, 9, 2, 5, 0, 0]
-dot = np.dot(x1,x2)
+x1 = np.array([5,6,7,8])
+x2 = np.array([0,2,4,2])
+dot_res = np.dot(x1,x2)
+
+# Therefore the result would be: dot_res = 5*0+6*2+7*8+8*2=> 84
 ```
+
+<p align="center" style="width:400px;" >
+  <img src="images/numpy/dot_product.png" title="tool tip here">
+</p>
+
+
+
 #### Vectorized outer product
 
-The outer product of two coordinate vectors is a matrix. If the two vectors have dimensions n and m, then their outer product is an n × m matrix
+The outer product of two coordinate vectors is a matrix. If the two vectors have dimensions n and m, then their outer product is an **n × m matrix**
+
+<p align="center" style="width:900px;" >
+  <img src="images/numpy/outer_product.png" title="tool tip here">
+</p>
+
 
 ```python
-x1 = [9, 2, 5, 0, 0, 7, 5, 0, 0, 0, 9, 2, 5, 0, 0]
-x2 = [9, 2, 2, 9, 0, 9, 2, 5, 0, 0, 9, 2, 5, 0, 0]
-dot = np.outer(x1,x2)
+x1 = np.array([5, 6, 7])
+x2 = np.array([0, 2, 4, 2])
+outer_res = np.outer(x1,x2)
+
+# outer_res = array([[ 0, 10, 20, 10],
+#                    [ 0, 12, 24, 12],
+#                    [ 0, 14, 28, 14]])
 ```
 
 it's equivalent to this:
@@ -425,11 +452,14 @@ for i in range(len(x1)):
 ```
 
 #### Vectorized elementwise multiplication
+The same as "a*b" which performs an element-wise multiplication.
 
 ```python
-x1 = [9, 2, 5, 0, 0, 7, 5, 0, 0, 0, 9, 2, 5, 0, 0]
-x2 = [9, 2, 2, 9, 0, 9, 2, 5, 0, 0, 9, 2, 5, 0, 0]
-dot = np.multiply(x1,x2) # same as "a*b" which performs an element-wise multiplication.
+x1 = np.array([11, 3, 9])
+x2 = np.array([7, 5, 3])
+elementwise_res = np.multiply(x1,x2)
+
+# elementwise_res = array([77, 15, 27])
 ```
 
 it's equivalent to this:
