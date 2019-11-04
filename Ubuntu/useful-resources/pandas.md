@@ -16,8 +16,9 @@
          * [Join two dataframes one <strong>below</strong> the other.](#join-two-dataframes-one-below-the-other)
          * [Join two dataframes one <strong>besides</strong> the other.](#join-two-dataframes-one-besides-the-other)
          * [Printing data so all columns will be presented](#printing-data-so-all-columns-will-be-presented)
+      * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: 2019-09-23T22:46+03:00 -->
+<!-- Added by: gil_diy, at: 2019-11-04T21:10+02:00 -->
 
 <!--te-->
 
@@ -222,3 +223,9 @@ pd.set_option('display.max_rows', 500)
 pd.set_option('display.max_columns', 500)
 pd.set_option('display.width', 1000)
 ```
+
+## Reference
+
+[Pandas Cheat Sheet #1](https://www.datacamp.com/community/blog/python-pandas-cheat-sheet#gs.S4P4T=U)
+
+[Pandas Cheat Sheet #2](http://datasciencefree.com/pandas.pdf)

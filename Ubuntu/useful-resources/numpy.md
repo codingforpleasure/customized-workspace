@@ -7,6 +7,7 @@
          * [Forming](#forming)
             * [Stack 1-D arrays as columns into a 2-D array.](#stack-1-d-arrays-as-columns-into-a-2-d-array)
          * [Retrieving info about an array](#retrieving-info-about-an-array)
+         * [Transpose a matrix/array](#transpose-a-matrixarray)
          * [Aggregation functions](#aggregation-functions)
          * [Aggregation functions exmaple on matrix:](#aggregation-functions-exmaple-on-matrix)
          * [Unique and Other Set Logic](#unique-and-other-set-logic)
@@ -19,13 +20,15 @@
             * [<strong>4. Some simple slicing</strong>](#4-some-simple-slicing)
             * [<strong>5. argmin, argmax, argsort</strong>](#5-argmin-argmax-argsort)
       * [reshape](#reshape)
-         * [Multiplication:](#multiplication)
-            * [Vectorized dot product of vectors](#vectorized-dot-product-of-vectors)
-            * [Vectorized outer product](#vectorized-outer-product)
-            * [Vectorized elementwise multiplication](#vectorized-elementwise-multiplication)
-            * [Vectorized general dot product](#vectorized-general-dot-product)
+      * [Multiplication:](#multiplication)
+         * [Vectorized dot product of vectors](#vectorized-dot-product-of-vectors)
+         * [Vectorized outer product](#vectorized-outer-product)
+         * [Vectorized elementwise multiplication](#vectorized-elementwise-multiplication)
+         * [Vectorized general dot product](#vectorized-general-dot-product)
+      * [Vector Math](#vector-math)
+      * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: 2019-11-02T23:55+02:00 -->
+<!-- Added by: gil_diy, at: 2019-11-04T21:11+02:00 -->
 
 <!--te-->
 
@@ -396,19 +399,9 @@ X_flatten of shape (b ∗∗ c ∗∗ d, a) is to use:
 X_flatten = X.reshape(X.shape[0], -1).T      # X.T is the transpose of X
 ```
 
-### Multiplication:
-np.dot(a,b) performs a matrix multiplication on a and b,
-whereas "a*b" performs an element-wise multiplication.
+## Multiplication:
 
-```python
-a = np.random.randn(4, 3) # a.shape = (4, 3)
-b = np.random.randn(3, 2) # b.shape = (3, 2)
-c = a*b
-```
-
-This **would fail** since **broadcast can't be done** .
-
-#### Vectorized dot product of vectors
+### Vectorized dot product of vectors
 The dot product or **scalar product** is an algebraic operation that takes two equal-length sequences of numbers (usually coordinate vectors) and returns a single number.
 ```python
 x1 = np.array([5,6,7,8])
@@ -423,8 +416,21 @@ dot_res = np.dot(x1,x2)
 </p>
 
 
+Another example:
 
-#### Vectorized outer product
+```python
+mat1 = np.array([[1, 2, 3],[4,5,6]],[1,6,2]) # mat1.shape => (2,3)
+mat2 = np.array([[7, 8],[9,10],[11,12]]) # mat2.shape => (3,2)
+
+dot_res = np.dot(mat1,mat2)
+
+# dot_res = array([[ 58,  64],
+#                  [139, 154],
+#                  [ 83,  92]])
+
+# dot_res.shape => (3,2)
+```
+### Vectorized outer product
 
 The outer product of two coordinate vectors is a matrix. If the two vectors have dimensions n and m, then their outer product is an **n × m matrix**
 
@@ -451,7 +457,7 @@ for i in range(len(x1)):
         outer[i,j] = x1[i]*x2[j]
 ```
 
-#### Vectorized elementwise multiplication
+### Vectorized elementwise multiplication
 The same as "a*b" which performs an element-wise multiplication.
 
 ```python
@@ -468,7 +474,8 @@ for i in range(len(x1)):
     mul[i] = x1[i]*x2[i]
 ```
 
-#### Vectorized general dot product
+
+### Vectorized general dot product
 ```python
 x1 = [9, 2, 5, 0, 0, 7, 5, 0, 0, 0, 9, 2, 5, 0, 0]
 W = np.random.rand(3,len(x1)) # Random 3*len(x1) numpy array
@@ -482,3 +489,26 @@ for i in range(W.shape[0]):
     for j in range(len(x1)):
         gdot[i] += W[i,j]*x1[j]
 ```
+
+
+
+**The difference** : np.dot(a,b) performs a matrix multiplication on a and b, whereas "a*b" performs an element-wise multiplication.
+
+
+```python
+a = np.random.randn(4, 3) # a.shape = (4, 3)
+b = np.random.randn(3, 2) # b.shape = (3, 2)
+c = a*b
+```
+
+This **would fail** since **broadcast can't be done** .
+
+## Vector Math
+
+
+
+## Reference
+
+**Very useful:**
+
+[NumPy Cheat Sheet](https://www.dataquest.io/blog/numpy-cheat-sheet/)
