@@ -91,7 +91,7 @@ Description | command
 Create Ndarray | np.array([1,3,5])
  | np.array([[1,3,5],[11,31,215]])
  |
-Create Special Ndarray | np.zeros(10)  #one dimentional ndarray with 10 elements of value 0
+Create Special Ndarray | np.zeros((1,10)  #one dimentional ndarray with 10 elements of value 0
 | np.ones((2,3))  #two dimentional ndarray with 6 elements of value 1, **please notice** i'm passing tuple.
 |
 Create range of numbers in an Ndarray | np.arange(10)
@@ -503,7 +503,13 @@ c = a*b
 
 This **would fail** since **broadcast can't be done** .
 
-## Vector Math
+## Vectorized elementwise
+
+Operatin | Explanation
+------------|-----
+ multiply | element-description
+ divide | element-description
+
 
 
 
