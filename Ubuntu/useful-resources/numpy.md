@@ -4,6 +4,9 @@
          * [Data representation](#data-representation)
             * [Key attributes](#key-attributes)
          * [Creating](#creating)
+         * [Random generation](#random-generation)
+            * [randn](#randn)
+            * [rand](#rand)
          * [Forming](#forming)
             * [Stack 1-D arrays as columns into a 2-D array.](#stack-1-d-arrays-as-columns-into-a-2-d-array)
          * [Retrieving info about an array](#retrieving-info-about-an-array)
@@ -25,10 +28,10 @@
          * [Vectorized outer product](#vectorized-outer-product)
          * [Vectorized elementwise multiplication](#vectorized-elementwise-multiplication)
          * [Vectorized general dot product](#vectorized-general-dot-product)
-      * [Vector Math](#vector-math)
+      * [Vectorized elementwise](#vectorized-elementwise)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: 2019-11-04T21:11+02:00 -->
+<!-- Added by: gil_diy, at: 2019-11-10T13:45+02:00 -->
 
 <!--te-->
 
@@ -101,6 +104,10 @@ Create a matrix with **random** numbers | a = np.random.randn(5, 3) # 5 Rows, 3 
 Rehsape array to matrix 2x5 | np.arange(10).reshape(2, 5)
 							| np.arange(10).reshape(2, -1)      (**Read tip #2**)
 |
+Remove single-dimensional entries from the shape of an array | x = np.array([[[0], [1], [2]]])      # x.shape: (1, 3, 1)
+| np.squeeze(x).shape
+| output: (3,)
+|
 Concatenation, or joining of two arrays |  x = np.array([1, 2, 3])
 | y = np.array([3, 2, 1])
 | np.concatenate([x, y])
@@ -120,6 +127,17 @@ assert(a.shape == (5,1))
 data.reshape((-1,data.shape[0])
 
 ```
+### Random generation
+
+[Great answer](https://stackoverflow.com/questions/47240308/differences-between-numpy-random-rand-vs-numpy-random-randn-in-python)
+
+#### randn
+`numpy.random.randn` generates samples from the normal distribution
+
+#### rand
+
+`numpy.random.rand` generates samples from unifrom (in range [0,1))
+
 
 ### Forming
 
