@@ -31,7 +31,7 @@
       * [Vectorized elementwise](#vectorized-elementwise)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: 2019-11-10T13:45+02:00 -->
+<!-- Added by: gil_diy, at: 2019-11-26T10:19+02:00 -->
 
 <!--te-->
 
@@ -101,6 +101,7 @@ Create range of numbers in an Ndarray | np.arange(10)
 Create a **column** vector with **random** numbers | a = np.random.randn(5, 1)
 Create a **row** vector with **random** numbers | a = np.random.randn(1, 5)
 Create a matrix with **random** numbers | a = np.random.randn(5, 3) # 5 Rows, 3 columns
+Create a matrix with ones on a diagonal (optionally offset) | np.eye(N=3)
 Rehsape array to matrix 2x5 | np.arange(10).reshape(2, 5)
 							| np.arange(10).reshape(2, -1)      (**Read tip #2**)
 |
@@ -127,6 +128,9 @@ assert(a.shape == (5,1))
 data.reshape((-1,data.shape[0])
 
 ```
+
+
+
 ### Random generation
 
 [Great answer](https://stackoverflow.com/questions/47240308/differences-between-numpy-random-rand-vs-numpy-random-randn-in-python)
@@ -375,14 +379,6 @@ np.argmax(my_array, axis = 1)  # Find max in each row: array([1, 0, 1])
 ```python
 my_vec = np.array([1,5,3,56,4,7,43])
 indexes = np.argsort(mt_vec) # result: array([0, 2, 4, 1, 5, 6, 3])
-```
-
-###random
-
-```python
-seed = 1
-np.random.seed = seed
-np.random.shuffle(messages)
 ```
 
 ## reshape
