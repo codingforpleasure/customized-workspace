@@ -11,6 +11,8 @@
       * [Get statistics (count, mean, std, min, max))](#get-statistics-count-mean-std-min-max)
       * [Datatypes conversions](#datatypes-conversions)
       * [Retrieve NaN values](#retrieve-nan-values)
+      * [Get the index of the min or the max element](#get-the-index-of-the-min-or-the-max-element)
+      * [Get the nsmallest or nlargest element](#get-the-nsmallest-or-nlargest-element)
       * [Group by:](#group-by)
       * [Concat Dataframes](#concat-dataframes)
          * [Join two dataframes one <strong>below</strong> the other.](#join-two-dataframes-one-below-the-other)
@@ -18,7 +20,7 @@
          * [Printing data so all columns will be presented](#printing-data-so-all-columns-will-be-presented)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: 2019-11-04T21:10+02:00 -->
+<!-- Added by: gil_diy, at: 2019-11-26T16:08+02:00 -->
 
 <!--te-->
 
@@ -133,6 +135,29 @@ movies_df['Star Ratings'] = movies_df['Star Ratings'].astype('int')
 ## Retrieve NaN values
 ```python
 <columnname>.notnull()
+```
+
+## Get the index of the min or the max element
+
+```python
+data_example = pd.Series([
+		1,3,2,8,124,4,2,1
+])
+
+print('The index of the minimum value is: ', data_example.idxmin())
+print('The index of the maximum value is: ', data_example.idxmax())
+```
+
+## Get the nsmallest or nlargest element
+
+```python
+df = pd.Dataframe({
+	'Name': ['Bob', 'Mark', 'Steph', 'Jess', 'Becky'],
+	'Points': [55, 98, 46, 77, 81]
+})
+
+print('The fourth element in size is:', str(df.mslargest(4,'Points')))
+print('The 2nd smallest element  is:', str(df.msmallest(2,'Points')))
 ```
 
 ## Group by:
