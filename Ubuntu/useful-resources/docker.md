@@ -1,6 +1,7 @@
 <!--ts-->
+   * [Docker](#docker)
       * [Docker-compose](#docker-compose)
-      * [Docker](#docker)
+      * [Docker](#docker-1)
          * [Docker list all images](#docker-list-all-images)
          * [Remove docker image which resides on your harddrive:](#remove-docker-image-which-resides-on-your-harddrive)
          * [Search for images in docker hub](#search-for-images-in-docker-hub)
@@ -14,10 +15,16 @@
             * [Mount a directory in host into a docker container](#mount-a-directory-in-host-into-a-docker-container)
          * [Remove a container](#remove-a-container)
          * [Kill a container](#kill-a-container)
+         * [Copy files into a docker machine from a local host](#copy-files-into-a-docker-machine-from-a-local-host)
+         * [Conencting to a service](#conencting-to-a-service)
+         * [Build the image](#build-the-image)
+         * [Inspect the image](#inspect-the-image)
 
-<!-- Added by: gil_diy, at: 2019-07-25T11:09+03:00 -->
+<!-- Added by: gil_diy, at: 2019-11-30T15:38+02:00 -->
 
 <!--te-->
+
+# Docker
 
 docker images resides in the following path:
 ```bash
@@ -129,3 +136,26 @@ docker rm <container-name>
 docker kill <container-name>
 ```
 
+### Copy files into a docker machine from a local host
+```bash
+docker cp
+```
+
+### Conencting to a service
+```bash
+sudo docker-compose exec <service-name> sh
+```
+### Build the image
+
+```bash
+docker image build -t <name>:latest .
+```
+
+Be sure to include the period (.) at the end of the command, and be sure to run the command from the directory that contains the Dockerfile and application code.
+
+### Inspect the image
+
+commd to veify the configuration of the image. It will  list all of the settings that were configured from the Dockerfile.
+```bash
+docker image inspect web:latest
+```
