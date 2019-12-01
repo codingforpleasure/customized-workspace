@@ -15,14 +15,15 @@
             * [Mount a directory in host into a docker container](#mount-a-directory-in-host-into-a-docker-container)
          * [Remove a container](#remove-a-container)
          * [Kill a container](#kill-a-container)
-         * [Copy files into a docker machine from a local host](#copy-files-into-a-docker-machine-from-a-local-host)
+         * [Copying files from container to host and vice versa](#copying-files-from-container-to-host-and-vice-versa)
          * [Conencting to a service](#conencting-to-a-service)
       * [Inside a docker image](#inside-a-docker-image)
          * [Inspect the image](#inspect-the-image)
          * [Inspecting a Dockerfile](#inspecting-a-dockerfile)
          * [Build the image](#build-the-image)
+      * [Copying files from container to host and vice versa](#copying-files-from-container-to-host-and-vice-versa-1)
 
-<!-- Added by: gil_diy, at: 2019-12-01T10:33+02:00 -->
+<!-- Added by: gil_diy, at: 2019-12-01T11:27+02:00 -->
 
 <!--te-->
 
@@ -148,10 +149,23 @@ docker rm <container-name>
 docker kill <container-name>
 ```
 
-### Copy files into a docker machine from a local host
+### Copying files from container to host and vice versa
+
+From host to container:
+
 ```bash
-docker cp
+docker cp ./my-file.txt de1193caf1f0:/var/www/html
 ```
+
+From container to host:
+
+```bash
+docker cp de1193caf1f0:/var/www/html/my-file.txt ~/desktop
+```
+
+`de1193caf1f0` is the CONTAINER ID (**NOT** the image's name) retrieved from `docker ps`
+
+
 
 ### Conencting to a service
 ```bash
@@ -240,4 +254,18 @@ Be sure to include the period (.) at the end of the command, and be sure to run 
 docker image build -t web:latest .
 ```
 
-Tip: Check that the image exists in your Docker host's local repository.
+**Tip:** Check that the image exists in your Docker host's local repository.
+
+```bash
+docker ps
+```
+
+## Copying files from container to host and vice versa
+
+
+```bash
+docker cp ./my-file.txt de1193caf1f0:/var/www/html
+```
+
+`de1193caf1f0` is the CONTAINER ID (**NOT** the image's name) retrieved from `docker ps`
+
