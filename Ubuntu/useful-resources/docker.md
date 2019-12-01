@@ -17,19 +17,24 @@
          * [Kill a container](#kill-a-container)
          * [Copy files into a docker machine from a local host](#copy-files-into-a-docker-machine-from-a-local-host)
          * [Conencting to a service](#conencting-to-a-service)
-         * [Build the image](#build-the-image)
+      * [Inside a docker image](#inside-a-docker-image)
          * [Inspect the image](#inspect-the-image)
+         * [Inspecting a Dockerfile](#inspecting-a-dockerfile)
+         * [Build the image](#build-the-image)
 
-<!-- Added by: gil_diy, at: 2019-11-30T15:38+02:00 -->
+<!-- Added by: gil_diy, at: 2019-12-01T10:33+02:00 -->
 
 <!--te-->
 
 # Docker
 
+
+
+
 docker images resides in the following path:
 ```bash
  /var/lib/docker
- ```
+```
 
 
  Solving Docker permission denied while trying to connect to the Docker daemon socket
@@ -67,6 +72,8 @@ docker-compose logs -f api
 
 ## Docker
 
+Docker images are stored in image registeries. The most commn registry is Docker Hub.
+
 ### Docker list all images
 
 ```bash
@@ -89,6 +96,11 @@ docker search <image-name>
 ### Pull an image from docker hub
 ```bash
 docker pull <image-name>
+```
+For example:
+
+```bash
+docker image pull alipne:latest
 ```
 
 ### Start container/s
@@ -145,17 +157,87 @@ docker cp
 ```bash
 sudo docker-compose exec <service-name> sh
 ```
-### Build the image
 
-```bash
-docker image build -t <name>:latest .
-```
+## Inside a docker image
+A docker image is just a bunch of loosley connected read-only layers.
 
-Be sure to include the period (.) at the end of the command, and be sure to run the command from the directory that contains the Dockerfile and application code.
+Docker takes care of stacking these layers and representingthem as a single **unified object**.
+
+All Docker images start with a base layer, and as the changes are made and new content is added, new layers are added on top.
+
 
 ### Inspect the image
 
-commd to veify the configuration of the image. It will  list all of the settings that were configured from the Dockerfile.
+command to veify the configuration of the image. It will list all of the settings that were configured from the Dockerfile.
+For example let's assume I have a docker image called elasticsearch labeled: 7.2.0
+
 ```bash
-docker image inspect web:latest
+docker image inspect elasticsearch:7.2.0
 ```
+
+
+### Inspecting a Dockerfile
+
+Let's assume i'm in a directory `psweb`:
+
+<p align="center" style="width:400px;" >
+  <img src="images/docker/basic_fs.png" title="tool tip here">
+</p>
+
+This directory contains all the application source code, as well as subdirectories for views and unit tests.
+Notice  that the repo has a filecalled **Dockerfile**. This is the file that
+describes the application and tells Docker how to build it into an image.
+
+Given a docker file
+```bash
+cat Dockerfile
+```
+
+The content's of the file:
+
+```bash
+FROM alipne
+LABEL maintainer="gil@gmail.com"
+RUN apk add --update nodejs nodejs-npm
+COPY . /src
+WORKDIR /src
+RUN npm install
+EXPOSE 8080
+ENTRYPOINT ["node", "./app.js"]
+```
+
+**Explanation:**
+
+1. Start with the alpine image
+
+2. Add “gil@gmail.com” as the maintainer
+
+3. Install Node.js as NPM
+
+4. Copy in the application code
+
+5. Set the working directory
+
+6. Install dependecies
+
+7. Document the app's network port
+
+8. Set app.js as the default application to run
+
+<p align="center" style="width:400px;" >
+  <img src="images/docker/layers_example.png" title="tool tip here">
+</p>
+
+Now we will build the image.
+
+### Build the image
+
+The following command will build a new image called `web:latest`, The period (.) at the end of the command tells Docker to use the shell's current working directory as the **build context**.
+
+Be sure to include the period (.) at the end of the command, and be sure to run the command from directory that contains the Dockerfile and the application code.
+
+```bash
+docker image build -t web:latest .
+```
+
+Tip: Check that the image exists in your Docker host's local repository.
