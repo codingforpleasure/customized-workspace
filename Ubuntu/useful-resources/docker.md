@@ -11,19 +11,19 @@
          * [Stop running containers](#stop-running-containers)
          * [Restart a container](#restart-a-container)
          * [Connect to a running container](#connect-to-a-running-container)
-         * [Run a command in a container](#run-a-command-in-a-container)
+         * [Run a command in a container/ start a container from an image](#run-a-command-in-a-container-start-a-container-from-an-image)
             * [Mount a directory in host into a docker container](#mount-a-directory-in-host-into-a-docker-container)
          * [Remove a container](#remove-a-container)
          * [Kill a container](#kill-a-container)
          * [Copying files from container to host and vice versa](#copying-files-from-container-to-host-and-vice-versa)
-         * [Conencting to a service](#conencting-to-a-service)
+         * [Connecting to a service](#connecting-to-a-service)
       * [Inside a docker image](#inside-a-docker-image)
          * [Inspect the image](#inspect-the-image)
          * [Inspecting a Dockerfile](#inspecting-a-dockerfile)
          * [Build the image](#build-the-image)
       * [Copying files from container to host and vice versa](#copying-files-from-container-to-host-and-vice-versa-1)
 
-<!-- Added by: gil_diy, at: 2019-12-01T11:27+02:00 -->
+<!-- Added by: gil_diy, at: 2019-12-02T08:47+02:00 -->
 
 <!--te-->
 
@@ -132,7 +132,7 @@ docker restart <container-id>
 docker attach <container-id>
 ```
 
-### Run a command in a container
+### Run a command in a container/ start a container from an image
 ```bash
 docker run -it <docker-image:tag> sh
 ```
@@ -167,7 +167,7 @@ docker cp de1193caf1f0:/var/www/html/my-file.txt ~/desktop
 
 
 
-### Conencting to a service
+### Connecting to a service
 ```bash
 sudo docker-compose exec <service-name> sh
 ```
@@ -251,13 +251,13 @@ The following command will build a new image called `web:latest`, The period (.)
 Be sure to include the period (.) at the end of the command, and be sure to run the command from directory that contains the Dockerfile and the application code.
 
 ```bash
-docker image build -t web:latest .
+docker image build --tag web:latest .
 ```
 
 **Tip:** Check that the image exists in your Docker host's local repository.
 
 ```bash
-docker ps
+docker images
 ```
 
 ## Copying files from container to host and vice versa
