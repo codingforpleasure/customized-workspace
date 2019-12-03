@@ -19,8 +19,10 @@ Table of Contents
             * [Example #9: Setting environment properly for resolving crontab issues](#example-9-setting-environment-properly-for-resolving-crontab-issues)
             * [Example #10: Run cronjob in random times with step size of 4 hours](#example-10-run-cronjob-in-random-times-with-step-size-of-4-hours)
          * [Debugging cron jobs in failures](#debugging-cron-jobs-in-failures)
+            * [Approach #1: Writing to a logfile](#approach-1-writing-to-a-logfile)
+            * [Approach #2:](#approach-2)
 
-<!-- Added by: gil_diy, at: 2018-08-28T01:53+03:00 -->
+<!-- Added by: gil_diy, at: 2019-12-04T00:06+02:00 -->
 
 <!--te-->
 
@@ -178,6 +180,14 @@ you can easily put the logic in the bash script itself.
 
 
 ### Debugging cron jobs in failures
+
+#### Approach #1: Writing to a logfile
+
+```bash
+/bin/bash my_script.bash > /home/gil_diy/Desktop/backup.log 2>&1
+```
+
+#### Approach #2:
 
 Start the following command for having the same environment as the one used by crontab:
 ```bash
