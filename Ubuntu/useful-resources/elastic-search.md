@@ -58,7 +58,7 @@
       * [Aggregations](#aggregations)
    * [Github reference](#github-reference)
 
-<!-- Added by: gil_diy, at: 2019-12-05T12:25+02:00 -->
+<!-- Added by: gil_diy, at: 2019-12-05T12:27+02:00 -->
 
 <!--te-->
 
@@ -153,16 +153,16 @@ So index is a Collection of similiar documents identified by name.
 
 * You can also define analyzer gloabally instead of at the index level.
 
-## The smiliarity between **Curl** and **Kibana**:
+## The smiliarity between **Curl** and **Kibana** :
 
-**In Curl: **
+**In Curl:**
 
 ```bash
 curl -X GET "localhost:9200/_cat/nodes?v&pretty"
 ```
 -X stands for `Specifies a custom request method to use when communicating with the HTTP server`
 
-**In Kibana: **
+**In Kibana:**
 
 
 ```bash
@@ -400,11 +400,12 @@ curl -XPOST  -H 'Content-Type: application/json' 'localhost:9200/_bulk?pretty&re
 '
 ```
 
-## Basic operations on nodes
+## Basic operations on Nodes
+
+### Get list of nodes and their details
 
 ```bash
 GET /_cat/nodes?v&pretty
-GET "localhost:9200/_cat/nodes?v&pretty"
 ```
 
 

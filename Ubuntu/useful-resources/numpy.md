@@ -92,26 +92,27 @@ float32, uint8, float64 etc..
 Description | command
 ------------------------------------|-----
 Create Ndarray | np.array([1,3,5])
- | np.array([[1,3,5],[11,31,215]])
- |
+a | np.array([[1,3,5],[11,31,215]])
+== | ==
 Create Special Ndarray | np.zeros((1,10))  #one dimentional ndarray with 10 elements of value 0
-| np.ones((2,3))  #two dimentional ndarray with 6 elements of value 1, **please notice** i'm passing tuple.
-|
+=> | np.ones((2,3))  #two dimentional ndarray with 6 elements of value 1, **please notice** i'm passing tuple.
+== | ==
 Create range of numbers in an Ndarray | np.arange(10)
 Create a **column** vector with **random** numbers | a = np.random.randn(5, 1)
 Create a **row** vector with **random** numbers | a = np.random.randn(1, 5)
 Create a matrix with **random** numbers | a = np.random.randn(5, 3) # 5 Rows, 3 columns
 Create a matrix with ones on a diagonal (optionally offset) | np.eye(N=3)
 Rehsape array to matrix 2x5 | np.arange(10).reshape(2, 5)
-							| np.arange(10).reshape(2, -1)      (**Read tip #2**)
-|
+==>							| np.arange(10).reshape(2, -1)      (**Read tip #2**)
+== | ==
 Remove single-dimensional entries from the shape of an array | x = np.array([[[0], [1], [2]]])      # x.shape: (1, 3, 1)
-| np.squeeze(x).shape
-| output: (3,)
-|
+==> | np.squeeze(x).shape
+==> | output: (3,)
+== | ==
 Concatenation, or joining of two arrays |  x = np.array([1, 2, 3])
-| y = np.array([3, 2, 1])
-| np.concatenate([x, y])
+==> | y = np.array([3, 2, 1])
+==> | np.concatenate([x, y])
+
 
 
 **Tip #1** : A greate way to make sure is by using assert:

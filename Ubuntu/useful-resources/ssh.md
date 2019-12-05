@@ -30,6 +30,11 @@ if it doesn't exist, install it:
 sudo apt install openssh-server
 ```
 
+you can easily check the openssh is working by connecting to the computer itself:
+```bash
+ssh 127.0.0.1
+``
+
 ## ssh client
 
 ### Generating Private and Public keys
