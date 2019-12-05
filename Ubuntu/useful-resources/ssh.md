@@ -42,27 +42,66 @@ ssh 127.0.0.1
 ```bash
 ssh-keygen
 ```
-will generate, the name below are the default,
-you\'ll be prompt to modify it:
+This will generate both public key and private key,
+you\'ll be prompt to give a name to thhose files
 
 * Private key:
 ```bash
-~/.ssh/id_rsa
+~/.ssh/my_key
 ```
 * Public key:
 ```bash
-~/.ssh/id_rsa.pub
+~/.ssh/my_key.pub
 ```
 
-### Logging into server via ssh
+### Copying the key to the server
 
 ```bash
-ssh <username>@<ip-address>
+ssh-copy-id -i ~/.ssh/mykey user@host
 ```
+This logs into the server host, and copies keys to the server, and configures them to grant access by adding them to the authorized_keys file. The copying may ask for a password or other authentication for the server.
 
-after you have logged in, you should copy your public key and put it on the server you can easily apply this command:
+**Only the public key is copied to the server. The private key should never be copied to another machine. **
+
+
+## Test the new key
+
+Once the key has been copied, it is best to test it:
+
 ```bash
-cat ~/.ssh/id_rsa.pub | ssh <username>@<ip-address> "mkdir -p ~/.ssh && chmod 700 ~/.ssh && cat >> ~/.ssh/authorized_keys
+ssh -i ~/.ssh/mykey user@host
 ```
 
-All public keys resides in the file `~/.ssh/authorized_keys` on the server, you can easily cat the file and see yourself.
+The login should now complete without asking for a password. Note, however, that the command might ask for the passphrase you specified for the key.
+
+
+[reference](https://www.ssh.com/ssh/copy-id)
+
+## Setting up connecting fast to ssh server
+
+For avoiding inserting the following command each time:
+
+```bash
+ssh -i ~/.ssh/<private-key> shay@<ip-address>
+```
+
+You can configure a profile in the file: `~/ssh/config`,
+The content of the file would be like this, basic fields for each user.
+
+```bash
+Host shay_pc
+    User shay
+    HostName 192.168.1.6
+    IdentityFile ~/.ssh/shay_linux_pc
+
+Host ec2_amazon
+    User gil
+    HostName ...
+    IdentityFile ~/.ssh/gil_linux_pc
+```
+
+so now you can just enter in the shell:
+```bash
+ssh shay_pc
+```
+
