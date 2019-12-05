@@ -5,6 +5,7 @@
       * [How do i start/stop Elasticsearch?](#how-do-i-startstop-elasticsearch)
       * [Setting up the heap size for JVM?](#setting-up-the-heap-size-for-jvm)
       * [Elasticsearch terminology](#elasticsearch-terminology)
+      * [The smiliarity between <strong>Curl</strong> and <strong>Kibana</strong>:](#the-smiliarity-between-curl-and-kibana)
       * [Basic operations is Elasticsearch (CRUD):](#basic-operations-is-elasticsearch-crud)
          * [Creating an index with curl](#creating-an-index-with-curl)
          * [Get mapping for index](#get-mapping-for-index)
@@ -16,6 +17,7 @@
          * [Check the document existence but do not give the document content with curl](#check-the-document-existence-but-do-not-give-the-document-content-with-curl)
          * [Update the document's content with curl](#update-the-documents-content-with-curl)
          * [Add a new field to an existed document with curl](#add-a-new-field-to-an-existed-document-with-curl)
+      * [Basic operations on nodes](#basic-operations-on-nodes)
       * [Basic operations on indexes](#basic-operations-on-indexes)
          * [Get list of indices and their details](#get-list-of-indices-and-their-details)
          * [Get number of documents in an index](#get-number-of-documents-in-an-index)
@@ -54,8 +56,9 @@
       * [Full Text queries](#full-text-queries-1)
          * [Search using the filter context](#search-using-the-filter-context)
       * [Aggregations](#aggregations)
+   * [Github reference](#github-reference)
 
-<!-- Added by: gil_diy, at: 2019-09-27T03:01+03:00 -->
+<!-- Added by: gil_diy, at: 2019-12-05T12:25+02:00 -->
 
 <!--te-->
 
@@ -149,6 +152,22 @@ So index is a Collection of similiar documents identified by name.
   zero or more token filters
 
 * You can also define analyzer gloabally instead of at the index level.
+
+## The smiliarity between **Curl** and **Kibana**:
+
+**In Curl: **
+
+```bash
+curl -X GET "localhost:9200/_cat/nodes?v&pretty"
+```
+-X stands for `Specifies a custom request method to use when communicating with the HTTP server`
+
+**In Kibana: **
+
+
+```bash
+GET "/_cat/nodes?v&pretty"
+```
 
 
 ## Basic operations is Elasticsearch (CRUD):
@@ -380,6 +399,14 @@ How to insert all document from file into elasticsearch:
 curl -XPOST  -H 'Content-Type: application/json' 'localhost:9200/_bulk?pretty&refresh' --data-binary @"generated_for_elasticsearch.json"
 '
 ```
+
+## Basic operations on nodes
+
+```bash
+GET /_cat/nodes?v&pretty
+GET "localhost:9200/_cat/nodes?v&pretty"
+```
+
 
 ## Basic operations on indexes
 
@@ -1168,3 +1195,5 @@ Each bucket associated with a key.
 
 4. Pipeline (Aggregations that work on the output of other aggregations)
 
+# Github reference
+[Elasticsearch-7.0-Cookbook](https://github.com/PacktPublishing/Elasticsearch-7.0-Cookbook)
