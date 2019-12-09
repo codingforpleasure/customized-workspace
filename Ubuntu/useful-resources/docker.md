@@ -22,8 +22,11 @@
          * [Inspecting a Dockerfile](#inspecting-a-dockerfile)
          * [Build the image](#build-the-image)
       * [Copying files from container to host and vice versa](#copying-files-from-container-to-host-and-vice-versa-1)
+      * [Mapping](#mapping)
+         * [Mapping ports](#mapping-ports)
+         * [Mapping volumes](#mapping-volumes)
 
-<!-- Added by: gil_diy, at: 2019-12-02T08:47+02:00 -->
+<!-- Added by: gil_diy, at: 2019-12-09T13:50+02:00 -->
 
 <!--te-->
 
@@ -269,3 +272,22 @@ docker cp ./my-file.txt de1193caf1f0:/var/www/html
 
 `de1193caf1f0` is the CONTAINER ID (**NOT** the image's name) retrieved from `docker ps`
 
+
+## Mapping
+
+### Mapping ports
+Map from local host to the container:
+```python
+0.0.0.0:8000->80/tcp
+```
+
+Means to map from port 8000 on local host to port 80 in the container.
+Always the left number is the local host and the right number is the container.
+
+### Mapping volumes
+
+```python
+  - db_data:/var/lib/mysql
+```
+
+Map the directory `db_data` in the host to the container in the path `/var/lib/mysql` .
