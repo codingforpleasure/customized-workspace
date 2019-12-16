@@ -3,14 +3,24 @@
       * [Pandas data structures](#pandas-data-structures)
          * [Series](#series)
          * [Dataframe](#dataframe)
+            * [Dropping columns in pandas](#dropping-columns-in-pandas)
+            * [Concatentaing columns and rows](#concatentaing-columns-and-rows)
             * [Converting from numpy to panda](#converting-from-numpy-to-panda)
          * [Accesing an element in pandas:](#accesing-an-element-in-pandas)
          * [Methods of slicing in pandas](#methods-of-slicing-in-pandas)
-      * [Importing data from CSV](#importing-data-from-csv)
+      * [CSV](#csv)
+         * [Importing data from CSV](#importing-data-from-csv)
+         * [Exporting data into CSV](#exporting-data-into-csv)
+      * [Displaying data cleaner](#displaying-data-cleaner)
       * [Get information of the data types for a dataframe](#get-information-of-the-data-types-for-a-dataframe)
       * [Get statistics (count, mean, std, min, max))](#get-statistics-count-mean-std-min-max)
       * [Datatypes conversions](#datatypes-conversions)
-      * [Retrieve NaN values](#retrieve-nan-values)
+      * [Dealing with NA's](#dealing-with-nas)
+         * [Retrieve NaN values](#retrieve-nan-values)
+         * [Remove rows with NA's](#remove-rows-with-nas)
+         * [Replace NA's with the median](#replace-nas-with-the-median)
+         * [Retrieve NaN values](#retrieve-nan-values-1)
+      * [fill](#fill)
       * [Get the index of the min or the max element](#get-the-index-of-the-min-or-the-max-element)
       * [Get the nsmallest or nlargest element](#get-the-nsmallest-or-nlargest-element)
       * [Group by:](#group-by)
@@ -20,7 +30,7 @@
          * [Printing data so all columns will be presented](#printing-data-so-all-columns-will-be-presented)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: 2019-11-26T16:08+02:00 -->
+<!-- Added by: gil_diy, at: 2019-12-16T11:41+02:00 -->
 
 <!--te-->
 
@@ -82,11 +92,34 @@ df = pd.Dataframe(np.array([1,2,3],[4,5,6]))
 print("\nThe shape of our dataframe is:",df.shape) # The shape of the dataframe is (2,3)
 ```
 
+#### Dropping columns in pandas
+
+```python
+df.drop('column_name',1,inplace=True)
+```
+
+#### Concatentaing columns and rows
+
+concatentaing columns:
+```python
+# Axis 1 means columns
+result = pd.concat([df['person_name'], df['person_weight']], axis = 1)
+```
+
+concatentaing rows:
+```python
+# Here i'm concatentaing two first rows with two last rows.
+result = pd.concat([df[0:2], df[-2:]], axis = 0)
+```
+
+
 #### Converting from numpy to panda
 ```python
 my_2darray = np.array([[1, 2, 3], [4, 5, 6]])
 print(pd.dataframe(my_2darray,columns=['a','b','c']))
 ```
+
+
 
 ### Accesing an element in pandas:
 ```python
@@ -105,11 +138,25 @@ print(my_df.iloc[row_num, col_num] )
 df.iloc[:df.index.get_loc('row_bla') + 1, :4]
 ```
 
-## Importing data from CSV
+## CSV
+
+### Importing data from CSV
 
 ```python
-movies_df = pd.read_csv('data/movies/csv')
+movies_df = pd.read_csv('data/movies.csv')
 movies_df.head()
+```
+
+### Exporting data into CSV
+
+```python
+movies_df.to_csv('./my_folder/movies.csv', index = False)
+```
+
+## Displaying data cleaner
+
+```python
+display(df[0:5])
 ```
 
 ## Get information of the data types for a dataframe
@@ -132,10 +179,31 @@ movies_df['Date'] = pd.to_datetime(movies_df['Date'])
 movies_df['Star Ratings'] = movies_df['Star Ratings'].astype('int')
 ```
 
-## Retrieve NaN values
+## Dealing with NA's
+
+### Retrieve NaN values
 ```python
 <columnname>.notnull()
 ```
+
+### Remove rows with NA's
+```python
+my_df = my_df.dropna()
+```
+
+### Replace NA's with the median
+```python
+the_median = df['horse_power'].median()
+my_df['horse_power'] = my_df['horse_power'].fillna(med)
+```
+
+### Retrieve NaN values
+```python
+<columnname>.notnull()
+```
+
+
+## fill
 
 ## Get the index of the min or the max element
 
