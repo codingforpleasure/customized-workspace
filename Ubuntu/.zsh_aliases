@@ -23,6 +23,7 @@ alias i=get_info                    # Get size and dpi of image
 alias ag='ag --hidden'              # Search in hidden directories too (assuming .agignore was respected).
 alias go='gnome-open '
 alias {python-cli,py-cli}=ptpython
+alias {ff,fn,fix_name,fix_filename}=fix_name # Fix file name with spaces
 alias ll="ls -la --color \
                  --human-readable \
                  --group-directories-first" \
@@ -62,7 +63,8 @@ alias history=" history -E"
 alias lsg="ll | grep "              # Combine list files with grep
 
 alias {pgrep,psg}="pgrep --list-full"			# lookup a process
-
+alias {volume+,vol+}="pactl -- set-sink-volume 0 +10%" # increase volume by 10%
+alias {volume-,vol-}="pactl -- set-sink-volume 0 -10%" # increase volume by 10%
 
 alias top="htop"                    # Execute the interactive process viewer
 alias locate="sudo updatedb; locate --ignore-case "
@@ -107,7 +109,7 @@ alias rsync="rsync --verbose \
 alias toc-markdown-generate='gh-md-toc --insert '  # Generates Table-Of-Content for a given markdown
 
 # My documentation tweaks
-alias help=helper                 # Assuming tldr client in installed on your system
+alias {h,help}=helper                 # Assuming tldr client in installed on your system
 alias doc-view=helper
 alias doc-edit=documentation-edit $1
 alias doc-ls=documentation-list
@@ -147,6 +149,7 @@ alias myscripts='cd ~/my_useful_scripts'
 alias gitrep='cd ~/myGitRepositories'   # Go to my repos collection
 alias snippe{t,s}='cd ~/.config/sublime-text-3/Packages/User'
 alias rsnippet='cd ~/.R/snippets'
+alias class='cd ~/PycharmProjects/get_info_from_goodreads/classification'
 
 if [ -f ~/.zsh_books_aliases ]; then
     source ~/.zsh_books_aliases

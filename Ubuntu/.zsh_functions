@@ -113,6 +113,18 @@ function fork_without_block() {
 }
 
 
+function fix_name() {
+  # $1 is the filename
+  new_file_name=$(echo $1 | tr '\ ' '_')
+  mv $1 $new_file_name
+
+  echo $fg_bold[yellow]"File was renamed to: "$new_file_name
+
+}
+
+
+
+
 #
 # TODO function description
 # @param  TODO The first parameter

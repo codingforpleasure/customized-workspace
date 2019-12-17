@@ -17,11 +17,16 @@ export PATH=$PATH:/opt/pycharm-community-2018.2.4/bin
 # Adding CLion to my path
 export PATH=$PATH:/opt/clion-2018.3.2/bin
 
+# Adding mssql to my path
+export PATH=$PATH:/opt/mssql-tools/bin/
+
+# Adding kdenlive for editing videos
+export PATH=$PATH:/opt/Kdenlive/bin
 
 # Adding inteliji-idea, Datagrip and flutter
-export PATH=$PATH:/opt/idea-IC-182.4129.33/bin/
+export PATH=$PATH:/opt/idea-IC-192.6817.14/bin
 export PATH=$PATH:/opt/DataGrip-2018.2.4/bin/
-export PATH=$PATH:~/flutter/bin/
+export PATH=$PATH:~/development/flutter/bin/
 
 # Adding some anconda to my path
 # in case you would like to run ipynb
@@ -37,6 +42,8 @@ export ZSH=$HOME/.oh-my-zsh
 # goodreads:
 export alias total_shelfs_4M=$HOME/PycharmProjects/get_info_from_goodreads/all_shelves_on_goodreads/01_raw_data
 
+# For pywikibot should export an env variable:
+export PYWIKIBOT_DIR=$HOME/pywikibot
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -166,8 +173,12 @@ fi
 # Download the appropriate completion file from here:
 # https://github.com/tmuxinator/tmuxinator/tree/master/completion
 # and source the file:
-source ~/.bin/tmuxinator.zsh
-
+if [ -f ~/.bin/tmuxinator.zsh ]; then
+  source ~/.bin/tmuxinator.zsh
+else
+  print "Tmuxinator isn't installed on your workstation, please make sure."
+  print "If so please install: https://github.com/tmuxinator/tmuxinator"
+fi
 
 if [ -f ~/.zsh_aliases ]; then
     source ~/.zsh_aliases
