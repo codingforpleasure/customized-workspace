@@ -5,6 +5,10 @@
 <img src="/home/gil_diy/myGitRepositories/customized-workspace/Ubuntu/useful-resources/images/neural-networks/type-of-networks.png" width="500">
 
 
+## Useful resources:
+
+[tensorflow playground](https://playground.tensorflow.org)
+
 ## Feed Forward Neural networks
 These are the commonest type of neural network in practical applications.
 
