@@ -1,3 +1,15 @@
+<!--ts-->
+   * [pipenv (Package Manager   Environment Manager   Python Version Manager) <g-emoji class="g-emoji" alias=" 1" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f44d.png">👍</g-emoji>](#pipenv-package-manager--environment-manager--python-version-manager-thumbsup)
+      * [how to install?](#how-to-install)
+      * [useful commands](#useful-commands)
+   * [Virtualenv](#virtualenv)
+      * [useful commands](#useful-commands-1)
+
+<!-- Added by: gil_diy, at: 2020-01-15T09:16+02:00 -->
+
+<!--te-->
+
+
 # pipenv (Package Manager + Environment Manager + Python Version Manager) :thumbsup:
 You don't need to manage your virtual environment. it will take care for you.
 ## how to install?
@@ -40,3 +52,43 @@ It is recommended to update pipenv for once in a while:
 ```bash
 pip install --upgrade pipenv
 ```
+
+# Virtualenv
+
+```bash
+cd $MY_PROJECT_DIRECTORY
+virtualenv my_env
+```
+
+Now every time you want to activate
+the environment, just type:
+```bash
+cd $MY_PROJECT_DIRECTORY
+source my_env/bin/activate
+```
+
+To deactivate just type:
+```bash
+cd $MY_PROJECT_DIRECTORY
+source my_env/bin/deactivate
+```
+
+Installing packages:
+```bash
+python3 -m pip install -U matplotlib numpy pandas scipy scikit-learn
+```
+
+## useful commands
+
+Make sure you're in the correct directory of the project:
+```bash
+cd $MY_PROJECT_DIRECTORY &&
+```
+and then:
+
+Description | command
+-------------|-------------
+Install a package|  **python3 -m pip install -U** matplotlib
+Create virtuak env |  **virtualenv my_env**
+Activate virtual env |  **source my_env/bin/activate**
+Deactivate | **source my_env/bin/deactivate**
