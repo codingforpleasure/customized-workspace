@@ -22,6 +22,54 @@
 
 # Scikit-learn
 
+## preprocessing
+
+### Handling Text and Categorical Attributes
+
+#### OrdinalEncoder
+
+Use it if you know there is an **Order** between the elements:
+
+```python
+from sklearn.preprocessing import OrdinalEncoder
+
+housing_cat = housing["ocean_proximity"]
+housing_cat.head(10)
+
+ordinal_encoder = OrdinalEncoder()
+housing_cat_encoded = ordinal_encoder.fit_transform(housing_cat)
+housing_cat_encoded[:10]
+```
+
+#### OneHotEncoder
+```python
+from sklearn.preprocessing import OneHotEncoder
+cat_encoder = OneHotEncoder()
+housing_cat_1hot =cat_encoder.fit_transform(housing_cat)
+```
+
+**Note:**
+
+* Output is a **SciPy sparse matrix**, instead of Numpy array.
+
+* This is very useful when you have  categorical attributes with thousands of categories.
+
+* After one-hot encodin, we get a matrix with thousands of columns, and the matrix is full of 0s except for a single1 per row.
+
+* If you really want to convert it to a (dense) NumPy array, just call the toarray() method:
+
+```python
+housing_cat_1hot.toarray()
+```
+
+* You can get the list of categories using the encoder's categorie_ instance variable:
+
+```python
+cat_encoder.categories_
+```
+
+
+
 data  = x
 target = y
 
