@@ -53,4 +53,13 @@ my_dataset.dropna(inplace=True)
 my_dataset.isnull().sum() # Check that there is no NA values left.
 ```
 
-### Drop a particular row if it has a null value for a particular feature
+### Get rid of thw whole attribute (column)
+```python
+	my_dataset.drop("my_special_feature", axis = 1)
+```
+
+### Set the values to some value (zero, the mean, the median)
+```python
+	median = my_dataset["my_special_feature"].median()
+	my_dataset["my_special_feature"].fillna(median, inplace = True)
+```
