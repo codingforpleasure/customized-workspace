@@ -1,12 +1,26 @@
 <!--ts-->
    * [Tips for Sublime](#tips-for-sublime)
-      * [Authors](#authors)
+      * [Setting up working environment](#setting-up-working-environment)
 
-<!-- Added by: gil_diy, at: 2019-01-16T07:48+02:00 -->
+<!-- Added by: gil_diy, at: 2020-02-08T00:58+02:00 -->
 
 <!--te-->
 
 # Tips for Sublime
+
+
+## Setting up working environment
+
+* Key binding appears in the following path:
+`~.config/sublime-text-3/Packages/User/**.sublime-keymap
+`
+
+* Snippets appears in the following path:
+
+`/.config/sublime-text-3/Packages/User/my-snippets/**.sublime-snippet`
+
+
+
 
 Purpose | command example
 ------------ | -------------
@@ -30,6 +44,4 @@ ll ~/.config/sublime-text-3/Installed Packages
 useful link:
 https://medium.freecodecamp.org/a-guide-to-preserving-your-wrists-with-sublime-text-snippets-7541662a53f2
 
-## Authors
 
-* **Gil Cohen** - *Initial work* - [CodingForPleasure](https://github.com/CodingForpleasure)
