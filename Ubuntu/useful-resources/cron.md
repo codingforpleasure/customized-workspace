@@ -35,6 +35,7 @@ Purpose | command example
 ------------ | -------------
 List cron table entries | crontab -l
 Edit crontab via your editor (according to `VISUAL` or `EDITOR` environment variables) | crontab -e
+Load a cron jobs table from a file | crontab <//path//to//file>
 Remove the crontab | crontab -r
 Edit another user crontab | sudo crontab -u &lt;username&gt;
 re-run cron daemon | sudo service cron start
