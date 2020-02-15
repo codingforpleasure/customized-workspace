@@ -17,12 +17,14 @@
 
 <!--te-->
 
+[Link](https://www.youtube.com/watch?v=3VsuTlImyiY)
+
 # Machine learning
 
 ## The relationship between all terminalogy (illustration)
 
 <p align="center">
-  <img src="images/machine-learning/machine_learning_terms.jpg" title="sigmoid">
+  <img src="images/machine-learning/machine_learning_terms.jpg" title="sun_of_terms">
 </p>
 
 
@@ -39,12 +41,22 @@ Sequence mining | Predicting next events | click stream in websites (Markov Mode
 Dimension Reduction | Reducing the size of data (PCA) |
 Recommnedation systems | Recommending items |
 
+## Flavors of Machine Learning
+### **Supervised**
+You have information about the quality you're intrested in for each piece of training data and want to predict that quality.
 
-Regression/Estimation and Classification belong to supervised learning
+* **Classification** Assign each data point to one of a set classes (e.g cat or dog)
 
-Clustering belong to Unsupervised learning
+* **Regression**  Predict the Value of quality based on given information (e.g dog's weight given age and breed)
 
-On Unsupervised learning the model works on its own to discover inforamtion, all of this data is unlabeled.
+### **Unsupervised** 
+You don't have information about a specific quality you're intrested in.
+
+* **Clustering** Split your data into groups of similar samples.
+
+* **Dimension reduction** Given high-dimensional data, reduce it into a smaller number of dimentsions while minimizing information loss (data compression).
+
+On Unsupervised learning the model works on its own to discover information, all of this data is unlabeled.
 
 Unsupervised learning has more difficult algorithms then supervised learning, since we know little information about the data.
 
