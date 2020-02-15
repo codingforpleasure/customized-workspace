@@ -1,4 +1,10 @@
 <!--ts-->
+      * [Pros and cons of SVM](#pros-and-cons-of-svm)
+         * [Advantages:](#advantages)
+         * [Disadvantages:](#disadvantages)
+
+<!-- Added by: gil_diy, at: 2020-02-08T02:28+02:00 -->
+
 <!--te-->
 
 
