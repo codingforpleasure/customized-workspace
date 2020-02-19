@@ -31,7 +31,7 @@
       * [Vectorized elementwise](#vectorized-elementwise)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: 2019-11-26T10:19+02:00 -->
+<!-- Added by: gil_diy, at: 2020-02-17T15:33+02:00 -->
 
 <!--te-->
 
