@@ -3,10 +3,12 @@
       * [Pandas data structures](#pandas-data-structures)
          * [Series](#series)
          * [Dataframe](#dataframe)
+            * [Get column names](#get-column-names)
             * [Dropping columns in pandas](#dropping-columns-in-pandas)
             * [Concatentaing columns and rows](#concatentaing-columns-and-rows)
             * [Converting from numpy to panda](#converting-from-numpy-to-panda)
-         * [Accesing an element in pandas:](#accesing-an-element-in-pandas)
+            * [Converting categorical columns to numbers (4 Methods)](#converting-categorical-columns-to-numbers-4-methods)
+         * [Accessing an element in pandas:](#accessing-an-element-in-pandas)
          * [Methods of slicing in pandas](#methods-of-slicing-in-pandas)
       * [CSV](#csv)
          * [Importing data from CSV](#importing-data-from-csv)
@@ -14,6 +16,7 @@
       * [Displaying data cleaner](#displaying-data-cleaner)
       * [Get information of the data types for a dataframe](#get-information-of-the-data-types-for-a-dataframe)
       * [Get statistics (count, mean, std, min, max))](#get-statistics-count-mean-std-min-max)
+      * [Get counts for spcific column](#get-counts-for-spcific-column)
       * [Datatypes conversions](#datatypes-conversions)
       * [Dealing with NA's](#dealing-with-nas)
          * [Retrieve NaN values](#retrieve-nan-values)
@@ -30,7 +33,7 @@
          * [Printing data so all columns will be presented](#printing-data-so-all-columns-will-be-presented)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: 2019-12-16T11:41+02:00 -->
+<!-- Added by: gil_diy, at: 2020-02-19T00:43+02:00 -->
 
 <!--te-->
 
@@ -92,6 +95,11 @@ df = pd.Dataframe(np.array([1,2,3],[4,5,6]))
 print("\nThe shape of our dataframe is:",df.shape) # The shape of the dataframe is (2,3)
 ```
 
+#### Get column names
+
+```python
+print(df.columns.values)
+```
 #### Dropping columns in pandas
 
 ```python
@@ -119,9 +127,15 @@ my_2darray = np.array([[1, 2, 3], [4, 5, 6]])
 print(pd.dataframe(my_2darray,columns=['a','b','c']))
 ```
 
+#### Converting categorical columns to numbers (4 Methods)
+**Worked well for me!**
+
+Great reference:
+
+[Link](https://www.datacamp.com/community/tutorials/categorical-data)
 
 
-### Accesing an element in pandas:
+### Accessing an element in pandas:
 ```python
 print(my_df.iloc[row_num, col_num] )
 ```
@@ -169,6 +183,11 @@ movies_df.info()
 
 ```python
 df[''].describe()
+```
+
+## Get counts for spcific column
+```python
+data_df['my_column'].value_counts()
 ```
 
 ## Datatypes conversions
