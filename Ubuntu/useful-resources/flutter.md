@@ -30,10 +30,9 @@
       * [Permissions](#permissions)
       * [Navigation](#navigation)
       * [Basic commands in flutter cli](#basic-commands-in-flutter-cli)
-      * [Icons service online](#icons-service-online)
       * [Nice sites:](#nice-sites)
 
-<!-- Added by: gil_diy, at: 2020-02-22T14:37+02:00 -->
+<!-- Added by: gil_diy, at: 2020-02-22T16:10+02:00 -->
 
 <!--te-->
 
@@ -60,15 +59,49 @@ Widget name | Description
 ------------|-----
 SafeArea | Container which takes the content and shows were it is visible for the user.
 Text | Ouputing text
+SizedBox | for adding something with fixed height usally for spacing between elements.
 TextField | Receiving user input
-Card |
+Card | [demo](https://api.flutter.dev/flutter/material/Card-class.html)
+ListTile | [Demo](https://api.flutter.dev/flutter/material/ListTile-class.html)
 Column |
 Row |
+CircleAvatar | For profile page
 FlatButton |
 SingleChildScrollView |
 ListView |
 Expanded |
 
+
+```flutter
+CircleAvatar(
+                  radius: 50.0,
+                  backgroundImage: AssetImage('images/liran.jpg'),
+                ),
+```
+
+
+```flutter
+Card(
+      color: Colors.white,
+      margin:
+          EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
+      child: ListTile(
+        leading: Icon(
+          Icons.phone,
+          color: Colors.teal,
+        ),
+        title: Text(
+          '052-6718195',
+          style: TextStyle(
+            fontSize: 14.0,
+            color: Colors.teal.shade900,
+            fontFamily: 'Source Sans Pro',
+          ),
+        ),
+      ),
+    ),
+
+```
 ## Single-child layout widgets
 
 ### Container
@@ -172,6 +205,10 @@ crossAxisAlignment: CrossAxisAlignment.stretch
 
 ### Icons
 [Material Design Icons](https://material.io/resources/icons/?style=baseline)
+
+convert image into icon:
+
+**Website:** `https://appicon.co/`
 
 ### Pallete
 [Material Pallete](https://www.materialpalette.com/)
@@ -283,11 +320,7 @@ command | Description
 `flutter clean` | Delete the build/ and .dart_tool/ directories.
 
 
-## Icons service online
 
-convert image into icon:
-
-**Website:** `https://appicon.co/`
 
 ## Nice sites:
 
