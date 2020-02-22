@@ -6,8 +6,20 @@
    * [Flutter](#flutter)
       * [include packages:](#include-packages)
       * [Useful widgets](#useful-widgets)
+         * [Layout widget](#layout-widget)
+      * [Single-child layout widgets](#single-child-layout-widgets)
+         * [Container](#container)
+            * [Margin (For the ouside of the widget)](#margin-for-the-ouside-of-the-widget)
+            * [Padding (For the inside of the widget)](#padding-for-the-inside-of-the-widget)
+      * [multiple-child layout widgets](#multiple-child-layout-widgets)
+         * [Column](#column)
+      * [Other](#other)
+         * [Fonts](#fonts)
+         * [Icons](#icons)
+         * [Pallete](#pallete)
       * [The correct file structure in flutter app](#the-correct-file-structure-in-flutter-app)
       * [Widget resource](#widget-resource)
+         * [Boiler plate](#boiler-plate)
       * [Hotkeys](#hotkeys)
          * [Widget lifecycle](#widget-lifecycle)
             * [Stateless widget](#stateless-widget)
@@ -18,8 +30,10 @@
       * [Permissions](#permissions)
       * [Navigation](#navigation)
       * [Basic commands in flutter cli](#basic-commands-in-flutter-cli)
+      * [Icons service online](#icons-service-online)
+      * [Nice sites:](#nice-sites)
 
-<!-- Added by: gil_diy, at: 2019-10-04T00:02+03:00 -->
+<!-- Added by: gil_diy, at: 2020-02-22T14:37+02:00 -->
 
 <!--te-->
 
@@ -36,8 +50,15 @@ holds the dependencies of your project.
 
 ## Useful widgets
 
+### Layout widget
+
+[Cheat sheet layout](https://medium.com/flutter-community/flutter-layout-cheat-sheet-5363348d037e)
+
+[Link](https://flutter.dev/docs/development/ui/widgets/layout)
+
 Widget name | Description
 ------------|-----
+SafeArea | Container which takes the content and shows were it is visible for the user.
 Text | Ouputing text
 TextField | Receiving user input
 Card |
@@ -48,12 +69,112 @@ SingleChildScrollView |
 ListView |
 Expanded |
 
+## Single-child layout widgets
+
+### Container
+```flutter
+home: Scaffold(
+        backgroundColor: Colors.teal,
+        body: SafeArea(
+          child: Container(
+            height: 100.0,
+            width: 100.0,
+            margin: EdgeInsets.fromLTRB(30.0, 10.0, 50.0, 20.0),
+            padding: EdgeInsets.all(10),
+            color: Colors.white,
+            child: Text('Hello'),
+          ),
+        ),
+      ),
+```
+
+#### Margin (For the ouside of the widget)
+```flutter
+margin: EdgeInsets.frontLTRB(30.0, 10.0, 50.0, 20.0)
+```
+or 
+
+```flutter
+margin: EdgeInsets.only(left: 30.0)
+```
+
+#### Padding (For the inside of the widget)
+
+
+
+
+```flutter
+padding: EdgeInsets.all(left: 20.0)
+```
+
 ```flutter
 TextField(
 	decoration: InputDecoration(labelText:'Title'),
 	),
 ```
 
+## multiple-child layout widgets
+### Column
+
+```flutter
+home: Scaffold(
+        backgroundColor: Colors.teal,
+        body: SafeArea(
+          child: Column(
+            children: <Widget>[
+              Container(
+                height: 100.0,
+                width: 100.0,
+                margin: EdgeInsets.fromLTRB(30.0, 10.0, 50.0, 20.0),
+                padding: EdgeInsets.all(10),
+                color: Colors.white,
+                child: Text('Container 1'),
+              ),
+              Container(
+                height: 100.0,
+                width: 100.0,
+                margin: EdgeInsets.fromLTRB(30.0, 10.0, 50.0, 20.0),
+                padding: EdgeInsets.all(10),
+                color: Colors.blue,
+                child: Text('Container 2'),
+              ),
+              Container(
+                height: 100.0,
+                width: 100.0,
+                margin: EdgeInsets.fromLTRB(30.0, 10.0, 50.0, 20.0),
+                padding: EdgeInsets.all(10),
+                color: Colors.red,
+                child: Text('Container 3'),
+              ),
+            ],
+          ),
+        ),
+      ),
+```
+
+**Useful properties**
+
+propery | description
+------------|-----
+verticalDirection: verticalDirection.down | lay the continers from up to bottom or the opposite direction.
+
+```flutter
+mainAxisAlignment: MainAxisAlignment.spaceEvenly
+```
+
+Strech the column width:
+```flutter
+crossAxisAlignment: CrossAxisAlignment.stretch
+```
+## Other
+### Fonts
+[Hebrew Fonts](https://fonts.google.com/?subset=hebrew)
+
+### Icons
+[Material Design Icons](https://material.io/resources/icons/?style=baseline)
+
+### Pallete
+[Material Pallete](https://www.materialpalette.com/)
 
 ## The correct file structure in flutter app
 
@@ -66,7 +187,7 @@ TextField(
 [Link](https://flutter.dev/docs/development/ui/widgets)
 
 
-
+### Boiler plate
 Shortcut | Description
 ------------|-----
 `stless` | stateless widget - boiler plate for stateless widget
@@ -160,3 +281,18 @@ command | Description
 `flutter install` | Install a Flutter app on an attached device.
 `flutter devices` | List all connected devices.
 `flutter clean` | Delete the build/ and .dart_tool/ directories.
+
+
+## Icons service online
+
+convert image into icon:
+
+**Website:** `https://appicon.co/`
+
+## Nice sites:
+
+* [Link](https://icons8.com)
+
+* [Link](https://vecteezy.com)
+
+* [Link](https://www.canva.com)
