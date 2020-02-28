@@ -5,6 +5,8 @@
 <!--ts-->
    * [Flutter](#flutter)
       * [include packages:](#include-packages)
+      * [Project hierarchy:](#project-hierarchy)
+      * [Remove debug banner](#remove-debug-banner)
       * [Useful widgets](#useful-widgets)
          * [Layout widget](#layout-widget)
       * [Single-child layout widgets](#single-child-layout-widgets)
@@ -17,6 +19,7 @@
          * [Fonts](#fonts)
          * [Icons](#icons)
          * [Pallete](#pallete)
+      * [Variables in Dart](#variables-in-dart)
       * [The correct file structure in flutter app](#the-correct-file-structure-in-flutter-app)
       * [Widget resource](#widget-resource)
          * [Boiler plate](#boiler-plate)
@@ -29,10 +32,11 @@
       * [Emulator](#emulator)
       * [Permissions](#permissions)
       * [Navigation](#navigation)
+      * [Setting up RTL](#setting-up-rtl)
       * [Basic commands in flutter cli](#basic-commands-in-flutter-cli)
       * [Nice sites:](#nice-sites)
 
-<!-- Added by: gil_diy, at: 2020-02-22T16:10+02:00 -->
+<!-- Added by: gil_diy, at: 2020-02-28T00:28+02:00 -->
 
 <!--te-->
 
@@ -41,11 +45,18 @@
 ## include packages:
 
 in the `pubspec.yaml`
-```flutter
 
-```
 holds the dependencies of your project.
 
+## Project hierarchy:
+
+<p align="center"> <!-- style="width:400px;" -->
+  <img src="images/labeling_example.png" title="tool tip here">
+</p>
+
+## Remove debug banner
+
+`debugShowCheckedModeBanner: false`
 
 ## Useful widgets
 
@@ -213,6 +224,11 @@ convert image into icon:
 ### Pallete
 [Material Pallete](https://www.materialpalette.com/)
 
+
+
+## Variables in Dart
+
+
 ## The correct file structure in flutter app
 
 `models` - This directory holds the **class files**
@@ -228,6 +244,7 @@ convert image into icon:
 Shortcut | Description
 ------------|-----
 `stless` | stateless widget - boiler plate for stateless widget
+`stful` | stateful widget - boiler plate for stateful widget
 
 ## Hotkeys
 
@@ -262,6 +279,8 @@ We can tap into each of these stages in the lifecycle if we wanted different thi
 
 ### Setting state
 
+We actually need to specifically specify that we are updating the state by calling a method called set setState and inside the setState is where we do the actual change.
+
 Example:
 
 ```bash
@@ -291,6 +310,14 @@ Property | Description
 flutter emulators --launch sim
 ```
 
+**List all emulators:**
+
+```bash
+avdmanager list avd
+```
+
+[Great Reference](https://developer.android.com/studio/run/emulator-commandline)
+
 ## Permissions
 
 
@@ -309,6 +336,64 @@ Navigator.push(context, MaterialPageRoute(builder: (context) {
 })
 ```
 
+## Setting up RTL
+
+
+first you must add flutter_localizations package to your pubspec.yml
+
+now you have two choices :
+```
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+```
+
+**Now you have two choices :**
+
+Force a locale ( and direction ) on all devices.
+
+**method 1:** with localization 
+
+```flutter
+import 'package:flutter/material.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
+
+MaterialApp(
+  localizationsDelegates: [
+    GlobalMaterialLocalizations.delegate,
+    GlobalWidgetsLocalizations.delegate,
+  ],
+  supportedLocales: [
+    Locale("he"), // OR Locale('ar', 'AE') OR Other RTL locales
+  ],
+  locale: Locale("he") // OR Locale('ar', 'AE') OR Other RTL locales,
+  .
+  .
+  .
+);
+```
+
+**method 2:** without localization 
+```flutter
+MaterialApp(
+  .
+  .
+  .
+  builder: (context, child) {
+    return Directionality(
+      textDirection: TextDirection.rtl,
+      child: child,
+    );
+  },
+  .
+  .
+  .
+);
+```
+
+[Reference](https://stackoverflow.com/questions/50535185/right-to-left-rtl-in-flutter)
 
 ## Basic commands in flutter cli
 
