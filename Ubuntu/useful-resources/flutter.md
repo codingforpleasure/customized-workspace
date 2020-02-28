@@ -33,10 +33,11 @@
       * [Permissions](#permissions)
       * [Navigation](#navigation)
       * [Setting up RTL](#setting-up-rtl)
+      * [Styled text with Flutter](#styled-text-with-flutter)
       * [Basic commands in flutter cli](#basic-commands-in-flutter-cli)
       * [Nice sites:](#nice-sites)
 
-<!-- Added by: gil_diy, at: 2020-02-28T00:28+02:00 -->
+<!-- Added by: gil_diy, at: 2020-02-28T03:50+02:00 -->
 
 <!--te-->
 
@@ -394,6 +395,10 @@ MaterialApp(
 ```
 
 [Reference](https://stackoverflow.com/questions/50535185/right-to-left-rtl-in-flutter)
+
+## Styled text with Flutter
+
+[Very impressive Link](https://pusher.com/tutorials/styled-text-flutter)
 
 ## Basic commands in flutter cli
 
