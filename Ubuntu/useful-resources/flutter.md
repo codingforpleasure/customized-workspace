@@ -34,10 +34,11 @@
       * [Navigation](#navigation)
       * [Setting up RTL](#setting-up-rtl)
       * [Styled text with Flutter](#styled-text-with-flutter)
+      * [Scaffold in details](#scaffold-in-details)
       * [Basic commands in flutter cli](#basic-commands-in-flutter-cli)
       * [Nice sites:](#nice-sites)
 
-<!-- Added by: gil_diy, at: 2020-02-28T03:50+02:00 -->
+<!-- Added by: gil_diy, at: 2020-02-28T04:06+02:00 -->
 
 <!--te-->
 
@@ -399,6 +400,11 @@ MaterialApp(
 ## Styled text with Flutter
 
 [Very impressive Link](https://pusher.com/tutorials/styled-text-flutter)
+
+
+## Scaffold in details
+
+[Great explanantion](https://medium.com/flutterdevs/know-your-widgets-scaffold-in-flutter-292b8bc1281)
 
 ## Basic commands in flutter cli
 
