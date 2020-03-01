@@ -8,6 +8,12 @@
       * [Project hierarchy:](#project-hierarchy)
       * [Remove debug banner](#remove-debug-banner)
       * [Useful widgets](#useful-widgets)
+         * [Widgets for layout](#widgets-for-layout)
+         * [Typography Widgets](#typography-widgets)
+         * [Button Widgets](#button-widgets)
+         * [Animation Widgets](#animation-widgets)
+         * [Dialog Widgets](#dialog-widgets)
+         * [Events Widgets](#events-widgets)
          * [Layout widget](#layout-widget)
       * [Single-child layout widgets](#single-child-layout-widgets)
          * [Container](#container)
@@ -35,10 +41,11 @@
       * [Setting up RTL](#setting-up-rtl)
       * [Styled text with Flutter](#styled-text-with-flutter)
       * [Scaffold in details](#scaffold-in-details)
+      * [Buttons](#buttons)
       * [Basic commands in flutter cli](#basic-commands-in-flutter-cli)
       * [Nice sites:](#nice-sites)
 
-<!-- Added by: gil_diy, at: 2020-02-28T04:06+02:00 -->
+<!-- Added by: gil_diy, at: 2020-03-01T18:46+02:00 -->
 
 <!--te-->
 
@@ -61,6 +68,65 @@ holds the dependencies of your project.
 `debugShowCheckedModeBanner: false`
 
 ## Useful widgets
+
+### Widgets for layout
+Widget name | Description | Link to youtube
+------------|-------------|-----------------
+SafeArea | Make sure your text/photo not gets cropped | [Link](https://www.youtube.com/watch?v=lkF0TQJO0bA&list=PLjxrf2q8roU23XGwz3Km7sQZFTdB996iG&index=2)
+SliverAppBar |  | [Link](https://www.youtube.com/watch?v=R9C5KMJKluE&list=PLjxrf2q8roU23XGwz3Km7sQZFTdB996iG&index=12)
+FadeInImage | | [Link](https://www.youtube.com/watch?v=pK738Pg9cxc&list=PLjxrf2q8roU23XGwz3Km7sQZFTdB996iG&index=14)
+ClipRRect | round the corners on a box of content in your app | [Link](https://www.youtube.com/watch?v=eI43jkQkrvs&list=PLjxrf2q8roU23XGwz3Km7sQZFTdB996iG&index=17)
+Tooltip | Adding Tooltip | [Link](https://www.youtube.com/watch?v=EeEfD5fI-5Q&list=PLjxrf2q8roU23XGwz3Km7sQZFTdB996iG&index=20)
+Transform | Adding 3d effect | [Link](https://www.youtube.com/watch?v=9z_YNlRlWfA&list=PLjxrf2q8roU23XGwz3Km7sQZFTdB996iG&index=24)
+Align | The widget lets you place a widget in a defined area of its parent widget | [Link](https://www.youtube.com/watch?v=g2E7yl3MwMk&list=PLjxrf2q8roU23XGwz3Km7sQZFTdB996iG&index=26)
+Positioned | The widget to position Flutter widgets in a Stack | [Link](https://www.youtube.com/watch?v=EgtPleVwxBQ&list=PLjxrf2q8roU23XGwz3Km7sQZFTdB996iG&index=27)
+Flexible | Flexible for resizing your widgets in rows and columns | [Link](https://www.youtube.com/watch?v=CI7x0mAZiY0&list=PLjxrf2q8roU23XGwz3Km7sQZFTdB996iG&index=34)
+ShaderMask | ShaderMasks let you apply a shader to one or more widgets in the tree | [Link](https://www.youtube.com/watch?v=7sUL66pTQ7Q&list=PLjxrf2q8roU23XGwz3Km7sQZFTdB996iG&index=71)
+Image| Use the Image widget to render an image to the screen, wherever it may come from: assets, network, file system, RAM  | [Link](https://www.youtube.com/watch?v=7oIAs-0G4mw&list=PLjxrf2q8roU23XGwz3Km7sQZFTdB996iG&index=66)
+Stack| Stack allows you to overlay multiple widgets on top of each other | [Link](https://www.youtube.com/watch?v=liEGSeD3Zt8)
+
+### Typography Widgets
+
+Widget name | Description | Link to youtube
+------------|-------------|---------------
+RichText| Show a line or paragraph that combines multiple styles|[Link](https://www.youtube.com/watch?v=rykDVh-QFfw&list=PLjxrf2q8roU23XGwz3Km7sQZFTdB996iG&index=42)
+SelectableText | Select your text | [Link](https://www.youtube.com/watch?v=ZSU3ZXOs6hc&list=PLjxrf2q8roU23XGwz3Km7sQZFTdB996iG&index=56)
+
+
+### Button Widgets
+Widget name | Description | Link to youtube
+------------|-------------|---------------
+ToggleButtons | | [Link](https://www.youtube.com/watch?v=kVEguaQWGAY)
+Switch | |
+
+### Animation Widgets
+
+Widget name | Description | Link to youtube
+------------|-------------|---------------
+ AnimatedBuilder| Add animation | [Link](https://www.youtube.com/watch?v=N-RiyZlv8v8&list=PLjxrf2q8roU23XGwz3Km7sQZFTdB996iG&index=28)
+AnimatedList| You can use it to animate your lists when inserting or removing items. |[Link](https://www.youtube.com/watch?v=ZtfItHwFlZ8&list=PLjxrf2q8roU23XGwz3Km7sQZFTdB996iG&index=33)
+AnimatedIcon | AnimatedIcon widget to drop an animated icon straight into your app | [Link](https://www.youtube.com/watch?v=pJcbh8pbvJs&list=PLjxrf2q8roU23XGwz3Km7sQZFTdB996iG&index=38)
+AnimatedSwitcher | AnimatedSwitcher widget allows you to switch between two or more widgets with an animation as you transition | [Link](https://www.youtube.com/watch?v=2W7POjFb88g&list=PLjxrf2q8roU23XGwz3Km7sQZFTdB996iG&index=44)
+AnimatedPositioned | AnimatedPositioned automatically transitions the child's position over a given duration whenever the given position changes| [Link](https://www.youtube.com/watch?v=hC3s2YdtWt8&list=PLjxrf2q8roU23XGwz3Km7sQZFTdB996iG&index=45)
+AnimatedPadding | AnimatedPadding is a great way to provide smooth buffers and spaces between widgets and screen borders | [Link](https://www.youtube.com/watch?v=PY2m0fhGNz4&list=PLjxrf2q8roU23XGwz3Km7sQZFTdB996iG&index=46)
+AnimatedCrossFade | Cross fade is a cinematic term in which one thing gradually fades into another | [Link](https://www.youtube.com/watch?v=PGK2UUAyE54&list=PLjxrf2q8roU23XGwz3Km7sQZFTdB996iG&index=60)
+
+
+
+### Dialog Widgets
+
+Widget name | Description | Link to youtube
+------------|-------------|---------------
+AlertDialog | to alert someone about something or maybe get their input? | [Link](https://www.youtube.com/watch?v=75CsnyRXf5I&list=PLjxrf2q8roU23XGwz3Km7sQZFTdB996iG&index=59)
+
+### Events Widgets
+Widget name | Description | Link to youtube
+------------|-------------|---------------
+Dismissible |  The widget can be used to clear list items by swiping left or right | [Link](https://www.youtube.com/watch?v=iEMgjrfuc58&list=PLjxrf2q8roU23XGwz3Km7sQZFTdB996iG&index=29)
+Draggable | Draggable to move and drag your widgets around | [Link](https://www.youtube.com/watch?v=QzA4c4QHZCY&list=PLjxrf2q8roU23XGwz3Km7sQZFTdB996iG&index=32)
+
+
+
 
 [Link to widgets ](https://medium.com/flutter-community/flutter-basic-widgets-349e24140453)
 
