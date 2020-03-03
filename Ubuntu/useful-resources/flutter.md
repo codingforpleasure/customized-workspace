@@ -12,6 +12,8 @@
          * [Typography Widgets](#typography-widgets)
          * [Button Widgets](#button-widgets)
          * [Animation Widgets](#animation-widgets)
+            * [Implicit Animations Widgets](#implicit-animations-widgets)
+            * [Other Animations Widgets](#other-animations-widgets)
          * [Dialog Widgets](#dialog-widgets)
          * [Events Widgets](#events-widgets)
          * [Layout widget](#layout-widget)
@@ -45,7 +47,7 @@
       * [Basic commands in flutter cli](#basic-commands-in-flutter-cli)
       * [Nice sites:](#nice-sites)
 
-<!-- Added by: gil_diy, at: 2020-03-01T18:46+02:00 -->
+<!-- Added by: gil_diy, at: 2020-03-03T03:02+02:00 -->
 
 <!--te-->
 
@@ -101,13 +103,28 @@ Switch | |
 
 ### Animation Widgets
 
+#### Implicit Animations Widgets
+
+[Reference](https://youtu.be/IVTjpW3W33s)
+
 Widget name | Description | Link to youtube
 ------------|-------------|---------------
- AnimatedBuilder| Add animation | [Link](https://www.youtube.com/watch?v=N-RiyZlv8v8&list=PLjxrf2q8roU23XGwz3Km7sQZFTdB996iG&index=28)
+AnimatedAlign | element-description | 
+AnimatedContainer | element-description | 
+AnimatedDefaultTextStyl | element-description | 
+AnimatedDefaultOpacity | element-description | 
+AnimatedPhysicalModel | element-description | 
+AnimatedPhysicalModel | element-description | 
+AnimatedPositioned | AnimatedPositioned automatically transitions the child's position over a given duration whenever the given position changes| [Link](https://www.youtube.com/watch?v=hC3s2YdtWt8&list=PLjxrf2q8roU23XGwz3Km7sQZFTdB996iG&index=45)
+AnimatedPositionedDirectional |element-description |AnimatedThemeSize |element-description |
+
+#### Other Animations Widgets
+Widget name | Description | Link to youtube
+------------|-------------|---------------
+AnimatedBuilder| Add animation | [Link](https://www.youtube.com/watch?v=N-RiyZlv8v8&list=PLjxrf2q8roU23XGwz3Km7sQZFTdB996iG&index=28)
 AnimatedList| You can use it to animate your lists when inserting or removing items. |[Link](https://www.youtube.com/watch?v=ZtfItHwFlZ8&list=PLjxrf2q8roU23XGwz3Km7sQZFTdB996iG&index=33)
 AnimatedIcon | AnimatedIcon widget to drop an animated icon straight into your app | [Link](https://www.youtube.com/watch?v=pJcbh8pbvJs&list=PLjxrf2q8roU23XGwz3Km7sQZFTdB996iG&index=38)
 AnimatedSwitcher | AnimatedSwitcher widget allows you to switch between two or more widgets with an animation as you transition | [Link](https://www.youtube.com/watch?v=2W7POjFb88g&list=PLjxrf2q8roU23XGwz3Km7sQZFTdB996iG&index=44)
-AnimatedPositioned | AnimatedPositioned automatically transitions the child's position over a given duration whenever the given position changes| [Link](https://www.youtube.com/watch?v=hC3s2YdtWt8&list=PLjxrf2q8roU23XGwz3Km7sQZFTdB996iG&index=45)
 AnimatedPadding | AnimatedPadding is a great way to provide smooth buffers and spaces between widgets and screen borders | [Link](https://www.youtube.com/watch?v=PY2m0fhGNz4&list=PLjxrf2q8roU23XGwz3Km7sQZFTdB996iG&index=46)
 AnimatedCrossFade | Cross fade is a cinematic term in which one thing gradually fades into another | [Link](https://www.youtube.com/watch?v=PGK2UUAyE54&list=PLjxrf2q8roU23XGwz3Km7sQZFTdB996iG&index=60)
 
