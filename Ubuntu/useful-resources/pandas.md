@@ -3,6 +3,9 @@
       * [Pandas data structures](#pandas-data-structures)
          * [Series](#series)
          * [Dataframe](#dataframe)
+            * [Creating a dataframe](#creating-a-dataframe)
+            * [Get dimensions of a dataframe](#get-dimensions-of-a-dataframe)
+            * [Get dataframe except specific rows](#get-dataframe-except-specific-rows)
             * [Get column names](#get-column-names)
             * [Dropping columns in pandas](#dropping-columns-in-pandas)
             * [Concatentaing columns and rows](#concatentaing-columns-and-rows)
@@ -33,7 +36,7 @@
          * [Printing data so all columns will be presented](#printing-data-so-all-columns-will-be-presented)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: 2020-02-19T00:43+02:00 -->
+<!-- Added by: gil_diy, at: 2020-03-07T01:05+02:00 -->
 
 <!--te-->
 
@@ -71,29 +74,46 @@ my_matrix = pd.Series()
 
 ### Dataframe
 
+#### Creating a dataframe
+
 ```python
-data = {'state': ['Ohio', 'Ohio', 'Ohio', 'Nevada', 'Nevada', 'Nevada'],
+
+# Converting a a simple dictionary to a dataframe
+
+my_data_states = {'state': ['Ohio', 'Ohio', 'Ohio', 'Nevada', 'Nevada', 'Nevada'],
 	'year': [2000, 2001, 2002, 2001, 2002, 2003],
 	'pop': [1.5, 1.7, 3.6, 2.4, 2.9, 3.2]}
 
-frame = pd.DataFrame(data)
+my_df1 = pd.DataFrame(my_data_states)
 ```
 
-Anothe example:
+Another example:
 
 ```python
-my_df = pd.Dataframe(data = [[0,0,0],[1,2,3],[4,5,6],[7,8,9]]),
+my_df2 = pd.DataFrame(data = [[0,0,0],[1,2,3],[4,5,6],[7,8,9]],
                      index = range(0,4),
                      columns=['col1','col2','col3'])
 
-print("\n",my_df)
+print("\n",my_df2)
 ```
 
+#### Get dimensions of a dataframe
 
 ```python
 df = pd.Dataframe(np.array([1,2,3],[4,5,6]))
 print("\nThe shape of our dataframe is:",df.shape) # The shape of the dataframe is (2,3)
 ```
+
+#### Get dataframe except specific rows
+
+I'd like to get all rows **excepts rows 3 and 5**:
+```python
+not_relevant_rows = my_df1.index.isin([3,5])
+df_relevant = my_df1[~not_relevant_rows]
+```
+
+
+
 
 #### Get column names
 
