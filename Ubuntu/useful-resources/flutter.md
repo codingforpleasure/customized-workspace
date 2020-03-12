@@ -7,6 +7,7 @@
       * [include packages:](#include-packages)
       * [Project hierarchy:](#project-hierarchy)
       * [Remove debug banner](#remove-debug-banner)
+      * [Layout in flutter](#layout-in-flutter)
       * [Useful widgets](#useful-widgets)
          * [Widgets for layout](#widgets-for-layout)
          * [Typography Widgets](#typography-widgets)
@@ -23,6 +24,7 @@
             * [Padding (For the inside of the widget)](#padding-for-the-inside-of-the-widget)
       * [multiple-child layout widgets](#multiple-child-layout-widgets)
          * [Column](#column)
+      * [Scroll widget](#scroll-widget)
       * [Other](#other)
          * [Fonts](#fonts)
          * [Icons](#icons)
@@ -47,7 +49,7 @@
       * [Basic commands in flutter cli](#basic-commands-in-flutter-cli)
       * [Nice sites:](#nice-sites)
 
-<!-- Added by: gil_diy, at: 2020-03-03T03:02+02:00 -->
+<!-- Added by: gil_diy, at: 2020-03-13T00:05+02:00 -->
 
 <!--te-->
 
@@ -69,6 +71,11 @@ holds the dependencies of your project.
 
 `debugShowCheckedModeBanner: false`
 
+
+## Layout in flutter
+
+[Link](https://flutter.dev/docs/development/ui/layout)
+
 ## Useful widgets
 
 ### Widgets for layout
@@ -82,10 +89,15 @@ Tooltip | Adding Tooltip | [Link](https://www.youtube.com/watch?v=EeEfD5fI-5Q&li
 Transform | Adding 3d effect | [Link](https://www.youtube.com/watch?v=9z_YNlRlWfA&list=PLjxrf2q8roU23XGwz3Km7sQZFTdB996iG&index=24)
 Align | The widget lets you place a widget in a defined area of its parent widget | [Link](https://www.youtube.com/watch?v=g2E7yl3MwMk&list=PLjxrf2q8roU23XGwz3Km7sQZFTdB996iG&index=26)
 Positioned | The widget to position Flutter widgets in a Stack | [Link](https://www.youtube.com/watch?v=EgtPleVwxBQ&list=PLjxrf2q8roU23XGwz3Km7sQZFTdB996iG&index=27)
+Spacer | The Spacer widget can help you control how much space appears between widgets in a Row or Column | [Link](https://www.youtube.com/watch?v=7FJgd7QN1zI)
 Flexible | Flexible for resizing your widgets in rows and columns | [Link](https://www.youtube.com/watch?v=CI7x0mAZiY0&list=PLjxrf2q8roU23XGwz3Km7sQZFTdB996iG&index=34)
+| |
+[Link](https://www.youtube.com/watch?v=zNZvuP8h1vs)
 ShaderMask | ShaderMasks let you apply a shader to one or more widgets in the tree | [Link](https://www.youtube.com/watch?v=7sUL66pTQ7Q&list=PLjxrf2q8roU23XGwz3Km7sQZFTdB996iG&index=71)
 Image| Use the Image widget to render an image to the screen, wherever it may come from: assets, network, file system, RAM  | [Link](https://www.youtube.com/watch?v=7oIAs-0G4mw&list=PLjxrf2q8roU23XGwz3Km7sQZFTdB996iG&index=66)
 Stack| Stack allows you to overlay multiple widgets on top of each other | [Link](https://www.youtube.com/watch?v=liEGSeD3Zt8)
+
+AlertDialog |Show Alert Dialog |[Link](https://www.youtube.com/watch?v=75CsnyRXf5I)
 
 ### Typography Widgets
 
@@ -149,6 +161,8 @@ Draggable | Draggable to move and drag your widgets around | [Link](https://www.
 
 ### Layout widget
 
+[Very nice layout explained](https://medium.com/flutter-community/breaking-layouts-in-rows-and-columns-in-flutter-8ea1ce4c1316)
+
 [Cheat sheet layout](https://medium.com/flutter-community/flutter-layout-cheat-sheet-5363348d037e)
 
 [Link](https://flutter.dev/docs/development/ui/widgets/layout)
@@ -161,8 +175,8 @@ SizedBox | for adding something with fixed height usally for spacing between ele
 TextField | Receiving user input
 Card | [demo](https://api.flutter.dev/flutter/material/Card-class.html)
 ListTile | [Demo](https://api.flutter.dev/flutter/material/ListTile-class.html)
-Column |
-Row |
+Column | [Link](https://medium.com/jlouage/flutter-row-column-cheat-sheet-78c38d242041)
+Row | [Link](https://medium.com/jlouage/flutter-row-column-cheat-sheet-78c38d242041)
 CircleAvatar | For profile page
 FlatButton |
 SingleChildScrollView |
@@ -230,10 +244,6 @@ margin: EdgeInsets.only(left: 30.0)
 ```
 
 #### Padding (For the inside of the widget)
-
-
-
-
 ```flutter
 padding: EdgeInsets.all(left: 20.0)
 ```
@@ -297,6 +307,9 @@ Strech the column width:
 ```flutter
 crossAxisAlignment: CrossAxisAlignment.stretch
 ```
+
+## Scroll widget
+
 ## Other
 ### Fonts
 [Hebrew Fonts](https://fonts.google.com/?subset=hebrew)
