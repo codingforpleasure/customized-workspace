@@ -7,6 +7,7 @@
             * [Get dimensions of a dataframe](#get-dimensions-of-a-dataframe)
             * [Get dataframe except specific rows](#get-dataframe-except-specific-rows)
             * [Get column names](#get-column-names)
+            * [Get column index for a given specific name](#get-column-index-for-a-given-specific-name)
             * [Dropping columns in pandas](#dropping-columns-in-pandas)
             * [Concatentaing columns and rows](#concatentaing-columns-and-rows)
             * [Converting from numpy to panda](#converting-from-numpy-to-panda)
@@ -36,7 +37,7 @@
          * [Printing data so all columns will be presented](#printing-data-so-all-columns-will-be-presented)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: 2020-03-07T01:05+02:00 -->
+<!-- Added by: gil_diy, at: 2020-03-20T22:18+02:00 -->
 
 <!--te-->
 
@@ -120,6 +121,13 @@ df_relevant = my_df1[~not_relevant_rows]
 ```python
 print(df.columns.values)
 ```
+
+#### Get column index for a given specific name
+
+```python
+   df.columns.get_loc('my_column')
+```
+
 #### Dropping columns in pandas
 
 ```python
@@ -132,6 +140,12 @@ concatentaing columns:
 ```python
 # Axis 1 means columns
 result = pd.concat([df['person_name'], df['person_weight']], axis = 1)
+```
+
+a different approach for adding a column will be:
+
+```python
+df['my_new_column'] = pd.Series(list_of_values)
 ```
 
 concatentaing rows:
