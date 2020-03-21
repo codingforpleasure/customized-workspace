@@ -1,7 +1,52 @@
 <!--ts-->
+   * [An OpenCV glimpse](#an-opencv-glimpse)
+      * [Basics](#basics)
+         * [Useful functions in open CV](#useful-functions-in-open-cv)
+         * [Reading images in different modes:](#reading-images-in-different-modes)
+         * [Writing images in different modes:](#writing-images-in-different-modes)
+      * [Draw on screen](#draw-on-screen)
+         * [Color-spaces in OpenCV](#color-spaces-in-opencv)
+            * [<strong>Gray</strong>](#gray)
+            * [<strong>BGR</strong>](#bgr)
+            * [<strong>HSV</strong>](#hsv)
+         * [Arithmetic Operations on Images](#arithmetic-operations-on-images)
+            * [Addition](#addition)
+            * [Substruction](#substruction)
+         * [Logical Operations on images](#logical-operations-on-images)
+         * [Thresholding Types](#thresholding-types)
+            * [Threshold set manually](#threshold-set-manually)
+            * [Threshold calculated automatically (THRESH_OTSU)](#threshold-calculated-automatically-thresh_otsu)
+            * [Adaptive thresholding](#adaptive-thresholding)
+         * [blurring/smoothening techniques](#blurringsmoothening-techniques)
+            * [Averaging](#averaging)
+            * [Gaussian Blurring](#gaussian-blurring)
+            * [medianBlur](#medianblur)
+            * [Bilateral Filtering](#bilateral-filtering)
+         * [Geometric Transformations](#geometric-transformations)
+         * [Edge detection](#edge-detection)
+            * [Scale an image](#scale-an-image)
+            * [Shift/Translate an image](#shifttranslate-an-image)
+            * [Rotate an image](#rotate-an-image)
+            * [Affine transformation (Shear)](#affine-transformation-shear)
+         * [Morphological Transformations](#morphological-transformations)
+            * [Erosion](#erosion)
+            * [Dilation](#dilation)
+            * [Gradient (For determining the borders)](#gradient-for-determining-the-borders)
+            * [Structuring Element (elliptical/circular shaped kernels)](#structuring-element-ellipticalcircular-shaped-kernels)
+         * [Contour Approximation Method](#contour-approximation-method)
+         * [Bounding Shapes](#bounding-shapes)
+            * [Bounding rectangle](#bounding-rectangle)
+               * [Straight Bounding Rectangle](#straight-bounding-rectangle)
+               * [Rotated Rectangle](#rotated-rectangle)
+            * [Minimum Enclosing Circle](#minimum-enclosing-circle)
+            * [Fitting an Ellipse](#fitting-an-ellipse)
+            * [Fitting a Line](#fitting-a-line)
+         * [Contours Hierarchy](#contours-hierarchy)
+         * [Extracting connected components from binary image](#extracting-connected-components-from-binary-image)
+         * [distance transform](#distance-transform)
+         * [Useful functions in PIL (Python Imaging Library)](#useful-functions-in-pil-python-imaging-library)
 
-
-<!-- Added by: gil_diy, at: 2018-09-04T20:41+03:00 -->
+<!-- Added by: gil_diy, at: 2020-03-21T22:19+02:00 -->
 
 <!--te-->
 
@@ -13,7 +58,7 @@
 
 Description | command
 ------------------------------------|-----
-Load image | img = **cv2.imread**( "_path-to-file_" )
+Load image | img = **cv2.imread**( "_path-to-file_")
 Write image to disk | **cv2.imwrite**( "_/codingForPleasure/example.png_", _img_ )
 Display image | **cv2.imshow**( "_window-title_" , _img_ )
 Get image size | rows, columns , _ = **cv2.shape()**
@@ -28,6 +73,31 @@ split each color to different layer| b,g,r = cv2.split(img)
 
 
 * findContours should opperate on black and white image **ONLY**
+
+
+### Reading images in different modes:
+```python
+img = cv2.imread("path-to-file", cv2.IMREAD_COLOR)
+```
+
+Description | Flags
+------------|-----
+Always load to three-channel array | IMREAD_COLOR
+Always load to single-channel array | IMREAD_GRAYSCALE
+Channels as indicated by file (up to three) | IMREAD_ANYCOLOR
+Allow loading of more than 8-bit depth | IMREAD_ANYDEPTH
+Equivalent to combining: IMREAD_ANYCOLOR + IMREAD_ANYDEPTH | IMREAD_UNCHANGED
+
+### Writing images in different modes:
+
+```python
+img = cv2.imwrite(filename = "path-to-file", img = img, params = cv2.IMREAD_COLOR)
+```
+Description | Flags
+------------|-----
+JPEG quality | IMWRITE_JPG_QUALITY
+PNG compression (higher values mean more compression)y | IMWRITE_PNG_COMPRESSION
+Channels as indicated by file (up to three) | IMREAD_ANYCOLOR
 
 ## Draw on screen
 
@@ -54,6 +124,11 @@ array, each value representing the blue, green, and red colors:
 hue is a color tone, saturation is the intensity of a color, and value
 represents its darkness
 
+#### 
+```python
+# List of all colors in an image using opencv and python
+	print(np.unique(img, axis=0, return_counts=True))
+```
 
 ### Arithmetic Operations on Images
 
