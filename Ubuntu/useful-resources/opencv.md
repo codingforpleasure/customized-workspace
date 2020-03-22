@@ -150,10 +150,23 @@ COLOR_BGR2HSV | Convert from BGR to HSV
 
 ### Histograms
 
-A histogram represents the distribution of pixel intensities (whether color or gray-
-scale) in an image.
+A histogram represents the distribution of pixel intensities (whether color or grayscale) in an image.
 
 It can be visualized as a graph (or plot) that gives a high-level intuition of the intensity (pixel value) distribution.
+
+
+```python
+hist = cv2.calcHist([img_grayscale], channels=[0], mask=None, histSize=[256], ranges=[0, 256])
+```
+
+**Comments:** 
+
+* **channels** - To compute a histogram for all three red, green, and blue channels, the channels list would be [0,1,2] .
+
+* **histsize** - is the number of bins we want to use when computing a histogram, for each channel we compute a histogram.
+
+* **ranges** - We specify The range of possible pixel values. Normally, this is [ 0, 256 ] for each channel, but if you are using a color space other than RGB (such as HSV), the ranges might be different.
+
 
 ### Arithmetic Operations on Images
 
