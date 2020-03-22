@@ -44,12 +44,13 @@
             * [Minimum Enclosing Circle](#minimum-enclosing-circle)
             * [Fitting an Ellipse](#fitting-an-ellipse)
             * [Fitting a Line](#fitting-a-line)
+      * [Contours](#contours)
          * [Contours Hierarchy](#contours-hierarchy)
          * [Extracting connected components from binary image](#extracting-connected-components-from-binary-image)
          * [distance transform](#distance-transform)
          * [Useful functions in PIL (Python Imaging Library)](#useful-functions-in-pil-python-imaging-library)
 
-<!-- Added by: gil_diy, at: 2020-03-22T04:53+02:00 -->
+<!-- Added by: gil_diy, at: 2020-03-22T06:09+02:00 -->
 
 <!--te-->
 
@@ -449,6 +450,18 @@ rows,cols = img.shape[:2]
 lefty = int((-x*vy/vx) + y)
 righty = int(((cols-x)*vy/vx)+y)
 cv2.line(img,(cols-1,righty),(0,lefty),(0,255,0),2)
+```
+
+
+## Contours
+
+
+In OpenCV, finding contours is like finding white object from **black background**. 
+**So remember**, object to be found **should be white and background should be black**.
+
+```python
+(_, cnts, _) = cv2.findContours(edged.copy(), cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+cv2.drawContours(coins, cnts, -1, (0, 255, 0), 2)
 ```
 
 ### Contours Hierarchy
