@@ -9,6 +9,9 @@
             * [<strong>Gray</strong>](#gray)
             * [<strong>BGR</strong>](#bgr)
             * [<strong>HSV</strong>](#hsv)
+         * [Convert between colorspaces](#convert-between-colorspaces)
+            * [Get the unique colors](#get-the-unique-colors)
+         * [Histograms](#histograms)
          * [Arithmetic Operations on Images](#arithmetic-operations-on-images)
             * [Addition](#addition)
             * [Substruction](#substruction)
@@ -46,7 +49,7 @@
          * [distance transform](#distance-transform)
          * [Useful functions in PIL (Python Imaging Library)](#useful-functions-in-pil-python-imaging-library)
 
-<!-- Added by: gil_diy, at: 2020-03-21T22:19+02:00 -->
+<!-- Added by: gil_diy, at: 2020-03-22T04:53+02:00 -->
 
 <!--te-->
 
@@ -124,11 +127,33 @@ array, each value representing the blue, green, and red colors:
 hue is a color tone, saturation is the intensity of a color, and value
 represents its darkness
 
-#### 
+### Convert between colorspaces
+
+```python
+img_gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+```
+
+Title1 | Title2
+------------|-----
+COLOR_BGR2GRAY | Convert from BGR to grayscale
+COLOR_BGR2HSV | Convert from BGR to HSV
+
+
+
+
+
+#### Get the unique colors
 ```python
 # List of all colors in an image using opencv and python
 	print(np.unique(img, axis=0, return_counts=True))
 ```
+
+### Histograms
+
+A histogram represents the distribution of pixel intensities (whether color or gray-
+scale) in an image.
+
+It can be visualized as a graph (or plot) that gives a high-level intuition of the intensity (pixel value) distribution.
 
 ### Arithmetic Operations on Images
 
@@ -139,8 +164,8 @@ apply a simple arithmation operation on each pixel of the image
 ### Logical Operations on images
 
 ```python
-img1 = cv2.imread(imgpath1, 1)
-img2 = cv2.imread(imgpath2, 1)
+img1 = cv2.imread(imgpath1, cv2.IMREAD_COLOR)
+img2 = cv2.imread(imgpath2, cv2.IMREAD_COLOR)
 
 img1 = cv2.cvtColor(img1, cv2.COLOR_BGR2RGB)
 img2 = cv2.cvtColor(img2, cv2.COLOR_BGR2RGB)
