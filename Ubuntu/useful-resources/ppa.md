@@ -32,7 +32,7 @@ add-apt-repository ppa:ppa_name
 ### Remove a PPA Repository
 
 ```bash
-add-apt-repository –remove ppa:ppa_name
+add-apt-repository --remove ppa:ppa_name
 ```
 
 
