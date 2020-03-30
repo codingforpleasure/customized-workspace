@@ -14,8 +14,17 @@
       * [The Fully connected (FC) Layer (final Layer)](#the-fully-connected-fc-layer-final-layer)
       * [Training CNNs](#training-cnns)
       * [Basic CNN Design Rules](#basic-cnn-design-rules)
+      * [Building a CNN in Keras](#building-a-cnn-in-keras)
+         * [Loading out data](#loading-out-data)
+         * [Hot One Encoding](#hot-one-encoding)
+         * [building &amp; compiling our model](#building--compiling-our-model)
+            * [Demo](#demo)
+         * [Training our classifier](#training-our-classifier)
+         * [Plotting loss and accuracy Charts](#plotting-loss-and-accuracy-charts)
+         * [Saving and loading your model](#saving-and-loading-your-model)
+         * [Displaying your model visually](#displaying-your-model-visually)
 
-<!-- Added by: gil_diy, at: 2020-03-30T12:47+03:00 -->
+<!-- Added by: gil_diy, at: 2020-03-31T00:55+03:00 -->
 
 <!--te-->
 # CNN
@@ -167,4 +176,55 @@ Just like NN, training CNNs is essentialy the same once we setup out Network lay
 * **Pool kernel** size is typically 2x2.
 
 * **Dropout** is a very useful technique to avoid over fitting in CNNs.
+
+
+
+## Building a CNN in Keras
+
+Keras is a high level neural network APi for **Python**
+It has the abilty to use TensorFlow, CNTK or Theano backends
+
+### Loading out data
+### Hot One Encoding
+### building & compiling our model
+
+* Sequential model is a linear stack of layers
+
+```python
+from keras.models import Sequential
+
+model = Sequential()
+```
+
+#### Demo
+
+Example of brining up a simple model without zero padding:
+
+```python
+from keras.layers import Dense, Dropout, Flatten
+from keras.layers import Conv2D, MaxPooling2D
+
+# First layer:
+model.add(Con2D(32, kernel_size = (3,3), activation = 'relu', input_shape = input_shape))
+# The output of the first layer moves towards the following layer
+model.add(Con2D(64, (3,3), activation = 'relu')
+model.add(MaxPooling2D(pool_size = (2,2)))
+
+# Flatten is a function to feed a dense layer or fully connected layer.
+model.add(Flatten())
+model.add(Dense(128, activation = 'relu'))
+model.add(Dense(num_classes, activation = 'softmax'))
+
+```
+<p align="center"> <!-- style="width:400px;" -->
+  <img src="images/cnn/simple_model_example.jpeg" title="tool tip here">
+</p>
+
+### Training our classifier
+### Plotting loss and accuracy Charts
+### Saving and loading your model
+### Displaying your model visually
+
+
+
 
