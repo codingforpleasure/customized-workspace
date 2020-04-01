@@ -64,17 +64,17 @@ cut -c4- list1.txt
 
 #### Example #7: Print the second column of each line:
 ```bash
-cut -f2 list_columns.txt
+cut -d' ' -f2 list_columns.txt
 ```
 
 #### Example #8: Print specific multiple columns (i.e: column one and column three) of each line:
 ```bash
-cut -f1,3 list_columns.txt
+cut -d' ' -f1,3 list_columns.txt
 ```
 
 #### Example #9: Print range of columns (i.e: column one **to** column three) of each line:
 ```bash
-cut -f1-3 list_columns.txt
+cut -d' ' -f1-3 list_columns.txt
 ```
 
 #### Example #10: Print specific multiple columns with specified delimeter (i.e: comma):
