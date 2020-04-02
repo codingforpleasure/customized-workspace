@@ -98,6 +98,15 @@ my_df2 = pd.DataFrame(data = [[0,0,0],[1,2,3],[4,5,6],[7,8,9]],
 print("\n",my_df2)
 ```
 
+Another example:
+
+Creating a dataframe of specific size and initializing it with -1's:
+
+```python
+my_df3 = pd.DataFrame(index=range(5), columns=range(3))
+my_df3 = my_df3.fillna(-1)
+```
+
 #### Get dimensions of a dataframe
 
 ```python
@@ -154,6 +163,11 @@ concatentaing rows:
 result = pd.concat([df[0:2], df[-2:]], axis = 0)
 ```
 
+
+```python
+# Adding a row to my_df:
+my_df.loc["two"] = [4,5,6]
+```
 
 #### Converting from numpy to panda
 ```python
