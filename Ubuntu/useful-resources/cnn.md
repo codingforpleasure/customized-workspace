@@ -19,12 +19,16 @@
          * [Hot One Encoding](#hot-one-encoding)
          * [building &amp; compiling our model](#building--compiling-our-model)
             * [Demo](#demo)
+         * [Compile our model](#compile-our-model)
          * [Training our classifier](#training-our-classifier)
+         * [Evaluate our Model and Generate Predictions](#evaluate-our-model-and-generate-predictions)
          * [Plotting loss and accuracy Charts](#plotting-loss-and-accuracy-charts)
          * [Saving and loading your model](#saving-and-loading-your-model)
          * [Displaying your model visually](#displaying-your-model-visually)
+      * [Data Augmentation](#data-augmentation)
+         * [Benefits of Data Augmentation](#benefits-of-data-augmentation)
 
-<!-- Added by: gil_diy, at: 2020-03-31T00:55+03:00 -->
+<!-- Added by: gil_diy, at: 2020-04-11T06:55+03:00 -->
 
 <!--te-->
 # CNN
@@ -73,7 +77,7 @@ we produce different maps. Applying our kernel produces scalar ourput as we just
 ### Stride
 
 - Stride simply refers to the **step size** we take when we slide our kernel on the input image.
-- Stride conteols the sizr of the convolution Layer output.
+- Stride controls the size of the convolution Layer output.
 
 - Using a larger Stride produce less overlaps in kernels, which means you end small features maps because you lose information that's  being passed from layer to layer.
 
@@ -81,9 +85,9 @@ we produce different maps. Applying our kernel produces scalar ourput as we just
 
 ### Zero-Padding
 
-- Zero padding is a very simple concept that refers to a border  we apply to the input volumr.
-  We haven't discussed deep networks much yet. but imagine we had multiple Convolution layers. Yu can quickly see that even with a stride of 1, we end up with a tiny output matrix quickly.
- - We add a border of o's around our input. basically this is equivalent of adding a black border around an image (we can set our padding to 2 if needed)
+- Zero padding is a very simple concept that refers to a border we apply to the input volume.
+  We haven't discussed deep networks much yet. but imagine we had multiple Convolution layers. You can quickly see that even with a stride of 1, we end up with a tiny output matrix quickly.
+ - We add a border of 0's around our input. basically this is equivalent of adding a black border around an image (we can set our padding to 2 if needed)
 
 
 ### Calculating our Convolution Output
@@ -113,7 +117,7 @@ now we have applied the activation function.
 
 - Pooling, also known as **subsampling** or **downsampling**, is a simple process where we reduce the size or dimensionality of Feature Map.
 
-- The purpose of this reduction is to reduce the number if parameters needed to train . while retaining the most important features and iformation in the image.
+- The purpose of this reduction is to reduce the number of parameters needed to train . while retaining the most important features and information in the image.
 
 - There are 3 types of Pooling we can apply: (1) Max , (2) Average, (3) Sum
 
@@ -167,7 +171,7 @@ Just like NN, training CNNs is essentialy the same once we setup out Network lay
 
 * Input should be divisible by at least 4 which allows for downsampling.
 
-* **Filters (kernels)** are typically samll either 3x3 or 5x5.
+* **Filters (kernels)** are typically small either 3x3 or 5x5.
 
 * **Stride** is typically 1 or 2 if inputs are large.
 
@@ -198,7 +202,7 @@ model = Sequential()
 
 #### Demo
 
-Example of brining up a simple model without zero padding:
+Example of bringing up a simple model without zero padding:
 
 ```python
 from keras.layers import Dense, Dropout, Flatten
@@ -220,11 +224,62 @@ model.add(Dense(num_classes, activation = 'softmax'))
   <img src="images/cnn/simple_model_example.jpeg" title="tool tip here">
 </p>
 
+### Compile our model
+
+```python
+model.compile(loss = 'categorical_crossentropy',
+	optimizer = SGD(0.01), # Stochastic Gradient descent
+	metrics = ['accuracy'])
+```
 ### Training our classifier
+
+```python
+model.fit(x_train, y_train, epochs = 5, batch_size = 32)
+```
+
+### Evaluate our Model and Generate Predictions
+
+```python
+loss_and_metrixs = model.evaluate(x_test, y_test, batch_size = 120)
+```
+```python
+classes = model.predict(x_test, batch_size = 120)
+``` 
+
 ### Plotting loss and accuracy Charts
+
+
 ### Saving and loading your model
 ### Displaying your model visually
 
 
 
+## Data Augmentation
 
+In deep learning, the more training data/examples we have the better our model will be on unseen data (test data)
+
+however, what if we had less than 1000 examples per image class?
+Therefore we can use Keras Data Augementation to generate multiple version of our original image (shearing/shifting/zooming/skewing).
+Adding variations such as rotations, shifts,zooming etc make our classifier much more invariant to chnages in our images. Thus making it far more robust.
+
+Reduces overfitting due to the increased varity in the training dataset.
+
+### Benefits of Data Augmentation
+* Take a small dataset and make it much larger!
+
+Keras' buil-in **Data Augmentation API** performs a just-in-time augumented image dataset. This means images aren't created and dumped to a directory (which will be wasteful storage). Instead it generates this dataset during the training process.
+
+
+[Types of Data Augmentation](https://keras.io/preprocessing/image/)
+
+* We use the above code to create our generator with types of augementation to perform specified in the input arguments
+
+```python
+train_detection = ImageDataGenerator(
+  rescale = 1./255,
+  shear_range = 0.2,
+  zoom_range = 0.2,
+  horizontal_flip = True)
+
+test_datagen = ImageDataGenerator(rescale = 1. / 255)
+```
