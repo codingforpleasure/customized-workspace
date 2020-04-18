@@ -4,9 +4,16 @@
          * [Additional libraries required](#additional-libraries-required)
          * [Building source](#building-source)
       * [Creating training data](#creating-training-data)
+         * [Tesseract configurations](#tesseract-configurations)
+         * [Page segmentation modes](#page-segmentation-modes)
+            * [Detect orientation and text (script)](#detect-orientation-and-text-script)
+            * [Detect only digits](#detect-only-digits)
+            * [Whitelisting characters](#whitelisting-characters)
+            * [Blacklisting characters](#blacklisting-characters)
+            * [Specify the language](#specify-the-language)
       * [Installing tesseract NOT from source, from ubuntu repositories:](#installing-tesseract-not-from-source-from-ubuntu-repositories)
 
-<!-- Added by: gil_diy, at: 2020-04-17T22:41+03:00 -->
+<!-- Added by: gil_diy, at: 2020-04-18T10:26+03:00 -->
 
 <!--te-->
 
@@ -79,6 +86,10 @@ and
 
 `tesstrain_utils.sh`
 
+6. Now install tesseract on your system
+```bash
+sudo make install
+```
 
 
 ## Creating training data
@@ -96,7 +107,7 @@ Simple script for generating the training data:
 rm -rf tain/*
 
 tesstrain.sh --fonts_dir font \
-			 --fonlist 'DejaVu Sans Mono Book' \
+			 --fontlist 'DejaVu Sans Mono' \
 			 --lang eng \
 			 --linedata_only \
 			 --langdata_dir langdata_lstm \
@@ -106,6 +117,80 @@ tesstrain.sh --fonts_dir font \
 			 --output_dir train
 ```
 
+Run the script, and Phase A to Phase E should be completed.
+
+
+
+...
+
+final step after building and fine-tunining it and combining it,
+copy the file which consist the final model `eng.traineddata` you trained to : `/usr/local/share/tessdata/`
+
+
+### Tesseract configurations
+
+### Page segmentation modes
+
+number | Description
+------------|-----
+0  |  Orientation and script detection (OSD) only.
+1  |  Automatic page segmentation with OSD.
+2  |  Automatic page segmentation, but no OSD, or OCR.
+3  |  Fully automatic page segmentation, but no OSD. (Default)
+4  |  Assume a single column of text of variable sizes.
+5  |  Assume a single uniform block of vertically aligned text.
+6  |  Assume a single uniform block of text.
+7  |  Treat the image as a single text line.
+8  |  Treat the image as a single word.
+9  |  Treat the image as a single word in a circle.
+10 |  Treat the image as a single character.
+11  |  Sparse text. Find as much text as possible in no particular order.
+12  |  Sparse text with OSD.
+13  |  Raw line. Treat the image as a single text line, bypassing hacks | that are Tesseract-specific.
+
+
+
+#### Detect orientation and text (script)
+```python
+osd = pytesseract.image_to_osd(img)
+angle = re.search('(?<=Rotate: )\d+', osd).group(0)
+script = re.search('(?<=Script: )\d+', osd).group(0)
+print("angle: ", angle)
+print("script: ", script)
+```
+#### Detect only digits
+
+```python
+custom_config = r'--oem 3 --psm 6 outputbase digits'
+print(pytesseract.image_to_string(img, config=custom_config))
+```
+#### Whitelisting characters
+
+```python
+custom_config = r'-c tessedit_char_whitelist=abcdefghijklmnopqrstuvwxyz --psm 6'
+print(pytesseract.image_to_string(img, config=custom_config))
+```
+
+#### Blacklisting characters
+```python
+custom_config = r'-c tessedit_char_blacklist=0123456789 --psm 6'
+pytesseract.image_to_string(img, config=custom_config)
+```
+
+#### Specify the language
+
+To specify the language you need your OCR output in, use the -l LANG argument in the config where LANG is the 3 letter code for what language you want to use.
+
+```python
+custom_config = r'-l eng --psm 6'
+pytesseract.image_to_string(img, config=custom_config)
+```
+
+for multiple languages just write:
+```python
+custom_config = r'-l heb+eng --psm 6'
+pytesseract.image_to_string(img, config=custom_config)
+```
 
 ## Installing tesseract NOT from source, from ubuntu repositories:
 ```bash
