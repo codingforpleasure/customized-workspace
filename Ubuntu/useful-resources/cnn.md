@@ -27,8 +27,18 @@
          * [Displaying your model visually](#displaying-your-model-visually)
       * [Data Augmentation](#data-augmentation)
          * [Benefits of Data Augmentation](#benefits-of-data-augmentation)
+         * [Displaying our misclassified data](#displaying-our-misclassified-data)
+         * [Displaying the misclassfications](#displaying-the-misclassfications)
+      * [Types of optimizers available in Keras](#types-of-optimizers-available-in-keras)
+         * [Optimizers](#optimizers)
+            * [Stochastic Gradient Descent](#stochastic-gradient-descent)
+      * [Keras Checkpoint models and Callbacks](#keras-checkpoint-models-and-callbacks)
+         * [Creating checkpoint models](#creating-checkpoint-models)
+         * [Early stopping](#early-stopping)
+         * [Reducing Learning rate on plateau](#reducing-learning-rate-on-plateau)
+      * [Resources](#resources)
 
-<!-- Added by: gil_diy, at: 2020-04-11T06:55+03:00 -->
+<!-- Added by: gil_diy, at: 2020-04-20T11:22+03:00 -->
 
 <!--te-->
 # CNN
@@ -283,3 +293,147 @@ train_detection = ImageDataGenerator(
 
 test_datagen = ImageDataGenerator(rescale = 1. / 255)
 ```
+
+
+### Displaying our misclassified data
+
+```python
+import cv2
+import numpy as np
+
+# use numpy to create an array that stores a value of 1 when missclassification accurs
+
+result = np.absolute(y_test - y_pred)
+result_indices = np.nonzero(result > 0)
+
+# Display the indices of misclassifications
+print("Indices of misclassified data are: \n\n", str(result_indices))
+```
+
+### Displaying the misclassfications
+```python
+import cv2
+
+def draw_test(name, pred, input_im, true_label):
+  BLACK = [0,0,0]
+  expanded_image = cv2.c
+```
+
+
+## Types of optimizers available in Keras
+
+### Optimizers
+Optimizers are the actual algorithm we use to **minimize our Loss** for example:
+
+*  Gradient Descent
+*  Stochastic Gradient Descent
+*  Mini Batch Gradient Descent
+
+**Keras's build in optimizers:**
+
+*  Stochastic Gradient Descent
+*  RMSprop
+*  AdaGrad
+*  AdaDelta
+*  Adam
+*  Adamax
+*  Nadam
+
+The main difference in these algorithms is how they **manipulate** the **learning rate** to allow for faster convergence and better validation accuracy.
+
+Some require manual setting of parameters to adjust our **learning rate schedule**
+
+Some use a heuristic approach to provide adaptive learning rates.
+
+#### Stochastic Gradient Descent
+
+* By default Keras uses a constant learing rate in the SGD optimizers. However, we can set:
+1)  **momentum**
+
+2)  **decay **
+
+3) Enabling **Nesterov Momentum**
+
+
+**Momentum**
+Is a tecnique that accelarates SGD by pushing the gradient steps aling rhe relabelmat direction but reducing the jump in oscilatrions away from the relevant ditections.
+
+**Decay** 
+is setting decays the learning rate every batch update (not epoch, so be aware of how you set your batch size)
+A good rule of thunb for setting decay is (**learning rate / epochs**)
+
+**Nesterov**
+solves the problem of oscillating around our minima when momentum is high and unable to slow down. it first makes a big jump then a small correction after the gradient is calculated.
+
+
+[Keras optimizers](https://keras.io/optimizers/)
+
+## Keras Checkpoint models and Callbacks
+
+* This is a simple but very useful way saving your best model before it starts overfitting (i.e LOSS on our test/validation data starts increases as our Epochs increase)
+ 
+* **Checkpointing** allows us to keep saving our weights/models after each epoch.
+
+* Keras then allows us to keep saving the 'best' model by monitoring validation loss (we can monitor accuarcy if you desire)
+
+
+### Creating checkpoint models
+
+```python
+from keras.callbacks import ModelCheckpoint
+```
+
+```python
+checkpoint = ModelCheckpoint('/home/..../Trained_models/',
+                              monitor = 'val_loss',
+                              mode = "min",
+                              save_best_only = True,
+                              verbose = 1)
+
+callbacks = [checkpoint]
+```
+
+* so we have created a callback that monitors validation loss. Here we look at the lowest value and |ave only the best model:
+
+```python
+history = model.fit(x_train, y_train, 
+  batch_size = 64,
+  epochs = 3,
+  verbose = 2,
+  callbacks = callbacks,
+  validation_data = (x_test, y_test)
+  )
+```
+
+### Early stopping 
+
+Early Stopping is another Keras Callback that allows us to stop training once the value being monitored (e.g: val_loss) has stopped getting better (decreasing).
+
+We can even use a "patience" parameter to wait X amount of epochs before stopping.
+
+```python
+earlystop = EarlyStopping(monitor = 'val_loss', # value being monitored for improvement
+                          min_delta = 0, # 
+                          patience = 3, # number of epochs we wait before stopping
+                          verbose = 1,
+                          restore_best_weights = True) # keep the best weights once stopped
+
+# We put our callbacks into a callback list
+callbacks = [earlystop, checkpoint]
+```
+
+### Reducing Learning rate on plateau
+
+* Keras also comes with a Learning rate adjusment callback
+
+* We can avoid having our loss oscilate around the global minimum by attempting to reduce the Learn Rate by a certain fact. if no improvment is seen in our monitored metric (val_loss typically), we wait a certain number of epochs (patience) then this callback reduces the learning rate by a factor.
+
+```python
+from keras.callbacks import ReducceLROnPlateau
+
+reduce_learning_rate = ReducceLROnPlateau(monitor = 'val_loss', factor = 0.2, patience = 3, verbose = 1, min_delta = 0.0001)
+```
+
+
+## Resources
+[Great Reference](https://towardsdatascience.com/applied-deep-learning-part-4-convolutional-neural-networks-584bc134c1e2)
