@@ -261,7 +261,12 @@ classes = model.predict(x_test, batch_size = 120)
 
 ### Saving and loading your model
 
-autosave can be done with `ModelCheckpoint`:
+You can save manualy like this:
+```python
+model.save('my_model.h5')  # creates a HDF5 file 'my_model.h5'
+```
+
+or autosave can be done with `ModelCheckpoint`:
 
 ```python
 checkpoint = ModelCheckpoint("./trained_models/fruits_fresh_cnn_1.h5",
