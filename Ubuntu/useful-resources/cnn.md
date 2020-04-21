@@ -271,6 +271,8 @@ checkpoint = ModelCheckpoint("./trained_models/fruits_fresh_cnn_1.h5",
                              verbose=1)
 ```
 
+Loading the model:
+
 ```python
 from keras.models import load_model
 
