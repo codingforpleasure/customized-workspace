@@ -38,7 +38,7 @@
          * [Reducing Learning rate on plateau](#reducing-learning-rate-on-plateau)
       * [Resources](#resources)
 
-<!-- Added by: gil_diy, at: 2020-04-20T11:22+03:00 -->
+<!-- Added by: gil_diy, at: 2020-04-21T19:05+03:00 -->
 
 <!--te-->
 # CNN
@@ -260,6 +260,27 @@ classes = model.predict(x_test, batch_size = 120)
 
 
 ### Saving and loading your model
+
+autosave can be done with `ModelCheckpoint`:
+
+```python
+checkpoint = ModelCheckpoint("./trained_models/fruits_fresh_cnn_1.h5",
+                             monitor="val_loss",
+                             mode="min",
+                             save_best_only=True,
+                             verbose=1)
+```
+
+```python
+from keras.models import load_model
+
+# load model
+model = load_model('model.h5')
+
+# summarize model.
+model.summary()
+```
+
 ### Displaying your model visually
 
 
@@ -384,7 +405,7 @@ from keras.callbacks import ModelCheckpoint
 ```
 
 ```python
-checkpoint = ModelCheckpoint('/home/..../Trained_models/',
+checkpoint = ModelCheckpoint('trained_models/fruits_fresh_cnn_1.h5',
                               monitor = 'val_loss',
                               mode = "min",
                               save_best_only = True,
