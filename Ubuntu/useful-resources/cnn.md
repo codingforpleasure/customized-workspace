@@ -25,6 +25,7 @@
          * [Plotting loss and accuracy Charts](#plotting-loss-and-accuracy-charts)
          * [Saving and loading your model](#saving-and-loading-your-model)
          * [Displaying your model visually](#displaying-your-model-visually)
+         * [Visualizing the effect of convolutions](#visualizing-the-effect-of-convolutions)
       * [Data Augmentation](#data-augmentation)
          * [Benefits of Data Augmentation](#benefits-of-data-augmentation)
          * [Displaying our misclassified data](#displaying-our-misclassified-data)
@@ -38,7 +39,7 @@
          * [Reducing Learning rate on plateau](#reducing-learning-rate-on-plateau)
       * [Resources](#resources)
 
-<!-- Added by: gil_diy, at: 2020-04-21T19:05+03:00 -->
+<!-- Added by: gil_diy, at: 2020-04-22T02:25+03:00 -->
 
 <!--te-->
 # CNN
@@ -99,6 +100,13 @@ we produce different maps. Applying our kernel produces scalar ourput as we just
   We haven't discussed deep networks much yet. but imagine we had multiple Convolution layers. You can quickly see that even with a stride of 1, we end up with a tiny output matrix quickly.
  - We add a border of 0's around our input. basically this is equivalent of adding a black border around an image (we can set our padding to 2 if needed)
 
+**Keras supports these types of padding:**
+
+  Valid padding, which menas no padding
+
+  Same padding, which menas zero padding
+
+  Causal padding, which applys to your Conv1D model to pad zeroes to the front of your inputs.
 
 ### Calculating our Convolution Output
 
@@ -291,6 +299,11 @@ model.summary()
 ### Displaying your model visually
 
 
+### Visualizing the effect of convolutions
+
+The name of API that allows you to inspect the impact of convolutions on the images is **`model.layers` API.**
+
+
 
 ## Data Augmentation
 
@@ -464,4 +477,7 @@ reduce_learning_rate = ReducceLROnPlateau(monitor = 'val_loss', factor = 0.2, pa
 
 
 ## Resources
+
+[25 Open Datasets](https://www.analyticsvidhya.com/blog/2018/03/comprehensive-collection-deep-learning-datasets/)
+
 [Great Reference](https://towardsdatascience.com/applied-deep-learning-part-4-convolutional-neural-networks-584bc134c1e2)
