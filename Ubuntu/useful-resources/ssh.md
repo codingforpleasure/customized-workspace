@@ -5,9 +5,12 @@
       * [ssh server](#ssh-server)
       * [ssh client](#ssh-client)
          * [Generating Private and Public keys](#generating-private-and-public-keys)
-         * [Logging into server via ssh](#logging-into-server-via-ssh)
+         * [Copying the key to the server](#copying-the-key-to-the-server)
+      * [Test the new key](#test-the-new-key)
+      * [Setting up connecting fast to ssh server](#setting-up-connecting-fast-to-ssh-server)
+      * [Fix a brokem pipe on SSH connection](#fix-a-brokem-pipe-on-ssh-connection)
 
-<!-- Added by: gil_diy, at: 2019-01-03T10:02+02:00 -->
+<!-- Added by: gil_diy, at: 2020-04-22T11:03+03:00 -->
 
 <!--te-->
 
@@ -104,4 +107,15 @@ so now you can just enter in the shell:
 ```bash
 ssh shay_pc
 ```
+
+## Fix a brokem pipe on SSH connection
+
+Add the following lines into `/etc/ssh/ssh_config` for Linux and Mac:
+
+```bash
+Host *
+ServerAliveInterval 120
+```
+
+
 
