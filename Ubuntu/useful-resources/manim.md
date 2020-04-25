@@ -7,9 +7,18 @@
       * [Text transformations](#text-transformations)
       * [animations](#animations)
       * [Positions](#positions)
+         * [Absolute position](#absolute-position)
+            * [to_edge(DIRECTION)](#to_edgedirection)
+            * [to_corner(CORNER_TYPE)](#to_cornercorner_type)
+         * [Relative position](#relative-position)
+            * [move_to()](#move_to)
+            * [next_to()](#next_to)
+            * [shift(DIRECTION)](#shiftdirection)
+      * [Rotating](#rotating)
+            * [Rotate element around it's center](#rotate-element-around-its-center)
       * [Contstants](#contstants)
 
-<!-- Added by: gil_diy, at: 2020-04-25T12:06+03:00 -->
+<!-- Added by: gil_diy, at: 2020-04-25T23:59+03:00 -->
 
 <!--te-->
 
@@ -31,6 +40,7 @@ shorthand | option | Description
  `-g`| `--save_pngs` | Save each frame as a png
  `-t`|`--transparent`| Render to a movie file with an alpha channel
  `-o`| `--file_name` | Specify the name of the output file
+ `-r`| `--resolution` | Resolution, passed as \"height,width\"
   ``| `--video_output_dir` | directory to write video
 
 
@@ -86,7 +96,7 @@ class TransfromationText1V1(Scene):
         self.wait()
 ```
 
-![Alt Text](https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif)
+![Alt Text](animation_gifs/manim/transformationTextv1.gif)
 
 ## animations
 
@@ -103,13 +113,104 @@ Function | Description
  FadeOutAndShift |  
  FadeOutAndShiftDown | 
  VFadeOut | 
- VFadeInThenOut |
+ VFadeInThenOut
+  |
 
 
 
 ## Positions
 
-hhj
+### Absolute position
+
+#### to_edge(DIRECTION)
+use the predefine directions, for example:
+
+```python
+.to_edge(UP)
+.to_edge(DOWN)
+.to_edge(LEFT)
+.to_edge(RIGHT)
+```
+
+#### to_corner(CORNER_TYPE)
+
+To the corner, we can use:
+
+```python
+.to_corner(UR) # Up Right
+.to_corner(UL) # Up Left
+.to_corner(DR) # Down Right
+.to_corner(DL) # Down Left
+```
+
+For example:
+```python
+class PositionsExmaple(Scene):
+	object = Dot()
+	object.to_edge(DOWN)
+	self.add(object)
+	self.wait()
+```
+
+* In case you want to decrease the size of the border, so the element will be closer to the edge use: `.to_edge(DIRECTION, buff=NUMBER)`
+
+* Comment the predefined Constants are declared in: `./manimlib/constants.py`
+
+
+### Relative position
+
+#### move_to()
+
+```python
+	class PositionsExampleRelative(Scene):
+		def construct(self):
+		    grid = ScreenGrid()
+		    my_dot = Dot()
+		    
+		    referenceText = TextMobject("Destination")
+
+		    my_dot.move_to(-3*LEFT + 2*UP)
+
+		    referenceText.move_to(my_dot.get_center() + 5*RIGHT)
+
+		    self.add(grid,my_dot, referenceText)
+		    self.wait()
+```
+
+#### next_to()
+
+#### shift(DIRECTION)
+
+Moves the object with **one unit** towards the direction:
+
+my_dot.shift(RIGHT)
+
+
+
+## Rotating
+
+#### Rotate element around it's center
+
+```python
+	class RotateObject(Scene):
+		def construct(self):
+			textM = TextMobject("Text")
+			textC = TextMobject("Reference text")
+			textM.shift(UP)
+			textM.rotate(PI/4) # <- Radians
+			# You can use .rotate(45*DEGREES) too
+			self.play(Write(textM), Write(textC))
+			self.wait(2)
+			textM.rotate(PI/4)
+			self.wait(2)
+			textM.rotate(PI/4)
+			self.wait(2)
+			textM.rotate(PI/4)
+			self.wait(2)
+			textM.rotate(PI)
+			self.wait(2)
+
+```	
 
 ## Contstants
 
@@ -118,6 +219,3 @@ For adding new colors:
 ```bash
 ./manimlib/constants.py
 ```	
-
-
-
