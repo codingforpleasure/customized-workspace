@@ -28,7 +28,9 @@ Snippet description| how to invoke the snippet?
  Add table | `tb`
  Add angle brackets | `angle`
  Add space for table of content | `toc`
+ Add space for image in the center | `img-center`
  Add image in the center | `imgc`
+ Add gif animation in the center | `gif`
  Add link to url | `url`
  Add link to a specific section in current markdown document | `url2` ( i.e: [Link](#hotkeys) )
 
