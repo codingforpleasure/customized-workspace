@@ -15,10 +15,15 @@
             * [next_to()](#next_to)
             * [shift(DIRECTION)](#shiftdirection)
       * [Rotating](#rotating)
-            * [Rotate element around it's center](#rotate-element-around-its-center)
+         * [Rotate an element around it's center](#rotate-an-element-around-its-center)
+         * [Rotate an element with a point as a reference](#rotate-an-element-with-a-point-as-a-reference)
+      * [Flipping](#flipping)
+      * [Update functions](#update-functions)
+         * [Example 1](#example-1)
+         * [Example 2](#example-2)
       * [Contstants](#contstants)
 
-<!-- Added by: gil_diy, at: 2020-04-25T23:59+03:00 -->
+<!-- Added by: gil_diy, at: 2020-04-26T10:19+03:00 -->
 
 <!--te-->
 
@@ -189,7 +194,7 @@ my_dot.shift(RIGHT)
 
 ## Rotating
 
-#### Rotate element around it's center
+### Rotate an element around it's center
 
 ```python
 	class RotateObject(Scene):
@@ -211,6 +216,87 @@ my_dot.shift(RIGHT)
 			self.wait(2)
 
 ```	
+### Rotate an element with a point as a reference
+
+```python
+my_object.rotate(110*DEGREES, about_point = point)
+```
+## Flipping
+
+
+```python
+class FlipObject(Scene):
+	def construct(self):
+		textM = TextMobject("Text")
+		textM.flip(UP)
+		self.play(Write(textM))
+		self.wait(2)
+```
+
+## Update functions
+
+### Example 1
+
+```python
+class AddUpdater1(Scene):
+    def construct(self):
+        dot = Dot()
+        text = TextMobject("Label")
+        text.next_to(dot, RIGHT, buff=SMALL_BUFF)
+
+        self.add(dot, text)
+
+        # Update function
+        def update_text(obj):
+            obj.next_to(dot, RIGHT, buff=SMALL_BUFF)
+
+        # Add update function to the objects
+        # So now the text will always be to the right of the dot regardless
+        # of the point's position.
+        text.add_updater(update_text)
+
+        # Add the object again
+        self.add(text)
+        self.play(dot.shift, UP * 2)
+        # Remove update function`
+        text.remove_updater(update_text)
+        self.wait()
+```
+
+![Alt Text](animation_gifs/manim/AddUpdater1.gif)
+
+### Example 2
+
+```python
+class AddUpdater2(Scene):
+    def construct(self):
+        dot = Dot()
+        text = TextMobject("Label")
+        text.next_to(dot, RIGHT, buff=SMALL_BUFF)
+
+        self.add(dot, text)
+
+        # Update function
+        def update_text(obj):
+            obj.next_to(dot, RIGHT, buff=SMALL_BUFF)
+
+        # Add update function to the objects
+        # So now the text will always be to the right of the dot regardless
+        # of the point's position. this is type of grouping
+        text.add_updater(update_text)
+
+        # Add the object again
+        self.add(text)
+        self.play(dot.shift, UP * 2, run_time=1)
+        self.play(dot.shift, LEFT * 2, run_time=1)
+        self.play(Rotating(dot, radians=PI, about_point=ORIGIN), run_time=2)
+        # Remove update function`
+        text.remove_updater(update_text)
+        self.wait()
+```
+
+![Alt Text](animation_gifs/manim/AddUpdater2.gif)
+
 
 ## Contstants
 
