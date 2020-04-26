@@ -1,0 +1,9 @@
+<snippet>
+	<content><![CDATA[
+<p align="center">
+	![Alt Text](animation_gifs/manim/transformationTextv1.gif)
+</p>
+]]></content>
+	<tabTrigger>gif</tabTrigger>
+	<scope>text.html.markdown</scope>
+</snippet>
