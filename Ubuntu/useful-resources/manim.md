@@ -21,9 +21,13 @@
       * [Update functions](#update-functions)
          * [Example 1](#example-1)
          * [Example 2](#example-2)
+         * [Example 3](#example-3)
+         * [Example 4](#example-4)
+         * [Example 5](#example-5)
+         * [Example 6](#example-6)
       * [Contstants](#contstants)
 
-<!-- Added by: gil_diy, at: 2020-04-26T10:19+03:00 -->
+<!-- Added by: gil_diy, at: 2020-04-26T15:34+03:00 -->
 
 <!--te-->
 
@@ -100,8 +104,10 @@ class TransfromationText1V1(Scene):
         self.play(Transform(text_object1, text_object2))
         self.wait()
 ```
+<p align="center">
+	![Alt Text](animation_gifs/manim/transformationTextv1.gif)
+</p>
 
-![Alt Text](animation_gifs/manim/transformationTextv1.gif)
 
 ## animations
 
@@ -262,8 +268,10 @@ class AddUpdater1(Scene):
         text.remove_updater(update_text)
         self.wait()
 ```
+<p align="center">
+	![Alt Text](animation_gifs/manim/AddUpdater1.gif)
+</p>
 
-![Alt Text](animation_gifs/manim/AddUpdater1.gif)
 
 ### Example 2
 
@@ -294,8 +302,168 @@ class AddUpdater2(Scene):
         text.remove_updater(update_text)
         self.wait()
 ```
-
+<p align="center">
 ![Alt Text](animation_gifs/manim/AddUpdater2.gif)
+</p>
+
+
+### Example 3
+
+The function **UpdateFromFunc** can be only used within `play` function.
+
+i.e:
+
+```python
+class AddUpdater3(Scene):
+    def construct(self):
+        dot = Dot()
+        text = TextMobject("Label").next_to(dot, RIGHT, buff=SMALL_BUFF)
+
+        self.add(dot, text)
+
+        def update_text(obj):
+            obj.next_to(dot, RIGHT, buff=SMALL_BUFF)
+
+        # Only works in play
+        self.play(
+            dot.shift, UP * 2,
+            UpdateFromFunc(text, update_text)
+        )
+
+        self.play(dot.shift, LEFT * 2)
+
+        self.wait()
+```
+
+<!-- <p align="center">
+![Alt Text](animation_gifs/manim/AddUpdater3.gif)
+</p>
+ -->
+
+<p align="center;" style="width:400px;">
+  <img src="animation_gifs/manim/AddUpdater3.gif" title="tool tip here">
+</p>
+
+### Example 4
+
+```python
+class UpdateValueTracker1(Scene):
+    def construct(self):
+        theta = ValueTracker(PI /4)
+        line_1 = Line(ORIGIN, RIGHT * 3, color=RED)
+        line_2 = Line(ORIGIN, RIGHT * 3, color=BLUE)
+
+        line_2.rotate(theta.get_value(), about_point=ORIGIN)
+
+        line_2.add_updater(
+            lambda m: m.set_angle(
+                theta.get_value()
+            )
+        )
+
+        self.add(line_1, line_2)
+        self.play(theta.increment_value, PI / 2)
+        self.wait()
+```
+
+<p align="center" style="width:400px;" >
+  <img src="animation_gifs/manim/UpdateValueTracker1.gif" title="tool tip here">
+</p>
+
+### Example 5
+
+
+```python
+class UpdateValueTracker2(Scene):
+    CONFIG = {
+        "line_1_color": ORANGE,
+        "line_2_color": PINK,
+        "lines_size": 3.5,
+        "theta": PI / 2,
+        "increment_theta": PI / 2,
+        "final_theta": PI,
+        "radius": 0.7,
+        "radius_color": YELLOW,
+    }
+
+    def construct(self):
+        # Set objets
+        theta = ValueTracker(self.theta)
+        line_1 = Line(ORIGIN, RIGHT * self.lines_size, color=self.line_1_color)
+        line_2 = Line(ORIGIN, RIGHT * self.lines_size, color=self.line_2_color)
+
+        line_2.rotate(theta.get_value(), about_point=ORIGIN)
+        line_2.add_updater(
+            lambda m: m.set_angle(
+                theta.get_value()
+            )
+        )
+
+        angle = Arc(
+            radius=self.radius,
+            start_angle=line_1.get_angle(),
+            angle=line_2.get_angle(),
+            color=self.radius_color
+        )
+
+        # Show the objects
+
+        self.play(*[
+            ShowCreation(obj) for obj in [line_1, line_2, angle]
+        ])
+
+        # Set update function to angle
+
+        angle.add_updater(
+            lambda m: m.become(
+                Arc(
+                    radius=self.radius,
+                    start_angle=line_1.get_angle(),
+                    angle=line_2.get_angle(),
+                    color=self.radius_color
+                )
+            )
+        )
+        # Remember to add the objects again to the screen
+        # when you add the add_updater method.
+        self.add(angle)
+
+        self.play(theta.increment_value, self.increment_theta)
+        # self.play(theta.set_value,self.final_theta)
+
+        self.wait()
+```
+
+<p align="center;" style="width:300px;" >
+  <img src="animation_gifs/manim/UpdateValueTracker2.gif" title="tool tip here">
+</p>
+
+
+### Example 6
+
+```python
+class Succession2(Scene):
+    def construct(self):
+        text1 = TextMobject("Gil's")
+        text2 = TextMobject("successful")
+        text3 = TextMobject("company")
+        for text in text1, text2, text3:
+            text.scale(3)
+        self.add(text1)
+        self.play(
+            Succession(
+                Transform(text1, text2),
+                Transform(text1, text3),
+                lag_ratio=1.2
+            )
+        )
+        self.wait()
+```
+
+<p align="center;" style="width:300px;" >
+  <img src="animation_gifs/manim/Succession2.gif" title="tool tip here">
+</p>
+
 
 
 ## Contstants
