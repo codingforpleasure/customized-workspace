@@ -6,14 +6,16 @@
       * [Creating training data](#creating-training-data)
          * [Tesseract configurations](#tesseract-configurations)
          * [Page segmentation modes](#page-segmentation-modes)
+         * [OCR Engine mode](#ocr-engine-mode)
             * [Detect orientation and text (script)](#detect-orientation-and-text-script)
             * [Detect only digits](#detect-only-digits)
             * [Whitelisting characters](#whitelisting-characters)
             * [Blacklisting characters](#blacklisting-characters)
             * [Specify the language](#specify-the-language)
+            * [Some tips with image proceesing (important)](#some-tips-with-image-proceesing-important)
       * [Installing tesseract NOT from source, from ubuntu repositories:](#installing-tesseract-not-from-source-from-ubuntu-repositories)
 
-<!-- Added by: gil_diy, at: 2020-04-18T10:26+03:00 -->
+<!-- Added by: gil_diy, at: 2020-05-04T12:54+03:00 -->
 
 <!--te-->
 
@@ -23,6 +25,7 @@
 
 [TrainingTesseract-4.00](https://github.com/tesseract-ocr/tessdoc/blob/master/TrainingTesseract-4.00.md)
 
+[Reference on Medium](https://medium.com/@isurianuradha96/training-sinhala-language-with-tesseract-4-1-version-3cd96ce84b6a)
 
 ## Compiling tesseract from source:
 
@@ -31,8 +34,9 @@
 As mentioned [here](https://github.com/tesseract-ocr/tessdoc/blob/master/TrainingTesseract-4.00.md#additional-libraries-required), install the essential libraries:
 
 ```bash
-sudo apt-get install libicu-dev libpango1.0-dev libcairo2-dev
+sudo apt-get install libicu-dev libpango1.0-dev libcairo2-dev libtiff5-dev libpng-dev libtiff5-dev libwebp-dev libopenjp2-7-dev libgif-dev
 ```
+
 
 ### Building source 
 After you have installed the additional libraries, run:
@@ -86,6 +90,29 @@ and
 
 `tesstrain_utils.sh`
 
+
+The rest training tools are:
+
+
+Command | Description
+------------|-----
+combine_tessdata |
+dawg2wordlist |
+lstmeval |
+lstmtraining |
+merge_unicharsets |
+set_unicharset_properties | 
+text2image | 
+unicharset_extractor | 
+wordlist2dawg | 
+ambiguous_words | 
+classifier_tester | 
+mftraining | 
+shapeclustering | 
+tesstrain_utils.sh | 
+tesstrain.sh | 
+
+
 6. Now install tesseract on your system
 ```bash
 sudo make install
@@ -127,9 +154,15 @@ final step after building and fine-tunining it and combining it,
 copy the file which consist the final model `eng.traineddata` you trained to : `/usr/local/share/tessdata/`
 
 
+### 
+
+https://github.com/tesseract-ocr/tessdoc/blob/master/TrainingTesseract-4.00.md#additional-libraries-required
+
 ### Tesseract configurations
 
 ### Page segmentation modes
+
+PSM = Page segmentation modes 
 
 number | Description
 ------------|-----
@@ -146,9 +179,19 @@ number | Description
 10 |  Treat the image as a single character.
 11  |  Sparse text. Find as much text as possible in no particular order.
 12  |  Sparse text with OSD.
-13  |  Raw line. Treat the image as a single text line, bypassing hacks | that are Tesseract-specific.
+13  |  Raw line. Treat the image as a single text line, bypassing hacks that are Tesseract-specific.
 
 
+### OCR Engine mode
+
+OEM = OCR Engine mode
+
+code | Description
+------------|-----
+0  |  Legacy engine only.
+1  |  **Neural nets LSTM engine only.**
+2  |  Legacy + LSTM engines.
+3  |  Default, based on what is available.
 
 #### Detect orientation and text (script)
 ```python
@@ -191,6 +234,17 @@ for multiple languages just write:
 custom_config = r'-l heb+eng --psm 6'
 pytesseract.image_to_string(img, config=custom_config)
 ```
+
+#### Some tips with image proceesing (important)
+
+When you open a file with `kolorpaint` which was exported in opencv after applying binary threshold. After you have edited the image you should pay attention:
+**Export...**
+and more over 
+Pick filetype: **PNG** and make sure you have picked **Convert to Monochrome**.
+
+Otherwise it will convert the image to grayscale, and therefore will mess the tesseract ocr.
+``
+
 
 ## Installing tesseract NOT from source, from ubuntu repositories:
 ```bash
