@@ -26,16 +26,16 @@
 ```python
 import matplotlib.pyplot as plt
 
-ages_x = list(range(25:36))
+ages_x = list(range(25, 36))
 
-developer_salary_y = [38496,42000,46752, 49320, 53200, 56000, 62316, 64928, 67317, 68748, 73752]
+developer_salary_y = [38496, 42000, 46752, 49320, 53200, 56000, 62316, 64928, 67317, 68748, 73752]
 
 # The label metioned is for the legend
-plt.plot(agex_x, developer_salary_y, label = 'All Devs')
+plt.plot(ages_x, developer_salary_y, label='All Devs')
 
 python_developer_salary_y = [45732, 48876, 53850, 57287, 63016, 65998, 70003, 70000, 71496, 75370, 83640]
 
-plt.plot(agex_x, python_developer_salary_y, label = 'Python Devs')
+plt.plot(ages_x, python_developer_salary_y, label='Python Devs')
 
 plt.xlabel('Ages')
 plt.ylabel('Median Salary (USD)')
@@ -43,7 +43,7 @@ plt.title('Median Salary (USD) by Age')
 
 plt.legend()
 
-#Showing what we've plotted
+# Showing what we've plotted
 plt.show()
 
 ```
