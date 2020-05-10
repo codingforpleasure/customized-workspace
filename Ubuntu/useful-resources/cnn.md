@@ -37,9 +37,10 @@
          * [Creating checkpoint models](#creating-checkpoint-models)
          * [Early stopping](#early-stopping)
          * [Reducing Learning rate on plateau](#reducing-learning-rate-on-plateau)
+         * [Transfer learning](#transfer-learning)
       * [Resources](#resources)
 
-<!-- Added by: gil_diy, at: 2020-04-22T02:25+03:00 -->
+<!-- Added by: gil_diy, at: 2020-05-11T01:32+03:00 -->
 
 <!--te-->
 # CNN
@@ -318,7 +319,7 @@ Reduces overfitting due to the increased varity in the training dataset.
 ### Benefits of Data Augmentation
 * Take a small dataset and make it much larger!
 
-Keras' buil-in **Data Augmentation API** performs a just-in-time augumented image dataset. This means images aren't created and dumped to a directory (which will be wasteful storage). Instead it generates this dataset during the training process.
+Keras' built-in **Data Augmentation API** performs a just-in-time augumented image dataset. This means images aren't created and dumped to a directory (which will be wasteful storage). Instead it generates this dataset during the training process.
 
 
 [Types of Data Augmentation](https://keras.io/preprocessing/image/)
@@ -326,11 +327,24 @@ Keras' buil-in **Data Augmentation API** performs a just-in-time augumented imag
 * We use the above code to create our generator with types of augementation to perform specified in the input arguments
 
 ```python
+
+TRAINING_DIR = "/tmp/cats-v-dogs/training/"
+
 train_detection = ImageDataGenerator(
   rescale = 1./255,
+  rotation_range = 40, # The image will rotate by an angle between 0 to 40 degrees
+  width_shift_range = 0.2, # Randomally shift the image by most 20 percent horizontally
+  height_shift_range = 0.2, # Randomally shift the image by 20 most percent vertically
   shear_range = 0.2,
   zoom_range = 0.2,
-  horizontal_flip = True)
+  horizontal_flip = True, # Mirroring at random
+  fill_mode = 'nearest' # For the pixels that have might been lost by those augemtaion's operations
+  )
+
+train_generator = train_datagen.flow_from_directory(TRAINING_DIR,
+                                                    batch_size=100,
+                                                    class_mode='binary',
+                                                    target_size=(150, 150))
 
 test_datagen = ImageDataGenerator(rescale = 1. / 255)
 ```
@@ -444,6 +458,15 @@ history = model.fit(x_train, y_train,
   callbacks = callbacks,
   validation_data = (x_test, y_test)
   )
+
+# Or you can do this in case you have used flow_from_directory() function before
+# for train_generator and validation_generator.
+
+history = model.fit(train_generator,
+                              epochs=15,
+                              verbose=1,
+                              validation_data=validation_generator)
+
 ```
 
 ### Early stopping 
@@ -475,8 +498,68 @@ from keras.callbacks import ReducceLROnPlateau
 reduce_learning_rate = ReducceLROnPlateau(monitor = 'val_loss', factor = 0.2, patience = 3, verbose = 1, min_delta = 0.0001)
 ```
 
+### Transfer learning
+
+Can you use Image augmentation with Transfer Learning? 
+Yes. it's pre-trained layers that are frozen, So you can augment your images as you train the bottom layers of the DNN with them.
+
+You're going to add a DNN a deep neural network underneath that,
+and then you're just going to retrain for those lower levels,
+and as a result using all of these. you're going to be doing all that to be able
+to make the classifiers that you've been building in the course to date
+much more efficient and maybe even quicker to be able to reach higher levels of
+accuracy than if you're training it from scratch.
+
+```python
+
+from tensorflow.keras.applications.inceptions_v3 import inceptions_v3
+
+local_weights_file = '/tmp/inceptions_v3_weights_tf_dim_ordering_tf_kernels_notop.h5'
+
+# specify that you don't want to use the built-in weights,
+# but the snapshot that you've just downloaded
+pre_trained_model = inceptionsV3(input_shape = (150,150,3),
+                                  include_top = False,
+                                  weights = None)
+
+pre_trained_model.load_weights(local_weights_file)
+
+# Now that I have my pretrained model instantiated, 
+# I can iterate through its layers and lock them, 
+# saying that they're not going to be trainable with this code.
+for layer in pre_trained_model.layers:
+  layer.trainable = False
+
+
+## You can then print a summary of your pretrained model
+pre_trained_model.summary()
+```
+
+```python
+# grabbing the layer called mixed7 and take it to output
+last_layer = pre_trained_model.get_layer('mixed7')
+last_output = last_layer.output
+
+x = layers.Flatten()(last_output)
+x = layers.Dense(1024, activation = 'relu')(x)
+
+# The idea behind the dropout is that layers in a neural network can sometimes
+# end up having similar weights and possible impact each other leading to # over-fitting. By dropping some out that has the effect of neighbors not affecting each other too much and and potentially removing overfitting
+x = layers.Dropout(0.2)(x) ## Adding dropout precentage of 20% 
+x = layers.Dense(1, activation = 'sigmoid')(x)
+
+model = Model(pre_trained_model.input, x)
+model_compile(optimizer = RMSprop(lr=0.0001),
+              loss = 'binary_crossentropy',
+              metrics = ['acc'])
+```
 
 ## Resources
+
+
+[Very nice notes](https://indoml.com/2018/03/07/student-notes-convolutional-neural-networks-cnn-introduction/)
+
+[Google images downloader](https://github.com/hardikvasa/google-images-download)
 
 [25 Open Datasets](https://www.analyticsvidhya.com/blog/2018/03/comprehensive-collection-deep-learning-datasets/)
 
