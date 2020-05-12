@@ -4,6 +4,7 @@
          * [Data representation](#data-representation)
             * [Key attributes](#key-attributes)
          * [Creating](#creating)
+            * [Creating a 3d array](#creating-a-3d-array)
          * [Random generation](#random-generation)
             * [randn](#randn)
             * [rand](#rand)
@@ -35,7 +36,7 @@
          * [Saving our datasets to NPZ files](#saving-our-datasets-to-npz-files)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: 2020-05-12T16:19+03:00 -->
+<!-- Added by: gil_diy, at: 2020-05-12T17:19+03:00 -->
 
 <!--te-->
 
@@ -133,7 +134,21 @@ assert(a.shape == (5,1))
 data.reshape((-1,data.shape[0])
 
 ```
+#### Creating a 3d array
 
+The most efficient way is to initialize the 3d array first and then sequentially write your data into it. 
+
+```python
+import numpy as np
+
+my_array = np.arange(9.0)
+single_matrix =  np.array_split(my_array, 3)
+
+arr = np.empty(shape=(2, 3, 3))  # Initilaze a 3d array (with two layers)
+
+arr[0,:,:] = single_matrix # Adding to first layer
+arr[1,:,:] = single_matrix # Adding to second layer
+```
 
 
 ### Random generation
