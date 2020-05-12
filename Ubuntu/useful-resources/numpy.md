@@ -23,15 +23,19 @@
             * [<strong>4. Some simple slicing</strong>](#4-some-simple-slicing)
             * [<strong>5. argmin, argmax, argsort</strong>](#5-argmin-argmax-argsort)
       * [reshape](#reshape)
+      * [splitting data](#splitting-data)
       * [Multiplication:](#multiplication)
          * [Vectorized dot product of vectors](#vectorized-dot-product-of-vectors)
          * [Vectorized outer product](#vectorized-outer-product)
          * [Vectorized elementwise multiplication](#vectorized-elementwise-multiplication)
          * [Vectorized general dot product](#vectorized-general-dot-product)
       * [Vectorized elementwise](#vectorized-elementwise)
+      * [Math functions](#math-functions)
+      * [NPZ files](#npz-files)
+         * [Saving our datasets to NPZ files](#saving-our-datasets-to-npz-files)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: 2020-02-17T15:33+02:00 -->
+<!-- Added by: gil_diy, at: 2020-05-12T16:19+03:00 -->
 
 <!--te-->
 
@@ -414,6 +418,17 @@ X_flatten of shape (b ∗∗ c ∗∗ d, a) is to use:
 X_flatten = X.reshape(X.shape[0], -1).T      # X.T is the transpose of X
 ```
 
+## splitting data
+```python
+  x = np.arange(8.0)
+  np.array_split(x, 3)
+
+  # We will recieve:
+  # `[array([0.,  1.,  2.]), array([3.,  4.,  5.]), array([6.,  7.])]`
+```
+
+
+
 ## Multiplication:
 
 ### Vectorized dot product of vectors
@@ -520,14 +535,29 @@ This **would fail** since **broadcast can't be done** .
 
 ## Vectorized elementwise
 
-Operatin | Explanation
+Operation | Explanation
 ------------|-----
  multiply | element-description
  divide | element-description
 
 
+## Math functions
 
+Description | Function
+------------|-----
+Convert from radian to degree | `np.degree(np.pi/2)`
 
+## NPZ files
+
+### Saving our datasets to NPZ files
+
+np.savez('cats_vs_dogs_training_data.npz', np.array(training_images))
+np.savez('cats_vs_dogs_training_labels.npz',np.array(training_labels))
+np.savez('cats_vs_dogs_test_data.npz', np.array(test_images))
+np.savez('cats_vs_dogs_test_labels.npz', np.array(test_labels))
+
+def load_data_training_and_test(datasetname):
+  npzfile = np.load(datasetname = "_training_data.npz")
 ## Reference
 
 **Very useful:**
