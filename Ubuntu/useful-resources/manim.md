@@ -26,9 +26,25 @@
          * [Example 5](#example-5)
          * [Example 6](#example-6)
          * [Example 7](#example-7)
+      * [Modifying the config (default values)](#modifying-the-config-default-values)
+      * [Plots](#plots)
+         * [Plot 2D](#plot-2d)
+            * [Plot example 1](#plot-example-1)
+            * [Plot example 2](#plot-example-2)
+         * [Plots 3D](#plots-3d)
+            * [Setting Camera angle:](#setting-camera-angle)
+               * [Plot example 1](#plot-example-1-1)
+               * [Plot example 2](#plot-example-2-1)
+               * [Plot example 3 With distance](#plot-example-3-with-distance)
+            * [Parametric curve](#parametric-curve)
+         * [Surfaces plots](#surfaces-plots)
       * [Contstants](#contstants)
+      * [Coordinates systems](#coordinates-systems)
+         * [Polar coordinate](#polar-coordinate)
+         * [Cylindrical coordinate system](#cylindrical-coordinate-system)
+         * [Spherical coordinate system](#spherical-coordinate-system)
 
-<!-- Added by: gil_diy, at: 2020-04-26T16:16+03:00 -->
+<!-- Added by: gil_diy, at: 2020-05-13T13:38+03:00 -->
 
 <!--te-->
 
@@ -341,7 +357,7 @@ class AddUpdater3(Scene):
 </p>
  -->
 
-<p align="center;" style="width:400px;">
+<p align="center">
   <img src="animation_gifs/manim/AddUpdater3.gif" title="tool tip here">
 </p>
 
@@ -366,8 +382,8 @@ class UpdateValueTracker1(Scene):
         self.play(theta.increment_value, PI / 2)
         self.wait()
 ```
-
-<p align="center" style="width:400px;" >
+<!-- style="width:400px; -->
+<p align="center"> 
   <img src="animation_gifs/manim/UpdateValueTracker1.gif" title="tool tip here">
 </p>
 
@@ -435,7 +451,9 @@ class UpdateValueTracker2(Scene):
         self.wait()
 ```
 
-<p align="center;" style="width:300px;" >
+<!-- style="width:300px; -->
+
+<p align="center;" >
   <img src="animation_gifs/manim/UpdateValueTracker2.gif" title="tool tip here">
 </p>
 
@@ -490,10 +508,382 @@ class TriangleScene(Scene):
         self.wait()
 ```
 
-<p align="center;" style="width:300px;" >
+
+<!-- style="width:300px;" -->
+<p align="center" >
   <img src="animation_gifs/manim/TriangleScene.gif" title="tool tip here">
 </p>
 
+## Modifying the config (default values)
+```python
+class ConfigExample(Scene):
+    CONFIG={
+        "camera_config": {"Background_color":RED},
+        ...
+    }
+```
+
+## Plots
+
+Most of the parameters for the Graph appears in the file `graph_scene.py`,
+
+### Plot 2D
+#### Plot example 1
+
+```python
+class Plot2(GraphScene):
+    CONFIG = {
+        "y_max" : 50,
+        "y_min" : 0,
+        "x_max" : 7,
+        "x_min" : 0,
+        "y_tick_frequency" : 5,
+        "axes_color" : BLUE,
+        "x_axis_label" : "$t$",
+        "y_axis_label" : "$f(t)$",
+    }
+    def construct(self):
+        self.setup_axes()
+        graph = self.get_graph(lambda x : x**2, color = GREEN)
+        self.play(
+            ShowCreation(graph),
+            run_time = 2
+        )
+        self.wait()
+        
+    def setup_axes(self):
+        # Add this line
+        GraphScene.setup_axes(self) 
+        # Parametters of labels
+        #   For x
+        init_label_x = 2
+        end_label_x = 7
+        step_x = 1
+        #   For y
+        init_label_y = 20
+        end_label_y = 50
+        step_y = 5
+        # Position of labels
+        #   For x
+        self.x_axis.label_direction = DOWN #DOWN is default
+        #   For y
+        self.y_axis.label_direction = LEFT
+        # Add labels to graph
+        #   For x
+        self.x_axis.add_numbers(*range(
+                                        init_label_x,
+                                        end_label_x+step_x,
+                                        step_x
+                                    ))
+        #   For y
+        self.y_axis.add_numbers(*range(
+                                        init_label_y,
+                                        end_label_y+step_y,
+                                        step_y
+                                    ))
+        #   Add Animation
+        self.play(
+            ShowCreation(self.x_axis),
+            ShowCreation(self.y_axis)
+        )
+```
+
+<p align="center" >
+  <img src="animation_gifs/manim/Plot_example1.gif" title="tool tip here">
+</p>
+
+
+#### Plot example 2
+
+```python
+# Helper function
+def Range(in_val, end_val, step=1):
+    return list(np.arange(in_val, end_val + step, step))
+
+class PlotSinCos(GraphScene):
+    CONFIG = {
+        "y_max" : 1.5,
+        "y_min" : -1.5,
+        "x_max" : 3*PI/2,
+        "x_min" : -3*PI/2,
+        "y_tick_frequency" : 0.5,
+        "x_tick_frequency" : PI/2,
+        "graph_origin" : ORIGIN,
+        "y_axis_label": None, # Don't write y axis label
+        "x_axis_label": None,
+    }
+    def construct(self):
+        self.setup_axes()
+        plotSin = self.get_graph(lambda x : np.sin(x), 
+                                    color = GREEN,
+                                    x_min=-4,
+                                    x_max=4,
+                                )
+        plotCos = self.get_graph(lambda x : np.cos(x), 
+                                    color = GRAY,
+                                    x_min=-PI,
+                                    x_max=0,
+                                )
+        plotSin.set_stroke(width=3) # width of line
+        plotCos.set_stroke(width=2)
+        # Animation
+        for plot in (plotSin,plotCos):
+            self.play(
+                    ShowCreation(plot),
+                    run_time = 2
+                )
+        self.wait()
+
+    def setup_axes(self):
+        GraphScene.setup_axes(self)
+        # width of edges
+        self.x_axis.set_stroke(width=2)
+        self.y_axis.set_stroke(width=2)
+        # color of edges
+        self.x_axis.set_color(RED)
+        self.y_axis.set_color(YELLOW)
+        # Add x,y labels
+        func = TexMobject("\\sin\\theta")
+        var = TexMobject("\\theta")
+        func.set_color(BLUE)
+        var.set_color(PURPLE)
+        func.next_to(self.y_axis,UP)
+        var.next_to(self.x_axis,RIGHT+UP)
+        # Y labels
+        self.y_axis.label_direction = LEFT*1.5
+        self.y_axis.add_numbers(*[-1,1])
+        #Parametters of x labels
+        init_val_x = -3*PI/2
+        step_x = PI/2
+        end_val_x = 3*PI/2
+        # List of the positions of x labels
+        values_decimal_x=Range(init_val_x,end_val_x,step_x)
+        # List of tex objects
+        list_x=TexMobject("-\\frac{3\\pi}{2}", #   -3pi/2
+                            "-\\pi", #              -pi 
+                            "-\\frac{\\pi}{2}", #   -pi/2
+                            "\\,", #                 0 (space)
+                            "\\frac{\\pi}{2}", #     pi/2
+                            "\\pi",#                 pi
+                            "\\frac{3\\pi}{2}" #     3pi/2
+                          )
+        #List touples (position,label)
+        values_x = [(i,j)
+            for i,j in zip(values_decimal_x,list_x)
+        ]
+        self.x_axis_labels = VGroup()
+        for x_val, x_tex in values_x:
+            x_tex.scale(0.7)
+            if x_val == -PI or x_val == PI: #if x is equals -pi or pi
+                x_tex.next_to(self.coords_to_point(x_val, 0), 2*DOWN) #Put 2*Down
+            else: # In another case
+                x_tex.next_to(self.coords_to_point(x_val, 0), DOWN)
+            self.x_axis_labels.add(x_tex)
+
+        self.play(
+            *[Write(objeto)
+            for objeto in [
+                    self.y_axis,
+                    self.x_axis,
+                    self.x_axis_labels,
+                    func,var
+                ]
+            ],
+            run_time=2
+        )
+```
+
+<p align="center" >
+  <img src="animation_gifs/manim/Plot_example2.gif" title="tool tip here">
+</p>
+
+### Plots 3D
+
+With 3D Plots we have an actual camera,
+We can eaily set it by:
+
+`self.set_camera_orientation(phi=0 * DEGREES)`
+
+You **must** add this method:
+
+```python
+def get_axis(self, min_val, max_val, axis_config):
+    new_config = merge_config([
+        axis_config,
+        {"x_min": min_val, "x_max": max_val},
+        self.number_line_config,
+    ])
+    return NumberLine(**new_config)
+```
+
+#### Setting Camera angle:
+##### Plot example 1
+
+```python
+class CameraPosition_above(ThreeDScene):
+    def construct(self):
+        axes = ThreeDAxes()
+        circle=Circle()
+        self.set_camera_orientation(phi=0 * DEGREES)
+        self.play(ShowCreation(circle),ShowCreation(axes))
+        self.wait()
+```
+
+<p align="center" >
+  <img src="animation_gifs/manim/CameraPosition_above.gif" title="tool tip here">
+</p>
+
+
+##### Plot example 2
+
+```python
+class CameraPosition3(ThreeDScene):
+    def construct(self):
+        axes = ThreeDAxes()
+        circle=Circle()
+        self.set_camera_orientation(phi=80 * DEGREES,theta=45*DEGREES)
+        self.play(ShowCreation(circle),ShowCreation(axes))
+        self.wait()
+```
+
+<p align="center" >
+  <img src="animation_gifs/manim/CameraPosition3.gif" title="tool tip here">
+</p>
+
+##### Plot example 3 With distance
+
+```python
+class CameraPosition4(ThreeDScene):
+    def construct(self):
+        axes = ThreeDAxes()
+        circle=Circle()
+        self.set_camera_orientation(phi=80 * DEGREES,theta=45*DEGREES,distance=6)
+        self.play(ShowCreation(circle),ShowCreation(axes))
+        self.wait()
+```
+
+#### Parametric curve
+
+```python
+class ParametricCurve1(ThreeDScene):
+    def construct(self):
+        curve1=ParametricFunction(
+                lambda u : np.array([
+                1.2*np.cos(u),
+                1.2*np.sin(u),
+                u/2
+            ]),color=RED,t_min=-TAU,t_max=TAU,
+            )
+        curve2=ParametricFunction(
+                lambda u : np.array([
+                1.2*np.cos(u),
+                1.2*np.sin(u),
+                u
+            ]),color=RED,t_min=-TAU,t_max=TAU,
+            )
+        axes = ThreeDAxes()
+
+        self.add(axes)
+
+        self.set_camera_orientation(phi=80 * DEGREES,theta=-60*DEGREES)
+        self.begin_ambient_camera_rotation(rate=0.1)
+        self.play(ShowCreation(curve1))
+        self.wait()
+        self.play(Transform(curve1,curve2),rate_func=there_and_back,run_time=3)
+        self.wait()
+```
+
+<p align="center" >
+  <img src="animation_gifs/manim/ParametricCurve1.gif" title="tool tip here">
+</p>
+
+### Surfaces plots
+
+```python
+class SurfacesAnimation(ThreeDScene):
+    def construct(self):
+        axes = ThreeDAxes()
+        cylinder = ParametricSurface(
+            lambda u, v: np.array([
+                np.cos(TAU * v),
+                np.sin(TAU * v),
+                2 * (1 - u)
+            ]),
+            resolution=(6, 32)).fade(0.5)  # Resolution of the surfaces
+
+        paraboloid = ParametricSurface(
+            lambda u, v: np.array([
+                np.cos(v) * u,
+                np.sin(v) * u,
+                u ** 2
+            ]), v_max=TAU,
+            checkerboard_colors=[PURPLE_D, PURPLE_E],
+            resolution=(10, 32)).scale(2)
+
+        para_hyp = ParametricSurface(
+            lambda u, v: np.array([
+                u,
+                v,
+                u ** 2 - v ** 2
+            ]), v_min=-2, v_max=2, u_min=-2, u_max=2, checkerboard_colors=[BLUE_D, BLUE_E],
+            resolution=(15, 32)).scale(1)
+
+        cone = ParametricSurface(
+            lambda u, v: np.array([
+                u * np.cos(v),
+                u * np.sin(v),
+                u
+            ]), v_min=0, v_max=TAU, u_min=-2, u_max=2, checkerboard_colors=[GREEN_D, GREEN_E],
+            resolution=(15, 32)).scale(1)
+
+        hip_one_side = ParametricSurface(
+            lambda u, v: np.array([
+                np.cosh(u) * np.cos(v),
+                np.cosh(u) * np.sin(v),
+                np.sinh(u)
+            ]), v_min=0, v_max=TAU, u_min=-2, u_max=2, checkerboard_colors=[YELLOW_D, YELLOW_E],
+            resolution=(15, 32))
+
+        ellipsoid = ParametricSurface(
+            lambda u, v: np.array([
+                1 * np.cos(u) * np.cos(v),
+                2 * np.cos(u) * np.sin(v),
+                0.5 * np.sin(u)
+            ]), v_min=0, v_max=TAU, u_min=-PI / 2, u_max=PI / 2, checkerboard_colors=[TEAL_D, TEAL_E],
+            resolution=(15, 32)).scale(2)
+
+        sphere = ParametricSurface(
+            lambda u, v: np.array([
+                1.5 * np.cos(u) * np.cos(v),
+                1.5 * np.cos(u) * np.sin(v),
+                1.5 * np.sin(u)
+            ]), v_min=0, v_max=TAU, u_min=-PI / 2, u_max=PI / 2, checkerboard_colors=[RED_D, RED_E],
+            resolution=(15, 32)).scale(2)
+
+        self.set_camera_orientation(phi=75 * DEGREES)
+        self.begin_ambient_camera_rotation(rate=0.2)
+
+        self.add(axes)
+        self.play(Write(sphere))
+        self.wait()
+        self.play(ReplacementTransform(sphere, ellipsoid))
+        self.wait()
+        self.play(ReplacementTransform(ellipsoid, cone))
+        self.wait()
+        # self.play(ReplacementTransform(cone, hip_one_side))
+        # self.wait()
+        # self.play(ReplacementTransform(hip_one_side, para_hyp))
+        # self.wait()
+        # self.play(ReplacementTransform(para_hyp, paraboloid))
+        # self.wait()
+        # self.play(ReplacementTransform(paraboloid, cylinder))
+        # self.wait()
+        self.play(FadeOut(cylinder))
+```
+
+<p align="center" >
+  <img src="animation_gifs/manim/SurfacesAnimation.gif" title="tool tip here">
+</p>
 
 ## Contstants
 
@@ -502,3 +892,18 @@ For adding new colors:
 ```bash
 ./manimlib/constants.py
 ```	
+
+## Coordinates systems
+
+### Polar coordinate 
+system
+
+[Link](https://en.wikipedia.org/wiki/Polar_coordinate_system#Converting_between_polar_and_Cartesian_coordinates)
+
+### Cylindrical coordinate system
+
+[Link](https://en.wikipedia.org/wiki/Cylindrical_coordinate_system#Cartesian_coordinates)
+
+### Spherical coordinate system
+
+[Link](https://en.wikipedia.org/wiki/Spherical_coordinate_system#Cartesian_coordinates)
