@@ -1,6 +1,6 @@
 <!--ts-->
    * [Manim](#manim)
-      * [Options](#options)
+      * [Execution options](#execution-options)
       * [Operations](#operations)
          * [Add/remove text from the screen without animation](#addremove-text-from-the-screen-without-animation)
          * [Adding text to the screen with animation](#adding-text-to-the-screen-with-animation)
@@ -43,8 +43,9 @@
          * [Polar coordinate](#polar-coordinate)
          * [Cylindrical coordinate system](#cylindrical-coordinate-system)
          * [Spherical coordinate system](#spherical-coordinate-system)
+      * [Shapes should do](#shapes-should-do)
 
-<!-- Added by: gil_diy, at: 2020-05-13T13:38+03:00 -->
+<!-- Added by: gil_diy, at: 2020-05-18T08:52+03:00 -->
 
 <!--te-->
 
@@ -55,7 +56,7 @@
 pipenv run python manim.py example_scenes.py SquareToCircle -pl
 ```
 
-## Options
+## Execution options 
 
 shorthand | option | Description
 ------------|----- |-------------
@@ -518,10 +519,38 @@ class TriangleScene(Scene):
 ```python
 class ConfigExample(Scene):
     CONFIG={
-        "camera_config": {"Background_color":RED},
+		"camera_config": {
+			"Background_color":RED,
+			"shading_factor": 1.0, ### Unclear what is shading factor??
+			"background_image": "chalkboard", ## Check this too
+			"background_opacity" : 1, ### Check this
+			"fill_opacity": 1 # Check this
+			},
+		"icon_style":{
+			"background_stroke_width": 5,
+			"background_stroke_color": BLACK,
+			},
+		"axis_config": {
+		"color": LIGHT_GREY,
+		"include_tip": True,
+		"exclude_zero_from_default_numbers": True,
+			 },
+		"axis_config": {
+		"stroke_color": WHITE,
+		"stroke_width": 2,
+		"include_ticks": False,
+		"include_tip": False,
+		"line_to_number_buff": SMALL_BUFF,
+		"label_direction": DR,
+		"number_scale_val": 0.5,
+			 }
+
         ...
     }
 ```
+
+sum of the properties can be seen in: `manimlib/scene/graph_scene.py`
+
 
 ## Plots
 
@@ -896,7 +925,6 @@ For adding new colors:
 ## Coordinates systems
 
 ### Polar coordinate 
-system
 
 [Link](https://en.wikipedia.org/wiki/Polar_coordinate_system#Converting_between_polar_and_Cartesian_coordinates)
 
@@ -907,3 +935,10 @@ system
 ### Spherical coordinate system
 
 [Link](https://en.wikipedia.org/wiki/Spherical_coordinate_system#Cartesian_coordinates)
+
+## Shapes should do
+
+[Lemniscate](https://he.wikipedia.org/wiki/%D7%9C%D7%9E%D7%A0%D7%99%D7%A1%D7%A7%D7%98%D7%94)
+
+[heart](https://mathworld.wolfram.com/HeartCurve.html)
+
