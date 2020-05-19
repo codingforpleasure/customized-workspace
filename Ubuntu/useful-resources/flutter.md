@@ -8,6 +8,7 @@
       * [Project hierarchy:](#project-hierarchy)
       * [Remove debug banner](#remove-debug-banner)
       * [Layout in flutter](#layout-in-flutter)
+      * [Modify Launcher Icon in Flutter](#modify-launcher-icon-in-flutter)
       * [Useful widgets](#useful-widgets)
          * [Widgets for layout](#widgets-for-layout)
          * [Typography Widgets](#typography-widgets)
@@ -49,7 +50,7 @@
       * [Basic commands in flutter cli](#basic-commands-in-flutter-cli)
       * [Nice sites:](#nice-sites)
 
-<!-- Added by: gil_diy, at: 2020-03-13T00:05+02:00 -->
+<!-- Added by: gil_diy, at: 2020-05-19T10:05+03:00 -->
 
 <!--te-->
 
@@ -76,6 +77,13 @@ holds the dependencies of your project.
 
 [Link](https://flutter.dev/docs/development/ui/layout)
 
+## Modify Launcher Icon in Flutter
+
+To modify the icon of the app change the images (per resolution) in the following path:
+For Android the relevant path is: `./android/app/src/main/res`
+For IOS the relevant path is: `./ios/Runner/Assets.xcassets/AppIcon.appiconset`
+
+
 ## Useful widgets
 
 ### Widgets for layout
@@ -96,7 +104,7 @@ Flexible | Flexible for resizing your widgets in rows and columns | [Link](https
 ShaderMask | ShaderMasks let you apply a shader to one or more widgets in the tree | [Link](https://www.youtube.com/watch?v=7sUL66pTQ7Q&list=PLjxrf2q8roU23XGwz3Km7sQZFTdB996iG&index=71)
 Image| Use the Image widget to render an image to the screen, wherever it may come from: assets, network, file system, RAM  | [Link](https://www.youtube.com/watch?v=7oIAs-0G4mw&list=PLjxrf2q8roU23XGwz3Km7sQZFTdB996iG&index=66)
 Stack| Stack allows you to overlay multiple widgets on top of each other | [Link](https://www.youtube.com/watch?v=liEGSeD3Zt8)
-
+LimitedBox | The LimitedBox widget provides size constraints to widgets in cases where their dimensions are unbounded (Row, Column) | [Link](https://www.youtube.com/watch?v=uVki2CIzBTs)
 AlertDialog |Show Alert Dialog |[Link](https://www.youtube.com/watch?v=75CsnyRXf5I)
 
 ### Typography Widgets
@@ -182,6 +190,7 @@ FlatButton |
 SingleChildScrollView |
 ListView |
 Expanded |
+SizedBox(height: 30)
 
 
 ```flutter
@@ -316,6 +325,7 @@ crossAxisAlignment: CrossAxisAlignment.stretch
 
 ### Icons
 [Material Design Icons](https://material.io/resources/icons/?style=baseline)
+[Material Design Icons](https://feathericons.com)
 
 convert image into icon:
 
