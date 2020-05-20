@@ -18,6 +18,8 @@
       * [Loop](#loop)
       * [Collections](#collections)
          * [List](#list)
+            * [Add elements to a list](#add-elements-to-a-list)
+            * [List of objects](#list-of-objects)
             * [Generating a list](#generating-a-list)
       * [inbuilt list functions](#inbuilt-list-functions)
          * [Set](#set)
@@ -25,6 +27,7 @@
             * [Generating a map](#generating-a-map)
       * [Function](#function)
          * [Passing function as an argument](#passing-function-as-an-argument)
+         * [Return list of objects](#return-list-of-objects)
       * [Class](#class)
          * [Private members](#private-members)
          * [Inheritance](#inheritance)
@@ -34,7 +37,7 @@
       * [Async programming](#async-programming)
       * [Conventions](#conventions)
 
-<!-- Added by: gil_diy, at: 2019-10-05T23:09+03:00 -->
+<!-- Added by: gil_diy, at: 2020-05-20T22:54+03:00 -->
 
 <!--te-->
 
@@ -140,6 +143,19 @@ for (var n in names){
 }
 ```
 
+#### Add elements to a list 
+```bash
+List list1 = [24, 'Hello', 84];
+List list2 = [41, 65];
+    
+//join list2 to list1
+list1.addAll(list2); 
+
+# Here we are adding a single number
+list1.add(5555);  
+```
+
+#### List of objects
 
 ```bash
 List <String> names = ['Jack', 'Jill'];
@@ -319,6 +335,13 @@ void main() {
 
 ```
 
+
+### Return list of objects
+```
+<List<object>> getProducts(){
+
+}
+```
 ## Class
 
 ### Private members
