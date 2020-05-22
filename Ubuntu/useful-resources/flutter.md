@@ -62,6 +62,9 @@ in the `pubspec.yaml`
 
 holds the dependencies of your project.
 
+The actual packages are located and installed in:
+`./External Libraries/Flutter Plugins`
+
 ## Project hierarchy:
 
 <p align="center"> <!-- style="width:400px;" -->
