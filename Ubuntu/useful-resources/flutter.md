@@ -50,7 +50,7 @@
       * [Basic commands in flutter cli](#basic-commands-in-flutter-cli)
       * [Nice sites:](#nice-sites)
 
-<!-- Added by: gil_diy, at: 2020-05-19T10:05+03:00 -->
+<!-- Added by: gil_diy, at: 2020-05-22T20:38+03:00 -->
 
 <!--te-->
 
@@ -379,14 +379,28 @@ Shortcut | Description
 
 #### Stateful widget
 
-We can tap into each of these stages in the lifecycle if we wanted different things to happen at various times. I have listed here three common hooks:
+We can tap into each of these stages in the lifecycle if we wanted different things to happen at various times. I have listed here three common hooks which gets called the following order:
 
-* **initState()** - which gets triggered when that state initally gets initialized.
+* **initState()** - Gets triggered when that state initally gets initialized.
 
-* **build()** - which gets triggered when the widgets are actually built and will show up on screen.
+```bash
+@override
+void initState(){
+  super.initState();
+  print('initState was called.');
+}
+```
+
+* **build()** - which gets triggered when the widgets are actually built and will show up on screen. the build is the most freuqent used hook.
 
 * **deactivate()** -  which gets called when that statefull widget gets destroyed.
-
+```bash
+@override
+void deactivate(){
+  super.deactivate();
+  print('deactivate called');
+}
+```
 
 **Comment:** There are more hooks, which i haven't mentioned here.
 
@@ -447,6 +461,12 @@ OS | Path
 Navigator.push(context, MaterialPageRoute(builder: (context) {
   return myNewNextScreen();
 })
+```
+
+```bash
+onPressed:(){
+  Navigator.pop(context);
+}
 ```
 
 ## Setting up RTL
