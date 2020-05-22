@@ -33,15 +33,17 @@
       * [Variables in Dart](#variables-in-dart)
       * [The correct file structure in flutter app](#the-correct-file-structure-in-flutter-app)
       * [Widget resource](#widget-resource)
-         * [Boiler plate](#boiler-plate)
       * [Hotkeys](#hotkeys)
-         * [Widget lifecycle](#widget-lifecycle)
-            * [Stateless widget](#stateless-widget)
-            * [Stateful widget](#stateful-widget)
+         * [Boiler plate](#boiler-plate)
+      * [Widget lifecycle](#widget-lifecycle)
+         * [Stateless widget](#stateless-widget)
+         * [Stateful widget](#stateful-widget)
          * [Setting state](#setting-state)
          * [Useful](#useful)
+      * [Exceptions](#exceptions)
+         * [Try and Catch block](#try-and-catch-block)
       * [Emulator](#emulator)
-      * [Permissions](#permissions)
+         * [Permissions](#permissions)
       * [Navigation](#navigation)
       * [Setting up RTL](#setting-up-rtl)
       * [Styled text with Flutter](#styled-text-with-flutter)
@@ -50,7 +52,7 @@
       * [Basic commands in flutter cli](#basic-commands-in-flutter-cli)
       * [Nice sites:](#nice-sites)
 
-<!-- Added by: gil_diy, at: 2020-05-22T20:38+03:00 -->
+<!-- Added by: gil_diy, at: 2020-05-22T21:14+03:00 -->
 
 <!--te-->
 
@@ -353,11 +355,7 @@ convert image into icon:
 [Link](https://flutter.dev/docs/development/ui/widgets)
 
 
-### Boiler plate
-Shortcut | Description
-------------|-----
-`stless` | stateless widget - boiler plate for stateless widget
-`stful` | stateful widget - boiler plate for stateful widget
+
 
 ## Hotkeys
 
@@ -369,19 +367,22 @@ Shortcut | Description
 `Ctrl + w` | Just click on the widget you want to extract and press Ctrl+W
  | The entire Widget is selected for you without your cursor moving an inch
 
+### Boiler plate
+Shortcut | Description
+------------|-----
+`stless` | stateless widget - boiler plate for stateless widget
+`stful` | stateful widget - boiler plate for stateful widget
 
 
-### Widget lifecycle
+## Widget lifecycle 
 
+### Stateless widget
 
+### Stateful widget
 
-#### Stateless widget
+We can tap into each of these stages in the lifecycle if we wanted different things to happen at various times. I have listed here three common hooks which gets called in the following order:
 
-#### Stateful widget
-
-We can tap into each of these stages in the lifecycle if we wanted different things to happen at various times. I have listed here three common hooks which gets called the following order:
-
-* **initState()** - Gets triggered when that state initally gets initialized.
+* **initState()** - Gets triggered when that state initally gets initialized (gets called only once)
 
 ```bash
 @override
@@ -391,9 +392,9 @@ void initState(){
 }
 ```
 
-* **build()** - which gets triggered when the widgets are actually built and will show up on screen. the build is the most freuqent used hook.
+* **build()** - which gets triggered when the widgets are actually built and will show up on screen. the build is the most freuqent used hook. gets called every single time that our widgets rebuilds.
 
-* **deactivate()** -  which gets called when that statefull widget gets destroyed.
+* **deactivate()** -  which gets called when that statefull widget gets destroyed and for deallocate from memory.
 ```bash
 @override
 void deactivate(){
@@ -431,6 +432,36 @@ Property | Description
  verticalDirection | frg
 
 
+## Exceptions
+
+### Try and Catch block
+
+Example below:
+
+```bash
+Widget build(BuildContext context){
+  String myMargin = 'abc';
+  double myMarginAsADouble;
+
+  try {
+    double myMarginAsADouble = double.parse(myMargin);
+  } catch (e){
+    print(e);
+    myMarginAsADouble = 30;
+  }  
+
+  return Scaffold(
+      body: Container(
+        margin: EdgeInsets.all(myMarginAsADouble),
+        color: Colors.red;
+        ),
+      );
+}
+
+```
+
+
+
 ## Emulator
 
 ```bash
@@ -445,8 +476,7 @@ avdmanager list avd
 
 [Great Reference](https://developer.android.com/studio/run/emulator-commandline)
 
-## Permissions
-
+### Permissions
 
 You should list in the folowing files the permissions, which will be requested by the user:
 
