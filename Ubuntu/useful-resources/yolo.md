@@ -39,3 +39,16 @@ By default, YOLO only displays objects detected with a confidence of .25 or high
 ```
 
 ## Training model
+
+[Link](https://machinelearningmastery.com/how-to-perform-object-detection-with-yolov3-in-keras/)
+
+[Link](https://blog.paperspace.com/how-to-implement-a-yolo-object-detector-in-pytorch/)
+
+
+## Reference
+
+[Darknet/YOLO](https://pjreddie.com/darknet/)
+
+[Github YOLO creator](https://github.com/pjreddie)
+
+[YOLO demo](https://robocademy.com/2020/05/01/a-gentle-introduction-to-yolo-v4-for-object-detection-in-ubuntu-20-04/)
