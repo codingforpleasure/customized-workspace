@@ -5,8 +5,9 @@
          * [Recognize objects in a video:](#recognize-objects-in-a-video)
          * [Changing The Detection Threshold](#changing-the-detection-threshold)
       * [Training model](#training-model)
+      * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: 2020-05-27T21:26+03:00 -->
+<!-- Added by: gil_diy, at: 2020-05-27T22:03+03:00 -->
 
 <!--te-->
 
