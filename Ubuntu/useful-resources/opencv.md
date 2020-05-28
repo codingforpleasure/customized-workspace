@@ -48,13 +48,24 @@
          * [Contours Hierarchy](#contours-hierarchy)
          * [Extracting connected components from binary image](#extracting-connected-components-from-binary-image)
          * [distance transform](#distance-transform)
-         * [Useful functions in PIL (Python Imaging Library)](#useful-functions-in-pil-python-imaging-library)
+      * [Deep learning in OpenCV](#deep-learning-in-opencv)
+         * [The function blobFromImage(s)](#the-function-blobfromimages)
+            * [1. Mean subtraction](#1-mean-subtraction)
+      * [Useful functions in PIL (Python Imaging Library)](#useful-functions-in-pil-python-imaging-library)
 
-<!-- Added by: gil_diy, at: 2020-03-22T06:09+02:00 -->
+<!-- Added by: gil_diy, at: 2020-05-28T09:55+03:00 -->
 
 <!--te-->
 
 # An OpenCV glimpse
+
+
+[Great reference-1](https://opencv-python-tutroals.readthedocs.io/en/stable/py_tutorials/py_tutorials.html)
+
+
+[Great reference-2](https://medium.com/swlh/contours-in-images-a58b4c12c0ff)
+
+[Great reference-3](https://medium.com/analytics-vidhya/tutorial-how-to-scale-and-rotate-contours-in-opencv-using-python-f48be59c35a2)
 
 ## Basics
 
@@ -336,8 +347,6 @@ R = cv2.getRotationMatrix2D((columns/2, rows/2), 45, 1)
 # Now apply the rotation matrix on the image
 output = cv2.warpAffine(img1, R ,(columns,rows))
 
-
-
 ```
 #### Affine transformation (Shear)
 Shear offsets a set of points a distance proportional to their x and y coordinates.
@@ -457,12 +466,26 @@ cv2.line(img,(cols-1,righty),(0,lefty),(0,255,0),2)
 
 
 In OpenCV, finding contours is like finding white object from **black background**. 
+
 **So remember**, object to be found **should be white and background should be black**.
 
 ```python
 (_, cnts, _) = cv2.findContours(edged.copy(), cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
 cv2.drawContours(coins, cnts, -1, (0, 255, 0), 2)
 ```
+
+contours, _ = cv2.findContours(image=img_gray, mode=cv2.RETR_EXTERNAL, method=cv2.CHAIN_APPROX_SIMPLE)
+
+What is the **Method** argument?
+
+This means **Contour Approximation Method**, see below:
+
+Method type | Description
+------------|-----
+cv2.CHAIN_APPROX_NONE | All the boundary points are stored
+cv2.CHAIN_APPROX_SIMPLE | It removes all redundant points and compresses the contour, thereby saving memory i.e a straight line only twwo points will be stored.
+
+
 
 ### Contours Hierarchy
 
@@ -526,9 +549,57 @@ it's **CC_STAT_AREA** is 19
 
 https://homepages.inf.ed.ac.uk/rbf/HIPR2/distance.htm
 
-### Useful functions in PIL (Python Imaging Library)
+
+## Deep learning in OpenCV
+
+In the context of deep learning and image classification, these preprocessing tasks normally involve:
+
+1) Mean subtraction
+
+2) Scaling by some factor
+
+OpenCV’s new deep neural network (dnn) module contains two functions that 
+**can be used for preprocessing images and preparing them for classification via pre-trained deep learning models**.
+
+### The function blobFromImage(s)
+The two functions:
+
+* cv2.dnn.blobFromImage
+
+* cv2.dnn.blobFromImages
+
+
+[Reference](https://www.pyimagesearch.com/2017/11/06/deep-learning-opencvs-blobfromimage-works/)
+
+These two functions perform:
+
+1. **Mean subtraction**
+
+2. **Scaling**
+
+3. **And optionally channel swapping**
+
+Let's delve into each one:
+
+####  1. Mean subtraction
+
+Mean subtraction is used to help combat illumination changes in the input images in our dataset. We can therefore view mean subtraction as a **technique used to aid our Convolutional Neural Networks**.
+
+Before we even begin training our deep neural network, we first **compute the average pixel intensity across all images in the training set for each of the Red, Green, and Blue channels**.
+
+
+<p align="center"> <!-- style="width:400px;" -->
+  <img src="images/open-cv/mean-substruction.png" title="mean-substruction">
+</p>
+
+## Useful functions in PIL (Python Imaging Library)
 
 Description | command
 ------------------------------------|-----
 show image | img.show()
 
+
+
+
+
+[Install OpenCV on hard-drive](https://linuxize.com/post/how-to-install-opencv-on-ubuntu-18-04/)
