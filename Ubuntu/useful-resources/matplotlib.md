@@ -65,9 +65,11 @@ Load image | img = mpimg.imread('my_image.jpg')
 Show image | plt.imshow(output[i])
 		   | plt.show(block=True)
 		   | plt.interactive(False)
-Save image to file |plt.savefig("example.png")  # should before plt.show method plt.show()
+Save image to file | plt.savefig("example.png")  # should before plt.show method plt.show()
 
 
+
+```python
 plt.plot(ages, salaries_israel, label="graph1")
 plt.plot(ages, salaries_USA, label="graph2")
 plt.xlabel('Ages')
@@ -76,3 +78,33 @@ plt.grid(true)
 plt.title('Median Salary (USD) by Age')
 plt.legend()
 plt.show()
+```
+
+### Configuring the axis
+
+#### Plot image without showing axis:
+
+By default we will see the axis.
+
+```python
+plt.axis('off')
+```
+
+#### Plot image without showing axis:
+
+```python
+-----
+```
+
+
+### Export plot
+```python
+plt.savefig('my_plot.png')
+```
+
+arguments | Description
+------------|-----
+dpi | set the resolution of the file to a numeric value
+transparent | set to True, which causes the background of the chart to be transparent.
+
+
