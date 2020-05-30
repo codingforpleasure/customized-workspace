@@ -4,10 +4,11 @@
          * [Recognize objects in a photo:](#recognize-objects-in-a-photo)
          * [Recognize objects in a video:](#recognize-objects-in-a-video)
          * [Changing The Detection Threshold](#changing-the-detection-threshold)
-      * [Training model](#training-model)
+      * [Training YOLOv3/v4 model](#training-yolov3v4-model)
+   * [The format of the text file is:](#the-format-of-the-text-file-is)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: 2020-05-27T22:03+03:00 -->
+<!-- Added by: gil_diy, at: 2020-05-30T15:09+03:00 -->
 
 <!--te-->
 
@@ -39,11 +40,21 @@ By default, YOLO only displays objects detected with a confidence of .25 or high
 ./darknet detect cfg/yolov4.cfg weights/yolov4.weights data/dog.jpg -thresh 0
 ```
 
-## Training model
+## Training YOLOv3/v4 model
 
 [Link](https://machinelearningmastery.com/how-to-perform-object-detection-with-yolov3-in-keras/)
 
 [Link](https://blog.paperspace.com/how-to-implement-a-yolo-object-detector-in-pytorch/)
+
+
+# The format of the text file is:
+
+```
+<class number> <Cx> <Cy> <Width> <Height>
+```
+
+
+[Documentation - Well explained steps](https://github.com/AlexeyAB/darknet#how-to-train-to-detect-your-custom-objects)
 
 
 ## Reference
@@ -53,3 +64,13 @@ By default, YOLO only displays objects detected with a confidence of .25 or high
 [Github YOLO creator](https://github.com/pjreddie)
 
 [YOLO demo](https://robocademy.com/2020/05/01/a-gentle-introduction-to-yolo-v4-for-object-detection-in-ubuntu-20-04/)
+
+[Yolo v3 explained very well](https://towardsdatascience.com/yolo-v3-object-detection-53fb7d3bfe6b)
+
+
+Here below is a link for a convienient way **to get various backgrounds** for the images:
+[Describable Texture Dataset](https://www.robots.ox.ac.uk/~vgg/data/dtd/)
+
+[python library for augmenting images](https://github.com/aleju/imgaug)
+
+[Labelimg](https://github.com/tzutalin/labelImg)
