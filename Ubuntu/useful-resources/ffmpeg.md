@@ -3,6 +3,8 @@
    * [ffmpeg](#ffmpeg)
       * [Get information about a video file (fps, codec, duration)](#get-information-about-a-video-file-fps-codec-duration)
       * [Export a snapshot from a video clip in specific timestamp.](#export-a-snapshot-from-a-video-clip-in-specific-timestamp)
+      * [Export MP4 from a list of images](#export-mp4-from-a-list-of-images)
+      * [Rip a part a video and get all images out of it](#rip-a-part-a-video-and-get-all-images-out-of-it)
       * [Convert from webm to mp4](#convert-from-webm-to-mp4)
       * [Specifying Quality](#specifying-quality)
          * [For AVI](#for-avi)
@@ -19,7 +21,7 @@
          * [Proportional scaling](#proportional-scaling)
          * [Rotation](#rotation)
 
-<!-- Added by: gil_diy, at: 2020-06-01T18:30+03:00 -->
+<!-- Added by: gil_diy, at: 2020-06-01T19:30+03:00 -->
 
 <!--te-->
 
@@ -38,6 +40,27 @@ ffmpeg -i <input_file>
 ffmpeg -i <input_file> -ss 01:23:45 -vframes 1 output.jpg
 ```
 
+## Export MP4 from a list of images
+
+ Symbol | meaning
+------------|-----
+ -i | input file
+ -r | rate (i.e 30 fps)
+ -ss | duration in seconds
+
+
+```bash
+ffmpeg -r 30 -i /path/image-%d.png -vcode mpeg4 -y ~/Desktop/output.mp4
+```
+
+[Reference](https://youtu.be/cqw4HgC3CIc)
+
+## Rip a part a video and get all images out of it
+
+```bash
+ffmpeg -i play.mov -qscale:v 3 ~/frames/frame-%d.jpg -hide_banner
+```
+
 
 ## Convert from webm to mp4
 ```bash
@@ -50,7 +73,7 @@ ffmpeg -i natash.webm -strict experimental To_my_Natasha.mp4
 ### For AVI
 
 ```bash
-ffmpeg -i <input name> -q <quality> <output name>
+ffmpeg -i <input name> -qscale <quality> <output name>
 ```
 
 ### For MP4
@@ -62,7 +85,7 @@ ffmpeg -i <input name> -crf <quality> <output name>
 
 ## To specify exact Bitrates
 
- symbol | meaning
+Symbol | meaning
 ------------|-----
 -b | bitrate
 v | video
