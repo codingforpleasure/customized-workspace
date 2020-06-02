@@ -20,8 +20,9 @@
          * [Scaling with arithmetic &amp; variables:](#scaling-with-arithmetic--variables)
          * [Proportional scaling](#proportional-scaling)
          * [Rotation](#rotation)
+      * [Documentation](#documentation)
 
-<!-- Added by: gil_diy, at: 2020-06-01T19:30+03:00 -->
+<!-- Added by: gil_diy, at: 2020-06-02T08:38+03:00 -->
 
 <!--te-->
 
@@ -156,3 +157,7 @@ ffmpeg -i inFile:v -filter:v  "rotate=45*PI/180" outfile
 ```
 
 * Angle of rotation, clockwise (with conversion to radians)
+
+## Documentation
+
+[ffmpeg official documentation](https://www.ffmpeg.org/ffmpeg.html)
