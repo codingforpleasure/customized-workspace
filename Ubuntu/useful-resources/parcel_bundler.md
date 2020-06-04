@@ -10,18 +10,19 @@
 
 ## Steps:
 
-In your folder of the project you have just created, enter:
+* In your folder of the project you have just created, enter:
+
 ``
 npm init -y
 ``
 
 
-Run the command in the directory:
+* Run the command in the directory:
 
 `npm i -D parcel-bundler`
 
 
-In the file `package.json`
+* In the file `package.json`
 ```bash
 {
   "name": "parceltest",
@@ -41,9 +42,9 @@ In the file `package.json`
 }
 ```
 
-for running: 
+* For running app and run a simple local server: 
 
 `npm run dev `
 
 
-[Reference](https://youtu.be/OK6akGZCC88)
+[URL Reference](https://youtu.be/OK6akGZCC88)
