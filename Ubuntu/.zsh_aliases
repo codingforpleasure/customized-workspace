@@ -23,7 +23,9 @@ alias i=get_info                    # Get size and dpi of image
 alias ag='ag --hidden'              # Search in hidden directories too (assuming .agignore was respected).
 alias go='gnome-open '
 alias {python-cli,py-cli}=ptpython
-alias {ff,fn,fix_name,fix_filename}=fix_name # Fix file name with spaces
+alias {ff,fn,fix_name,fix_filename}=fix_name    # Fix file name with spaces
+alias {fff,ffa}=fix_name_all_files_in_directory # Fix all file names in current directory
+
 alias ll="ls -la --color \
                  --human-readable \
                  --group-directories-first" \
@@ -41,7 +43,7 @@ alias df="df --human-readable \
 alias pdfgrep="pdfgrep  --recursive \
                         --page-number \
                         --include \"*.pdf\" "
-
+alias gimp="flatpak run org.gimp.GIMP//stable"
 alias tks='tmux kill-session -t '
 alias tas='tmux attach-session -t '
 alias tls='tmux list-session'
@@ -51,7 +53,7 @@ alias dd='dd status=progress '
 alias run="pipenv run python "      # Executing python script faster with pipenv
 alias rm="rm -i"				            # Prompt before permanently remove files
 alias rme="ls -la | grep -v $1 | xargs rm " # Remove all files Except a single file in current directory.
-alias cp="cp -i"               			# Prompt before overwrite
+alias cp="cp -i --verbose"               			# Prompt before overwrite
 alias cath=cat-hebrew               # Cat hebrew text files
 alias scp="scp -r"                  # Secure copy with recursively copy so it means entire directories.
 alias ssh="ssh -x"                  # Ssh with enabled X11 forwarding
@@ -65,6 +67,7 @@ alias lsg="ll | grep "              # Combine list files with grep
 alias {pgrep,psg}="pgrep --list-full"			# lookup a process
 alias {volume+,vol+}="pactl -- set-sink-volume 0 +10%" # increase volume by 10%
 alias {volume-,vol-}="pactl -- set-sink-volume 0 -10%" # increase volume by 10%
+alias {wake,wakeup}="wakeonlan 0C:9D:92:61:96:76" # Waking the Windows pc
 
 alias top="htop"                    # Execute the interactive process viewer
 alias locate="sudo updatedb; locate --ignore-case "
@@ -72,7 +75,7 @@ alias locate="sudo updatedb; locate --ignore-case "
 alias locateh=locate-here           # locate here under the current folder
 alias watchl='watch --color ls -la --color'	# list and watch files and folders with color
 
-alias {subl,sublime,sl}="sublime3"				        # Execute sublime editor
+# alias {subl,sublime,sl}="sublime3"				        # Execute sublime editor
 alias {pycharm,charm}='fork_without_block pycharm.sh'
 alias {datagrip,dg}='fork_without_block datagrip.sh'
 alias {clion,lion}='fork_without_block clion.sh'
@@ -80,13 +83,15 @@ alias webstorm='fork_without_block webstorm'
 alias rstudio='fork_without_block rstudio'
 alias idea='fork_without_block idea.sh'
 alias {ink,inkscape}='fork_without_block inkscape' # Even nicer than illustrator
+alias firefox='firefox_me'
 
-alias firefox="firefox --ProfileManager &" # For setting my current working profile
+# alias firefox="firefox --ProfileManager &" # For setting my current working profile
 
-alias pwdc="pwd | xclip -selection clipboard" # Copy the current working directory to clipboard
+# Copy the current working directory to clipboard without new line in the end of the path
+alias pwdc="echo -n `pwd` | xclip -selection clipboard" 
 
-alias android="~/android-studio/bin/studio.sh &" # Execute Android-studio easily
-alias adb='~/Android/Sdk/platform-tools/adb' 	 # Execute Android Debug Bridge (adb)
+alias android="/opt/android-studio/bin/studio.sh &" # Execute Android-studio easily
+alias adb='~/Development/android_sdk/platform-tools/adb' 	 # Execute Android Debug Bridge (adb)
 
 # Prints all android packages
 # (Great reference: https://developer.android.com/studio/command-line/adb#pm)
@@ -98,6 +103,8 @@ alias exif="EXIF.py "				        # extract Exif metadata from tiff and jpeg file
 alias dis='display '
 alias tes='tesseract '
 alias du='du --summarize --human-readable' # Disk space usage nicer output
+alias open='gio open '                     # Similar to gnome-open just for ubuntu 18.04
+alias paint='kolourpaint '
 
 alias display='feh -i' #impressive_display
 
@@ -144,12 +151,13 @@ alias stashall='git stash --include-untracked'
 alias pop='git stash pop'
 
 # Aliases for paths
-alias ubuntu='cd ~/myGitRepositories/customized-workspace/Ubuntu'
+alias ubuntu='/home/gil_diy/my_github_repos/customized-workspace/Ubuntu'
 alias myscripts='cd ~/my_useful_scripts'
 alias gitrep='cd ~/myGitRepositories'   # Go to my repos collection
 alias snippe{t,s}='cd ~/.config/sublime-text-3/Packages/User'
 alias rsnippet='cd ~/.R/snippets'
 alias class='cd ~/PycharmProjects/get_info_from_goodreads/classification'
+
 
 if [ -f ~/.zsh_books_aliases ]; then
     source ~/.zsh_books_aliases
