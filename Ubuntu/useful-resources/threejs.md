@@ -143,6 +143,26 @@ let createSphere = function(){
 	scene.add(sphere)
 }
 ```
+### Cylinder
+
+
+
+
+#### Pyramid
+```js
+let createPyramid = function(x, y, z, width, height) {
+	let geometry = new THREE.CylinderGeometry(0, width, height, 4);
+	let p = new THREE.Mesh(geomtry, material);
+	p.position.set(x,y,z);
+	p.castShadow = true;
+	p.receiveShadow = true;
+	return p;
+}
+```
+
+<p align="center"> <!-- style="width:400px;" -->
+  <img src="threejs/cylinder.png" title="tool tip here">
+</p>
 
 
 <p align="center"> <!-- style="width:400px;" -->
@@ -152,7 +172,7 @@ let createSphere = function(){
 
 
 #### Half Sphere
-```
+```js
 // Horizontal sweep the angle between the start to the end is called Phi
 let geomtry = new THREE.SphereGeometry(5,30,30, 0, Math.PI);
 
@@ -182,7 +202,7 @@ let geomtry = new THREE.TorusGeometry(5,1,2,20)
 
 ### Custom Geometry
 
-```
+```js
 let geometry = new THREE.Geometry();
 
 // Adding 4 vertices 
@@ -230,3 +250,106 @@ let material = THREE.MeshBasicMaterial({color: 0xff0040, transparency: true, opa
 ```js
 let material = THREE.MesshNormalMaterial();
 ```
+
+## Camera
+### Perspective camera
+This camera designed to mimic how the uman eye sees.
+It gives a perspctive to the scene - closer objects woul look bigger than farther objects.
+
+
+argument | meaning
+------------|-----
+ fov | The angle which is called field of view
+ aspect | aspect ratio (angle)
+
+
+
+
+```js
+
+fov = 75
+aspect = window.innerWidth / window.innerHeight
+near = 1
+far = 1000
+let camera = new THREE.perspectiveCamera(fov, aspect, near, far);
+
+camera.position.set(0,10,40)
+```
+
+In case you would like to change the fov in the main loop:
+
+#### Change the field of view as zoom in/out effect
+```js
+let mainLoop = function(){
+	camera.fov +=ADD;
+	camera.updateProjectionMatrix();
+	if (camera.fov > 100 || camera.fov < 50)
+		ADD*=-1;
+
+	renderer.render(scene, camera);
+	requestAnimationFrame(mainLoop);
+}
+```
+#### Change camera position while the camera focus on a spcific point
+
+```js
+let theta = 0;
+let ADD = 0.01;
+
+let mainLoop = function(){
+
+	// Sets the location where the camera will focus on
+
+	camera.lookat(new THREE.Vector3(0,0,0));
+	camera.position.x = 40 * Math.sin(theta);
+	camera.position.z = 40 * Math.cos(theta);
+	theta+=ADD;
+
+	renderer.render(scene, camera);
+	requestAnimationFrame(mainLoop);
+}
+```
+
+### Orthographic camera
+```js
+let camera = new Three.OrthographicCamera(left, right, top, bottom, near,far);
+```
+
+
+## User Interaction
+
+### mouse events
+
+ Event name | Title2
+------------|-----
+click | element-description
+mouse move | 
+mouse drag | 
+mouse enter | 
+mouse leave | 
+
+
+```js
+
+let onMouseClick = function(e){
+	ADD *= -1;
+}
+
+let init = function(){
+	...
+	document.addEventListner("click", onMouseClick = false);
+}
+
+
+let mainLoop = function(){
+	cube.roatation.x +=ADD;
+	cube.roatation.y +=ADD;
+
+	renderer.render(scene, camera);
+	requestAnimationFrame(mainLoop);
+}
+```
+
+## Reference
+
+[Nice explanantion](https://hackernoon.com/introduction-to-3d-javascript-library-threejs-basics-aec33yfb)
