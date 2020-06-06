@@ -7,6 +7,8 @@
          * [Add axes helper for make it easier to debug](#add-axes-helper-for-make-it-easier-to-debug)
          * [Box](#box)
          * [Sphere](#sphere)
+         * [Cylinder](#cylinder)
+            * [Pyramid](#pyramid)
             * [Half Sphere](#half-sphere)
          * [Torus](#torus)
             * [Arc](#arc)
@@ -15,8 +17,16 @@
       * [Material](#material)
          * [MeshBasicMaterial](#meshbasicmaterial)
          * [MesshNormalMaterial](#messhnormalmaterial)
+      * [Camera](#camera)
+         * [Perspective camera](#perspective-camera)
+            * [Change the field of view as zoom in/out effect](#change-the-field-of-view-as-zoom-inout-effect)
+            * [Change camera position while the camera focus on a spcific point](#change-camera-position-while-the-camera-focus-on-a-spcific-point)
+         * [Orthographic camera](#orthographic-camera)
+      * [User Interaction](#user-interaction)
+         * [mouse events](#mouse-events)
+      * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: 2020-06-04T23:14+03:00 -->
+<!-- Added by: gil_diy, at: 2020-06-06T12:28+03:00 -->
 
 <!--te-->
 
