@@ -3,16 +3,24 @@
       * [Basics](#basics)
          * [Simple plot](#simple-plot)
          * [Bar Charts](#bar-charts)
+         * [Line plots](#line-plots)
          * [Pie Charts](#pie-charts)
          * [Stack Plots](#stack-plots)
          * [Histograms](#histograms)
+         * [Boxplot](#boxplot)
          * [Scatter Plots](#scatter-plots)
+         * [Plotting time series](#plotting-time-series)
          * [Plotting time series Data](#plotting-time-series-data)
          * [Plotting Live data in real-time](#plotting-live-data-in-real-time)
          * [Subplots](#subplots)
          * [Simple plot](#simple-plot-1)
+         * [Configuring the axis](#configuring-the-axis)
+            * [Plot image without showing axis:](#plot-image-without-showing-axis)
+            * [Plot image without showing axis:](#plot-image-without-showing-axis-1)
+            * [Linestyles](#linestyles)
+         * [Export plot](#export-plot)
 
-<!-- Added by: gil_diy, at: 2019-07-28T01:24+03:00 -->
+<!-- Added by: gil_diy, at: 2020-06-08T16:07+03:00 -->
 
 <!--te-->
 
@@ -231,6 +239,37 @@ def scatter_plot_with_different_sizes_and_colors():
 
 [Reference](https://www.youtube.com/watch?v=zZZ_RCwp49g&list=PL-osiE80TeTvipOqomVEeZ1HRrcEvtZB_&index=7)
 
+### Plotting time series
+
+```python
+from datetime import datetime, timedelta
+from matplotlib import pyplot as plt
+from matplotlib import dates as mpl_dates
+
+if __name__ == '__main__':
+   plt.style.use('seaborn')
+
+   dates = [
+     datetime(2019, 5, 24),
+     datetime(2019, 5, 25),
+     datetime(2019, 5, 26),
+     datetime(2019, 5, 27),
+     datetime(2019, 5, 28),
+     datetime(2019, 5, 29),
+     datetime(2019, 5, 30)
+   ]
+
+   y = [0, 1, 3, 4, 6, 5, 7]
+
+   plt.plot_date(dates, y, linestyle='solid')
+
+   plt.gcf().autofmt_xdate()
+   date_format = mpl_dates.DateFormatter('%b, %d %Y')
+
+   # gca = Get current axis
+   plt.gca().xaxis.set_major_formatter(date_format)
+   plt.show()
+```
 
 ### Plotting time series Data
 ### Plotting Live data in real-time
