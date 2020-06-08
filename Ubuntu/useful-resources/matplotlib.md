@@ -49,6 +49,58 @@ plt.show()
 ```
 
 ### Bar Charts
+```python
+
+```
+
+### Line plots
+```python
+from matplotlib import pyplot as plt
+
+def line_plot_with_fill_between_functions():
+    data = pd.read_csv('sample_datasets/data.csv')
+    ages = data['Age']
+    dev_salaries = data['All_Devs']
+    py_salaries = data['Python']
+    js_salaries = data['JavaScript']
+
+    plt.plot(ages,
+             dev_salaries, color='#444444',
+             linestyle='--',
+             label='All Devs'
+             )
+
+    plt.plot(ages,
+             py_salaries,
+             label='Python'
+             )
+
+    # Fills underneath our function but above our median.
+    plt.fill_between(x=ages,
+                     y1=py_salaries,
+                     y2=js_salaries,
+                     alpha=0.25,
+                     where=(py_salaries > js_salaries),
+                     interpolate=True,
+                     label = 'Above Avg')
+
+    plt.fill_between(x=ages,
+                     y1=py_salaries,
+                     y2=js_salaries,
+                     color='red',
+                     alpha=0.25,
+                     where=(py_salaries <= js_salaries),
+                     interpolate=True,
+                     label = 'Below Avg')
+
+    plt.legend()
+    plt.title('Median Salary (USD) by Age')
+    plt.xlabel('Ages')
+    plt.ylabel('Median Salary (USD)')
+    plt.tight_layout()
+
+    plt.show()
+```
 ### Pie Charts
 ```python
 from matplotlib import pyplot as plt
@@ -74,9 +126,35 @@ def pie_chart_with_explode():
     plt.tight_layout()
     plt.show()
 ```
+
+
 ### Stack Plots
 ```python
+from matplotlib import pyplot as plt
 
+plt.style.use("fivethirtyeight")
+
+minutes = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+player1_score_until_minute = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+player2_score_until_minute = [1, 1, 1, 1, 1, 3, 5, 6, 13]
+player3_score_until_minute = [3, 4, 7, 9, 15, 16, 18, 20, 24]
+player_names = ["Player 1", "Player 2", "Player 3"]
+colors_shades = ['#6d904f', '#fc4f30', '#008fd5']
+
+plt.stackplot(minutes,
+            player1_score_until_minute,
+            player2_score_until_minute,
+            player3_score_until_minute,
+            labels=player_names,
+            colors=colors_shades)
+
+# Take the label into an account
+# you can write more specify the exact location, with loc=(0.07,0.05)
+plt.legend(loc='upper left')
+
+plt.title("My Awesome Stack Plot")
+plt.tight_layout()
+plt.show()
 ```
 ### Histograms
 ```python
