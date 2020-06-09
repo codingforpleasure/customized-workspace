@@ -544,6 +544,16 @@ it's **CC_STAT_HEIGHT** is 6
 it's **CC_STAT_AREA** is 19
 
 
+### Defines for video capture
+
+
+Define | Meaning
+------------|-----
+cv2.CAP_PROP_FRAME_WIDTH | Set frame width
+cv2.CAP_PROP_FRAME_HEIGHT |  Set frame height
+cv2.CAP_PROP_POS_FRAMES | Skip to specific frame
+
+[Link](https://docs.opencv.org/3.4/dd/d01/group__videoio__c.html)
 
 ### distance transform
 
