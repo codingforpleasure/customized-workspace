@@ -10,7 +10,6 @@
          * [Boxplot](#boxplot)
          * [Scatter Plots](#scatter-plots)
          * [Plotting time series](#plotting-time-series)
-         * [Plotting time series Data](#plotting-time-series-data)
          * [Plotting Live data in real-time](#plotting-live-data-in-real-time)
          * [Subplots](#subplots)
          * [Simple plot](#simple-plot-1)
@@ -20,7 +19,7 @@
             * [Linestyles](#linestyles)
          * [Export plot](#export-plot)
 
-<!-- Added by: gil_diy, at: 2020-06-08T16:07+03:00 -->
+<!-- Added by: gil_diy, at: 2020-06-09T12:57+03:00 -->
 
 <!--te-->
 
@@ -204,7 +203,25 @@ def histogram_basic_with_declared_bins():
 
 ### Boxplot
 ```python
-ax3.boxplot(y)
+from matplotlib import pyplot as plt
+
+ value1 = [82, 76, 24, 40, 67, 62, 75, 78, 71, 32, 98, 89, 78, 67, 72, 82, 87, 66, 56, 52]
+ value2 = [62, 5, 91, 25, 36, 32, 96, 95, 3, 90, 95, 32, 27, 55, 100, 15, 71, 11, 37, 21]
+ value3 = [23, 89, 12, 78, 72, 89, 25, 69, 68, 86, 19, 49, 15, 16, 16, 75, 65, 31, 25, 52]
+ value4 = [59, 73, 70, 16, 81, 61, 88, 98, 10, 87, 29, 72, 16, 23, 72, 88, 78, 99, 75, 30]
+
+ box_plot_data = [value1, value2, value3, value4]
+ box = plt.boxplot(box_plot_data,
+                   vert=1,  # Vertical or Horizontal
+                   patch_artist=True,  # fills the boxplot, otherwise you can't apply the function set_facecolor
+                   labels=['course1', 'course2', 'course3', 'course4']
+                   )
+
+ colors = ['cyan', 'lightblue', 'lightgreen', 'tan']
+ for patch, color in zip(box['boxes'], colors):
+     patch.set_facecolor(color)
+
+ plt.show()
 ```
 ### Scatter Plots
 
@@ -271,8 +288,50 @@ if __name__ == '__main__':
    plt.show()
 ```
 
-### Plotting time series Data
 ### Plotting Live data in real-time
+
+The magic takes place by using the `FuncAnimation`.
+
+```python
+import pandas as pd
+import matplotlib.pyplot as plt
+from matplotlib.animation import FuncAnimation
+
+# Attention Gil:
+# you should run this script DURING the script generate_data_for_plotting_in_real_time.py is running.
+
+plt.style.use('fivethirtyeight')
+
+x_vals = []
+y_vals = []
+
+
+def animate(i):
+    data = pd.read_csv('sample_datasets/data_for_real_time.csv')
+    x = data['x_value']
+    y1 = data['total_1']
+    y2 = data['total_2']
+
+    plt.cla()  # Clear axes
+
+    plt.plot(x, y1, label='Channel 1')
+    plt.plot(x, y2, label='Channel 2')
+
+    plt.legend(loc='upper left')
+    plt.tight_layout()
+
+
+if __name__ == '__main__':
+
+    # gcf means get current figure
+    ani = FuncAnimation(fig=plt.gcf(),
+                        func=animate,
+                        interval=1000)
+
+    plt.tight_layout()
+    plt.show()
+```
+
 ### Subplots
 
 ### Simple plot
