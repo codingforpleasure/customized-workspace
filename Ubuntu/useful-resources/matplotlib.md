@@ -17,9 +17,10 @@
             * [Plot image without showing axis:](#plot-image-without-showing-axis)
             * [Plot image without showing axis:](#plot-image-without-showing-axis-1)
             * [Linestyles](#linestyles)
+         * [Plot with logarithmic scale for y-axis](#plot-with-logarithmic-scale-for-y-axis)
          * [Export plot](#export-plot)
 
-<!-- Added by: gil_diy, at: 2020-06-09T12:57+03:00 -->
+<!-- Added by: gil_diy, at: 2020-06-10T16:20+03:00 -->
 
 <!--te-->
 
@@ -333,7 +334,9 @@ if __name__ == '__main__':
 ```
 
 ### Subplots
+```python
 
+```
 ### Simple plot
 
 Description | command
@@ -379,6 +382,14 @@ plt.plot(x,y, ls='solid')
 plt.plot(x,y, ls='--')
 plt.plot(x,y, ls='--')
 ```
+
+### Plot with logarithmic scale for y-axis
+
+```python
+plt.yscale('log')
+```
+
+
 ### Export plot
 ```python
 plt.savefig('my_plot.png')
