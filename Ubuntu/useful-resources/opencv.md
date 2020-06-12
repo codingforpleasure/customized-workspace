@@ -47,13 +47,14 @@
       * [Contours](#contours)
          * [Contours Hierarchy](#contours-hierarchy)
          * [Extracting connected components from binary image](#extracting-connected-components-from-binary-image)
+         * [How to detect all the connected neighboring pixels which have same color value?](#how-to-detect-all-the-connected-neighboring-pixels-which-have-same-color-value)
+         * [Defines for video capture](#defines-for-video-capture)
          * [distance transform](#distance-transform)
       * [Deep learning in OpenCV](#deep-learning-in-opencv)
          * [The function blobFromImage(s)](#the-function-blobfromimages)
             * [1. Mean subtraction](#1-mean-subtraction)
-      * [Useful functions in PIL (Python Imaging Library)](#useful-functions-in-pil-python-imaging-library)
 
-<!-- Added by: gil_diy, at: 2020-05-28T09:55+03:00 -->
+<!-- Added by: gil_diy, at: 2020-06-13T00:31+03:00 -->
 
 <!--te-->
 
@@ -544,6 +545,17 @@ it's **CC_STAT_HEIGHT** is 6
 it's **CC_STAT_AREA** is 19
 
 
+
+### How to detect all the connected neighboring pixels which have same color value?
+
+You should use `flood fill` function
+
+```python
+
+```
+
+[Nice Reference](https://github.com/opencv/opencv/blob/master/samples/python/floodfill.py)
+
 ### Defines for video capture
 
 
@@ -602,14 +614,6 @@ Before we even begin training our deep neural network, we first **compute the av
   <img src="images/open-cv/mean-substruction.png" title="mean-substruction">
 </p>
 
-## Useful functions in PIL (Python Imaging Library)
-
-Description | command
-------------------------------------|-----
-show image | img.show()
-
-
-
-
-
 [Install OpenCV on hard-drive](https://linuxize.com/post/how-to-install-opencv-on-ubuntu-18-04/)
+
+[Great example for opencv in github ](https://github.com/opencv/opencv/tree/master/samples/python)
