@@ -1,3 +1,5 @@
+
+<!-- #Pandas Cheat sheet for Shay (clean examples) -->
 <!--ts-->
    * [Pandas](#pandas)
       * [Pandas data structures](#pandas-data-structures)
@@ -12,8 +14,12 @@
             * [Concatentaing columns and rows](#concatentaing-columns-and-rows)
             * [Converting from numpy to panda](#converting-from-numpy-to-panda)
             * [Converting categorical columns to numbers (4 Methods)](#converting-categorical-columns-to-numbers-4-methods)
-         * [Accessing an element in pandas:](#accessing-an-element-in-pandas)
-         * [Methods of slicing in pandas](#methods-of-slicing-in-pandas)
+            * [Accessing an element in pandas:](#accessing-an-element-in-pandas)
+            * [Methods of slicing in pandas](#methods-of-slicing-in-pandas)
+            * [Filtering data within a dataframe](#filtering-data-within-a-dataframe)
+               * [Method #1 (Similar to R language)](#method-1-similar-to-r-language)
+               * [Method #2 (Similar to Filter function in R language)](#method-2-similar-to-filter-function-in-r-language)
+               * [Method #3 (less clean way)](#method-3-less-clean-way)
       * [CSV](#csv)
          * [Importing data from CSV](#importing-data-from-csv)
          * [Exporting data into CSV](#exporting-data-into-csv)
@@ -31,15 +37,19 @@
       * [Get the index of the min or the max element](#get-the-index-of-the-min-or-the-max-element)
       * [Get the nsmallest or nlargest element](#get-the-nsmallest-or-nlargest-element)
       * [Group by:](#group-by)
+         * [Group by time slot](#group-by-time-slot)
       * [Concat Dataframes](#concat-dataframes)
          * [Join two dataframes one <strong>below</strong> the other.](#join-two-dataframes-one-below-the-other)
          * [Join two dataframes one <strong>besides</strong> the other.](#join-two-dataframes-one-besides-the-other)
          * [Printing data so all columns will be presented](#printing-data-so-all-columns-will-be-presented)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: 2020-03-20T22:18+02:00 -->
+<!-- Added by: gil_diy, at: 2020-06-13T14:40+03:00 -->
 
 <!--te-->
+
+
+
 
 
 
@@ -47,8 +57,7 @@
 pandas adopts significant parts of NumPy’s idiomatic style of array-based computing, especially array-based functions and a preference for data processing without for loops.
 
 While pandas adopts many coding idioms from NumPy, the biggest difference is that
-pandas is designed for working with tabular or heterogeneous data. NumPy, by con‐
-trast, is best suited for working with homogeneous numerical array data.
+pandas is designed for working with tabular or heterogeneous data. NumPy, by contrast, is best suited for working with homogeneous numerical array data.
 
 ```python
 import pandas as pd
@@ -157,6 +166,11 @@ a different approach for adding a column will be:
 df['my_new_column'] = pd.Series(list_of_values)
 ```
 
+Retriving specific columns:
+```python
+df1 = df[['column1','column2']]
+```
+
 concatentaing rows:
 ```python
 # Here i'm concatentaing two first rows with two last rows.
@@ -183,12 +197,12 @@ Great reference:
 [Link](https://www.datacamp.com/community/tutorials/categorical-data)
 
 
-### Accessing an element in pandas:
+#### Accessing an element in pandas:
 ```python
 print(my_df.iloc[row_num, col_num] )
 ```
 
-### Methods of slicing in pandas
+#### Methods of slicing in pandas
 
 * `loc` get rows/columns with praticular **labels** (label-based indexing).
 
@@ -198,6 +212,27 @@ print(my_df.iloc[row_num, col_num] )
 
 ```python
 df.iloc[:df.index.get_loc('row_bla') + 1, :4]
+```
+
+
+#### Filtering data within a dataframe
+
+##### Method #1 (Similar to R language)
+
+```python
+newdf = df[(df.column_name_1 == "JFK") & (df.colunm_name_2 == "B6")]
+```
+
+##### Method #2 (Similar to Filter function in R language)
+
+```python
+newdf = df.query('column_name_1 == "JFK" & colunm_name_2 == "B6"')
+```
+
+##### Method #3 (less clean way)
+
+```python
+newdf = df.loc[(df.column_name_1 == "JFK") & (df.colunm_name_2 == "B6")]
 ```
 
 ## CSV
@@ -325,6 +360,11 @@ my_groups.describe()
 ```python
 df.groupby(df['Date'].dt.year)
 ``` -->
+
+### Group by time slot
+
+[Link](https://stackoverflow.com/questions/11073609/how-to-group-dataframe-by-a-period-of-time)
+
 
 ## Concat Dataframes
 
