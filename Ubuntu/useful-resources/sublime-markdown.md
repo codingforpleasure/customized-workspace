@@ -5,11 +5,12 @@
 </p>
 
 <!--ts-->
-   * [Markdown snippets and hotkeys](#markdown-snippets-and-hotkeys)
+   * [Markdown's snippets and hotkeys](#markdowns-snippets-and-hotkeys)
       * [Hotkeys](#hotkeys)
       * [Snippets](#snippets)
+      * [Build systems (Useful stuff)](#build-systems-useful-stuff)
 
-<!-- Added by: gil_diy, at: 2019-01-01T23:10+02:00 -->
+<!-- Added by: gil_diy, at: 2020-06-13T14:10+03:00 -->
 
 <!--te-->
 
@@ -20,7 +21,11 @@ Description | Hotkey
 Make text **bold** | mark the text and press ctrl + b
 Make text _itlaic_ | mark the text and press ctrl + i
 Comment text | mark the text and press ctrl + /
+Build with to run external programs |  ctrl + Shift + b
 
+
+* The **build scripts** appear in: `~/.config/sublime-text-3/Packages/User`
+* The **markdown snippets** appear in: `~/.config/sublime-text-3/Packages/User/Markdown-Snippets`
 ## Snippets
 
 Snippet description| how to invoke the snippet?
@@ -34,3 +39,7 @@ Snippet description| how to invoke the snippet?
  Add link to url | `url`
  Add link to a specific section in current markdown document | `url2` ( i.e: [Link](#hotkeys) )
 
+
+## Build systems (Useful stuff)
+
+[Great Reference](https://www.sublimetext.com/docs/3/build_systems.html)
