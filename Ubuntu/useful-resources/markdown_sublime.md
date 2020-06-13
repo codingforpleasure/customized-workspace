@@ -21,6 +21,11 @@ Description | Hotkey
 Make text **bold** | mark the text and press ctrl + b
 Make text _itlaic_ | mark the text and press ctrl + i
 Comment text | mark the text and press ctrl + /
+Build with to run external programs |  ctrl + Shift + b
+
+
+* The **build scripts** appear in: `~/.config/sublime-text-3/Packages/User`
+* The **markdown snippets** appear in: `~/.config/sublime-text-3/Packages/User/Markdown-Snippets`
 
 ## Snippets
 
