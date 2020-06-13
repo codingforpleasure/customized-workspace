@@ -8,8 +8,9 @@
    * [Markdown's snippets and hotkeys](#markdowns-snippets-and-hotkeys)
       * [Hotkeys](#hotkeys)
       * [Snippets](#snippets)
+      * [Build systems (Useful stuff)](#build-systems-useful-stuff)
 
-<!-- Added by: gil_diy, at: 2020-04-26T10:27+03:00 -->
+<!-- Added by: gil_diy, at: 2020-06-13T14:08+03:00 -->
 
 <!--te-->
 
@@ -34,3 +35,7 @@ Snippet description| how to invoke the snippet?
  Add link to url | `url`
  Add link to a specific section in current markdown document | `url2` ( i.e: [Link](#hotkeys) )
 
+
+## Build systems (Useful stuff)
+
+[Great Reference](https://www.sublimetext.com/docs/3/build_systems.html)
