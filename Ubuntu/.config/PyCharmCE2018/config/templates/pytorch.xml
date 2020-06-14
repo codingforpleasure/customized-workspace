@@ -1,0 +1,10 @@
+<templateSet group="pytorch">
+  <template name="gc-pytorch-logistic-regression" value="import torch.nn as nn&#10;&#10;loss_function = $LOSS_FUNCTION$&#10;&#10;# SGD: Stochastic Gradient Descent&#10;optimizer = $OPITIMIZER$&#10;&#10;epochs = $EPOCHS$&#10;losses = []&#10;&#10;for i in range(epochs):&#10;    y_pred = model.forward(x_data)&#10;    loss = loss_function(y_pred, y_data)&#10;    print(&quot;epoch: &quot;, i, &quot;loss&quot;, loss.item())&#10;&#10;    losses.append(loss.item())&#10;    optimizer.zero_grad()&#10;    loss.backward()&#10;    optimizer.step()" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="LOSS_FUNCTION" expression="" defaultValue="&quot;nn.BCELoss()&quot;" alwaysStopAt="true" />
+    <variable name="OPITIMIZER" expression="" defaultValue="&quot;torch.optim.SGD(model.parameters(), lr=0.01)&quot;" alwaysStopAt="true" />
+    <variable name="EPOCHS" expression="" defaultValue="&quot;1000&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+</templateSet>
