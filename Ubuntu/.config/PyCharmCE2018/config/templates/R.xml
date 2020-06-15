@@ -16,7 +16,7 @@
       <option name="R" value="true" />
     </context>
   </template>
-  <template name="gc-r-apply" value="# Description: Applys the function once on every column or row&#10;# First arg: Holds the data.&#10;# Second arg: Holds the column or row (row =1, col = 2)&#10;# Third arg: Aggregate function. &#10;my_data &lt;- matrix(1:12,3,4)&#10;result &lt;- apply(my_data,2,mean)" description="Apply" toReformat="false" toShortenFQNames="true">
+  <template name="gcr-apply" value="# Description: Applys the function once on every column or row&#10;# First arg: Holds the data.&#10;# Second arg: Holds the column or row (row =1, col = 2)&#10;# Third arg: Aggregate function. &#10;my_data &lt;- matrix(1:12,3,4)&#10;result &lt;- apply(my_data,2,mean)" description="Apply" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="R" value="true" />
     </context>
@@ -52,6 +52,26 @@
     </context>
   </template>
   <template name="gc-r-init-matrix" value="# Initialize a matrix&#10;mat = matrix(data = c(1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3), nrow = 4, ncol = 3) # By column&#10;mat = matrix(data = c(1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3), nrow = 4, ncol = 3, byrow = TRUE) # By row&#10;" description="Init matrix" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="R" value="true" />
+    </context>
+  </template>
+  <template name="gc-r-example" value="Works well" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="R" value="true" />
+    </context>
+  </template>
+  <template name="gcr-bar-plot" value="library(ggplot2)&#10;my_df = data.frame(food_type = c('Fish', 'Beans', 'Yogurt', 'Apple', 'Lemon', 'Pineapple', 'Orange', 'Olive'),&#10;                   cost_for_1_KG = c(10.6, 5.8, 6.2, 5.4, 3.9, 4.1, 3.9, 7.56))&#10;&#10;g = ggplot(my_df, aes(x = food_type, y = cost_for_1_KG, fill = food_type)) +&#10;  ggtitle(&quot;The Average price for 1 KG among all markets&quot;) +&#10;  labs(y = &quot;Price per KG&quot;,&#10;       x = &quot;Food type&quot;) +&#10;  theme(plot.title = element_text(hjust = 0.5,&#10;                                  size = 25,&#10;                                  face = &quot;bold&quot;,&#10;                                  family = &quot;David&quot;),&#10;        axis.text.x = element_text(angle = 0)) +&#10;  geom_bar(stat = &quot;identity&quot;,&#10;           position = &quot;dodge&quot;,&#10;           colour = &quot;black&quot;,&#10;           width = .8) +&#10;  scale_y_continuous(breaks = seq(0, max(my_df$cost_for_1_KG), 2))&#10;g" description="Plot barplot with ggplot" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="R" value="true" />
+    </context>
+  </template>
+  <template name="gcr-scatter-plot-simple1" value="g = ggplot(iris, aes(x = Petal.Length, y = Petal.Width)) +&#10;  ggtitle(&quot;Is there a correlation between Petal Width to Petal Length?&quot;) +&#10;  labs(y = &quot;Petal Width&quot;,&#10;       x = &quot;Petal Length&quot;) +&#10;  theme(plot.title = element_text(hjust = 0.5,&#10;                                  size = 25,&#10;                                  face = &quot;bold&quot;,&#10;                                  family = &quot;David&quot;)) +&#10;  geom_point(col = &quot;steelblue&quot;, size = 3)&#10;&#10;g" description="Plot basic scatter plot" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="R" value="true" />
+    </context>
+  </template>
+  <template name="gcr-scatter-plot-simple2" value="library(ggplot2)&#10;g = ggplot(iris, aes(x = Petal.Length, y = Petal.Width)) +&#10;  ggtitle(&quot;Is there a correlation between Petal Width to Petal Length?&quot;) +&#10;  labs(y = &quot;Petal Width&quot;,&#10;       x = &quot;Petal Length&quot;) +&#10;  theme(plot.title = element_text(hjust = 0.5,&#10;                                  size = 25,&#10;                                  face = &quot;bold&quot;,&#10;                                  family = &quot;David&quot;)) +&#10;  geom_point(aes(col = Species), size = 3) +&#10;  scale_x_continuous(breaks = seq(0, max(iris$Petal.Length), 0.5)) +&#10;  scale_y_continuous(breaks = seq(0, max(iris$Petal.Width), 0.5))&#10;&#10;g" description="Plot scatter plot with category colors" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="R" value="true" />
     </context>
