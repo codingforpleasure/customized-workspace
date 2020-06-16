@@ -76,4 +76,46 @@
       <option name="R" value="true" />
     </context>
   </template>
+  <template name="gcr-scatter-plot-advance" value="library(ggplot2)&#10;g = ggplot(iris, aes(x = Petal.Length, y = Petal.Width)) +&#10;  ggtitle(&quot;Is there a correlation between Petal Width to Petal Length? (Size and color)&quot;) +&#10;  labs(y = &quot;Petal Width&quot;,&#10;       x = &quot;Petal Length&quot;) +&#10;  theme(plot.title = element_text(hjust = 0.5,&#10;                                  size = 25,&#10;                                  face = &quot;bold&quot;,&#10;                                  family = &quot;David&quot;)) +&#10;  # disk size and color size depends on Color and the Sepal width&#10;  geom_point(aes(col = Species , size = Sepal.Width) ) +&#10;  scale_x_continuous(breaks = seq(0, max(iris$Petal.Length), 0.5)) +&#10;  scale_y_continuous(breaks = seq(0, max(iris$Petal.Width), 0.5))&#10;&#10;g&#10;" description="Plot scatter plot (disk size and color)" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="R" value="true" />
+    </context>
+  </template>
+  <template name="gcr-boxplot-simple" value="library(ggplot2)&#10;data(airquality)&#10;airquality$Month = factor(airquality$Month,&#10;                          labels = c(&quot;May&quot;, &quot;Jun&quot;, &quot;Jul&quot;, &quot;Aug&quot;, &quot;Sep&quot;))&#10;&#10;fill_color = &quot;#4271AE&quot;&#10;line_color = &quot;#1F3552&quot;&#10;&#10;g = ggplot(airquality, aes(x = Month, y = Ozone)) +&#10;  theme_bw() +  # White background theme&#10;  ggtitle(&quot;Boxplot of mean ozone by month&quot;) +&#10;  theme(plot.title = element_text(hjust = 0.5,&#10;                                  size = 25,&#10;                                  face = &quot;bold&quot;,&#10;                                  family = &quot;David&quot;)) +&#10;  scale_x_discrete(name = &quot;Month&quot;) +&#10;  scale_y_continuous(name = &quot;Mean ozone in parts per billion&quot;,&#10;                     breaks = seq(0, 175, 25),&#10;                     limits = c(0, 175)) +&#10;  geom_boxplot(fill = fill_color,&#10;               colour = line_color,&#10;               alpha = 0.7) +&#10;  geom_jitter() # In case you want to see the actual dots&#10;&#10;g" description="Plot a simple boxplot" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="R" value="true" />
+    </context>
+  </template>
+  <template name="gcr-boxplot-advance" value="library(ggplot2)&#10;library(RColorBrewer)&#10;&#10;&#10;airquality_trimmed &lt;- airquality[which(airquality$Month == &quot;Jul&quot; |&#10;                                         airquality$Month == &quot;Aug&quot; |&#10;                                         airquality$Month == &quot;Sep&quot;),]&#10;&#10;airquality_trimmed$Temp.f &lt;- factor(ifelse(airquality_trimmed$Temp &gt; mean(airquality_trimmed$Temp), 1, 0),&#10;                                    labels = c(&quot;Low temp&quot;, &quot;High temp&quot;))&#10;&#10;g &lt;- ggplot(airquality_trimmed, aes(x = Month, y = Ozone, fill = Temp.f)) +&#10;  geom_boxplot(alpha = 0.7) +&#10;  scale_y_continuous(name = &quot;Mean ozone in\nparts per billion&quot;,&#10;                     breaks = seq(0, 175, 25),&#10;                     limits = c(0, 175)) +&#10;  scale_x_discrete(name = &quot;Month&quot;) +&#10;  ggtitle(&quot;Boxplot of mean ozone by month&quot;) +&#10;  theme_bw() +&#10;  theme(plot.title = element_text(hjust = 0.5,&#10;                                  size = 16,&#10;                                  family = &quot;Tahoma&quot;,&#10;                                  face = &quot;bold&quot;),&#10;        text = element_text(size = 12, family = &quot;Tahoma&quot;),&#10;        axis.title = element_text(face = &quot;bold&quot;),&#10;        axis.text.x = element_text(size = 11)) +&#10;  scale_fill_brewer(palette = &quot;Accent&quot;)&#10;g" description="Plot boxplot  with two groups" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="R" value="true" />
+    </context>
+  </template>
+  <template name="gcr-factor-ordinal-variable" value="# Example of ordinal variable (has clear ordering)&#10;status &lt;- c(&quot;Poor&quot;, &quot;Improved&quot;, &quot;Excellent&quot;, &quot;Poor&quot;)&#10;status &lt;- factor(status,order=T, levels=c(&quot;Poor&quot;, &quot;Improved&quot;, &quot;Excellent&quot;))&#10;" description="The factor functionality" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="R" value="true" />
+    </context>
+  </template>
+  <template name="gcr-factor-categorical-variable" value="# Example of adding labels for categorical variables&#10;gender &lt;- factor(c(1,2,1,1), levels = c(1,2), labels = c(&quot;male&quot;, &quot;female&quot;))" description="Factor  on categorical variable" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="R" value="true" />
+    </context>
+  </template>
+  <template name="gcr-import-excel-file" value="library(readxl)&#10;relevant_data &lt;- read_excel(&quot;$PATH$&quot;,&#10;                            sheet = &quot;$SHEET_NAME$&quot;)&#10;" description="Importing Excel file into R" toReformat="false" toShortenFQNames="true">
+    <variable name="PATH" expression="" defaultValue="&quot;your/path/to/the/excel/file&quot;" alwaysStopAt="true" />
+    <variable name="SHEET_NAME" expression="" defaultValue="&quot;name_of_the_sheet&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="R" value="true" />
+    </context>
+  </template>
+  <template name="gcr-filter-dplyr" value="library(dplyr)&#10;# Example of using filter functionality from dplyr library&#10;my_data &lt;- nycflights13::weather&#10;my_data$time_hour &lt;- as.Date(my_data$time_hour)&#10;print(paste0(&quot;Number rows of original dataset: &quot;,nrow(my_data)))&#10;filtered_data = my_data %&gt;% filter(time_hour &lt; as.Date(&quot;2013-06-11&quot;))&#10;print(paste0(&quot;Number rows after applying filter: &quot;,nrow(filtered_data)))" description="Filter dataset using dplyr" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="R" value="true" />
+    </context>
+  </template>
+  <template name="gcr-select-dplyr" value="library(dplyr)&#10;# Example of using filter functionality from dplyr library&#10;my_data = nycflights13::weather&#10;less_data1 = my_data %&gt;% select(humid, contains(&quot;wind&quot;))&#10;# You can remove the irrelvant columns&#10;less_data2 = my_data %&gt;% select(-month, -year, -contains(&quot;wind&quot;) )" description="Select few relevant columns in the data" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="R" value="true" />
+    </context>
+  </template>
 </templateSet>
