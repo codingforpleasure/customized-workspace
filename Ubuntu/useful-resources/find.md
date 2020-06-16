@@ -103,8 +103,14 @@ find . -maxdepth 2 -mindepth 2 -type d -exec basename {} \;
 ```
 
 ### Find "Gil" text in all the text files
+
 ```bash
 find . -name "*.txt" -exec grep -i "GIL" {} \;
+```
+
+**A better approach**:
+```bash
+find . -name "*.txt" -print | xargs ag -in "GIL"
 ```
 
 ### Find all files match to a pattern and move them to a destination folder
