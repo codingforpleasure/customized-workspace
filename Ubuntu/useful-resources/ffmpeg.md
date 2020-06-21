@@ -20,9 +20,13 @@
          * [Scaling with arithmetic &amp; variables:](#scaling-with-arithmetic--variables)
          * [Proportional scaling](#proportional-scaling)
          * [Rotation](#rotation)
+         * [Fade in](#fade-in)
+         * [Fade out](#fade-out)
+      * [Filters for Audio files](#filters-for-audio-files)
+         * [Generate video with waveform](#generate-video-with-waveform)
       * [Documentation](#documentation)
 
-<!-- Added by: gil_diy, at: 2020-06-02T08:38+03:00 -->
+<!-- Added by: gil_diy, at: 2020-06-21T22:50+03:00 -->
 
 <!--te-->
 
@@ -157,6 +161,35 @@ ffmpeg -i inFile:v -filter:v  "rotate=45*PI/180" outfile
 ```
 
 * Angle of rotation, clockwise (with conversion to radians)
+
+
+### Fade in
+```bash
+ffmpeg -i input_video_file.mp4 -vf "fade=t=in:st=0:d=3" -c:a copy output_video_file.mp4
+```
+Symbol | Meaning
+------------|-----
+ st | Start timestamp
+ d  | Duration
+
+### Fade out
+
+This will make the video start fading to black over 5 seconds at the 10 second mark.
+
+```bash
+ffmpeg -i video.mp4 -vf "fade=t=out:st=10:d=5" -c:a copy out.mp4
+```
+
+
+## Filters for Audio files
+
+### Generate video with waveform
+
+```bash
+ffmpeg -i input.mp3 -filter_complex "mode=line" output.avi
+```
+
+[Reference](https://youtu.be/M58rc7cxl_s?list=PLJse9iV6Reqiy8wP0rXTgFQkMNutRMN0j&t=565) 
 
 ## Documentation
 
