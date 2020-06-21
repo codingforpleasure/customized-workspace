@@ -1,4 +1,9 @@
 <!--ts-->
+   * [Useful pdf tools for linux on the go](#useful-pdf-tools-for-linux-on-the-go)
+      * [PDF concatenate files (Join PDF files)](#pdf-concatenate-files-join-pdf-files)
+
+<!-- Added by: gil_diy, at: 2020-06-21T13:55+03:00 -->
+
 <!--te-->
 
 # Useful pdf tools for linux on the go
@@ -23,3 +28,7 @@ Example of extracting group of pages from large pdf:
 pdftk <input_file> cat <start_page-end_page> output <output_file>
 ```
 
+## PDF concatenate files (Join PDF files)
+```bash
+pdfunite ~/Desktop/file1.pdf ~/Desktop/syllabusfile2.pdf  output.pdf 
+```
