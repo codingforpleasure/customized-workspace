@@ -20,6 +20,7 @@ List all packages set to manual update | sudo apt-mark showmanual
 List all packages set to auto update | sudo apt-mark showauto
 List all packages on the system |  sudo dpkg --get-selections
 List all files regarding a package |   dpkg -L &lt;pkg name&gt;
+Find the a missing file to which package it belongs to (works well)| dpkg -S gl.h
 Find the a missing file to which package it belongs to | apt-file &lt;file-name&gt;
 Get package dependencies | apt-cache rdepends &lt;pkg name&gt;
 Remove broken packages in ubuntu | sudo dpkg `--`remove `--`force-remove-reinstreq &lt;pkg name&gt;
