@@ -26,12 +26,29 @@ untar_data(URLs.PETS)
 ```python
 learn = ConvLearner(data, models.resnet34, metrics = error_rate)
 ```
+or
+
+```python
+# using partial functions in python
+acc_02 = partial(accuract_thresh, thresh=0.2)
+f_score = partial(fbeta, thresh=0.2)
+# metrics can be an list of many mrtrics types, ie: [acc_02, error_rate, f_score]
+# In kaggle  you're usually get judged by f_score
+learn = create_cnn(data, models.resnet34, metrics = [acc_02, error_rate, f_score])
+
+```
 
 How many time we show the dataset to the model?
 in this example we have ran with 4 epochs:
 
 ```python
 learn.fit_one_cycle(4)
+```
+
+
+## Get all classes of the data
+```python
+data.classes
 ```
 
 ## Save model
@@ -55,7 +72,10 @@ interp.plot_confusion_matrix(figsize = (12,12), dpi=60)
 # and got wrong image which appeared the most often.
 interp.most_confused(min_val = 2)
 ```
-
+## 
+```python
+learn.freaze()
+```
 
 ## Train our model some more
 ```python
@@ -71,6 +91,12 @@ For getting assistance, use **doc(the function you're looking for)**
 
 
 ## Fine-tuning
+
+
+## fast.ai datatsets
+
+[Link to fastai datasets](https://course.fast.ai/datasets)
+
 
 ## Resources
 
