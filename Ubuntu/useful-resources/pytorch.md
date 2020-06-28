@@ -9,8 +9,12 @@
       * [Derivatives](#derivatives)
          * [Y(x)](#yx)
       * [Partial derivatives Y(x,z)](#partial-derivatives-yxz)
+      * [Generate random numbers](#generate-random-numbers)
+      * [Tensor to number](#tensor-to-number)
+      * [Template for Regression](#template-for-regression)
+      * [References](#references)
 
-<!-- Added by: gil_diy, at: 2020-06-07T22:35+03:00 -->
+<!-- Added by: gil_diy, at: 2020-06-28T16:21+03:00 -->
 
 <!--te-->
 
@@ -141,11 +145,49 @@ print("derivative_for_two_variables, result x.grad: ", x.grad)
 print("derivative_for_two_variables, result z.grad: ", z.grad)
 ```
 
+## Generate random numbers
 
+Generate 100 random numbers between 0 to 10
+```python
+torch.randn(100, 1) * 10
+```
 
+## Tensor to number
+
+```python
+my_tensor.item()
+```
 
 ```python
 import torch
 import torchvision
 from torchvision import transforms, datasets
 ```
+
+
+## Template for Regression 
+
+```python
+import torch.nn as nn
+
+loss_function = nn.BCELoss()
+optimizer = torch.optim.SGD(model.parameters(), lr=0.01)
+
+epochs = 1000
+losses = []
+
+for i in range(epochs):
+    y_pred = model.forward(x_data)
+    loss = loss_function(y_pred, y_data)
+    print("epoch: ", i, "loss", loss.item())
+
+    losses.append(loss.item())
+    optimizer.zero_grad()
+    loss.backward()
+    optimizer.step()
+```
+
+## References
+[Logo Detection Using PyTorch](https://medium.com/diving-in-deep/logo-detection-using-pytorch-7897d4898211)
+
+[pytorch projects](https://github.com/bharathgs/Awesome-pytorch-list#cv)
