@@ -16,6 +16,8 @@
       * [Build an interpertation object](#build-an-interpertation-object)
       * [Get confusion matrix](#get-confusion-matrix)
       * [Train our model some more](#train-our-model-some-more)
+      * [Freeze](#freeze)
+      * [Unfreeze](#unfreeze)
       * [doc](#doc)
       * [Fine-tuning](#fine-tuning)
       * [fast.ai datatsets](#fastai-datatsets)
@@ -24,7 +26,7 @@
       * [Terms](#terms)
       * [Resources](#resources)
 
-<!-- Added by: gil_diy, at: 2020-06-28T07:46+03:00 -->
+<!-- Added by: gil_diy, at: 2020-06-28T09:55+03:00 -->
 
 <!--te-->
 
