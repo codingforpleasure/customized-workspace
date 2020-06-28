@@ -4,6 +4,7 @@
       * [Downloading dataset](#downloading-dataset)
       * [See the image files](#see-the-image-files)
       * [Creating databunch (training set, validation set, test set)](#creating-databunch-training-set-validation-set-test-set)
+      * [Creating databunch from images and csv file](#creating-databunch-from-images-and-csv-file)
       * [Look at your actual data images](#look-at-your-actual-data-images)
       * [Get all classes of the data](#get-all-classes-of-the-data)
       * [Augmentation](#augmentation)
@@ -19,9 +20,11 @@
       * [Fine-tuning](#fine-tuning)
       * [fast.ai datatsets](#fastai-datatsets)
       * [Download Images](#download-images)
+      * [Things that can go wrong](#things-that-can-go-wrong)
+      * [Terms](#terms)
       * [Resources](#resources)
 
-<!-- Added by: gil_diy, at: 2020-06-27T23:55+03:00 -->
+<!-- Added by: gil_diy, at: 2020-06-28T07:46+03:00 -->
 
 <!--te-->
 
@@ -86,6 +89,39 @@ data = ImageDataBunch.from_folder(path,
 
 
 * In case of memory shortage please use different bs (batch size).
+
+
+## Creating databunch from images and csv file
+
+```python
+tfms = get_transforms(flip_vert = True,
+					max_lightning = 0.1,
+					max_zooming = 1.05,
+					max_warp = 0.
+					)
+
+np.random.seed(42)
+src = (ImageFileList.from_folder()
+		.label_from_csv('train_v2.csv',sep='',folder = 'train-jpg',suffix = '.jpg')
+		.random_split_but_pct(0.2) # split by percent
+	)
+
+data = (src.datasets()
+		.transform(tfms, size=128)
+		.databunch().normalize(imagenet_stats)
+		)
+```
+
+Here is an example of the data block API, all the stages, which will be explained below, can be grouped together like this:
+
+```python
+data = (ImageList.from_folder(path) #Where to find the data? -> in path and its subfolders
+        .split_by_folder()              #How to split in train/valid? -> use the folders
+        .label_from_folder()            #How to label? -> depending on the folder of the filenames
+        .add_test_folder()              #Optionally add a test set (here default name is test)
+        .transform(tfms, size=64)       #Data augmentation? -> use tfms with a size of 64
+        .databunch())                   #Finally? -> use the defaults for conversion to ImageDataBunch
+```
 
 ## Look at your actual data images
 ```python
@@ -218,6 +254,37 @@ In fastai there is an existing function with given file path it will download th
 ```python
 download_images(path/file, dest, max_pics = 200, max_workers = 0)
 ```
+
+
+## Things that can go wrong
+
+side effects | concolusion
+------------|-----
+**validation loss** gets very high | The learning rate is too high
+**training loss** is higher than **validation loss** | The learning rate is too low
+**training loss** is higher than **validation loss** | Too few epochs
+
+```python
+learn.recorder.plot_losses()
+```
+
+[Reference explained well](https://youtu.be/ccMHJeQU4Qw?list=PLfYUBJiXbdtSIJb-Qd3pw0cqCbkGeS0xn&t=2813)
+
+
+## Terms
+
+**Learning rate** - the number we multiply our gradient by, to decide how much to update the weights by.
+
+**Epoch** - every single iteration on the entire data set
+
+**Minibatch** - just a random bunch of points that you use to update
+your weights.
+
+**SGD** - Stocachstic Gradient Descent using minibatch
+
+**Model/Architecture**
+**Parameters**
+**Loss functions**
 
 ## Resources
 
