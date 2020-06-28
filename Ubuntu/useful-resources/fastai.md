@@ -123,6 +123,8 @@ data = (ImageList.from_folder(path) #Where to find the data? -> in path and its 
         .databunch())                   #Finally? -> use the defaults for conversion to ImageDataBunch
 ```
 
+[Reference](https://github.com/fastai/fastai/blob/master/docs_src/data_block.ipynb)
+
 ## Look at your actual data images
 ```python
 data.show_batch(rows = 3, figsize = (7, 6))
@@ -235,6 +237,14 @@ learn.unfreaze()
 learn.fit_one_cycle(2, max_lr = slice(1e-6, 1e-4))
 ```
 
+## Freeze
+
+freezing prevents the weights of a neural network layer from being modified during the backward pass of training. You progressively 'lock-in' the weights for each layer to reduce the amount of computation in the backward pass and decrease training time.
+
+## Unfreeze
+
+unfreeze a model if you decide you want to continue training - an example of this is transfer learning: start with a pre-trained model, unfreeze the weights, then continuing training on a different dataset
+
 ## doc
 For getting assistance, use **doc(the function you're looking for)**
 
@@ -265,10 +275,16 @@ side effects | concolusion
 **training loss** is higher than **validation loss** | Too few epochs
 
 ```python
+# You can plot the training loss with the validation loss
 learn.recorder.plot_losses()
 ```
 
 [Reference explained well](https://youtu.be/ccMHJeQU4Qw?list=PLfYUBJiXbdtSIJb-Qd3pw0cqCbkGeS0xn&t=2813)
+
+```python
+# Plot the learning rate
+learn.recorder.plot_lr()
+```
 
 
 ## Terms
@@ -290,6 +306,8 @@ your weights.
 
 
 [Notebooks code examples from course](https://github.com/fastai/course-v3/tree/master/nbs/dl1)
+
+[Documentation for the API](https://github.com/fastai/fastai/tree/master/docs_src)
 
 [Practical Deep learning for coders 2019](https://www.youtube.com/playlist?list=PLfYUBJiXbdtSIJb-Qd3pw0cqCbkGeS0xn)
 
