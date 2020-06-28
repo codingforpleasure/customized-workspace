@@ -23,10 +23,11 @@
       * [fast.ai datatsets](#fastai-datatsets)
       * [Download Images](#download-images)
       * [Things that can go wrong](#things-that-can-go-wrong)
+      * [Running in conda](#running-in-conda)
       * [Terms](#terms)
       * [Resources](#resources)
 
-<!-- Added by: gil_diy, at: 2020-06-28T09:55+03:00 -->
+<!-- Added by: gil_diy, at: 2020-06-28T14:53+03:00 -->
 
 <!--te-->
 
@@ -41,6 +42,11 @@ from fastai.vision import *
 ```
 
 2. Natural language text
+
+```python
+from fastai.text import *
+```
+
 2. Tabular data
 3. Collabarative filtering
 
@@ -156,7 +162,9 @@ tfms = get_transforms()
 
 ### Using resnet34
 
-* resnet34 has 34 layers
+* resnet34 has 34 layers with last layer holds 1000 
+  because Imagenet requested to classify into 1000 categories.
+
 * resnet50 has 50 layers
 
 ```python
@@ -169,14 +177,15 @@ learn = ConvLearner(data, models.resnet34, metrics = error_rate)
 ```
 
 ## creating the CNN
-or
 
 ```python
 # using partial functions in python
 acc_02 = partial(accuract_thresh, thresh=0.2)
 f_score = partial(fbeta, thresh=0.2)
-# metrics can be an list of many mrtrics types, ie: [acc_02, error_rate, f_score]
+
+# metrics can be a list of many metrics types, ie: [acc_02, error_rate, f_score]
 # In kaggle  you're usually get judged by f_score
+# in fastai under the hood it throws the last layer, cause there is no need to 1000 categories and replace it with a matrix of size according to thr number of classes you have in your dataset
 learn = cnn_learner(data, models.resnet34, metrics = [acc_02, error_rate, f_score])
 
 ```
@@ -189,6 +198,27 @@ in this example we have ran with 4 epochs:
 ```python
 learn.fit_one_cycle(4)
 ```
+
+Specifying the learning rate (second argument):
+
+```python
+# First case:
+# With single number `1e-3` means every layer gets the same learning rate.
+learn.fit_one_cycle(4, 1e-3)
+
+# Second case:
+# The final layers get the learning rate 1e-3
+# the rest layers get a learning rate of (1e-3)/3
+learn.fit_one_cycle(4, slice(1e-3))
+
+
+# third case:
+# The final layers get the learning rate 1e-3
+# the first layers get a learning rate of 1e-5
+# the rest layers get a learning rate of equally spread between first learning rate to the last layer learning rate.
+learn.fit_one_cycle(4, slice(1e-5,1e-3))
+```
+
 
 ## Save model 
 Saving the weights:
@@ -215,8 +245,15 @@ interp.most_confused(min_val = 2)
 
 
 ## Train our model some more
+
+**First layer:** One of the filters was finding diagonal edges
+**Second layer:** One of the filters was finding corners in the top left
+**Third layer:** One of the filters was finding round orange things
+
+**In cnn as we go towards the last layer it is becoming more spohisticated and more specific**
+
 ```python
-learn.unfreaze()
+learn.unfreeze()
 learn.fit_one_cycle()
 learn.load('stage-1')
 
@@ -241,7 +278,10 @@ learn.fit_one_cycle(2, max_lr = slice(1e-6, 1e-4))
 
 ## Freeze
 
-freezing prevents the weights of a neural network layer from being modified during the backward pass of training. You progressively 'lock-in' the weights for each layer to reduce the amount of computation in the backward pass and decrease training time.
+Freezing prevents the weights of a neural network layer from being modified during the backward pass of training. You progressively 'lock-in' the weights for each layer to reduce the amount of computation in the backward pass and decrease training time.
+
+We ask FastAI and Pytorch, So when we train don't (backproporgate the gradients into those first layers) which means Don't  recalculate the weights of the first layers only calculate to the new layers.
+This way we would avoid changing weights of the 
 
 ## Unfreeze
 
@@ -287,7 +327,15 @@ learn.recorder.plot_losses()
 # Plot the learning rate
 learn.recorder.plot_lr()
 ```
+[Nice demo](https://nbviewer.jupyter.org/gist/joshfp/85d96f07aaa5f4d2c9eb47956ccdcc88/lesson2-sgd-in-action.ipynb)
 
+## Running in conda
+
+```bash
+conda activate fastai
+
+jupyter-notebook
+```
 
 ## Terms
 
