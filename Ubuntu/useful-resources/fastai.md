@@ -25,9 +25,11 @@
       * [Things that can go wrong](#things-that-can-go-wrong)
       * [Running in conda](#running-in-conda)
       * [Terms](#terms)
+      * [What is U-Net? For image segementation](#what-is-u-net-for-image-segementation)
+      * [What is the difference between Object Detection vs Object Recognition vs Image Segmentation?](#what-is-the-difference-between-object-detection-vs-object-recognition-vs-image-segmentation)
       * [Resources](#resources)
 
-<!-- Added by: gil_diy, at: 2020-06-28T14:53+03:00 -->
+<!-- Added by: gil_diy, at: 2020-06-29T14:56+03:00 -->
 
 <!--te-->
 
@@ -281,7 +283,7 @@ learn.fit_one_cycle(2, max_lr = slice(1e-6, 1e-4))
 Freezing prevents the weights of a neural network layer from being modified during the backward pass of training. You progressively 'lock-in' the weights for each layer to reduce the amount of computation in the backward pass and decrease training time.
 
 We ask FastAI and Pytorch, So when we train don't (backproporgate the gradients into those first layers) which means Don't  recalculate the weights of the first layers only calculate to the new layers.
-This way we would avoid changing weights of the 
+
 
 ## Unfreeze
 
@@ -352,8 +354,17 @@ your weights.
 **Parameters**
 **Loss functions**
 
-## Resources
 
+## What is U-Net? For image segementation
+
+[Link](https://youtu.be/nG3tT31nPmQ?t=6230)
+
+
+## What is the difference between Object Detection vs Object Recognition vs Image Segmentation?
+
+[Great Explanation](https://www.geeksforgeeks.org/object-detection-vs-object-recognition-vs-image-segmentation/)
+
+## Resources
 
 [Notebooks code examples from course](https://github.com/fastai/course-v3/tree/master/nbs/dl1)
 
@@ -362,3 +373,5 @@ your weights.
 [Practical Deep learning for coders 2019](https://www.youtube.com/playlist?list=PLfYUBJiXbdtSIJb-Qd3pw0cqCbkGeS0xn)
 
 [Model Benchmarks](https://dawn.cs.stanford.edu/benchmark/#imagenet-train-time)
+
+[Fastai Share your work ](https://forums.fast.ai/search?q=share%20your%20work)
