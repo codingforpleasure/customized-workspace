@@ -1,5 +1,6 @@
 <!--ts-->
    * [Fastai](#fastai)
+      * [Courses of Fastai](#courses-of-fastai)
       * [Fastai support 4 topics](#fastai-support-4-topics)
       * [Downloading dataset](#downloading-dataset)
       * [See the image files](#see-the-image-files)
@@ -27,13 +28,43 @@
       * [Terms](#terms)
       * [What is U-Net? For image segementation](#what-is-u-net-for-image-segementation)
       * [What is the difference between Object Detection vs Object Recognition vs Image Segmentation?](#what-is-the-difference-between-object-detection-vs-object-recognition-vs-image-segmentation)
+      * [Five steps to avoiding overfitting:](#five-steps-to-avoiding-overfitting)
+      * [Python debugger](#python-debugger)
+      * [Terms in the first course:](#terms-in-the-first-course)
+         * [Affine functions &amp; non-linearities](#affine-functions--non-linearities)
+         * [Parameters &amp; Activations](#parameters--activations)
+         * [Random init &amp; transfer learning](#random-init--transfer-learning)
+         * [Convolutions](#convolutions)
+         * [Batch-norm](#batch-norm)
+         * [Dropout](#dropout)
+         * [Data-Augumentation](#data-augumentation)
+         * [Weight decay](#weight-decay)
+         * [Res/dense blocks](#resdense-blocks)
+         * [Image classification and regression](#image-classification-and-regression)
+         * [Embeddings](#embeddings)
+         * [Continuos &amp; Categorical Variables](#continuos--categorical-variables)
+         * [Collaborative filtering](#collaborative-filtering)
+         * [Lanaguge Models; NLP classification](#lanaguge-models-nlp-classification)
+         * [Segmentation; U-net; GANS](#segmentation-u-net-gans)
       * [Resources](#resources)
 
-<!-- Added by: gil_diy, at: 2020-06-29T14:56+03:00 -->
+<!-- Added by: gil_diy, at: 2020-06-30T15:21+03:00 -->
 
 <!--te-->
 
 # Fastai
+
+## Courses of Fastai
+
+* Course 2019 Beginner  - 7 Lessons about FastAI 
+[Practical Deep Learning for Coders 2019](https://www.youtube.com/playlist?list=PLfYUBJiXbdtSIJb-Qd3pw0cqCbkGeS0xn)
+
+* Course 2018 Advance - 
+[Cutting Edge Deep Learning for Coders 2](https://www.youtube.com/playlist?list=PLfYUBJiXbdtTttBGq-u2zeY1OTjs5e-Ia)
+
+
+* Course 2019/2020 Advance  - 
+[Deep Learning from the Foundations](https://www.youtube.com/playlist?list=PLfYUBJiXbdtTIdtE1U8qgyxo4Jy2Y91uj)
 
 ## Fastai support 4 topics
 
@@ -49,8 +80,16 @@ from fastai.vision import *
 from fastai.text import *
 ```
 
-2. Tabular data
-3. Collabarative filtering
+3. Tabular data
+4. Collabarative filtering
+5. Fast.ai Audio
+
+```python
+from fastai.audio import *
+```
+
+
+
 
 ## Downloading dataset
 ```python
@@ -364,6 +403,57 @@ your weights.
 
 [Great Explanation](https://www.geeksforgeeks.org/object-detection-vs-object-recognition-vs-image-segmentation/)
 
+## Five steps to avoiding overfitting:
+
+More data -> Data augemtation -> Generlizeble architecture -> Regularization -> Reduce architecture complexity.
+
+
+[Link](https://youtu.be/4u8FxNEDUeg?t=1335)
+
+## Python debugger
+
+[Link](https://youtu.be/Z0ssNAbe81M?t=6194)
+
+```Python
+if i == 13
+	pdb.set_trace()
+```
+
+ command | Description
+------------|-----
+ l | list
+ c | continue
+ n | next
+ p | print
+ s | step into
+ u | show call stack up
+ d | show call stack down
+
+If there was a crash you can write in a new cell:
+
+`%debug`
+## Terms in the first course:
+
+[Link](https://youtu.be/4u8FxNEDUeg?t=1248)
+
+### Affine functions & non-linearities
+### Parameters & Activations
+### Random init & transfer learning
+### Convolutions
+### Batch-norm
+### Dropout
+### Data-Augumentation
+### Weight decay
+### Res/dense blocks
+### Image classification and regression
+### Embeddings
+### Continuos & Categorical Variables
+### Collaborative filtering
+### Lanaguge Models; NLP classification
+### Segmentation; U-net; GANS
+
+
+
 ## Resources
 
 [Notebooks code examples from course](https://github.com/fastai/course-v3/tree/master/nbs/dl1)
@@ -375,3 +465,5 @@ your weights.
 [Model Benchmarks](https://dawn.cs.stanford.edu/benchmark/#imagenet-train-time)
 
 [Fastai Share your work ](https://forums.fast.ai/search?q=share%20your%20work)
+
+
