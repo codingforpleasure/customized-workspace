@@ -400,4 +400,22 @@ arguments | Description
 dpi | set the resolution of the file to a numeric value
 transparent | set to True, which causes the background of the chart to be transparent.
 
+### Drawing shapes with Matplotlib (patches)
 
+```python
+from matplotlib.pyplot import plt
+from matplotlib.patches import Polygon,Ellipse
+
+fig, ax = plt.subplots(figsize = (16,8))
+ax.tick_params(left = False,
+                bottom = False,
+                labelleft = False,
+                labelbottom = False)
+
+my_poly = Polygon([[.3,.5],[.6,.7],[.8,.55]], color = 'silver')
+ax.add_patch(my_poly)
+
+wheel = Ellipse(xy = [.35,.4], .05, .1, cololr = 'black')
+ax.add_patch(wheel)
+
+```
