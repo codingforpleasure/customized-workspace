@@ -5,6 +5,7 @@
          * [Converting numpy arrays into tensors](#converting-numpy-arrays-into-tensors)
          * [Converting tensors into numpy arrays](#converting-tensors-into-numpy-arrays)
       * [matrix multiplication](#matrix-multiplication)
+      * [Basic functions in pytorch](#basic-functions-in-pytorch)
       * [Useful for plotting](#useful-for-plotting)
       * [Derivatives](#derivatives)
          * [Y(x)](#yx)
@@ -14,7 +15,7 @@
       * [Template for Regression](#template-for-regression)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: 2020-06-28T16:21+03:00 -->
+<!-- Added by: gil_diy, at: 2020-07-02T00:07+03:00 -->
 
 <!--te-->
 
@@ -114,6 +115,19 @@ torch.matmul(mat_a,mat_b) # Equivalent to mat_a @ mat_b
 
 ```
 
+## Basic functions in pytorch
+
+Example | Explanantion
+------------|-----
+torch.ones((2,3)) | return a tensor that contains ones and has a default **float datatype**.
+torch.ones((2,3), dtype=torch.int8) | Tensor consisting of only integer ones.
+torch.zeros((2,3), dtype=torch.int8)  | Tensor consisting of only integer zeros.
+torch.full((2,3), 3.141) | Tensor with required fill value along with the shape
+torch.empty((2,3)) | Create empty tensor filled with uninitialzed data
+torch.rand((2,3))| Tensor from a **uniform distribution** from [0, 1]
+torch.randn((2,3))| Tensor with mean 0 and variance 1 from **normal distribution**
+torch.randint(10,100,(2,3))|Tensor from a given range
+
 
 ## Useful for plotting
 ```python
@@ -126,6 +140,9 @@ We should use the flag: `requires_grad` and set it to **True** .
 
 ### Y(x)
 ```python
+# we will add a new key that lets
+# PyTorch know that it needs to perform gradient calculations on the following
+# tensor:
 x = torch.tensor(2.0, requires_grad = True) # important for calculating the derivative 
 y = 9*x**4 + 2*x**3 + 3*x**2+6*x+1
 y.backward()
@@ -191,3 +208,5 @@ for i in range(epochs):
 [Logo Detection Using PyTorch](https://medium.com/diving-in-deep/logo-detection-using-pytorch-7897d4898211)
 
 [pytorch projects](https://github.com/bharathgs/Awesome-pytorch-list#cv)
+
+[pytorch getting started in kaggle](https://www.kaggle.com/getting-started/123904)
