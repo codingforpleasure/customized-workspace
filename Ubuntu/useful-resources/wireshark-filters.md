@@ -1,5 +1,5 @@
 <!--ts-->
-   * [Wirehsark filter](#wirehsark-filter)
+   * [Wirehsark filters Examples](#wirehsark-filters-examples)
       * [Filter by IP](#filter-by-ip)
       * [Filter by Destination IP](#filter-by-destination-ip)
       * [Filter by Source IP](#filter-by-source-ip)
@@ -13,15 +13,15 @@
       * [Filter SYN flag](#filter-syn-flag)
       * [Filter by broadcast](#filter-by-broadcast)
       * [Filter by RST flag](#filter-by-rst-flag)
-      * [Filter by ARP between ip src computer and ip dst](#filter-by-arp-between-ip-src-computer-and-ip-dst)
+      * [Filter by ARP between ip src and ip dst](#filter-by-arp-between-ip-src-and-ip-dst)
       * [Filter ping of death](#filter-ping-of-death)
 
-<!-- Added by: gil_diy, at: 2020-07-01T12:54+03:00 -->
+<!-- Added by: gil_diy, at: 2020-07-01T12:57+03:00 -->
 
 <!--te-->
 
 
-# Wirehsark filter
+# Wirehsark filters Examples
 
 ## Filter by IP
 
@@ -99,7 +99,7 @@ eth.dst == ff:ff:ff:ff:ff:ff
 tcp.flags.reset == 1
 ```
 
-## Filter by ARP between ip src computer and ip dst
+## Filter by ARP between ip src and ip dst
 
 ```bash
 (arp.dst.proto_ipv4 ==  10.100.102.20) && (arp.src.proto_ipv4 ==  10.100.102.14)
