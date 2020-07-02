@@ -6,6 +6,12 @@
          * [Converting tensors into numpy arrays](#converting-tensors-into-numpy-arrays)
       * [matrix multiplication](#matrix-multiplication)
       * [Basic functions in pytorch](#basic-functions-in-pytorch)
+      * [Preprocessing](#preprocessing)
+      * [Batch size](#batch-size)
+      * [Load data](#load-data)
+      * [Inspecting the weight and bias](#inspecting-the-weight-and-bias)
+      * [Loss function](#loss-function)
+         * [Negative log likelihood](#negative-log-likelihood)
       * [Useful for plotting](#useful-for-plotting)
       * [Derivatives](#derivatives)
          * [Y(x)](#yx)
@@ -15,7 +21,7 @@
       * [Template for Regression](#template-for-regression)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: 2020-07-02T00:07+03:00 -->
+<!-- Added by: gil_diy, at: 2020-07-02T12:53+03:00 -->
 
 <!--te-->
 
@@ -126,8 +132,59 @@ torch.full((2,3), 3.141) | Tensor with required fill value along with the shape
 torch.empty((2,3)) | Create empty tensor filled with uninitialzed data
 torch.rand((2,3))| Tensor from a **uniform distribution** from [0, 1]
 torch.randn((2,3))| Tensor with mean 0 and variance 1 from **normal distribution**
-torch.randint(10,100,(2,3))|Tensor from a given range
+torch.randint(10,100,(2,3))| Tensor from a given range between 10 to 100
+my_tensor.shape | The shape of `my_tensor` tensor
+my_tensor.dtype | The datatype of `my_tensor` tensor
+torch.ones_like(my_tensor) | Create a new tensor that matches `my_tensor` attributes (shape and datatype) with all ones.
 
+
+## Preprocessing
+There is a module called `transforms` that helps with a lot of
+image preprocessing tasks.
+
+[Reference](https://pytorch.org/docs/stable/torchvision/transforms.html)
+
+
+we first need to read from the image and convert it
+into a tensor using a transforms.ToTensor() transform. We then make the mean and standard deviation of the pixel values 0.5 and 0.5 respectively so that it becomes easier for the model to train;
+```python
+relevant_transform = transforms.Compose([transforms.ToTensor(),
+                                         transforms.Normalize(mean=(0.5,), std=(0.5,))
+                                         ])
+```
+
+
+* We combine all of the transformations together with `transform.Compose()`
+
+## Batch size
+A higher batch size means that the model has fewer training steps and learns faster, whereas a high batch size results in high memory requirements.
+
+## Load data
+
+## Inspecting the weight and bias
+You can access the weight and bias tensors from the model object with `<my_model>.<layer_name>.weight` and `<my_model>.<layer_name>.bias`
+
+
+## Loss function
+Defining the loss function A machine learning model, when being trained, may have some deviation between the predicted output and the actual output, and this difference is called the **error** of the model. The function that lets us calculate this error is called the **loss function**, or error function.
+This function provides a metric to evaluate all possible solutions and choose the most optimized model. The loss function has to be able to reduce all attributes of the model down to a single number so that an improvement in that loss function value is
+representative of a better model.
+
+### Negative log likelihood
+
+We therefore use negative log likelihood when dealing with log softmax, as softmax is not compatible. It is useful in classification between n number of classes. The log would ensure
+that we are not dealing with very small values between 0 and 1, and negative values would ensure that a logarithm of probability that is less than 1 is nonzero. Our goal would be to reduce this negative log loss error function. In PyTorch, the loss function is called a
+criterion, and so we named our loss function criterion.
+
+<p align="center"> <!-- style="width:400px;" -->
+  <img src="images/neural-networks/neg_log.png" title="tool tip here">
+</p>
+
+The negative log-likelihood becomes unhappy at smaller values, where it can reach infinite unhappiness (that’s too sad), and becomes less unhappy at larger values. Because we are summing the loss function to all the correct classes, what’s actually happening is that whenever the network assigns high confidence at the correct class, the unhappiness is low, but when the network assigns low confidence at the correct class, the unhappiness is high.
+
+In PyTorch, the loss function is called a **criterion**, and so we named our loss function criterion.
+
+[Reference](https://ljvmiranda921.github.io/notebook/2017/08/13/softmax-and-the-negative-log-likelihood/)
 
 ## Useful for plotting
 ```python
