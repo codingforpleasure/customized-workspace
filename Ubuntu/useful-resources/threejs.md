@@ -325,6 +325,27 @@ let mainLoop = function(){
 let camera = new Three.OrthographicCamera(left, right, top, bottom, near,far);
 ```
 
+## Textures
+
+* A texture is an image that would wrap the object.
+* To load the image we use the TextureLoader object.
+
+```js
+let createGeometry = function(){
+
+	// Adding the texture to the object
+	let texture = new THREE.TextureLoader().load(imagePath);
+	let material = new THREE.MeshBasicMaterial({map: texture});
+
+	let geomtry = new THREE.BoxGeomtry(4,4,4);
+	cube = new THREE.Mesh(geomtry, material);
+
+	scene.add(cube);
+};
+```
+
+## Panorama
+
 
 ## User Interaction
 

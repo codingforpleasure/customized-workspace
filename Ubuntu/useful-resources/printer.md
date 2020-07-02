@@ -2,9 +2,10 @@
    * [Printer (Brother HL-2270DW)](#printer-brother-hl-2270dw)
       * [Installation](#installation)
       * [Basic operations](#basic-operations)
+      * [Enable Duplex mode](#enable-duplex-mode)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: 2019-01-16T17:49+02:00 -->
+<!-- Added by: gil_diy, at: 2020-07-02T23:46+03:00 -->
 
 <!--te-->
 
@@ -32,5 +33,27 @@ Start printer service  |  systemctl start cups
 Stop printer service  |  systemctl stop cups
 Login into the service | http://localhost:631/admin
 
+
+## Enable Duplex mode
+
+For configuring duplex (two side), enter in:
+http://192.168.1.9/user/prnset.html
+
+Enter the following for authenticate:
+
+**USER:**
+User name: user
+Password: access
+
+and afterwards modify the Duplex mode to: **On**
+
+**ADMINISTRATOR:**
+User name: admin
+Password: access
+
+
+
 ## Reference
-[Torubleshoot Brother-2270DW](https://sudoroom.org/wiki/Brother_HL-2270DW)
+[Troubleshoot Brother-2270DW](https://sudoroom.org/wiki/Brother_HL-2270DW)
+
+[Username and password](https://support.brother.com/g/b/faqend.aspx?c=us&lang=en&prod=hl2280dw_us&faqid=faq00002496_001)
