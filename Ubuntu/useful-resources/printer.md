@@ -42,10 +42,12 @@ http://192.168.1.9/user/prnset.html
 Enter the following for authenticate:
 
 **USER:**
+
 User name: user
+
 Password: access
 
-and afterwards modify the Duplex mode to: **On**
+* Afterwards modify the Duplex mode to: **On**
 
 **ADMINISTRATOR:**
 User name: admin
