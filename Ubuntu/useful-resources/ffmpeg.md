@@ -206,5 +206,7 @@ ffmpeg -i input.mp3 -filter_complex "mode=line" output.avi
 ## Documentation
 
 [ffmpeg official documentation](https://www.ffmpeg.org/ffmpeg.html)
+
 [Useful commands](https://gist.github.com/martinruenz/537b6b2d3b1f818d500099dde0a38c5f)
+
 [conversions between gif and video](https://engineering.giphy.com/how-to-make-gifs-with-ffmpeg/)
