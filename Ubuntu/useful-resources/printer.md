@@ -50,7 +50,9 @@ Password: access
 * Afterwards modify the Duplex mode to: **On**
 
 **ADMINISTRATOR:**
+
 User name: admin
+
 Password: access
 
 
