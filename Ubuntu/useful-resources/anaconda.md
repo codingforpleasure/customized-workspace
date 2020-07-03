@@ -1,3 +1,16 @@
+<!--ts-->
+   * [Anaconda](#anaconda)
+      * [Creating environment](#creating-environment)
+      * [Activating an environment](#activating-an-environment)
+      * [Deactivating an environment](#deactivating-an-environment)
+      * [Determining your current environment](#determining-your-current-environment)
+      * [Viewing a list of your environments](#viewing-a-list-of-your-environments)
+      * [Viewing a list of the packages in an environment](#viewing-a-list-of-the-packages-in-an-environment)
+      * [References](#references)
+
+<!-- Added by: gil_diy, at: 2020-07-03T07:30+03:00 -->
+
+<!--te-->
 # Anaconda
 
 ## Creating environment
@@ -39,3 +52,7 @@ Assuming the environment is activated:
 ```bash
 conda list
 ```
+
+## References
+
+[Link](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#deactivating-an-environment)
