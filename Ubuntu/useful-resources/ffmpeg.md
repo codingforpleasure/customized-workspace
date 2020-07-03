@@ -7,6 +7,7 @@
       * [Rip a part a video and get all images out of it](#rip-a-part-a-video-and-get-all-images-out-of-it)
       * [Convert from webm to mp4](#convert-from-webm-to-mp4)
       * [Trim video file](#trim-video-file)
+      * [Increase video speed](#increase-video-speed)
       * [Specifying Quality](#specifying-quality)
          * [For AVI](#for-avi)
          * [For MP4](#for-mp4)
@@ -27,7 +28,7 @@
          * [Generate video with waveform](#generate-video-with-waveform)
       * [Documentation](#documentation)
 
-<!-- Added by: gil_diy, at: 2020-06-23T17:39+03:00 -->
+<!-- Added by: gil_diy, at: 2020-06-23T17:55+03:00 -->
 
 <!--te-->
 
@@ -79,6 +80,11 @@ ffmpeg -i natash.webm -strict experimental To_my_Natasha.mp4
 ffmpeg -i source.mp4 -ss 00:00:05 -t 00:00:10 -async 1 -strict -2 cut_video.mp4
 ```
 
+## Increase video speed
+
+```bash
+ffmpeg -i input.mp4 -filter:v "setpts=PTS/60" output.mp4
+```
 ## Specifying Quality
 
 ### For AVI
@@ -201,3 +207,4 @@ ffmpeg -i input.mp3 -filter_complex "mode=line" output.avi
 
 [ffmpeg official documentation](https://www.ffmpeg.org/ffmpeg.html)
 [Useful commands](https://gist.github.com/martinruenz/537b6b2d3b1f818d500099dde0a38c5f)
+[conversions between gif and video](https://engineering.giphy.com/how-to-make-gifs-with-ffmpeg/)
