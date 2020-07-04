@@ -6,9 +6,10 @@
       * [Determining your current environment](#determining-your-current-environment)
       * [Viewing a list of your environments](#viewing-a-list-of-your-environments)
       * [Viewing a list of the packages in an environment](#viewing-a-list-of-the-packages-in-an-environment)
+      * [Installing packages in the active environment](#installing-packages-in-the-active-environment)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: 2020-07-03T07:30+03:00 -->
+<!-- Added by: gil_diy, at: 2020-07-04T13:45+03:00 -->
 
 <!--te-->
 # Anaconda
@@ -51,6 +52,12 @@ Assuming the environment is activated:
 
 ```bash
 conda list
+```
+
+## Installing packages in the active environment
+
+```bash
+conda install <package-name>
 ```
 
 ## References
