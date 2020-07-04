@@ -6,12 +6,23 @@
          * [Converting tensors into numpy arrays](#converting-tensors-into-numpy-arrays)
       * [matrix multiplication](#matrix-multiplication)
       * [Basic functions in pytorch](#basic-functions-in-pytorch)
+      * [Concanting torches:](#concanting-torches)
+      * [Batch normalization](#batch-normalization)
       * [Preprocessing](#preprocessing)
       * [Batch size](#batch-size)
       * [Load data](#load-data)
       * [Inspecting the weight and bias](#inspecting-the-weight-and-bias)
       * [Loss function](#loss-function)
          * [Negative log likelihood](#negative-log-likelihood)
+      * [Optimizers](#optimizers)
+         * [Check default values of an optimizer](#check-default-values-of-an-optimizer)
+         * [The type of optimizers](#the-type-of-optimizers)
+      * [Dropouts](#dropouts)
+      * [preprocessing with transforms](#preprocessing-with-transforms)
+      * [Augmentations](#augmentations)
+      * [Transfer learning](#transfer-learning)
+         * [Freezing the model](#freezing-the-model)
+         * [Replacing the last two layers](#replacing-the-last-two-layers)
       * [Useful for plotting](#useful-for-plotting)
       * [Derivatives](#derivatives)
          * [Y(x)](#yx)
@@ -21,7 +32,7 @@
       * [Template for Regression](#template-for-regression)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: 2020-07-02T12:53+03:00 -->
+<!-- Added by: gil_diy, at: 2020-07-04T17:10+03:00 -->
 
 <!--te-->
 
@@ -136,7 +147,57 @@ torch.randint(10,100,(2,3))| Tensor from a given range between 10 to 100
 my_tensor.shape | The shape of `my_tensor` tensor
 my_tensor.dtype | The datatype of `my_tensor` tensor
 torch.ones_like(my_tensor) | Create a new tensor that matches `my_tensor` attributes (shape and datatype) with all ones.
+torch.flatten(torch.arange(18).view(2,-1)) | Flattening a torch to 1 dimentional
 
+## Concanting torches:
+
+```python
+tensor1 = torch.arange(6).view(2,-1)
+tensor2 = torch.arange(30,36).view(2,-1)
+
+print(torch.cat((tensor1,tensor2),0))
+print(torch.cat((tensor1,tensor2),1))
+```
+
+`tensor([[0, 1, 2],
+        [3, 4, 5]])`
+
+`tensor([[30, 31, 32],
+        [33, 34, 35]])`
+
+Output of: **print(torch.cat((tensor1,tensor2),0))**
+
+`tensor([[ 0,  1,  2],
+        [ 3,  4,  5],
+        [30, 31, 32],
+        [33, 34, 35]])`
+
+Output of: **print(torch.cat((tensor1,tensor2),1))**
+
+`tensor([[ 0,  1,  2, 30, 31, 32],
+        [ 3,  4,  5, 33, 34, 35]])`
+
+## Batch normalization
+
+We know a neural network learns the weights in our model become updated over each
+epoch during training via the process of stochastic gradient descent or SGD so
+what if during training one of the weights ends up becoming drastically
+larger than the other weights well this large weight will then cause
+the output from its corresponding neuron to be extremely large and this **imbalance**
+will again continue to cascade through the neural network causing **instability**
+this is where batch normalization comes into play batch norm is applied to
+layers that you choose to apply it to within your network when applying batch
+norm to a layer the first thing the **batch norm does is normalize the output
+from the activation function**, as you recall activation functions that
+the output from a layer is passed to an activation function which transforms the
+output in some way depending on the function itself before being passed to
+the next layer.
+
+```python
+nn.BatchNorm1d(4096) # 4096 number of features
+```
+
+[Explained well](https://www.youtube.com/watch?v=dXB-KQYkzNU)
 
 ## Preprocessing
 There is a module called `transforms` that helps with a lot of
@@ -185,6 +246,138 @@ The negative log-likelihood becomes unhappy at smaller values, where it can reac
 In PyTorch, the loss function is called a **criterion**, and so we named our loss function criterion.
 
 [Reference](https://ljvmiranda921.github.io/notebook/2017/08/13/softmax-and-the-negative-log-likelihood/)
+
+
+## Optimizers
+
+learned that, for us to get a good model, we need to minimize the errors that are calculated. Backpropagation is a method by which the neural networks learn from errors; the errors are used to modify weights in such a way that the errors are minimized. Optimization functions are responsible for modifying weights to reduce the error. Optimization functions calculate the partial derivative of errors
+with respect to weights. The derivative shows the direction of a positive slope, and so we need to reverse the direction of the gradient. The optimizer function combines the model parameters and loss function to iteratively modify the model parameters to reduce the model error. Optimizers can be thought of as fiddling with the model weights to get the best possible model based on the difference in prediction from the model and the actual output, and the loss function acts as a guide by indicating when the optimizer is going right or wrong.
+
+
+The learning rate is a hyperparameter of the optimizer, which controls the amount by which the weights are updated. The learning rate ensures that the weights are not updated by a huge amount so that the algorithm fails to converge at all and the error gets bigger and bigger; however at the same time, the updating of the weight should not be so low that it takes forever to reach the minimum of the cost function/error function.
+
+### Check default values of an optimizer
+```python
+print(optimizer.defaults)
+```
+
+### The type of optimizers
+
+* Adadelta
+* Adagrad
+* SGD
+
+[Reference](https://pytorch.org/docs/stable/optim.html#torch.optim.Optimizer)
+
+
+## Dropouts
+
+Using a dropout is one of the most popular regularization techniques in neural networks, in which randomly selected neurons are turned off while training—that is, the contribution of neurons is temporarily removed from the forward pass and the backward pass doesn't affect the weights, so that no single neuron or subset of neurons gets all the decisive power of the model; rather, all the neurons are forced to make active contributions to predictions.
+
+It should be remembered that dropouts are to be applied only while training; however, when testing and during the actual prediction, we want all of the neurons to make contributions.
+
+We have to keep in mind that dropouts **must be applied only on
+hidden layers** in order to prevent us from losing the input data and missing outputs.
+
+```python
+nn.Dropout(p=0.25)
+```
+
+## preprocessing with transforms
+
+* Example of chaining multiple transforms:
+
+```python
+transforms.Compose([
+  transforms.CenterCrop(10),
+  transforms.Pad(1, 0),
+  transforms.CenterCrop((10, 10))
+  transforms.ToTensor(),
+])
+```
+
+## Augmentations
+
+Few exaples of transforms on the data to create more data from existing data:
+
+```python
+import torchvision
+
+transforms.Compose([
+  transforms.RandomCrop(10)
+  transforms.RandomCrop((10,20))
+  transforms.RandomHorizontalFlip(p=0.3)
+  transforms.RandomVerticalFlip(p=0.3)
+  
+  # Adding brightness, contrast, saturation, and hue variations
+  transforms.ColorJitter(0.25, 0.25, 0.25, 0.25)
+  transforms.RandomRotation(10)
+])
+```
+
+## Transfer learning
+Transfer learning is an important concept in deep learning that has made it possible for us to use deep learning for various day-to-day tasks. It is a machine learning technique where a model trained for a task is reused to create a new model for a similar task. We take a
+model trained on a large dataset and transfer its knowledge to a smaller dataset. For computer vision tasks with a convolutional neural network (CNN), we freeze the early convolutional layers of the network and only train the last few layers.
+
+The early convolutional layers extract general, low-level features that are applicable across images for detecting edges, patterns, and gradients, while the later layers identify specific features within an image, and are specific to the dataset.
+
+
+### Freezing the model
+
+```python
+my_model = models.resnet50(pretrained=True)
+
+# freezes the weights of the model. By freezing the
+# weights, the lower convolutional layers are not updated
+for param in my_model.parameters():
+  param.requires_grad = False
+```
+
+### Replacing the last two layers
+
+We will apply transfer learning on Resnet50, the actual architecture can be seen easily with:
+`print(my_model)`
+
+The last two layers:
+
+```
+ (avgpool): AdaptiveAvgPool2d(output_size=(1, 1))
+  (fc): Linear(in_features=2048, out_features=1000, bias=True)
+```
+we replaced the average pooling layer,
+with our AdaptiveConcatPool2d layer and added a fully connected classifier with two output units for the two classes available.
+
+```python
+# Performs concatenation between Average 2D pooling and Max 2D pooling
+class AdaptiveConcatPool2d(nn.Module):
+    def __init__(self, sz=None):
+        super().__init__()
+        sz = sz or (1, 1)
+        self.ap = nn.AdaptiveAvgPool2d(sz)
+        self.mp = nn.AdaptiveMaxPool2d(sz)
+
+    def forward(self, x):
+        return torch.cat([self.mp(x), self.ap(x)], 1)
+```
+
+
+```python
+my_model.avgpool = AdaptiveConcatPool2d()
+my_model.fc = nn.Sequential(
+  nn.Flatten(),
+  nn.BatchNorm1d(4096),
+  nn.Dropout(0.5),
+  nn.Linear(4096, 512),
+  nn.Relu(),
+  nn.BatchNorm1d(512),
+  nn.Dropout(p = 0.5),
+  nn.Linear(512, 2),
+  nn.LogSoftMax(dim=1)
+)
+
+```
+
+
 
 ## Useful for plotting
 ```python
@@ -262,8 +455,13 @@ for i in range(epochs):
 ```
 
 ## References
+
 [Logo Detection Using PyTorch](https://medium.com/diving-in-deep/logo-detection-using-pytorch-7897d4898211)
 
 [pytorch projects](https://github.com/bharathgs/Awesome-pytorch-list#cv)
 
 [pytorch getting started in kaggle](https://www.kaggle.com/getting-started/123904)
+
+[PyTorch-Computer-Vision-Cookbook - Github](https://github.com/PacktPublishing/PyTorch-Computer-Vision-Cookbook)
+
+[PyTorch-Artificial-Intelligence-Fundamentals - Github](https://github.com/PacktPublishing/PyTorch-Artificial-Intelligence-Fundamentals)
