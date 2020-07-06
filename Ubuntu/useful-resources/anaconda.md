@@ -12,9 +12,10 @@
       * [Get all information about an active environemnt](#get-all-information-about-an-active-environemnt)
       * [Get the location of all enviroments](#get-the-location-of-all-enviroments)
       * [Search for package](#search-for-package)
+      * [Add extentions to your jupyter notebook](#add-extentions-to-your-jupyter-notebook)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: 2020-07-04T15:01+03:00 -->
+<!-- Added by: gil_diy, at: 2020-07-06T15:40+03:00 -->
 
 <!--te-->
 # Anaconda
@@ -103,6 +104,12 @@ conda info --envs
 ## Search for package 
 ```bash
 conda search <package>
+```
+
+## Add extentions to your jupyter notebook
+
+```bash
+conda install -c conda-forge jupyter_contrib_nbextensions
 ```
 
 ## References
