@@ -1,6 +1,7 @@
 <!--ts-->
    * [Pytorch](#pytorch)
       * [Install](#install)
+      * [Check version](#check-version)
       * [Basics - Tensors](#basics---tensors)
          * [Converting numpy arrays into tensors](#converting-numpy-arrays-into-tensors)
          * [Converting tensors into numpy arrays](#converting-tensors-into-numpy-arrays)
@@ -23,6 +24,7 @@
       * [Transfer learning](#transfer-learning)
          * [Freezing the model](#freezing-the-model)
          * [Replacing the last two layers](#replacing-the-last-two-layers)
+      * [Saving the model](#saving-the-model)
       * [Useful for plotting](#useful-for-plotting)
       * [Derivatives](#derivatives)
          * [Y(x)](#yx)
@@ -30,9 +32,11 @@
       * [Generate random numbers](#generate-random-numbers)
       * [Tensor to number](#tensor-to-number)
       * [Template for Regression](#template-for-regression)
+      * [Integrating TensorBoard with pytorch](#integrating-tensorboard-with-pytorch)
+      * [Segmentation with U-net  (Encoder-Decoder)](#segmentation-with-u-net--encoder-decoder)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: 2020-07-04T17:10+03:00 -->
+<!-- Added by: gil_diy, at: 2020-07-07T10:26+03:00 -->
 
 <!--te-->
 
@@ -42,6 +46,11 @@
 ## Install
 Install `pip install torch torchvision`
 
+## Check version
+```python
+print(torch.__version__)
+print(torchvision.__version__)
+```
 
 ## Basics - Tensors
 ```python
@@ -377,7 +386,11 @@ my_model.fc = nn.Sequential(
 
 ```
 
-
+## Saving the model
+```python
+torch.save(my_model.state_dict(), model_path)
+```
+[Reference](https://pytorch.org/tutorials/beginner/saving_loading_models.html)
 
 ## Useful for plotting
 ```python
@@ -453,6 +466,19 @@ for i in range(epochs):
     loss.backward()
     optimizer.step()
 ```
+
+## Integrating TensorBoard with pytorch
+
+[Part1 : TensorBoard with PyTorch - Visualize Deep Learning Metrics](https://youtu.be/pSexXMdruFM)
+
+[Part2 : Hyperparameter Tuning and Experimenting - Training Deep Neural Networks](https://youtu.be/ycxulUVoNbk?list=PLZbbT5o_s2xrfNyHZsM6ufI0iZENK9xgG)
+
+
+## Segmentation with U-net  (Encoder-Decoder)
+
+the popular model architecture for segmentation tasks is the so-called **encoder-decoder** model.
+In the first half of the encoder-decoder model, the input image is downsized to a feature map using a few layers of convolution neural network and pooling layers.
+In the second half of the model, the feature map is up-sampled to the input size to produce a binary mask.
 
 ## References
 
