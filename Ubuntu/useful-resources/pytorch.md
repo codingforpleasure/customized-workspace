@@ -7,7 +7,9 @@
          * [Converting tensors into numpy arrays](#converting-tensors-into-numpy-arrays)
       * [matrix multiplication](#matrix-multiplication)
       * [Basic functions in pytorch](#basic-functions-in-pytorch)
-      * [Concanting torches:](#concanting-torches)
+      * [Concatenating torches:](#concatenating-torches)
+      * [Dataset &amp;&amp; DataLoader](#dataset--dataloader)
+         * [To better understand your data](#to-better-understand-your-data)
       * [Batch normalization](#batch-normalization)
       * [Preprocessing](#preprocessing)
       * [Batch size](#batch-size)
@@ -36,7 +38,7 @@
       * [Segmentation with U-net  (Encoder-Decoder)](#segmentation-with-u-net--encoder-decoder)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: 2020-07-07T10:26+03:00 -->
+<!-- Added by: gil_diy, at: 2020-07-10T17:24+03:00 -->
 
 <!--te-->
 
@@ -158,7 +160,7 @@ my_tensor.dtype | The datatype of `my_tensor` tensor
 torch.ones_like(my_tensor) | Create a new tensor that matches `my_tensor` attributes (shape and datatype) with all ones.
 torch.flatten(torch.arange(18).view(2,-1)) | Flattening a torch to 1 dimentional
 
-## Concanting torches:
+## Concatenating torches:
 
 ```python
 tensor1 = torch.arange(6).view(2,-1)
@@ -185,6 +187,78 @@ Output of: **print(torch.cat((tensor1,tensor2),1))**
 
 `tensor([[ 0,  1,  2, 30, 31, 32],
         [ 3,  4,  5, 33, 34, 35]])`
+
+
+
+## Dataset && DataLoader
+```python
+import torch 
+import torchvision
+import torch.vision,transforms as transforms
+
+train_set = torchvision.datasets.FasshionMNIST(
+	root = './data/FashionMNIST',
+	train = True,
+	download = True,
+	transform = transforms.Compose([
+		transforms.ToTensor()
+		])
+	)
+
+train_loader = torch.utils.data.Dataloader(
+	train_set, batch_size = 10
+)
+```
+### To better understand your data
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+
+torch.set_printoptions(linewidth = 120)
+len(train_set)
+train_set.train_labels
+
+# Gives me the frequency distribution of the labels
+# Should be uniform distibution for each class,
+# This was you can check if all classes are balanced.
+# https://youtu.be/mUueSPmcOBc?t=250 
+train_set.train_labels.bincount()
+
+```
+```python
+sample = next(iter(train_set))
+len(sample)
+
+type(sample)
+
+image, label = sample # sequence unpacking / Deconstructing the object
+
+image.shape
+
+label.shape # Scalar value
+
+plt.imgshow(image.sqeeze(), cmap = 'gray')
+print('label:',label)
+```
+
+```python
+batch = next(iter(train_loader))
+len(batch)
+type(batch)
+
+images, labels = batch
+
+images.shapes
+
+# nrow spcifies the number of images in each row
+grid = torchvision.utils.make_grid(images, nrow = 10)
+plt.figure(figsize = (15,15))
+plt.imshow(np.transpose(grid, (1,2,0)))
+
+print('labels: ', labels)
+
+```
+[Link](https://youtu.be/mUueSPmcOBc?t=665)
 
 ## Batch normalization
 
@@ -491,3 +565,6 @@ In the second half of the model, the feature map is up-sampled to the input size
 [PyTorch-Computer-Vision-Cookbook - Github](https://github.com/PacktPublishing/PyTorch-Computer-Vision-Cookbook)
 
 [PyTorch-Artificial-Intelligence-Fundamentals - Github](https://github.com/PacktPublishing/PyTorch-Artificial-Intelligence-Fundamentals)
+
+[Neural Networks for Image
+Segmentation based on PyTorch](https://github.com/qubvel/segmentation_models.pytorch#examples)
