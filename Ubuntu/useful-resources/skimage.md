@@ -4,10 +4,14 @@
       * [import library](#import-library)
       * [resize image](#resize-image)
       * [downscale](#downscale)
+      * [Thresholding](#thresholding)
       * [Detecting edges](#detecting-edges)
       * [Canny edge detector](#canny-edge-detector)
+      * [Hough lines](#hough-lines)
+      * [Flood Fill](#flood-fill)
+      * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: 2020-07-11T17:08+03:00 -->
+<!-- Added by: gil_diy, at: 2020-07-12T09:07+03:00 -->
 
 <!--te-->
 # sckit-image
@@ -34,6 +38,22 @@ plt.imshow(resized_img)
 ```python
 downscaled_img = downscale_local_mean(img,(4,3))
 plt.imshow(downscaled_img)
+```
+
+## Thresholding
+
+[Link](https://scikit-image.org/docs/stable/auto_examples/applications/plot_thresholding.html#sphx-glr-auto-examples-applications-plot-thresholding-py)
+
+```python
+import matplotlib.pyplot as plt
+
+from skimage import data
+from skimage.filters import try_all_threshold
+
+img = data.page()
+
+fig, ax = try_all_threshold(img, figsize=(10, 8), verbose=False)
+plt.show()
 ```
 
 ## Detecting edges
@@ -82,3 +102,31 @@ from skimage.feature import canny
 # play with sigma
 edge_canny = canny(img, sigma = 3)
 ```
+
+## Hough lines
+
+[Link](https://scikit-image.org/docs/dev/auto_examples/edges/plot_line_hough_transform.html#id3)
+
+Attention: The Hough line will only work on **black background**
+
+
+## Flood Fill
+
+[Link](https://scikit-image.org/docs/stable/auto_examples/segmentation/plot_floodfill.html)
+
+
+```python
+from skimage import data, filters
+from skimage.segmentation import flood, flood_fill
+
+checkers = data.checkerboard()
+
+# Fill a square near the middle with value 127, starting at index (76, 76)
+filled_checkers = flood_fill(checkers, (76, 76), 127)
+```
+
+
+
+## Reference
+
+[Examples can be seen here](https://github.com/scikit-image/scikit-image/tree/master/doc/examples)
