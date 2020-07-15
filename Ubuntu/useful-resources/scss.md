@@ -23,12 +23,14 @@
             * [Example #6: mixin real-world practive](#example-6-mixin-real-world-practive)
          * [Loops](#loops)
             * [For Loop](#for-loop)
+               * [Example #1](#example-1-2)
+               * [Example #2](#example-2-2)
             * [For each](#for-each)
          * [Conditional Directives](#conditional-directives)
          * [Inheritance](#inheritance)
          * [Media queries](#media-queries)
 
-<!-- Added by: gil_diy, at: 2019-07-06T23:46+03:00 -->
+<!-- Added by: gil_diy, at: 2020-07-15T12:16+03:00 -->
 
 <!--te-->
 
@@ -377,7 +379,11 @@ $include google-font("Titilli+Web");
 ### Loops
 
 #### For Loop
+
 For avoiding repetitive code,
+
+##### Example #1 
+
 So if I use in scss the following code:
 
 ```css
@@ -409,6 +415,37 @@ The **css output** would be:
 	width: 8em;
 }
 ```
+
+
+##### Example #2
+
+```SCSS
+@for $i from 1 to 4 {
+    $val: $i;
+    path:nth-child(#{$i}) {animation-delay: #{.1*$i}s}
+
+}
+```
+
+The **css output** would be:
+
+```css
+path:nth-child(1) {
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s;
+}
+
+path:nth-child(2) {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+
+path:nth-child(3) {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+}
+```
+
 
 #### For each
 
