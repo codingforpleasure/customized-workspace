@@ -2,9 +2,10 @@
 <!--ts-->
    * [Latex](#latex)
       * [Convert latex into svg](#convert-latex-into-svg)
+      * [LaTeX mathematical symbols](#latex-mathematical-symbols)
       * [Useful](#useful)
 
-<!-- Added by: gil_diy, at: 2020-07-15T10:10+03:00 -->
+<!-- Added by: gil_diy, at: 2020-07-15T11:03+03:00 -->
 
 <!--te-->
 
@@ -29,6 +30,11 @@ output:
 <p align="center"> <!-- style="width:400px;" -->
   <img src="images/svg/example.svg" title="tool tip here">
 </p>
+
+
+
+## LaTeX mathematical symbols
+[Link](https://oeis.org/wiki/List_of_LaTeX_mathematical_symbols)
 
 ## Useful
 [Great ](https://youtu.be/4u8FxNEDUeg)
