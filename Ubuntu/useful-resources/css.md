@@ -10,14 +10,19 @@
       * [Colors](#colors)
       * [Gradient](#gradient)
       * [Image](#image)
-      * [Polygon](#polygon)
+      * [Polygon (For creating any type of shape)](#polygon-for-creating-any-type-of-shape)
       * [Flex <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" rel="nofollow">(Reference)</a>](#flex-reference)
       * [Grid](#grid)
       * [Create shapes](#create-shapes)
          * [Create circle in the center of the screen:](#create-circle-in-the-center-of-the-screen)
+         * [Create](#create)
       * [Styling Text](#styling-text)
       * [Styling Links](#styling-links)
       * [Selectors](#selectors)
+      * [Pseudo Elements Before and After](#pseudo-elements-before-and-after)
+         * [use cases](#use-cases)
+            * [Use case #1: Add quotation marks](#use-case-1-add-quotation-marks)
+            * [Use case #2: Add hover tool-tip](#use-case-2-add-hover-tool-tip)
       * [Text properties](#text-properties)
       * [Playing with boxes](#playing-with-boxes)
          * [Margins (<a href="https://youtu.be/M6coJNLFBWI?list=PL4-IK0AVhVjM0xE0K2uZRvsM7LkIhsPT-&amp;t=246" rel="nofollow">Link</a>)](#margins-link)
@@ -27,14 +32,13 @@
          * [Dynamically for window's size](#dynamically-for-windows-size)
       * [2D Transforms](#2d-transforms)
       * [List style](#list-style)
-      * [Useful shape tool](#useful-shape-tool)
       * [Animation](#animation)
          * [Example 1: Progress bar](#example-1-progress-bar)
          * [animation properties](#animation-properties)
          * [Example 2: Animating movement and opacity <strong>with keyframes</strong>](#example-2-animating-movement-and-opacity-with-keyframes)
          * [Example 3: Animating color transition](#example-3-animating-color-transition)
 
-<!-- Added by: gil_diy, at: 2019-03-28T10:17+02:00 -->
+<!-- Added by: gil_diy, at: 2020-07-16T16:01+03:00 -->
 
 <!--te-->
 
@@ -59,6 +63,8 @@ img + p | Paragraphs that come immediately after any image ([adjacent sibling co
 input:focus | Select and style an input field when it gets focus ([Link](https://www.w3schools.com/cssref/sel_focus.asp))
 [CSS Selectors reference](https://www.w3schools.com/csSref/css_selectors.asp)
 
+
+[Great live demostration](https://youtu.be/tf0q0MiHXmg?list=PL6nGgzfhB2YQe96E6hb4pq5Omnj5G69nB)
 
 [Online selectors training look here](https://flukeout.github.io/)
 
@@ -509,6 +515,8 @@ Limit the width of the element | `max-width: 1000px`
 ## 2D Transforms
 
 * Useful for animating shapes in SVG ([Link](https://css-tricks.com/transforms-on-svg-elements/))
+
+[svg animation](https://medium.com/@prestonpierce/collection-of-beautiful-svg-animations-on-codepen-4693e496958f)
 
 [Demonstrating transforms](https://codepen.io/Codingforpleasure/pen/vPMVzv)
 [Demonstrating Perspective](https://codepen.io/Codingforpleasure/pen/WmWYLX)
