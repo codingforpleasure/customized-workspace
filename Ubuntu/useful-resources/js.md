@@ -6,6 +6,7 @@
          * [var](#var)
          * [let](#let)
          * [const](#const)
+      * [Check type of a variable:](#check-type-of-a-variable)
       * [Objects](#objects)
       * [this](#this)
       * [Arrow Funcs](#arrow-funcs)
@@ -26,8 +27,10 @@
          * [forEach](#foreach)
          * [every](#every)
          * [some](#some)
+      * [Third party](#third-party)
+         * [GreenSock](#greensock)
 
-<!-- Added by: gil_diy, at: 2019-10-30T17:31+02:00 -->
+<!-- Added by: gil_diy, at: 2020-07-18T10:31+03:00 -->
 
 <!--te-->
 
@@ -70,7 +73,10 @@ x = 2; /* ERROR! */
 ```
 With **const** the variable **cannot be reassigned** and is **only accessiable in that block** which it is defined.
 
-
+## Check type of a variable:
+```js
+console.log(typeof(my_variable))
+````
 ## Objects
 set of key value pairs:
 
@@ -400,3 +406,8 @@ function ifElementBiggerThen30(element){ return element > 30;}
 [10,20,30,40,50,60].some(ifElementBiggerThen30);
 //true
 ```
+## Third party
+
+### GreenSock
+
+[Link](https://www.cassie.codes/posts/creating-my-logo-animation/#heading-svg-stroke-dasharray)
