@@ -1,11 +1,16 @@
 <!--ts-->
    * [SVG](#svg)
       * [Terminology](#terminology)
+      * [Latex to svg](#latex-to-svg)
+      * [Generate svg with python](#generate-svg-with-python)
       * [Prettify svg in vscode](#prettify-svg-in-vscode)
       * [Edit svg in vscode](#edit-svg-in-vscode)
+      * [See the the XML code in inkscape](#see-the-the-xml-code-in-inkscape)
       * [How to export svg in <strong>inkskape</strong> ?](#how-to-export-svg-in-inkskape-)
+      * [SVG optimizer from shell](#svg-optimizer-from-shell)
       * [Tools for SVG](#tools-for-svg)
       * [How to convert "Object to Path" in inkscape?](#how-to-convert-object-to-path-in-inkscape)
+      * [Line animation in svg](#line-animation-in-svg)
    * [SVG Elements](#svg-elements)
       * [SVG circle element](#svg-circle-element)
          * [Basic circle properties](#basic-circle-properties)
@@ -22,7 +27,7 @@
       * [SVG line element](#svg-line-element)
       * [Tools overview for the job:](#tools-overview-for-the-job)
 
-<!-- Added by: gil_diy, at: 2019-03-13T14:36+02:00 -->
+<!-- Added by: gil_diy, at: 2020-07-18T11:12+03:00 -->
 
 <!--te-->
 
@@ -61,6 +66,16 @@ Setting up the viewBox:
 
 ```
 
+## Latex to svg
+
+[Link](https://viereck.ch/latex-to-svg/)
+
+## Generate svg with python
+
+[Link](https://github.com/hogesonline/svg_play)
+[Link](https://github.com/cduck/drawSvg)
+
+
 ## Prettify svg in vscode
 
 1. Make sure this [extension](https://marketplace.visualstudio.com/items?itemName=jock.svg) is installed.
@@ -71,6 +86,10 @@ Setting up the viewBox:
 1. Install: [Very useful extension (svg editor) ](https://marketplace.visualstudio.com/items?itemName=henoc.svgeditor)
 2. open the svg file
 3. `Ctrl + Shift + p` afterwards enter:`svg editor` you will be suggested: **"Open SVG Editor"**
+
+## See the the XML code in inkscape
+
+press the keys `Ctrl + Shift + x`
 
 ## How to export svg in **inkskape** ?
 
@@ -89,6 +108,15 @@ html land | SVG land
  Background | fill
  Borders | stroke
 
+## SVG optimizer from shell
+
+SVGO is terminal-based, with no visual GUI
+```bash
+sudo npm install -g svgo
+```
+
+[official github](https://github.com/svg/svgo)
+
 ## Tools for SVG
 
 * [sublime SVG snippets](https://packagecontrol.io/packages/SVG-Snippets) - Very useful
@@ -99,7 +127,9 @@ html land | SVG land
 
 Path -> Object to Path
 
+## Line animation in svg
 
+[Nice](https://youtu.be/plEKge4zq68)
 
 # SVG Elements
 
