@@ -1,22 +1,34 @@
 <!--ts-->
-   * [Tikz](#tikz)
-      * [Generate latetx with pyton](#generate-latetx-with-pyton)
-      * [Generate tikz in python using tikzplotlib](#generate-tikz-in-python-using-tikzplotlib)
-      * [Generate tikz from inkscape using an extention](#generate-tikz-from-inkscape-using-an-extention)
-         * [Tikz](#tikz-1)
-      * [Useful resources](#useful-resources)
 
-<!-- Added by: gil_diy, at: 2020-07-20T09:59+03:00 -->
+
+<!-- Added by: gil_diy, at: 2020-07-26T14:38+03:00 -->
 
 <!--te-->
 
 # Tikz
 
 
-## Generate latetx with pyton
+## Generate latetx with python
 
 [Link](https://jeltef.github.io/PyLaTeX/current/examples/matplotlib_ex.html)
 
+## Generate latex into svg
+
+First generate `latex` to `pdf`:
+
+```bash
+pdflatex example2.tex 
+```
+next convert `pdf` to into `svg`
+
+```bash
+pdf2svg example2.pdf example2.svg
+```
+
+**Pay attention**: the circles are are actually **paths**.
+Not so good
+
+[Reference](https://tex.stackexchange.com/questions/51757/how-can-i-use-tikz-to-make-standalone-svg-graphics)
 
 ## Generate tikz in python using tikzplotlib
 
@@ -32,6 +44,10 @@ How to install inkscape extenion:
 [Link](https://www.youtube.com/watch?v=7M09gTMb3G4)
 
 
+## Well written official manual for tikz (written in 2020)
+
+[Link](https://pgf-tikz.github.io/pgf/pgfmanual.pdf)
+
 
 ### Tikz
 
@@ -43,3 +59,4 @@ How to install inkscape extenion:
 
 [Link](https://github.com/walmes/Tikz)
 
+[Link](https://github.com/hackl/tikz-network)
