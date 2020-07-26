@@ -1,7 +1,14 @@
 <!--ts-->
+   * [Tikz](#tikz)
+      * [Generate latetx with python](#generate-latetx-with-python)
+      * [Generate latex into svg](#generate-latex-into-svg)
+      * [Generate tikz in python using tikzplotlib](#generate-tikz-in-python-using-tikzplotlib)
+      * [Generate tikz from inkscape using an extention](#generate-tikz-from-inkscape-using-an-extention)
+      * [Well written official manual for tikz (written in 2020)](#well-written-official-manual-for-tikz-written-in-2020)
+         * [Tikz](#tikz-1)
+      * [Useful resources](#useful-resources)
 
-
-<!-- Added by: gil_diy, at: 2020-07-26T14:38+03:00 -->
+<!-- Added by: gil_diy, at: 2020-07-27T02:07+03:00 -->
 
 <!--te-->
 
@@ -25,7 +32,7 @@ next convert `pdf` to into `svg`
 pdf2svg example2.pdf example2.svg
 ```
 
-**Pay attention**: the circles are are actually **paths**.
+**Pay attention**: the circles are actually **paths**.
 Not so good
 
 [Reference](https://tex.stackexchange.com/questions/51757/how-can-i-use-tikz-to-make-standalone-svg-graphics)
@@ -53,9 +60,13 @@ How to install inkscape extenion:
 
 ## Useful resources
 
-[Link](https://github.com/PetarV-/TikZ)
+[Complete collection of my TikZ figures](https://github.com/PetarV-/TikZ)
 
-[Link](https://texample.net/)
+[beautiful Tikz figures without clunky Tikz code ](https://github.com/negrinho/sane_tikz)
+
+[tikz by example](https://github.com/ridlo/tikz_by_example)
+
+[Link](https://texample.net/tikz/examples/all/)
 
 [Link](https://github.com/walmes/Tikz)
 
