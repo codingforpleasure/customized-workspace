@@ -17,7 +17,8 @@
             * [Substruction](#substruction)
          * [Logical Operations on images](#logical-operations-on-images)
          * [Thresholding Types](#thresholding-types)
-            * [Threshold set manually](#threshold-set-manually)
+            * [Threshold Global](#threshold-global)
+               * [Threshold set manually](#threshold-set-manually)
             * [Threshold calculated automatically (THRESH_OTSU)](#threshold-calculated-automatically-thresh_otsu)
             * [Adaptive thresholding](#adaptive-thresholding)
          * [blurring/smoothening techniques](#blurringsmoothening-techniques)
@@ -32,6 +33,8 @@
             * [Rotate an image](#rotate-an-image)
             * [Affine transformation (Shear)](#affine-transformation-shear)
          * [Morphological Transformations](#morphological-transformations)
+         * [Affine wrap transform](#affine-wrap-transform)
+         * [Perspective Transformation](#perspective-transformation)
             * [Erosion](#erosion)
             * [Dilation](#dilation)
             * [Gradient (For determining the borders)](#gradient-for-determining-the-borders)
@@ -54,7 +57,7 @@
          * [The function blobFromImage(s)](#the-function-blobfromimages)
             * [1. Mean subtraction](#1-mean-subtraction)
 
-<!-- Added by: gil_diy, at: 2020-06-13T00:31+03:00 -->
+<!-- Added by: gil_diy, at: 2020-07-28T17:04+03:00 -->
 
 <!--te-->
 
@@ -181,6 +184,8 @@ hist = cv2.calcHist([img_grayscale], channels=[0], mask=None, histSize=[256], ra
 * **ranges** - We specify The range of possible pixel values. Normally, this is [ 0, 256 ] for each channel, but if you are using a color space other than RGB (such as HSV), the ranges might be different.
 
 
+[Intresting article about histogram](https://lmcaraig.com/understanding-image-histograms-with-opencv)
+
 ### Arithmetic Operations on Images
 
 apply a simple arithmation operation on each pixel of the image
@@ -203,7 +208,11 @@ img6 = cv2.bitwise_xor(img1, img2)
 ```
 ### Thresholding Types
 
-#### Threshold set manually
+#### Threshold Global
+
+[Link](https://www.youtube.com/watch?v=f1SaYzOthCM)
+
+##### Threshold set manually
 **Binary:**  `if pixel > threshold
 	pixel = max_val`
 else
@@ -259,6 +268,9 @@ constant = 2
 th1 = cv2.adaptiveThreshold(img, 255, cv2.ADAPTIVE_THRESH_MEAN_C, cv2.THRESH_BINARY, block_size, constant)
 th2 = cv2.adaptiveThreshold (img, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY, block_size, constant)
 ```
+
+
+[Link](https://www.youtube.com/watch?v=nPyb2BVBeB8)
 
 ### blurring/smoothening techniques
 
@@ -357,6 +369,16 @@ Shear offsets a set of points a distance proportional to their x and y coordinat
 Should apply those transformations on black and white images
 
 In OpenCV there a are many predefined filters which use a **kernel**. kernel is a set of weights, which determine how each output pixel is calculated from a neighborhood of input pixels. Another term for a kernel is a convolution matrix. It mixes up or convolves the pixels in a region. Similarly, a kernel-based filter may be called a convolution filter.
+
+### Affine wrap transform
+
+[Link](https://www.youtube.com/watch?time_continue=23&v=PtCQH93GucA&feature=emb_logo)
+
+
+### Perspective Transformation
+
+[Link](https://medium.com/analytics-vidhya/opencv-perspective-transformation-9edffefb2143)
+
 
 #### Erosion
 ```python
@@ -551,7 +573,12 @@ it's **CC_STAT_AREA** is 19
 You should use `flood fill` function
 
 ```python
+h, w = img_bw.shape
 
+cv2.floodFill(image=img_bw,
+              mask=np.zeros((h + 2, w + 2), np.uint8),
+              seedPoint=pos_cursor,
+              newVal=0)	
 ```
 
 [Nice Reference](https://github.com/opencv/opencv/blob/master/samples/python/floodfill.py)
