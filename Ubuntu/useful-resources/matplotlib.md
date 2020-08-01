@@ -19,8 +19,9 @@
             * [Linestyles](#linestyles)
          * [Plot with logarithmic scale for y-axis](#plot-with-logarithmic-scale-for-y-axis)
          * [Export plot](#export-plot)
+         * [Drawing shapes with Matplotlib (patches)](#drawing-shapes-with-matplotlib-patches)
 
-<!-- Added by: gil_diy, at: 2020-06-10T16:20+03:00 -->
+<!-- Added by: gil_diy, at: 2020-08-01T23:57+03:00 -->
 
 <!--te-->
 
@@ -109,6 +110,23 @@ def line_plot_with_fill_between_functions():
 
     plt.show()
 ```
+
+<p align="center"> <!-- style="width:400px;" -->
+  <img src="images/matplotlib/line_plot.png" title="tool tip here">
+</p>
+
+<p align="center"> <!-- style="width:400px;" -->
+  <img src="images/matplotlib/line_plot2.png" title="tool tip here">
+</p>
+
+<p align="center"> <!-- style="width:400px;" -->
+  <img src="images/matplotlib/line_plot3.png" title="tool tip here">
+</p>
+
+<p align="center"> <!-- style="width:400px;" -->
+  <img src="images/matplotlib/line_plot4.png" title="tool tip here">
+</p>
+
 ### Pie Charts
 ```python
 from matplotlib import pyplot as plt
@@ -134,7 +152,13 @@ def pie_chart_with_explode():
     plt.tight_layout()
     plt.show()
 ```
+<p align="center"> <!-- style="width:400px;" -->
+  <img src="images/matplotlib/pie_chart1.png" title="tool tip here">
+</p>
 
+<p align="center"> <!-- style="width:400px;" -->
+  <img src="images/matplotlib/pie_chart2.png" title="tool tip here">
+</p>
 
 ### Stack Plots
 ```python
@@ -164,6 +188,11 @@ plt.title("My Awesome Stack Plot")
 plt.tight_layout()
 plt.show()
 ```
+
+<p align="center"> <!-- style="width:400px;" -->
+  <img src="images/matplotlib/stack_plot.png" title="tool tip here">
+</p>
+
 ### Histograms
 ```python
 def histogram_basic_with_declared_bins():
@@ -200,6 +229,15 @@ def histogram_basic_with_declared_bins():
     plt.show()
 ```
 
+<p align="center"> <!-- style="width:400px;" -->
+  <img src="images/matplotlib/histograms.png" title="tool tip here">
+</p>
+
+<p align="center"> <!-- style="width:400px;" -->
+  <img src="images/matplotlib/histograms2.png" title="tool tip here">
+</p>
+
+
 [Reference](https://www.youtube.com/watch?v=XDv6T4a0RNc&list=PL-osiE80TeTvipOqomVEeZ1HRrcEvtZB_&index=6)
 
 ### Boxplot
@@ -224,6 +262,11 @@ from matplotlib import pyplot as plt
 
  plt.show()
 ```
+
+<p align="center"> <!-- style="width:400px;" -->
+  <img src="images/matplotlib/boxplot.png" title="tool tip here">
+</p>
+
 ### Scatter Plots
 
 ```python
@@ -256,6 +299,18 @@ def scatter_plot_with_different_sizes_and_colors():
 ```
 
 [Reference](https://www.youtube.com/watch?v=zZZ_RCwp49g&list=PL-osiE80TeTvipOqomVEeZ1HRrcEvtZB_&index=7)
+
+<p align="center"> <!-- style="width:400px;" -->
+  <img src="images/matplotlib/scatter.png" title="tool tip here">
+</p>
+
+<p align="center"> <!-- style="width:400px;" -->
+  <img src="images/matplotlib/scatter2.png" title="tool tip here">
+</p>
+
+<p align="center"> <!-- style="width:400px;" -->
+  <img src="images/matplotlib/scatter3.png" title="tool tip here">
+</p>
 
 ### Plotting time series
 
@@ -333,6 +388,8 @@ if __name__ == '__main__':
     plt.show()
 ```
 
+
+time_series_plot.png
 ### Subplots
 ```python
 
