@@ -39,8 +39,10 @@
          * [Reducing Learning rate on plateau](#reducing-learning-rate-on-plateau)
          * [Transfer learning](#transfer-learning)
       * [Resources](#resources)
+      * [Annotation tools for image segmentation and drawing bbox](#annotation-tools-for-image-segmentation-and-drawing-bbox)
+      * [Videos of handwritten flowchart](#videos-of-handwritten-flowchart)
 
-<!-- Added by: gil_diy, at: 2020-05-11T01:32+03:00 -->
+<!-- Added by: gil_diy, at: 2020-08-02T10:59+03:00 -->
 
 <!--te-->
 # CNN
@@ -78,7 +80,7 @@ we produce different maps. Applying our kernel produces scalar ourput as we just
 
 - Depth describes the number of filters used it does not relate the image depth (2 channels) nor does it describe the number of hidden layers in our CNN.
 
-- Each filter learns different feature maps that are activated in the presence of different image  features (edges, patterns, colots layouts)
+- Each filter learns different feature maps that are activated in the presence of different image  features (edges, patterns, colors layouts)
 
 <p align="center"> <!-- style="width:400px;" -->
   <img src="images/cnn/depth.jpeg" title="tool tip here">
@@ -96,16 +98,19 @@ we produce different maps. Applying our kernel produces scalar ourput as we just
 - Stride is one of the methods we can control the spatial input size i.e the volume of the inputs into the other layers of our CNN.
 
 ### Zero-Padding
+-  padding might be required to process inputs with a shape that does not perfectly fit kernel size and stride of the pooling layer. 
 
 - Zero padding is a very simple concept that refers to a border we apply to the input volume.
   We haven't discussed deep networks much yet. but imagine we had multiple Convolution layers. You can quickly see that even with a stride of 1, we end up with a tiny output matrix quickly.
  - We add a border of 0's around our input. basically this is equivalent of adding a black border around an image (we can set our padding to 2 if needed)
 
+
+
 **Keras supports these types of padding:**
 
-  Valid padding, which menas no padding
+  Valid padding, which meaas no padding
 
-  Same padding, which menas zero padding
+  Same padding, which means zero padding
 
   Causal padding, which applys to your Conv1D model to pad zeroes to the front of your inputs.
 
@@ -122,6 +127,24 @@ I | Input Image Size
 To ensure our filters cover the full input image symetrically, we used the following equation to do this sanity check. Once the result of this equation is an integer, out setting are valid.
 
 `((I-K+2P))/S +1`
+
+
+**Example #1:**
+
+<p align="center"> <!-- style="width:400px;" -->
+  <img src="images/padding_1.jpg" title="tool tip here">
+</p>
+
+ it perfectly fits and your pooling layer does not require any padding
+
+**Example #2:**
+
+<p align="center"> <!-- style="width:400px;" -->
+  <img src="images/padding_2.jpg" title="tool tip here">
+</p>
+
+Here you need padding since your input size is not an integer multiple of your kernel size. Therefore, you need to add padding on one side in order make it work. 
+
 
 ## ReLU the Activation layer of choice for CNNs
 
@@ -157,13 +180,13 @@ now we have applied the activation function.
 In Keras it is called Dense layer,
 The FC Layer outputs the class probabilities, where each class is assigned a probabilty.
 - All probabilties must sum to 1 .
-The activation function used to produce these probabilties is the **SOft Max** Function as it turns the outputs of the FC layer (last layer) into probabilities.
+The activation function used to produce these probabilties is the **Soft Max** Function as it turns the outputs of the FC layer (last layer) into probabilities.
 
 
 * The more hidden layers the more features. praticularly high level features a CNN can learn.
 I like to use a minimum of 2. which is shown in the diagram below.
 
-The flow is: input -> Conv -> ReLI -> Pool -> Conv -> ReLI -> Pool -> FC -> Output
+The flow is: input -> Conv -> ReLU -> Pool -> Conv -> ReLI -> Pool -> FC -> Output
 
 <p align="center"> <!-- style="width:400px;" -->
   <img src="images/cnn/cnn_review.jpeg" title="tool tip here">
@@ -204,7 +227,7 @@ Just like NN, training CNNs is essentialy the same once we setup out Network lay
 
 ## Building a CNN in Keras
 
-Keras is a high level neural network APi for **Python**
+Keras is a high level neural network API for **Python**
 It has the abilty to use TensorFlow, CNTK or Theano backends
 
 ### Loading out data
@@ -459,13 +482,21 @@ history = model.fit(x_train, y_train,
   validation_data = (x_test, y_test)
   )
 
-# Or you can do this in case you have used flow_from_directory() function before
-# for train_generator and validation_generator.
+
 
 history = model.fit(train_generator,
                               epochs=15,
                               verbose=1,
                               validation_data=validation_generator)
+
+# Or you can do this in case you have used flow_from_directory() function before
+# for train_generator and validation_generator.
+
+history = model.fit_generator(train_generator,
+                              epochs=2,
+                              verbose=1,
+                              validation_data=validation_generator)
+
 
 ```
 
@@ -500,8 +531,10 @@ reduce_learning_rate = ReducceLROnPlateau(monitor = 'val_loss', factor = 0.2, pa
 
 ### Transfer learning
 
+Transfer learning is useful because you can use the features that were learned from the large datasets that you may not have access to.
+
 Can you use Image augmentation with Transfer Learning? 
-Yes. it's pre-trained layers that are frozen, So you can augment your images as you train the bottom layers of the DNN with them.
+Yes. it's pre-trained layers that are frozen, So you can augment your images as **you train the bottom layers of the DNN with them**.
 
 You're going to add a DNN a deep neural network underneath that,
 and then you're just going to retrain for those lower levels,
@@ -509,6 +542,13 @@ and as a result using all of these. you're going to be doing all that to be able
 to make the classifiers that you've been building in the course to date
 much more efficient and maybe even quicker to be able to reach higher levels of
 accuracy than if you're training it from scratch.
+
+When you add your DNN at the bottom of the network, you specify your output layer with the number of classes you want.
+
+
+* Dropouts avoid overfitting because neighbor neurons can have similar weights, and thus can skew the final training.
+
+* The symptom of a dopout rate being too high would be the network would lose specialization to the effect that it would be inefficient or ineffective at learning, driving accuracy down.
 
 ```python
 
@@ -518,7 +558,7 @@ local_weights_file = '/tmp/inceptions_v3_weights_tf_dim_ordering_tf_kernels_noto
 
 # specify that you don't want to use the built-in weights,
 # but the snapshot that you've just downloaded
-pre_trained_model = inceptionsV3(input_shape = (150,150,3),
+pre_trained_model = InceptionV3(input_shape = (150,150,3),
                                   include_top = False,
                                   weights = None)
 
@@ -545,22 +585,71 @@ x = layers.Dense(1024, activation = 'relu')(x)
 
 # The idea behind the dropout is that layers in a neural network can sometimes
 # end up having similar weights and possible impact each other leading to # over-fitting. By dropping some out that has the effect of neighbors not affecting each other too much and and potentially removing overfitting
-x = layers.Dropout(0.2)(x) ## Adding dropout precentage of 20% 
+x = layers.Dropout(0.2)(x) ## Adding dropout 0.2 means I'll loose 20% nodes
 x = layers.Dense(1, activation = 'sigmoid')(x)
 
 model = Model(pre_trained_model.input, x)
 model_compile(optimizer = RMSprop(lr=0.0001),
-              loss = 'binary_crossentropy',
+              loss = 'binary_crossentropy', # or `categorical_crossentropy`
+                                            # or `sparse_categorical_crossentropy`
               metrics = ['acc'])
 ```
 
+```python
+
+```
 ## Resources
+
+[Sparse_categorical_crossentropy vs categorical_crossentropy (keras, accuracy)](https://datascience.stackexchange.com/questions/41921/sparse-categorical-crossentropy-vs-categorical-crossentropy-keras-accuracy)
 
 
 [Very nice notes](https://indoml.com/2018/03/07/student-notes-convolutional-neural-networks-cnn-introduction/)
 
 [Google images downloader](https://github.com/hardikvasa/google-images-download)
 
+
+[Quick Draw Dataset is a collection of 50 million drawings](https://github.com/googlecreativelab/quickdraw-dataset)
+
+[Download](https://console.cloud.google.com/storage/browser/quickdraw_dataset/sketchrnn)
+
+[hanwritten flowchart database](http://ivc.univ-nantes.fr/en/databases/Flowchart/)
+
+[Annotated database of on-line sketched diagrams from FlowChart domain.](http://cmp.felk.cvut.cz/~breslmar/flowcharts/)
+
+
+[converts the mathematical equations in an image into LaTex](https://keerthigowda.github.io/Im2LaTex/)
+
+[Reference pytorch Quick Draw](https://github.com/uvipen/QuickDraw)
+
 [25 Open Datasets](https://www.analyticsvidhya.com/blog/2018/03/comprehensive-collection-deep-learning-datasets/)
 
+
+[ handwritten-mathematical-expressions datset](https://www.kaggle.com/rtatman/handwritten-mathematical-expressions)
+
+[Handwritten math symbols dataset](https://www.kaggle.com/xainano/handwrittenmathsymbols)
+
+[Link](https://www.csd.uwo.ca/~watt/pub/reprints/2007-icdar-inkml.pdf)
+
 [Great Reference](https://towardsdatascience.com/applied-deep-learning-part-4-convolutional-neural-networks-584bc134c1e2)
+
+[CNN Explained](https://tiefenauer.github.io/ml/deep-learning/4)
+
+
+## Annotation tools for image segmentation and drawing bbox
+
+[labelme](https://github.com/wkentaro/labelme)
+
+[PixelAnnotationTool](https://github.com/abreheret/PixelAnnotationTool)
+
+[VGG Image Annotator](https://www.robots.ox.ac.uk/~vgg/software/via/)
+
+
+
+
+## Videos of handwritten flowchart
+
+[Link](https://www.youtube.com/watch?v=7qclxWFkIAk)
+[Link](https://www.youtube.com/watch?v=_2miUEt81nI)
+[Link](https://www.youtube.com/watch?v=6nTme9tpJzg&list=RDQMnzc2AmtpVL0&index=12)
+[Link](https://www.youtube.com/watch?v=Y5MMwQxM4wI)
+[Link](https://youtu.be/_kPuHPKpCP0?t=261)
