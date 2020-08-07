@@ -7,7 +7,7 @@
       * [Display the contents of <strong>dynamic</strong> symbol table using -T option](#display-the-contents-of-dynamic-symbol-table-using--t-option)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: 2020-07-31T09:01+03:00 -->
+<!-- Added by: gil_diy, at: 2020-08-07T11:19+03:00 -->
 
 <!--te-->
 
@@ -64,3 +64,5 @@ objdump -T <Your binary file>
 
 ## Reference
 [Link](https://www.thegeekstuff.com/2012/09/objdump-examples/)
+
+[Memory layout image](https://www.geeksforgeeks.org/memory-layout-of-c-program/)
