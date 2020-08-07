@@ -8,7 +8,7 @@
       * [Sort the nm Output by the Symbol Size](#sort-the-nm-output-by-the-symbol-size)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: 2020-07-31T09:12+03:00 -->
+<!-- Added by: gil_diy, at: 2020-08-07T11:19+03:00 -->
 
 <!--te-->
 
@@ -89,3 +89,5 @@ nm -g --size-sort <Your binary file>
 ## Reference
 
 [Link](https://www.thegeekstuff.com/2012/03/linux-nm-command/)
+
+[Memory layout image](https://www.geeksforgeeks.org/memory-layout-of-c-program/)
