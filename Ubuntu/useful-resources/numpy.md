@@ -5,12 +5,14 @@
             * [Key attributes](#key-attributes)
          * [Creating](#creating)
             * [Creating a 3d array](#creating-a-3d-array)
+            * [Import data from csv](#import-data-from-csv)
          * [Random generation](#random-generation)
             * [randn](#randn)
             * [rand](#rand)
          * [Forming](#forming)
             * [Stack 1-D arrays as columns into a 2-D array.](#stack-1-d-arrays-as-columns-into-a-2-d-array)
          * [Retrieving info about an array](#retrieving-info-about-an-array)
+         * [Returning number of pixels meet the a specified constraint](#returning-number-of-pixels-meet-the-a-specified-constraint)
          * [Transpose a matrix/array](#transpose-a-matrixarray)
          * [Aggregation functions](#aggregation-functions)
          * [Aggregation functions exmaple on matrix:](#aggregation-functions-exmaple-on-matrix)
@@ -36,7 +38,7 @@
          * [Saving our datasets to NPZ files](#saving-our-datasets-to-npz-files)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: 2020-05-12T17:19+03:00 -->
+<!-- Added by: gil_diy, at: 2020-08-12T16:03+03:00 -->
 
 <!--te-->
 
@@ -150,6 +152,12 @@ arr[0,:,:] = single_matrix # Adding to first layer
 arr[1,:,:] = single_matrix # Adding to second layer
 ```
 
+#### Import data from csv
+```python
+from numpy import genfromtxt
+
+data = genfromtxt(filename, delimiter=',')
+```
 
 ### Random generation
 
@@ -229,6 +237,12 @@ To find the coordinates (row number, column number) just use `np.where(mat > 0)`
 (array([0, 1, 1, 2]), array([2, 0, 1, 0]))
 ```
 
+
+### Returning number of pixels meet the a specified constraint
+
+```python
+np.count_nonzero(my_mat!=False)
+```
 ### Transpose a matrix/array
 
 
