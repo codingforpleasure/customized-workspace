@@ -23,7 +23,7 @@
          * [Find all :](#find-all-)
    * [<a href="https://stackoverflow.com/questions/14132210/use-find-command-but-exclude-files-in-two-directories" rel="nofollow">https://stackoverflow.com/questions/14132210/use-find-command-but-exclude-files-in-two-directories</a>](#httpsstackoverflowcomquestions14132210use-find-command-but-exclude-files-in-two-directories)
 
-<!-- Added by: gil_diy, at: 2019-07-25T22:24+03:00 -->
+<!-- Added by: gil_diy, at: 2020-08-13T02:24+03:00 -->
 
 <!--te-->
 
@@ -105,7 +105,7 @@ find . -maxdepth 2 -mindepth 2 -type d -exec basename {} \;
 ### Find "Gil" text in all the text files
 
 ```bash
-find . -name "*.txt" -exec grep -i "GIL" {} \;
+find . -name "*.txt" -exec grep --color -Hi "GIL" {} \;
 ```
 
 **A better approach**:
