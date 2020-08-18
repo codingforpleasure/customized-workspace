@@ -21,7 +21,7 @@
          * [Export plot](#export-plot)
          * [Drawing shapes with Matplotlib (patches)](#drawing-shapes-with-matplotlib-patches)
 
-<!-- Added by: gil_diy, at: 2020-08-01T23:57+03:00 -->
+<!-- Added by: gil_diy, at: 2020-08-18T13:46+03:00 -->
 
 <!--te-->
 
@@ -59,7 +59,19 @@ plt.show()
 
 ### Bar Charts
 ```python
+import matplotlib.pyplot as plt
 
+fig = plt.figure()
+ax = fig.add_axes([0,0,1,1])
+langs = ['C', 'C++', 'Java', 'Python', 'PHP']
+students = [23,17,35,29,12]
+ax.bar(langs,students)
+
+plt.xlabel('Languages')
+plt.ylabel('Number of Students')
+plt.title('Number of Students for each group')
+
+plt.show()
 ```
 
 ### Line plots
