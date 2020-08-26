@@ -9,6 +9,8 @@
             * [Get dimensions of a dataframe](#get-dimensions-of-a-dataframe)
             * [Get dataframe except specific rows](#get-dataframe-except-specific-rows)
             * [Get column names](#get-column-names)
+            * [Get numeric columns in pandas](#get-numeric-columns-in-pandas)
+            * [Get categorical columns in pandas](#get-categorical-columns-in-pandas)
             * [Get column index for a given specific name](#get-column-index-for-a-given-specific-name)
             * [Dropping columns in pandas](#dropping-columns-in-pandas)
             * [Concatentaing columns and rows](#concatentaing-columns-and-rows)
@@ -22,17 +24,20 @@
                * [Method #3 (less clean way)](#method-3-less-clean-way)
       * [CSV](#csv)
          * [Importing data from CSV](#importing-data-from-csv)
+         * [Importing data from CSV with NA's](#importing-data-from-csv-with-nas)
          * [Exporting data into CSV](#exporting-data-into-csv)
       * [Displaying data cleaner](#displaying-data-cleaner)
-      * [Get information of the data types for a dataframe](#get-information-of-the-data-types-for-a-dataframe)
+      * [Get information of the data types for a given dataframe](#get-information-of-the-data-types-for-a-given-dataframe)
       * [Get statistics (count, mean, std, min, max))](#get-statistics-count-mean-std-min-max)
       * [Get counts for spcific column](#get-counts-for-spcific-column)
       * [Datatypes conversions](#datatypes-conversions)
       * [Dealing with NA's](#dealing-with-nas)
-         * [Retrieve NaN values](#retrieve-nan-values)
+         * [Check the column-wise distribution of null values](#check-the-column-wise-distribution-of-null-values)
          * [Remove rows with NA's](#remove-rows-with-nas)
          * [Replace NA's with the median](#replace-nas-with-the-median)
-         * [Retrieve NaN values](#retrieve-nan-values-1)
+         * [Replace string with other thing in a column](#replace-string-with-other-thing-in-a-column)
+         * [Replace string with other thing in a dataframe](#replace-string-with-other-thing-in-a-dataframe)
+         * [Retrieve NaN values](#retrieve-nan-values)
       * [fill](#fill)
       * [Get the index of the min or the max element](#get-the-index-of-the-min-or-the-max-element)
       * [Get the nsmallest or nlargest element](#get-the-nsmallest-or-nlargest-element)
@@ -42,9 +47,10 @@
          * [Join two dataframes one <strong>below</strong> the other.](#join-two-dataframes-one-below-the-other)
          * [Join two dataframes one <strong>besides</strong> the other.](#join-two-dataframes-one-besides-the-other)
          * [Printing data so all columns will be presented](#printing-data-so-all-columns-will-be-presented)
+         * [Drop the rows where at least one element is missing.](#drop-the-rows-where-at-least-one-element-is-missing)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: 2020-06-13T14:40+03:00 -->
+<!-- Added by: gil_diy, at: 2020-08-26T16:25+03:00 -->
 
 <!--te-->
 
@@ -131,13 +137,22 @@ not_relevant_rows = my_df1.index.isin([3,5])
 df_relevant = my_df1[~not_relevant_rows]
 ```
 
-
-
-
 #### Get column names
 
 ```python
-print(df.columns.values)
+ print("The numeric columns are:")
+ df_numeric = df.select_dtypes(include='number')
+ print(df_numeric.columns.values)
+```
+
+#### Get numeric columns in pandas
+```python
+df.select_dtypes(include='number')
+```
+
+#### Get categorical columns in pandas
+```python
+df.select_dtypes(include='category')
 ```
 
 #### Get column index for a given specific name
@@ -243,6 +258,10 @@ newdf = df.loc[(df.column_name_1 == "JFK") & (df.colunm_name_2 == "B6")]
 movies_df = pd.read_csv('data/movies.csv')
 movies_df.head()
 ```
+### Importing data from CSV with NA's
+```python
+rawfile = pd.read_csv(filename, header=None, names=DataLabels, sep=',\s', na_values=["?"])
+```
 
 ### Exporting data into CSV
 
@@ -256,11 +275,24 @@ movies_df.to_csv('./my_folder/movies.csv', index = False)
 display(df[0:5])
 ```
 
-## Get information of the data types for a dataframe
+## Get information of the data types for a given dataframe
 
 ```python
 movies_df.info()
 ```
+
+Writes how many variables of each type, 
+
+**dtypes: Int64(1), float32(4), float64(7), int64(12)**
+
+Which means my data holds:
+
+**
+1 column of type Int64
+4 columns of type Float32
+7 columns of type Float64
+12 columns of type Int64
+**
 
 ## Get statistics (count, mean, std, min, max))
 
@@ -283,9 +315,10 @@ movies_df['Star Ratings'] = movies_df['Star Ratings'].astype('int')
 
 ## Dealing with NA's
 
-### Retrieve NaN values
+### Check the column-wise distribution of null values
+
 ```python
-<columnname>.notnull()
+print(df.isnull().sum())
 ```
 
 ### Remove rows with NA's
@@ -293,11 +326,25 @@ movies_df['Star Ratings'] = movies_df['Star Ratings'].astype('int')
 my_df = my_df.dropna()
 ```
 
-### Replace NA's with the median
+### Replace NA's with the median 
 ```python
 the_median = df['horse_power'].median()
 my_df['horse_power'] = my_df['horse_power'].fillna(med)
 ```
+
+### Replace string with other thing in a column
+```Python
+df['workclass'].replace('?', np.NaN)
+```
+
+### Replace string with other thing in a dataframe
+
+```Python
+df.replace('?', np.NaN)
+```
+
+### 
+
 
 ### Retrieve NaN values
 ```python
@@ -423,6 +470,14 @@ pd.set_option('display.max_rows', 500)
 pd.set_option('display.max_columns', 500)
 pd.set_option('display.width', 1000)
 ```
+
+
+### Drop the rows where at least one element is missing.
+
+```python
+df.dropna()
+```
+
 
 ## Reference
 
