@@ -1,16 +1,7 @@
 <!--ts-->
-   * [scikit-learn](#scikit-learn)
-      * [Preprocessing data](#preprocessing-data)
-         * [Scaler](#scaler)
-         * [Encoding categorical features](#encoding-categorical-features)
-            * [Ordinal order](#ordinal-order)
-            * [Ordinal order](#ordinal-order-1)
-         * [Imputation of missing values](#imputation-of-missing-values)
-            * [Missing value for numeric columns](#missing-value-for-numeric-columns)
-            * [Missing value for categorical columns](#missing-value-for-categorical-columns)
-         * [ColumnTransformer](#columntransformer)
 
-<!-- Added by: gil_diy, at: 2020-08-26T14:41+03:00 -->
+
+<!-- Added by: gil_diy, at: 2020-08-26T15:17+03:00 -->
 
 <!--te-->
 
@@ -38,12 +29,34 @@ X_scaled = preprocessing.scale(X_train)
 ```
 
 
-### Encoding categorical features
-#### Ordinal order
+### Categorical encoding 
+
+**Categorical encoding** is a process of converting categories to numbers.
+
+#### Label encoding
+
+##### Not an Ordinal variable
+
+```python
+label_encoder = LabelEncoder()
+df[['fuel']] = label_encoder.fit_transform([['fuel']])
+```
+##### Ordinal label encoding
 
 **The OrdinalEncoder** - this estimator transforms each categorical feature to one new feature of integers (0 to n_categories - 1)
 
-#### Ordinal order
+```python
+types_of_cylinders = ['two', 'three', 'four', 'five', 'six', 'eight', 'twelve']
+ordinal_encoder_for_cylinders = OrdinalEncoder(categories=[types_of_cylinders])
+df[["cylinders"]] = ordinal_encoder_for_cylinders.fit_transform(df[["cylinders"]])
+```
+
+#### One-Hot Encoding
+
+[Link](https://www.analyticsvidhya.com/blog/2020/03/one-hot-encoding-vs-label-encoding-using-scikit-learn/)
+
+
+
 
 ### Imputation of missing values
 
@@ -77,6 +90,8 @@ imputer_categorical = SimpleImputer(missing_values=np.nan, strategy='most_freque
 
 
 
-### ColumnTransformer
+### ColumnTransformer (Super nice)
 
 Explained very well here for creating a concise code neat [Link](https://www.youtube.com/watch?v=OTEokOJ12ao)
+
+[Reference](https://machinelearningmastery.com/columntransformer-for-numerical-and-categorical-data/)
