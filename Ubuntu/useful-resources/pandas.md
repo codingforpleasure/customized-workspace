@@ -8,6 +8,7 @@
             * [Creating a dataframe](#creating-a-dataframe)
             * [Get dimensions of a dataframe](#get-dimensions-of-a-dataframe)
             * [Get dataframe except specific rows](#get-dataframe-except-specific-rows)
+            * [Get row names](#get-row-names)
             * [Get column names](#get-column-names)
             * [Get numeric columns in pandas](#get-numeric-columns-in-pandas)
             * [Get categorical columns in pandas](#get-categorical-columns-in-pandas)
@@ -29,7 +30,7 @@
       * [Displaying data cleaner](#displaying-data-cleaner)
       * [Get information of the data types for a given dataframe](#get-information-of-the-data-types-for-a-given-dataframe)
       * [Get statistics (count, mean, std, min, max))](#get-statistics-count-mean-std-min-max)
-      * [Get counts for spcific column](#get-counts-for-spcific-column)
+      * [Get counts for spcific column (Exactly like table function in R)](#get-counts-for-spcific-column-exactly-like-table-function-in-r)
       * [Datatypes conversions](#datatypes-conversions)
       * [Dealing with NA's](#dealing-with-nas)
          * [Check the column-wise distribution of null values](#check-the-column-wise-distribution-of-null-values)
@@ -50,7 +51,7 @@
          * [Drop the rows where at least one element is missing.](#drop-the-rows-where-at-least-one-element-is-missing)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: 2020-08-26T16:25+03:00 -->
+<!-- Added by: gil_diy, at: 2020-08-29T15:51+03:00 -->
 
 <!--te-->
 
@@ -135,6 +136,11 @@ I'd like to get all rows **excepts rows 3 and 5**:
 ```python
 not_relevant_rows = my_df1.index.isin([3,5])
 df_relevant = my_df1[~not_relevant_rows]
+```
+
+#### Get row names
+```python
+print(my_df.index.values)
 ```
 
 #### Get column names
@@ -281,18 +287,20 @@ display(df[0:5])
 movies_df.info()
 ```
 
-Writes how many variables of each type, 
+Writes how many variables of each type in dataframe, 
 
 **dtypes: Int64(1), float32(4), float64(7), int64(12)**
 
 Which means my data holds:
 
-**
-1 column of type Int64
-4 columns of type Float32
-7 columns of type Float64
-12 columns of type Int64
-**
+**1 column of type Int64**
+
+**4 columns of type Float32**
+
+**7 columns of type Float64**
+
+**12 columns of type Int64**
+
 
 ## Get statistics (count, mean, std, min, max))
 
@@ -300,7 +308,7 @@ Which means my data holds:
 df[''].describe()
 ```
 
-## Get counts for spcific column
+## Get counts for spcific column (Exactly like table function in R)
 ```python
 data_df['my_column'].value_counts()
 ```
