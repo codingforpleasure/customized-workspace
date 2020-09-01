@@ -10,6 +10,7 @@
             * [Get dataframe except specific rows](#get-dataframe-except-specific-rows)
             * [Get row names](#get-row-names)
             * [Get column names](#get-column-names)
+            * [rename column names](#rename-column-names)
             * [Get numeric columns in pandas](#get-numeric-columns-in-pandas)
             * [Get categorical columns in pandas](#get-categorical-columns-in-pandas)
             * [Get column index for a given specific name](#get-column-index-for-a-given-specific-name)
@@ -51,7 +52,7 @@
          * [Drop the rows where at least one element is missing.](#drop-the-rows-where-at-least-one-element-is-missing)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: 2020-08-29T15:51+03:00 -->
+<!-- Added by: gil_diy, at: 2020-09-01T16:21+03:00 -->
 
 <!--te-->
 
@@ -149,6 +150,12 @@ print(my_df.index.values)
  print("The numeric columns are:")
  df_numeric = df.select_dtypes(include='number')
  print(df_numeric.columns.values)
+```
+
+#### rename column names
+
+```python
+ df.columns = ['new-name1', 'new-name1']
 ```
 
 #### Get numeric columns in pandas
