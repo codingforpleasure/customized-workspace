@@ -1,13 +1,7 @@
 <!--ts-->
-   * [Statistics](#statistics)
-      * [Descriptive](#descriptive)
-      * [Inferential](#inferential)
-         * [One Tailed and Two Tailed Tests, Critical Values, &amp; Significance Level](#one-tailed-and-two-tailed-tests-critical-values--significance-level)
-         * [Hypothesis Testing Problems Z Test &amp; T Statistics One &amp; Two Tailed Test](#hypothesis-testing-problems-z-test--t-statistics-one--two-tailed-test)
-         * [P-Value Method For Hypothesis Testing](#p-value-method-for-hypothesis-testing)
-         * [Hypothesis Testing - Solving Problems With Proportions](#hypothesis-testing---solving-problems-with-proportions)
 
-<!-- Added by: gil_diy, at: 2020-09-06T14:45+03:00 -->
+
+<!-- Added by: gil_diy, at: 2020-09-06T20:45+03:00 -->
 
 <!--te-->
 
@@ -40,7 +34,7 @@ For example let's say in a city the population is 100,000. Let's say we wish to 
 "How many people in this city like blue cars?"
 How can we find an answer to this question, 
 it would be unreasonable for us to ask every citizen in this city if they like blue cars, because that means you need to ask 100,000 people and that's not practical.
-So instead what we could do is to take a ** small sample of the population ** let's say 100 people
+So instead what we could do is to take a **small sample of the population** let's say 100 people
 and ask them. let's say we found out 20 people like blue cars. which means 20%.
 
 We can use that to draw a conclusion about the population, such as 20% +- 2% (margin of error)
@@ -70,3 +64,32 @@ let's say we found out 21 people like blue cars. which means 21%. such as: 21% +
 ### Hypothesis Testing - Solving Problems With Proportions
 
 Reference (https://www.youtube.com/watch?v=76VruarGn2Q)
+
+
+### Summary types of test
+
+#### Hypothesis Testing
+
+Test name | Description | Link
+------------|-----------|---
+One sample t-test | Test whether or not the mean of a population is equal to some value | [Link](https://www.statology.org/one-sample-t-test/)
+Two sample t-test | Test whether or not the means of two populations are equal | [Link](https://www.statology.org/two-sample-t-test/)
+ Two Proportion Z-Test | Suppose we want to know if there is a **difference in the proportion**  of residents who support a certain law in county A compared to the proportion who support the law in county B. | [Link](https://www.statology.org/two-proportion-z-test/ )
+ Welch’s t-test | This test assumes that both groups of data are sampled from populations that follow a normal distribution, but it does not assume that those two populations have the same variance. | [Link](https://www.statology.org/welchs-t-test/)
+ One Proportion Z-Test |A one proportion z-test is used to compare an observed proportion to a theoretical one. | [Link](https://www.statology.org/one-proportion-z-test/)
+ Two Proportion Z-Test | Is used to test for a difference between two population proportions | [Link](https://www.statology.org/two-proportion-z-test/)
+
+#### Chi-Square Tests
+
+Test name | Description | Link
+------------|-------|-----
+ Chi-Square goodness of fit test | to determine whether or not a categorical variable follows a hypothesized distribution | [Link](https://www.statology.org/chi-square-goodness-of-fit-test/)
+ Chi-Square Test of Independence | Is used to determine whether or not there is a significant association between two categorical variables |  [Link](https://www.statology.org/chi-square-test-of-independence/)
+ Fisher’s Exact Test | is used to determine whether or not there is a significant association between two categorical variables | [Link](https://www.statology.org/fishers-exact-test/)
+
+#### ANOVA (Analysis Of Variance)
+
+Name | Description
+------------|-----
+One-way ANOVA | Is used to determine whether or not there is a statistically significant difference between the means of three or more independent groups. we are analyzing how one predictor variable impacts a response variable. | [Link](https://www.statology.org/one-way-anova-r/)
+A two-way ANOVA | is used to determine whether or not there is a statistically significant difference between the means of three or more independent groups that have been split on two variables (sometimes called “factors”) | [Link](https://www.statology.org/two-way-anova/)
