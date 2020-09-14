@@ -17,6 +17,7 @@
          * [Kill a container](#kill-a-container)
          * [Copying files from container to host and vice versa](#copying-files-from-container-to-host-and-vice-versa)
          * [Connecting to a service](#connecting-to-a-service)
+         * [running a command in the contianer from outside](#running-a-command-in-the-contianer-from-outside)
       * [Inside a docker image](#inside-a-docker-image)
          * [Inspect the image](#inspect-the-image)
          * [Inspecting a Dockerfile](#inspecting-a-dockerfile)
@@ -26,7 +27,7 @@
          * [Mapping ports](#mapping-ports)
          * [Mapping volumes](#mapping-volumes)
 
-<!-- Added by: gil_diy, at: 2019-12-09T13:50+02:00 -->
+<!-- Added by: gil_diy, at: 2020-09-14T10:33+03:00 -->
 
 <!--te-->
 
@@ -175,6 +176,11 @@ docker cp de1193caf1f0:/var/www/html/my-file.txt ~/desktop
 sudo docker-compose exec <service-name> sh
 ```
 
+### running a command in the contianer from outside
+```bash
+docker exec jenkins cat /var/jenkins_home/secrets/initialAdminPassword
+```
+
 ## Inside a docker image
 A docker image is just a bunch of loosley connected read-only layers.
 
@@ -277,17 +283,20 @@ docker cp ./my-file.txt de1193caf1f0:/var/www/html
 
 ### Mapping ports
 Map from local host to the container:
-```python
-0.0.0.0:8000->80/tcp
+
+```bash
+sudo docker run -p 8080:8080 -p 50000:50000 jenkins 
 ```
 
-Means to map from port 8000 on local host to port 80 in the container.
-Always the left number is the local host and the right number is the container.
+Means to map from port 8080 on local host to port 8080 in the container.
+Always the **left number is the local host and the right number is the container**.
 
 ### Mapping volumes
 
 ```python
-  - db_data:/var/lib/mysql
+db_data:/var/lib/mysql
 ```
 
 Map the directory `db_data` in the host to the container in the path `/var/lib/mysql` .
+
+
