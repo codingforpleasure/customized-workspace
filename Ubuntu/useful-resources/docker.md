@@ -4,6 +4,7 @@
       * [Docker](#docker-1)
          * [Docker list all images](#docker-list-all-images)
          * [Remove docker image which resides on your harddrive:](#remove-docker-image-which-resides-on-your-harddrive)
+         * [Removing docker images and make sure all containers are down](#removing-docker-images-and-make-sure-all-containers-are-down)
          * [Search for images in docker hub](#search-for-images-in-docker-hub)
          * [Pull an image from docker hub](#pull-an-image-from-docker-hub)
          * [Start container/s](#start-containers)
@@ -27,7 +28,7 @@
          * [Mapping ports](#mapping-ports)
          * [Mapping volumes](#mapping-volumes)
 
-<!-- Added by: gil_diy, at: 2020-09-14T10:33+03:00 -->
+<!-- Added by: gil_diy, at: 2020-09-25T15:27+03:00 -->
 
 <!--te-->
 
@@ -87,11 +88,27 @@ docker images
 Attention: in the output the column `CREATED` is when the actual image was created and put on dockerhub
 
 
+### 
+```bash
+docker stop <Container-id>
+```
+
+
 ### Remove docker image which resides on your harddrive:
 
 ```bash
 docker rmi <IMAGE ID>
 ```
+
+### Removing docker images and make sure all containers are down
+
+First you should make sure the containers using this image are down, therefore:
+```bash
+docker rm $(docker ps --all -q)
+docker rmi <IMAGE ID>
+```
+
+* The -q switch returns only the IDs
 
 ### Search for images in docker hub
 ```bash
@@ -123,7 +140,7 @@ docker ps -a
 
 ### Stop running containers
 ```bash
-docker stop <container-name>
+docker stop <container-id>
 ```
 
 ### Restart a container
@@ -138,14 +155,19 @@ docker attach <container-id>
 
 ### Run a command in a container/ start a container from an image
 ```bash
-docker run -it <docker-image:tag> sh
+docker run -i -t <docker-image:tag> sh
 ```
+
+* -i, --interactive
+
+* -t, --tty (which means terminal)
+
 #### Mount a directory in host into a docker container
 
 
 ### Remove a container
 ```bash
-docker rm <container-name>
+docker rm <container-id>
 ```
 
 ### Kill a container
@@ -296,6 +318,13 @@ Always the **left number is the local host and the right number is the container
 ```python
 db_data:/var/lib/mysql
 ```
+
+Another example:
+
+```bash
+
+```
+
 
 Map the directory `db_data` in the host to the container in the path `/var/lib/mysql` .
 
