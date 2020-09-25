@@ -25,8 +25,9 @@
                * [Method #2 (Similar to Filter function in R language)](#method-2-similar-to-filter-function-in-r-language)
                * [Method #3 (less clean way)](#method-3-less-clean-way)
       * [CSV](#csv)
-         * [Importing data from CSV](#importing-data-from-csv)
-         * [Importing only first 1000 rows from data from a Huge CSV](#importing-only-first-1000-rows-from-data-from-a-huge-csv)
+         * [Importing data from CSV file](#importing-data-from-csv-file)
+         * [Importing only first 1000 rows from a HUGE CSV file](#importing-only-first-1000-rows-from-a-huge-csv-file)
+         * [Importing only selected columns from a HUGE CSV file](#importing-only-selected-columns-from-a-huge-csv-file)
          * [Importing data from CSV with NA's](#importing-data-from-csv-with-nas)
          * [Exporting data into CSV](#exporting-data-into-csv)
       * [json](#json)
@@ -57,7 +58,7 @@
          * [Drop the rows where at least one element is missing.](#drop-the-rows-where-at-least-one-element-is-missing)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: 2020-09-25T14:38+03:00 -->
+<!-- Added by: gil_diy, at: 2020-09-25T14:42+03:00 -->
 
 <!--te-->
 
@@ -270,17 +271,24 @@ newdf = df.loc[(df.column_name_1 == "JFK") & (df.colunm_name_2 == "B6")]
 
 ## CSV
 
-### Importing data from CSV
+### Importing data from CSV file
 
 ```python
 movies_df = pd.read_csv('data/movies.csv')
 movies_df.head()
 ```
 
-### Importing only first 1000 rows from data from a Huge CSV
+### Importing only first 1000 rows from a HUGE CSV file
 
 ```python
 relevant_df = pd.read_csv('data/large_dataset.csv', nrows = 1000)
+```
+
+### Importing only selected columns from a HUGE CSV file
+
+```python
+chosen_columns = ['id', 'occupation']
+df = pd.read_csv('data/large_dataset.csv',usecolumns = chosen_columns)
 ```
 
 ### Importing data from CSV with NA's
