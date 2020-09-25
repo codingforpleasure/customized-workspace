@@ -26,10 +26,15 @@
                * [Method #3 (less clean way)](#method-3-less-clean-way)
       * [CSV](#csv)
          * [Importing data from CSV](#importing-data-from-csv)
+         * [Importing only first 1000 rows from data from a Huge CSV](#importing-only-first-1000-rows-from-data-from-a-huge-csv)
          * [Importing data from CSV with NA's](#importing-data-from-csv-with-nas)
          * [Exporting data into CSV](#exporting-data-into-csv)
+      * [json](#json)
+         * [Importing data from json](#importing-data-from-json)
+         * [Importing data from json](#importing-data-from-json-1)
       * [Displaying data cleaner](#displaying-data-cleaner)
       * [Get information of the data types for a given dataframe](#get-information-of-the-data-types-for-a-given-dataframe)
+      * [Get information about the memory usage of a dataframe stored in the memory](#get-information-about-the-memory-usage-of-a-dataframe-stored-in-the-memory)
       * [Get statistics (count, mean, std, min, max))](#get-statistics-count-mean-std-min-max)
       * [Get counts for spcific column (Exactly like table function in R)](#get-counts-for-spcific-column-exactly-like-table-function-in-r)
       * [Datatypes conversions](#datatypes-conversions)
@@ -52,7 +57,7 @@
          * [Drop the rows where at least one element is missing.](#drop-the-rows-where-at-least-one-element-is-missing)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: 2020-09-01T16:21+03:00 -->
+<!-- Added by: gil_diy, at: 2020-09-25T14:38+03:00 -->
 
 <!--te-->
 
@@ -271,6 +276,13 @@ newdf = df.loc[(df.column_name_1 == "JFK") & (df.colunm_name_2 == "B6")]
 movies_df = pd.read_csv('data/movies.csv')
 movies_df.head()
 ```
+
+### Importing only first 1000 rows from data from a Huge CSV
+
+```python
+relevant_df = pd.read_csv('data/large_dataset.csv', nrows = 1000)
+```
+
 ### Importing data from CSV with NA's
 ```python
 rawfile = pd.read_csv(filename, header=None, names=DataLabels, sep=',\s', na_values=["?"])
@@ -281,6 +293,12 @@ rawfile = pd.read_csv(filename, header=None, names=DataLabels, sep=',\s', na_val
 ```python
 movies_df.to_csv('./my_folder/movies.csv', index = False)
 ```
+
+## json
+
+### Importing data from json
+
+### Importing data from json
 
 ## Displaying data cleaner
 
@@ -307,6 +325,20 @@ Which means my data holds:
 **7 columns of type Float64**
 
 **12 columns of type Int64**
+
+
+## Get information about the memory usage of a dataframe stored in the memory
+
+```python
+df1.info(memory_usage = 'deep')
+```
+
+Or you can use this:
+
+```python
+df1.memory_usage(deep = True) * 1e-3
+```
+** Comment: ** memory usage in KB
 
 
 ## Get statistics (count, mean, std, min, max))
