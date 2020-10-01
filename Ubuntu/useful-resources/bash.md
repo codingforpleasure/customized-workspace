@@ -43,10 +43,13 @@ Table of Contents
          * [Setting Default Values for arguments](#setting-default-values-for-arguments)
          * [“Daemon-izing” Your Script](#daemon-izing-your-script)
          * [Reusing Code with Includes and Sourcing](#reusing-code-with-includes-and-sourcing)
+         * [Renaming file extensions](#renaming-file-extensions)
+         * [Padding list of numbers with zeros](#padding-list-of-numbers-with-zeros)
          * [Brace-Expansion](#brace-expansion)
+      * [Tricks](#tricks)
       * [<em><strong>Great reference</strong></em>](#great-reference)
 
-<!-- Added by: gil_diy, at: 2019-01-05T15:23+02:00 -->
+<!-- Added by: gil_diy, at: 2020-10-01T23:06+03:00 -->
 
 <!--te-->
 
@@ -520,6 +523,40 @@ cd ${SCRATCH_DIR:-/tmp}
 echo You prefer $IMG_FMT image files
 echo You prefer $SND_FMT sound files
 ```
+
+### Renaming file extensions
+
+* Rename all txt files into srt files.
+
+```bash
+for f in *.txt
+do
+    [ -f "$f" ] && mv "$f" "${f%txt}srt"
+done
+```
+
+### Padding list of numbers with zeros
+
+```bash
+function leading_zero(){
+    local num=$1
+    local zeros=00000
+    echo ${zeros:${#num}:${#zeros}}${num} 
+}
+
+my_seq=0
+
+for JPG_FILE in ./*.jpg
+do
+   my_seq=$((my_seq+1))
+   padded_number=$(leading_zero $my_seq)
+   echo $padded_number
+done
+```
+
+
+
+
 ### Brace-Expansion
 
 Brace expansion is a mechanism by which arbitrary strings may be generated:
