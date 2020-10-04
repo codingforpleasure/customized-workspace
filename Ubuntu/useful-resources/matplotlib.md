@@ -21,7 +21,7 @@
          * [Export plot](#export-plot)
          * [Drawing shapes with Matplotlib (patches)](#drawing-shapes-with-matplotlib-patches)
 
-<!-- Added by: gil_diy, at: 2020-08-18T13:46+03:00 -->
+<!-- Added by: gil_diy, at: 2020-10-04T10:53+03:00 -->
 
 <!--te-->
 
@@ -73,6 +73,10 @@ plt.title('Number of Students for each group')
 
 plt.show()
 ```
+
+<p align="center"> <!-- style="width:400px;" -->
+  <img src="images/matplotlib/bar_plot.png" title="tool tip here">
+</p>
 
 ### Line plots
 ```python
