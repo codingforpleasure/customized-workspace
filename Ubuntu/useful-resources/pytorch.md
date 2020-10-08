@@ -10,6 +10,7 @@
       * [Concatenating torches:](#concatenating-torches)
       * [Dataset &amp;&amp; DataLoader](#dataset--dataloader)
          * [To better understand your data](#to-better-understand-your-data)
+      * [device](#device)
       * [Batch normalization](#batch-normalization)
       * [Preprocessing](#preprocessing)
       * [Batch size](#batch-size)
@@ -27,6 +28,7 @@
          * [Freezing the model](#freezing-the-model)
          * [Replacing the last two layers](#replacing-the-last-two-layers)
       * [Saving the model](#saving-the-model)
+      * [Loading the model](#loading-the-model)
       * [Useful for plotting](#useful-for-plotting)
       * [Derivatives](#derivatives)
          * [Y(x)](#yx)
@@ -38,7 +40,7 @@
       * [Segmentation with U-net  (Encoder-Decoder)](#segmentation-with-u-net--encoder-decoder)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: 2020-07-10T17:24+03:00 -->
+<!-- Added by: gil_diy, at: 2020-10-08T08:00+03:00 -->
 
 <!--te-->
 
@@ -260,6 +262,11 @@ print('labels: ', labels)
 ```
 [Link](https://youtu.be/mUueSPmcOBc?t=665)
 
+## device
+```pyton
+device = torch.device('cuda:0')
+device
+```
 ## Batch normalization
 
 We know a neural network learns the weights in our model become updated over each
@@ -464,7 +471,14 @@ my_model.fc = nn.Sequential(
 ```python
 torch.save(my_model.state_dict(), model_path)
 ```
-[Reference](https://pytorch.org/tutorials/beginner/saving_loading_models.html)
+[Reference](https://pytorch.org/docs/stable/generated/torch.save.html#torch.save)
+
+## Loading the model
+```python
+torch.load('tensors.pt', map_location=torch.device('cpu'))
+```
+
+[Reference](https://pytorch.org/docs/stable/generated/torch.load.html#torch.load)
 
 ## Useful for plotting
 ```python
