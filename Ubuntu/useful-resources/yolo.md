@@ -5,10 +5,13 @@
          * [Recognize objects in a video:](#recognize-objects-in-a-video)
          * [Changing The Detection Threshold](#changing-the-detection-threshold)
       * [Training YOLOv3/v4 model](#training-yolov3v4-model)
-   * [The format of the text file is:](#the-format-of-the-text-file-is)
+      * [The format of the text file is:](#the-format-of-the-text-file-is)
+      * [See List of all classes pretrianed in yolov5](#see-list-of-all-classes-pretrianed-in-yolov5)
+      * [Filter many classes except some few builtin classes:](#filter-many-classes-except-some-few-builtin-classes)
+      * [Get the bounding box of each frame:](#get-the-bounding-box-of-each-frame)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: 2020-05-30T15:09+03:00 -->
+<!-- Added by: gil_diy, at: 2020-10-17T19:24+03:00 -->
 
 <!--te-->
 
@@ -47,7 +50,7 @@ By default, YOLO only displays objects detected with a confidence of .25 or high
 [Link](https://blog.paperspace.com/how-to-implement-a-yolo-object-detector-in-pytorch/)
 
 
-# The format of the text file is:
+## The format of the text file is:
 
 ```
 <class number> <Cx> <Cy> <Width> <Height>
@@ -55,6 +58,36 @@ By default, YOLO only displays objects detected with a confidence of .25 or high
 
 
 [Documentation - Well explained steps](https://github.com/AlexeyAB/darknet#how-to-train-to-detect-your-custom-objects)
+
+
+
+
+## See List of all classes pretrianed in yolov5
+
+```bash
+cat data/coco.yaml
+```
+
+
+## Filter many classes except some few builtin classes:
+
+lets say I would like to detect only 'car', therfore i would write:
+
+```bash
+python detect.py --source ./Before.mp4 --classes 2
+```
+
+Car is class number 2, it can be seen from coco.yaml
+
+
+## Get the bounding box of each frame:
+
+Use the `--save-txt`
+
+```bash
+python detect.py --source ./Before.mp4 --save-txt
+```
+
 
 
 ## Reference
