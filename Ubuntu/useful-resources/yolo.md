@@ -9,9 +9,10 @@
       * [See List of all classes pretrianed in yolov5](#see-list-of-all-classes-pretrianed-in-yolov5)
       * [Filter many classes except some few builtin classes:](#filter-many-classes-except-some-few-builtin-classes)
       * [Get the bounding box of each frame:](#get-the-bounding-box-of-each-frame)
+      * [How to train Yolo with images different sizes:](#how-to-train-yolo-with-images-different-sizes)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: 2020-10-17T19:24+03:00 -->
+<!-- Added by: gil_diy, at: 2020-10-19T17:24+03:00 -->
 
 <!--te-->
 
@@ -27,7 +28,6 @@ The actual classes names appear in the file: `coco.names`
 ```
 ./darknet detect cfg/yolov4.cfg weights/yolov4.weights data/dog.jpg
 ```
-
 
 ### Recognize objects in a video:
 ```
@@ -55,7 +55,6 @@ By default, YOLO only displays objects detected with a confidence of .25 or high
 ```
 <class number> <Cx> <Cy> <Width> <Height>
 ```
-
 
 [Documentation - Well explained steps](https://github.com/AlexeyAB/darknet#how-to-train-to-detect-your-custom-objects)
 
@@ -88,6 +87,9 @@ Use the `--save-txt`
 python detect.py --source ./Before.mp4 --save-txt
 ```
 
+## How to train Yolo with images different sizes:
+
+[Reference](https://stackoverflow.com/questions/49450829/darknet-yolo-image-size)
 
 
 ## Reference
