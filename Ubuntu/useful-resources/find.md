@@ -2,6 +2,7 @@
    * [find command](#find-command)
       * [Examples](#examples)
          * [Find all txt files:](#find-all-txt-files)
+         * [Find all txt files and avoid Permission Denied Messages](#find-all-txt-files-and-avoid-permission-denied-messages)
          * [Ignoring case sensitive (-iname)](#ignoring-case-sensitive--iname)
          * [Find files based on their permissions](#find-files-based-on-their-permissions)
          * [find file with permission 777 and change the permission to 755](#find-file-with-permission-777-and-change-the-permission-to-755)
@@ -23,7 +24,7 @@
          * [Find all :](#find-all-)
    * [<a href="https://stackoverflow.com/questions/14132210/use-find-command-but-exclude-files-in-two-directories" rel="nofollow">https://stackoverflow.com/questions/14132210/use-find-command-but-exclude-files-in-two-directories</a>](#httpsstackoverflowcomquestions14132210use-find-command-but-exclude-files-in-two-directories)
 
-<!-- Added by: gil_diy, at: 2020-08-13T02:24+03:00 -->
+<!-- Added by: gil_diy, at: 2020-10-19T17:04+03:00 -->
 
 <!--te-->
 
@@ -34,6 +35,14 @@
 ```bash
 find /usr/ -type f -name '*.txt'
 ```
+
+
+### Find all txt files and avoid Permission Denied Messages
+```bash
+find / -type f -iname abc.txt 2>/dev/null
+```
+
+
 ### Ignoring case sensitive (-iname)
 ```bash
 find . -type f -iname abc.txt
