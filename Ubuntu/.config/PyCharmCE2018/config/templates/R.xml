@@ -118,7 +118,7 @@
       <option name="R" value="true" />
     </context>
   </template>
-  <template name="gcr_add-new-columns-mutate-dplyr" value="library(dplyr)&#10;# Adds new variables and preserves existing ones&#10;res &lt;- nycflights13::flights %&gt;% mutate(speed = (distance / air_time) * 60)" description="mutate in dplyr example" toReformat="false" toShortenFQNames="true">
+  <template name="gcr_add-new-columns-mutate-dplyr" value="library(dplyr)&#10;&#10;# Example1: Adds new variables and preserves existing ones&#10;res &lt;- nycflights13::flights %&gt;% mutate(speed = (distance / air_time) * 60)&#10;&#10;# Example2:&#10;sample_data &lt;- data.frame(blood_type = c(&quot;b&quot;,&quot;c&quot;,&quot;c&quot;,&quot;b&quot;,&quot;b&quot;,&quot;c&quot;),&#10;                          height=c(2,3,3,2,2,3),&#10;                          weight = c(11,13,15,16,10,12),&#10;                          score=c('b','c','d','b','b','c'))&#10;&#10;res &lt;- sample_data %&gt;% group_by(height, score) %&gt;%  mutate(resi = mean(weight))" description="mutate in dplyr example" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="R" value="true" />
     </context>
@@ -139,6 +139,46 @@
     </context>
   </template>
   <template name="gcr_join" value="library(dplyr)&#10;df1 &lt;- data.frame(student_id = c(3232443, 564656, 3243543, 65656, 7657754, 435456, 5435654),&#10;                  name = c('ofer', 'amir', 'shani', 'ofri', 'ran', 'omer', 'shay'))&#10;&#10;df2 &lt;- data.frame(weight = c(65, 80, 90, 53, 66, 71, 86),&#10;                  student_id = c(3232443, 564656, 3243543, 65656, 7657754, 435456, 5435654))&#10;&#10;full_join(df1, df2, by = 'student_id')" description="Inner join of two dataframes" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="R" value="true" />
+    </context>
+  </template>
+  <template name="gcr_clustering-plot" value="library(ggplot2)&#10;library(ggalt)&#10;library(ggfortify)&#10;theme_set(theme_classic())&#10;&#10;# Compute data with principal components ------------------&#10;df &lt;- iris[c(1, 2, 3, 4)]&#10;pca_mod &lt;- prcomp(df)  # compute principal components&#10;&#10;# Data frame of principal components ----------------------&#10;df_pc &lt;- data.frame(pca_mod$x, Species = iris$Species)  # dataframe of principal components&#10;df_pc_vir &lt;- df_pc[df_pc$Species == &quot;virginica&quot;,]  # df for 'virginica'&#10;df_pc_set &lt;- df_pc[df_pc$Species == &quot;setosa&quot;,]  # df for 'setosa'&#10;df_pc_ver &lt;- df_pc[df_pc$Species == &quot;versicolor&quot;,]  # df for 'versicolor'&#10;&#10;# Plot ----------------------------------------------------&#10;ggplot(df_pc, aes(PC1, PC2, col = Species)) +&#10;  geom_point(aes(shape = Species), size = 2) +   # draw points&#10;  labs(title = &quot;Iris Clustering&quot;,&#10;       subtitle = &quot;With principal components PC1 and PC2 as X and Y axis&quot;,&#10;       caption = &quot;Source: Iris&quot;) +&#10;  coord_cartesian(xlim = 1.2 * c(min(df_pc$PC1), max(df_pc$PC1)),&#10;                  ylim = 1.2 * c(min(df_pc$PC2), max(df_pc$PC2))) +   # change axis limits&#10;  geom_encircle(data = df_pc_vir, aes(x = PC1, y = PC2)) +   # draw circles&#10;  geom_encircle(data = df_pc_set, aes(x = PC1, y = PC2)) +&#10;  geom_encircle(data = df_pc_ver, aes(x = PC1, y = PC2))" description="Plot clusters" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="R" value="true" />
+    </context>
+  </template>
+  <template name="gcr_plot-line" value="library(ggplot2)&#10;theme_set(theme_classic())&#10;&#10;# Allow Default X Axis Labels&#10;ggplot(economics, aes(x=date)) +&#10;  geom_line(aes(y=psavert)) +&#10;  labs(title=&quot;Time Series Chart&quot;,&#10;       subtitle=&quot;Returns Percentage from 'Economics' Dataset&quot;,&#10;       caption=&quot;Source: Economics&quot;,&#10;       y=&quot;Returns %&quot;)" description="Line plot in R" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="R" value="true" />
+    </context>
+  </template>
+  <template name="gcr_plot-line_advance" value="library(ggplot2)&#10;library(lubridate)&#10;theme_set(theme_bw())&#10;&#10;df &lt;- economics[, c(&quot;date&quot;, &quot;psavert&quot;, &quot;uempmed&quot;)]&#10;df &lt;- df[lubridate::year(df$date) %in% c(1967:1981), ]&#10;&#10;# labels and breaks for X axis text&#10;brks &lt;- df$date[seq(1, length(df$date), 12)]&#10;lbls &lt;- lubridate::year(brks)&#10;&#10;# plot&#10;ggplot(df, aes(x=date)) +&#10;geom_line(aes(y=psavert, col=&quot;psavert&quot;)) +&#10;geom_line(aes(y=uempmed, col=&quot;uempmed&quot;)) +&#10;  labs(title=&quot;Time Series of Returns Percentage&quot;,&#10;       subtitle=&quot;Drawn From Wide Data format&quot;,&#10;       caption=&quot;Source: Economics&quot;, y=&quot;Returns %&quot;) +  # title and caption&#10;  scale_x_date(labels = lbls, breaks = brks) +  # change to monthly ticks and labels&#10;  scale_color_manual(name=&quot;&quot;,&#10;                     values = c(&quot;psavert&quot;=&quot;#00ba38&quot;, &quot;uempmed&quot;=&quot;#f8766d&quot;)) +  # line color&#10;  theme(panel.grid.minor = element_blank())" description="Line plot advance" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="R" value="true" />
+    </context>
+  </template>
+  <template name="gcr_linear_model" value="# Method 1, using ggplot2 and it's embedded method geom_smooth(method = 'lm')&#10;data &lt;- data.frame(x = c(1, 1, 2, 3, 4, 4, 5, 6, 7, 7, 8, 9, 10, 11, 11),&#10;                   y = c(13, 14, 17, 12, 23, 24, 25, 25, 24, 28, 32, 33, 35, 40, 41))&#10;&#10;g = ggplot(data, aes(x = x, y = y)) +&#10;  ggtitle(&quot;Is there a correlation between Petal Width to Petal Length?&quot;) +&#10;  labs(y = &quot;Petal Width&quot;,&#10;       x = &quot;Petal Length&quot;) +&#10;  theme(plot.title = element_text(hjust = 0.5,&#10;                                  size = 25,&#10;                                  face = &quot;bold&quot;,&#10;                                  family = &quot;David&quot;)) +&#10;  geom_point(col = &quot;steelblue&quot;, size = 3) +&#10;  geom_smooth(method = 'lm')&#10;&#10;g&#10;&#10;# Method 2, building the model with the simple plot function&#10;&#10;#create scatterplot of x and y values&#10;plot(data$x, data$y, pch = 16)&#10;&#10;#fit a linear regression model to the data&#10;reg_model &lt;- lm(y ~ x, data = data)&#10;&#10;#define intercept and slope values&#10;a &lt;- coefficients(reg_model)[1] #intercept&#10;b &lt;- coefficients(reg_model)[2] #slope&#10;&#10;#add the fitted regression line to the scatterplot&#10;abline(a=a, b=b, col=&quot;steelblue&quot;)" description="bring up a Linear model with plot" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="R" value="true" />
+    </context>
+  </template>
+  <template name="gcr_shiny_slider" value="sliderInput(inputId =  &quot;sd_noise_x&quot;,&#10;            label = &quot;Noise Variance X Axis&quot;,&#10;            min = 0,&#10;            max = 5,&#10;            value = 1,&#10;            step = 1)" description="Add slider to a shiny app" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="R" value="true" />
+    </context>
+  </template>
+  <template name="gcr-regex" value="tasty_food &lt;- c(&quot;pizza&quot;, &quot;avocado&quot;,&quot;popcorn&quot;, &quot;apple&quot;, &quot;onion&quot;)&#10;grep(&quot;^p&quot;,tasty_food)" description="Apply regex on list" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="R" value="true" />
+    </context>
+  </template>
+  <template name="gcr-pie-chart" value="library(plotrix)&#10;library(RColorBrewer)&#10;# display.brewer.all()&#10;&#10;darkcols &lt;- brewer.pal(8, &quot;Dark2&quot;)&#10;&#10;slices &lt;- c(10, 12, 4, 16, 8)&#10;lbls &lt;- c(&quot;US&quot;, &quot;UK&quot;, &quot;Australia&quot;, &quot;Germany&quot;, &quot;France&quot;)&#10;&#10;pie3D(slices, labels = lbls, explode = 0.1,&#10;      main = &quot;Pie Chart of Countries &quot;,&#10;      col = darkcols[1:4])" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="R" value="true" />
+    </context>
+  </template>
+  <template name="gcr-qqplot" value="set.seed(5432)                 # Set seed for reproducibility&#10;x &lt;- rnorm(10000)                # Create random normally distributed values&#10;&#10;# Approach #1&#10;#qqnorm(x)                        # QQplot of normally distributed values&#10;#qqline(x, col = &quot;red&quot;)           # Add qqline to plot&#10;&#10;# Now we get a QQplot of our normally distributed&#10;# random data compared to the theoretical normal distribution and a QQline.&#10;&#10;# Approach #2 with ggplot&#10;library(&quot;ggplot2&quot;)&#10;&#10;data &lt;- data.frame(x)            # Create data frame containing x&#10;variable_name &lt;- &quot;age&quot;&#10;g &lt;- ggplot(data, aes(sample = x)) +  # Create QQplot with ggplot2 package&#10;  stat_qq() +&#10;  stat_qq_line(col = &quot;red&quot;) +&#10;  ggtitle(paste0(&quot;Examining QQplot with QQline for the variable: &quot;, variable_name)) +&#10;  labs(y = &quot;Sample of Quantiles&quot;,&#10;       x = &quot;Theoretical Quantiles&quot;) +&#10;  theme(plot.title = element_text(hjust = 0.5,&#10;                                  size = 25,&#10;                                  face = &quot;bold&quot;,&#10;                                  family = &quot;David&quot;))&#10;  g&#10;&#10;" description="checking variables holds normal distribution" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="R" value="true" />
     </context>

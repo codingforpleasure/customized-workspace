@@ -7,4 +7,9 @@
       <option name="Python" value="true" />
     </context>
   </template>
+  <template name="gc-pytorch-load-data" value="# We use torch.utils.data.DataLoader to load this processed data into batches, along with&#10;# other operations such as shuffling and loading to the right device—CPU or GPU.&#10;&#10;testloader = torch.utils.data.DataLoader(testset,&#10;                                         batch_size=batch_size,&#10;                                         shuffle=True)" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
 </templateSet>

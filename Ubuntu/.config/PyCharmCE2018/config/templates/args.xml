@@ -1,0 +1,7 @@
+<templateSet group="args">
+  <template name="gc-add-args-menu-shell-script" value="import argparse&#10;import math&#10;&#10;&#10;def cylinder_volume(radius, height):&#10;    vol = math.pi * radius ** 2 * height&#10;    return vol&#10;&#10;&#10;if __name__ == '__main__':&#10;    parser = argparse.ArgumentParser(description=&quot;Calculate the volume of a Cylinder&quot;)&#10;    parser.add_argument('-r', '--radius', type=int, metavar='', required=True, help='Radius of a cylinder')&#10;    parser.add_argument('-H', '--height', type=int, metavar='', required=True, help='Height of a cylinder')&#10;    args = parser.parse_args()&#10;&#10;    print(cylinder_volume(args.radius, args.height))&#10;" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+</templateSet>

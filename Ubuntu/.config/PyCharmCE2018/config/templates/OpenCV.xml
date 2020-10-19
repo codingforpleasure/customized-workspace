@@ -42,7 +42,7 @@
     </context>
   </template>
   <template name="gc-opencv-findContours" value="contours, _ = cv2.findContours(image=$IMG$, mode=cv2.RETR_TREE, method=cv2.CHAIN_APPROX_NONE)&#10;&#10;for idx, cnt in enumerate(contours):&#10;        print(&quot;Contour #&quot;, idx)&#10;        # Make sure the actual array of vertices are of type integer&#10;        # You can convert it with [vertices.astype(int)]&#10;        cv2.drawContours(image=img, contours=[cnt], contourIdx=0, color=(255, 0, 0), thickness=3)&#10;        cv2.imshow(winname=&quot;contour&quot; + str(idx), mat=img)&#10;        cv2.waitKey(0)&#10;" description="" toReformat="false" toShortenFQNames="true">
-    <variable name="IMG" expression="" defaultValue="&quot;img_thr&quot;" alwaysStopAt="true" />
+    <variable name="IMG" expression="" defaultValue="&quot;thr_img&quot;" alwaysStopAt="true" />
     <context>
       <option name="Python" value="true" />
     </context>
@@ -106,7 +106,7 @@
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="gc-opencv-threshold" value="# Binary Threshold:&#10;# if pixel &gt; threshold pixel = max_val else pixel = 0&#10;# Attention would work only if the background is black and the shape is white&#10;_,thr_img = cv2.threshold($IMAGE$, thresh=$THRESHOLD$, maxval=$MAX_VAL$, type=cv2.$THRESHOLD_TYPE$)&#10;cv2.imshow(winname=&quot;after threshold&quot;, mat=thr_img)&#10;cv2.waitKey(0)" description="Binary threshold" toReformat="false" toShortenFQNames="true">
+  <template name="gc-opencv-threshold" value="# Binary Threshold:&#10;# if pixel &gt; threshold pixel = max_val else pixel = 0&#10;# Attention would work only if the background is black and the shape is white&#10;# _, thr_img = cv2.threshold(img_gray, 0, 255, cv2.THRESH_BINARY_INV + cv2.THRESH_OTSU)&#10;&#10;_,thr_img = cv2.threshold($IMAGE$, thresh=$THRESHOLD$, maxval=$MAX_VAL$, type=cv2.$THRESHOLD_TYPE$)&#10;cv2.imshow(winname=&quot;after threshold&quot;, mat=thr_img)&#10;cv2.waitKey(0)" description="Binary threshold" toReformat="false" toShortenFQNames="true">
     <variable name="IMAGE" expression="" defaultValue="&quot;img&quot;" alwaysStopAt="true" />
     <variable name="THRESHOLD" expression="" defaultValue="&quot;50&quot;" alwaysStopAt="true" />
     <variable name="MAX_VAL" expression="" defaultValue="&quot;255&quot;" alwaysStopAt="true" />
@@ -127,7 +127,7 @@
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="gc-opencv-blank-canvas" value="black_blank = np.zeros(img.shape, np.uint8)&#10;cv2.imshow(winname=&quot;contour&quot;, mat=blank)&#10;cv2.waitKey(0)" description="blank canvas" toReformat="false" toShortenFQNames="true">
+  <template name="gc-opencv-blank-canvas" value="black_blank = np.zeros(img.shape, np.uint8)&#10;# white_blank = np.ones(img.shape, np.uint8)*255&#10;cv2.imshow(winname=&quot;contour&quot;, mat=blank)&#10;cv2.waitKey(0)" description="blank canvas" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="Python" value="true" />
     </context>
