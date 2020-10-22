@@ -7,12 +7,16 @@
       * [Training YOLOv3/v4 model](#training-yolov3v4-model)
       * [The format of the text file is:](#the-format-of-the-text-file-is)
       * [See List of all classes pretrianed in yolov5](#see-list-of-all-classes-pretrianed-in-yolov5)
-      * [Filter many classes except some few builtin classes:](#filter-many-classes-except-some-few-builtin-classes)
-      * [Get the bounding box of each frame:](#get-the-bounding-box-of-each-frame)
-      * [How to train Yolo with images different sizes:](#how-to-train-yolo-with-images-different-sizes)
+      * [Training](#training)
+         * [Strart training](#strart-training)
+         * [Image and labels directory structure](#image-and-labels-directory-structure)
+         * [How to train Yolo with images different sizes:](#how-to-train-yolo-with-images-different-sizes)
+      * [Detection (Prediction)](#detection-prediction)
+         * [Filter many classes except some few builtin classes:](#filter-many-classes-except-some-few-builtin-classes)
+         * [Get the bounding box of each frame:](#get-the-bounding-box-of-each-frame)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: 2020-10-19T17:24+03:00 -->
+<!-- Added by: gil_diy, at: 2020-10-22T03:00+03:00 -->
 
 <!--te-->
 
@@ -64,11 +68,57 @@ By default, YOLO only displays objects detected with a confidence of .25 or high
 ## See List of all classes pretrianed in yolov5
 
 ```bash
-cat data/coco.yaml
+cat ./yolov5/data/coco.yaml
 ```
 
+## Training 
 
-## Filter many classes except some few builtin classes:
+### Strart training
+
+```bash
+python ./train.py --img 1024 --batch 16 --epochs 100 --data wheat_gdrive.yaml --cfg models/yolov5s.yaml --name wheat_model
+```
+
+Int the **yaml** file in the example: **wheat_gdrive.yaml** is written the actual path for both **training set** and **validation set** :
+
+```yaml
+
+train: /content/drive/My Drive/Colab_Notebooks/datasets/yolov5/wheat_data_generated/images/train
+val: /content/drive/My Drive/Colab_Notebooks/datasets/yolov5/wheat_data_generated/images/validation
+nc: 4
+names: ["class_name1",
+        "class_name2",
+        "class_name2",
+        "class_name3"]
+```
+
+### Image and labels directory structure
+
+**Good practice will be** split the dataset into:
+
+*  **70% Training** 
+
+* **20% Validation**
+
+* **10% Testing**
+
+Now we focus only for building a model with the **Training** and **Validation** :
+
+<p> <!-- style="width:400px;" -->
+  <img src="images/yolo/file_hierarchy_structure.jpeg" title="tool tip here">
+</p>
+
+Afterwards we will use the **Testing set** for checking accuracy.
+
+### How to train Yolo with images different sizes:
+
+[Reference](https://stackoverflow.com/questions/49450829/darknet-yolo-image-size)
+
+
+
+## Detection (Prediction)
+
+### Filter many classes except some few builtin classes:
 
 lets say I would like to detect only 'car', therfore i would write:
 
@@ -79,7 +129,7 @@ python detect.py --source ./Before.mp4 --classes 2
 Car is class number 2, it can be seen from coco.yaml
 
 
-## Get the bounding box of each frame:
+### Get the bounding box of each frame:
 
 Use the `--save-txt`
 
@@ -87,9 +137,6 @@ Use the `--save-txt`
 python detect.py --source ./Before.mp4 --save-txt
 ```
 
-## How to train Yolo with images different sizes:
-
-[Reference](https://stackoverflow.com/questions/49450829/darknet-yolo-image-size)
 
 
 ## Reference
