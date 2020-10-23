@@ -36,9 +36,10 @@
       * [Math functions](#math-functions)
       * [NPZ files](#npz-files)
          * [Saving our datasets to NPZ files](#saving-our-datasets-to-npz-files)
+      * [Exporting txt files easily with specific format](#exporting-txt-files-easily-with-specific-format)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: 2020-08-12T16:03+03:00 -->
+<!-- Added by: gil_diy, at: 2020-10-24T02:06+03:00 -->
 
 <!--te-->
 
@@ -580,6 +581,7 @@ Convert from radian to degree | `np.degree(np.pi/2)`
 
 ### Saving our datasets to NPZ files
 
+```python
 np.savez('cats_vs_dogs_training_data.npz', np.array(training_images))
 np.savez('cats_vs_dogs_training_labels.npz',np.array(training_labels))
 np.savez('cats_vs_dogs_test_data.npz', np.array(test_images))
@@ -587,6 +589,20 @@ np.savez('cats_vs_dogs_test_labels.npz', np.array(test_labels))
 
 def load_data_training_and_test(datasetname):
   npzfile = np.load(datasetname = "_training_data.npz")
+```
+
+## Exporting txt files easily with specific format
+
+```python
+# For example:
+yolo_data = [1, 0.4342435454, 0.46456562, 0.43543243, 0.685989534]
+np.savetxt(
+    fname=os.path.join(directory_path, f"{filename_no_extension}.txt"),
+    X=yolo_data,
+    fmt=["%d", "%f", "%f", "%f", "%f"]
+)
+```
+
 ## Reference
 
 **Very useful:**
