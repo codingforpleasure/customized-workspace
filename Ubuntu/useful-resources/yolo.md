@@ -14,9 +14,11 @@
       * [Detection (Prediction)](#detection-prediction)
          * [Filter many classes except some few builtin classes:](#filter-many-classes-except-some-few-builtin-classes)
          * [Get the bounding box of each frame:](#get-the-bounding-box-of-each-frame)
+         * [Using your own model for detecting (after your own training)](#using-your-own-model-for-detecting-after-your-own-training)
+         * [Detection options](#detection-options)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: 2020-10-22T03:00+03:00 -->
+<!-- Added by: gil_diy, at: 2020-10-25T09:43+02:00 -->
 
 <!--te-->
 
@@ -137,6 +139,23 @@ Use the `--save-txt`
 python detect.py --source ./Before.mp4 --save-txt
 ```
 
+### Using your own model for detecting (after your own training)
+
+
+```bash
+MODEL_FULL_PATH="./runs/exp22_mazda_fronts/weights/best.pt"
+
+python detect.py --source ./test_set --weights $MODEL_FULL_PATH
+```
+
+
+### Detection options
+
+Option | Description
+------------|-----
+--max-bbox | Take only the maximum bbox
+--crop-to-bbox | crop the bbox
+--txt-for-future-training | create annotation with the following format: class_number , x_center , y_center , width height 
 
 
 ## Reference
