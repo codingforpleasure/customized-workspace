@@ -14,11 +14,11 @@
       * [Detection (Prediction)](#detection-prediction)
          * [Filter many classes except some few builtin classes:](#filter-many-classes-except-some-few-builtin-classes)
          * [Get the bounding box of each frame:](#get-the-bounding-box-of-each-frame)
-         * [Using your own model for detecting (after your own training)](#using-your-own-model-for-detecting-after-your-own-training)
+         * [Using your own model for detecting (after doing your own training)](#using-your-own-model-for-detecting-after-doing-your-own-training)
          * [Detection options](#detection-options)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: 2020-10-25T09:43+02:00 -->
+<!-- Added by: gil_diy, at: 2020-10-25T13:28+02:00 -->
 
 <!--te-->
 
@@ -81,6 +81,8 @@ cat ./yolov5/data/coco.yaml
 python ./train.py --img 1024 --batch 16 --epochs 100 --data wheat_gdrive.yaml --cfg models/yolov5s.yaml --name wheat_model
 ```
 
+the name will appear as the directory in: `./runs/exp____`
+
 Int the **yaml** file in the example: **wheat_gdrive.yaml** is written the actual path for both **training set** and **validation set** :
 
 ```yaml
@@ -139,7 +141,7 @@ Use the `--save-txt`
 python detect.py --source ./Before.mp4 --save-txt
 ```
 
-### Using your own model for detecting (after your own training)
+### Using your own model for detecting (after doing your own training)
 
 
 ```bash
@@ -148,6 +150,33 @@ MODEL_FULL_PATH="./runs/exp22_mazda_fronts/weights/best.pt"
 python detect.py --source ./test_set --weights $MODEL_FULL_PATH
 ```
 
+
+### Yolov5 crashes, what to do?
+
+Step 1: Read logs here:
+```bash
+!cat /var/log/colab-jupyter.log
+```
+
+Step 2: Very important clean all the cache files (Both train.cache, valid.cache)
+
+Step 3: Don't put prints in google colab in training it will freeze your browser and crash.
+
+### Avoid disconnections of Google colab after training for some time
+
+In the console run:
+
+```
+function ClickConnect() {
+  console.log('Working')
+  document
+    .querySelector('#top-toolbar > colab-connect-button')
+    .shadowRoot.querySelector('#connect')
+    .click()
+}
+
+setInterval(ClickConnect, 60000)
+```
 
 ### Detection options
 
