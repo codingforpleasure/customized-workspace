@@ -17,11 +17,13 @@
          * [Example #8: Substitute a specific word with other word globally (like Lions with Zebras):](#example-8-substitute-a-specific-word-with-other-word-globally-like-lions-with-zebras)
          * [Example #9: Substitute a specific word not case sensitive globally (like Lions with Zebras):](#example-9-substitute-a-specific-word-not-case-sensitive-globally-like-lions-with-zebras)
          * [Example #10: Substitute a specific word only on lines 3-5:](#example-10-substitute-a-specific-word-only-on-lines-3-5)
-         * [Example #11: Append a spcific string to each line in a file:](#example-11-append-a-spcific-string-to-each-line-in-a-file)
-         * [Example #12: Remove empty lines in a file](#example-12-remove-empty-lines-in-a-file)
-         * [Example #13: Prepend characters to the beginning of a file](#example-13-prepend-characters-to-the-beginning-of-a-file)
+         * [Example #11: Iterate over files substitutes string foo with bar](#example-11-iterate-over-files-substitutes-string-foo-with-bar)
+         * [Example #12: Append a spcific string to each line in a file:](#example-12-append-a-spcific-string-to-each-line-in-a-file)
+         * [Example #13: Remove empty lines in a file](#example-13-remove-empty-lines-in-a-file)
+         * [Example #14: Prepend characters to the beginning of a file](#example-14-prepend-characters-to-the-beginning-of-a-file)
+         * [Example #15: replace groups with sed](#example-15-replace-groups-with-sed)
 
-<!-- Added by: gil_diy, at: 2019-08-04T00:50+03:00 -->
+<!-- Added by: gil_diy, at: 2020-11-06T02:34+02:00 -->
 
 <!--te-->
 
@@ -128,7 +130,13 @@ $ cat data.txt | sed -r 's/Lions/Zebras/gi'
 $ cat data.txt | sed -r '3,5 s/Lions/Zebras/gi'
 ```
 
-### Example #11: Append a spcific string to each line in a file:
+### Example #11: Iterate over files substitutes string foo with bar
+
+```bash
+find . -type f -exec sed -i 's/foo/bar/g' {} +
+```
+
+### Example #12: Append a spcific string to each line in a file:
 
 ```bash
 $ sed -e 's/$/my specific string/' -i my_file.txt
@@ -139,12 +147,12 @@ $ sed -e 's/$/my specific string/' -i my_file.txt
 
 **Use -i to edit files in-place instead of printing to standard output**
 
-### Example #12: Remove empty lines in a file
+### Example #13: Remove empty lines in a file
 
 ```bash
 $ cat data.txt | sed '/^[[:space:]]*$/d'
 ```
-### Example #13: Prepend characters to the beginning of a file
+### Example #14: Prepend characters to the beginning of a file
 
 ```bash
 sed -i '1s/^/my new charcters goes here\n/' ./my-file.json
@@ -152,3 +160,9 @@ sed -i '1s/^/my new charcters goes here\n/' ./my-file.json
 
 * Using the `-i` flag for in-place editing
 * 1s/^ means the beginning of the first line
+
+### Example #15: replace groups with sed
+
+```bash
+echo "eat it works" | sed -
+```
