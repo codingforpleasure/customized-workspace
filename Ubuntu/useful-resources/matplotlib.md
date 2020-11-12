@@ -1,6 +1,6 @@
 <!--ts-->
    * [matplotlib](#matplotlib)
-      * [Basics](#basics)
+      * [Basics (Stateful appraoch)](#basics-stateful-appraoch)
          * [Simple plot](#simple-plot)
          * [Bar Charts](#bar-charts)
          * [Line plots](#line-plots)
@@ -11,7 +11,8 @@
          * [Scatter Plots](#scatter-plots)
          * [Plotting time series](#plotting-time-series)
          * [Plotting Live data in real-time](#plotting-live-data-in-real-time)
-         * [Subplots](#subplots)
+      * [Subplots (Object oriented approach)](#subplots-object-oriented-approach)
+         * [Multiple plots](#multiple-plots)
          * [Simple plot](#simple-plot-1)
          * [Configuring the axis](#configuring-the-axis)
             * [Plot image without showing axis:](#plot-image-without-showing-axis)
@@ -21,14 +22,14 @@
          * [Export plot](#export-plot)
          * [Drawing shapes with Matplotlib (patches)](#drawing-shapes-with-matplotlib-patches)
 
-<!-- Added by: gil_diy, at: 2020-10-04T10:53+03:00 -->
+<!-- Added by: gil_diy, at: Thu Nov 12 11:01:21 IST 2020 -->
 
 <!--te-->
 
 # matplotlib
 
 
-## Basics
+## Basics (Stateful appraoch)
 
 ### Simple plot
 
@@ -59,19 +60,27 @@ plt.show()
 
 ### Bar Charts
 ```python
+import numpy as np
 import matplotlib.pyplot as plt
 
-fig = plt.figure()
-ax = fig.add_axes([0,0,1,1])
-langs = ['C', 'C++', 'Java', 'Python', 'PHP']
-students = [23,17,35,29,12]
-ax.bar(langs,students)
+if __name__ == '__main__':
+    # creating the dataset
+    data = {'C': 20, 'C++': 15, 'Java': 30,
+            'Python': 35}
+    courses = list(data.keys())
+    values = list(data.values())
 
-plt.xlabel('Languages')
-plt.ylabel('Number of Students')
-plt.title('Number of Students for each group')
+    fig = plt.figure(figsize=(10, 5))
 
-plt.show()
+    # creating the bar plot
+    plt.bar(courses, values, color='lightblue',
+            width=0.4)
+
+    plt.xlabel("Courses offered")
+    plt.ylabel("No. of students enrolled")
+    plt.title("Students enrolled in different courses")
+    plt.show()
+
 ```
 
 <p align="center"> <!-- style="width:400px;" -->
@@ -406,10 +415,60 @@ if __name__ == '__main__':
 
 
 time_series_plot.png
-### Subplots
+
+## Subplots (Object oriented approach)
+
+We can instantiate figure and axis as an actual object
+
+Thefore we can change everywhere:
+
+
 ```python
+  # You can specify the number of rows and columns, if we don't specify
+  # the default value will be one on one
+
+  fig, ax = plt.subplots()
+
+  plt.plot(...)   => ax.plot(...)
+  plt.title(...)  => ax.set_title(...)
+  plt.xlabel(...) => ax.set_xlabel(...)
+  plt.ylabel(...) => ax.set_ylabel(...)
 
 ```
+for example:
+
+```python
+
+# You can specify the number of rows and columns, if we don't specify
+# the default value will be one on one
+fig, ax = plt.subplots()
+
+ax.plot(ages, salaries_israel, label="graph1")
+ax.plot(ages, salaries_USA, label="graph2")
+ax.legend()
+
+plt.xlabel('Ages')
+plt.ylabel('Salaries')
+plt.grid(true)
+plt.title('Median Salary (USD) by Age')
+
+plt.show()
+
+```
+
+
+### Multiple plots
+
+```python
+
+# would like multiple subplots
+fig, ax = plt.subplots(nrows = 2 , ncols = 1)
+
+# Therefore we get in ax a list of subplots of two axis
+# you can unpack it, more easier:
+fig, (ax1, ax2) = plt.subplots(nrows = 2 , ncols = 1)
+```
+
 ### Simple plot
 
 Description | command
@@ -423,13 +482,15 @@ Save image to file | plt.savefig("example.png")  # should before plt.show method
 
 
 ```python
-plt.plot(ages, salaries_israel, label="graph1")
-plt.plot(ages, salaries_USA, label="graph2")
+ax.plot(ages, salaries_israel, label="graph1")
+ax.plot(ages, salaries_USA, label="graph2")
+ax.legend()
+
 plt.xlabel('Ages')
 plt.ylabel('Salaries')
 plt.grid(true)
 plt.title('Median Salary (USD) by Age')
-plt.legend()
+
 plt.show()
 ```
 
@@ -472,6 +533,8 @@ arguments | Description
 ------------|-----
 dpi | set the resolution of the file to a numeric value
 transparent | set to True, which causes the background of the chart to be transparent.
+
+
 
 ### Drawing shapes with Matplotlib (patches)
 
