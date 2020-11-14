@@ -2,6 +2,7 @@
 <!--ts-->
    * [ffmpeg](#ffmpeg)
       * [Get information about a video file (fps, codec, duration)](#get-information-about-a-video-file-fps-codec-duration)
+      * [Downsample 4k to 1080p](#downsample-4k-to-1080p)
       * [Export a snapshot from a video clip in specific timestamp.](#export-a-snapshot-from-a-video-clip-in-specific-timestamp)
       * [Export MP4 from a list of images](#export-mp4-from-a-list-of-images)
       * [Rip a part a video and get all images out of it](#rip-a-part-a-video-and-get-all-images-out-of-it)
@@ -28,7 +29,7 @@
          * [Generate video with waveform](#generate-video-with-waveform)
       * [Documentation](#documentation)
 
-<!-- Added by: gil_diy, at: 2020-06-23T17:55+03:00 -->
+<!-- Added by: gil_diy, at: Sun Nov 15 01:20:21 IST 2020 -->
 
 <!--te-->
 
@@ -40,6 +41,15 @@
 ```bash
 ffmpeg -i <input_file>
 ```
+
+## Downsample 4k to 1080p 
+
+```bash
+ffmpeg -i orig.mp4 -vf scale=1920:1080 smaller.mp4 -c:v libx264 -crf 20 -preset slow
+```
+
+crf 20 uses the Constant Rate Factor quantiser (which paradoxially means variable bit rate, but constant quality) 
+with a value of 20 (pretty good quality; lower is better quality / larger files, higher is crappier / smaller),
 
 
 ## Export a snapshot from a video clip in specific timestamp.
@@ -67,6 +77,15 @@ ffmpeg -r 30 -i /path/image-%d.png -vcode mpeg4 -y ~/Desktop/output.mp4
 ```bash
 ffmpeg -i play.mov -qscale:v 3 ~/frames/frame-%d.jpg -hide_banner
 ```
+
+-r - Set the frame rate. I.e the number of frames to be extracted into images per second. The default value is 25.
+
+
+```bash
+ffmpeg -i input.mp4 -r 1 -f image2 image-%2d.png
+```
+
+-f - Indicates the output format i.e image format in our case.
 
 
 ## Convert from webm to mp4
@@ -209,4 +228,7 @@ ffmpeg -i input.mp3 -filter_complex "mode=line" output.avi
 
 [Useful commands](https://gist.github.com/martinruenz/537b6b2d3b1f818d500099dde0a38c5f)
 
+[20+ FFmpeg Commands For Beginners](https://ostechnix.com/20-ffmpeg-commands-beginners/)
+
 [conversions between gif and video](https://engineering.giphy.com/how-to-make-gifs-with-ffmpeg/)
+
