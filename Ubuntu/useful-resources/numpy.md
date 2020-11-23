@@ -26,6 +26,7 @@
             * [<strong>4. Some simple slicing</strong>](#4-some-simple-slicing)
             * [<strong>5. argmin, argmax, argsort</strong>](#5-argmin-argmax-argsort)
       * [reshape](#reshape)
+      * [Squizzing](#squizzing)
       * [splitting data](#splitting-data)
       * [Multiplication:](#multiplication)
          * [Vectorized dot product of vectors](#vectorized-dot-product-of-vectors)
@@ -39,7 +40,7 @@
       * [Exporting txt files easily with specific format](#exporting-txt-files-easily-with-specific-format)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: 2020-10-24T02:06+03:00 -->
+<!-- Added by: gil_diy, at: Mon Nov 23 22:48:03 IST 2020 -->
 
 <!--te-->
 
@@ -110,7 +111,7 @@ Create a **column** vector with **random** numbers | a = np.random.randn(5, 1)
 Create a **row** vector with **random** numbers | a = np.random.randn(1, 5)
 Create a matrix with **random** numbers | a = np.random.randn(5, 3) # 5 Rows, 3 columns
 Create a matrix with ones on a diagonal (optionally offset) | np.eye(N=3)
-Rehsape array to matrix 2x5 | np.arange(10).reshape(2, 5)
+Reshape array to matrix 2x5 | np.arange(10).reshape(2, 5)
 ==>							| np.arange(10).reshape(2, -1)      (**Read tip #2**)
 == | ==
 Remove single-dimensional entries from the shape of an array | x = np.array([[[0], [1], [2]]])      # x.shape: (1, 3, 1)
@@ -129,7 +130,7 @@ Concatenation, or joining of two arrays |  x = np.array([1, 2, 3])
 assert(a.shape == (5,1))
 ```
 
-*** **Tip #2**: When you are dealing with many dimensions and you would like to reshape it to you can enter the dimension size either rows or columns and the other will be -1, numpy will figure out what the value should be for rehsaping properly (well explained [here](https://stackoverflow.com/questions/18691084/what-does-1-mean-in-numpy-reshape))
+**Tip #2**: When you are dealing with many dimensions and you would like to reshape it to you can enter the dimension size either rows or columns and the other will be -1, numpy will figure out what the value should be for rehsaping properly (well explained [here](https://stackoverflow.com/questions/18691084/what-does-1-mean-in-numpy-reshape))
 
 ```python
 # data.shape = (963,64,64,3)
@@ -446,6 +447,18 @@ A trick when you want to flatten a matrix X of shape (a,b,c,d) to a matrix
 X_flatten of shape (b ∗∗ c ∗∗ d, a) is to use:
 ```python
 X_flatten = X.reshape(X.shape[0], -1).T      # X.T is the transpose of X
+```
+
+## Squizzing
+
+Remove single-dimensional entries from the shape of an array.
+
+```python
+x = np.array([[[0], [1], [2]]])
+x.shape # (1, 3, 1)
+new_shape = np.squeeze(x).shape 
+
+# Output: (3,)
 ```
 
 ## splitting data
