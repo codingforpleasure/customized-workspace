@@ -6,6 +6,7 @@
       * [Downsample 4k to 1080p](#downsample-4k-to-1080p)
       * [Downsample 4k to 2k](#downsample-4k-to-2k)
       * [Export a snapshot from a video clip in specific timestamp.](#export-a-snapshot-from-a-video-clip-in-specific-timestamp)
+      * [Export a specific frame from a video clip given frame number](#export-a-specific-frame-from-a-video-clip-given-frame-number)
       * [Export MP4 from a list of images](#export-mp4-from-a-list-of-images)
       * [Rip a part a video and get all images out of it](#rip-a-part-a-video-and-get-all-images-out-of-it)
       * [Convert from webm to mp4](#convert-from-webm-to-mp4)
@@ -31,7 +32,7 @@
          * [Generate video with waveform](#generate-video-with-waveform)
       * [Documentation](#documentation)
 
-<!-- Added by: gil_diy, at: Wed Nov 18 10:31:19 IST 2020 -->
+<!-- Added by: gil_diy, at: Wed Nov 25 12:09:51 IST 2020 -->
 
 <!--te-->
 
@@ -79,6 +80,14 @@ ffmpeg -i 1.mov -vf scale=2048x1152:flags=lanczos output_2k.mp4
 ## Export a snapshot from a video clip in specific timestamp.
 ```bash
 ffmpeg -i <input_file> -ss 01:23:45 -vframes 1 output.jpg
+```
+
+## Export a specific frame from a video clip given frame number
+
+For example for frame number 35 (counting starts at 0), we will write:
+
+```bash
+ffmpeg -i <input_file> -vf "select=eq(n\,34)" -vframes 1 out.png
 ```
 
 ## Export MP4 from a list of images
@@ -257,3 +266,9 @@ ffmpeg -i input.mp3 -filter_complex "mode=line" output.avi
 [conversions between gif and video](https://engineering.giphy.com/how-to-make-gifs-with-ffmpeg/)
 
 
+color | Confidence value range
+------|-----------------------
+Green | 0.9 < Conf
+Blue | 0.8 < Conf < 0.9
+Red | 0.6 < Conf < 0.8
+Dont show bbox |  Conf < 0.6
