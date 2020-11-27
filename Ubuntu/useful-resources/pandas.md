@@ -7,6 +7,7 @@
          * [Dataframe](#dataframe)
             * [Creating a dataframe](#creating-a-dataframe)
             * [Get dimensions of a dataframe](#get-dimensions-of-a-dataframe)
+            * [Iterate over rows](#iterate-over-rows)
             * [Get dataframe except specific rows](#get-dataframe-except-specific-rows)
             * [Get row names](#get-row-names)
             * [Get column names](#get-column-names)
@@ -50,6 +51,7 @@
       * [Get the index of the min or the max element](#get-the-index-of-the-min-or-the-max-element)
       * [Get the nsmallest or nlargest element](#get-the-nsmallest-or-nlargest-element)
       * [Group by:](#group-by)
+         * [Group with aggregate](#group-with-aggregate)
          * [Group by time slot](#group-by-time-slot)
       * [Concat Dataframes](#concat-dataframes)
          * [Join two dataframes one <strong>below</strong> the other.](#join-two-dataframes-one-below-the-other)
@@ -58,7 +60,7 @@
          * [Drop the rows where at least one element is missing.](#drop-the-rows-where-at-least-one-element-is-missing)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: 2020-09-25T14:42+03:00 -->
+<!-- Added by: gil_diy, at: Sat Nov 28 00:20:38 IST 2020 -->
 
 <!--te-->
 
@@ -137,6 +139,23 @@ df = pd.Dataframe(np.array([1,2,3],[4,5,6]))
 print("\nThe shape of our dataframe is:",df.shape) # The shape of the dataframe is (2,3)
 ```
 
+#### Iterate over rows
+
+```python
+# list of dicts 
+input_df = [{'name':'Sujeet', 'age':10}, 
+            {'name':'Sameer', 'age':11}, 
+            {'name':'Sumit', 'age':12}] 
+  
+df = pd.DataFrame(input_df) 
+print('Original DataFrame: \n', df) 
+  
+  
+print('\nRows iterated using iterrows() : ') 
+for index, row in df.iterrows(): 
+    print(row['name'], row['age']) 
+```
+
 #### Get dataframe except specific rows
 
 I'd like to get all rows **excepts rows 3 and 5**:
@@ -153,9 +172,7 @@ print(my_df.index.values)
 #### Get column names
 
 ```python
- print("The numeric columns are:")
- df_numeric = df.select_dtypes(include='number')
- print(df_numeric.columns.values)
+print(data_df.columns.values)
 ```
 
 #### rename column names
@@ -352,13 +369,22 @@ df1.memory_usage(deep = True) * 1e-3
 ## Get statistics (count, mean, std, min, max))
 
 ```python
-df[''].describe()
+df['column_name'].describe()
+
+# or for all numerical columns
+
+df.describe()
 ```
 
 ## Get counts for spcific column (Exactly like table function in R)
 ```python
 data_df['my_column'].value_counts()
+
+# Get the top 5 values
+data_df['my_column'].value_counts(ascending=False).nlargest(5)
 ```
+
+
 
 ## Datatypes conversions
 
@@ -462,6 +488,13 @@ my_groups.describe()
 ```python
 df.groupby(df['Date'].dt.year)
 ``` -->
+
+### Group with aggregate
+
+```python
+
+```
+[Link](https://www.youtube.com/watch?v=txMdrV1Ut64)
 
 ### Group by time slot
 
