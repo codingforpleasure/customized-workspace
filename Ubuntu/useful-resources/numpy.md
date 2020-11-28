@@ -27,6 +27,7 @@
             * [<strong>5. argmin, argmax, argsort</strong>](#5-argmin-argmax-argsort)
       * [reshape](#reshape)
       * [Squizzing](#squizzing)
+      * [Unsquizzing](#unsquizzing)
       * [splitting data](#splitting-data)
       * [Multiplication:](#multiplication)
          * [Vectorized dot product of vectors](#vectorized-dot-product-of-vectors)
@@ -40,7 +41,7 @@
       * [Exporting txt files easily with specific format](#exporting-txt-files-easily-with-specific-format)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Mon Nov 23 22:48:03 IST 2020 -->
+<!-- Added by: gil_diy, at: Sat Nov 28 15:03:35 IST 2020 -->
 
 <!--te-->
 
@@ -461,6 +462,10 @@ new_shape = np.squeeze(x).shape
 # Output: (3,)
 ```
 
+## Unsquizzing
+
+
+
 ## splitting data
 ```python
   x = np.arange(8.0)
@@ -608,7 +613,7 @@ def load_data_training_and_test(datasetname):
 
 ```python
 # For example:
-yolo_data = [1, 0.4342435454, 0.46456562, 0.43543243, 0.685989534]
+yolo_data = np.array([[1, 0.4342435454, 0.46456562, 0.43543243, 0.685989534]])
 np.savetxt(
     fname=os.path.join(directory_path, f"{filename_no_extension}.txt"),
     X=yolo_data,
