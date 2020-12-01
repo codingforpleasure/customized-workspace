@@ -7,7 +7,7 @@
       * [Pip vs Anaconda](#pip-vs-anaconda)
       * [Anaconda](#anaconda)
 
-<!-- Added by: gil_diy, at: Tue Dec  1 11:56:36 IST 2020 -->
+<!-- Added by: gil_diy, at: Tue Dec  1 11:57:48 IST 2020 -->
 
 <!--te-->
 
@@ -35,7 +35,7 @@ Locate the Python interpreter | **pipenv `--`py**
 Checks if all dependencies are satisfied| **pipenv check**
 Initialize a Python 2 virtual environment | **pipenv `--`two**
 Initialize a Python 3 virtual environment | **pipenv `--`three**
-Initialize virtual environment with specific version of python | pipenv install --python 3.8
+Initialize virtual environment with specific version of python | **pipenv install `--`python 3.8**
 Print a pretty graph of all your installed dependencies | **pipenv graph**
 Upgrade pipenv | **pip install `--`upgrade pipenv**
 Install
