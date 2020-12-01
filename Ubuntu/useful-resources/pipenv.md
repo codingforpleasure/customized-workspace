@@ -4,8 +4,10 @@
       * [useful commands](#useful-commands)
    * [Virtualenv](#virtualenv)
       * [useful commands](#useful-commands-1)
+      * [Pip vs Anaconda](#pip-vs-anaconda)
+      * [Anaconda](#anaconda)
 
-<!-- Added by: gil_diy, at: 2020-01-15T09:16+02:00 -->
+<!-- Added by: gil_diy, at: Tue Dec  1 11:56:36 IST 2020 -->
 
 <!--te-->
 
@@ -33,6 +35,7 @@ Locate the Python interpreter | **pipenv `--`py**
 Checks if all dependencies are satisfied| **pipenv check**
 Initialize a Python 2 virtual environment | **pipenv `--`two**
 Initialize a Python 3 virtual environment | **pipenv `--`three**
+Initialize virtual environment with specific version of python | pipenv install --python 3.8
 Print a pretty graph of all your installed dependencies | **pipenv graph**
 Upgrade pipenv | **pip install `--`upgrade pipenv**
 Install
@@ -92,3 +95,24 @@ Install a package|  **python3 -m pip install -U** matplotlib
 Create virtuak env |  **virtualenv my_env**
 Activate virtual env |  **source my_env/bin/activate**
 Deactivate | **source my_env/bin/deactivate**
+
+
+## Pip vs Anaconda
+Description | Command
+------------|-----
+pip search <package-name> | conda search <package-name>
+pip install <package-name> | conda install <package-name>
+pip search <package-name> -upgrade | conda update python
+pip list | conda list
+
+
+## Anaconda
+Description | Command
+------------|-----
+Activate | conda activate `<my_environment>`
+Install  in specific environment | conda install -c pytorch -c fastai fastai
+
+
+Open notebook with:
+
+`jupyter-notebook <notebook-name>`
