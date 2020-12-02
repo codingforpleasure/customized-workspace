@@ -3,7 +3,7 @@
       * [examples:](#examples)
          * [Mount automatically a device during boot to my linux filesystem:](#mount-automatically-a-device-during-boot-to-my-linux-filesystem)
 
-<!-- Added by: gil_diy, at: 2018-12-06T21:06+02:00 -->
+<!-- Added by: gil_diy, at: Wed Dec  2 12:45:09 IST 2020 -->
 
 <!--te-->
 
@@ -32,8 +32,14 @@ I'll be adding this to the last line of the file `/etc/fstab`
 192.168.1.8:/mnt/WD_backup        /home/gil_diy/my-nas    nfs    defaults   0 0
 ```
 
+**Great tip:**
 For avoiding a situation of getting stack during boot,
 check the entry you recently entered by using the command `mount -a`, all filesystems will get mounted following their order in fstab.
 
 
 Attention: a great explanation is written in fstab manual, take a look.
+
+
+For mapping hard-drive with uuid, you need to get the uuid:
+
+[Link](https://linuxconfig.org/how-to-retrieve-and-change-partitions-universally-unique-identifier-uuid-on-linux)
