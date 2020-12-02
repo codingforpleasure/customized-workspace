@@ -4,8 +4,10 @@
          * [Example #1: Mounting NAS](#example-1-mounting-nas)
          * [Example #2: Mounting external Solid Stata Drive](#example-2-mounting-external-solid-stata-drive)
          * [Mount automatically a device during boot to my linux filesystem:](#mount-automatically-a-device-during-boot-to-my-linux-filesystem)
+            * [Auto-Mount NAS](#auto-mount-nas)
+            * [Auto-Mount Solid-State Drive](#auto-mount-solid-state-drive)
 
-<!-- Added by: gil_diy, at: Wed Dec  2 15:55:07 IST 2020 -->
+<!-- Added by: gil_diy, at: Wed Dec  2 16:14:32 IST 2020 -->
 
 <!--te-->
 
@@ -41,11 +43,19 @@ For mapping hard-drive with uuid, you need to get the uuid: [Link](https://linux
 
 ### Mount automatically a device during boot to my linux filesystem:
 
+
+#### Auto-Mount NAS
 but the problem of mounting partitions from command line is once you reboot your system that NAS drives are no more mounted.
 
 I'll be adding this to the last line of the file `/etc/fstab`
 ```bash
 192.168.1.8:/mnt/WD_backup        /home/gil_diy/my-nas    nfs    defaults   0 0
+```
+
+#### Auto-Mount Solid-State Drive 
+
+```bash
+UUID=17F30CD71ED138A1  /home/gil_diy/sandisk_external_drive ntfs uid=1000,gid=1000,fmask=117,dmask=007 0 0
 ```
 
 **Great tip #1:**
