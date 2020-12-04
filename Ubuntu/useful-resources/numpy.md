@@ -16,6 +16,7 @@
          * [Transpose a matrix/array](#transpose-a-matrixarray)
          * [Aggregation functions](#aggregation-functions)
          * [Aggregation functions exmaple on matrix:](#aggregation-functions-exmaple-on-matrix)
+         * [Concatenating columns](#concatenating-columns)
          * [Unique and Other Set Logic](#unique-and-other-set-logic)
             * [sorted unique values in an array](#sorted-unique-values-in-an-array)
          * [Iterating easily over an array](#iterating-easily-over-an-array)
@@ -41,7 +42,7 @@
       * [Exporting txt files easily with specific format](#exporting-txt-files-easily-with-specific-format)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Sat Nov 28 15:03:35 IST 2020 -->
+<!-- Added by: gil_diy, at: Fri Dec  4 12:20:26 IST 2020 -->
 
 <!--te-->
 
@@ -154,6 +155,9 @@ arr = np.empty(shape=(2, 3, 3))  # Initilaze a 3d array (with two layers)
 arr[0,:,:] = single_matrix # Adding to first layer
 arr[1,:,:] = single_matrix # Adding to second layer
 ```
+
+
+
 
 #### Import data from csv
 ```python
@@ -317,6 +321,12 @@ precentage = 100*data/cal # Using broadcasting
 print(precentage)
 ```
 
+
+### Concatenating columns
+
+```python
+np.column_stack([X_train, y_train])
+```
 
 ### Unique and Other Set Logic
 
