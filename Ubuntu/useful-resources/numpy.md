@@ -12,7 +12,7 @@
          * [Forming](#forming)
             * [Stack 1-D arrays as columns into a 2-D array.](#stack-1-d-arrays-as-columns-into-a-2-d-array)
          * [Retrieving info about an array](#retrieving-info-about-an-array)
-         * [Returning number of pixels meet the a specified constraint](#returning-number-of-pixels-meet-the-a-specified-constraint)
+         * [Counts the number of non-zero values in an array given a constraint](#counts-the-number-of-non-zero-values-in-an-array-given-a-constraint)
          * [Transpose a matrix/array](#transpose-a-matrixarray)
          * [Aggregation functions](#aggregation-functions)
          * [Aggregation functions exmaple on matrix:](#aggregation-functions-exmaple-on-matrix)
@@ -42,7 +42,7 @@
       * [Exporting txt files easily with specific format](#exporting-txt-files-easily-with-specific-format)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Fri Dec  4 12:20:26 IST 2020 -->
+<!-- Added by: gil_diy, at: Mon Dec  7 07:42:32 IST 2020 -->
 
 <!--te-->
 
@@ -245,14 +245,12 @@ To find the coordinates (row number, column number) just use `np.where(mat > 0)`
 ```
 
 
-### Returning number of pixels meet the a specified constraint
+### Counts the number of non-zero values in an array given a constraint
 
 ```python
 np.count_nonzero(my_mat!=False)
 ```
 ### Transpose a matrix/array
-
-
 
 ```python
 array1 = np.array([[1.],[2.]])
@@ -286,7 +284,7 @@ Description | command   | result
 -----------|------------|-----
 Compute sum of elements | np.sum(vec) | 45
 Compute product of elements | np.prod(vec) | 362,880
-Compute median of elements | np.mean(vec) | 4.5
+Compute mean of elements | np.mean(vec) | 4.5
 Compute standard deviation | np.std(vec)
 Compute variance | np.var(vec)
 Compute minimum value | np.min(vec) | 0
@@ -604,6 +602,23 @@ Operation | Explanation
 Description | Function
 ------------|-----
 Convert from radian to degree | `np.degree(np.pi/2)`
+Computing the magnitude of the vector using norm() | `numpy.linalg.norm(v)` the default is power of two
+Euclidean distance of two vectors | `‫‪np.linalg.norm(x-y‬‬)`                                                       
+
+Simple example:
+```python
+v = numpy.array([0, 1, 2, 3, 4]) 
+
+# computing and displaying the magnitude of the vector 
+print('Magnitude of the Vector:', numpy.linalg.norm(v)) # Magnitude of the Vector: 5.477225575051661
+
+# Computing the nth order of the magnitude of vector 
+print('ord is 0: ', numpy.linalg.norm(v, ord = 0))  # ord is 0:  4.0
+print('ord is 1: ', numpy.linalg.norm(v, ord = 1))  # ord is 1:  10.0
+print('ord is 2: ', numpy.linalg.norm(v, ord = 2))  # ord is 2:  5.477225575051661
+print('ord is 3: ', numpy.linalg.norm(v, ord = 3))  # ord is 3:  4.641588833612778
+print('ord is 4: ', numpy.linalg.norm(v, ord = 4))  # ord is 4:  4.337613136533361
+```
 
 ## NPZ files
 
