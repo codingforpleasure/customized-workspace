@@ -6,8 +6,10 @@
          * [Converting numpy arrays into tensors](#converting-numpy-arrays-into-tensors)
          * [Converting tensors into numpy arrays](#converting-tensors-into-numpy-arrays)
       * [matrix multiplication](#matrix-multiplication)
+      * [Unsqeeze and squeez](#unsqeeze-and-squeez)
       * [Basic functions in pytorch](#basic-functions-in-pytorch)
       * [Concatenating torches:](#concatenating-torches)
+      * [Stacking](#stacking)
       * [Dataset &amp;&amp; DataLoader](#dataset--dataloader)
          * [To better understand your data](#to-better-understand-your-data)
       * [device](#device)
@@ -40,7 +42,7 @@
       * [Segmentation with U-net  (Encoder-Decoder)](#segmentation-with-u-net--encoder-decoder)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: 2020-10-08T08:00+03:00 -->
+<!-- Added by: gil_diy, at: Tue Nov 24 14:39:47 IST 2020 -->
 
 <!--te-->
 
@@ -49,6 +51,20 @@
 
 ## Install
 Install `pip install torch torchvision`
+
+## torch vision
+
+### Display images as grid
+
+```python
+from torchvision import utils
+
+x_grid = utils.make_grid(x_train, nrow= 8, padding=2)
+printf(x_grid.shape)
+TODO: page 21 complete!!
+plt.imgshow(npimg_tr,interpolation='nearest')
+
+```
 
 ## Check version
 ```python
@@ -136,12 +152,52 @@ dot_product = torch.product(t_two, t_two) # 1+5+2*10+3*15
 print(dot_product)
 ```
 
+## Utilizing GPU device
+
+### tensor on CPU
+```python
+x = torch.tensor([1.5, 2])
+print(x)
+print(x.device)
+```
+### Defining Cuda device
+
+```python
+# define a cuda/gpu device
+if torch.cuda.is_available():
+  device = torch.device("cuda:0")
+```
+
+### Move the tensor onto CUDA device
+
+```python
+x = x.to(device)
+print(x)
+print(x.device)
+```
+
+### Move the tensors to CPU
+
+```python
+x = x.to(device)
+print(x)
+print(x.device)
+```
+
 ## matrix multiplication 
 ```python
 mat_a = torch.tensor([0,3,5,5,5,2]).view(2,3)
 mat_a = torch.tensor([3,4,3,-2,4,-2]).view(3,2)
 
 torch.matmul(mat_a,mat_b) # Equivalent to mat_a @ mat_b
+
+```
+
+## Unsqeeze and squeez
+
+```python
+x = torch.tensor([1, 2, 3, 4])
+torch.unsqueeze(x, 0)
 
 ```
 
@@ -163,6 +219,8 @@ torch.ones_like(my_tensor) | Create a new tensor that matches `my_tensor` attrib
 torch.flatten(torch.arange(18).view(2,-1)) | Flattening a torch to 1 dimentional
 
 ## Concatenating torches:
+
+Concatenting joins a seqquence of tensors along an **exisiting axis**
 
 ```python
 tensor1 = torch.arange(6).view(2,-1)
@@ -190,6 +248,20 @@ Output of: **print(torch.cat((tensor1,tensor2),1))**
 `tensor([[ 0,  1,  2, 30, 31, 32],
         [ 3,  4,  5, 33, 34, 35]])`
 
+
+## Stacking 
+
+Stacking joins a sequence of tensors along a **new axis**
+
+[Reference](https://www.youtube.com/watch?v=kF2AlpykJGY)
+
+
+
+* Turn A List Of PyTorch Tensors Into One Tensor
+
+```python
+stacked_tensor = torch.stack(tensor_list)
+```
 
 
 ## Dataset && DataLoader
