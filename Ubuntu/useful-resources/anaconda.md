@@ -88,7 +88,40 @@ Installing **specific version:**
 conda install <package-name>=1.5.1
 ```
 
+## Installing list of packages for the active environemnt:
 
+```bash
+conda env update --file more_tools.yml
+```
+
+The file `more_tools.yml` holds:
+
+```
+dependencies:
+    - jupyter
+    - scikit-learn
+    - scipy
+    - pandas
+    - pandas-datareader
+    - matplotlib
+    - pillow
+    - tqdm
+    - requests
+    - h5py
+    - pyyaml
+    - flask
+    - boto3
+    - pip:
+        - bayesian-optimization
+        - gym
+        - kaggle
+```
+
+## Removing packages in the active environment
+
+```bash
+conda remove <package-name>
+```
 
 ## Get all information about an active environemnt
 
@@ -110,6 +143,12 @@ conda search <package>
 
 ```bash
 conda install -c conda-forge jupyter_contrib_nbextensions
+```
+
+## Add Jupyter support to your new environment
+
+```bash
+conda install nb_conda
 ```
 
 ## References
