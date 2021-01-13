@@ -8,6 +8,7 @@
             * [Creating a dataframe](#creating-a-dataframe)
             * [Get dimensions of a dataframe](#get-dimensions-of-a-dataframe)
             * [Iterate over rows](#iterate-over-rows)
+            * [Rename indexes (rename row names)](#rename-indexes-rename-row-names)
             * [Get dataframe except specific rows](#get-dataframe-except-specific-rows)
             * [Get row names](#get-row-names)
             * [Get column names](#get-column-names)
@@ -43,6 +44,7 @@
       * [Dealing with NA's](#dealing-with-nas)
          * [Check the column-wise distribution of null values](#check-the-column-wise-distribution-of-null-values)
          * [Remove rows with NA's](#remove-rows-with-nas)
+         * [Check for NA's in dataframe](#check-for-nas-in-dataframe)
          * [Replace NA's with the median](#replace-nas-with-the-median)
          * [Replace string with other thing in a column](#replace-string-with-other-thing-in-a-column)
          * [Replace string with other thing in a dataframe](#replace-string-with-other-thing-in-a-dataframe)
@@ -60,7 +62,7 @@
          * [Drop the rows where at least one element is missing.](#drop-the-rows-where-at-least-one-element-is-missing)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Sat Nov 28 00:20:38 IST 2020 -->
+<!-- Added by: gil_diy, at: Wed 13 Jan 2021 11:48:35 IST -->
 
 <!--te-->
 
@@ -154,6 +156,12 @@ print('Original DataFrame: \n', df)
 print('\nRows iterated using iterrows() : ') 
 for index, row in df.iterrows(): 
     print(row['name'], row['age']) 
+```
+
+#### Rename indexes (rename row names)
+
+```python
+my_df.set_index("third-column", inplace=True)
 ```
 
 #### Get dataframe except specific rows
@@ -405,6 +413,15 @@ print(df.isnull().sum())
 ### Remove rows with NA's
 ```python
 my_df = my_df.dropna()
+```
+### Check for NA's in dataframe
+
+```python
+np.any(np.isnan(df))
+```
+
+```python
+np.all(np.isfinite(df))
 ```
 
 ### Replace NA's with the median 
