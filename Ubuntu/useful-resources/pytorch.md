@@ -1,10 +1,20 @@
 <!--ts-->
    * [Pytorch](#pytorch)
+      * [Road map](#road-map)
       * [Install](#install)
+      * [torch vision](#torch-vision)
+         * [Checking torch version](#checking-torch-version)
+         * [Checking Cuda availabilty](#checking-cuda-availabilty)
+         * [Display images as grid](#display-images-as-grid)
       * [Check version](#check-version)
       * [Basics - Tensors](#basics---tensors)
          * [Converting numpy arrays into tensors](#converting-numpy-arrays-into-tensors)
          * [Converting tensors into numpy arrays](#converting-tensors-into-numpy-arrays)
+      * [Utilizing GPU device](#utilizing-gpu-device)
+         * [tensor on CPU](#tensor-on-cpu)
+         * [Defining Cuda device](#defining-cuda-device)
+         * [Move the tensor onto CUDA device](#move-the-tensor-onto-cuda-device)
+         * [Move the tensors to CPU](#move-the-tensors-to-cpu)
       * [matrix multiplication](#matrix-multiplication)
       * [Unsqeeze and squeez](#unsqeeze-and-squeez)
       * [Basic functions in pytorch](#basic-functions-in-pytorch)
@@ -40,19 +50,47 @@
       * [Template for Regression](#template-for-regression)
       * [Integrating TensorBoard with pytorch](#integrating-tensorboard-with-pytorch)
       * [Segmentation with U-net  (Encoder-Decoder)](#segmentation-with-u-net--encoder-decoder)
+      * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Tue Nov 24 14:39:47 IST 2020 -->
+<!-- Added by: gil_diy, at: Mon 18 Jan 2021 16:42:11 IST -->
 
 <!--te-->
 
 # Pytorch
+
+## Road map
+
+* Exploring the datset
+* Creating a custom dataset
+* Splitting the dataset
+* Transforming the data
+* Creating the dataloaders
+* Building the classification model
+* Defining the loss function
+* Defining the optimizer
+* Training ans evaluation of the model
+* Deploying the model
+* <Model inference on test data
 
 
 ## Install
 Install `pip install torch torchvision`
 
 ## torch vision
+
+### Checking torch version
+
+```python
+print(torch.__version__)
+print(torch.version.cuda)
+```
+
+### Checking Cuda availabilty
+
+```python
+print(torch.cuda.is_available())
+```
 
 ### Display images as grid
 
@@ -154,6 +192,8 @@ print(dot_product)
 
 ## Utilizing GPU device
 
+
+
 ### tensor on CPU
 ```python
 x = torch.tensor([1.5, 2])
@@ -207,13 +247,14 @@ Example | Explanantion
 ------------|-----
 torch.ones((2,3)) | return a tensor that contains ones and has a default **float datatype**.
 torch.ones((2,3), dtype=torch.int8) | Tensor consisting of only integer ones.
+torch.eye(2) | Returns the identity matrix
 torch.zeros((2,3), dtype=torch.int8)  | Tensor consisting of only integer zeros.
 torch.full((2,3), 3.141) | Tensor with required fill value along with the shape
 torch.empty((2,3)) | Create empty tensor filled with uninitialzed data
 torch.rand((2,3))| Tensor from a **uniform distribution** from [0, 1]
 torch.randn((2,3))| Tensor with mean 0 and variance 1 from **normal distribution**
 torch.randint(10,100,(2,3))| Tensor from a given range between 10 to 100
-my_tensor.shape | The shape of `my_tensor` tensor
+my_tensor.shape | The shape of `my_tensor` tensor (we can say the size of a tensor)
 my_tensor.dtype | The datatype of `my_tensor` tensor
 torch.ones_like(my_tensor) | Create a new tensor that matches `my_tensor` attributes (shape and datatype) with all ones.
 torch.flatten(torch.arange(18).view(2,-1)) | Flattening a torch to 1 dimentional
@@ -639,6 +680,11 @@ for i in range(epochs):
 the popular model architecture for segmentation tasks is the so-called **encoder-decoder** model.
 In the first half of the encoder-decoder model, the input image is downsized to a feature map using a few layers of convolution neural network and pooling layers.
 In the second half of the model, the feature map is up-sampled to the input size to produce a binary mask.
+
+
+## Pytorch Built-in Datasets
+
+[Link](https://pytorch.org/docs/0.4.0/torchvision/datasets.html)
 
 ## References
 
