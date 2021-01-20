@@ -4,7 +4,7 @@
    * [Pandas](#pandas)
       * [Pandas data structures](#pandas-data-structures)
          * [Series](#series)
-         * [Dataframe](#dataframe)
+         * [DataFrame](#dataframe)
             * [Creating a dataframe](#creating-a-dataframe)
             * [Get dimensions of a dataframe](#get-dimensions-of-a-dataframe)
             * [Iterate over rows](#iterate-over-rows)
@@ -62,7 +62,7 @@
          * [Drop the rows where at least one element is missing.](#drop-the-rows-where-at-least-one-element-is-missing)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Wed 13 Jan 2021 11:48:35 IST -->
+<!-- Added by: gil_diy, at: Sat 16 Jan 2021 11:00:14 IST -->
 
 <!--te-->
 
@@ -100,7 +100,7 @@ my_matrix = pd.Series()
 
 
 
-### Dataframe
+### DataFrame
 
 #### Creating a dataframe
 
@@ -137,7 +137,7 @@ my_df3 = my_df3.fillna(-1)
 #### Get dimensions of a dataframe
 
 ```python
-df = pd.Dataframe(np.array([1,2,3],[4,5,6]))
+df = pd.DataFrame(np.array([1,2,3],[4,5,6]))
 print("\nThe shape of our dataframe is:",df.shape) # The shape of the dataframe is (2,3)
 ```
 
@@ -466,7 +466,7 @@ print('The index of the maximum value is: ', data_example.idxmax())
 ## Get the nsmallest or nlargest element
 
 ```python
-df = pd.Dataframe({
+df = pd.DataFrame({
 	'Name': ['Bob', 'Mark', 'Steph', 'Jess', 'Becky'],
 	'Points': [55, 98, 46, 77, 81]
 })
