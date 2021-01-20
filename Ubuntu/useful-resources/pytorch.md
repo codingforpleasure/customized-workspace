@@ -53,7 +53,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Mon 18 Jan 2021 16:42:11 IST -->
+<!-- Added by: gil_diy, at: Tue 19 Jan 2021 12:42:16 IST -->
 
 <!--te-->
 
@@ -71,7 +71,7 @@
 * Defining the optimizer
 * Training ans evaluation of the model
 * Deploying the model
-* <Model inference on test data
+* Model inference on test data
 
 
 ## Install
