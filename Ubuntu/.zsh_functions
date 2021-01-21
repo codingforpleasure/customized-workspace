@@ -9,6 +9,13 @@ function get_info() {
   identify -format "Image size:%w x %h \nImage DPI: %x x %y\n" $1
 }
 
+function get_info_all(){
+  for IMAGE in ./*.png
+  do
+    identify -format "Image size:%w x %h \nImage DPI: %x x %y\n" ${IMAGE}
+  done
+}
+
 function source_me() {
    echo $fg_bold[yellow]"Sourcing ~\.zshrc"
 
@@ -81,11 +88,12 @@ function cat-hebrew(){
 function helper(){
     if [ $# -eq 0 ]; then
       echo $fg_bold[red] "add argument!!"
-      exit 1
+      subl ~/.oh-my-zsh/custom/plugins/zsh-completions/src/_helper
+      # exit 1
     fi
 
     python `which doc-helper.py` $1
-    tldr $1
+    tldr find $1
 }
 
 function ask_yes_or_no() {
@@ -115,15 +123,44 @@ function fork_without_block() {
 
 function fix_name() {
   # $1 is the filename
-  new_file_name=$(echo $1 | tr '\ ' '_')
+  new_file_name=$(echo $1 | tr '\ ,"' '_')
+  new_file_name=$(echo $new_file_name | tr --delete "'")
   mv $1 $new_file_name
 
   echo $fg_bold[yellow]"File was renamed to: "$new_file_name
-
 }
 
+function fix_name_all_files_in_directory(){
+  for file in *; do mv "$file" `echo $file | tr ' \(\)-' '_'` ; done
+}
 
+function firefox_me(){
+  /usr/bin/firefox $1 --ProfileManager &
+}
 
+function rm_pipenv_project(){
+  project_virtual_env=`pipenv --venv` 
+  [ -z "$project_virtual_env" ] && echo $fg_bold[red] "Gil: Virtual env not found" && exit 1
+  echo $fg_bold[yellow] "Removing the virtual env: "$project_virtual_env
+  rm -rf $project_virtual_env
+
+# The function is invoked with treef
+function tree_recursive_show_files_in_each_directory(){
+  find . -type d -print0 | while read -d '' -r dir; do
+    files=("$dir"/*)
+    printf "%5d files in directory %s\n" "${#files[@]}" "$dir"
+  done
+}
+
+  project_path=`pipenv --where`
+  [ -z "$project_path" ] && echo $fg_bold[red] "Gil: project directory not found" && exit 1
+  
+  # Attention: fails below
+  cd $project_path/..
+
+  echo $fg_bold[yellow] "Removing the project folder: "$project_path
+  rm -rf $project_path
+}
 
 #
 # TODO function description
