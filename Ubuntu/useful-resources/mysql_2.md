@@ -32,7 +32,7 @@
          * [Create table with columns by specifying the other table's columns:](#create-table-with-columns-by-specifying-the-other-tables-columns)
          * [Copy specific columns to another table:](#copy-specific-columns-to-another-table)
          * [Using temporary tables](#using-temporary-tables)
-            * [Add a COLUMN for an existing table   and adding AUTO_INCREMENT](#add-a-column-for-an-existing-table--and-adding-auto_increment)
+            * [Add a COLUMN for an existing table + and adding AUTO_INCREMENT](#add-a-column-for-an-existing-table--and-adding-auto_increment)
             * [Changing the order of the columns in a table? (Swapping columns in existed table)](#changing-the-order-of-the-columns-in-a-table-swapping-columns-in-existed-table)
             * [Rename a column in a existed table](#rename-a-column-in-a-existed-table)
          * [Generating unique table names](#generating-unique-table-names)
@@ -94,9 +94,10 @@
       * [Create user](#create-user)
       * [Removing user](#removing-user)
    * [Useful website for coding online sql/mysql/postgresql](#useful-website-for-coding-online-sqlmysqlpostgresql)
+   * [Compile c mysql client:](#compile-c-mysql-client)
    * [References](#references)
 
-<!-- Added by: gil_diy, at: 2019-08-28T15:43+03:00 -->
+<!-- Added by: gil_diy, at: Sun 24 Jan 2021 00:29:37 IST -->
 
 <!--te-->
 
@@ -1045,6 +1046,10 @@ WHERE people.name LIKE 'John%';
 
 # Useful website for coding online sql/mysql/postgresql
 [sqlfiddle](www.sqlfiddle.com)
+
+# Compile c mysql client:
+
+[Great reference](https://zetcode.com/db/mysqlc/)
 
 # References
 [mysql-json-functions](http://dasini.net/blog/2018/07/23/30-mins-with-mysql-json-functions/)
