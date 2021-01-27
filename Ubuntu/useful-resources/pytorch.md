@@ -17,10 +17,14 @@
             * [Create an Identity tensor](#create-an-identity-tensor)
             * [Create all zeros tensor](#create-all-zeros-tensor)
             * [Create all ones tensor](#create-all-ones-tensor)
+         * [Get number of elements in a tensor](#get-number-of-elements-in-a-tensor)
          * [Tensor Operation types](#tensor-operation-types)
             * [Reshape operations](#reshape-operations)
+               * [rehshape](#rehshape)
+               * [squeeze](#squeeze)
+               * [flatten](#flatten)
+               * [unsqueeze](#unsqueeze)
             * [Element-wise operations](#element-wise-operations)
-               * [Get number of elements in the tensor](#get-number-of-elements-in-the-tensor)
             * [Reduction operations](#reduction-operations)
             * [Access operations](#access-operations)
          * [Get the data type of a tensor](#get-the-data-type-of-a-tensor)
@@ -76,7 +80,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Wed 27 Jan 2021 11:11:47 IST -->
+<!-- Added by: gil_diy, at: Wed 27 Jan 2021 13:14:27 IST -->
 
 <!--te-->
 
@@ -248,8 +252,98 @@ print(t.reshape(3,4).shape)
 
 ##### squeeze
 
+Removes all axis which have a length of one
+
+```python
+print(t.reshape(1,12))
+print(t.reshape(1,12).shape)
+
+print(t.reshape(1,12).squeeze())
+print(t.reshape(1,12).squeeze().shape)
+```
+
+Use case example:
+
+```python
+def my_flatten(t):
+  t = t.reshape(1,-1)
+  t = t.squeeze()
+  return t
+```
+
+##### flatten 
+
+All the axis are squeeze together to a single axis
+
+```python
+t.flatten() # (built-in function)
+```
+
+**Other ways to accomplish the same result is:**
+
+```python
+t.reshape(1,-1)[0]
+```
+**another appraoch**
+
+```python
+t.reshape(-1)
+```
+**other appraoch**
+
+```python
+t.view(t.numel())
+```
+
+
+In case we would like to flatten a specific axis:
+
+
 ```python
 
+# Let's create 3 grayscale images of the same size:
+
+t1 = torch.tensor([1,1,1,1],
+                  [1,1,1,1],
+                  [1,1,1,1],)
+
+t2 = torch.tensor([2,2,2,2],
+                  [2,2,2,2],
+                  [2,2,2,2])
+
+t3 = torch.tensor([3,3,3,3],
+                  [3,3,3,3],
+                  [3,3,3,3])
+
+# Let's combine those tensors:
+
+t = tensor.stack((t1,t2,t3))
+
+print(t.shape) # Output: torch.size([3,3,4]), the first 3 is for the batch size
+
+# we would like to add axis for the color channel
+t = t.reshape(3,1,4,4)
+
+# We want to flat the color channel with the width and height axis
+# we will use the flatten function with skipping the first axis (the batch axis)
+t.flatten(start_dim = 1) # The output would be: torch.Size([3,16])
+
+# The output is:
+# torch.tensor([1,1,1,1,1,1,1,1,1,1,1,1],
+#              [2,2,2,2,2,2,2,2,2,2,2,2],
+#              [3,3,3,3,3,3,3,3,3,3,3,3])
+                  )
+
+```
+
+
+**Explanation:** [Link](https://youtu.be/mFAIBMbACMA?list=PLZbbT5o_s2xrfNyHZsM6ufI0iZENK9xgG)
+
+##### unsqueeze
+
+```python
+print(t.reshape(1,12).squeeze().unsqueeze(dim=0))
+print(t.reshape(1,12).squeeze().unsqueeze(dim=0).shape)
 ```
 
 #### Element-wise operations
