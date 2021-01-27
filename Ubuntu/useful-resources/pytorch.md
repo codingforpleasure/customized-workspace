@@ -80,7 +80,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Wed 27 Jan 2021 13:14:27 IST -->
+<!-- Added by: gil_diy, at: Wed 27 Jan 2021 14:03:34 IST -->
 
 <!--te-->
 
@@ -348,9 +348,56 @@ print(t.reshape(1,12).squeeze().unsqueeze(dim=0).shape)
 
 #### Element-wise operations
 
+Tensors must have the same shape for perform the element-wise operations
+except for broadcasting operations:
 
+```python
+
+t1 = torch.tensor([[4,4],[5,5]])
+
+# Under the hood those function perform broadcasting too
+t1.add(2) 
+
+t1.sub(2)
+
+t1.mul(2)
+
+t1.div(2)
+```
+
+Operation | Exmaple
+------------|-----
+ equal to zero | t.eq(0)
+ greater and equal to zero | t.ge(0)
+ less than zero | t.lt(0)
+ less and equal zero | t.le(0)
 
 #### Reduction operations
+
+Reduction operation | Exmaple
+------------|-----
+ sum | t.sum()
+ product | t.prod()
+ mean | t.mean()
+ standard deviation | t.std
+ argmax | t.argmax
+
+If we would like to apply the sum function on specific axis:
+
+```python
+t = torch.tensor([
+  [1,1,1,1],
+  [2,2,2,2],
+  [3,3,3,3],
+  ], dtype = torch.float32)
+
+
+t.sum(dim = 0) # Output: tensor([6.,6.,6.,6.])
+t.sum(dim = 1) # Output: tensor([4.,8.,12.])
+```
+
+
+
 
 #### Access operations
 
