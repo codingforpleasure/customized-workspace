@@ -8,8 +8,31 @@
          * [Display images as grid](#display-images-as-grid)
       * [Check version](#check-version)
       * [Basics - Tensors](#basics---tensors)
-         * [Converting numpy arrays into tensors](#converting-numpy-arrays-into-tensors)
+         * [Create tensors](#create-tensors)
+            * [Create a tensor with all the same values](#create-a-tensor-with-all-the-same-values)
+            * [Create a tensor from uniform distribution](#create-a-tensor-from-uniform-distribution)
+            * [Create a tensor from a given range of values](#create-a-tensor-from-a-given-range-of-values)
+            * [Create a tensor with attributes from another tensor](#create-a-tensor-with-attributes-from-another-tensor)
+            * [Create a tensor from numpy array](#create-a-tensor-from-numpy-array)
+            * [Create an Identity tensor](#create-an-identity-tensor)
+            * [Create all zeros tensor](#create-all-zeros-tensor)
+            * [Create all ones tensor](#create-all-ones-tensor)
+         * [Tensor Operation types](#tensor-operation-types)
+            * [Reshape operations](#reshape-operations)
+            * [Element-wise operations](#element-wise-operations)
+               * [Get number of elements in the tensor](#get-number-of-elements-in-the-tensor)
+            * [Reduction operations](#reduction-operations)
+            * [Access operations](#access-operations)
+         * [Get the data type of a tensor](#get-the-data-type-of-a-tensor)
+         * [Reshaping tensor - View tensor differently](#reshaping-tensor---view-tensor-differently)
          * [Converting tensors into numpy arrays](#converting-tensors-into-numpy-arrays)
+         * [Getting the actual value of a tensor of size 1x1](#getting-the-actual-value-of-a-tensor-of-size-1x1)
+      * [Exploring Gradients](#exploring-gradients)
+         * [Stop calculating the gradient function](#stop-calculating-the-gradient-function)
+            * [Method #1: require_grad_(False)](#method-1-require_grad_false)
+            * [Method #2: detach](#method-2-detach)
+            * [Method #3: with torch.no_grad()](#method-3-with-torchno_grad)
+         * [Stop accumalting gradients, reset to zero](#stop-accumalting-gradients-reset-to-zero)
       * [Utilizing GPU device](#utilizing-gpu-device)
          * [tensor on CPU](#tensor-on-cpu)
          * [Defining Cuda device](#defining-cuda-device)
@@ -53,7 +76,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Tue 19 Jan 2021 12:42:16 IST -->
+<!-- Added by: gil_diy, at: Wed 27 Jan 2021 11:11:47 IST -->
 
 <!--te-->
 
@@ -111,6 +134,150 @@ print(torchvision.__version__)
 ```
 
 ## Basics - Tensors
+
+### Create tensors
+
+####  Create a tensor with all the same values
+
+creating a tensor of 2 rows and 3 columns with all 4's.
+
+```python
+x = torch.full((2,3), 4)
+```
+
+#### Create a tensor from uniform distribution
+
+with mean 0 and variance 1
+
+```python
+torch.randn((2,3))
+```
+#### Create a tensor from a given range of values
+
+```python
+torch.randint(10,100, (2,3))
+```
+
+lower_limit = 10
+upper_limit = 100
+
+
+#### Create a tensor with attributes from another tensor
+
+```python
+tensor1 = torch.tensor([[1,2,3],[4,5,6]])
+print("tensor1 type is: ", tensor1.dtype)
+print("tensor1 shape is: ", tensor1.shape)
+
+# Now let's create a new tensor tensor2, 
+# that matches the atrributes of tensor1
+# we will use the torch.*_like format for this:
+tensor2 = torch.ones_like(tensor1)
+
+print("tensor2 type is: ", tensor2.dtype)
+print("tensor2 shape is: ", tensor2.shape)
+```
+
+#### Create a tensor from numpy array
+
+```python
+my_array = np.array([1,2,3,4,5])
+my_tensor_converted = torch.from_numpy(my_array)
+print(my_tensor_converted)
+print(my_tensor_converted.type())
+```
+
+Shared Data | Copy Data
+------------|-----
+ torch.as_tensor() | torch.tensor()
+ torch.from_numpy() | torch.Tensor()
+
+
+**Well explained here:** [Link](https://youtu.be/AglLTlms7HU?list=PLZbbT5o_s2xrfNyHZsM6ufI0iZENK9xg)
+
+#### Create an Identity tensor
+
+```python
+torch.eye(2)
+```
+#### Create all zeros tensor
+
+```python
+torch.zeros(2,2)
+```
+
+#### Create all ones tensor
+
+```python
+torch.ones(2,2)
+```
+
+### Get number of elements in a tensor
+
+```python
+
+t= torch.tensor([
+  [1,1,1,1],
+  [2,2,2,2],
+  [3,3,3,3],
+  ], dtype = torch.float32)
+
+print("number of elements in the tensor: ", torch.tensor(t.shape).prod())
+print("number of elements in the tensor: ", t.numel())
+```
+
+
+### Tensor Operation types
+#### Reshape operations
+
+##### rehshape
+```python
+print(t.reshape(1,12))
+print(t.reshape(1,12).shape)
+
+print(t.reshape(12,1))
+print(t.reshape(12,1).shape)
+
+print(t.reshape(2,2,3))
+print(t.reshape(2,2,3).shape)
+
+print(t.reshape(3,4))
+print(t.reshape(3,4).shape)
+
+```
+
+##### squeeze
+
+```python
+
+```
+
+#### Element-wise operations
+
+
+
+#### Reduction operations
+
+#### Access operations
+
+### Get the data type of a tensor
+
+```python
+print(t1.dtype)
+```
+
+Data type | dtype | CPU Tensor | GPU Tensor
+----------|-------|------------|-----------
+32-bit floating point | torch.float32 | torch.FloatTensor | torch.cuda.FloatTensor
+64-bit floating point | torch.float64 | torch.DoubleTensor| torch.cuda.DoubleTensor
+16-bit floating point | torch.float16 | torch.HalfTensor | torch.cuda.HalfTensor
+8-bit integer (unsigned) | torch.uint8 | torch.ByteTensor | torch.cuda.ByteTensor
+8-bit integer (signed) | torch.int8 | torch.CharTensor | torch.cuda.CharTensor
+16-bit integer (signed) | torch.int16 | torch.ShortTensor | torch.cuda.ShortTensor
+32-bit integer (signed) | torch.int32 | torch.IntTensor | torch.cuda.IntTensor
+64-bit integer (signed) | torch.int64 | torch.LongTensor | torch.cuda.LongTensor
+
+### Reshaping tensor - View tensor differently
 ```python
 import torch
 
@@ -161,14 +328,7 @@ print(x[1,0:2,1])
 
 Output will be the number **10** .
 
-### Converting numpy arrays into tensors
 
-```python
-my_array = np.array([1,2,3,4,5])
-my_tensor_converted = torch.from_numpy(my_array)
-print(my_tensor_converted)
-print(my_tensor_converted.type())
-```
 
 ### Converting tensors into numpy arrays
 
@@ -190,9 +350,81 @@ dot_product = torch.product(t_two, t_two) # 1+5+2*10+3*15
 print(dot_product)
 ```
 
+### Getting the actual value of a tensor of size 1x1
+
+```python
+x = torch.rand(5,3)
+print(x)
+
+print(x[1,1].item()) # <- retreiving the value from the tensor
+```
+
+## Exploring Gradients
+
+
+```python
+import torch
+
+x = torch.randn(3, requires_grad = False) # tensor of size three
+print(x)
+
+y = x*2
+print(y)
+z = y*y*2
+
+z.backward()
+print(x.grad) # will print the gradient of each element in x
+```
+
+
+
+### Stop calculating the gradient function
+
+#### Method #1: require_grad_(False)
+
+```python
+import torch
+
+x=torch.randn(3, requires_grad=True)
+print(x)
+x.require_grad_(False)
+print(x)
+```
+
+#### Method #2: detach
+
+```python
+import torch
+
+x=torch.randn(3, requires_grad=True)
+print(x)
+y = x.detach() # No more dependency on x
+print(y)
+
+```
+#### Method #3: with torch.no_grad()
+
+```python
+import torch
+
+x=torch.randn(3, requires_grad=True)
+print(x)
+with torch.no_grad():
+	y = x + 2
+	print(y)
+```
+
+
+### Stop accumalting gradients, reset to zero
+
+On the backwards path the default behaviour is to accumulate the gradient values from preivouse paths, so to stop this you should reset it to zero.
+
+```python
+# Pytorch accumulates the gradient by default 
+x.grad.zero_()
+
+```
 ## Utilizing GPU device
-
-
 
 ### tensor on CPU
 ```python
