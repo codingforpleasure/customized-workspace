@@ -3,10 +3,9 @@
       * [Road map](#road-map)
       * [Install](#install)
       * [torch vision](#torch-vision)
-         * [Checking torch version](#checking-torch-version)
+         * [Checking versions](#checking-versions)
          * [Checking Cuda availabilty](#checking-cuda-availabilty)
          * [Display images as grid](#display-images-as-grid)
-      * [Check version](#check-version)
       * [Basics - Tensors](#basics---tensors)
          * [Create tensors](#create-tensors)
             * [Create a tensor with all the same values](#create-a-tensor-with-all-the-same-values)
@@ -43,13 +42,16 @@
          * [Move the tensor onto CUDA device](#move-the-tensor-onto-cuda-device)
          * [Move the tensors to CPU](#move-the-tensors-to-cpu)
       * [matrix multiplication](#matrix-multiplication)
-      * [Unsqeeze and squeez](#unsqeeze-and-squeez)
       * [Basic functions in pytorch](#basic-functions-in-pytorch)
       * [Concatenating torches:](#concatenating-torches)
       * [Stacking](#stacking)
+      * [Custom Dataset](#custom-dataset)
+      * [Dataloader](#dataloader)
       * [Dataset &amp;&amp; DataLoader](#dataset--dataloader)
          * [To better understand your data](#to-better-understand-your-data)
-      * [device](#device)
+      * [Calculating the Output size of a CNN](#calculating-the-output-size-of-a-cnn)
+         * [<strong>CNN Output Size formula (Square)</strong>](#cnn-output-size-formula-square)
+         * [<strong>CNN Output Size formula (Non Square)</strong>](#cnn-output-size-formula-non-square)
       * [Batch normalization](#batch-normalization)
       * [Preprocessing](#preprocessing)
       * [Batch size](#batch-size)
@@ -80,7 +82,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Wed 27 Jan 2021 14:03:34 IST -->
+<!-- Added by: gil_diy, at: Fri 29 Jan 2021 02:39:17 IST -->
 
 <!--te-->
 
@@ -106,17 +108,23 @@ Install `pip install torch torchvision`
 
 ## torch vision
 
-### Checking torch version
+### Checking versions
 
 ```python
-print(torch.__version__)
-print(torch.version.cuda)
+print("torch version = ", torch.__version__)
+print("torchvision version = ",torchvision.__version__)
+print("torch.version.cuda = ", torch.version.cuda)
 ```
 
 ### Checking Cuda availabilty
 
 ```python
-print(torch.cuda.is_available())
+if torch.cuda.is_available():
+    dev = "cuda:0"
+else:
+    dev = "cpu"
+
+print("The device is: ", dev)
 ```
 
 ### Display images as grid
@@ -129,12 +137,6 @@ printf(x_grid.shape)
 TODO: page 21 complete!!
 plt.imgshow(npimg_tr,interpolation='nearest')
 
-```
-
-## Check version
-```python
-print(torch.__version__)
-print(torchvision.__version__)
 ```
 
 ## Basics - Tensors
@@ -606,14 +608,6 @@ torch.matmul(mat_a,mat_b) # Equivalent to mat_a @ mat_b
 
 ```
 
-## Unsqeeze and squeez
-
-```python
-x = torch.tensor([1, 2, 3, 4])
-torch.unsqueeze(x, 0)
-
-```
-
 ## Basic functions in pytorch
 
 Example | Explanantion
@@ -677,7 +671,36 @@ Stacking joins a sequence of tensors along a **new axis**
 stacked_tensor = torch.stack(tensor_list)
 ```
 
+## Custom Dataset
 
+```python
+class My_data_set(Dataset):
+def __init__(self, csv_file):
+  self.data = pd.read_csv(csv_file)
+
+
+# Gets an item in the the dataset within a specific index location in the dataset
+def __getitem_(self, index):
+  r = self.data.iloc[index]
+  label = torch.tensor(r.is_up_day, dtype = torch.long)
+  sample = self.normalize(torch.tensor([r.open, r.high, r.low, r.close]))
+  return sample, label
+
+# Returns the length of the dataset
+def __len__(self):
+  return len(self.data)
+
+```
+
+## Dataloader
+
+The dataloader gives us access to the dataset, and gives us query capabilties,
+we can shuffle and have a batch size.
+
+```python
+example_dataset_train = My_data_set()
+train_loader = torch.utils.data.Dataloader(example_dataset_train)
+```
 ## Dataset && DataLoader
 ```python
 import torch 
@@ -685,18 +708,19 @@ import torchvision
 import torch.vision,transforms as transforms
 
 train_set = torchvision.datasets.FasshionMNIST(
-	root = './data/FashionMNIST',
-	train = True,
-	download = True,
-	transform = transforms.Compose([
-		transforms.ToTensor()
-		])
-	)
+root = './data/FashionMNIST',
+train = True,
+download = True,
+transform = transforms.Compose([
+	transforms.ToTensor()
+	])
+)
 
 train_loader = torch.utils.data.Dataloader(
-	train_set, batch_size = 10
+train_set, batch_size = 10
 )
 ```
+
 ### To better understand your data
 ```python
 import numpy as np
@@ -713,6 +737,7 @@ train_set.train_labels
 train_set.train_labels.bincount()
 
 ```
+
 ```python
 sample = next(iter(train_set))
 len(sample)
@@ -748,11 +773,30 @@ print('labels: ', labels)
 ```
 [Link](https://youtu.be/mUueSPmcOBc?t=665)
 
-## device
-```pyton
-device = torch.device('cuda:0')
-device
-```
+## Calculating the Output size of a CNN
+
+[Link](https://youtu.be/cin4YcGBh3Q?list=PLZbbT5o_s2xrfNyHZsM6ufI0iZENK9xgG)
+
+### **CNN Output Size formula (Square)**
+
+* Suppose we have an `nxn`
+* Suppose we have an `fxf` filter
+* Suppose we have a padding of `p` and a stride of `s`
+
+The output size `O` is given by this formula:
+
+<p align="center"> <!-- style="width:400px;" -->
+  <img src="images/labeling_example.png" title="tool tip here">
+</p>
+
+
+### **CNN Output Size formula (Non Square)**
+
+<p align="center"> <!-- style="width:400px;" -->
+  <img src="images/labeling_example.png" title="tool tip here">
+</p>
+
+
 ## Batch normalization
 
 We know a neural network learns the weights in our model become updated over each
@@ -786,8 +830,8 @@ we first need to read from the image and convert it
 into a tensor using a transforms.ToTensor() transform. We then make the mean and standard deviation of the pixel values 0.5 and 0.5 respectively so that it becomes easier for the model to train;
 ```python
 relevant_transform = transforms.Compose([transforms.ToTensor(),
-                                         transforms.Normalize(mean=(0.5,), std=(0.5,))
-                                         ])
+                                       transforms.Normalize(mean=(0.5,), std=(0.5,))
+                                       ])
 ```
 
 
@@ -814,7 +858,7 @@ that we are not dealing with very small values between 0 and 1, and negative val
 criterion, and so we named our loss function criterion.
 
 <p align="center"> <!-- style="width:400px;" -->
-  <img src="images/neural-networks/neg_log.png" title="tool tip here">
+<img src="images/neural-networks/neg_log.png" title="tool tip here">
 </p>
 
 The negative log-likelihood becomes unhappy at smaller values, where it can reach infinite unhappiness (that’s too sad), and becomes less unhappy at larger values. Because we are summing the loss function to all the correct classes, what’s actually happening is that whenever the network assigns high confidence at the correct class, the unhappiness is low, but when the network assigns low confidence at the correct class, the unhappiness is high.
@@ -865,10 +909,10 @@ nn.Dropout(p=0.25)
 
 ```python
 transforms.Compose([
-  transforms.CenterCrop(10),
-  transforms.Pad(1, 0),
-  transforms.CenterCrop((10, 10))
-  transforms.ToTensor(),
+transforms.CenterCrop(10),
+transforms.Pad(1, 0),
+transforms.CenterCrop((10, 10))
+transforms.ToTensor(),
 ])
 ```
 
@@ -880,14 +924,14 @@ Few exaples of transforms on the data to create more data from existing data:
 import torchvision
 
 transforms.Compose([
-  transforms.RandomCrop(10)
-  transforms.RandomCrop((10,20))
-  transforms.RandomHorizontalFlip(p=0.3)
-  transforms.RandomVerticalFlip(p=0.3)
-  
-  # Adding brightness, contrast, saturation, and hue variations
-  transforms.ColorJitter(0.25, 0.25, 0.25, 0.25)
-  transforms.RandomRotation(10)
+transforms.RandomCrop(10)
+transforms.RandomCrop((10,20))
+transforms.RandomHorizontalFlip(p=0.3)
+transforms.RandomVerticalFlip(p=0.3)
+
+# Adding brightness, contrast, saturation, and hue variations
+transforms.ColorJitter(0.25, 0.25, 0.25, 0.25)
+transforms.RandomRotation(10)
 ])
 ```
 
@@ -906,7 +950,7 @@ my_model = models.resnet50(pretrained=True)
 # freezes the weights of the model. By freezing the
 # weights, the lower convolutional layers are not updated
 for param in my_model.parameters():
-  param.requires_grad = False
+param.requires_grad = False
 ```
 
 ### Replacing the last two layers
@@ -917,8 +961,8 @@ We will apply transfer learning on Resnet50, the actual architecture can be seen
 The last two layers:
 
 ```
- (avgpool): AdaptiveAvgPool2d(output_size=(1, 1))
-  (fc): Linear(in_features=2048, out_features=1000, bias=True)
+(avgpool): AdaptiveAvgPool2d(output_size=(1, 1))
+(fc): Linear(in_features=2048, out_features=1000, bias=True)
 ```
 we replaced the average pooling layer,
 with our AdaptiveConcatPool2d layer and added a fully connected classifier with two output units for the two classes available.
@@ -926,29 +970,29 @@ with our AdaptiveConcatPool2d layer and added a fully connected classifier with 
 ```python
 # Performs concatenation between Average 2D pooling and Max 2D pooling
 class AdaptiveConcatPool2d(nn.Module):
-    def __init__(self, sz=None):
-        super().__init__()
-        sz = sz or (1, 1)
-        self.ap = nn.AdaptiveAvgPool2d(sz)
-        self.mp = nn.AdaptiveMaxPool2d(sz)
+  def __init__(self, sz=None):
+      super().__init__()
+      sz = sz or (1, 1)
+      self.ap = nn.AdaptiveAvgPool2d(sz)
+      self.mp = nn.AdaptiveMaxPool2d(sz)
 
-    def forward(self, x):
-        return torch.cat([self.mp(x), self.ap(x)], 1)
+  def forward(self, x):
+      return torch.cat([self.mp(x), self.ap(x)], 1)
 ```
 
 
 ```python
 my_model.avgpool = AdaptiveConcatPool2d()
 my_model.fc = nn.Sequential(
-  nn.Flatten(),
-  nn.BatchNorm1d(4096),
-  nn.Dropout(0.5),
-  nn.Linear(4096, 512),
-  nn.Relu(),
-  nn.BatchNorm1d(512),
-  nn.Dropout(p = 0.5),
-  nn.Linear(512, 2),
-  nn.LogSoftMax(dim=1)
+nn.Flatten(),
+nn.BatchNorm1d(4096),
+nn.Dropout(0.5),
+nn.Linear(4096, 512),
+nn.Relu(),
+nn.BatchNorm1d(512),
+nn.Dropout(p = 0.5),
+nn.Linear(512, 2),
+nn.LogSoftMax(dim=1)
 )
 
 ```
@@ -1031,14 +1075,14 @@ epochs = 1000
 losses = []
 
 for i in range(epochs):
-    y_pred = model.forward(x_data)
-    loss = loss_function(y_pred, y_data)
-    print("epoch: ", i, "loss", loss.item())
+  y_pred = model.forward(x_data)
+  loss = loss_function(y_pred, y_data)
+  print("epoch: ", i, "loss", loss.item())
 
-    losses.append(loss.item())
-    optimizer.zero_grad()
-    loss.backward()
-    optimizer.step()
+  losses.append(loss.item())
+  optimizer.zero_grad()
+  loss.backward()
+  optimizer.step()
 ```
 
 ## Integrating TensorBoard with pytorch
