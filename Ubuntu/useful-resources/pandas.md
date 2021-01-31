@@ -4,10 +4,11 @@
    * [Pandas](#pandas)
       * [Pandas data structures](#pandas-data-structures)
          * [Series](#series)
-         * [Dataframe](#dataframe)
+         * [DataFrame](#dataframe)
             * [Creating a dataframe](#creating-a-dataframe)
             * [Get dimensions of a dataframe](#get-dimensions-of-a-dataframe)
             * [Iterate over rows](#iterate-over-rows)
+            * [Rename indexes (rename row names)](#rename-indexes-rename-row-names)
             * [Get dataframe except specific rows](#get-dataframe-except-specific-rows)
             * [Get row names](#get-row-names)
             * [Get column names](#get-column-names)
@@ -43,6 +44,7 @@
       * [Dealing with NA's](#dealing-with-nas)
          * [Check the column-wise distribution of null values](#check-the-column-wise-distribution-of-null-values)
          * [Remove rows with NA's](#remove-rows-with-nas)
+         * [Check for NA's in dataframe](#check-for-nas-in-dataframe)
          * [Replace NA's with the median](#replace-nas-with-the-median)
          * [Replace string with other thing in a column](#replace-string-with-other-thing-in-a-column)
          * [Replace string with other thing in a dataframe](#replace-string-with-other-thing-in-a-dataframe)
@@ -60,7 +62,7 @@
          * [Drop the rows where at least one element is missing.](#drop-the-rows-where-at-least-one-element-is-missing)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Sat Nov 28 00:20:38 IST 2020 -->
+<!-- Added by: gil_diy, at: Sat 16 Jan 2021 11:00:14 IST -->
 
 <!--te-->
 
@@ -98,7 +100,7 @@ my_matrix = pd.Series()
 
 
 
-### Dataframe
+### DataFrame
 
 #### Creating a dataframe
 
@@ -135,7 +137,7 @@ my_df3 = my_df3.fillna(-1)
 #### Get dimensions of a dataframe
 
 ```python
-df = pd.Dataframe(np.array([1,2,3],[4,5,6]))
+df = pd.DataFrame(np.array([1,2,3],[4,5,6]))
 print("\nThe shape of our dataframe is:",df.shape) # The shape of the dataframe is (2,3)
 ```
 
@@ -154,6 +156,12 @@ print('Original DataFrame: \n', df)
 print('\nRows iterated using iterrows() : ') 
 for index, row in df.iterrows(): 
     print(row['name'], row['age']) 
+```
+
+#### Rename indexes (rename row names)
+
+```python
+my_df.set_index("third-column", inplace=True)
 ```
 
 #### Get dataframe except specific rows
@@ -406,6 +414,15 @@ print(df.isnull().sum())
 ```python
 my_df = my_df.dropna()
 ```
+### Check for NA's in dataframe
+
+```python
+np.any(np.isnan(df))
+```
+
+```python
+np.all(np.isfinite(df))
+```
 
 ### Replace NA's with the median 
 ```python
@@ -449,7 +466,7 @@ print('The index of the maximum value is: ', data_example.idxmax())
 ## Get the nsmallest or nlargest element
 
 ```python
-df = pd.Dataframe({
+df = pd.DataFrame({
 	'Name': ['Bob', 'Mark', 'Steph', 'Jess', 'Becky'],
 	'Points': [55, 98, 46, 77, 81]
 })

@@ -70,6 +70,16 @@ Lists all current opened windows with their panes| list-windows
 
 
 
+## Tmuixnator
+
+```bash
+sudo apt install ruby-full
+```
+
+```bash
+gem install tmuxinator
+```
+
 ---------------------------------------
 * **On mac just switch the Ctrl with Cmd**
 

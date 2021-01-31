@@ -9,13 +9,23 @@
       * [Viewing a list of your environments](#viewing-a-list-of-your-environments)
       * [Viewing a list of the packages in an environment](#viewing-a-list-of-the-packages-in-an-environment)
       * [Installing packages in the active environment](#installing-packages-in-the-active-environment)
+      * [Installing list of packages for the active environemnt:](#installing-list-of-packages-for-the-active-environemnt)
+      * [Saving environment to a text file](#saving-environment-to-a-text-file)
+      * [Create environment from a text file](#create-environment-from-a-text-file)
+      * [Removing packages in the active environment](#removing-packages-in-the-active-environment)
       * [Get all information about an active environemnt](#get-all-information-about-an-active-environemnt)
       * [Get the location of all enviroments](#get-the-location-of-all-enviroments)
       * [Search for package](#search-for-package)
+      * [Search for package in specific channel](#search-for-package-in-specific-channel)
       * [Add extentions to your jupyter notebook](#add-extentions-to-your-jupyter-notebook)
+      * [Add Jupyter support to your new environment](#add-jupyter-support-to-your-new-environment)
+      * [Registering new kernel into the environemnt](#registering-new-kernel-into-the-environemnt)
+      * [View available kernels in environment](#view-available-kernels-in-environment)
+      * [Removing kernel from the environment](#removing-kernel-from-the-environment)
+      * [Specifying version numbers](#specifying-version-numbers)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: 2020-07-06T15:40+03:00 -->
+<!-- Added by: gil_diy, at: Sun 17 Jan 2021 12:21:28 IST -->
 
 <!--te-->
 # Anaconda
@@ -88,7 +98,52 @@ Installing **specific version:**
 conda install <package-name>=1.5.1
 ```
 
+## Installing list of packages for the active environemnt:
 
+```bash
+conda env update --file more_tools.yml
+```
+
+The file `more_tools.yml` holds:
+
+```
+dependencies:
+    - jupyter
+    - scikit-learn
+    - scipy
+    - pandas
+    - pandas-datareader
+    - matplotlib
+    - pillow
+    - tqdm
+    - requests
+    - h5py
+    - pyyaml
+    - flask
+    - boto3
+    - pip:
+        - bayesian-optimization
+        - gym
+        - kaggle
+```
+
+## Saving environment to a text file
+
+```bash
+conda list --explicit > bio-env.txt
+```
+
+## Create environment from a text file
+```bash
+conda env create --file bio-env.txt
+```
+
+
+## Removing packages in the active environment
+
+```bash
+conda remove <package-name>
+```
 
 ## Get all information about an active environemnt
 
@@ -106,11 +161,66 @@ conda info --envs
 conda search <package>
 ```
 
+## Search for package in specific channel
+```bash
+conda search -c <channel-name> <package-name>
+```
+
 ## Add extentions to your jupyter notebook
+```bash
+conda install jupyter -y
+```
+
+
+```bash
+conda install nb_conda
+```
 
 ```bash
 conda install -c conda-forge jupyter_contrib_nbextensions
 ```
+
+## Add Jupyter support to your new environment
+
+
+
+## Registering new kernel into the environemnt
+
+The following command registers your pytorch environment (make sure you "conda activate" your new pytorch envorinment)
+
+
+```bash
+python -m ipykernel install --user --name pytorch --display-name "pytorch 3.8 for RTX 3090"
+```
+
+
+## View available kernels in environment
+
+```bash
+jupyter kernelspec list
+```
+
+## Removing kernel from the environment
+
+
+```bash
+jupyter kernelspec list
+```
+```bash
+jupyter kernelspec uninstall <kernel-to-remove>
+```
+
+## Specifying version numbers
+
+Constraint type | Specification | Result
+------------|------------------|---------
+ Fuzzy | numpy=1.11 |  1.11.0 , 1.11.1 , 1.11.2 , 1.11.18 etc
+ Exact | numpy==1.11 | 1.11.0
+ Greater than or equal to | "numpy>=1.11" | 11.1.0 or higher
+ OR | "numpy=1.11.1|1.11.3" | 1..11.1, 1.11.3
+ AND | "numpy>=1.8,<2" | 1.8, 1.9, not 2.0
+
+**NOTE:** Quotation marks must be used when your specification contains a space or any of these characters: > < |
 
 ## References
 

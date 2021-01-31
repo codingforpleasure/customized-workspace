@@ -91,9 +91,9 @@ and then:
 
 Description | command
 -------------|-------------
-Install a package|  **python3 -m pip install -U** matplotlib
 Create virtuak env |  **virtualenv my_env**
 Activate virtual env |  **source my_env/bin/activate**
+Install a package|  **python3 -m pip install -U** matplotlib
 Deactivate | **source my_env/bin/deactivate**
 
 
@@ -103,7 +103,7 @@ Description | Command
 pip search <package-name> | conda search <package-name>
 pip install <package-name> | conda install <package-name>
 pip search <package-name> -upgrade | conda update python
-pip list | conda list
+pip list -v | conda list
 
 
 ## Anaconda

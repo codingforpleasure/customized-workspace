@@ -88,7 +88,7 @@ alias firefox='firefox_me'
 # alias firefox="firefox --ProfileManager &" # For setting my current working profile
 
 # Copy the current working directory to clipboard without new line in the end of the path
-alias pwdc="echo -n `pwd` | xclip -selection clipboard" 
+alias pwdc='echo -n "$PWD" | xclip -selection clipboard'
 
 alias android="/opt/android-studio/bin/studio.sh &" # Execute Android-studio easily
 alias adb='~/Development/android_sdk/platform-tools/adb' 	 # Execute Android Debug Bridge (adb)
@@ -156,14 +156,14 @@ alias myscripts='cd ~/my_useful_scripts'
 alias gitrep='cd ~/myGitRepositories'   # Go to my repos collection
 alias snippe{t,s}='cd ~/.config/sublime-text-3/Packages/User'
 alias rsnippet='cd ~/.R/snippets'
-alias class='cd ~/PycharmProjects/get_info_from_goodreads/classification'
+# alias class='cd ~/PycharmProjects/get_info_from_goodreads/classification'
 
 
-if [ -f ~/.zsh_books_aliases ]; then
-    source ~/.zsh_books_aliases
-else
-    print ".zsh_books_aliases was not found."
-fi
+# if [ -f ~/.zsh_books_aliases ]; then
+#     source ~/.zsh_books_aliases
+# else
+#     print ".zsh_books_aliases was not found."
+# fi
 
 # Aliases for frontend development
 alias vscode=code

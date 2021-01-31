@@ -1,18 +1,57 @@
 <!--ts-->
    * [Pytorch](#pytorch)
+      * [Road map](#road-map)
       * [Install](#install)
-      * [Check version](#check-version)
+      * [torch vision](#torch-vision)
+         * [Checking versions](#checking-versions)
+         * [Checking Cuda availabilty](#checking-cuda-availabilty)
+         * [Display images as grid](#display-images-as-grid)
       * [Basics - Tensors](#basics---tensors)
-         * [Converting numpy arrays into tensors](#converting-numpy-arrays-into-tensors)
+         * [Create tensors](#create-tensors)
+            * [Create a tensor with all the same values](#create-a-tensor-with-all-the-same-values)
+            * [Create a tensor from uniform distribution](#create-a-tensor-from-uniform-distribution)
+            * [Create a tensor from a given range of values](#create-a-tensor-from-a-given-range-of-values)
+            * [Create a tensor with attributes from another tensor](#create-a-tensor-with-attributes-from-another-tensor)
+            * [Create a tensor from numpy array](#create-a-tensor-from-numpy-array)
+            * [Create an Identity tensor](#create-an-identity-tensor)
+            * [Create all zeros tensor](#create-all-zeros-tensor)
+            * [Create all ones tensor](#create-all-ones-tensor)
+         * [Get number of elements in a tensor](#get-number-of-elements-in-a-tensor)
+         * [Tensor Operation types](#tensor-operation-types)
+            * [Reshape operations](#reshape-operations)
+               * [rehshape](#rehshape)
+               * [squeeze](#squeeze)
+               * [flatten](#flatten)
+               * [unsqueeze](#unsqueeze)
+            * [Element-wise operations](#element-wise-operations)
+            * [Reduction operations](#reduction-operations)
+            * [Access operations](#access-operations)
+         * [Get the data type of a tensor](#get-the-data-type-of-a-tensor)
+         * [Reshaping tensor - View tensor differently](#reshaping-tensor---view-tensor-differently)
          * [Converting tensors into numpy arrays](#converting-tensors-into-numpy-arrays)
+         * [Getting the actual value of a tensor of size 1x1](#getting-the-actual-value-of-a-tensor-of-size-1x1)
+      * [Exploring Gradients](#exploring-gradients)
+         * [Stop calculating the gradient function](#stop-calculating-the-gradient-function)
+            * [Method #1: require_grad_(False)](#method-1-require_grad_false)
+            * [Method #2: detach](#method-2-detach)
+            * [Method #3: with torch.no_grad()](#method-3-with-torchno_grad)
+         * [Stop accumalting gradients, reset to zero](#stop-accumalting-gradients-reset-to-zero)
+      * [Utilizing GPU device](#utilizing-gpu-device)
+         * [tensor on CPU](#tensor-on-cpu)
+         * [Defining Cuda device](#defining-cuda-device)
+         * [Move the tensor onto CUDA device](#move-the-tensor-onto-cuda-device)
+         * [Move the tensors to CPU](#move-the-tensors-to-cpu)
       * [matrix multiplication](#matrix-multiplication)
-      * [Unsqeeze and squeez](#unsqeeze-and-squeez)
       * [Basic functions in pytorch](#basic-functions-in-pytorch)
       * [Concatenating torches:](#concatenating-torches)
       * [Stacking](#stacking)
+      * [Custom Dataset](#custom-dataset)
+      * [Dataloader](#dataloader)
       * [Dataset &amp;&amp; DataLoader](#dataset--dataloader)
          * [To better understand your data](#to-better-understand-your-data)
-      * [device](#device)
+      * [Calculating the Output size of a CNN](#calculating-the-output-size-of-a-cnn)
+         * [<strong>CNN Output Size formula (Square)</strong>](#cnn-output-size-formula-square)
+         * [<strong>CNN Output Size formula (Non Square)</strong>](#cnn-output-size-formula-non-square)
       * [Batch normalization](#batch-normalization)
       * [Preprocessing](#preprocessing)
       * [Batch size](#batch-size)
@@ -40,19 +79,53 @@
       * [Template for Regression](#template-for-regression)
       * [Integrating TensorBoard with pytorch](#integrating-tensorboard-with-pytorch)
       * [Segmentation with U-net  (Encoder-Decoder)](#segmentation-with-u-net--encoder-decoder)
+      * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Tue Nov 24 14:39:47 IST 2020 -->
+<!-- Added by: gil_diy, at: Fri 29 Jan 2021 02:39:17 IST -->
 
 <!--te-->
 
 # Pytorch
+
+## Road map
+
+* Exploring the datset
+* Creating a custom dataset
+* Splitting the dataset
+* Transforming the data
+* Creating the dataloaders
+* Building the classification model
+* Defining the loss function
+* Defining the optimizer
+* Training ans evaluation of the model
+* Deploying the model
+* Model inference on test data
 
 
 ## Install
 Install `pip install torch torchvision`
 
 ## torch vision
+
+### Checking versions
+
+```python
+print("torch version = ", torch.__version__)
+print("torchvision version = ",torchvision.__version__)
+print("torch.version.cuda = ", torch.version.cuda)
+```
+
+### Checking Cuda availabilty
+
+```python
+if torch.cuda.is_available():
+    dev = "cuda:0"
+else:
+    dev = "cpu"
+
+print("The device is: ", dev)
+```
 
 ### Display images as grid
 
@@ -66,13 +139,288 @@ plt.imgshow(npimg_tr,interpolation='nearest')
 
 ```
 
-## Check version
+## Basics - Tensors
+
+### Create tensors
+
+####  Create a tensor with all the same values
+
+creating a tensor of 2 rows and 3 columns with all 4's.
+
 ```python
-print(torch.__version__)
-print(torchvision.__version__)
+x = torch.full((2,3), 4)
 ```
 
-## Basics - Tensors
+#### Create a tensor from uniform distribution
+
+with mean 0 and variance 1
+
+```python
+torch.randn((2,3))
+```
+#### Create a tensor from a given range of values
+
+```python
+torch.randint(10,100, (2,3))
+```
+
+lower_limit = 10
+upper_limit = 100
+
+
+#### Create a tensor with attributes from another tensor
+
+```python
+tensor1 = torch.tensor([[1,2,3],[4,5,6]])
+print("tensor1 type is: ", tensor1.dtype)
+print("tensor1 shape is: ", tensor1.shape)
+
+# Now let's create a new tensor tensor2, 
+# that matches the atrributes of tensor1
+# we will use the torch.*_like format for this:
+tensor2 = torch.ones_like(tensor1)
+
+print("tensor2 type is: ", tensor2.dtype)
+print("tensor2 shape is: ", tensor2.shape)
+```
+
+#### Create a tensor from numpy array
+
+```python
+my_array = np.array([1,2,3,4,5])
+my_tensor_converted = torch.from_numpy(my_array)
+print(my_tensor_converted)
+print(my_tensor_converted.type())
+```
+
+Shared Data | Copy Data
+------------|-----
+ torch.as_tensor() | torch.tensor()
+ torch.from_numpy() | torch.Tensor()
+
+
+**Well explained here:** [Link](https://youtu.be/AglLTlms7HU?list=PLZbbT5o_s2xrfNyHZsM6ufI0iZENK9xg)
+
+#### Create an Identity tensor
+
+```python
+torch.eye(2)
+```
+#### Create all zeros tensor
+
+```python
+torch.zeros(2,2)
+```
+
+#### Create all ones tensor
+
+```python
+torch.ones(2,2)
+```
+
+### Get number of elements in a tensor
+
+```python
+
+t= torch.tensor([
+  [1,1,1,1],
+  [2,2,2,2],
+  [3,3,3,3],
+  ], dtype = torch.float32)
+
+print("number of elements in the tensor: ", torch.tensor(t.shape).prod())
+print("number of elements in the tensor: ", t.numel())
+```
+
+
+### Tensor Operation types
+#### Reshape operations
+
+##### rehshape
+```python
+print(t.reshape(1,12))
+print(t.reshape(1,12).shape)
+
+print(t.reshape(12,1))
+print(t.reshape(12,1).shape)
+
+print(t.reshape(2,2,3))
+print(t.reshape(2,2,3).shape)
+
+print(t.reshape(3,4))
+print(t.reshape(3,4).shape)
+
+```
+
+##### squeeze
+
+Removes all axis which have a length of one
+
+```python
+print(t.reshape(1,12))
+print(t.reshape(1,12).shape)
+
+print(t.reshape(1,12).squeeze())
+print(t.reshape(1,12).squeeze().shape)
+```
+
+Use case example:
+
+```python
+def my_flatten(t):
+  t = t.reshape(1,-1)
+  t = t.squeeze()
+  return t
+```
+
+##### flatten 
+
+All the axis are squeeze together to a single axis
+
+```python
+t.flatten() # (built-in function)
+```
+
+**Other ways to accomplish the same result is:**
+
+```python
+t.reshape(1,-1)[0]
+```
+**another appraoch**
+
+```python
+t.reshape(-1)
+```
+**other appraoch**
+
+```python
+t.view(t.numel())
+```
+
+
+In case we would like to flatten a specific axis:
+
+
+```python
+
+# Let's create 3 grayscale images of the same size:
+
+t1 = torch.tensor([1,1,1,1],
+                  [1,1,1,1],
+                  [1,1,1,1],)
+
+t2 = torch.tensor([2,2,2,2],
+                  [2,2,2,2],
+                  [2,2,2,2])
+
+t3 = torch.tensor([3,3,3,3],
+                  [3,3,3,3],
+                  [3,3,3,3])
+
+# Let's combine those tensors:
+
+t = tensor.stack((t1,t2,t3))
+
+print(t.shape) # Output: torch.size([3,3,4]), the first 3 is for the batch size
+
+# we would like to add axis for the color channel
+t = t.reshape(3,1,4,4)
+
+# We want to flat the color channel with the width and height axis
+# we will use the flatten function with skipping the first axis (the batch axis)
+t.flatten(start_dim = 1) # The output would be: torch.Size([3,16])
+
+# The output is:
+# torch.tensor([1,1,1,1,1,1,1,1,1,1,1,1],
+#              [2,2,2,2,2,2,2,2,2,2,2,2],
+#              [3,3,3,3,3,3,3,3,3,3,3,3])
+                  )
+
+```
+
+
+**Explanation:** [Link](https://youtu.be/mFAIBMbACMA?list=PLZbbT5o_s2xrfNyHZsM6ufI0iZENK9xgG)
+
+##### unsqueeze
+
+```python
+print(t.reshape(1,12).squeeze().unsqueeze(dim=0))
+print(t.reshape(1,12).squeeze().unsqueeze(dim=0).shape)
+```
+
+#### Element-wise operations
+
+Tensors must have the same shape for perform the element-wise operations
+except for broadcasting operations:
+
+```python
+
+t1 = torch.tensor([[4,4],[5,5]])
+
+# Under the hood those function perform broadcasting too
+t1.add(2) 
+
+t1.sub(2)
+
+t1.mul(2)
+
+t1.div(2)
+```
+
+Operation | Exmaple
+------------|-----
+ equal to zero | t.eq(0)
+ greater and equal to zero | t.ge(0)
+ less than zero | t.lt(0)
+ less and equal zero | t.le(0)
+
+#### Reduction operations
+
+Reduction operation | Exmaple
+------------|-----
+ sum | t.sum()
+ product | t.prod()
+ mean | t.mean()
+ standard deviation | t.std
+ argmax | t.argmax
+
+If we would like to apply the sum function on specific axis:
+
+```python
+t = torch.tensor([
+  [1,1,1,1],
+  [2,2,2,2],
+  [3,3,3,3],
+  ], dtype = torch.float32)
+
+
+t.sum(dim = 0) # Output: tensor([6.,6.,6.,6.])
+t.sum(dim = 1) # Output: tensor([4.,8.,12.])
+```
+
+
+
+
+#### Access operations
+
+### Get the data type of a tensor
+
+```python
+print(t1.dtype)
+```
+
+Data type | dtype | CPU Tensor | GPU Tensor
+----------|-------|------------|-----------
+32-bit floating point | torch.float32 | torch.FloatTensor | torch.cuda.FloatTensor
+64-bit floating point | torch.float64 | torch.DoubleTensor| torch.cuda.DoubleTensor
+16-bit floating point | torch.float16 | torch.HalfTensor | torch.cuda.HalfTensor
+8-bit integer (unsigned) | torch.uint8 | torch.ByteTensor | torch.cuda.ByteTensor
+8-bit integer (signed) | torch.int8 | torch.CharTensor | torch.cuda.CharTensor
+16-bit integer (signed) | torch.int16 | torch.ShortTensor | torch.cuda.ShortTensor
+32-bit integer (signed) | torch.int32 | torch.IntTensor | torch.cuda.IntTensor
+64-bit integer (signed) | torch.int64 | torch.LongTensor | torch.cuda.LongTensor
+
+### Reshaping tensor - View tensor differently
 ```python
 import torch
 
@@ -123,14 +471,7 @@ print(x[1,0:2,1])
 
 Output will be the number **10** .
 
-### Converting numpy arrays into tensors
 
-```python
-my_array = np.array([1,2,3,4,5])
-my_tensor_converted = torch.from_numpy(my_array)
-print(my_tensor_converted)
-print(my_tensor_converted.type())
-```
 
 ### Converting tensors into numpy arrays
 
@@ -152,6 +493,80 @@ dot_product = torch.product(t_two, t_two) # 1+5+2*10+3*15
 print(dot_product)
 ```
 
+### Getting the actual value of a tensor of size 1x1
+
+```python
+x = torch.rand(5,3)
+print(x)
+
+print(x[1,1].item()) # <- retreiving the value from the tensor
+```
+
+## Exploring Gradients
+
+
+```python
+import torch
+
+x = torch.randn(3, requires_grad = False) # tensor of size three
+print(x)
+
+y = x*2
+print(y)
+z = y*y*2
+
+z.backward()
+print(x.grad) # will print the gradient of each element in x
+```
+
+
+
+### Stop calculating the gradient function
+
+#### Method #1: require_grad_(False)
+
+```python
+import torch
+
+x=torch.randn(3, requires_grad=True)
+print(x)
+x.require_grad_(False)
+print(x)
+```
+
+#### Method #2: detach
+
+```python
+import torch
+
+x=torch.randn(3, requires_grad=True)
+print(x)
+y = x.detach() # No more dependency on x
+print(y)
+
+```
+#### Method #3: with torch.no_grad()
+
+```python
+import torch
+
+x=torch.randn(3, requires_grad=True)
+print(x)
+with torch.no_grad():
+	y = x + 2
+	print(y)
+```
+
+
+### Stop accumalting gradients, reset to zero
+
+On the backwards path the default behaviour is to accumulate the gradient values from preivouse paths, so to stop this you should reset it to zero.
+
+```python
+# Pytorch accumulates the gradient by default 
+x.grad.zero_()
+
+```
 ## Utilizing GPU device
 
 ### tensor on CPU
@@ -193,27 +608,20 @@ torch.matmul(mat_a,mat_b) # Equivalent to mat_a @ mat_b
 
 ```
 
-## Unsqeeze and squeez
-
-```python
-x = torch.tensor([1, 2, 3, 4])
-torch.unsqueeze(x, 0)
-
-```
-
 ## Basic functions in pytorch
 
 Example | Explanantion
 ------------|-----
 torch.ones((2,3)) | return a tensor that contains ones and has a default **float datatype**.
 torch.ones((2,3), dtype=torch.int8) | Tensor consisting of only integer ones.
+torch.eye(2) | Returns the identity matrix
 torch.zeros((2,3), dtype=torch.int8)  | Tensor consisting of only integer zeros.
 torch.full((2,3), 3.141) | Tensor with required fill value along with the shape
 torch.empty((2,3)) | Create empty tensor filled with uninitialzed data
 torch.rand((2,3))| Tensor from a **uniform distribution** from [0, 1]
 torch.randn((2,3))| Tensor with mean 0 and variance 1 from **normal distribution**
 torch.randint(10,100,(2,3))| Tensor from a given range between 10 to 100
-my_tensor.shape | The shape of `my_tensor` tensor
+my_tensor.shape | The shape of `my_tensor` tensor (we can say the size of a tensor)
 my_tensor.dtype | The datatype of `my_tensor` tensor
 torch.ones_like(my_tensor) | Create a new tensor that matches `my_tensor` attributes (shape and datatype) with all ones.
 torch.flatten(torch.arange(18).view(2,-1)) | Flattening a torch to 1 dimentional
@@ -263,7 +671,36 @@ Stacking joins a sequence of tensors along a **new axis**
 stacked_tensor = torch.stack(tensor_list)
 ```
 
+## Custom Dataset
 
+```python
+class My_data_set(Dataset):
+def __init__(self, csv_file):
+  self.data = pd.read_csv(csv_file)
+
+
+# Gets an item in the the dataset within a specific index location in the dataset
+def __getitem_(self, index):
+  r = self.data.iloc[index]
+  label = torch.tensor(r.is_up_day, dtype = torch.long)
+  sample = self.normalize(torch.tensor([r.open, r.high, r.low, r.close]))
+  return sample, label
+
+# Returns the length of the dataset
+def __len__(self):
+  return len(self.data)
+
+```
+
+## Dataloader
+
+The dataloader gives us access to the dataset, and gives us query capabilties,
+we can shuffle and have a batch size.
+
+```python
+example_dataset_train = My_data_set()
+train_loader = torch.utils.data.Dataloader(example_dataset_train)
+```
 ## Dataset && DataLoader
 ```python
 import torch 
@@ -271,18 +708,19 @@ import torchvision
 import torch.vision,transforms as transforms
 
 train_set = torchvision.datasets.FasshionMNIST(
-	root = './data/FashionMNIST',
-	train = True,
-	download = True,
-	transform = transforms.Compose([
-		transforms.ToTensor()
-		])
-	)
+root = './data/FashionMNIST',
+train = True,
+download = True,
+transform = transforms.Compose([
+	transforms.ToTensor()
+	])
+)
 
 train_loader = torch.utils.data.Dataloader(
-	train_set, batch_size = 10
+train_set, batch_size = 10
 )
 ```
+
 ### To better understand your data
 ```python
 import numpy as np
@@ -299,6 +737,7 @@ train_set.train_labels
 train_set.train_labels.bincount()
 
 ```
+
 ```python
 sample = next(iter(train_set))
 len(sample)
@@ -334,11 +773,30 @@ print('labels: ', labels)
 ```
 [Link](https://youtu.be/mUueSPmcOBc?t=665)
 
-## device
-```pyton
-device = torch.device('cuda:0')
-device
-```
+## Calculating the Output size of a CNN
+
+[Link](https://youtu.be/cin4YcGBh3Q?list=PLZbbT5o_s2xrfNyHZsM6ufI0iZENK9xgG)
+
+### **CNN Output Size formula (Square)**
+
+* Suppose we have an `nxn`
+* Suppose we have an `fxf` filter
+* Suppose we have a padding of `p` and a stride of `s`
+
+The output size `O` is given by this formula:
+
+<p align="center"> <!-- style="width:400px;" -->
+  <img src="images/labeling_example.png" title="tool tip here">
+</p>
+
+
+### **CNN Output Size formula (Non Square)**
+
+<p align="center"> <!-- style="width:400px;" -->
+  <img src="images/labeling_example.png" title="tool tip here">
+</p>
+
+
 ## Batch normalization
 
 We know a neural network learns the weights in our model become updated over each
@@ -372,8 +830,8 @@ we first need to read from the image and convert it
 into a tensor using a transforms.ToTensor() transform. We then make the mean and standard deviation of the pixel values 0.5 and 0.5 respectively so that it becomes easier for the model to train;
 ```python
 relevant_transform = transforms.Compose([transforms.ToTensor(),
-                                         transforms.Normalize(mean=(0.5,), std=(0.5,))
-                                         ])
+                                       transforms.Normalize(mean=(0.5,), std=(0.5,))
+                                       ])
 ```
 
 
@@ -400,7 +858,7 @@ that we are not dealing with very small values between 0 and 1, and negative val
 criterion, and so we named our loss function criterion.
 
 <p align="center"> <!-- style="width:400px;" -->
-  <img src="images/neural-networks/neg_log.png" title="tool tip here">
+<img src="images/neural-networks/neg_log.png" title="tool tip here">
 </p>
 
 The negative log-likelihood becomes unhappy at smaller values, where it can reach infinite unhappiness (that’s too sad), and becomes less unhappy at larger values. Because we are summing the loss function to all the correct classes, what’s actually happening is that whenever the network assigns high confidence at the correct class, the unhappiness is low, but when the network assigns low confidence at the correct class, the unhappiness is high.
@@ -451,10 +909,10 @@ nn.Dropout(p=0.25)
 
 ```python
 transforms.Compose([
-  transforms.CenterCrop(10),
-  transforms.Pad(1, 0),
-  transforms.CenterCrop((10, 10))
-  transforms.ToTensor(),
+transforms.CenterCrop(10),
+transforms.Pad(1, 0),
+transforms.CenterCrop((10, 10))
+transforms.ToTensor(),
 ])
 ```
 
@@ -466,14 +924,14 @@ Few exaples of transforms on the data to create more data from existing data:
 import torchvision
 
 transforms.Compose([
-  transforms.RandomCrop(10)
-  transforms.RandomCrop((10,20))
-  transforms.RandomHorizontalFlip(p=0.3)
-  transforms.RandomVerticalFlip(p=0.3)
-  
-  # Adding brightness, contrast, saturation, and hue variations
-  transforms.ColorJitter(0.25, 0.25, 0.25, 0.25)
-  transforms.RandomRotation(10)
+transforms.RandomCrop(10)
+transforms.RandomCrop((10,20))
+transforms.RandomHorizontalFlip(p=0.3)
+transforms.RandomVerticalFlip(p=0.3)
+
+# Adding brightness, contrast, saturation, and hue variations
+transforms.ColorJitter(0.25, 0.25, 0.25, 0.25)
+transforms.RandomRotation(10)
 ])
 ```
 
@@ -492,7 +950,7 @@ my_model = models.resnet50(pretrained=True)
 # freezes the weights of the model. By freezing the
 # weights, the lower convolutional layers are not updated
 for param in my_model.parameters():
-  param.requires_grad = False
+param.requires_grad = False
 ```
 
 ### Replacing the last two layers
@@ -503,8 +961,8 @@ We will apply transfer learning on Resnet50, the actual architecture can be seen
 The last two layers:
 
 ```
- (avgpool): AdaptiveAvgPool2d(output_size=(1, 1))
-  (fc): Linear(in_features=2048, out_features=1000, bias=True)
+(avgpool): AdaptiveAvgPool2d(output_size=(1, 1))
+(fc): Linear(in_features=2048, out_features=1000, bias=True)
 ```
 we replaced the average pooling layer,
 with our AdaptiveConcatPool2d layer and added a fully connected classifier with two output units for the two classes available.
@@ -512,29 +970,29 @@ with our AdaptiveConcatPool2d layer and added a fully connected classifier with 
 ```python
 # Performs concatenation between Average 2D pooling and Max 2D pooling
 class AdaptiveConcatPool2d(nn.Module):
-    def __init__(self, sz=None):
-        super().__init__()
-        sz = sz or (1, 1)
-        self.ap = nn.AdaptiveAvgPool2d(sz)
-        self.mp = nn.AdaptiveMaxPool2d(sz)
+  def __init__(self, sz=None):
+      super().__init__()
+      sz = sz or (1, 1)
+      self.ap = nn.AdaptiveAvgPool2d(sz)
+      self.mp = nn.AdaptiveMaxPool2d(sz)
 
-    def forward(self, x):
-        return torch.cat([self.mp(x), self.ap(x)], 1)
+  def forward(self, x):
+      return torch.cat([self.mp(x), self.ap(x)], 1)
 ```
 
 
 ```python
 my_model.avgpool = AdaptiveConcatPool2d()
 my_model.fc = nn.Sequential(
-  nn.Flatten(),
-  nn.BatchNorm1d(4096),
-  nn.Dropout(0.5),
-  nn.Linear(4096, 512),
-  nn.Relu(),
-  nn.BatchNorm1d(512),
-  nn.Dropout(p = 0.5),
-  nn.Linear(512, 2),
-  nn.LogSoftMax(dim=1)
+nn.Flatten(),
+nn.BatchNorm1d(4096),
+nn.Dropout(0.5),
+nn.Linear(4096, 512),
+nn.Relu(),
+nn.BatchNorm1d(512),
+nn.Dropout(p = 0.5),
+nn.Linear(512, 2),
+nn.LogSoftMax(dim=1)
 )
 
 ```
@@ -617,14 +1075,14 @@ epochs = 1000
 losses = []
 
 for i in range(epochs):
-    y_pred = model.forward(x_data)
-    loss = loss_function(y_pred, y_data)
-    print("epoch: ", i, "loss", loss.item())
+  y_pred = model.forward(x_data)
+  loss = loss_function(y_pred, y_data)
+  print("epoch: ", i, "loss", loss.item())
 
-    losses.append(loss.item())
-    optimizer.zero_grad()
-    loss.backward()
-    optimizer.step()
+  losses.append(loss.item())
+  optimizer.zero_grad()
+  loss.backward()
+  optimizer.step()
 ```
 
 ## Integrating TensorBoard with pytorch
@@ -639,6 +1097,11 @@ for i in range(epochs):
 the popular model architecture for segmentation tasks is the so-called **encoder-decoder** model.
 In the first half of the encoder-decoder model, the input image is downsized to a feature map using a few layers of convolution neural network and pooling layers.
 In the second half of the model, the feature map is up-sampled to the input size to produce a binary mask.
+
+
+## Pytorch Built-in Datasets
+
+[Link](https://pytorch.org/docs/0.4.0/torchvision/datasets.html)
 
 ## References
 
