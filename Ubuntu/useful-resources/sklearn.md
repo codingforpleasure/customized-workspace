@@ -1,7 +1,20 @@
 <!--ts-->
+   * [scikit-learn](#scikit-learn)
+      * [Preprocessing data](#preprocessing-data)
+         * [Scaler](#scaler)
+         * [Categorical encoding](#categorical-encoding)
+            * [Label encoding](#label-encoding)
+               * [Not an Ordinal variable](#not-an-ordinal-variable)
+               * [Ordinal label encoding](#ordinal-label-encoding)
+            * [One-Hot Encoding](#one-hot-encoding)
+         * [Imputation of missing values](#imputation-of-missing-values)
+            * [Missing value for numeric columns](#missing-value-for-numeric-columns)
+            * [Missing value for categorical columns](#missing-value-for-categorical-columns)
+         * [ColumnTransformer (Super nice)](#columntransformer-super-nice)
+         * [Dimension Reduction techniques](#dimension-reduction-techniques)
+            * [PCA (Principal Component Analysis)](#pca-principal-component-analysis)
 
-
-<!-- Added by: gil_diy, at: 2020-08-26T15:17+03:00 -->
+<!-- Added by: gil_diy, at: Mon Jan  4 17:13:42 IST 2021 -->
 
 <!--te-->
 
@@ -95,3 +108,34 @@ imputer_categorical = SimpleImputer(missing_values=np.nan, strategy='most_freque
 Explained very well here for creating a concise code neat [Link](https://www.youtube.com/watch?v=OTEokOJ12ao)
 
 [Reference](https://machinelearningmastery.com/columntransformer-for-numerical-and-categorical-data/)
+
+
+### Dimension Reduction techniques
+
+#### PCA (Principal Component Analysis)
+
+```python
+    scaler = StandardScaler()
+    X_train = scaler.fit_transform(X_train)
+
+    print("reduced_data.shape: ", X_train.shape)
+
+    # PCA - for PCA for Data Visualization
+    reduced_data = PCA(n_components=2).fit_transform(X_train)
+
+    print("reduced_data.shape: ", reduced_data.shape)
+
+    plt.figure(figsize=(8, 6))
+    
+    colors = {0: 'green', 1: 'black'}
+
+    plt.scatter(reduced_data[:, 0], reduced_data[:, 1], c=Y_train_dry_or_wet.apply(lambda x: colors[x]))
+    plt.xlabel('principal component 1')
+    plt.ylabel('principal component 2')
+
+    plt.show()
+```
+
+[Reference1](https://youtu.be/QdBy02ExhGI)
+
+[Reference2](https://www.youtube.com/watch?v=OFyyWcw2cyM)

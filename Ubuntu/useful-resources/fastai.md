@@ -1,7 +1,7 @@
 <!--ts-->
    * [Fastai](#fastai)
       * [Courses of Fastai](#courses-of-fastai)
-      * [Fastai support 4 topics](#fastai-support-4-topics)
+      * [Fastai support 5 topics](#fastai-support-5-topics)
       * [Downloading dataset](#downloading-dataset)
       * [See the image files](#see-the-image-files)
       * [Creating databunch (training set, validation set, test set)](#creating-databunch-training-set-validation-set-test-set)
@@ -26,6 +26,7 @@
       * [Things that can go wrong](#things-that-can-go-wrong)
       * [Running in conda](#running-in-conda)
       * [Terms](#terms)
+      * [What is Dense nets?](#what-is-dense-nets)
       * [What is U-Net? For image segementation](#what-is-u-net-for-image-segementation)
       * [What is the difference between Object Detection vs Object Recognition vs Image Segmentation?](#what-is-the-difference-between-object-detection-vs-object-recognition-vs-image-segmentation)
       * [Five steps to avoiding overfitting:](#five-steps-to-avoiding-overfitting)
@@ -48,7 +49,7 @@
          * [Segmentation; U-net; GANS](#segmentation-u-net-gans)
       * [Resources](#resources)
 
-<!-- Added by: gil_diy, at: 2020-06-30T15:21+03:00 -->
+<!-- Added by: gil_diy, at: 2020-08-01T13:05+03:00 -->
 
 <!--te-->
 
@@ -66,7 +67,7 @@
 * Course 2019/2020 Advance  - 
 [Deep Learning from the Foundations](https://www.youtube.com/playlist?list=PLfYUBJiXbdtTIdtE1U8qgyxo4Jy2Y91uj)
 
-## Fastai support 4 topics
+## Fastai support 5 topics
 
 1. Vision (Computer vision)
 
@@ -81,6 +82,12 @@ from fastai.text import *
 ```
 
 3. Tabular data
+
+```python
+from fastai.tabular import *
+```
+[Link](https://youtu.be/hkBa9pU-H48?list=PLfYUBJiXbdtSIJb-Qd3pw0cqCbkGeS0xn&t=839)
+
 4. Collabarative filtering
 5. Fast.ai Audio
 
@@ -191,10 +198,12 @@ print(data.c)
 
 please remember that all type of transfromations are enabled by default and numerical values consist of their values.
 
-So if would like to avoid flip, just write:
+So if you would like to avoid flip, just write:
 `get_transforms(do_flip=False)`
 
 [Link](https://docs.fast.ai/vision.transform.html)
+
+[Reference](https://youtu.be/hkBa9pU-H48?list=PLfYUBJiXbdtSIJb-Qd3pw0cqCbkGeS0xn&t=3436)
 
 tfms = get_transforms()
 
@@ -324,6 +333,8 @@ Freezing prevents the weights of a neural network layer from being modified duri
 We ask FastAI and Pytorch, So when we train don't (backproporgate the gradients into those first layers) which means Don't  recalculate the weights of the first layers only calculate to the new layers.
 
 
+[Reference](https://youtu.be/CJKnDu2dxOE?list=PLfYUBJiXbdtSIJb-Qd3pw0cqCbkGeS0xn&t=771)
+
 ## Unfreeze
 
 unfreeze a model if you decide you want to continue training - an example of this is transfer learning: start with a pre-trained model, unfreeze the weights, then continuing training on a different dataset
@@ -394,6 +405,13 @@ your weights.
 **Loss functions**
 
 
+## What is Dense nets?
+
+It does a concatenate, it's called dense block.
+
+[Link](https://youtu.be/9spwoDYwW_I?list=PLfYUBJiXbdtSIJb-Qd3pw0cqCbkGeS0xn&t=1640com)
+
+
 ## What is U-Net? For image segementation
 
 [Link](https://youtu.be/nG3tT31nPmQ?t=6230)
@@ -437,16 +455,35 @@ If there was a crash you can write in a new cell:
 [Link](https://youtu.be/4u8FxNEDUeg?t=1248)
 
 ### Affine functions & non-linearities
+
+Affine functions means linear functions
+
 ### Parameters & Activations
 ### Random init & transfer learning
 ### Convolutions
 ### Batch-norm
+
+
 ### Dropout
+
+```python
+
+```
+
 ### Data-Augumentation
 ### Weight decay
+
+Is a type of regularization
+[Link](https://towardsdatascience.com/this-thing-called-weight-decay-a7cd4bcfccab)
+
+```
+Loss = MSE(y_hat, y) + wd * sum(w^2)
+```
+
 ### Res/dense blocks
 ### Image classification and regression
 ### Embeddings
+[Link](https://www.youtube.com/watch?v=CJKnDu2dxOE&list=PLfYUBJiXbdtSIJb-Qd3pw0cqCbkGeS0xn&t=1416s)
 ### Continuos & Categorical Variables
 ### Collaborative filtering
 ### Lanaguge Models; NLP classification
@@ -466,4 +503,4 @@ If there was a crash you can write in a new cell:
 
 [Fastai Share your work ](https://forums.fast.ai/search?q=share%20your%20work)
 
-
+[Classifying Handwritten math symbols-Fastai](https://www.kaggle.com/kalikichandu/classifying-handwritten-math-symbols-fastai)

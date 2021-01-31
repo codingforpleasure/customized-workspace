@@ -18,7 +18,7 @@
          * [Step 12: Add your annotations in labelme (Manualy)](#step-12-add-your-annotations-in-labelme-manualy)
          * [Step 13: Convert from json annotation to txt file annotation](#step-13-convert-from-json-annotation-to-txt-file-annotation)
          * [Step 15: run a script to check all annotations](#step-15-run-a-script-to-check-all-annotations)
-         * [Step 16: Make sure the annotation was converted correctly to txt files](#step-16-make-sure-the-annotation-was-converted-correctly-to-txt-files)
+         * [Step 16: Make sure the annotation were converted correctly to txt files](#step-16-make-sure-the-annotation-were-converted-correctly-to-txt-files)
          * [Step 13: iterate over all png files located in ./was_detected directory and copy all corresponding txt files from ./single_bbox directory.](#step-13-iterate-over-all-png-files-located-in-was_detected-directory-and-copy-all-corresponding-txt-files-from-single_bbox-directory)
          * [Step 14: create mapping config file .yaml](#step-14-create-mapping-config-file-yaml)
          * [Step 15: Modify each annotation file](#step-15-modify-each-annotation-file)
@@ -28,7 +28,7 @@
          * [Step 19: run prediction:](#step-19-run-prediction)
          * [Step 20: Check for accuracy stats:](#step-20-check-for-accuracy-stats)
 
-<!-- Added by: gil_diy, at: Wed Nov 11 18:13:55 IST 2020 -->
+<!-- Added by: gil_diy, at: Thu Nov 12 13:05:45 IST 2020 -->
 
 <!--te-->
 
@@ -48,7 +48,7 @@ python improve_scraper_cargurus/
 ### Step 2:  Remove identical and Agency advertisement images
 
 ```bash
-./remove_duplicate_images_and_advertisements.py.py
+./remove_duplicate_images_and_advertisements.py
 ```
 
 ### Step 3: Make all images in a flat hierarchy level
@@ -115,17 +115,17 @@ python improve_scraper_cargurus/convert_labelme_json_to_coco_txt_format.py
 
 ### Step 15: run a script to check all annotations
 
+TODO: count the number of each annotation type (histogram):
+
 ```bash
 python /improve_scraper_cargurus/check_all_annotations_files_format.py
 ```
 
-
-### Step 16: Make sure the annotation was converted correctly to txt files
+### Step 16: Make sure the annotation were converted correctly to txt files
 
 ```bash
 python yolov5_play/draw_annotation_on_image.py
 ```
-
 
 
 ### Step 13: iterate over all png files located in `./was_detected` directory and copy all corresponding txt files from `./single_bbox` directory. 

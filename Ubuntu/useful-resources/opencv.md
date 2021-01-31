@@ -57,7 +57,7 @@
          * [The function blobFromImage(s)](#the-function-blobfromimages)
             * [1. Mean subtraction](#1-mean-subtraction)
 
-<!-- Added by: gil_diy, at: 2020-07-28T17:04+03:00 -->
+<!-- Added by: gil_diy, at: 2020-08-28T01:08+03:00 -->
 
 <!--te-->
 
@@ -468,10 +468,16 @@ radius = int(radius)
 cv2.circle(img,center,radius,(0,255,0),2)
 ```
 #### Fitting an Ellipse
+
+fitEllipse returns a tuple of three elements:
+
 ```pyton
-ellipse = cv2.fitEllipse(cnt)
+(x, y), (MA, ma), angle = cv2.fitEllipse(cnt)
 cv2.ellipse(img,ellipse,(0,255,0),2)
 ```
+
+**comment:** For calculating the area of ellipse you get: **PI * MA * ma**
+(The area of an ellipse is simply pi times the product of the major axis and the minor axis)
 
 #### Fitting a Line
 image contains a set of white points. We can approximate a straight line to it.

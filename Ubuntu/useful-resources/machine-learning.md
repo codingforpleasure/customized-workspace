@@ -232,6 +232,12 @@ For example, assume that you are predicting the price of a home based on its fea
 You can easily find the three nearest neighbor houses of course not only based on distance but also based on all the attributes and then predict the price of the house as the medium of neighbors.
 
 
+
+
+
+
+
+
 ### Selecting the best model in scikit-learn using cross-validation
 
 
@@ -286,4 +292,8 @@ from sklearn.model_selection import cross_val_score
 scores = cross_val_score(clf_knn, features, target, cv=10)
 ```
 
+
 [Nice Reference](https://www.youtube.com/watch?v=6dbrR-WymjI)
+
+
+## 

@@ -15,9 +15,10 @@
             * [Example $6:](#example-6-1)
          * [For CPP language](#for-cpp-language)
             * [Example #1](#example-1-1)
+      * [Clion Makefile](#clion-makefile)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: 2019-05-20T16:25+03:00 -->
+<!-- Added by: gil_diy, at: Tue Dec 15 16:00:44 IST 2020 -->
 
 <!--te-->
 
@@ -297,6 +298,12 @@ clean:
 	rm -fv *.o $(FILENAME)
 
 ```
+
+## Clion Makefile
+
+[Reference](https://www.jetbrains.com/help/clion/quick-cmake-tutorial.html#addtargets-reload)
+
+
 
 ## References
 

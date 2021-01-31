@@ -4,8 +4,9 @@
       * [systemd (System and Service Manager)](#systemd-system-and-service-manager)
          * [systemctl](#systemctl)
          * [systemd-analyze](#systemd-analyze)
+         * [Journalctl to view and manipulate Systemd logs](#journalctl-to-view-and-manipulate-systemd-logs)
 
-<!-- Added by: gil_diy, at: 2018-09-23T22:21+03:00 -->
+<!-- Added by: gil_diy, at: 2020-03-11T12:49+02:00 -->
 
 <!--te-->
 

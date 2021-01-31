@@ -6,7 +6,7 @@
             * [Example #1: Applys the xargs command to each single item which comes through](#example-1-applys-the-xargs-command-to-each-single-item-which-comes-through)
             * [Example #2: Changes mode for all files which end with .sh to be executable:](#example-2-changes-mode-for-all-files-which-end-with-sh-to-be-executable)
             * [Example #3: Finds all .tmp files in or below the current directory and delete them.](#example-3-finds-all-tmp-files-in-or-below-the-current-directory-and-delete-them)
-            * [Example #4: Moves all jpeg files in or below the current directory to directory ~/Pictures](#example-4-moves-all-jpeg-files-in-or-below-the-current-directory-to-directory-pictures)
+            * [Example #4: Moves all jpeg files in or below the current directory to directory ~/Pictures  .](#example-4-moves-all-jpeg-files-in-or-below-the-current-directory-to-directory-pictures--)
             * [Example #5: Finds all .md files which holds the string CodingForePleasure](#example-5-finds-all-md-files-which-holds-the-string-codingforepleasure)
             * [Example #6: Renames all files in the current directory by adding .old to the end of each name](#example-6-renames-all-files-in-the-current-directory-by-adding-old-to-the-end-of-each-name)
             * [Example #7: Create directory for each month with month's abbreviation](#example-7-create-directory-for-each-month-with-months-abbreviation)
@@ -14,7 +14,7 @@
             * [Example #9: Given a text file which holds on each line a file name, find all files and remove them.](#example-9-given-a-text-file-which-holds-on-each-line-a-file-name-find-all-files-and-remove-them)
             * [Example #10: Find all text file which contain more than 4 lines](#example-10-find-all-text-file-which-contain-more-than-4-lines)
 
-<!-- Added by: gil_diy, at: 2020-10-30T01:39+02:00 -->
+<!-- Added by: gil_diy, at: 2020-11-02T00:05+02:00 -->
 
 <!--te-->
 
@@ -44,8 +44,7 @@ $ ls *.sh | xargs -n 1 chmod +x
 $ find . -name "*.tmp" -type f -print | xargs rm
 ```
 
-#### Example #4: Moves all jpeg files in or below the current directory to directory ~/Pictures
-
+#### Example #4: Moves all jpeg files in or below the current directory to directory ~/Pictures  .
 ```bash
 $ find . -name '*.jpeg' | xargs -0 -I {} mv {}  ~/Pictures
 ```

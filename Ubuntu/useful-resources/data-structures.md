@@ -50,7 +50,13 @@ Algorithm  | Average | Worst Case
  **Delete** | O(logn) | O(logn)
  **Peek** | O(1) | O(1)
 
+* **Heap Sort**:  O(nlogn)
+
+* **Building a max heap** : O(n)
+
 [Reference](https://en.wikipedia.org/wiki/Binary_heap)
+
+[video](https://youtu.be/Q_eia3jC9Ts)
 
 ### Skip list
 
@@ -69,3 +75,10 @@ Algorithm  | Average | Worst Case
 [Binary Search Tree](http://btv.melezinek.cz/binary-search-tree.html)
 
 [Binary Heap](http://btv.melezinek.cz/binary-heap.html)
+
+
+## Algorithms
+
+[Moore voting algorithm well explained](https://www.youtube.com/watch?v=n5QY3x_GNDg) - Majority element
+
+[median](https://stackoverflow.com/questions/7842347/find-median-in-olog-n)

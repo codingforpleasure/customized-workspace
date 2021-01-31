@@ -4,6 +4,7 @@
          * [Additional libraries required](#additional-libraries-required)
          * [Building source](#building-source)
       * [Creating training data](#creating-training-data)
+         * [Important libraries](#important-libraries)
          * [Tesseract configurations](#tesseract-configurations)
          * [Page segmentation modes](#page-segmentation-modes)
          * [OCR Engine mode](#ocr-engine-mode)
@@ -15,7 +16,7 @@
             * [Some tips with image proceesing (important)](#some-tips-with-image-proceesing-important)
       * [Installing tesseract NOT from source, from ubuntu repositories:](#installing-tesseract-not-from-source-from-ubuntu-repositories)
 
-<!-- Added by: gil_diy, at: 2020-05-04T12:54+03:00 -->
+<!-- Added by: gil_diy, at: 2020-09-28T03:19+03:00 -->
 
 <!--te-->
 
@@ -157,6 +158,37 @@ copy the file which consist the final model `eng.traineddata` you trained to : `
 ### 
 
 https://github.com/tesseract-ocr/tessdoc/blob/master/TrainingTesseract-4.00.md#additional-libraries-required
+
+### Important libraries
+
+* Tesseract language packs should be located in the directory
+```bash
+ /usr/share/tesseract-ocr/<version>/tessdata
+```
+
+where <version> is the version number for your Tesseract install
+
+
+* Download Tesseract’s language packs manually from GitHub 
+
+```bash
+https://github.com/tesseract-ocr/tessdata
+```
+
+
+
+
+So what are these Tesseract files?
+
+* `eng.traineddata` - is the language pack for English.
+* `osd.traineddata` - is a special data file related to orientation and scripts.
+* `snum.traineddata` - is an internal serial number used by Tesseract.
+* `pdf.ttf` -  is a True Type Format Font file to support pdf renderings.
+
+* Set the `TESSDATA_PREFIX` environment variable to point to the directory containing the language packs.
+
+[Link](https://www.pyimagesearch.com/2020/08/03/tesseract-ocr-for-non-english-languages/)
+
 
 ### Tesseract configurations
 

@@ -1,24 +1,24 @@
 <!--ts-->
    * [YOLO](#yolo)
-      * [Basic operations](#basic-operations)
-         * [Recognize objects in a photo:](#recognize-objects-in-a-photo)
-         * [Recognize objects in a video:](#recognize-objects-in-a-video)
-         * [Changing The Detection Threshold](#changing-the-detection-threshold)
-      * [Training YOLOv3/v4 model](#training-yolov3v4-model)
       * [The format of the text file is:](#the-format-of-the-text-file-is)
       * [See List of all classes pretrianed in yolov5](#see-list-of-all-classes-pretrianed-in-yolov5)
       * [Training](#training)
-         * [Strart training](#strart-training)
+         * [Start training](#start-training)
+            * [From scratch:](#from-scratch)
+            * [From pretrained weights:](#from-pretrained-weights)
          * [Image and labels directory structure](#image-and-labels-directory-structure)
-         * [How to train Yolo with images different sizes:](#how-to-train-yolo-with-images-different-sizes)
       * [Detection (Prediction)](#detection-prediction)
          * [Filter many classes except some few builtin classes:](#filter-many-classes-except-some-few-builtin-classes)
          * [Get the bounding box of each frame:](#get-the-bounding-box-of-each-frame)
          * [Using your own model for detecting (after doing your own training)](#using-your-own-model-for-detecting-after-doing-your-own-training)
+         * [Accuracy with Yolo](#accuracy-with-yolo)
+         * [Hyperparamaters and Augmentations:](#hyperparamaters-and-augmentations)
+         * [Yolov5 crashes, what to do?](#yolov5-crashes-what-to-do)
+         * [Avoid disconnections of Google colab after training for some time](#avoid-disconnections-of-google-colab-after-training-for-some-time)
          * [Detection options](#detection-options)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: 2020-10-25T13:28+02:00 -->
+<!-- Added by: gil_diy, at: Sat Nov 21 20:43:44 IST 2020 -->
 
 <!--te-->
 
@@ -27,33 +27,6 @@
 
 
 The actual classes names appear in the file: `coco.names`
-
-## Basic operations
-
-### Recognize objects in a photo:
-```
-./darknet detect cfg/yolov4.cfg weights/yolov4.weights data/dog.jpg
-```
-
-### Recognize objects in a video:
-```
-./darknet detector demo cfg/coco.data cfg/yolov4.cfg weights/yolov4.weights input_video.mp4 -out_filename res.avi
-```
-
-
-### Changing The Detection Threshold
-
-By default, YOLO only displays objects detected with a confidence of .25 or higher. You can change this by passing the -thresh <val> flag to the yolo command. For example, to display all detection you can set the threshold to 0:
-
-```
-./darknet detect cfg/yolov4.cfg weights/yolov4.weights data/dog.jpg -thresh 0
-```
-
-## Training YOLOv3/v4 model
-
-[Link](https://machinelearningmastery.com/how-to-perform-object-detection-with-yolov3-in-keras/)
-
-[Link](https://blog.paperspace.com/how-to-implement-a-yolo-object-detector-in-pytorch/)
 
 
 ## The format of the text file is:
@@ -75,10 +48,23 @@ cat ./yolov5/data/coco.yaml
 
 ## Training 
 
-### Strart training
+### Start training
+
+#### From scratch:
+
 
 ```bash
 python ./train.py --img 1024 --batch 16 --epochs 100 --data wheat_gdrive.yaml --cfg models/yolov5s.yaml --name wheat_model
+```
+
+It will use the default hyperparameters which appear here: `yolov5/data/hyp.scratch.yaml`
+
+#### From pretrained weights:
+
+Using pretrained YOLOv5s:
+
+```bash
+python ./train.py --img 1024 --batch 16 --epochs 100 --data wheat_gdrive.yaml --cfg models/yolov5s.yaml --name wheat_model --weights yolov5s.pt
 ```
 
 the name will appear as the directory in: `./runs/exp____`
@@ -114,10 +100,6 @@ Now we focus only for building a model with the **Training** and **Validation** 
 
 Afterwards we will use the **Testing set** for checking accuracy.
 
-### How to train Yolo with images different sizes:
-
-[Reference](https://stackoverflow.com/questions/49450829/darknet-yolo-image-size)
-
 
 
 ## Detection (Prediction)
@@ -149,6 +131,16 @@ MODEL_FULL_PATH="./runs/exp22_mazda_fronts/weights/best.pt"
 
 python detect.py --source ./test_set --weights $MODEL_FULL_PATH
 ```
+
+
+### Accuracy with Yolo
+
+* object confidence threshold
+* IOU threshold for NMS ([url](https://www.pyimagesearch.com/2016/11/07/intersection-over-union-iou-for-object-detection/))
+
+### Hyperparamaters and Augmentations:
+
+In file: `data/hyp.scratch.yaml`
 
 
 ### Yolov5 crashes, what to do?
@@ -187,7 +179,14 @@ Option | Description
 --txt-for-future-training | create annotation with the following format: class_number , x_center , y_center , width height 
 
 
+
+
+
 ## Reference
+
+[Yolo5 Train Custom Data](https://github.com/ultralytics/yolov5/wiki/Train-Custom-Data)
+
+[Guide for Hyperparameter Evolution](https://github.com/ultralytics/yolov5/issues/607)
 
 [Darknet/YOLO](https://pjreddie.com/darknet/)
 

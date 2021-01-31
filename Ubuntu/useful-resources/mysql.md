@@ -13,6 +13,9 @@
 # mysql common operations
 
 ## mysql admin operations:
+
+[Connect to mysql server without sudo](https://stackoverflow.com/questions/37239970/connect-to-mysql-server-without-sudo)
+
 ### Grant access to another person from your local network:
 
 **Step #1:**

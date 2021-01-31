@@ -38,12 +38,14 @@
          * [Early stopping](#early-stopping)
          * [Reducing Learning rate on plateau](#reducing-learning-rate-on-plateau)
          * [Transfer learning](#transfer-learning)
-      * [Resources](#resources)
       * [Annotation tools for image segmentation and drawing bbox](#annotation-tools-for-image-segmentation-and-drawing-bbox)
+      * [Tool for finding duplicates images](#tool-for-finding-duplicates-images)
+      * [Augmentation library](#augmentation-library)
+      * [Resources](#resources)
       * [Well known CNN Architectures](#well-known-cnn-architectures)
       * [Videos of handwritten flowchart](#videos-of-handwritten-flowchart)
 
-<!-- Added by: gil_diy, at: 2020-10-12T11:54+03:00 -->
+<!-- Added by: gil_diy, at: 2020-11-05T03:34+02:00 -->
 
 <!--te-->
 # CNN
@@ -596,9 +598,25 @@ model_compile(optimizer = RMSprop(lr=0.0001),
               metrics = ['acc'])
 ```
 
-```python
+## Annotation tools for image segmentation and drawing bbox
 
-```
+[labelme](https://github.com/wkentaro/labelme) - Easy tool I been using it
+
+[PixelAnnotationTool](https://github.com/abreheret/PixelAnnotationTool)
+
+[VGG Image Annotator](https://www.robots.ox.ac.uk/~vgg/software/via/)
+
+
+## Tool for finding duplicates images
+
+A python package that simplifies the task of finding exact and near duplicates in an image collection:
+
+[imagededup](https://github.com/idealo/imagededup)
+
+## Augmentation library
+
+[Link](https://github.com/albumentations-team/albumentations)
+
 ## Resources
 
 [Sparse_categorical_crossentropy vs categorical_crossentropy (keras, accuracy)](https://datascience.stackexchange.com/questions/41921/sparse-categorical-crossentropy-vs-categorical-crossentropy-keras-accuracy)
@@ -617,7 +635,9 @@ model_compile(optimizer = RMSprop(lr=0.0001),
 
 [Annotated database of on-line sketched diagrams from FlowChart domain.](http://cmp.felk.cvut.cz/~breslmar/flowcharts/)
 
-[Open Images V6](https://storage.googleapis.com/openimages/web/index.html)
+[Google Open Images V6](https://storage.googleapis.com/openimages/web/index.html)
+
+[List of datasets for machine learning research](https://en.wikipedia.org/wiki/List_of_datasets_for_machine-learning_research)
 
 [converts the mathematical equations in an image into LaTex](https://keerthigowda.github.io/Im2LaTex/)
 
@@ -637,13 +657,6 @@ model_compile(optimizer = RMSprop(lr=0.0001),
 [CNN Explained](https://tiefenauer.github.io/ml/deep-learning/4)
 
 
-## Annotation tools for image segmentation and drawing bbox
-
-[labelme](https://github.com/wkentaro/labelme) - easy tool have used it
-
-[PixelAnnotationTool](https://github.com/abreheret/PixelAnnotationTool)
-
-[VGG Image Annotator](https://www.robots.ox.ac.uk/~vgg/software/via/)
 
 
 ## Well known CNN Architectures

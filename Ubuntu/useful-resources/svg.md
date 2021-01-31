@@ -1,3 +1,4 @@
+
 <!--ts-->
    * [SVG](#svg)
       * [Terminology](#terminology)
@@ -26,8 +27,10 @@
       * [SVG textpath element](#svg-textpath-element)
       * [SVG line element](#svg-line-element)
       * [Tools overview for the job:](#tools-overview-for-the-job)
+      * [Python library for drawing svg](#python-library-for-drawing-svg)
+      * [Visulize svg path on the web fast!!](#visulize-svg-path-on-the-web-fast)
 
-<!-- Added by: gil_diy, at: 2020-07-18T11:12+03:00 -->
+<!-- Added by: gil_diy, at: 2020-07-23T15:14+03:00 -->
 
 <!--te-->
 
@@ -284,6 +287,8 @@ Draw a text along with a path, very nice and cool.
 
 
 ## Tools overview for the job:
+
+
 * GSAP (GreenSock), example:
 [ease-visualizer](https://greensock.com/ease-visualizer)
 
@@ -295,3 +300,10 @@ Draw a text along with a path, very nice and cool.
 
 
 
+## Python library for drawing svg
+
+[Link](https://github.com/mozman/svgwrite)
+
+## Visulize svg path on the web fast!!
+
+[Link](http://svghelper.com/)

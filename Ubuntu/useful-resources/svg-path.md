@@ -13,7 +13,7 @@
       * [stroke-dasharray and stroke-dashoffset](#stroke-dasharray-and-stroke-dashoffset)
       * [Very useful](#very-useful)
 
-<!-- Added by: gil_diy, at: 2020-07-18T18:32+03:00 -->
+<!-- Added by: gil_diy, at: 2020-07-18T19:38+03:00 -->
 
 <!--te-->
 
@@ -94,5 +94,6 @@ T |
 ## Very useful
 
 [Python library to draw svg super easily](https://github.com/mozman/svgwrite)
+
 [Python library to SVG path](https://github.com/regebro/svg.path)
 

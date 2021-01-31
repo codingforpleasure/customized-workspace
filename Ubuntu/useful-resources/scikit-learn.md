@@ -1,17 +1,21 @@
 <!--ts-->
    * [Scikit-learn](#scikit-learn)
       * [preprocessing](#preprocessing)
-         * [Handling Text and Categorical Attributes](#handling-text-and-categorical-attributes)
+         * [Numerical Attributes/Columns](#numerical-attributescolumns)
+            * [Handling Missing values](#handling-missing-values)
+         * [Handling Text and Categorical Attributes/Columns](#handling-text-and-categorical-attributescolumns)
+            * [LabelEncoder](#labelencoder)
             * [OrdinalEncoder](#ordinalencoder)
             * [OneHotEncoder](#onehotencoder)
       * [Multiclass Classification](#multiclass-classification)
          * [OvR (One-vs-Rest)](#ovr-one-vs-rest)
          * [OvO (One-vs-One)](#ovo-one-vs-one)
+      * [Pipelines](#pipelines)
       * [Classification (Categorial data)](#classification-categorial-data)
          * [Support Vector Machine classifier](#support-vector-machine-classifier)
       * [Regression (Continuous data)](#regression-continuous-data)
       * [Type of Classifiers:](#type-of-classifiers)
-         * [Desicion Tree classifier](#desicion-tree-classifier)
+         * [Decision Tree classifier](#decision-tree-classifier)
             * [Advantages of decision trees are:](#advantages-of-decision-trees-are)
             * [Disadvantages of decision trees are:](#disadvantages-of-decision-trees-are)
             * [Code exmaple:](#code-exmaple)
@@ -27,7 +31,7 @@
          * [PCA](#pca)
             * [Choosing the right number of Dimensions](#choosing-the-right-number-of-dimensions)
 
-<!-- Added by: gil_diy, at: 2020-01-15T14:00+02:00 -->
+<!-- Added by: gil_diy, at: Tue Dec  8 18:16:04 IST 2020 -->
 
 <!--te-->
 
@@ -35,7 +39,32 @@
 
 ## preprocessing
 
-### Handling Text and Categorical Attributes
+### Numerical Attributes/Columns 
+
+#### Handling Missing values
+
+```python
+from sklearn.preprocessing import Imputer
+
+imputer = Imputer(missing_values='NaN',strategy = 'mean', axis = 0)
+imputer.fit(features[:,[1:6]])
+features[:,[1:6]] = imputer.fit_transform(features[:,[1:6]])
+```
+
+
+### Handling Text and Categorical Attributes/Columns
+
+#### LabelEncoder
+
+```python
+from sklearn.preprocessing import LabelEncoder
+
+encode = LabelEncoder()
+
+features[:,0] = encode.fit_transform(features[:,0])
+features[:,2] = encode.fit_transform(features[:,2])
+features[:,4] = encode.fit_transform(features[:,4])
+```
 
 #### OrdinalEncoder
 
@@ -133,6 +162,9 @@ to train many classifiers on small training sets than to train few classifiers o
 
 
 
+## Pipelines
+
+[Link](https://youtu.be/irHhDMbw3xo)
 
 ## Classification (Categorial data)
 * binary classification (tumor: benign, malignant)
@@ -164,7 +196,7 @@ Linear models (LinReg, LogReg, Lasso, Ridged, etc)
 
 ## Type of Classifiers:
 
-### Desicion Tree classifier
+### Decision Tree classifier
 
 Decision Trees (DTs) are a non-parametric supervised learning method used for classification and regression. The goal is to create a model that predicts the value of a target variable by learning simple decision rules inferred from the data features.
 

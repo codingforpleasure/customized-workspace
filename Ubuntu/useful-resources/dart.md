@@ -52,11 +52,12 @@
 
 Dart is a statically type langauge:
 
-Types
-----------
-int
-bool
-double
+Type | Title2
+------------|-----
+int | element-description
+bool | element-description
+double | element-description
+
 
 
 ## String, Type Conversion, Constant, null
@@ -99,6 +100,10 @@ final Color colour;
    const int myConst = 2; # Constant variables are immutable
    final int myConst = 3; # Final variables are immutable
 ```
+
+
+Only const variables can be used to compute a compile time constant.
+Compile-time constants are constants whose values will be determined at compile time
 
 ## Enum
 
@@ -547,7 +552,84 @@ void task3() {
 }
 ```
 
+## Future, async, await 
 
+What would be the output?
+
+```bash
+void printOrderMessage () async {
+  var order = await fetchUserOrder();
+  print('Awaiting user order...');
+  print('Your order is: $order');
+}
+
+Future<String> fetchUserOrder() {
+  // Imagine that this function is more complex and slow.
+  return Future.delayed(Duration(seconds: 4), () => 'Large Latte');
+}
+
+Future<void>main() async {
+  countSeconds(4);
+  await printOrderMessage();
+}
+
+// You can ignore this function - it's here to visualize delay time in this example.
+void countSeconds(s) {
+  for( var i = 1 ; i <= s; i++ ) {
+      Future.delayed(Duration(seconds: i), () => print(i));
+   }
+}
+```
+
+**Explanation:**
+
+An async function runs synchronously until the first await keyword. This means that within an async function body,
+all synchronous code before the first await keyword executes immediately.
+
+Therefore main operates in synchronize matters until the 
+`await printOrderMessage();` appears.
+Now in `printOrderMessage` the lines:
+
+```
+var order = await fetchUserOrder();
+print('Awaiting user order...');
+print('Your order is: $order');
+```
+
+We will print:
+
+```
+Awaiting user order...
+Your order is: Large Latte
+```
+
+Only after we have waited and completed the `fetchUserOrder`  function.
+If we would reverse the order of the rows .
+
+
+## Example: async and await with try-catch
+
+```bash
+void printOrderMessage () async {
+  try {
+    var order = await fetchUserOrder();
+    print('Awaiting user order...');
+    print(order);
+  } catch (err) {
+    print('Caught error: $err');
+  }
+}
+
+Future<String> fetchUserOrder() {
+  // Imagine that this function is more complex.
+  var str = Future.delayed(Duration(seconds: 4), () => throw 'Cannot locate user order');
+  return str;
+}
+
+Future<void> main() async {
+  await printOrderMessage();
+}
+```
 
 
 ## Conventions

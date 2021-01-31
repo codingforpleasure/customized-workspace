@@ -22,11 +22,13 @@
             * [Change the field of view as zoom in/out effect](#change-the-field-of-view-as-zoom-inout-effect)
             * [Change camera position while the camera focus on a spcific point](#change-camera-position-while-the-camera-focus-on-a-spcific-point)
          * [Orthographic camera](#orthographic-camera)
+      * [Textures](#textures)
+      * [Panorama](#panorama)
       * [User Interaction](#user-interaction)
          * [mouse events](#mouse-events)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: 2020-06-06T12:28+03:00 -->
+<!-- Added by: gil_diy, at: 2020-06-06T12:50+03:00 -->
 
 <!--te-->
 
@@ -70,7 +72,7 @@ let mainLoop = function(){
 init();
 mainLoop();
 
-````
+```
 
 
 ##  The Renderer
@@ -90,7 +92,7 @@ let init = function(){
 
 
 	// 2. create a location to the camera
-	camera = new THREE.Perspective(30,
+	camera = new THREE.PerspectiveCamera(30,
 									window.innerWidth / window.innerHeight,
 									1,1000
 									);
@@ -351,13 +353,13 @@ let createGeometry = function(){
 
 ### mouse events
 
- Event name | Title2
-------------|-----
-click | element-description
-mouse move | 
-mouse drag | 
-mouse enter | 
-mouse leave | 
+Event names:
+
+* click 
+* mouse move  
+* mouse drag  
+* mouse enter  
+* mouse leave 
 
 
 ```js

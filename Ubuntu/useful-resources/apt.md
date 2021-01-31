@@ -1,3 +1,11 @@
+<!--ts-->
+   * [Tips for Ubuntu's Advanced Packaging Tool (APT)](#tips-for-ubuntus-advanced-packaging-tool-apt)
+      * [Useful commands:](#useful-commands)
+
+<!-- Added by: gil_diy, at: 2020-07-04T00:18+03:00 -->
+
+<!--te-->
+
 # Tips for Ubuntu's Advanced Packaging Tool (APT)
 
 Over the years I have been using some Linux' distributions,
@@ -7,7 +15,6 @@ for using apt and debian package manager:
 
 
 ## Useful commands:
-
 Purpose | command example
 ------------ | -------------
 Installing package | apt-get install &lt;pkg name&gt;

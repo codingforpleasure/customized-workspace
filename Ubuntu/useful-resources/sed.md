@@ -9,7 +9,8 @@
          * [Example #4: Print only lines with ports in a script "/tcp":](#example-4-print-only-lines-with-ports-in-a-script-tcp)
          * [Example #5: Prints only the last line:](#example-5-prints-only-the-last-line)
          * [<strong>Selective Delete</strong>](#selective-delete)
-         * [<strong>Deleting lines with specific criteria</strong>](#deleting-lines-with-specific-criteria)
+         * [Deleting lines with specific criteria](#deleting-lines-with-specific-criteria)
+         * [Deleting specific lines according to their position](#deleting-specific-lines-according-to-their-position)
          * [Example #5: Deletes a line which holds specific word like Lions:](#example-5-deletes-a-line-which-holds-specific-word-like-lions)
          * [Example #6: Print everything through sed but delete lines 3-5 output:](#example-6-print-everything-through-sed-but-delete-lines-3-5-output)
          * [<strong>Selective Substitute</strong>](#selective-substitute)
@@ -23,7 +24,7 @@
          * [Example #14: Prepend characters to the beginning of a file](#example-14-prepend-characters-to-the-beginning-of-a-file)
          * [Example #15: replace groups with sed](#example-15-replace-groups-with-sed)
 
-<!-- Added by: gil_diy, at: 2020-11-06T02:34+02:00 -->
+<!-- Added by: gil_diy, at: Thu Nov 26 13:37:00 IST 2020 -->
 
 <!--te-->
 
@@ -73,12 +74,21 @@ sed -n ’$p’ example.txt
 
 ### **Selective Delete**
 
-### **Deleting lines with specific criteria**
+### Deleting lines with specific criteria
 
 ```bash
 $ sed ’/^Eagplant/d’ input.txt > output.txt
 ```
 
+### Deleting specific lines according to their position
+
+This will back the file up to file.bak, and delete the given lines (line numbers 5-10,12).
+
+```bash
+sed -i.bak -e '5,10d;12d' file
+```
+
+Note: Line numbers start at 1. The first line of the file is 1, not 0.
 
 ### Example #5: Deletes a line which holds specific word like Lions:
 ```bash

@@ -20,9 +20,10 @@
 Node Package manager,
 javascript packages manager.
 
+```bash
 sudo npm i -g create-react-app@1.5.2
-
 npm start
+```
 
 
 Description | command
@@ -34,7 +35,7 @@ Install all package dependencies listed in `Package.json`| `npm install`
 Install specific package version| `npm install <package-name>@<version>`
 Install globally a module (not locally to only this app) | `npm install -g  <package-name>`
 Remove package | `npm uninstall <package-name> --save-dev`
-                | `npm remove <package-name> --save-dev`
+ -                | `npm remove <package-name> --save-dev`
 Retrieving path for global packages | `npm root -g`
 
 
@@ -150,4 +151,5 @@ Responsible for linting your code:
 }
 ```
 2. Install necessary packages
+
 `npm install -D eslint-config-prettier eslint-plugin-prettier`

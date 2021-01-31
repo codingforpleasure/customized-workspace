@@ -459,7 +459,18 @@ Widget build(BuildContext context){
 }
 
 ```
+### Throw an exception
+In the try we will call a function,
+if the function will fail the actual function will throw an exception which be caught by 
+the catch block.
 
+```bash
+void somethingThatExpectsLessThan10(int n){
+  if (n > 10){
+    throw 'n is greater than 10, n should always be less than 10';
+  }
+}
+```
 
 
 ## Emulator

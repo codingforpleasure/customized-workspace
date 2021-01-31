@@ -1,4 +1,12 @@
 <!--ts-->
+   * [grep](#grep)
+      * [search multiple words:](#search-multiple-words)
+      * [options](#options)
+      * [regular expression](#regular-expression)
+      * [Give ten characters after the match](#give-ten-characters-after-the-match)
+
+<!-- Added by: gil_diy, at: 2020-09-28T17:49+03:00 -->
+
 <!--te-->
 
 # grep
@@ -36,3 +44,8 @@ Description | Title2
 Any character | .
 Any digit | \d
 number of appearances | {<number of appearances>}
+
+
+## Give ten characters after the match
+
+grep -o -P 'item-id.{0,10}'

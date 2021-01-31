@@ -36,12 +36,10 @@
 find /usr/ -type f -name '*.txt'
 ```
 
-
 ### Find all txt files and avoid Permission Denied Messages
 ```bash
 find / -type f -iname abc.txt 2>/dev/null
 ```
-
 
 ### Ignoring case sensitive (-iname)
 ```bash

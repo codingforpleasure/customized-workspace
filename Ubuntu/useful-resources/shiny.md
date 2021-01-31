@@ -26,7 +26,8 @@ output$my_plot <- renderPlot({
 })
 ```
 
-`output$my_plot` depends on `input$num`
+`output$my_plot` depends on `input$num`,
+
 in other words `input$num` changes => `output$my_plot` reacts
 
 ### Observe a reactive variable
@@ -44,7 +45,7 @@ server <-function(input, output){
 
 *  Reactive values can only be used inside **reactive contexts**
 
-* Any `render*()` function is a reactive context
+* Any `render*()` function is a reactive context (i.e: `renderPlot`, `renderUI`)
 
 
 
@@ -89,7 +90,8 @@ if (input$my_value > 40)
 }
 ```
    
-
+## mathjax
+[Code Reference](https://ianlucas.github.io/mathjax-editor/)
 
 
 ## Reference
@@ -97,3 +99,7 @@ if (input$my_value > 40)
 [Debug Shiny apps](https://shiny.rstudio.com/articles/debugging.html)
 
 [Highcharts in R](http://jkunst.com/highcharter/)
+
+[RGL](http://www.sthda.com/english/wiki/a-complete-guide-to-3d-visualization-device-system-in-r-r-software-and-data-visualization)
+
+[Plot side by side in shiny](https://stackoverflow.com/questions/34384907/how-can-put-multiple-plots-side-by-side-in-shiny-r)

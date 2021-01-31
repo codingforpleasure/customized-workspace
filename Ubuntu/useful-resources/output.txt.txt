@@ -1,0 +1,12 @@
+# What is the difference between "==" and "is"?
+# "==" checks for equality
+# "is" checks for identity
+
+ 
+
+ 
+
+rw rll
+
+* 5 'pepsi' dis pepsi
+

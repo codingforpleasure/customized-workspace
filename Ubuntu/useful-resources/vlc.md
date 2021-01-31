@@ -13,6 +13,8 @@
    ```
    /stream
    ```
+7. turn on the the two checkboxes.
+
 Output string should be like this:
 
 ```bash
@@ -44,3 +46,7 @@ http://@<Server's ip address>:8080/stream
 ```
 
 3. Wait for some time, it will start.
+
+
+
+[Reference](https://www.youtube.com/watch?v=0IMY5zHTiR8)
