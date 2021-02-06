@@ -59,10 +59,10 @@
          * [Join two dataframes one <strong>below</strong> the other.](#join-two-dataframes-one-below-the-other)
          * [Join two dataframes one <strong>besides</strong> the other.](#join-two-dataframes-one-besides-the-other)
          * [Printing data so all columns will be presented](#printing-data-so-all-columns-will-be-presented)
-         * [Drop the rows where at least one element is missing.](#drop-the-rows-where-at-least-one-element-is-missing)
+         * [Get data ditribution of the data per column](#get-data-ditribution-of-the-data-per-column)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Sat 16 Jan 2021 11:00:14 IST -->
+<!-- Added by: gil_diy, at: Thu 04 Feb 2021 13:48:40 IST -->
 
 <!--te-->
 
@@ -576,13 +576,13 @@ pd.set_option('display.max_columns', 500)
 pd.set_option('display.width', 1000)
 ```
 
-
-### Drop the rows where at least one element is missing.
+### Get data ditribution of the data per column
 
 ```python
-df.dropna()
+import matplotlib.pyplot as plt
+my_df.hist(bins=50, figsize=(20,15))
+plt.show()
 ```
-
 
 ## Reference
 
