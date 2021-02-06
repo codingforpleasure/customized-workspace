@@ -25,7 +25,7 @@
       * [Specifying version numbers](#specifying-version-numbers)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Sun 17 Jan 2021 12:21:28 IST -->
+<!-- Added by: gil_diy, at: Sun 24 Jan 2021 12:54:37 IST -->
 
 <!--te-->
 # Anaconda
@@ -135,7 +135,7 @@ conda list --explicit > bio-env.txt
 
 ## Create environment from a text file
 ```bash
-conda env create --file bio-env.txt
+conda env create --name myenv --file bio-env.txt
 ```
 
 
