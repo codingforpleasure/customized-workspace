@@ -2,7 +2,7 @@
    * [Tips for Ubuntu's Advanced Packaging Tool (APT)](#tips-for-ubuntus-advanced-packaging-tool-apt)
       * [Useful commands:](#useful-commands)
 
-<!-- Added by: gil_diy, at: 2020-07-04T00:18+03:00 -->
+<!-- Added by: gil_diy, at: Sat 06 Feb 2021 02:45:23 IST -->
 
 <!--te-->
 
@@ -29,6 +29,7 @@ List all packages on the system |  sudo dpkg --get-selections
 List all files regarding a package |   dpkg -L &lt;pkg name&gt;
 Find the a missing file to which package it belongs to (works well)| dpkg -S gl.h
 Find the a missing file to which package it belongs to | apt-file &lt;file-name&gt;
+Find the file lists in a package | apt-file list &lt;package_name&gt;
 Get package dependencies | apt-cache rdepends &lt;pkg name&gt;
 Remove broken packages in ubuntu | sudo dpkg `--`remove `--`force-remove-reinstreq &lt;pkg name&gt;
 Remove packages that were automatically installed to satisfy dependencies for some package and that are no more needed | sudo apt-get autoremove
