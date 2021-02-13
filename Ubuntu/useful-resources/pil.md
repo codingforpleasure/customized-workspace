@@ -4,7 +4,7 @@
       * [Useful functions in PIL (Python Imaging Library)](#useful-functions-in-pil-python-imaging-library)
       * [Get pixel values](#get-pixel-values)
 
-<!-- Added by: gil_diy, at: Sun 31 Jan 2021 14:35:02 IST -->
+<!-- Added by: gil_diy, at: Sat 13 Feb 2021 11:54:19 IST -->
 
 <!--te-->
 
@@ -20,7 +20,7 @@ pipenv install pillow
 Description | command
 ------------------------------------|-----
 show image | img.show
-()
+convert to RGB while opening image |  Image.open(img_path).convert("RGB")
 
 
 ## Get pixel values
