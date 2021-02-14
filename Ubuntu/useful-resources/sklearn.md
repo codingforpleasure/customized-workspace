@@ -13,8 +13,10 @@
          * [ColumnTransformer (Super nice)](#columntransformer-super-nice)
          * [Dimension Reduction techniques](#dimension-reduction-techniques)
             * [PCA (Principal Component Analysis)](#pca-principal-component-analysis)
+      * [Splitting data](#splitting-data)
+         * [Stratified Shuffle Split](#stratified-shuffle-split)
 
-<!-- Added by: gil_diy, at: Mon Jan  4 17:13:42 IST 2021 -->
+<!-- Added by: gil_diy, at: Mon 15 Feb 2021 00:33:39 IST -->
 
 <!--te-->
 
@@ -51,6 +53,8 @@ X_scaled = preprocessing.scale(X_train)
 ##### Not an Ordinal variable
 
 ```python
+from sklearn.preprocessing import LabelEncoder
+
 label_encoder = LabelEncoder()
 df[['fuel']] = label_encoder.fit_transform([['fuel']])
 ```
@@ -114,7 +118,7 @@ Explained very well here for creating a concise code neat [Link](https://www.you
 
 #### PCA (Principal Component Analysis)
 
-```python
+```python    
     scaler = StandardScaler()
     X_train = scaler.fit_transform(X_train)
 
@@ -135,6 +139,26 @@ Explained very well here for creating a concise code neat [Link](https://www.you
 
     plt.show()
 ```
+
+
+## Splitting data
+
+### Stratified Shuffle Split
+
+The split operations returns 
+
+```python
+from sklearn.model_selection import StratifiedShuffleSplit
+
+split = StratifiedShuffleSplit(n_splits=1, test_size=0.2, random_state=42)
+
+for train_index, test_index in split.split(housing, housing["income_cat"]):
+    strat_train_set = housing.loc[train_index]
+    strat_test_set = housing.loc[test_index]
+```
+
+
+
 
 [Reference1](https://youtu.be/QdBy02ExhGI)
 
