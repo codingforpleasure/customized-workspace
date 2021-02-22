@@ -1,7 +1,13 @@
 
 <!--ts-->
    * [Latex](#latex)
+      * [Checking code in pdflatex shell (similar to repl)](#checking-code-in-pdflatex-shell-similar-to-repl)
+      * [commenting lines](#commenting-lines)
+      * [Define macros/functions](#define-macrosfunctions)
+         * [Example of one argument](#example-of-one-argument)
+         * [Example of two arguments](#example-of-two-arguments)
       * [Latex Editor](#latex-editor)
+      * [foreach loop](#foreach-loop)
       * [Convert math latex into svg](#convert-math-latex-into-svg)
       * [Cropped file output in LaTeX as an output](#cropped-file-output-in-latex-as-an-output)
       * [Useful shortcuts in texStudio](#useful-shortcuts-in-texstudio)
@@ -19,18 +25,68 @@
       * [LaTex mathematical symbols (nice)](#latex-mathematical-symbols-nice)
       * [Useful](#useful)
 
-<!-- Added by: gil_diy, at: 2020-09-01T01:42+03:00 -->
+<!-- Added by: gil_diy, at: Mon 22 Feb 2021 11:57:27 IST -->
 
 <!--te-->
 
 
 # Latex
 
+## Checking code in pdflatex shell (similar to repl)
+
+In the terminal enter `pdflatex`.
+
+## commenting lines
+
+```text
+% this is a comment
+```
+
+## Define macros/functions
+
+### Example of one argument
+```tex
+\def\testonearg[#1]{\typeout{Testing one arg: '#1'}}
+```
+
+Now let's invoke the macro by calling `testonearg`:
+```tex
+\testonearg[test this]
+```
+
+**Output:** ``Testing one arg: 'test this'``
+
+
+### Example of two arguments
+
+```tex
+\def\testtwoargB#1#2{\typeout{Testing two args B: '#1' and '#2'}}
+```
+
+```tex
+\testtwoargB{test this first}{this is, the second test.}
+```
+
+**output:** ```Testing two args B: 'test this first' and 'this is, the second test.'```
+
 ## Latex Editor
 
 ```bash
 texstudio
 ```
+## foreach loop
+```
+\begin{tikzpicture}
+	\foreach \x in {0,1,2,3}
+		\foreach \y in {0,1,2,3}
+		{
+			\draw (\x,\y) circle (0.2cm);
+			\fill (\x,\y) circle (0.1cm);
+		}
+\end{tikzpicture}
+```
+
+
 
 ## Convert math latex into svg
 
