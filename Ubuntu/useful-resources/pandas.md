@@ -63,7 +63,7 @@
          * [Get data ditribution of the data per column](#get-data-ditribution-of-the-data-per-column)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Thu 25 Feb 2021 21:23:30 IST -->
+<!-- Added by: gil_diy, at: Thu 25 Feb 2021 21:24:29 IST -->
 
 <!--te-->
 
@@ -196,6 +196,8 @@ df_new = df.rename(columns={'A': 'a'}, index={'ONE': 'one'}, inplace=True)
 ```
 
 * index - stands for rows names
+
+[Great reference](https://note.nkmk.me/en/python-pandas-dataframe-rename/)
 
 
 #### Get numeric columns in pandas
