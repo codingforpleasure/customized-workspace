@@ -13,6 +13,7 @@
             * [Get row names](#get-row-names)
             * [Get column names](#get-column-names)
             * [rename column names](#rename-column-names)
+            * [rename either columns/rows names](#rename-either-columnsrows-names)
             * [Get numeric columns in pandas](#get-numeric-columns-in-pandas)
             * [Get categorical columns in pandas](#get-categorical-columns-in-pandas)
             * [Get column index for a given specific name](#get-column-index-for-a-given-specific-name)
@@ -62,7 +63,7 @@
          * [Get data ditribution of the data per column](#get-data-ditribution-of-the-data-per-column)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Thu 04 Feb 2021 13:48:40 IST -->
+<!-- Added by: gil_diy, at: Thu 25 Feb 2021 21:23:30 IST -->
 
 <!--te-->
 
@@ -188,6 +189,14 @@ print(data_df.columns.values)
 ```python
  df.columns = ['new-name1', 'new-name1']
 ```
+#### rename either columns/rows names 
+
+```python
+df_new = df.rename(columns={'A': 'a'}, index={'ONE': 'one'}, inplace=True)
+```
+
+* index - stands for rows names
+
 
 #### Get numeric columns in pandas
 ```python
