@@ -9,6 +9,7 @@
             * [Get dimensions of a dataframe](#get-dimensions-of-a-dataframe)
             * [Iterate over rows](#iterate-over-rows)
             * [Rename indexes (rename row names)](#rename-indexes-rename-row-names)
+            * [Rename indexes to default range index](#rename-indexes-to-default-range-index)
             * [Get dataframe except specific rows](#get-dataframe-except-specific-rows)
             * [Get row names](#get-row-names)
             * [Get column names](#get-column-names)
@@ -21,7 +22,8 @@
             * [Concatentaing columns and rows](#concatentaing-columns-and-rows)
             * [Converting from numpy to panda](#converting-from-numpy-to-panda)
             * [Converting categorical columns to numbers (4 Methods)](#converting-categorical-columns-to-numbers-4-methods)
-            * [Accessing an element in pandas:](#accessing-an-element-in-pandas)
+            * [Accessing an element in pandas](#accessing-an-element-in-pandas)
+            * [Accessing a column in pandas](#accessing-a-column-in-pandas)
             * [Methods of slicing in pandas](#methods-of-slicing-in-pandas)
             * [Filtering data within a dataframe](#filtering-data-within-a-dataframe)
                * [Method #1 (Similar to R language)](#method-1-similar-to-r-language)
@@ -33,7 +35,8 @@
          * [Importing only selected columns from a HUGE CSV file](#importing-only-selected-columns-from-a-huge-csv-file)
          * [Importing data from CSV with NA's](#importing-data-from-csv-with-nas)
          * [Exporting data into CSV](#exporting-data-into-csv)
-      * [json](#json)
+      * [Excel File](#excel-file)
+      * [JSON File](#json-file)
          * [Importing data from json](#importing-data-from-json)
          * [Importing data from json](#importing-data-from-json-1)
       * [Displaying data cleaner](#displaying-data-cleaner)
@@ -61,9 +64,10 @@
          * [Join two dataframes one <strong>besides</strong> the other.](#join-two-dataframes-one-besides-the-other)
          * [Printing data so all columns will be presented](#printing-data-so-all-columns-will-be-presented)
          * [Get data ditribution of the data per column](#get-data-ditribution-of-the-data-per-column)
+      * [Mapping categorical values to a specified numerical values](#mapping-categorical-values-to-a-specified-numerical-values)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Thu 25 Feb 2021 21:24:29 IST -->
+<!-- Added by: gil_diy, at: Thu 04 Mar 2021 18:21:13 IST -->
 
 <!--te-->
 
@@ -164,6 +168,13 @@ for index, row in df.iterrows():
 ```python
 my_df.set_index("third-column", inplace=True)
 ```
+
+#### Rename indexes to default range index
+
+```python
+my_df.reset_index(inplace=True)
+```
+
 
 #### Get dataframe except specific rows
 
@@ -267,9 +278,15 @@ Great reference:
 [Link](https://www.datacamp.com/community/tutorials/categorical-data)
 
 
-#### Accessing an element in pandas:
+#### Accessing an element in pandas
 ```python
 print(my_df.iloc[row_num, col_num] )
+```
+
+#### Accessing a column in pandas
+
+```python
+print(my_df.my_column_name)
 ```
 
 #### Methods of slicing in pandas
@@ -333,12 +350,16 @@ rawfile = pd.read_csv(filename, header=None, names=DataLabels, sep=',\s', na_val
 ```
 
 ### Exporting data into CSV
-
 ```python
 movies_df.to_csv('./my_folder/movies.csv', index = False)
 ```
 
-## json
+## Excel File
+```python
+movies_df = pd.read_excel('data/movies.xlsx')
+```
+
+## JSON File
 
 ### Importing data from json
 
@@ -399,8 +420,14 @@ df.describe()
 ```python
 data_df['my_column'].value_counts()
 
+
+# See the counts broken down by precentage ( In R it's prop.table )
+data_df['my_column'].value_counts(normalize=True)
+
 # Get the top 5 values
 data_df['my_column'].value_counts(ascending=False).nlargest(5)
+
+
 ```
 
 
@@ -580,10 +607,12 @@ df2.loc['Israel']
 
 [Reference](https://www.youtube.com/watch?v=WGOEFok1szA&list=PLeo1K3hjS3uuASpe-1LjfG5f14Bnozjwy&index=8)
 
+###
+
 ### Printing data so all columns will be presented
 ```python
-pd.set_option('display.max_rows', 500)
-pd.set_option('display.max_columns', 500)
+pd.set_option('display.max_rows', 500) # To seel all rows
+pd.set_option('display.max_columns', 500) # To seel all columns
 pd.set_option('display.width', 1000)
 ```
 
@@ -594,6 +623,24 @@ import matplotlib.pyplot as plt
 my_df.hist(bins=50, figsize=(20,15))
 plt.show()
 ```
+
+## Mapping categorical values to a specified numerical values
+
+```python
+ 
+event_type_strength = {
+     'VIEW': 1.0,
+     'LIKE': 2.0,
+     'BOOKMARK': 2.5,
+     'FOLLOW': 3.0,
+     'COMMENT CREATED': 4.0,
+ }
+
+# mapping:
+df['eventStrength'] = interactions_df['eventType'].apply(lambda x: event_type_strength[x])
+
+```
+
 
 ## Reference
 
