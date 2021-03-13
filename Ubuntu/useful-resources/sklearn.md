@@ -15,8 +15,9 @@
             * [PCA (Principal Component Analysis)](#pca-principal-component-analysis)
       * [Splitting data](#splitting-data)
          * [Stratified Shuffle Split](#stratified-shuffle-split)
+         * [LeaveOneOut](#leaveoneout)
 
-<!-- Added by: gil_diy, at: Mon 15 Feb 2021 00:33:39 IST -->
+<!-- Added by: gil_diy, at: Sat 13 Mar 2021 11:12:09 IST -->
 
 <!--te-->
 
@@ -56,7 +57,7 @@ X_scaled = preprocessing.scale(X_train)
 from sklearn.preprocessing import LabelEncoder
 
 label_encoder = LabelEncoder()
-df[['fuel']] = label_encoder.fit_transform([['fuel']])
+df['fuel'] = label_encoder.fit_transform(df['fuel'])
 ```
 ##### Ordinal label encoding
 
@@ -65,7 +66,7 @@ df[['fuel']] = label_encoder.fit_transform([['fuel']])
 ```python
 types_of_cylinders = ['two', 'three', 'four', 'five', 'six', 'eight', 'twelve']
 ordinal_encoder_for_cylinders = OrdinalEncoder(categories=[types_of_cylinders])
-df[["cylinders"]] = ordinal_encoder_for_cylinders.fit_transform(df[["cylinders"]])
+df["cylinders"] = ordinal_encoder_for_cylinders.fit_transform(df["cylinders"])
 ```
 
 #### One-Hot Encoding
@@ -157,6 +158,36 @@ for train_index, test_index in split.split(housing, housing["income_cat"]):
     strat_test_set = housing.loc[test_index]
 ```
 
+### LeaveOneOut
+
+Each sample is used once as a test set while the remaining samples form the training set. 
+
+```python
+X = np.array([[1, 2], [3, 4], [5, 6]])
+y = np.array([80, 66, 55])
+loo = LeaveOneOut()
+print(loo.get_n_splits(X))
+print(loo)
+for train_index, test_index in loo.split(X):
+    # print("TRAIN:", train_index, "TEST:", test_index)
+    X_train, X_test = X[train_index], X[test_index]
+    y_train, y_test = y[train_index], y[test_index]
+    print("X_train = ", X_train)
+    print("X_test = ", X_test, "\ny_train = ", y_train, "y_test = ", y_test)
+    print("******************************")
+```
+
+**Output:**
+```
+X_train =  [[3 4][5 6]], X_test = [[1 2]] , y_train = [2 3], y_test =  [1]
+*****************************************************************************
+X_train =  [[1 2][5 6]], X_test =  [[3 4]] , y_train = [1 3], y_test =  [2]
+*****************************************************************************
+X_train =  [[1 2][3 4]], X_test =  [[5 6]] , y_train = [1 2], y_test =  [3]
+*****************************************************************************
+```
+
+[LeaveOneOut](https://youtu.be/e0JcXMzhtdY?t=824)
 
 
 
