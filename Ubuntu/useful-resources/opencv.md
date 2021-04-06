@@ -57,7 +57,7 @@
          * [The function blobFromImage(s)](#the-function-blobfromimages)
             * [1. Mean subtraction](#1-mean-subtraction)
 
-<!-- Added by: gil_diy, at: 2020-08-28T01:08+03:00 -->
+<!-- Added by: gil_diy, at: Tue 06 Apr 2021 17:51:52 IDT -->
 
 <!--te-->
 
@@ -650,3 +650,5 @@ Before we even begin training our deep neural network, we first **compute the av
 [Install OpenCV on hard-drive](https://linuxize.com/post/how-to-install-opencv-on-ubuntu-18-04/)
 
 [Great example for opencv in github ](https://github.com/opencv/opencv/tree/master/samples/python)
+
+[Great Kaggle opencv Notebook](https://www.kaggle.com/bulentsiyah/learn-opencv-by-examples-with-python)
