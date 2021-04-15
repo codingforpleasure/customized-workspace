@@ -62,12 +62,13 @@
       * [Concat Dataframes](#concat-dataframes)
          * [Join two dataframes one <strong>below</strong> the other.](#join-two-dataframes-one-below-the-other)
          * [Join two dataframes one <strong>besides</strong> the other.](#join-two-dataframes-one-besides-the-other)
+         * [Dataframe Pivot table](#dataframe-pivot-table)
          * [Printing data so all columns will be presented](#printing-data-so-all-columns-will-be-presented)
          * [Get data ditribution of the data per column](#get-data-ditribution-of-the-data-per-column)
-      * [Mapping categorical values to a specified numerical values](#mapping-categorical-values-to-a-specified-numerical-values)
+      * [Mapping/Applying categorical values to a specified numerical values](#mappingapplying-categorical-values-to-a-specified-numerical-values)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Thu 04 Mar 2021 18:21:13 IST -->
+<!-- Added by: gil_diy, at: Thu 15 Apr 2021 09:56:03 IDT -->
 
 <!--te-->
 
@@ -607,7 +608,20 @@ df2.loc['Israel']
 
 [Reference](https://www.youtube.com/watch?v=WGOEFok1szA&list=PLeo1K3hjS3uuASpe-1LjfG5f14Bnozjwy&index=8)
 
-###
+### Dataframe Pivot table 
+
+```python
+
+    my_df1 = pd.DataFrame(data=[['omer', 45645, 0], ['Liron', 92314, 3], ['Yuval', 19863, 6], ['Shani', 73198, 9]],
+                          index=range(0, 4),
+                          columns=['name', 'user_id', 'score'])
+
+    # Creating a sparse matrix, by retrieving 3 columns: 
+    # the actual matrix content in the scores, and the column names is 'user_id' and the row names is 'name'.
+    my_pivot = my_df1.pivot_table(values='score', index='name', columns='user_id')
+
+```
+[Link](https://www.youtube.com/watch?v=5yFox2cReTw)
 
 ### Printing data so all columns will be presented
 ```python
@@ -624,7 +638,10 @@ my_df.hist(bins=50, figsize=(20,15))
 plt.show()
 ```
 
-## Mapping categorical values to a specified numerical values
+
+
+
+## Mapping/Applying categorical values to a specified numerical values
 
 ```python
  
@@ -642,8 +659,13 @@ df['eventStrength'] = interactions_df['eventType'].apply(lambda x: event_type_st
 ```
 
 
+
+
 ## Reference
 
 [Pandas Cheat Sheet #1](https://www.datacamp.com/community/blog/python-pandas-cheat-sheet#gs.S4P4T=U)
 
 [Pandas Cheat Sheet #2](http://datasciencefree.com/pandas.pdf)
+
+
+[My Python Pandas Cheat Sheet](https://towardsdatascience.com/my-python-pandas-cheat-sheet-746b11e44368)
