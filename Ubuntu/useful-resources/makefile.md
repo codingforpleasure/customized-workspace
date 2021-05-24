@@ -18,7 +18,7 @@
       * [Clion Makefile](#clion-makefile)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Tue Dec 15 16:00:44 IST 2020 -->
+<!-- Added by: gil_diy, at: Mon 24 May 2021 12:14:56 IDT -->
 
 <!--te-->
 
@@ -303,6 +303,12 @@ clean:
 
 [Reference](https://www.jetbrains.com/help/clion/quick-cmake-tutorial.html#addtargets-reload)
 
+To debug and print on the screen the variables' content:
+
+```
+message(STATUS "OpenCV_INCLUDE_DIRS = ${OpenCV_INCLUDE_DIRS}")
+message(STATUS "OpenCV_LIBS = ${OpenCV_LIBS}")
+```
 
 
 ## References
