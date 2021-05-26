@@ -7,6 +7,7 @@
       * [include packages:](#include-packages)
       * [Project hierarchy:](#project-hierarchy)
       * [Remove debug banner](#remove-debug-banner)
+      * [Print on screen from C++ code into flutter console](#print-on-screen-from-c-code-into-flutter-console)
       * [Layout in flutter](#layout-in-flutter)
       * [Modify Launcher Icon in Flutter](#modify-launcher-icon-in-flutter)
       * [Useful widgets](#useful-widgets)
@@ -42,6 +43,7 @@
          * [Useful](#useful)
       * [Exceptions](#exceptions)
          * [Try and Catch block](#try-and-catch-block)
+         * [Throw an exception](#throw-an-exception)
       * [Emulator](#emulator)
          * [Permissions](#permissions)
       * [Navigation](#navigation)
@@ -52,7 +54,7 @@
       * [Basic commands in flutter cli](#basic-commands-in-flutter-cli)
       * [Nice sites:](#nice-sites)
 
-<!-- Added by: gil_diy, at: 2020-05-22T21:14+03:00 -->
+<!-- Added by: gil_diy, at: Wed 26 May 2021 11:15:30 IDT -->
 
 <!--te-->
 
@@ -76,6 +78,29 @@ The actual packages are located and installed in:
 ## Remove debug banner
 
 `debugShowCheckedModeBanner: false`
+
+
+## Print on screen from C++ code into flutter console
+
+You should add the following lines in your `CMakeLists.txt` file:
+
+```
+find_library( log-lib log)
+target_link_libraries(... ${log-lib})
+```
+
+And then in the cpp file at the beginning write: 
+
+```cpp
+#include <android/log.h>
+```
+
+And in your cpp function use:
+
+```cpp
+__android_log_print(ANDROID_LOG_DEBUG, "flutter", "GILLLLL Hello world! You can use %s", "formatting");
+```
+
 
 
 ## Layout in flutter
