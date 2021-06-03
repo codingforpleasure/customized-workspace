@@ -54,7 +54,7 @@
       * [Basic commands in flutter cli](#basic-commands-in-flutter-cli)
       * [Nice sites:](#nice-sites)
 
-<!-- Added by: gil_diy, at: Wed 26 May 2021 11:15:30 IDT -->
+<!-- Added by: gil_diy, at: Thu 03 Jun 2021 09:41:10 IDT -->
 
 <!--te-->
 
@@ -610,12 +610,11 @@ MaterialApp(
 
 command | Description
 ------------|-----
+`flutter pub get`| install the dependencies
 `flutter run` | Run your Flutter app on an attached device
 `flutter install` | Install a Flutter app on an attached device.
 `flutter devices` | List all connected devices.
 `flutter clean` | Delete the build/ and .dart_tool/ directories.
-
-
 
 
 ## Nice sites:
