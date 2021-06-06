@@ -7,13 +7,13 @@
    * [Dart](#dart)
       * [Dart Keywords](#dart-keywords)
       * [Data Types](#data-types)
-      * [Types](#types)
       * [String, Type Conversion, Constant, null](#string-type-conversion-constant-null)
          * [Interpolate](#interpolate)
          * [Conversion](#conversion)
          * [Constant](#constant)
-            * [What the difference between final to <code>const</code>?](#what-the-difference-between-final-to-const)
+            * [What the difference between final to const?](#what-the-difference-between-final-to-const)
       * [Enum](#enum)
+      * [Cascade notation (double dot)](#cascade-notation-double-dot)
       * [Operators](#operators)
       * [Loop](#loop)
       * [Collections](#collections)
@@ -35,9 +35,11 @@
       * [Exception Handling](#exception-handling)
       * [Null Aware Operator](#null-aware-operator)
       * [Async programming](#async-programming)
+      * [Future, async, await](#future-async-await)
+      * [Example: async and await with try-catch](#example-async-and-await-with-try-catch)
       * [Conventions](#conventions)
 
-<!-- Added by: gil_diy, at: 2020-05-20T22:54+03:00 -->
+<!-- Added by: gil_diy, at: Sun 06 Jun 2021 04:21:24 IDT -->
 
 <!--te-->
 
@@ -120,6 +122,31 @@ void main(){
    Car myCar = Car(carStyle: CarType.convertible);
 }
 ```
+
+## Cascade notation (double dot)
+
+`Cascades (..,?..)` allow you to make a sequence of operations on the same object. In addition to function calls, you can also access fields on that same object. This often saves you the step of creating a temporary variable and allows you to write more fluid code.
+
+```Dart
+var paint = Paint()
+  ..color = Colors.black
+  ..strokeCap = StrokeCap.round
+  ..strokeWidth = 5.0;
+```
+
+The constructor, Paint(), returns a Paint object. The code that follows the cascade notation operates on this object, ignoring any values that might be returned.
+
+The previous example is equivalent to this code:
+
+```Dart
+var paint = Paint();
+paint.color = Colors.black;
+paint.strokeCap = StrokeCap.round;
+paint.strokeWidth = 5.0;
+```
+
+[Cascade-notation reference](https://dart.dev/guides/language/language-tour#cascade-notation-)
+
 ## Operators
 
 ## Loop
