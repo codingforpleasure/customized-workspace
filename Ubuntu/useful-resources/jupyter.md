@@ -9,9 +9,10 @@
       * [Jupyter notebook extensions](#jupyter-notebook-extensions)
       * [debugging in jupyter notebook](#debugging-in-jupyter-notebook)
       * [Clean all output cells in jupter notebook:](#clean-all-output-cells-in-jupter-notebook)
+      * [Convert jupyter notebook to python file](#convert-jupyter-notebook-to-python-file)
       * [Collection of Tips](#collection-of-tips)
 
-<!-- Added by: gil_diy, at: 2020-10-07T00:49+03:00 -->
+<!-- Added by: gil_diy, at: Tue 08 Jun 2021 16:33:02 IDT -->
 
 <!--te-->
 
@@ -93,6 +94,12 @@ pdb.set_trace()
 ## Clean all output cells in jupter notebook:
 ```python
 jupyter nbconvert --clear-output --inplace my_notebook.ipynb
+```
+
+## Convert jupyter notebook to python file
+
+```bash
+jupyter nbconvert --output-dir='./<output-dir>' --to python notebooks/spotify_client.ipynb 
 ```
 
 ## Collection of Tips
