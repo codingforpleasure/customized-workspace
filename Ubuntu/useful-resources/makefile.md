@@ -18,7 +18,7 @@
       * [Clion Makefile](#clion-makefile)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Mon 24 May 2021 12:14:56 IDT -->
+<!-- Added by: gil_diy, at: Thu 10 Jun 2021 12:55:33 IDT -->
 
 <!--te-->
 
@@ -310,6 +310,14 @@ message(STATUS "OpenCV_INCLUDE_DIRS = ${OpenCV_INCLUDE_DIRS}")
 message(STATUS "OpenCV_LIBS = ${OpenCV_LIBS}")
 ```
 
+In order to invoke the CMakeLists.txt you should navigate into the directory which the `CMakeLists.txt` resides and run in the cli:
+
+```bash
+cmake .
+```
+
+
+[cmake well explained thoroughly](https://youtu.be/mKZ-i-UfGgQ)
 
 ## References
 
