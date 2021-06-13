@@ -11,6 +11,8 @@
       * [Rip a part a video and get all images out of it](#rip-a-part-a-video-and-get-all-images-out-of-it)
       * [Convert from webm to mp4](#convert-from-webm-to-mp4)
       * [Trim video file](#trim-video-file)
+      * [Get information about video size](#get-information-about-video-size)
+      * [Get all metadata about a video](#get-all-metadata-about-a-video)
       * [Increase video speed](#increase-video-speed)
       * [Specifying Quality](#specifying-quality)
          * [For AVI](#for-avi)
@@ -28,11 +30,12 @@
          * [Rotation](#rotation)
          * [Fade in](#fade-in)
          * [Fade out](#fade-out)
+         * [Convert to Raw YUV Video](#convert-to-raw-yuv-video)
       * [Filters for Audio files](#filters-for-audio-files)
          * [Generate video with waveform](#generate-video-with-waveform)
       * [Documentation](#documentation)
 
-<!-- Added by: gil_diy, at: Wed Nov 25 12:09:51 IST 2020 -->
+<!-- Added by: gil_diy, at: Mon 14 Jun 2021 01:48:10 IDT -->
 
 <!--te-->
 
@@ -97,6 +100,7 @@ ffmpeg -i <input_file> -vf "select=eq(n\,34)" -vframes 1 out.png
  -i | input file
  -r | rate (i.e 30 fps)
  -ss | duration in seconds
+ -to | end time stamp
 
 
 ```bash
@@ -130,6 +134,21 @@ ffmpeg -i natash.webm -strict experimental To_my_Natasha.mp4
 ## Trim video file
 ```bash
 ffmpeg -i source.mp4 -ss 00:00:05 -t 00:00:10 -async 1 -strict -2 cut_video.mp4
+```
+
+`-t = duration in seconds - the length of the video`
+`-ss = cut from the specified timestamp`
+
+## Get information about video size
+
+```bash
+ffprobe -v error -select_streams v:0 -show_entries stream=width,height -of csv=s=x:p=0 input.mp4
+```
+
+## Get all metadata about a video
+
+```bash
+ffprobe -v quiet -print_format json -show_format -show_streams ~/Movies/big_buck_bunny_720p_5mb.mp4
 ```
 
 ## Increase video speed
@@ -243,6 +262,15 @@ This will make the video start fading to black over 5 seconds at the 10 second m
 ```bash
 ffmpeg -i video.mp4 -vf "fade=t=out:st=10:d=5" -c:a copy out.mp4
 ```
+
+
+### Convert to Raw YUV Video
+
+```bash
+ffmpeg -i input_720x480p.avi -c:v rawvideo -pixel_format yuv420p output_720x480p.yuv
+```
+
+[Link](https://ottverse.com/ffmpeg-convert-avi-mp4-to-yuv-raw-playback-yuv-ffplay/)
 
 
 ## Filters for Audio files
