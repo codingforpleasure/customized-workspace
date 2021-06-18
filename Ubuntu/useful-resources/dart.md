@@ -7,8 +7,11 @@
    * [Dart](#dart)
       * [Dart Keywords](#dart-keywords)
       * [Data Types](#data-types)
+         * [Working with bytes](#working-with-bytes)
+            * [Converting List to Uint8List](#converting-list-to-uint8list)
+      * [Null safety](#null-safety)
       * [String, Type Conversion, Constant, null](#string-type-conversion-constant-null)
-         * [Interpolate](#interpolate)
+         * [String Interpolation](#string-interpolation)
          * [Conversion](#conversion)
          * [Constant](#constant)
             * [What the difference between final to const?](#what-the-difference-between-final-to-const)
@@ -37,9 +40,10 @@
       * [Async programming](#async-programming)
       * [Future, async, await](#future-async-await)
       * [Example: async and await with try-catch](#example-async-and-await-with-try-catch)
+      * [Measure time with stopper](#measure-time-with-stopper)
       * [Conventions](#conventions)
 
-<!-- Added by: gil_diy, at: Sun 06 Jun 2021 04:21:24 IDT -->
+<!-- Added by: gil_diy, at: Fri 18 Jun 2021 07:21:12 IDT -->
 
 <!--te-->
 
@@ -61,10 +65,40 @@ bool | element-description
 double | element-description
 
 
+### Working with bytes
+
+[Link](https://medium.com/flutter-community/working-with-bytes-in-dart-6ece83455721)
+
+#### Converting List<int> to Uint8List
+
+```dart
+import 'dart:typed_data';
+
+List<int> data = [102, 111, 114, 116, 121, 45, 116, 119, 111, 0];
+Uint8List bytes = Uint8List.fromList(data);
+```
+
+## Null safety
+
+ Syntax | Explanation
+------------|-----
+ expression /*!*/ | casting expression to its underlying non-nullable type.
+ type /*!*/ | Marks type as non-nullable.
+ /*?*/ |   Marks the preceding type as nullable.
+/*late*/ | Marks the variable declaration as late, indicating that it has late initialization.
+/*late final*/ | Marks the variable declaration as late final, indicating that it has late, one-time initialization.
+/*required*/ | Marks the parameter as required.
+
+[Reference](https://dart.dev/null-safety/migration-guide)
 
 ## String, Type Conversion, Constant, null
 
-### Interpolate
+### String Interpolation
+
+```bash
+String firstname = 'Gil';
+print("my name is: ${firstname}")
+```
 
 ### Conversion
 ```bash
@@ -658,6 +692,21 @@ Future<void> main() async {
 }
 ```
 
+## Measure time with stopper
+
+
+```bash
+Stopwatch stopwatch = Stopwatch();
+
+stopwatch.start();
+...
+...
+stopwatch.stop()
+
+int getImgDataTime = stopwatch.elapsedMilliseconds;
+
+// stopwatch.reset();
+```
 
 ## Conventions
 
