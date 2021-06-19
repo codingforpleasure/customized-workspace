@@ -38,6 +38,9 @@ Table of Contents
          * [Finding All Your MP3 Files and move it to a specific folder](#finding-all-your-mp3-files-and-move-it-to-a-specific-folder)
          * [Saving or Grouping Output from Several Commands](#saving-or-grouping-output-from-several-commands)
          * [Compare the timestamp of two files, find the newer (latest version).](#compare-the-timestamp-of-two-files-find-the-newer-latest-version)
+      * [<em><strong>Operations on Strings</strong></em>](#operations-on-strings)
+         * [Replace substring with different string](#replace-substring-with-different-string)
+         * [Extract substring from a String](#extract-substring-from-a-string)
       * [<em><strong>Useful snippets for daily-work</strong></em>](#useful-snippets-for-daily-work)
          * [Running All Scripts in a Directory](#running-all-scripts-in-a-directory)
          * [Setting Default Values for arguments](#setting-default-values-for-arguments)
@@ -49,7 +52,7 @@ Table of Contents
       * [Tricks](#tricks)
       * [<em><strong>Great reference</strong></em>](#great-reference)
 
-<!-- Added by: gil_diy, at: 2020-10-01T23:06+03:00 -->
+<!-- Added by: gil_diy, at: Sun 20 Jun 2021 01:50:11 IDT -->
 
 <!--te-->
 
@@ -460,6 +463,51 @@ FILE2='/home/gil_diy/playground_for_bash/version2.txt'
 <br/>
 <br/>
 <br/>
+
+
+## *__Operations on Strings__*
+
+### Replace substring with different string
+
+
+**Example #1:**
+
+```bash
+# Replacing Suzi with the string Sara:
+
+firstString="I love Suzi and Marry"
+secondString="Sara"
+echo "${firstString/Suzi/$secondString}" 
+```
+
+**Example #2:**
+
+```bash
+message='The secret code is 12345'
+echo "${message//[0-9]/X}"           
+# prints 'The secret code is XXXXX'
+```
+
+### Extract substring from a String
+
+Syntax: `${str:offset:len}`
+
+**Example #1:**
+
+```bash
+str="apple banana cat dog deer"
+animals=${str:13}
+echo ${animals}
+```
+
+**Example #2:**
+```bash
+str="apple banana cat dog deer"
+first_animal=${str:13:3}
+echo ${first_animal}
+```
+
+
 
 ## *__Useful snippets for daily-work__*
 ### Running All Scripts in a Directory
