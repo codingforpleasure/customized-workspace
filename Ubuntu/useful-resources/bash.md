@@ -41,6 +41,7 @@ Table of Contents
       * [<em><strong>Operations on Strings</strong></em>](#operations-on-strings)
          * [Replace substring with different string](#replace-substring-with-different-string)
          * [Extract substring from a String](#extract-substring-from-a-string)
+         * [Trim last n characters from a String](#trim-last-n-characters-from-a-string)
       * [<em><strong>Useful snippets for daily-work</strong></em>](#useful-snippets-for-daily-work)
          * [Running All Scripts in a Directory](#running-all-scripts-in-a-directory)
          * [Setting Default Values for arguments](#setting-default-values-for-arguments)
@@ -52,7 +53,7 @@ Table of Contents
       * [Tricks](#tricks)
       * [<em><strong>Great reference</strong></em>](#great-reference)
 
-<!-- Added by: gil_diy, at: Sun 20 Jun 2021 01:50:11 IDT -->
+<!-- Added by: gil_diy, at: Sun 20 Jun 2021 09:39:29 IDT -->
 
 <!--te-->
 
@@ -507,6 +508,14 @@ first_animal=${str:13:3}
 echo ${first_animal}
 ```
 
+
+### Trim last n characters from a String
+
+```bash
+filname="my_file.txt"
+len=${#filname}
+echo ${filname:0:len-4} 
+```
 
 
 ## *__Useful snippets for daily-work__*
