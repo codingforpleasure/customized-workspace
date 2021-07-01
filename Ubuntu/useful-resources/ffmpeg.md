@@ -5,6 +5,7 @@
       * [Well known resolutions](#well-known-resolutions)
       * [Downsample 4k to 1080p](#downsample-4k-to-1080p)
       * [Downsample 4k to 2k](#downsample-4k-to-2k)
+      * [Export all frames from a video clip](#export-all-frames-from-a-video-clip)
       * [Export a snapshot from a video clip in specific timestamp.](#export-a-snapshot-from-a-video-clip-in-specific-timestamp)
       * [Export a specific frame from a video clip given frame number](#export-a-specific-frame-from-a-video-clip-given-frame-number)
       * [Export MP4 from a list of images](#export-mp4-from-a-list-of-images)
@@ -35,7 +36,7 @@
          * [Generate video with waveform](#generate-video-with-waveform)
       * [Documentation](#documentation)
 
-<!-- Added by: gil_diy, at: Mon 14 Jun 2021 01:48:10 IDT -->
+<!-- Added by: gil_diy, at: Fri 02 Jul 2021 01:14:53 IDT -->
 
 <!--te-->
 
@@ -78,6 +79,12 @@ with a value of 20 (pretty good quality; lower is better quality / larger files,
 
 ```bash
 ffmpeg -i 1.mov -vf scale=2048x1152:flags=lanczos output_2k.mp4
+```
+
+## Export all frames from a video clip
+
+```bash
+fmpeg -i *.mp4 frame_%d.jpg
 ```
 
 ## Export a snapshot from a video clip in specific timestamp.
@@ -268,6 +275,10 @@ ffmpeg -i video.mp4 -vf "fade=t=out:st=10:d=5" -c:a copy out.mp4
 
 ```bash
 ffmpeg -i input_720x480p.avi -c:v rawvideo -pixel_format yuv420p output_720x480p.yuv
+```
+
+```bash
+ffmpeg -i ~/Desktop/sample_video.mp4 -ss 00:00:20 -t 10 -s 720x480 -pix_fmt yuv420p video1.yuv
 ```
 
 [Link](https://ottverse.com/ffmpeg-convert-avi-mp4-to-yuv-raw-playback-yuv-ffplay/)
