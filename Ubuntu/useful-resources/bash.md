@@ -50,10 +50,11 @@ Table of Contents
          * [Renaming file extensions](#renaming-file-extensions)
          * [Padding list of numbers with zeros](#padding-list-of-numbers-with-zeros)
          * [Brace-Expansion](#brace-expansion)
+         * [Produce range with step in bash](#produce-range-with-step-in-bash)
       * [Tricks](#tricks)
       * [<em><strong>Great reference</strong></em>](#great-reference)
 
-<!-- Added by: gil_diy, at: Sun 20 Jun 2021 09:39:29 IDT -->
+<!-- Added by: gil_diy, at: Fri 02 Jul 2021 00:00:56 IDT -->
 
 <!--te-->
 
@@ -418,6 +419,8 @@ else
 fi
 ```
 
+* You can get all if switches using `man test`
+
 ### Finding All Your MP3 Files and move it to a specific folder
 ```bash
 find . -name '*.mp3' -print -exec mv '{}' ~/songs \;
@@ -647,6 +650,23 @@ $ echo {{a..c},{1..3}}  # produces this: a b c 1 2 3
 ```bash
 $ echo {a..c},{1..3}    # produces this (Cartesian product): a,1 a,2 a,3 b,1 b,2 b,3 c,1 c,2 c,3
 ```
+
+```bash
+echo {0..10..2}    # produces range with step
+```
+
+### Produce range with step in bash
+
+```bash
+seq 0 2 10
+```
+
+Example of usage:
+
+```bash
+for i in `seq 0 2 10`; do echo $i; done
+```
+
 
 ## Tricks
 
