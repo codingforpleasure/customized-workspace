@@ -1,13 +1,15 @@
 <!--ts-->
-   * [pipenv (Package Manager   Environment Manager   Python Version Manager) <g-emoji class="g-emoji" alias=" 1" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f44d.png">👍</g-emoji>](#pipenv-package-manager--environment-manager--python-version-manager-thumbsup)
+   * [pipenv (Package Manager + Environment Manager + Python Version Manager) <g-emoji class="g-emoji" alias="+1" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f44d.png">👍</g-emoji>](#pipenv-package-manager--environment-manager--python-version-manager-thumbsup)
       * [how to install?](#how-to-install)
       * [useful commands](#useful-commands)
    * [Virtualenv](#virtualenv)
       * [useful commands](#useful-commands-1)
       * [Pip vs Anaconda](#pip-vs-anaconda)
       * [Anaconda](#anaconda)
+      * [Pip cache folder](#pip-cache-folder)
+      * [Pipenv cache folder](#pipenv-cache-folder)
 
-<!-- Added by: gil_diy, at: Tue Dec  1 11:57:48 IST 2020 -->
+<!-- Added by: gil_diy, at: Tue 06 Jul 2021 20:56:12 IDT -->
 
 <!--te-->
 
@@ -23,6 +25,7 @@ $ sudo pip install pipenv
 Description | command
 -------------|-------------
 Install a package|  **pipenv install** &lt;package-name&gt;
+Install a package from a local file|  **pipenv install ./opencv_python-4.5.whl**
 Install packages in case you have only `requirements.txt` file available | **pipenv install -r path/to/requirements.txt**
 Uninstall a package|  **pipenv uninstall** &lt;package-name&gt;
 Generate a lockfile | **pipenv lock**
@@ -116,3 +119,19 @@ Install  in specific environment | conda install -c pytorch -c fastai fastai
 Open notebook with:
 
 `jupyter-notebook <notebook-name>`
+
+
+## Pip cache folder
+
+```bash
+pip cache dir
+```
+
+Install and skip cache directory:
+```bash
+pip3 install --no-cache-dir <package-name>
+```
+
+## Pipenv cache folder
+
+In my workstation it's: `/home/gil_diy/.cache/pipenv`
