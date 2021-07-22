@@ -1,6 +1,7 @@
 <!--ts-->
    * [Pytorch](#pytorch)
       * [Road map](#road-map)
+      * [The training process (Road map)](#the-training-process-road-map)
       * [Install](#install)
       * [torch vision](#torch-vision)
          * [Checking versions](#checking-versions)
@@ -13,6 +14,7 @@
             * [Create a tensor from a given range of values](#create-a-tensor-from-a-given-range-of-values)
             * [Create a tensor with attributes from another tensor](#create-a-tensor-with-attributes-from-another-tensor)
             * [Create a tensor from numpy array](#create-a-tensor-from-numpy-array)
+            * [Create a numpy array from tensor](#create-a-numpy-array-from-tensor)
             * [Create an Identity tensor](#create-an-identity-tensor)
             * [Create all zeros tensor](#create-all-zeros-tensor)
             * [Create all ones tensor](#create-all-ones-tensor)
@@ -46,6 +48,8 @@
       * [Concatenating torches:](#concatenating-torches)
       * [Stacking](#stacking)
       * [Custom Dataset](#custom-dataset)
+      * [Loading images directory into a dataset](#loading-images-directory-into-a-dataset)
+      * [Subsetting Dataset](#subsetting-dataset)
       * [Dataloader](#dataloader)
       * [Dataset &amp;&amp; DataLoader](#dataset--dataloader)
          * [To better understand your data](#to-better-understand-your-data)
@@ -63,8 +67,7 @@
          * [Check default values of an optimizer](#check-default-values-of-an-optimizer)
          * [The type of optimizers](#the-type-of-optimizers)
       * [Dropouts](#dropouts)
-      * [preprocessing with transforms](#preprocessing-with-transforms)
-      * [Augmentations](#augmentations)
+      * [torchvision](#torchvision)
       * [Transfer learning](#transfer-learning)
          * [Freezing the model](#freezing-the-model)
          * [Replacing the last two layers](#replacing-the-last-two-layers)
@@ -82,7 +85,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Fri 29 Jan 2021 02:39:17 IST -->
+<!-- Added by: gil_diy, at: Thu 22 Jul 2021 18:09:08 IDT -->
 
 <!--te-->
 
@@ -102,6 +105,16 @@
 * Deploying the model
 * Model inference on test data
 
+
+## The training process (Road map)
+
+1. Get batch from the training set
+2. Pass batch to network
+3. Calculate the loss (difference between the predicted values and the true values)
+4. Calculate the gradient of the loss function with the network weights
+5. Update the weights using the gradients to reduce the loss
+6. Repeat steps 1-5 until one epoch is completed
+7. Repeat steps 1-6 for as many epochs required to obtain the desired level of accuaracy.
 
 ## Install
 Install `pip install torch torchvision`
@@ -200,6 +213,12 @@ Shared Data | Copy Data
 
 
 **Well explained here:** [Link](https://youtu.be/AglLTlms7HU?list=PLZbbT5o_s2xrfNyHZsM6ufI0iZENK9xg)
+
+#### Create a numpy array from tensor
+
+```python
+my_torch_tensor.cpu().detach().numpy()
+```
 
 #### Create an Identity tensor
 
@@ -692,6 +711,53 @@ def __len__(self):
 
 ```
 
+## Loading images directory into a dataset
+
+In case the data is **already splitted into two directories**,
+you can easily use the `ImageFolder` function:
+
+```python
+from torchvision.datasets import ImageFolder
+
+    TRAIN_DIR = "input/jpeg-224x224/train"
+    VAL_DIR = "input/jpeg-224x224/val"
+
+    transform_train = T.Compose([
+        T.RandomCrop(128, padding_mode="reflect"),
+        T.RandomHorizontalFlip(),
+        T.ToTensor()
+    ])
+    train_ds = ImageFolder(
+        root=TRAIN_DIR,
+        transform=transform_train
+    )
+
+    transform_val = T.Compose([
+        T.ToTensor()
+    ])
+
+    val_ds = ImageFolder(
+        root=VAL_DIR,
+        transform=transform_val
+    )
+```
+
+## Subsetting Dataset
+
+```python
+from sklearn.model_selection import StratifiedShuffleSplit
+from torch.utils.data import Subset
+
+sss = StratifiedShuffleSplit(n_splits=1, test_size=0.2, random_state=42)
+for train_index, test_index in sss.split(shape_dataset, shape_dataset.labels):
+    print(train_index)
+    print("----------")
+    print(test_index)
+
+train_dataset = Subset(shape_dataset, train_index)
+test_dataset = Subset(shape_dataset, test_index)
+```
+
 ## Dataloader
 
 The dataloader gives us access to the dataset, and gives us query capabilties,
@@ -786,14 +852,14 @@ print('labels: ', labels)
 The output size `O` is given by this formula:
 
 <p align="center"> <!-- style="width:400px;" -->
-  <img src="images/labeling_example.png" title="tool tip here">
+  <img src="images/pytorch/cnn_output_size_square.png" title="tool tip here">
 </p>
 
 
 ### **CNN Output Size formula (Non Square)**
 
 <p align="center"> <!-- style="width:400px;" -->
-  <img src="images/labeling_example.png" title="tool tip here">
+  <img src="images/pytorch/cnn_output_size_non_square.png" title="tool tip here">
 </p>
 
 
@@ -881,6 +947,10 @@ The learning rate is a hyperparameter of the optimizer, which controls the amoun
 print(optimizer.defaults)
 ```
 
+```python
+
+```
+
 ### The type of optimizers
 
 * Adadelta
@@ -903,20 +973,9 @@ hidden layers** in order to prevent us from losing the input data and missing ou
 nn.Dropout(p=0.25)
 ```
 
-## preprocessing with transforms
+## torchvision
 
-* Example of chaining multiple transforms:
-
-```python
-transforms.Compose([
-transforms.CenterCrop(10),
-transforms.Pad(1, 0),
-transforms.CenterCrop((10, 10))
-transforms.ToTensor(),
-])
-```
-
-## Augmentations
+###Augmentations
 
 Few exaples of transforms on the data to create more data from existing data:
 
@@ -924,14 +983,17 @@ Few exaples of transforms on the data to create more data from existing data:
 import torchvision
 
 transforms.Compose([
-transforms.RandomCrop(10)
-transforms.RandomCrop((10,20))
-transforms.RandomHorizontalFlip(p=0.3)
-transforms.RandomVerticalFlip(p=0.3)
-
-# Adding brightness, contrast, saturation, and hue variations
-transforms.ColorJitter(0.25, 0.25, 0.25, 0.25)
-transforms.RandomRotation(10)
+	transforms.CenterCrop(10),
+	transforms.Pad(1, 0),
+	transforms.CenterCrop((10, 10))
+	transforms.ToTensor(),
+	transforms.RandomCrop(10)
+	transforms.RandomCrop((10,20))
+	transforms.RandomHorizontalFlip(p=0.3)
+	transforms.RandomVerticalFlip(p=0.3)
+	# Adding brightness, contrast, saturation, and hue variations
+	transforms.ColorJitter(0.25, 0.25, 0.25, 0.25)
+	transforms.RandomRotation(10)
 ])
 ```
 
@@ -1012,7 +1074,7 @@ torch.load('tensors.pt', map_location=torch.device('cpu'))
 
 ## Useful for plotting
 ```python
-torch.linespace(0,10,5) # Useful for plotting
+torch.linespace(start = 0, end = 10, steps = 5) # Useful for plotting
 ```
 
 ## Derivatives
@@ -1117,3 +1179,5 @@ In the second half of the model, the feature map is up-sampled to the input size
 
 [Neural Networks for Image
 Segmentation based on PyTorch](https://github.com/qubvel/segmentation_models.pytorch#examples)
+
+[GPU in pytorch](https://medium.com/ai%C2%B3-theory-practice-business/use-gpu-in-your-pytorch-code-676a67faed09)
