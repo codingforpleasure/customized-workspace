@@ -45,7 +45,7 @@
       * [Well known CNN Architectures](#well-known-cnn-architectures)
       * [Videos of handwritten flowchart](#videos-of-handwritten-flowchart)
 
-<!-- Added by: gil_diy, at: 2020-11-05T03:34+02:00 -->
+<!-- Added by: gil_diy, at: Mon 26 Jul 2021 19:44:07 IDT -->
 
 <!--te-->
 # CNN
@@ -636,6 +636,8 @@ A python package that simplifies the task of finding exact and near duplicates i
 [Annotated database of on-line sketched diagrams from FlowChart domain.](http://cmp.felk.cvut.cz/~breslmar/flowcharts/)
 
 [Google Open Images V6](https://storage.googleapis.com/openimages/web/index.html)
+
+[Large Vocabulary Instance Segmentation (LVIS)](https://www.lvisdataset.org/explore)
 
 [List of datasets for machine learning research](https://en.wikipedia.org/wiki/List_of_datasets_for_machine-learning_research)
 
