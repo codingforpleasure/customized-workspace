@@ -6,6 +6,12 @@
  Change your remote's URL | git remote set-url origin `git@github.com:USERNAME/REPOSITORY.git`
 
 
+## Get the URL that a local Git repository was originally cloned from
+
+```
+git remote get-url origin
+```
+
 ## Git clone specific branch
 
 ## How to Clone Including Git Submodules
