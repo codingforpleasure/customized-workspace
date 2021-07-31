@@ -13,12 +13,15 @@
             * [Stack 1-D arrays as columns into a 2-D array.](#stack-1-d-arrays-as-columns-into-a-2-d-array)
          * [Retrieving info about an array](#retrieving-info-about-an-array)
          * [Counts the number of non-zero values in an array given a constraint](#counts-the-number-of-non-zero-values-in-an-array-given-a-constraint)
+         * [Histogram count](#histogram-count)
          * [Transpose a matrix/array](#transpose-a-matrixarray)
          * [Aggregation functions](#aggregation-functions)
-         * [Aggregation functions exmaple on matrix:](#aggregation-functions-exmaple-on-matrix)
+         * [Aggregation functions example on matrix:](#aggregation-functions-example-on-matrix)
          * [Concatenating columns](#concatenating-columns)
          * [Unique and Other Set Logic](#unique-and-other-set-logic)
+            * [unique and exclude NAN](#unique-and-exclude-nan)
             * [sorted unique values in an array](#sorted-unique-values-in-an-array)
+            * [Get frequency counts for unique values in an array](#get-frequency-counts-for-unique-values-in-an-array)
          * [Iterating easily over an array](#iterating-easily-over-an-array)
          * [Fancy indexing](#fancy-indexing)
             * [<strong>1. Select some rows</strong>](#1-select-some-rows)
@@ -42,7 +45,7 @@
       * [Exporting txt files easily with specific format](#exporting-txt-files-easily-with-specific-format)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Mon Dec  7 15:23:43 IST 2020 -->
+<!-- Added by: gil_diy, at: Sat 31 Jul 2021 15:59:44 IDT -->
 
 <!--te-->
 
@@ -250,6 +253,22 @@ To find the coordinates (row number, column number) just use `np.where(mat > 0)`
 ```python
 np.count_nonzero(my_mat!=False)
 ```
+
+### Histogram count
+
+```python
+x = np.array([1, 1, 1, 2, 2, 2, 5, 25, 1, 1])
+elements_count = np.bincount(x)
+elements = np.nonzero(y)[0]
+print(dict(zip(elements, elements_count[elements])))
+```
+
+**final output would be:**
+
+```
+{1: 5, 2: 3, 5: 1, 25: 1}
+```
+
 ### Transpose a matrix/array
 
 ```python
@@ -295,7 +314,7 @@ Compute median value | np.median(vec) | 5
 Evaluate whether any elements are true | np.any(vec > 5) True
 Evaluate whether all elements are true | np.allnp.any(vec > -1) | True
 
-### Aggregation functions exmaple on matrix:
+### Aggregation functions example on matrix:
 
 For example:
 
@@ -328,6 +347,17 @@ np.column_stack([X_train, y_train])
 
 ### Unique and Other Set Logic
 
+
+#### unique and exclude NAN
+
+Return number of unique elements in the object.
+Excludes NA values by default
+
+```python
+s = pd.Series([1, 3, 5, 7, 7])
+print(s.nunique())
+```
+
 #### sorted unique values in an array
 
 ```python
@@ -350,6 +380,13 @@ union1d(x,y) | Compute the sorted union of elements
 in1d(x,y) | Compute a boolean array indicating whether each element of x is contained in y
 setdiff1d(x, y) | Set difference, elements in x that are not in y
 
+
+#### Get frequency counts for unique values in an array
+```python
+y = np.bincount(a)
+ii = np.nonzero(y)[0]
+out = np.vstack((ii, y[ii])).T
+```
 
 ### Iterating easily over an array
 
