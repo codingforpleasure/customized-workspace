@@ -5,6 +5,8 @@
       * [Well known resolutions](#well-known-resolutions)
       * [Downsample 4k to 1080p](#downsample-4k-to-1080p)
       * [Downsample 4k to 2k](#downsample-4k-to-2k)
+      * [Resize video](#resize-video)
+      * [Stiching two videos one next to the other](#stiching-two-videos-one-next-to-the-other)
       * [Export all frames from a video clip](#export-all-frames-from-a-video-clip)
       * [Export a snapshot from a video clip in specific timestamp.](#export-a-snapshot-from-a-video-clip-in-specific-timestamp)
       * [Export a specific frame from a video clip given frame number](#export-a-specific-frame-from-a-video-clip-given-frame-number)
@@ -32,11 +34,12 @@
          * [Fade in](#fade-in)
          * [Fade out](#fade-out)
          * [Convert to Raw YUV Video](#convert-to-raw-yuv-video)
+         * [Convert from MKV to mp4](#convert-from-mkv-to-mp4)
       * [Filters for Audio files](#filters-for-audio-files)
          * [Generate video with waveform](#generate-video-with-waveform)
       * [Documentation](#documentation)
 
-<!-- Added by: gil_diy, at: Fri 02 Jul 2021 01:14:53 IDT -->
+<!-- Added by: gil_diy, at: Sat 21 Aug 2021 15:01:00 IDT -->
 
 <!--te-->
 
@@ -79,6 +82,27 @@ with a value of 20 (pretty good quality; lower is better quality / larger files,
 
 ```bash
 ffmpeg -i 1.mov -vf scale=2048x1152:flags=lanczos output_2k.mp4
+```
+
+## Resize video
+
+```bash
+ffmpeg -i input.avi -vf scale=320:240 output.avi
+```
+
+
+## Stiching two videos one next to the other
+
+```bash
+ffmpeg \
+  -i left_video.mp4 \
+  -i right_video.mp4 \
+  -filter_complex '[0:v]pad=iw*2:ih[int];[int][1:v]overlay=W/2:0[vid]' \
+  -map '[vid]' \
+  -c:v libx264 \
+  -crf 23 \
+  -preset veryfast \
+  two_videos_output.mp4
 ```
 
 ## Export all frames from a video clip
@@ -282,6 +306,13 @@ ffmpeg -i ~/Desktop/sample_video.mp4 -ss 00:00:20 -t 10 -s 720x480 -pix_fmt yuv4
 ```
 
 [Link](https://ottverse.com/ffmpeg-convert-avi-mp4-to-yuv-raw-playback-yuv-ffplay/)
+
+
+### Convert from MKV to mp4
+
+```bash
+ffmpeg -i my_video.mkv -codec copy my_video.mp4
+```
 
 
 ## Filters for Audio files
