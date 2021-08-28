@@ -39,7 +39,7 @@
          * [Generate video with waveform](#generate-video-with-waveform)
       * [Documentation](#documentation)
 
-<!-- Added by: gil_diy, at: Sat 21 Aug 2021 15:01:00 IDT -->
+<!-- Added by: gil_diy, at: Sat 28 Aug 2021 15:59:07 IDT -->
 
 <!--te-->
 
@@ -312,6 +312,12 @@ ffmpeg -i ~/Desktop/sample_video.mp4 -ss 00:00:20 -t 10 -s 720x480 -pix_fmt yuv4
 
 ```bash
 ffmpeg -i my_video.mkv -codec copy my_video.mp4
+```
+
+multiple files:
+
+```bash
+for f in *.mkv; do ffmpeg -i "$f" -c copy "${f%.mkv}.mp4"; done
 ```
 
 
