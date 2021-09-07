@@ -12,10 +12,11 @@
             * [Gradient Boosting](#gradient-boosting)
             * [XGboost (Extreme Gradient boost)](#xgboost-extreme-gradient-boost)
          * [The difference between Random Forest to Adaboost](#the-difference-between-random-forest-to-adaboost)
+         * [The difference between Adaboost to Gradient Boost](#the-difference-between-adaboost-to-gradient-boost)
       * [Support Vector Machine (SVM)](#support-vector-machine-svm)
       * [Naive Bayes](#naive-bayes)
 
-<!-- Added by: gil_diy, at: Tue 07 Sep 2021 14:15:56 IDT -->
+<!-- Added by: gil_diy, at: Tue 07 Sep 2021 14:44:08 IDT -->
 
 <!--te-->
 
@@ -95,6 +96,8 @@ In other words a set of low accurate classifier to create a highly accurate clas
 
 * It iteratively corrects the mistakes of the weak classifier and improves accuracy by combining weak learners.
 
+* The **weights of the records gets updated**, all the missclasiffied records/entries (all the records which the praticular weak model did not perform well), thier weights are increased, which means more weights is given to those records for the next weak model.
+
 * You can use many base classifiers with AdaBoost. AdaBoost is not prone to overfitting.
 
 * The cons: AdaBoost is **sensitive to noise data**. It is highly affected by outliers because it tries to fit each point perfectly
@@ -151,9 +154,15 @@ y_pred = model.predict(X_test)
 print("Accuracy:",metrics.accuracy_score(y_test, y_pred))
 ```
 
+[Youtube explanation](https://www.youtube.com/watch?v=HRBMlBiOo7Q)
+
 [Youtube explanation](https://youtu.be/NLRO1-jp5F8)
 
+
+
 #### Gradient Boosting
+
+[Youtube explanation](https://youtu.be/j034-r3O2Cg)
 
 [Youtube explanation](https://youtu.be/Nol1hVtLOSg)
 
@@ -171,6 +180,15 @@ Random Forest | Adaboost
  All models have **equal say** or equall vote in the final model | All the models **don't have equal say** (weights)
 
  Uses fully **grown trees** | Each weak model uses **Stumps - one root node and two leaf nodes** 
+
+
+### The difference between Adaboost to Gradient Boost
+
+Adaboost | Gradient boost
+------------|-----
+Many weak models are get trained sequentially (one by one) The** weights'** of the records of all missclassfied records are get updated | Learning by **optimizing the loss function**
+
+The trees are **Stumps**| The **trees are much bigger**, the number of leaf nodes is in the range 8 to 32.
 
 
 ## Support Vector Machine (SVM)
