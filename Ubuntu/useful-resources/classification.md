@@ -8,13 +8,14 @@
          * [Bagging technique (Bootstrap aggregation)](#bagging-technique-bootstrap-aggregation)
             * [Random Forest](#random-forest)
          * [Boosting techniques](#boosting-techniques)
-            * [Adaboost](#adaboost)
+            * [Adaboost (Adaptive boosting)](#adaboost-adaptive-boosting)
             * [Gradient Boosting](#gradient-boosting)
             * [XGboost (Extreme Gradient boost)](#xgboost-extreme-gradient-boost)
+         * [The difference between Random Forest to Adaboost](#the-difference-between-random-forest-to-adaboost)
       * [Support Vector Machine (SVM)](#support-vector-machine-svm)
       * [Naive Bayes](#naive-bayes)
 
-<!-- Added by: gil_diy, at: Wed 09 Jun 2021 12:54:37 IDT -->
+<!-- Added by: gil_diy, at: Tue 07 Sep 2021 14:15:56 IDT -->
 
 <!--te-->
 
@@ -29,8 +30,12 @@
 
 ## Ensemble
 
+Ensemble is a learning technique in which multiple individual model combines together to create a master model.
+
 They don't overfit as easily as the other methods.
 Ensemble methods are the most important and powerful machine learning tool and they don't suffer from the drawbacks of the other machine learning methods.
+
+Bagging and boosting are ways to implement ensemble models. 
 
 ### Bagging technique (Bootstrap aggregation)
 
@@ -40,7 +45,7 @@ Ensemble methods are the most important and powerful machine learning tool and t
 
 * Random Forest is **ensemble technique**
 
-* Random Forest is a **bagging technique**
+* Random Forest is an implementation of **bagging technique**
 
 * Using **multiple desicion trees**
 
@@ -73,26 +78,77 @@ classifier.fit(X_train,y_train)
 
 ### Boosting techniques
 
-**Boosting is an ensemble technique** that attempts to create a strong classifier from a number of weak classifiers**
+**Boosting is an ensemble technique** that attempts to create a strong classifier from a number of weak classifiers**.
 
-#### Adaboost
+In other words a set of low accurate classifier to create a highly accurate classifier.
+
+
+#### Adaboost (Adaptive boosting)
 
 * Adaboost is ensemble technique
 
 * AdaBoost is **adaptive** in the sense that subsequent weak learners are tweaked in favor of those instances misclassified by previous classifiers
 
-* The trees will be a single node with two leaves.
+* AdaBoost is an **iterative ensemble** method
 
+* The trees will be a **single node with two leaves**.
+
+* It iteratively corrects the mistakes of the weak classifier and improves accuracy by combining weak learners.
+
+* You can use many base classifiers with AdaBoost. AdaBoost is not prone to overfitting.
+
+* The cons: AdaBoost is **sensitive to noise data**. It is highly affected by outliers because it tries to fit each point perfectly
+
+<p align="center"> <!-- style="width:400px;" -->
+  <img src="images/machine-learning/adaboost.jpg" title="tool tip here">
+</p>
 
 ```python
 from sklearn.ensemble import AdaBoostClassifier
 from sklearn.tree import DecisionTreeClassifier
 
+
+# base_estimator: It is a weak learner used to train the model.
+#                 It uses DecisionTreeClassifier as default weak learner
+#				  for training purpose. You can also specify different 
+#                 machine learning algorithms.
+#
+# n_estimators: Number of weak learners to train iteratively.
+# 
+# learning_rate: It contributes to the weights of weak learners.
+#                It uses 1 as a default value.
+
 clf = AdaBoostClassifier(DecisionTreeClassifier(max_depth=1),
                          n_estimators=200)
 
+# Train Adaboost Classifer
 clf.fit(X_train, y_train)
 y_pred = clf.predict(X_test)
+```
+
+Or we can use different base learners, such as SVM:
+
+```python
+from sklearn.ensemble import AdaBoostClassifier
+
+# Import Support Vector Classifier
+from sklearn.svm import SVC
+#Import scikit-learn metrics module for accuracy calculation
+from sklearn import metrics
+svc=SVC(probability=True, kernel='linear')
+
+# Create adaboost classifer object
+abc =AdaBoostClassifier(n_estimators=50, base_estimator=svc,learning_rate=1)
+
+# Train Adaboost Classifer
+model = abc.fit(X_train, y_train)
+
+#Predict the response for test dataset
+y_pred = model.predict(X_test)
+
+
+# Model Accuracy, how often is the classifier correct?
+print("Accuracy:",metrics.accuracy_score(y_test, y_pred))
 ```
 
 [Youtube explanation](https://youtu.be/NLRO1-jp5F8)
@@ -106,6 +162,15 @@ y_pred = clf.predict(X_test)
 * **XGboost** is ensemble technique
 
 
+### The difference between Random Forest to Adaboost
+
+Random Forest | Adaboost
+------------|-----
+ **Parallel** - The individual Decision Trees are built from the main data parallelly independently from each other   | **Sequential** - model2 is depend on model1 and similary model3 is depend on model2 etc.
+
+ All models have **equal say** or equall vote in the final model | All the models **don't have equal say** (weights)
+
+ Uses fully **grown trees** | Each weak model uses **Stumps - one root node and two leaf nodes** 
 
 
 ## Support Vector Machine (SVM)
