@@ -10,13 +10,13 @@
          * [Boosting techniques](#boosting-techniques)
             * [Adaboost (Adaptive boosting)](#adaboost-adaptive-boosting)
             * [Gradient Boosting](#gradient-boosting)
-            * [XGboost (Extreme Gradient boost)](#xgboost-extreme-gradient-boost)
+            * [XGboost (Extreme Gradient boosted trees)](#xgboost-extreme-gradient-boosted-trees)
          * [The difference between Random Forest to Adaboost](#the-difference-between-random-forest-to-adaboost)
          * [The difference between Adaboost to Gradient Boost](#the-difference-between-adaboost-to-gradient-boost)
       * [Support Vector Machine (SVM)](#support-vector-machine-svm)
       * [Naive Bayes](#naive-bayes)
 
-<!-- Added by: gil_diy, at: Tue 07 Sep 2021 14:44:08 IDT -->
+<!-- Added by: gil_diy, at: Wed 08 Sep 2021 12:46:08 IDT -->
 
 <!--te-->
 
@@ -162,14 +162,36 @@ print("Accuracy:",metrics.accuracy_score(y_test, y_pred))
 
 #### Gradient Boosting
 
+```python
+from sklearn.ensemble import GradientBoostingRegressor
+
+gbrt = GradientBoostingRegressor(max_depth=2, n_estimators=1, learning_rate=1.0)
+gbrt.fit(X,y)
+```
+
 [Youtube explanation](https://youtu.be/j034-r3O2Cg)
 
 [Youtube explanation](https://youtu.be/Nol1hVtLOSg)
 
-#### XGboost (Extreme Gradient boost)
+#### XGboost (Extreme Gradient boosted trees)
+
+* Each tree boosts attributes that led to misclassifications of previous tree
+
+* Regularized boosting (prevents overfitting)
+
+* Can handle missing values automatically
+
+* Parallel processing (Scale well on multiple machine/cores)
+
+* Can cross-validate at each iteration (Enables early stopping, finding optimal number of iterations)
+
+* Tree pruning (generally results in deeper, but optimized trees)
+
+
 
 * **XGboost** is ensemble technique
 
+[Link](https://youtu.be/OQKQHNCVf5k)
 
 ### The difference between Random Forest to Adaboost
 
