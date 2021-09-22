@@ -37,9 +37,10 @@
          * [Convert from MKV to mp4](#convert-from-mkv-to-mp4)
       * [Filters for Audio files](#filters-for-audio-files)
          * [Generate video with waveform](#generate-video-with-waveform)
+      * [Split an audio file into multiple files](#split-an-audio-file-into-multiple-files)
       * [Documentation](#documentation)
 
-<!-- Added by: gil_diy, at: Sat 28 Aug 2021 15:59:07 IDT -->
+<!-- Added by: gil_diy, at: Wed 22 Sep 2021 08:31:02 IDT -->
 
 <!--te-->
 
@@ -330,6 +331,15 @@ ffmpeg -i input.mp3 -filter_complex "mode=line" output.avi
 ```
 
 [Reference](https://youtu.be/M58rc7cxl_s?list=PLJse9iV6Reqiy8wP0rXTgFQkMNutRMN0j&t=565) 
+
+
+## Split an audio file into multiple files
+
+```bash
+ffmpeg -i somefile.mp3 -f segment -segment_time 3 -c copy out%03d.mp3
+```
+
+`-segment_time` is the amount of time you want per each file
 
 ## Documentation
 
