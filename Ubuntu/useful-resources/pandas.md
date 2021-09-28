@@ -71,9 +71,10 @@
          * [Slicing date-time type](#slicing-date-time-type)
          * [Rolling Window Statistics](#rolling-window-statistics)
          * [Expanding Window Statistics](#expanding-window-statistics)
+         * [Statsmodels](#statsmodels)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Tue 28 Sep 2021 17:32:36 IDT -->
+<!-- Added by: gil_diy, at: Tue 28 Sep 2021 17:53:23 IDT -->
 
 <!--te-->
 
@@ -733,6 +734,8 @@ for t in range(test_ts.shape[0]):
    print(test_ts.index[t])
    print(t+1, ': predicted =', yhat, 'expected =', obs)
 ```
+
+[Reference](https://machinelearningmastery.com/autoregression-models-time-series-forecasting-python/)
 
 ## Reference
 
