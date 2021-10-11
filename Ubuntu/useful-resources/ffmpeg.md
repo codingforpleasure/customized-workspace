@@ -31,6 +31,8 @@
          * [Scaling with arithmetic &amp; variables:](#scaling-with-arithmetic--variables)
          * [Proportional scaling](#proportional-scaling)
          * [Rotation](#rotation)
+         * [Flip video horizontally](#flip-video-horizontally)
+         * [Flip video vertically](#flip-video-vertically)
          * [Fade in](#fade-in)
          * [Fade out](#fade-out)
          * [Convert to Raw YUV Video](#convert-to-raw-yuv-video)
@@ -38,9 +40,10 @@
       * [Filters for Audio files](#filters-for-audio-files)
          * [Generate video with waveform](#generate-video-with-waveform)
       * [Split an audio file into multiple files](#split-an-audio-file-into-multiple-files)
+      * [Extend audio length](#extend-audio-length)
       * [Documentation](#documentation)
 
-<!-- Added by: gil_diy, at: Wed 22 Sep 2021 08:31:02 IDT -->
+<!-- Added by: gil_diy, at: Mon 11 Oct 2021 13:11:29 IDT -->
 
 <!--te-->
 
@@ -278,6 +281,18 @@ ffmpeg -i inFile:v -filter:v  "rotate=45*PI/180" outfile
 * Angle of rotation, clockwise (with conversion to radians)
 
 
+### Flip video horizontally
+
+```bash
+ ffmpeg -i INPUT.mp4 -vf hflip -c:a copy OUTPUT.mp4
+```
+
+### Flip video vertically
+
+```bash
+ ffmpeg -i INPUT.mp4 -vf vflip -c:a copy OUTPUT.mp4
+```
+
 ### Fade in
 ```bash
 ffmpeg -i input_video_file.mp4 -vf "fade=t=in:st=0:d=3" -c:a copy output_video_file.mp4
@@ -340,6 +355,15 @@ ffmpeg -i somefile.mp3 -f segment -segment_time 3 -c copy out%03d.mp3
 ```
 
 `-segment_time` is the amount of time you want per each file
+
+## Extend audio length
+
+Padding the end of the audio file, the extended part should be slient.
+
+For example extending with 2 seconds
+```bash
+ffmpeg -i in.wav -af "apad=pad_dur=5" out.wav
+```
 
 ## Documentation
 
