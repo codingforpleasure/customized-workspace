@@ -14,6 +14,7 @@
       * [Rip a part a video and get all images out of it](#rip-a-part-a-video-and-get-all-images-out-of-it)
       * [Convert from webm to mp4](#convert-from-webm-to-mp4)
       * [Trim video file](#trim-video-file)
+      * [Concatenate video files](#concatenate-video-files)
       * [Get information about video size](#get-information-about-video-size)
       * [Get all metadata about a video](#get-all-metadata-about-a-video)
       * [Increase video speed](#increase-video-speed)
@@ -41,9 +42,10 @@
          * [Generate video with waveform](#generate-video-with-waveform)
       * [Split an audio file into multiple files](#split-an-audio-file-into-multiple-files)
       * [Extend audio length](#extend-audio-length)
+      * [Modify sample rate](#modify-sample-rate)
       * [Documentation](#documentation)
 
-<!-- Added by: gil_diy, at: Mon 11 Oct 2021 13:11:29 IDT -->
+<!-- Added by: gil_diy, at: Wed 27 Oct 2021 15:55:02 IDT -->
 
 <!--te-->
 
@@ -173,6 +175,19 @@ ffmpeg -i source.mp4 -ss 00:00:05 -t 00:00:10 -async 1 -strict -2 cut_video.mp4
 
 `-t = duration in seconds - the length of the video`
 `-ss = cut from the specified timestamp`
+
+## Concatenate video files
+
+```bash
+for f in *.mp4 ; do echo file \'$f\' >> fileList.txt;
+```
+
+and then run:
+
+```bash
+./ffmpeg -f concat -safe 0 -i fileList.txt -c copy mergedVideo.mp4
+```
+
 
 ## Get information about video size
 
@@ -364,6 +379,16 @@ For example extending with 2 seconds
 ```bash
 ffmpeg -i in.wav -af "apad=pad_dur=5" out.wav
 ```
+
+## Modify sample rate 
+
+16KHz - smaple rate
+
+```bash
+ffmpeg -i 111.mp3 -acodec pcm_s16le -ac 1 -ar 16000 out.wav
+```
+
+`-ac 1 for mono channel`
 
 ## Documentation
 
