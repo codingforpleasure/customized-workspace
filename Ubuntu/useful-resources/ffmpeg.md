@@ -39,13 +39,15 @@
          * [Convert to Raw YUV Video](#convert-to-raw-yuv-video)
          * [Convert from MKV to mp4](#convert-from-mkv-to-mp4)
       * [Filters for Audio files](#filters-for-audio-files)
+         * [Extract audio file from video file (Pull audio track)](#extract-audio-file-from-video-file-pull-audio-track)
+         * [Convert either m4a or mp3  to WAV file](#convert-either-m4a-or-mp3--to-wav-file)
          * [Generate video with waveform](#generate-video-with-waveform)
-      * [Split an audio file into multiple files](#split-an-audio-file-into-multiple-files)
-      * [Extend audio length](#extend-audio-length)
-      * [Modify sample rate](#modify-sample-rate)
+         * [Split an audio file into multiple files](#split-an-audio-file-into-multiple-files)
+         * [Extend audio length](#extend-audio-length)
+         * [Modify sample rate](#modify-sample-rate)
       * [Documentation](#documentation)
 
-<!-- Added by: gil_diy, at: Wed 27 Oct 2021 15:55:02 IDT -->
+<!-- Added by: gil_diy, at: Mon 01 Nov 2021 10:56:32 IST -->
 
 <!--te-->
 
@@ -354,6 +356,30 @@ for f in *.mkv; do ffmpeg -i "$f" -c copy "${f%.mkv}.mp4"; done
 
 ## Filters for Audio files
 
+### Extract audio file from video file (Pull audio track)
+
+Get info about audio track embedded in the video file:
+
+```bash
+ffprobe <video_file.mp4>
+```
+
+
+```bash
+ffmpeg -i <video_file.mp4> -vn -acodec copy soundtrack.m4a
+```
+
+### Convert either m4a or mp3  to WAV file
+
+output WAV file containing signed 16-bit PCM samples. Your command is outputting raw PCM, not WAV.
+
+
+```bash
+ffmpeg -i input.mp4 output.wav
+```
+
+You can add -c:a pcm_s16le, but it's the default encoder for WAV so it can be omitted.
+
 ### Generate video with waveform
 
 ```bash
@@ -363,7 +389,7 @@ ffmpeg -i input.mp3 -filter_complex "mode=line" output.avi
 [Reference](https://youtu.be/M58rc7cxl_s?list=PLJse9iV6Reqiy8wP0rXTgFQkMNutRMN0j&t=565) 
 
 
-## Split an audio file into multiple files
+### Split an audio file into multiple files
 
 ```bash
 ffmpeg -i somefile.mp3 -f segment -segment_time 3 -c copy out%03d.mp3
@@ -371,7 +397,7 @@ ffmpeg -i somefile.mp3 -f segment -segment_time 3 -c copy out%03d.mp3
 
 `-segment_time` is the amount of time you want per each file
 
-## Extend audio length
+### Extend audio length
 
 Padding the end of the audio file, the extended part should be slient.
 
@@ -380,7 +406,7 @@ For example extending with 2 seconds
 ffmpeg -i in.wav -af "apad=pad_dur=5" out.wav
 ```
 
-## Modify sample rate 
+### Modify sample rate 
 
 16KHz - smaple rate
 
@@ -388,7 +414,20 @@ ffmpeg -i in.wav -af "apad=pad_dur=5" out.wav
 ffmpeg -i 111.mp3 -acodec pcm_s16le -ac 1 -ar 16000 out.wav
 ```
 
-`-ac 1 for mono channel`
+`-ac 1 for audio channel`
+
+
+Python code:
+
+```python
+in_filename = os.path.join(dir_input, file_input)
+
+out, _ = (ffmpeg
+          .input(in_filename)
+          .output(os.path.join(dir_input, 'output_new.wav'), acodec='pcm_s16le', ac=1, ar='16k')
+          .run(capture_stdout=True, capture_stderr=True)
+          )
+```
 
 ## Documentation
 
@@ -401,9 +440,5 @@ ffmpeg -i 111.mp3 -acodec pcm_s16le -ac 1 -ar 16000 out.wav
 [conversions between gif and video](https://engineering.giphy.com/how-to-make-gifs-with-ffmpeg/)
 
 
-color | Confidence value range
-------|-----------------------
-Green | 0.9 < Conf
-Blue | 0.8 < Conf < 0.9
-Red | 0.6 < Conf < 0.8
-Dont show bbox |  Conf < 0.6
+[Impressive examples Python with ffmpeg](https://github.com/kkroening/ffmpeg-python/tree/master/examples)
+
