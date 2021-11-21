@@ -51,7 +51,7 @@
       * [Exporting txt files easily with specific format](#exporting-txt-files-easily-with-specific-format)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Sun 21 Nov 2021 18:11:39 IST -->
+<!-- Added by: gil_diy, at: Mon 22 Nov 2021 00:27:10 IST -->
 
 <!--te-->
 
@@ -707,6 +707,11 @@ Convert from radian to degree | `np.degree(np.pi/2)`
 
 Take the matrix M and decompose or represent it as the product of three other matrices.
 
+Has a wide array of applications:
+1. dimensionality reduction
+2. image compression
+3. denoising data
+
 <p align="center" style="width:400px;" >
   <img src="images/numpy/svd.png" title="tool tip here">
 </p>
@@ -729,6 +734,7 @@ s shape is:  (4,)
 vh shape is:  (5, 5)
 ```
 
+[Link](https://youtu.be/nbBvuuNVfco)
 
 #### Cholesky Decomposition
 
