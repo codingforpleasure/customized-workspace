@@ -13,7 +13,6 @@
             * [Stack 1-D arrays as columns into a 2-D array.](#stack-1-d-arrays-as-columns-into-a-2-d-array)
          * [Retrieving info about an array](#retrieving-info-about-an-array)
          * [Counts the number of non-zero values in an array given a constraint](#counts-the-number-of-non-zero-values-in-an-array-given-a-constraint)
-         * [Histogram count](#histogram-count)
          * [Transpose a matrix/array](#transpose-a-matrixarray)
          * [Aggregation functions](#aggregation-functions)
          * [Aggregation functions example on matrix:](#aggregation-functions-example-on-matrix)
@@ -21,7 +20,7 @@
          * [Unique and Other Set Logic](#unique-and-other-set-logic)
             * [unique and exclude NAN](#unique-and-exclude-nan)
             * [sorted unique values in an array](#sorted-unique-values-in-an-array)
-            * [Get frequency counts for unique values in an array](#get-frequency-counts-for-unique-values-in-an-array)
+            * [Histogram count](#histogram-count)
          * [Iterating easily over an array](#iterating-easily-over-an-array)
          * [Fancy indexing](#fancy-indexing)
             * [<strong>1. Select some rows</strong>](#1-select-some-rows)
@@ -38,6 +37,7 @@
          * [Vectorized outer product](#vectorized-outer-product)
          * [Vectorized elementwise multiplication](#vectorized-elementwise-multiplication)
          * [Vectorized general dot product](#vectorized-general-dot-product)
+      * [meshgrid](#meshgrid)
       * [Vectorized elementwise](#vectorized-elementwise)
       * [Math functions](#math-functions)
       * [NPZ files](#npz-files)
@@ -45,7 +45,7 @@
       * [Exporting txt files easily with specific format](#exporting-txt-files-easily-with-specific-format)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Sat 31 Jul 2021 15:59:44 IDT -->
+<!-- Added by: gil_diy, at: Sun 21 Nov 2021 11:53:04 IST -->
 
 <!--te-->
 
@@ -254,20 +254,6 @@ To find the coordinates (row number, column number) just use `np.where(mat > 0)`
 np.count_nonzero(my_mat!=False)
 ```
 
-### Histogram count
-
-```python
-x = np.array([1, 1, 1, 2, 2, 2, 5, 25, 1, 1])
-elements_count = np.bincount(x)
-elements = np.nonzero(y)[0]
-print(dict(zip(elements, elements_count[elements])))
-```
-
-**final output would be:**
-
-```
-{1: 5, 2: 3, 5: 1, 25: 1}
-```
 
 ### Transpose a matrix/array
 
@@ -312,7 +298,7 @@ Find index of minimum value | np.argmin(vec) | 0
 Find index of maximum value | np.argmax(vec) | 9
 Compute median value | np.median(vec) | 5
 Evaluate whether any elements are true | np.any(vec > 5) True
-Evaluate whether all elements are true | np.allnp.any(vec > -1) | True
+Evaluate whether all elements are true | np.all(vec > -1) | True
 
 ### Aggregation functions example on matrix:
 
@@ -331,10 +317,14 @@ data = np.array([56.0, 0.0, 4.4, 68.0],
 print(data)
 
 # Let's sum up the colories for each fruit:
-cal = data.sum(axis=0)
+cal = data.sum(axis=0) 
+
+# Axis = 0 means sum each column
+# Axis = 1 means sum each row
+
 print(cal)
 
-precentage = 100*data/cal # Using broadcasting
+precentage = (data/cal) * 100 # Using broadcasting
 print(precentage)
 ```
 
@@ -381,12 +371,21 @@ in1d(x,y) | Compute a boolean array indicating whether each element of x is cont
 setdiff1d(x, y) | Set difference, elements in x that are not in y
 
 
-#### Get frequency counts for unique values in an array
+#### Histogram count (Get frequency counts for unique values)
+
 ```python
-y = np.bincount(a)
-ii = np.nonzero(y)[0]
-out = np.vstack((ii, y[ii])).T
+x = np.array([1, 1, 1, 2, 2, 2, 5, 25, 1, 1])
+elements_count = np.bincount(x)
+elements = np.nonzero(y)[0]
+print(dict(zip(elements, elements_count[elements])))
 ```
+
+**final output would be:**
+
+```
+{1: 5, 2: 3, 5: 1, 25: 1}
+```
+
 
 ### Iterating easily over an array
 
@@ -520,7 +519,13 @@ new_shape = np.squeeze(x).shape
   # `[array([0.,  1.,  2.]), array([3.,  4.,  5.]), array([6.,  7.])]`
 ```
 
+## Removing rows/columns
 
+
+
+```python
+np.delete(orig_cord, np.where(con), axis=1)
+```
 
 ## Multiplication:
 
@@ -625,6 +630,50 @@ c = a*b
 ```
 
 This **would fail** since **broadcast can't be done** .
+
+## meshgrid
+
+<p align="center" style="width:400px;" >
+  <img src="images/numpy/numpy-meshgrid.png" title="tool tip here">
+</p>
+
+```python
+X = np.arange(start=-4, stop=4, step=1)
+Y = np.arange(start=-5, stop=5, step=1)
+
+xx, yy = np.meshgrid(X, Y)
+
+print("X coordinates:\n{}\n".format(xx))
+print("Y coordinates:\n{}".format(yy))
+```
+
+output:
+
+```
+X coordinates:
+[[-4 -3 -2 -1  0  1  2  3]
+ [-4 -3 -2 -1  0  1  2  3]
+ [-4 -3 -2 -1  0  1  2  3]
+ [-4 -3 -2 -1  0  1  2  3]
+ [-4 -3 -2 -1  0  1  2  3]
+ [-4 -3 -2 -1  0  1  2  3]
+ [-4 -3 -2 -1  0  1  2  3]
+ [-4 -3 -2 -1  0  1  2  3]
+ [-4 -3 -2 -1  0  1  2  3]
+ [-4 -3 -2 -1  0  1  2  3]]
+
+Y coordinates:
+[[-5 -5 -5 -5 -5 -5 -5 -5]
+ [-4 -4 -4 -4 -4 -4 -4 -4]
+ [-3 -3 -3 -3 -3 -3 -3 -3]
+ [-2 -2 -2 -2 -2 -2 -2 -2]
+ [-1 -1 -1 -1 -1 -1 -1 -1]
+ [ 0  0  0  0  0  0  0  0]
+ [ 1  1  1  1  1  1  1  1]
+ [ 2  2  2  2  2  2  2  2]
+ [ 3  3  3  3  3  3  3  3]
+ [ 4  4  4  4  4  4  4  4]]
+```
 
 ## Vectorized elementwise
 
