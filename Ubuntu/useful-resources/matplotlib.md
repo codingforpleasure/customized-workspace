@@ -21,8 +21,12 @@
          * [Plot with logarithmic scale for y-axis](#plot-with-logarithmic-scale-for-y-axis)
          * [Export plot](#export-plot)
          * [Drawing shapes with Matplotlib (patches)](#drawing-shapes-with-matplotlib-patches)
+         * [Configuring plot design](#configuring-plot-design)
+            * [Title plot size](#title-plot-size)
+            * [Legend text size](#legend-text-size)
+            * [Ticks text size](#ticks-text-size)
 
-<!-- Added by: gil_diy, at: Thu Nov 12 11:01:21 IST 2020 -->
+<!-- Added by: gil_diy, at: Tue 09 Mar 2021 11:06:14 IST -->
 
 <!--te-->
 
@@ -85,6 +89,51 @@ if __name__ == '__main__':
 
 <p align="center"> <!-- style="width:400px;" -->
   <img src="images/matplotlib/bar_plot.png" title="tool tip here">
+</p>
+
+
+
+```python
+labels = ['model1', 'model2', 'model3', 'model4', 'model5', 'model6', 'model7', 'model8']
+men_means = [13, 11.3, 9.8, 6.5, 6.3, 5.9, 5.6, 4.9]
+women_means = [12.5, 10.5, 9.8, 6.4, 6.3, 6, 5.3, 4.99]
+
+x = np.arange(len(labels))  # the label locations
+width = 0.35  # the width of the bars
+
+fig, ax = plt.subplots()
+rects1 = ax.bar(x - width / 2, men_means, width, label='RMSE', color='lightblue')
+rects2 = ax.bar(x + width / 2, women_means, width, label='MAE')
+
+# Add some text for labels, title and custom x-axis tick labels, etc.
+ax.set_ylabel('Scores')
+ax.set_title('RMSE and MAE comparisons among different recommendation models')
+ax.set_xticks(x)
+ax.set_xticklabels(labels)
+ax.legend()
+
+
+def autolabel(rects):
+    """Attach a text label above each bar in *rects*, displaying its height."""
+    for rect in rects:
+        height = rect.get_height()
+        ax.annotate('{}'.format(height),
+                    xy=(rect.get_x() + rect.get_width() / 2, height),
+                    xytext=(0, 3),  # 3 points vertical offset
+                    textcoords="offset points",
+                    ha='center', va='bottom')
+
+
+autolabel(rects1)
+autolabel(rects2)
+
+fig.tight_layout()
+
+plt.show()
+```
+
+<p align="center"> <!-- style="width:400px;" -->
+  <img src="images/matplotlib/multiple_bar_plot.png" title="tool tip here">
 </p>
 
 ### Line plots
@@ -262,6 +311,11 @@ def histogram_basic_with_declared_bins():
   <img src="images/matplotlib/histograms2.png" title="tool tip here">
 </p>
 
+
+```python
+## The number of bins can be calculated automatically:
+plt.hist(arr, bins='auto')
+```
 
 [Reference](https://www.youtube.com/watch?v=XDv6T4a0RNc&list=PL-osiE80TeTvipOqomVEeZ1HRrcEvtZB_&index=6)
 
@@ -552,6 +606,28 @@ my_poly = Polygon([[.3,.5],[.6,.7],[.8,.55]], color = 'silver')
 ax.add_patch(my_poly)
 
 wheel = Ellipse(xy = [.35,.4], .05, .1, cololr = 'black')
-ax.add_patch(wheel)
+ax.adedd_patch(wheel)
 
+```
+
+
+### Configuring plot design
+
+
+#### Title plot size 
+
+```python
+ax.set_title('My title', fontsize=20)
+```
+#### Legend text size
+
+```python
+ax.legend(fontsize='x-large')  # 'xx-small', 'x-small', 'small', 'medium', 'large', 'x-large', 'xx-large'
+```
+
+#### Ticks text size
+
+```python
+ax.xaxis.label.set_size(16)
+ax.yaxis.label.set_size(18)
 ```
