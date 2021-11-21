@@ -20,7 +20,7 @@
          * [Unique and Other Set Logic](#unique-and-other-set-logic)
             * [unique and exclude NAN](#unique-and-exclude-nan)
             * [sorted unique values in an array](#sorted-unique-values-in-an-array)
-            * [Histogram count](#histogram-count)
+            * [Histogram count (Get frequency counts for unique values)](#histogram-count-get-frequency-counts-for-unique-values)
          * [Iterating easily over an array](#iterating-easily-over-an-array)
          * [Fancy indexing](#fancy-indexing)
             * [<strong>1. Select some rows</strong>](#1-select-some-rows)
@@ -32,6 +32,7 @@
       * [Squizzing](#squizzing)
       * [Unsquizzing](#unsquizzing)
       * [splitting data](#splitting-data)
+      * [Removing rows/columns](#removing-rowscolumns)
       * [Multiplication:](#multiplication)
          * [Vectorized dot product of vectors](#vectorized-dot-product-of-vectors)
          * [Vectorized outer product](#vectorized-outer-product)
@@ -39,13 +40,18 @@
          * [Vectorized general dot product](#vectorized-general-dot-product)
       * [meshgrid](#meshgrid)
       * [Vectorized elementwise](#vectorized-elementwise)
-      * [Math functions](#math-functions)
+      * [Linear algebra](#linear-algebra)
+         * [Decompositions](#decompositions)
+            * [SVD Singular Value Decomposition](#svd-singular-value-decomposition)
+            * [Cholesky Decomposition](#cholesky-decomposition)
+            * [qr factorization of a matrix](#qr-factorization-of-a-matrix)
+         * [Matrix rank](#matrix-rank)
       * [NPZ files](#npz-files)
          * [Saving our datasets to NPZ files](#saving-our-datasets-to-npz-files)
       * [Exporting txt files easily with specific format](#exporting-txt-files-easily-with-specific-format)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Sun 21 Nov 2021 11:53:04 IST -->
+<!-- Added by: gil_diy, at: Sun 21 Nov 2021 18:11:39 IST -->
 
 <!--te-->
 
@@ -116,6 +122,7 @@ Create a **column** vector with **random** numbers | a = np.random.randn(5, 1)
 Create a **row** vector with **random** numbers | a = np.random.randn(1, 5)
 Create a matrix with **random** numbers | a = np.random.randn(5, 3) # 5 Rows, 3 columns
 Create a matrix with ones on a diagonal (optionally offset) | np.eye(N=3)
+Create a matrix with specific values on a diagonal |np.diag([1, 82, 3, 5])
 Reshape array to matrix 2x5 | np.arange(10).reshape(2, 5)
 ==>							| np.arange(10).reshape(2, -1)      (**Read tip #2**)
 == | ==
@@ -126,6 +133,8 @@ Remove single-dimensional entries from the shape of an array | x = np.array([[[0
 Concatenation, or joining of two arrays |  x = np.array([1, 2, 3])
 ==> | y = np.array([3, 2, 1])
 ==> | np.concatenate([x, y])
+Extract the lower triangle (below diagonal) | np.tril(A)
+Extract the upper triangle (above diagonal)| np.triu(A)
 
 
 
@@ -547,7 +556,7 @@ dot_res = np.dot(x1,x2)
 Another example:
 
 ```python
-mat1 = np.array([[1, 2, 3],[4,5,6]],[1,6,2]) # mat1.shape => (2,3)
+mat1 = np.array([[1, 2, 3], [4, 5, 6], [1, 6, 2]])  # mat1.shape => (2,3)
 mat2 = np.array([[7, 8],[9,10],[11,12]]) # mat2.shape => (3,2)
 
 dot_res = np.dot(mat1,mat2)
@@ -558,6 +567,7 @@ dot_res = np.dot(mat1,mat2)
 
 # dot_res.shape => (3,2)
 ```
+
 ### Vectorized outer product
 
 The outer product of two coordinate vectors is a matrix. If the two vectors have dimensions n and m, then their outer product is an **n × m matrix**
@@ -683,27 +693,92 @@ Operation | Explanation
  divide | element-description
 
 
-## Math functions
-
 Description | Function
 ------------|-----
 Convert from radian to degree | `np.degree(np.pi/2)`
-Computing the magnitude of the vector using norm() | `numpy.linalg.norm(v)` the default is power of two
-Euclidean distance of two vectors | `‫‪np.linalg.norm(x-y‬‬)`                                                       
+
+
+## Linear algebra
+
+
+### Decompositions
+
+#### SVD Singular Value Decomposition
+
+Take the matrix M and decompose or represent it as the product of three other matrices.
+
+<p align="center" style="width:400px;" >
+  <img src="images/numpy/svd.png" title="tool tip here">
+</p>
+
+```python
+M = np.array([[1, 0, 0, 0, 2],
+              [0, 0, 3, 0, 0],
+              [0, 0, 0, 0, 0],
+              [0, 2, 0, 0, 0]])
+
+u, s, vh = np.linalg.svd(M, full_matrices=True)
+print("U shape is: ", u.shape)
+print("s shape is: ", s.shape)
+print("vh shape is: ", vh.shape)
+```
+
+```
+U shape is:  (4, 4)
+s shape is:  (4,)
+vh shape is:  (5, 5)
+```
+
+
+#### Cholesky Decomposition
+
+#### qr factorization of a matrix
+
+
+Description | Function
+------------|-----
+Computing the magnitude of the vector using norm() | `numpy.linalg.norm(v)`  - The default is power of two
+Euclidean distance of two vectors | `‫‪np.linalg.norm(x-y‬‬)`
+
+
+[Link](https://numpy.org/doc/stable/reference/routines.linalg.html)
+
 
 Simple example:
 ```python
 v = numpy.array([0, 1, 2, 3, 4]) 
 
 # computing and displaying the magnitude of the vector 
-print('Magnitude of the Vector:', numpy.linalg.norm(v)) # Magnitude of the Vector: 5.477225575051661
+print('Magnitude of the Vector:', np.linalg.norm(v)) # Magnitude of the Vector: 5.477225575051661
+
+# Is equivalent as :
+print('Magnitude of the Vector:', np.sqrt(np.sum(v**2))) # Magnitude of the Vector: 5.477225575051661
 
 # Computing the nth order of the magnitude of vector 
 print('ord is 0: ', numpy.linalg.norm(v, ord = 0))  # ord is 0:  4.0
 print('ord is 1: ', numpy.linalg.norm(v, ord = 1))  # ord is 1:  10.0
-print('ord is 2: ', numpy.linalg.norm(v, ord = 2))  # ord is 2:  5.477225575051661
+print('ord is 2: ', numpy.linalg.norm(v, ord = 2))  # ord is 2:  5.477225575051661 (The default)
 print('ord is 3: ', numpy.linalg.norm(v, ord = 3))  # ord is 3:  4.641588833612778
 print('ord is 4: ', numpy.linalg.norm(v, ord = 4))  # ord is 4:  4.337613136533361
+```
+
+### Matrix rank
+
+```python
+import numpy as np
+
+A = np.random.randn(3,6)
+r = np.linalg.matrix_rank(A)  
+
+prink("The rank of A is: ", r) 
+# You will get "The rank of A is: 3"
+
+B = np.array([[1, -2], [2, -4]])
+r = np.linalg.matrix_rank(B)  
+
+prink("The rank of B is: ", r)
+
+# You will get "The rank of B is: 1"
 ```
 
 ## NPZ files
