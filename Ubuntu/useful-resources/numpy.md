@@ -40,9 +40,13 @@
          * [Vectorized general dot product](#vectorized-general-dot-product)
          * [Hadamard multiplication](#hadamard-multiplication)
          * [Standard matrix multiplication](#standard-matrix-multiplication)
+         * [Invert matrix](#invert-matrix)
+            * [Invert a matrix](#invert-a-matrix)
+            * [Is matrix invertible?](#is-matrix-invertible)
       * [meshgrid](#meshgrid)
       * [Vectorized elementwise](#vectorized-elementwise)
       * [Linear algebra](#linear-algebra)
+         * [Calculate Determinant matrix](#calculate-determinant-matrix)
          * [Decompositions](#decompositions)
             * [SVD Singular Value Decomposition](#svd-singular-value-decomposition)
             * [Cholesky Decomposition](#cholesky-decomposition)
@@ -53,7 +57,7 @@
       * [Exporting txt files easily with specific format](#exporting-txt-files-easily-with-specific-format)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Mon 22 Nov 2021 14:06:21 IST -->
+<!-- Added by: gil_diy, at: Mon 22 Nov 2021 16:41:08 IST -->
 
 <!--te-->
 
@@ -657,19 +661,83 @@ print("Hadamard multiplication result: ", hadamard_multiplication_result)
 
 ### Standard matrix multiplication
 
+
+In python there are two ways to conduct matrix multiplication:
+
+1. The @ operator (i.e: M1 @ M2)
+2. The np.matmul()
+
 ```python
 M1 = np.array([[1, 5, 10, 3], [2, 0, 1, 3], [-1, 2, 3, 4], [6, 6, 2, 3]])
 M2 = np.array([[1, 2, 1, 1], [2, 1, 1, 1], [2, 2, 1, 1], [2, 2, 2, 1]])
 
-matrix_multiplication_result = M1 @ M2
-print("matrix_multiplication_result: ", matrix_multiplication_result)
+matrix_multiplication_result1 = M1 @ M2
+print("matrix_multiplication_result1: ", matrix_multiplication_result1)
 
 # matrix_multiplication_result: 
 # [[37 33 22 19]
 # [10 12  9  6]
 # [17 14 12  8]
 # [28 28 20 17]]
+
+matrix_multiplication_result2 = np.matmul(M1, M2)
+print("matrix_multiplication_result2: ", matrix_multiplication_result2)
+
+# matrix_multiplication_result: 
+#  [[37 33 22 19]
+#  [10 12  9  6]
+#  [17 14 12  8]
+#  [28 28 20 17]]
 ```
+
+### Invert matrix
+
+A square matrix is called singular if and only if the value of its determinant is equal to zero
+
+[How in math to find invertible matrix?](https://www.wikihow.com/Find-the-Inverse-of-a-3x3-Matrix)
+
+
+#### Invert a matrix
+
+```python
+x = np.array([[1, 2, 3], [0, 1, 4], [5, 6, 0]])
+x_inverted = np.linalg.pinv(x)
+
+print("x_inverted: ", )
+
+# output: x_inverted 
+#
+# [[-24.  18.   5.]
+#  [ 20. -15.  -4.]
+#  [ -5.   4.   1.]]
+```
+#### Is matrix invertible?
+```python
+def is_invertible_approach1(a):
+  # checking the matrix is square and the rank is equivalent to the size of the matrix
+  return a.shape[0] == a.shape[1] and np.linalg.matrix_rank(a) == a.shape[0]
+
+def is_invertible_approach2(a):
+  # checking the matrix is square and the rank is equivalent to the size of the matrix
+  return (np.linalg.det(a) != 0)
+
+a = np.random.rand(10, 10)
+b = np.random.rand(10, 10)
+
+# One row is a linear combination of two others
+b[-1] = b[0] + b[1] 
+
+np.linalg.matrix_rank(a)
+np.linalg.matrix_rank(b)
+
+is_invertible_approach1(a) # Returned: True
+is_invertible_approach2(a) # Returned: True
+
+is_invertible_approach1(b) # Returned: False
+is_invertible_approach2(b) # Returned: False
+```
+
+
 
 
 ## meshgrid
@@ -729,7 +797,16 @@ Description | Function
 Convert from radian to degree | `np.degree(np.pi/2)`
 
 
+
 ## Linear algebra
+
+### Calculate Determinant matrix
+
+The determinant is a scalar value that is a function of the entries of a square matrix. It allows characterizing some properties of the matrix and the linear map represented by the matrix.
+
+```python
+np.linalg.det(A)
+```
 
 
 ### Decompositions
