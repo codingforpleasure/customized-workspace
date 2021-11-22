@@ -11,6 +11,8 @@
             * [rand](#rand)
          * [Forming](#forming)
             * [Stack 1-D arrays as columns into a 2-D array.](#stack-1-d-arrays-as-columns-into-a-2-d-array)
+            * [vstack](#vstack)
+            * [hstack](#hstack)
          * [Retrieving info about an array](#retrieving-info-about-an-array)
          * [Counts the number of non-zero values in an array given a constraint](#counts-the-number-of-non-zero-values-in-an-array-given-a-constraint)
          * [Transpose a matrix/array](#transpose-a-matrixarray)
@@ -40,24 +42,25 @@
          * [Vectorized general dot product](#vectorized-general-dot-product)
          * [Hadamard multiplication](#hadamard-multiplication)
          * [Standard matrix multiplication](#standard-matrix-multiplication)
-         * [Invert matrix](#invert-matrix)
-            * [Invert a matrix](#invert-a-matrix)
-            * [Is matrix invertible?](#is-matrix-invertible)
       * [meshgrid](#meshgrid)
       * [Vectorized elementwise](#vectorized-elementwise)
       * [Linear algebra](#linear-algebra)
+         * [Invert matrix](#invert-matrix)
+            * [Invert a matrix](#invert-a-matrix)
+            * [Is matrix invertible?](#is-matrix-invertible)
          * [Calculate Determinant matrix](#calculate-determinant-matrix)
          * [Decompositions](#decompositions)
             * [SVD Singular Value Decomposition](#svd-singular-value-decomposition)
             * [Cholesky Decomposition](#cholesky-decomposition)
             * [qr factorization of a matrix](#qr-factorization-of-a-matrix)
+         * [Distance of vectors](#distance-of-vectors)
          * [Matrix rank](#matrix-rank)
       * [NPZ files](#npz-files)
          * [Saving our datasets to NPZ files](#saving-our-datasets-to-npz-files)
       * [Exporting txt files easily with specific format](#exporting-txt-files-easily-with-specific-format)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Mon 22 Nov 2021 16:41:08 IST -->
+<!-- Added by: gil_diy, at: Mon 22 Nov 2021 17:03:52 IST -->
 
 <!--te-->
 
@@ -226,9 +229,7 @@ array([[1, 2, 5],
 
 #### Stack 1-D arrays as columns into a 2-D array.
 ```python
-a = np.array((1, 2, 3))
-b = np.array((2, 3, 4))
-np.column_stack((a, b))
+np.column_stack(([1,2,3],[4,5,6]))
 ```
 
 The output would be:
@@ -237,6 +238,30 @@ array([[1, 2],
        [2, 3],
        [3, 4]])
 ```
+
+#### vstack
+
+```python
+np.column_stack(([1,2,3],[4,5,6]))
+```
+
+The output would be:
+```python
+array([[1, 2, 3],
+       [4, 5, 6]])
+```
+#### hstack
+
+```python
+np.hstack(([1,2,3],[4,5,6]))
+```
+
+The output would be:
+
+```python
+array([1, 2, 3, 4, 5, 6])
+```
+
 ### Retrieving info about an array
 
 ```python
@@ -690,54 +715,6 @@ print("matrix_multiplication_result2: ", matrix_multiplication_result2)
 #  [28 28 20 17]]
 ```
 
-### Invert matrix
-
-A square matrix is called singular if and only if the value of its determinant is equal to zero
-
-[How in math to find invertible matrix?](https://www.wikihow.com/Find-the-Inverse-of-a-3x3-Matrix)
-
-
-#### Invert a matrix
-
-```python
-x = np.array([[1, 2, 3], [0, 1, 4], [5, 6, 0]])
-x_inverted = np.linalg.pinv(x)
-
-print("x_inverted: ", )
-
-# output: x_inverted 
-#
-# [[-24.  18.   5.]
-#  [ 20. -15.  -4.]
-#  [ -5.   4.   1.]]
-```
-#### Is matrix invertible?
-```python
-def is_invertible_approach1(a):
-  # checking the matrix is square and the rank is equivalent to the size of the matrix
-  return a.shape[0] == a.shape[1] and np.linalg.matrix_rank(a) == a.shape[0]
-
-def is_invertible_approach2(a):
-  # checking the matrix is square and the rank is equivalent to the size of the matrix
-  return (np.linalg.det(a) != 0)
-
-a = np.random.rand(10, 10)
-b = np.random.rand(10, 10)
-
-# One row is a linear combination of two others
-b[-1] = b[0] + b[1] 
-
-np.linalg.matrix_rank(a)
-np.linalg.matrix_rank(b)
-
-is_invertible_approach1(a) # Returned: True
-is_invertible_approach2(a) # Returned: True
-
-is_invertible_approach1(b) # Returned: False
-is_invertible_approach2(b) # Returned: False
-```
-
-
 
 
 ## meshgrid
@@ -800,6 +777,54 @@ Convert from radian to degree | `np.degree(np.pi/2)`
 
 ## Linear algebra
 
+### Invert matrix
+
+A square matrix is called singular if and only if the value of its determinant is equal to zero
+
+[How in math to find invertible matrix?](https://www.wikihow.com/Find-the-Inverse-of-a-3x3-Matrix)
+
+
+#### Invert a matrix
+
+```python
+x = np.array([[1, 2, 3], [0, 1, 4], [5, 6, 0]])
+x_inverted = np.linalg.pinv(x)
+
+print("x_inverted: ", )
+
+# output: x_inverted 
+#
+# [[-24.  18.   5.]
+#  [ 20. -15.  -4.]
+#  [ -5.   4.   1.]]
+```
+#### Is matrix invertible?
+```python
+def is_invertible_approach1(a):
+  # checking the matrix is square and the rank is equivalent to the size of the matrix
+  return a.shape[0] == a.shape[1] and np.linalg.matrix_rank(a) == a.shape[0]
+
+def is_invertible_approach2(a):
+  # checking the matrix is square and the rank is equivalent to the size of the matrix
+  return (np.linalg.det(a) != 0)
+
+a = np.random.rand(10, 10)
+b = np.random.rand(10, 10)
+
+# One row is a linear combination of two others
+b[-1] = b[0] + b[1] 
+
+np.linalg.matrix_rank(a)
+np.linalg.matrix_rank(b)
+
+is_invertible_approach1(a) # Returned: True
+is_invertible_approach2(a) # Returned: True
+
+is_invertible_approach1(b) # Returned: False
+is_invertible_approach2(b) # Returned: False
+```
+
+
 ### Calculate Determinant matrix
 
 The determinant is a scalar value that is a function of the entries of a square matrix. It allows characterizing some properties of the matrix and the linear map represented by the matrix.
@@ -848,6 +873,8 @@ vh shape is:  (5, 5)
 
 #### qr factorization of a matrix
 
+
+### Distance of vectors
 
 Description | Function
 ------------|-----
