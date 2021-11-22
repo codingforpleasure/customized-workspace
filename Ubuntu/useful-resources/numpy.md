@@ -38,6 +38,8 @@
          * [Vectorized outer product](#vectorized-outer-product)
          * [Vectorized elementwise multiplication](#vectorized-elementwise-multiplication)
          * [Vectorized general dot product](#vectorized-general-dot-product)
+         * [Hadamard multiplication](#hadamard-multiplication)
+         * [Standard matrix multiplication](#standard-matrix-multiplication)
       * [meshgrid](#meshgrid)
       * [Vectorized elementwise](#vectorized-elementwise)
       * [Linear algebra](#linear-algebra)
@@ -51,7 +53,7 @@
       * [Exporting txt files easily with specific format](#exporting-txt-files-easily-with-specific-format)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Mon 22 Nov 2021 00:27:10 IST -->
+<!-- Added by: gil_diy, at: Mon 22 Nov 2021 13:57:42 IST -->
 
 <!--te-->
 
@@ -572,6 +574,7 @@ dot_res = np.dot(mat1,mat2)
 
 The outer product of two coordinate vectors is a matrix. If the two vectors have dimensions n and m, then their outer product is an **n × m matrix**
 
+
 <p align="center" style="width:900px;" >
   <img src="images/numpy/outer_product.png" title="tool tip here">
 </p>
@@ -589,7 +592,8 @@ outer_res = np.outer(x1,x2)
 
 it's equivalent to this:
 ```python
-outer = np.zeros((len(x1),len(x2))) # we create a len(x1)*len(x2) matrix with only zeros
+# We create a len(x1)*len(x2) matrix with only zeros
+outer = np.zeros((len(x1),len(x2))) #
 for i in range(len(x1)):
     for j in range(len(x2)):
         outer[i,j] = x1[i]*x2[j]
@@ -633,13 +637,40 @@ for i in range(W.shape[0]):
 **The difference** : np.dot(a,b) performs a matrix multiplication on a and b, whereas "a*b" performs an element-wise multiplication.
 
 
+### Hadamard multiplication
+
 ```python
-a = np.random.randn(4, 3) # a.shape = (4, 3)
-b = np.random.randn(3, 2) # b.shape = (3, 2)
-c = a*b
+M1 = np.array([[1, 5, 10, 3], [2, 0, 1, 3], [-1, 2, 3, 4], [6, 6, 2, 3]])
+M2 = np.array([[1, 2, 1, 1], [2, 1, 1, 1], [2, 2, 1, 1], [2, 2, 2, 1]])
+
+# Hadamard multiplication
+hadamard_multiplication_result = M1 * M2
+print("Hadamard multiplication result: ", hadamard_multiplication_result)
+
+# Hadamard multiplication result: 
+#  [[ 1 10 10  3]
+#  [ 4  0  1  3]
+#  [-2  4  3  4]
+#  [12 12  4  3]]
+
 ```
 
-This **would fail** since **broadcast can't be done** .
+### Standard matrix multiplication
+
+```python
+M1 = np.array([[1, 5, 10, 3], [2, 0, 1, 3], [-1, 2, 3, 4], [6, 6, 2, 3]])
+M2 = np.array([[1, 2, 1, 1], [2, 1, 1, 1], [2, 2, 1, 1], [2, 2, 2, 1]])
+
+matrix_multiplication_result = M1 @ M2
+print("matrix_multiplication_result: ", matrix_multiplication_result)
+
+# matrix_multiplication_result: 
+# [[37 33 22 19]
+# [10 12  9  6]
+# [17 14 12  8]
+# [28 28 20 17]]
+```
+
 
 ## meshgrid
 
@@ -718,7 +749,7 @@ Has a wide array of applications:
 
 ```python
 M = np.array([[1, 0, 0, 0, 2],
-              [0, 0, 3, 0, 0],
+              [0, 0 3, 0, 0],
               [0, 0, 0, 0, 0],
               [0, 2, 0, 0, 0]])
 
