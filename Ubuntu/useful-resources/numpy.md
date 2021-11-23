@@ -17,6 +17,7 @@
          * [Counts the number of non-zero values in an array given a constraint](#counts-the-number-of-non-zero-values-in-an-array-given-a-constraint)
          * [Transpose a matrix/array](#transpose-a-matrixarray)
          * [Aggregation functions](#aggregation-functions)
+         * [Accumulated sum](#accumulated-sum)
          * [Aggregation functions example on matrix:](#aggregation-functions-example-on-matrix)
          * [Concatenating columns](#concatenating-columns)
          * [Unique and Other Set Logic](#unique-and-other-set-logic)
@@ -60,7 +61,7 @@
       * [Exporting txt files easily with specific format](#exporting-txt-files-easily-with-specific-format)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Mon 22 Nov 2021 17:03:52 IST -->
+<!-- Added by: gil_diy, at: Tue 23 Nov 2021 17:02:44 IST -->
 
 <!--te-->
 
@@ -340,6 +341,15 @@ Compute median value | np.median(vec) | 5
 Evaluate whether any elements are true | np.any(vec > 5) True
 Evaluate whether all elements are true | np.all(vec > -1) | True
 
+### Accumulated sum
+
+```python
+var_exp = [1,2,3,5,25,15]
+
+print(np.cumsum(var_exp))
+
+# output: [ 1  3  6 11 36 51]
+```
 ### Aggregation functions example on matrix:
 
 For example:
