@@ -6,15 +6,19 @@
       * [pipe](#pipe)
       * [wait](#wait)
       * [waitpid](#waitpid)
+      * [Sending process to background in c](#sending-process-to-background-in-c)
       * [dup2](#dup2)
       * [getpid](#getpid)
+      * [Signals](#signals)
+      * [Stderror](#stderror)
       * [Great reference](#great-reference)
 
-<!-- Added by: gil_diy, at: Mon 22 Nov 2021 08:52:45 IST -->
+<!-- Added by: gil_diy, at: Tue 23 Nov 2021 10:42:37 IST -->
 
 <!--te-->
 # Processes
 
+[well explained instructions for implementing shell app](https://cs.brown.edu/courses/cs033/docs/proj/shell2.pdf)
 
 ## fork
 Fork system call is used for creating a new process, which is called child process, which runs concurrently with the process that makes the fork() call (parent process). After a new child process is created, both processes will execute the next instruction following the fork() system call.
@@ -109,6 +113,12 @@ int main()
 The waitpid() system call suspends execution of the calling process until a child specified by pid argument has changed state. By default, waitpid() waits only for terminated children, but this behavior is modifiable via the options argument, as described below. 
 
 
+[Link](https://www.delftstack.com/howto/c/waitpid-in-c/)
+[Link](https://tildesites.bowdoin.edu/~sbarker/teaching/courses/systems/19fall/files/process-slides.pdf)
+
+## Sending process to background in c
+
+
 
 ## dup2
 allocates a new file descriptor that refer
@@ -118,6 +128,34 @@ to the same open file description as the descriptor oldfd
 
 ## getpid
 
+
+## Signals
+```c
+#include <stdlib.h>
+#include <signal.h>
+
+sig_atomic_t signal_count;
+
+void MyHandler( int sig_number )
+{
+   ++signal_count;
+}
+
+int main( void )
+{
+  signal( SIGFPE, MyHandler );   /* set own handler */
+  signal( SIGABRT, SIG_DFL );    /* Default action */
+  signal( SIGFPE, SIG_IGN );     /* Ignore condition */
+  return (EXIT_SUCCESS);
+}
+```
+
+
+## Stderror
+
+```c
+fprintf(stderr, "Gil there was an error");
+```
 
 ## Great reference
 
