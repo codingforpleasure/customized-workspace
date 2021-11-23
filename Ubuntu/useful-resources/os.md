@@ -13,7 +13,7 @@
       * [Stderror](#stderror)
       * [Great reference](#great-reference)
 
-<!-- Added by: gil_diy, at: Tue 23 Nov 2021 10:42:37 IST -->
+<!-- Added by: gil_diy, at: Tue 23 Nov 2021 10:45:59 IST -->
 
 <!--te-->
 # Processes
@@ -106,6 +106,8 @@ int main()
     return 0;
 }
 ```
+
+[Link](http://www.cs.loyola.edu/~jglenn/702/S2005/Examples/dup2.html)
 
 ## wait
 
