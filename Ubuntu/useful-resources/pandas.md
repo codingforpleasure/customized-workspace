@@ -20,7 +20,8 @@
             * [Get column index for a given specific name](#get-column-index-for-a-given-specific-name)
             * [Dropping columns in pandas](#dropping-columns-in-pandas)
             * [Concatentaing columns and rows](#concatentaing-columns-and-rows)
-            * [Converting from numpy to panda](#converting-from-numpy-to-panda)
+            * [Converting from numpy table to pandas dataframe](#converting-from-numpy-table-to-pandas-dataframe)
+            * [Converting from pandas dataframe to numpy table](#converting-from-pandas-dataframe-to-numpy-table)
             * [Converting categorical columns to numbers (4 Methods)](#converting-categorical-columns-to-numbers-4-methods)
             * [Accessing an element in pandas](#accessing-an-element-in-pandas)
             * [Accessing a column in pandas](#accessing-a-column-in-pandas)
@@ -74,7 +75,7 @@
          * [Statsmodels](#statsmodels)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Tue 28 Sep 2021 17:53:23 IDT -->
+<!-- Added by: gil_diy, at: Tue 23 Nov 2021 13:33:00 IST -->
 
 <!--te-->
 
@@ -271,10 +272,18 @@ result = pd.concat([df[0:2], df[-2:]], axis = 0)
 my_df.loc["two"] = [4,5,6]
 ```
 
-#### Converting from numpy to panda
+#### Converting from numpy table to pandas dataframe
 ```python
 my_2darray = np.array([[1, 2, 3], [4, 5, 6]])
 print(pd.dataframe(my_2darray,columns=['a','b','c']))
+```
+
+#### Converting from pandas dataframe to numpy table
+
+When we use the `.values` we get the actual numpy matrix
+
+```python
+x = df.loc[:, features].values
 ```
 
 #### Converting categorical columns to numbers (4 Methods)
@@ -631,8 +640,8 @@ df2.loc['Israel']
 
 ### Printing data so all columns will be presented
 ```python
-pd.set_option('display.max_rows', 500) # To seel all rows
-pd.set_option('display.max_columns', 500) # To seel all columns
+pd.set_option('display.max_rows', 500)    # To see all rows
+pd.set_option('display.max_columns', 500) # To see all columns
 pd.set_option('display.width', 1000)
 ```
 
