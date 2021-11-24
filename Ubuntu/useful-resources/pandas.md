@@ -75,7 +75,7 @@
          * [Statsmodels](#statsmodels)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Tue 23 Nov 2021 13:33:00 IST -->
+<!-- Added by: gil_diy, at: Wed 24 Nov 2021 20:45:35 IST -->
 
 <!--te-->
 
@@ -430,7 +430,27 @@ df['column_name'].describe()
 # or for all numerical columns
 
 df.describe()
+
 ```
+
+**For getting all stats write:**
+
+```python
+df.describe(include='all')
+```
+
+* count
+* unique
+* top (most frequent)
+* freq
+* mean
+* std
+* min
+* 25%
+* 50%
+* 75%
+* max
+
 
 ## Get counts for spcific column (Exactly like table function in R)
 ```python
