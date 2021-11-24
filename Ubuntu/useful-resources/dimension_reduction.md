@@ -1,14 +1,21 @@
 <!--ts-->
    * [Dimension Reduction](#dimension-reduction)
+   * [Feature extraction and elimination](#feature-extraction-and-elimination)
       * [Missing values ratio](#missing-values-ratio)
       * [Low-variance filter](#low-variance-filter)
       * [High-correlation filter](#high-correlation-filter)
       * [Random forest](#random-forest)
       * [Backwards-feature elimination](#backwards-feature-elimination)
+      * [Forward-feature construction](#forward-feature-construction)
       * [PCA (Principal Component Analysis)](#pca-principal-component-analysis)
+      * [LDA (Linear Discriminatory Analysis)](#lda-linear-discriminatory-analysis)
       * [SVD (Singular Value Decomposition)](#svd-singular-value-decomposition)
+   * [Manifold](#manifold)
+      * [Isomap embedding](#isomap-embedding)
+      * [LLE (Locally linear embedding)](#lle-locally-linear-embedding)
+      * [t-SNE (t-Distributed Stochastic Neighbour)](#t-sne-t-distributed-stochastic-neighbour)
 
-<!-- Added by: gil_diy, at: Mon 22 Nov 2021 19:00:30 IST -->
+<!-- Added by: gil_diy, at: Wed 24 Nov 2021 13:21:53 IST -->
 
 <!--te-->
 
@@ -73,7 +80,7 @@ progressively removes one feature at a time, until the algorithm has reached the
 
 ## Forward-feature construction
 
-The forward feature construction, unlike the backwards feature elimination technique, takes a bottom up approach,
+ The forward feature construction, unlike the backwards feature elimination technique, takes a bottom up approach,
 where it starts with one feature, progressively adding the next feature with the highest increase in performance.
 
 
@@ -87,6 +94,14 @@ To do this, the algorithm **creates a new set of features from an existing set o
 
 Note, however, to avoid a feature with large values dominating the results, **all variables should be on the same scale** .
 In Python’s scikit-learn, to achieve this, you can use the ‘StandardScaler’ function to ensure all of the variables are on the same scale.
+
+
+PCA which simply maximizes the variance
+
+PCA is a linear algorithm. It will not be able to interpret complex polynomial relationship between features. On the other hand, t-SNE is based on probability distributions with random walk on neighborhood graphs to find the structure within the data. 
+
+A major problem with, linear dimensionality reduction algorithms is that they concentrate on placing dissimilar data points far apart in a lower dimension representation. But in order to represent high dimension data on low dimension, non-linear manifold, it is important that similar datapoints must be represented close together, which is not what linear dimensionality reduction algorithms do.
+
 
 ## LDA (Linear Discriminatory Analysis)
 
@@ -110,6 +125,7 @@ This method is particularly popular because it’s based on simple, interpretabl
 
 ## t-SNE (t-Distributed Stochastic Neighbour)
 
+t-SNE outputs provide better results than PCA and other linear dimensionality reduction models. This is because a linear method such as classical scaling is not good at modeling curved manifolds. t-SNE focuses on preserving the distances between widely separated data points rather than on preserving the distances between nearby data points.
 
 
 [Link](https://blogs.oracle.com/r/using-svd-for-dimensionality-reduction)
