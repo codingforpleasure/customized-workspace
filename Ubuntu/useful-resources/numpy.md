@@ -17,7 +17,6 @@
          * [Counts the number of non-zero values in an array given a constraint](#counts-the-number-of-non-zero-values-in-an-array-given-a-constraint)
          * [Transpose a matrix/array](#transpose-a-matrixarray)
          * [Aggregation functions](#aggregation-functions)
-         * [Accumulated sum](#accumulated-sum)
          * [Aggregation functions example on matrix:](#aggregation-functions-example-on-matrix)
          * [Concatenating columns](#concatenating-columns)
          * [Unique and Other Set Logic](#unique-and-other-set-logic)
@@ -43,6 +42,8 @@
          * [Vectorized general dot product](#vectorized-general-dot-product)
          * [Hadamard multiplication](#hadamard-multiplication)
          * [Standard matrix multiplication](#standard-matrix-multiplication)
+      * [Calculate the covarience matrix](#calculate-the-covarience-matrix)
+      * [Computing Eigenvectors and Eigenvalues](#computing-eigenvectors-and-eigenvalues)
       * [meshgrid](#meshgrid)
       * [Vectorized elementwise](#vectorized-elementwise)
       * [Linear algebra](#linear-algebra)
@@ -61,7 +62,7 @@
       * [Exporting txt files easily with specific format](#exporting-txt-files-easily-with-specific-format)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Tue 23 Nov 2021 17:02:44 IST -->
+<!-- Added by: gil_diy, at: Thu 25 Nov 2021 16:26:59 IST -->
 
 <!--te-->
 
@@ -329,6 +330,7 @@ vec = np.arange(10) # So vec holds: [0 1 2 3 4 5 6 7 8 9]
 Description | command   | result
 -----------|------------|-----
 Compute sum of elements | np.sum(vec) | 45
+Compute Accumulated sum od elements | np.np.cumsum(vec) | [ 0  1  3  6 10 15 21 28 36 45]
 Compute product of elements | np.prod(vec) | 362,880
 Compute mean of elements | np.mean(vec) | 4.5
 Compute standard deviation | np.std(vec)
@@ -341,15 +343,6 @@ Compute median value | np.median(vec) | 5
 Evaluate whether any elements are true | np.any(vec > 5) True
 Evaluate whether all elements are true | np.all(vec > -1) | True
 
-### Accumulated sum
-
-```python
-var_exp = [1,2,3,5,25,15]
-
-print(np.cumsum(var_exp))
-
-# output: [ 1  3  6 11 36 51]
-```
 ### Aggregation functions example on matrix:
 
 For example:
@@ -725,7 +718,17 @@ print("matrix_multiplication_result2: ", matrix_multiplication_result2)
 #  [28 28 20 17]]
 ```
 
+## Calculate the covarience matrix
 
+```python
+cov_mat = np.cov(X_std.T)
+```
+
+## Computing Eigenvectors and Eigenvalues
+
+```python
+eig_vals, eig_vecs = np.linalg.eig(cov_mat)
+```
 
 ## meshgrid
 
