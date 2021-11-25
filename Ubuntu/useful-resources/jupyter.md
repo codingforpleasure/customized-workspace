@@ -4,15 +4,16 @@
       * [Some useful tips](#some-useful-tips)
          * [Jupiter](#jupiter)
       * [Useful hotkeys in Jupyter](#useful-hotkeys-in-jupyter)
-            * [Magic Commands in junyper notebook](#magic-commands-in-junyper-notebook)
+         * [Magic Commands in junyper notebook](#magic-commands-in-junyper-notebook)
       * [Setting up jupyter](#setting-up-jupyter)
       * [Jupyter notebook extensions](#jupyter-notebook-extensions)
       * [debugging in jupyter notebook](#debugging-in-jupyter-notebook)
       * [Clean all output cells in jupter notebook:](#clean-all-output-cells-in-jupter-notebook)
       * [Convert jupyter notebook to python file](#convert-jupyter-notebook-to-python-file)
+      * [Debug jupyter notebook](#debug-jupyter-notebook)
       * [Collection of Tips](#collection-of-tips)
 
-<!-- Added by: gil_diy, at: Tue 08 Jun 2021 16:33:02 IDT -->
+<!-- Added by: gil_diy, at: Thu 25 Nov 2021 13:28:12 IST -->
 
 <!--te-->
 
@@ -59,7 +60,7 @@ Description | Hotkey
 
 
 
-#### Magic Commands in junyper notebook
+### Magic Commands in junyper notebook
 
 Description | command
 ------------------------------------|-----
@@ -82,13 +83,6 @@ For adding snippets and boilerpoints:
 [Link](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/snippets_menu/readme.html)
 
 
-## debugging in jupyter notebook
-
-```python
-pdb.set_trace()
-```
-
-[explanantion how to debug in jupyter notebook](https://youtu.be/Z0ssNAbe81M?list=PLfYUBJiXbdtTttBGq-u2zeY1OTjs5e-Ia&t=6190)
 
 
 ## Clean all output cells in jupter notebook:
@@ -100,6 +94,51 @@ jupyter nbconvert --clear-output --inplace my_notebook.ipynb
 
 ```bash
 jupyter nbconvert --output-dir='./<output-dir>' --to python notebooks/spotify_client.ipynb 
+```
+
+## Debug jupyter notebook
+
+Write:
+
+```python
+pdb.set_trace()
+```
+to set a breakpoint in the specific line you want to start debugging.
+
+There are many more available commands for interactive debugging than we've listed here; the following table contains a description of some of the more common and useful ones:
+
+| Command         |  Description                                                |
+|-----------------|-------------------------------------------------------------|
+| ``l(ist)``      | Show the current location in the file                       |
+| ``c(ontinue)``  | Quit the debugger, continue in the program                  |
+| ``n(ext)``      | Go to the next step of the program                          |
+| ``s(tep)``      | Step into a subroutine                                      |
+| ``p(rint)``     | Print variables, variable value. i.e `p my_len`             |
+| ``u(p)``        | Go up the call stack for figuring out what caused the error |
+| ``d(own)``      | Go down again the call stack                                |
+| ``<enter>``     | Repeat the previous command                                 |
+| ``r(eturn)``    | Return out of a subroutine                                  |
+| ``q(uit)``      | Quit the debugger and the program                           |
+| ``h(elp)``      | Show a list of commands, or find help on a specific command |
+
+For more information, use the ``help`` command in the debugger, or take a look at ``ipdb``'s [online documentation](https://github.com/gotcha/ipdb).
+
+[Link](https://colab.research.google.com/github/jakevdp/PythonDataScienceHandbook/blob/master/notebooks/01.06-Errors-and-Debugging.ipynb)
+
+[explanantion how to debug in jupyter notebook](https://youtu.be/Z0ssNAbe81M?list=PLfYUBJiXbdtTttBGq-u2zeY1OTjs5e-Ia&t=6190)
+
+
+## Controlling the verbosity of the stack trace during debugging process
+
+'%xmode' takes a single argument, the mode, and there are three possibilities:
+
+* Plain -   is more compact and gives less information:
+* Context - is the default
+* Verbose -  adds some extra information, including the arguments to any functions that are called
+
+To move to a different verbosity mode of the stack trace, just enter:
+```python
+%xmode Verbose
 ```
 
 ## Collection of Tips
