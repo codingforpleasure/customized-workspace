@@ -141,6 +141,10 @@ To move to a different verbosity mode of the stack trace, just enter:
 %xmode Verbose
 ```
 
+## Timing code
+
+[Link](https://colab.research.google.com/github/jakevdp/PythonDataScienceHandbook/blob/master/notebooks/01.07-Timing-and-Profiling.ipynb#scrollTo=0AGQSHqH5Qr1)
+
 ## Collection of Tips
 
 [Link](https://www.dataquest.io/blog/jupyter-notebook-tips-tricks-shortcuts/)
