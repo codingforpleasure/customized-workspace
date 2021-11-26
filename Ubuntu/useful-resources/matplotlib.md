@@ -3,14 +3,18 @@
       * [Basics (Stateful appraoch)](#basics-stateful-appraoch)
          * [Simple plot](#simple-plot)
          * [Bar Charts](#bar-charts)
+         * [Create a Bar Chart Race](#create-a-bar-chart-race)
          * [Line plots](#line-plots)
          * [Pie Charts](#pie-charts)
          * [Stack Plots](#stack-plots)
          * [Histograms](#histograms)
          * [Boxplot](#boxplot)
          * [Scatter Plots](#scatter-plots)
+         * [Draw arrows](#draw-arrows)
+         * [Draw 3d vectors](#draw-3d-vectors)
          * [Plotting time series](#plotting-time-series)
          * [Plotting Live data in real-time](#plotting-live-data-in-real-time)
+      * [Visualising correlation using Seaborn library](#visualising-correlation-using-seaborn-library)
       * [Subplots (Object oriented approach)](#subplots-object-oriented-approach)
          * [Multiple plots](#multiple-plots)
          * [Simple plot](#simple-plot-1)
@@ -26,7 +30,7 @@
             * [Legend text size](#legend-text-size)
             * [Ticks text size](#ticks-text-size)
 
-<!-- Added by: gil_diy, at: Tue 09 Mar 2021 11:06:14 IST -->
+<!-- Added by: gil_diy, at: Fri 26 Nov 2021 23:53:17 IST -->
 
 <!--te-->
 
@@ -135,6 +139,11 @@ plt.show()
 <p align="center"> <!-- style="width:400px;" -->
   <img src="images/matplotlib/multiple_bar_plot.png" title="tool tip here">
 </p>
+
+
+### Create a Bar Chart Race
+
+[Link](https://swdevnotes.com/python/2020/create-bar-chart-race-1/)
 
 ### Line plots
 ```python
@@ -391,6 +400,77 @@ def scatter_plot_with_different_sizes_and_colors():
   <img src="images/matplotlib/scatter3.png" title="tool tip here">
 </p>
 
+### Draw arrows
+
+```python
+def draw_vector(v0, v1, ax=None):
+    ax = ax or plt.gca()
+    arrowprops=dict(arrowstyle='->',
+                    linewidth=2,
+                    shrinkA=0, shrinkB=0, 
+                    color='black')
+    ax.annotate('', v1, v0, arrowprops=arrowprops)
+```
+
+```python
+rng = np.random.RandomState(1)
+data = np.dot(rng.rand(2, 2), rng.randn(2, 200)).T
+
+plt.scatter(data[:, 0], data[:, 1], alpha=0.2)
+for length, vector in zip(pca.explained_variance_, pca.components_):
+    v = vector * 3 * np.sqrt(length)
+    draw_vector(pca.mean_, pca.mean_ + v)
+```
+
+
+
+### Draw 3d vectors 
+
+<p align="center"> <!-- style="width:400px;" -->
+  <img src="images/matplotlib/3d_vectors.png" title="tool tip here">
+</p>
+
+```python
+import matplotlib.pyplot as plt
+
+if __name__ == '__main__':
+    fig, axs = plt.subplots(
+        1, 3, figsize=(10, 4), facecolor=plt.cm.Blues(0.2), subplot_kw={"projection": "3d"}
+    )
+    fig.suptitle(
+        f"Use of Pythagorean theorem to calculate length 3D-vector",
+        fontsize=18,
+        fontweight="bold",
+    )
+
+    for i, ax in enumerate(axs.flatten()):
+        ax.set_facecolor(plt.cm.Blues(0.2))
+        xs, ys, zs = zip((0, 0, 0), (3, 4, 4))
+        ax.plot(xs, ys, zs, color="blue")
+        ax.set_xlim(0, 4)
+        ax.set_ylim(0, 4)
+        ax.set_zlim(0, 4)
+        ax.set_xlabel("x-axis")
+        ax.set_ylabel("y-axis")
+        ax.set_zlabel("z-axis")
+
+    axs[1].plot((0, 3), (0, 0), (0, 0), color="teal")
+    axs[1].plot((3, 3), (0, 4), (0, 0), color="teal")
+    axs[1].plot((0, 3), (0, 4), (0, 0), color="teal")
+    axs[1].text(1.5, 0.2, 0, "x", "x", color="teal")
+    axs[1].text(2.5, 1.6, 0, "y", "y", color="teal")
+    axs[1].text(0.7, 1.6, 0, r"$\sqrt{(x^2 + y^2)}$", (3, 4, 0), color="teal")
+
+    axs[2].plot((0, 3), (0, 4), (0, 0), color="red")
+    axs[2].plot((3, 3), (4, 4), (0, 4), color="red")
+    axs[2].text(1.7, 0.5, 0, r"$\sqrt{(x^2 + y^2)}$", (3, 4, 0), color="red")
+    axs[2].text(3.2, 4.0, 2.0, "z", "z", color="red")
+    axs[2].text(1, 1, 2, r"$\sqrt{(x^2 + y^2 + z^2)}$", (3, 4, 4), color="blue")
+
+    fig.tight_layout(pad=2.0)
+    plt.show()
+```
+
 ### Plotting time series
 
 ```python
@@ -469,6 +549,17 @@ if __name__ == '__main__':
 
 
 time_series_plot.png
+
+
+## Visualising correlation using Seaborn library
+
+```python
+correlation = df.corr()
+plt.figure(figsize=(10,10))
+sns.heatmap(correlation, vmax=1, square=True,annot=True,cmap='cubehelix')
+
+plt.title('Correlation between different fearures')
+```
 
 ## Subplots (Object oriented approach)
 
