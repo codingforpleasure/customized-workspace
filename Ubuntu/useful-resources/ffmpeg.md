@@ -45,9 +45,10 @@
          * [Split an audio file into multiple files](#split-an-audio-file-into-multiple-files)
          * [Extend audio length](#extend-audio-length)
          * [Modify sample rate](#modify-sample-rate)
+      * [Editing Gif](#editing-gif)
       * [Documentation](#documentation)
 
-<!-- Added by: gil_diy, at: Mon 01 Nov 2021 10:56:32 IST -->
+<!-- Added by: gil_diy, at: Sun 28 Nov 2021 10:55:01 IST -->
 
 <!--te-->
 
@@ -427,6 +428,14 @@ out, _ = (ffmpeg
           .output(os.path.join(dir_input, 'output_new.wav'), acodec='pcm_s16le', ac=1, ar='16k')
           .run(capture_stdout=True, capture_stderr=True)
           )
+```
+
+## Editing Gif
+
+Use Gifcurry
+
+```bash
+https://github.com/lettier/gifcurry
 ```
 
 ## Documentation
