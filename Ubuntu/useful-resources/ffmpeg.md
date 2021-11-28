@@ -49,7 +49,7 @@
       * [Editing Gif](#editing-gif)
       * [Documentation](#documentation)
 
-<!-- Added by: gil_diy, at: Sun 28 Nov 2021 11:18:27 IST -->
+<!-- Added by: gil_diy, at: Sun 28 Nov 2021 13:00:58 IST -->
 
 <!--te-->
 
@@ -278,7 +278,9 @@ The `volume=2` means the output will be higher by multiplying by 2 the volume.
 ffmpeg -i in.mp4 -filter:v "crop=w=<width>:h=<height>:x=<x top left corner>:y=<y top left corner>" out.mp4
 ```
 
-[Link](https://youtu.be/MPV7JXTWPWI?t=589)
+[Link](https://www.linuxuprising.com/2020/01/ffmpeg-how-to-crop-videos-with-examples.html)
+
+[video link](https://youtu.be/MPV7JXTWPWI?t=589)
 
 ### Scaling with arithmetic & variables:
 ```bash
