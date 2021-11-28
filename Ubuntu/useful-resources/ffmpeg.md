@@ -45,10 +45,11 @@
          * [Split an audio file into multiple files](#split-an-audio-file-into-multiple-files)
          * [Extend audio length](#extend-audio-length)
          * [Modify sample rate](#modify-sample-rate)
+      * [Convert to gif](#convert-to-gif)
       * [Editing Gif](#editing-gif)
       * [Documentation](#documentation)
 
-<!-- Added by: gil_diy, at: Sun 28 Nov 2021 10:55:01 IST -->
+<!-- Added by: gil_diy, at: Sun 28 Nov 2021 11:18:27 IST -->
 
 <!--te-->
 
@@ -430,13 +431,23 @@ out, _ = (ffmpeg
           )
 ```
 
+## Convert to gif
+
+```bash
+ffmpeg  -i StickAround.mp4 -f gif StickAround.gif
+```
+
 ## Editing Gif
 
-Use Gifcurry
+Use **Gifcurry**
+
+Cropping gif screen (horizontal, Vertical) with gui
 
 ```bash
 https://github.com/lettier/gifcurry
 ```
+
+
 
 ## Documentation
 
