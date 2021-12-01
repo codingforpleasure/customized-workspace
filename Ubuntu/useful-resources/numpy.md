@@ -62,7 +62,7 @@
       * [Exporting txt files easily with specific format](#exporting-txt-files-easily-with-specific-format)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Thu 25 Nov 2021 16:26:59 IST -->
+<!-- Added by: gil_diy, at: Thu 02 Dec 2021 01:02:27 IST -->
 
 <!--te-->
 
@@ -302,6 +302,20 @@ np.count_nonzero(my_mat!=False)
 ```python
 array1 = np.array([[1.],[2.]])
 array1_transpose = array1.T
+```
+
+another example more advance:
+
+```python
+my_array = np.array([[[1, 2, 3, 4, 5], [6, 7, 8, 9, 10]],
+                     [[11, 12, 13, 14, 15], [16, 17, 18, 19, 20]],
+                     [[21, 22, 23, 24, 25], [26, 27, 28, 29, 30]]])
+
+print(my_array.shape) # output would be: (3, 2, 5)
+
+my_array = np.transpose(my_array, axes=(1,2,0))
+
+print(my_array.shape) # output would be: (2, 5, 3)
 ```
 
 
