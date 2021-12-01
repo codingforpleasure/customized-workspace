@@ -6,7 +6,6 @@
       * [torch vision](#torch-vision)
          * [Display images as grid](#display-images-as-grid)
       * [Checking versions](#checking-versions)
-      * [Checking Cuda availabilty](#checking-cuda-availabilty)
       * [Basics - Tensors](#basics---tensors)
          * [Create tensors](#create-tensors)
             * [Create a tensor with all the same values](#create-a-tensor-with-all-the-same-values)
@@ -30,6 +29,7 @@
             * [Access operations](#access-operations)
          * [Get the data type of a tensor](#get-the-data-type-of-a-tensor)
          * [Reshaping tensor - View tensor differently](#reshaping-tensor---view-tensor-differently)
+         * [matrix multiplication](#matrix-multiplication)
          * [Converting tensors into numpy arrays](#converting-tensors-into-numpy-arrays)
          * [Getting the actual value of a tensor of size 1x1](#getting-the-actual-value-of-a-tensor-of-size-1x1)
       * [Exploring Gradients](#exploring-gradients)
@@ -43,10 +43,11 @@
          * [Defining Cuda device](#defining-cuda-device)
          * [Move the tensor onto CUDA device](#move-the-tensor-onto-cuda-device)
          * [Move the tensors to CPU](#move-the-tensors-to-cpu)
-      * [matrix multiplication](#matrix-multiplication)
+      * [matrix multiplication](#matrix-multiplication-1)
       * [Basic functions in pytorch](#basic-functions-in-pytorch)
       * [Concatenating torches:](#concatenating-torches)
       * [Stacking](#stacking)
+      * [Linear Layers in depth](#linear-layers-in-depth)
       * [Custom Dataset](#custom-dataset)
       * [Loading images directory into a dataset](#loading-images-directory-into-a-dataset)
       * [Subsetting Dataset](#subsetting-dataset)
@@ -85,7 +86,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Wed 01 Dec 2021 13:08:13 IST -->
+<!-- Added by: gil_diy, at: Wed 01 Dec 2021 15:10:44 IST -->
 
 <!--te-->
 
@@ -150,17 +151,6 @@ plt.show()
 print("torch version = ", torch.__version__)
 print("torchvision version = ",torchvision.__version__)
 print("torch.version.cuda = ", torch.version.cuda)
-```
-
-## Checking Cuda availabilty
-
-```python
-if torch.cuda.is_available():
-    dev = "cuda:0"
-else:
-    dev = "cpu"
-
-print("The device is: ", dev)
 ```
 
 ## Basics - Tensors
@@ -501,7 +491,11 @@ print(x[1,0:2,1])
 
 Output will be the number **10** .
 
+### matrix multiplication
 
+```python
+weight_matrix.matmul(in_features)
+```
 
 ### Converting tensors into numpy arrays
 
@@ -610,7 +604,12 @@ print(x.device)
 ```python
 # define a cuda/gpu device
 if torch.cuda.is_available():
-  device = torch.device("cuda:0")
+    dev = "cuda:0"
+else:
+    dev = "cpu"
+
+print("The device is: ", dev)  
+device = torch.device(dev)
 ```
 
 ### Move the tensor onto CUDA device
@@ -699,6 +698,14 @@ Stacking joins a sequence of tensors along a **new axis**
 
 ```python
 stacked_tensor = torch.stack(tensor_list)
+```
+
+## Linear Layers in depth
+
+Linear layers use matrix multiplication to transform `in_features` to `out_features`. this matrix multiplication producess the `out_features`
+
+```python
+
 ```
 
 ## Custom Dataset
