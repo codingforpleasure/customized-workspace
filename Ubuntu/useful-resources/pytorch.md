@@ -4,9 +4,9 @@
       * [The training process (Road map)](#the-training-process-road-map)
       * [Install](#install)
       * [torch vision](#torch-vision)
-         * [Checking versions](#checking-versions)
-         * [Checking Cuda availabilty](#checking-cuda-availabilty)
          * [Display images as grid](#display-images-as-grid)
+      * [Checking versions](#checking-versions)
+      * [Checking Cuda availabilty](#checking-cuda-availabilty)
       * [Basics - Tensors](#basics---tensors)
          * [Create tensors](#create-tensors)
             * [Create a tensor with all the same values](#create-a-tensor-with-all-the-same-values)
@@ -85,7 +85,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Thu 22 Jul 2021 18:09:08 IDT -->
+<!-- Added by: gil_diy, at: Wed 01 Dec 2021 13:08:13 IST -->
 
 <!--te-->
 
@@ -121,7 +121,30 @@ Install `pip install torch torchvision`
 
 ## torch vision
 
-### Checking versions
+Torchvision is compiled from 4 parts:
+
+* Datasets (like MNIST and Fashion-MNIST)
+
+* Models
+
+* Transforms
+
+* Utils
+
+### Display images as grid
+
+```python
+num_images_per_row = 5
+grid = torchvision.utils.make_grid(images, nrow=num_images_per_row, padding=2)
+plt.figure(figsize=(10, 3))
+
+# Now for imshow function requirement we arrange the axis
+# from grid.shape: [3,62,152] to transfer to shape of: [62,152,3]
+plt.imshow(np.transpose(grid, (1, 2, 0)))
+plt.show()
+```
+
+## Checking versions
 
 ```python
 print("torch version = ", torch.__version__)
@@ -129,7 +152,7 @@ print("torchvision version = ",torchvision.__version__)
 print("torch.version.cuda = ", torch.version.cuda)
 ```
 
-### Checking Cuda availabilty
+## Checking Cuda availabilty
 
 ```python
 if torch.cuda.is_available():
@@ -138,18 +161,6 @@ else:
     dev = "cpu"
 
 print("The device is: ", dev)
-```
-
-### Display images as grid
-
-```python
-from torchvision import utils
-
-x_grid = utils.make_grid(x_train, nrow= 8, padding=2)
-printf(x_grid.shape)
-TODO: page 21 complete!!
-plt.imgshow(npimg_tr,interpolation='nearest')
-
 ```
 
 ## Basics - Tensors
@@ -845,11 +856,6 @@ print('labels: ', labels)
 
 ### **CNN Output Size formula (Square)**
 
-* Suppose we have an `nxn`
-* Suppose we have an `fxf` filter
-* Suppose we have a padding of `p` and a stride of `s`
-
-The output size `O` is given by this formula:
 
 <p align="center"> <!-- style="width:400px;" -->
   <img src="images/pytorch/cnn_output_size_square.png" title="tool tip here">
@@ -1150,6 +1156,10 @@ for i in range(epochs):
 ## Integrating TensorBoard with pytorch
 
 [Part1 : TensorBoard with PyTorch - Visualize Deep Learning Metrics](https://youtu.be/pSexXMdruFM)
+
+Hyperparameters are parameters whose values are chosen manually and arbitrarily.
+for example: kernel_size, out_channels, out_features. 
+It's the job of the network's designer to choose those values.
 
 [Part2 : Hyperparameter Tuning and Experimenting - Training Deep Neural Networks](https://youtu.be/ycxulUVoNbk?list=PLZbbT5o_s2xrfNyHZsM6ufI0iZENK9xgG)
 
