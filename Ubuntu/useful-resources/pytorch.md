@@ -79,6 +79,7 @@
          * [Y(x)](#yx)
       * [Partial derivatives Y(x,z)](#partial-derivatives-yxz)
       * [Generate random numbers](#generate-random-numbers)
+      * [Reproduce random numbers](#reproduce-random-numbers)
       * [Tensor to number](#tensor-to-number)
       * [Template for Regression](#template-for-regression)
       * [Integrating TensorBoard with pytorch](#integrating-tensorboard-with-pytorch)
@@ -86,7 +87,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Wed 01 Dec 2021 15:16:46 IST -->
+<!-- Added by: gil_diy, at: Wed 01 Dec 2021 16:16:48 IST -->
 
 <!--te-->
 
@@ -733,20 +734,20 @@ print(fc(in_features))
 
 ```python
 class My_data_set(Dataset):
-def __init__(self, csv_file):
-  self.data = pd.read_csv(csv_file)
+  def __init__(self, csv_file):
+    self.data = pd.read_csv(csv_file)
 
 
-# Gets an item in the the dataset within a specific index location in the dataset
-def __getitem_(self, index):
-  r = self.data.iloc[index]
-  label = torch.tensor(r.is_up_day, dtype = torch.long)
-  sample = self.normalize(torch.tensor([r.open, r.high, r.low, r.close]))
-  return sample, label
+  # Gets an item in the the dataset within a specific index location in the dataset
+  def __getitem__(self, index):
+    r = self.data.iloc[index]
+    label = torch.tensor(r.is_up_day, dtype = torch.long)
+    sample = self.normalize(torch.tensor([r.open, r.high, r.low, r.close]))
+    return sample, label
 
-# Returns the length of the dataset
-def __len__(self):
-  return len(self.data)
+  # Returns the length of the dataset
+  def __len__(self):
+    return len(self.data)
 
 ```
 
@@ -804,7 +805,13 @@ we can shuffle and have a batch size.
 
 ```python
 example_dataset_train = My_data_set()
-train_loader = torch.utils.data.Dataloader(example_dataset_train)
+
+
+# Wen we create a Dataloader the Default batch size is 1, 
+# A higher batch size means that the model has fewer training steps and learns faster,
+# whereas a high batch size results in high memory requirements.
+
+train_loader = torch.utils.data.Dataloader(example_dataset_train) 
 ```
 ## Dataset && DataLoader
 ```python
@@ -859,23 +866,6 @@ plt.imgshow(image.sqeeze(), cmap = 'gray')
 print('label:',label)
 ```
 
-```python
-batch = next(iter(train_loader))
-len(batch)
-type(batch)
-
-images, labels = batch
-
-images.shapes
-
-# nrow spcifies the number of images in each row
-grid = torchvision.utils.make_grid(images, nrow = 10)
-plt.figure(figsize = (15,15))
-plt.imshow(np.transpose(grid, (1,2,0)))
-
-print('labels: ', labels)
-
-```
 [Link](https://youtu.be/mUueSPmcOBc?t=665)
 
 ## Calculating the Output size of a CNN
@@ -899,23 +889,47 @@ print('labels: ', labels)
 
 ## Batch normalization
 
-We know a neural network learns the weights in our model become updated over each
-epoch during training via the process of stochastic gradient descent or SGD so
-what if during training one of the weights ends up becoming drastically
+* We know a neural network learns the weights in our model become updated over each
+epoch during training via the process of stochastic gradient descent or SGD.
+
+* what if during training one of the weights ends up becoming drastically
 larger than the other weights well this large weight will then cause
 the output from its corresponding neuron to be extremely large and this **imbalance**
-will again continue to cascade through the neural network causing **instability**
-this is where batch normalization comes into play batch norm is applied to
+will again continue to cascade through the neural network causing **instability**.
+
+* This is where batch normalization comes into play batch norm is applied to
 layers that you choose to apply it to within your network when applying batch
 norm to a layer the first thing the **batch norm does is normalize the output
-from the activation function**, as you recall activation functions that
-the output from a layer is passed to an activation function which transforms the
-output in some way depending on the function itself before being passed to
-the next layer.
+from the activation function**.
+
+* Batch norm can be applied after each layer or your can sprinkled it out over few layers which you pick
 
 ```python
-nn.BatchNorm1d(4096) # 4096 number of features
+network2 = nn.Sequential(
+      nn.Conv2d(in_channels=1, out_channels=6, kernel_size=5)
+    , nn.ReLU()
+    , nn.MaxPool2d(kernel_size=2, stride=2)
+
+      # Applying here batch norm according to the number outputs of previous layer
+    , nn.BatchNorm2d(6) 
+
+    , nn.Conv2d(in_channels=6, out_channels=12, kernel_size=5)
+    , nn.ReLU()
+    , nn.MaxPool2d(kernel_size=2, stride=2)
+    , nn.Flatten(start_dim=1)  
+    , nn.Linear(in_features=12*4*4, out_features=120)
+    , nn.ReLU()
+
+    # Applying here batch norm according to the number outputs of previous layer
+    , nn.BatchNorm1d(120)
+    , nn.Linear(in_features=120, out_features=60)
+    , nn.ReLU()
+    , nn.Linear(in_features=60, out_features=10)
+)
 ```
+
+[Link](https://deeplizard.com/learn/video/bCQ2cNhUWQ8)
+
 
 [Explained well](https://www.youtube.com/watch?v=dXB-KQYkzNU)
 
@@ -1145,6 +1159,13 @@ Generate 100 random numbers between 0 to 10
 ```python
 torch.randn(100, 1) * 10
 ```
+
+## Reproduce random numbers
+
+```python
+torch.manual_seed(50)
+```
+
 
 ## Tensor to number
 
