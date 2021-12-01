@@ -1,7 +1,7 @@
 <!--ts-->
    * [scikit-learn](#scikit-learn)
       * [Preprocessing data](#preprocessing-data)
-         * [Scaler](#scaler)
+         * [Scaler (Noramlization or Standardization)](#scaler-noramlization-or-standardization)
          * [Categorical encoding](#categorical-encoding)
             * [Label encoding](#label-encoding)
                * [Not an Ordinal variable](#not-an-ordinal-variable)
@@ -16,8 +16,9 @@
       * [Splitting data](#splitting-data)
          * [Stratified Shuffle Split](#stratified-shuffle-split)
          * [LeaveOneOut](#leaveoneout)
+         * [Pipeline](#pipeline)
 
-<!-- Added by: gil_diy, at: Sat 13 Mar 2021 11:12:09 IST -->
+<!-- Added by: gil_diy, at: Wed 01 Dec 2021 15:40:46 IST -->
 
 <!--te-->
 
@@ -26,9 +27,11 @@
 ## Preprocessing data
 
 
-### Scaler
+### Scaler (Noramlization or Standardization)
 
 All features are centered around zero and have variance in the same order
+
+usualy it's called either Noramlization or Standardization
 
 ```python
 from sklearn import preprocessing
@@ -39,10 +42,23 @@ X_train = np.array([[ 1., -1.,  2.],
                     [ 0.,  1., -1.]])
 
 X_scaled = preprocessing.scale(X_train)
+
+# Please see here: https://en.wikipedia.org/wiki/Standard_score
+
 # Now Scaled data has zero mean and unit variance. you can check:
 # X_scaled.mean(axis=0)
 # X_scaled.s td(axis=0)
+
+
 ```
+
+Why do we normalized?
+
+* Avoid exploding gradient problem
+
+* Avoid Decreasing our training speed
+
+[Well explained](https://youtu.be/dXB-KQYkzNU?t=31)
 
 
 ### Categorical encoding 
@@ -185,6 +201,22 @@ X_train =  [[1 2][5 6]], X_test =  [[3 4]] , y_train = [1 3], y_test =  [2]
 *****************************************************************************
 X_train =  [[1 2][3 4]], X_test =  [[5 6]] , y_train = [1 2], y_test =  [3]
 *****************************************************************************
+```
+
+### Pipeline
+
+```python
+y_train = normalized_df['TenYearCHD']
+X_train = normalized_df.drop('TenYearCHD', axis=1)
+
+from sklearn.pipeline import Pipeline
+
+classifiers = [LogisticRegression(),SVC(),DecisionTreeClassifier(),KNeighborsClassifier(2)]
+
+for classifier in classifiers:
+    pipe = Pipeline(steps=[('classifier', classifier)])
+    pipe.fit(X_train, y_train)   
+    print("The accuracy score of {0} is: {1:.2f}%".format(classifier,(pipe.score(X_test, y_test)*100)))
 ```
 
 [LeaveOneOut](https://youtu.be/e0JcXMzhtdY?t=824)
