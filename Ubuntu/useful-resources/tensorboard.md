@@ -4,12 +4,15 @@
       * [Get tensor board](#get-tensor-board)
       * [Add metrics and stats](#add-metrics-and-stats)
       * [Experimenting with hyper parameters tunning](#experimenting-with-hyper-parameters-tunning)
+      * [Gret explanantion:](#gret-explanantion)
 
-<!-- Added by: gil_diy, at: Sat 30 Jan 2021 15:36:45 IST -->
+<!-- Added by: gil_diy, at: Thu 02 Dec 2021 17:02:26 IST -->
 
 <!--te-->
 
 # Tensorboard
+
+[Greate reference](https://deeplizard.com/learn/video/pSexXMdruFM)
 
 ## Install 
 
@@ -29,6 +32,7 @@ tensorboard --logdir=runs
 
 ## Add metrics and stats
 
+
 The first argument is called the tag (name of the value)
 
  Type of metric| Title2
@@ -40,6 +44,8 @@ The first argument is called the tag (name of the value)
 
 
 ```python
+tb = SummaryWriter()
+
 # in the epoch scope after the batch loop:
 for name, weight in network.named_parameters():
 	tb.add_histogram(name, epoch)
@@ -74,3 +80,6 @@ for lr,batch_size, shuffle in product(*param_values):
 
 	# Training process given the set of parameters
 ```
+
+## Gret explanantion:
+[Link](https://www.youtube.com/watch?v=k7KfYXXrOj0)
