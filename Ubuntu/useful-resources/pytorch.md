@@ -53,6 +53,7 @@
       * [Subsetting Dataset](#subsetting-dataset)
       * [Dataloader](#dataloader)
       * [Dataset &amp;&amp; DataLoader](#dataset--dataloader)
+      * [Utilizing the multiple process capabilities of the PyTorch DataLoader class](#utilizing-the-multiple-process-capabilities-of-the-pytorch-dataloader-class)
          * [To better understand your data](#to-better-understand-your-data)
       * [Calculating the Output size of a CNN](#calculating-the-output-size-of-a-cnn)
          * [<strong>CNN Output Size formula (Square)</strong>](#cnn-output-size-formula-square)
@@ -87,7 +88,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Wed 01 Dec 2021 16:16:48 IST -->
+<!-- Added by: gil_diy, at: Thu 02 Dec 2021 16:39:39 IST -->
 
 <!--te-->
 
@@ -811,6 +812,8 @@ example_dataset_train = My_data_set()
 # A higher batch size means that the model has fewer training steps and learns faster,
 # whereas a high batch size results in high memory requirements.
 
+# 
+
 train_loader = torch.utils.data.Dataloader(example_dataset_train) 
 ```
 ## Dataset && DataLoader
@@ -833,6 +836,19 @@ train_set, batch_size = 10
 )
 ```
 
+## Utilizing the multiple process capabilities of the PyTorch DataLoader class
+
+The natural question that arises is, how many worker processes should we add? 
+There are a lot of factors that can affect the optimal number here, so the best way to find out is to test. 
+
+```python
+# To speed up the training process, we will make use of the num_workers optional attribute of the DataLoader class.
+# The num_workers attribute tells the data loader instance how many sub-processes to use for data loading. 
+# By default, the num_workers value is set to zero, and a value of zero tells the loader to load the data inside the main process. 
+
+train_loader = torch.utils.data.Dataloader(train_set, batch_size = 10, num_workers=5)
+```
+
 ### To better understand your data
 ```python
 import numpy as np
@@ -852,16 +868,13 @@ train_set.train_labels.bincount()
 
 ```python
 sample = next(iter(train_set))
-len(sample)
-
-type(sample)
+print(len(sample))
 
 image, label = sample # sequence unpacking / Deconstructing the object
+print(image.shape)
+print(label.shape) # Scalar value
 
-image.shape
-
-label.shape # Scalar value
-
+# See a preview of a single image
 plt.imgshow(image.sqeeze(), cmap = 'gray')
 print('label:',label)
 ```
@@ -910,7 +923,7 @@ network2 = nn.Sequential(
     , nn.ReLU()
     , nn.MaxPool2d(kernel_size=2, stride=2)
 
-      # Applying here batch norm according to the number outputs of previous layer
+      # Applying here batch norm according to the number output channels of previous layer
     , nn.BatchNorm2d(6) 
 
     , nn.Conv2d(in_channels=6, out_channels=12, kernel_size=5)
@@ -920,7 +933,7 @@ network2 = nn.Sequential(
     , nn.Linear(in_features=12*4*4, out_features=120)
     , nn.ReLU()
 
-    # Applying here batch norm according to the number outputs of previous layer
+    # Applying here batch norm according to the number output feature of previous layer
     , nn.BatchNorm1d(120)
     , nn.Linear(in_features=120, out_features=60)
     , nn.ReLU()
