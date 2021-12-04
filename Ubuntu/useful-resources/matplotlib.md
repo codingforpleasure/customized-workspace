@@ -14,6 +14,7 @@
          * [Draw 3d vectors](#draw-3d-vectors)
          * [Plotting time series](#plotting-time-series)
          * [Plotting Live data in real-time](#plotting-live-data-in-real-time)
+      * [Animation](#animation)
       * [Visualising correlation using Seaborn library](#visualising-correlation-using-seaborn-library)
       * [Subplots (Object oriented approach)](#subplots-object-oriented-approach)
          * [Multiple plots](#multiple-plots)
@@ -30,7 +31,7 @@
             * [Legend text size](#legend-text-size)
             * [Ticks text size](#ticks-text-size)
 
-<!-- Added by: gil_diy, at: Fri 26 Nov 2021 23:53:17 IST -->
+<!-- Added by: gil_diy, at: Sun 05 Dec 2021 00:54:13 IST -->
 
 <!--te-->
 
@@ -550,6 +551,11 @@ if __name__ == '__main__':
 
 time_series_plot.png
 
+## Animation 
+
+[Link1](https://towardsdatascience.com/basics-of-gifs-with-pythons-matplotlib-54dd544b6f30)
+
+[Link2](https://nathankjer.com/animated-3d-plots/)
 
 ## Visualising correlation using Seaborn library
 
