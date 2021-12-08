@@ -88,7 +88,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Wed 08 Dec 2021 16:25:30 IST -->
+<!-- Added by: gil_diy, at: Wed 08 Dec 2021 16:26:52 IST -->
 
 <!--te-->
 
@@ -1176,6 +1176,7 @@ torch.save(my_model.state_dict(), model_path)
 [Reference](https://pytorch.org/docs/stable/generated/torch.save.html#torch.save)
 
 ## Loading the model (Loading checkpoint)
+
 ```python
 def load_checkpoint(checkpoint, model, optimizer):
     print("=> Loading checkpoint")
