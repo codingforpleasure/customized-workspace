@@ -89,7 +89,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Thu 09 Dec 2021 00:05:20 IST -->
+<!-- Added by: gil_diy, at: Thu 09 Dec 2021 00:09:34 IST -->
 
 <!--te-->
 
@@ -648,7 +648,7 @@ torch.full((2,3), 3.141) | Tensor with required fill value along with the shape
 torch.empty((2,3)) | Create empty tensor filled with uninitialzed data
 torch.rand((2,3))| Tensor from a **uniform distribution** from [0, 1]
 torch.randn((2,3))| Tensor with mean 0 and variance 1 from **normal distribution**
-torch.randint(10,100,(2,3))| Tensor from a given range between 10 to 100
+torch.randint(low = 10,high = 100,size = (2,3))| Tensor from a given range between 10 to 100
 my_tensor.shape | The shape of `my_tensor` tensor (we can say the size of a tensor)
 my_tensor.dtype | The datatype of `my_tensor` tensor
 torch.ones_like(my_tensor) | Create a new tensor that matches `my_tensor` attributes (shape and datatype) with all ones.
