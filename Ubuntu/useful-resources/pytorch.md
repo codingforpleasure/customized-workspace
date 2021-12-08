@@ -74,7 +74,7 @@
          * [Freezing the model](#freezing-the-model)
          * [Replacing the last two layers](#replacing-the-last-two-layers)
       * [Saving the model (Saving checkpoint)](#saving-the-model-saving-checkpoint)
-      * [Loading the model](#loading-the-model)
+      * [Loading the model (Loading checkpoint)](#loading-the-model-loading-checkpoint)
       * [Useful for plotting](#useful-for-plotting)
       * [Derivatives](#derivatives)
          * [Y(x)](#yx)
@@ -88,7 +88,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Wed 08 Dec 2021 16:22:08 IST -->
+<!-- Added by: gil_diy, at: Wed 08 Dec 2021 16:22:46 IST -->
 
 <!--te-->
 
@@ -1161,6 +1161,7 @@ optimizer = optim.Adam(model.parameters())
 
 checkpoint = {"state_dict": model.state_dict(), 
 			  "optimizer": optimizer.state_dict()}
+
 # Try save checkpoint
 save_checkpoint(checkpoint)
 
@@ -1169,7 +1170,7 @@ torch.save(my_model.state_dict(), model_path)
 ```
 [Reference](https://pytorch.org/docs/stable/generated/torch.save.html#torch.save)
 
-## Loading the model
+## Loading the model (Loading checkpoint)
 ```python
 torch.load('tensors.pt', map_location=torch.device('cpu'))
 ```
