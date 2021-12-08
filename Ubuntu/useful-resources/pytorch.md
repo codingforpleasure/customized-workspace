@@ -89,7 +89,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Thu 09 Dec 2021 00:09:38 IST -->
+<!-- Added by: gil_diy, at: Thu 09 Dec 2021 00:12:26 IST -->
 
 <!--te-->
 
@@ -714,7 +714,9 @@ weight_matrix = torch.tensor([
     [3, 4, 5, 6]
 ], dtype=torch.float32)
 
-# In nn.Linear function during training under the hood pytroch creates a weight_matrix of M of size 3x4 (according to the in_features and out_features) as you know the numbers in weights matrix defines the linear function
+# In nn.Linear function during training under the hood pytroch creates a weight_matrix of M
+# of size 3x4 (according to the in_features and out_features) as you know the numbers in 
+# weights matrix defines the linear function
 # during the training python updates the weights which changes the linear function
 
 fc = nn.Linear(in_features=4, out_features=3, bias=False)
