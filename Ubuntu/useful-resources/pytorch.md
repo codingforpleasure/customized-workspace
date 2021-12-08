@@ -73,8 +73,8 @@
       * [Transfer learning](#transfer-learning)
          * [Freezing the model](#freezing-the-model)
          * [Replacing the last two layers](#replacing-the-last-two-layers)
-      * [Saving the model (Saving checkpoint)](#saving-the-model-saving-checkpoint)
-      * [Loading the model (Loading checkpoint)](#loading-the-model-loading-checkpoint)
+         * [Saving the model (Saving checkpoint)](#saving-the-model-saving-checkpoint)
+         * [Loading the model (Loading checkpoint)](#loading-the-model-loading-checkpoint)
       * [Useful for plotting](#useful-for-plotting)
       * [Derivatives](#derivatives)
          * [Y(x)](#yx)
@@ -88,7 +88,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Wed 08 Dec 2021 16:26:52 IST -->
+<!-- Added by: gil_diy, at: Wed 08 Dec 2021 16:28:11 IST -->
 
 <!--te-->
 
@@ -1153,7 +1153,7 @@ nn.LogSoftMax(dim=1)
 
 ```
 
-## Saving the model (Saving checkpoint)
+### Saving the model (Saving checkpoint)
 ```python
 def save_checkpoint(state, filename="my_checkpoint.pth.tar"):
     print("=> Saving checkpoint")
@@ -1175,7 +1175,7 @@ torch.save(my_model.state_dict(), model_path)
 ```
 [Reference](https://pytorch.org/docs/stable/generated/torch.save.html#torch.save)
 
-## Loading the model (Loading checkpoint)
+### Loading the model (Loading checkpoint)
 
 ```python
 def load_checkpoint(checkpoint, model, optimizer):
