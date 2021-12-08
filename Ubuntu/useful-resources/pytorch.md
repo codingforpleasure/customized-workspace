@@ -72,12 +72,13 @@
          * [Y(x)](#yx)
       * [Partial derivatives Y(x,z)](#partial-derivatives-yxz)
       * [Template for Regression](#template-for-regression)
+      * [amp (automatic mixed precision) for shorting the training time](#amp-automatic-mixed-precision-for-shorting-the-training-time)
       * [Integrating TensorBoard with pytorch](#integrating-tensorboard-with-pytorch)
       * [Segmentation with U-net  (Encoder-Decoder)](#segmentation-with-u-net--encoder-decoder)
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Thu 09 Dec 2021 00:38:14 IST -->
+<!-- Added by: gil_diy, at: Thu 09 Dec 2021 00:41:10 IST -->
 
 <!--te-->
 
@@ -1198,6 +1199,13 @@ for epoch_idx in range(epochs):
   optimizer.step()
   
 ```
+
+## amp (automatic mixed precision) for shorting the training time
+
+```python
+
+```
+
 
 ## Integrating TensorBoard with pytorch
 
