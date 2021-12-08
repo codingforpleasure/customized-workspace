@@ -62,7 +62,7 @@
       * [Preprocessing](#preprocessing)
       * [Batch size](#batch-size)
       * [Load data](#load-data)
-      * [Inspecting the weight and bias](#inspecting-the-weight-and-bias)
+      * [Inspecting the weight and bias and layers](#inspecting-the-weight-and-bias-and-layers)
       * [Loss function](#loss-function)
          * [Negative log likelihood](#negative-log-likelihood)
       * [Optimizers](#optimizers)
@@ -88,7 +88,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Thu 02 Dec 2021 16:39:39 IST -->
+<!-- Added by: gil_diy, at: Wed 08 Dec 2021 12:50:22 IST -->
 
 <!--te-->
 
@@ -969,18 +969,51 @@ A higher batch size means that the model has fewer training steps and learns fas
 
 ## Load data
 
-## Inspecting the weight and bias
-You can access the weight and bias tensors from the model object with `<my_model>.<layer_name>.weight` and `<my_model>.<layer_name>.bias`
+## Inspecting the weight and bias and layers
+
+Each layer holds weights and bias,you can easily see the name of the 
+tensors which holds weights and biases separately by using:
+
+```python
+print(list(model.state_dict().keys()))
+```
+
+To inspect the weights tensor of specific layer, you can either write:
+
+```python
+print('Getting weights for layer conv1: ')
+print(model.state_dict()['conv1.weight'])
+
+print('Getting bias for layer conv1: ')
+print(model.state_dict()['conv1.bias'])
+```
+
+or 
+
+```python
+print('Getting weights for layer conv1: ')
+print(model.conv1.weight)
+
+print('Getting bias for layer conv1: ')
+print(model.conv1.bias)
+```
+
+in case you would like to see the layers and the tensor sizes:
+
+```python
+
+for param_tensor in model.state_dict().keys():
+    print(param_tensor, "\t", model.state_dict()[param_tensor].size())
+```
 
 
 ## Loss function
 Defining the loss function A machine learning model, when being trained, may have some deviation between the predicted output and the actual output, and this difference is called the **error** of the model. The function that lets us calculate this error is called the **loss function**, or error function.
-This function provides a metric to evaluate all possible solutions and choose the most optimized model. The loss function has to be able to reduce all attributes of the model down to a single number so that an improvement in that loss function value is
-representative of a better model.
+This function provides a metric to evaluate all possible solutions and choose the most optimized model. The loss function has to be able to reduce all attributes of the model down to a single number so that an improvement in that loss function value is representative of a better model.
 
 ### Negative log likelihood
 
-We therefore use negative log likelihood when dealing with log softmax, as softmax is not compatible. It is useful in classification between n number of classes. The log would ensure
+we therefore use negative log likelihood when dealing with log softmax, as softmax is not compatible. It is useful in classification between n number of classes. The log would ensure
 that we are not dealing with very small values between 0 and 1, and negative values would ensure that a logarithm of probability that is less than 1 is nonzero. Our goal would be to reduce this negative log loss error function. In PyTorch, the loss function is called a
 criterion, and so we named our loss function criterion.
 
@@ -997,7 +1030,7 @@ In PyTorch, the loss function is called a **criterion**, and so we named our los
 
 ## Optimizers
 
-learned that, for us to get a good model, we need to minimize the errors that are calculated. Backpropagation is a method by which the neural networks learn from errors; the errors are used to modify weights in such a way that the errors are minimized. Optimization functions are responsible for modifying weights to reduce the error. Optimization functions calculate the partial derivative of errors
+Learned that, for us to get a good model, we need to minimize the errors that are calculated. Backpropagation is a method by which the neural networks learn from errors; the errors are used to modify weights in such a way that the errors are minimized. Optimization functions are responsible for modifying weights to reduce the error. Optimization functions calculate the partial derivative of errors
 with respect to weights. The derivative shows the direction of a positive slope, and so we need to reverse the direction of the gradient. The optimizer function combines the model parameters and loss function to iteratively modify the model parameters to reduce the model error. Optimizers can be thought of as fiddling with the model weights to get the best possible model based on the difference in prediction from the model and the actual output, and the loss function acts as a guide by indicating when the optimizer is going right or wrong.
 
 
@@ -1204,15 +1237,16 @@ optimizer = torch.optim.SGD(model.parameters(), lr=0.01)
 epochs = 1000
 losses = []
 
-for i in range(epochs):
+for epoch_idx in range(epochs):
   y_pred = model.forward(x_data)
   loss = loss_function(y_pred, y_data)
-  print("epoch: ", i, "loss", loss.item())
+  print("epoch: ", epoch_idx, "loss", loss.item())
 
   losses.append(loss.item())
   optimizer.zero_grad()
   loss.backward()
   optimizer.step()
+  
 ```
 
 ## Integrating TensorBoard with pytorch
