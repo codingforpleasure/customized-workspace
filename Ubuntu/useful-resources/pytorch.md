@@ -3,8 +3,6 @@
       * [Road map](#road-map)
       * [The training process (Road map)](#the-training-process-road-map)
       * [Install](#install)
-      * [torch vision](#torch-vision)
-         * [Display images as grid](#display-images-as-grid)
       * [Checking versions](#checking-versions)
       * [Basics - Tensors](#basics---tensors)
          * [Create tensors](#create-tensors)
@@ -69,6 +67,8 @@
          * [The type of optimizers](#the-type-of-optimizers)
       * [Dropouts](#dropouts)
       * [torchvision](#torchvision)
+         * [Display images as grid](#display-images-as-grid)
+         * [Augmentations](#augmentations)
       * [Transfer learning](#transfer-learning)
          * [Freezing the model](#freezing-the-model)
          * [Replacing the last two layers](#replacing-the-last-two-layers)
@@ -79,16 +79,13 @@
       * [Derivatives](#derivatives)
          * [Y(x)](#yx)
       * [Partial derivatives Y(x,z)](#partial-derivatives-yxz)
-      * [Generate random numbers](#generate-random-numbers)
-      * [Reproduce random numbers](#reproduce-random-numbers)
-      * [Tensor to number](#tensor-to-number)
       * [Template for Regression](#template-for-regression)
       * [Integrating TensorBoard with pytorch](#integrating-tensorboard-with-pytorch)
       * [Segmentation with U-net  (Encoder-Decoder)](#segmentation-with-u-net--encoder-decoder)
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Thu 09 Dec 2021 00:19:35 IST -->
+<!-- Added by: gil_diy, at: Thu 09 Dec 2021 00:24:42 IST -->
 
 <!--te-->
 
@@ -121,31 +118,6 @@
 
 ## Install
 Install `pip install torch torchvision`
-
-## torch vision
-
-Torchvision is compiled from 4 parts:
-
-* Datasets (like MNIST and Fashion-MNIST)
-
-* Models
-
-* Transforms
-
-* Utils
-
-### Display images as grid
-
-```python
-num_images_per_row = 5
-grid = torchvision.utils.make_grid(images, nrow=num_images_per_row, padding=2)
-plt.figure(figsize=(10, 3))
-
-# Now for imshow function requirement we arrange the axis
-# from grid.shape: [3,62,152] to transfer to shape of: [62,152,3]
-plt.imshow(np.transpose(grid, (1, 2, 0)))
-plt.show()
-```
 
 ## Checking versions
 
@@ -645,13 +617,16 @@ torch.eye(2) | Returns the identity matrix
 torch.zeros((2,3), dtype=torch.int8)  | Tensor consisting of only integer zeros.
 torch.full((2,3), 3.141) | Tensor with required fill value along with the shape
 torch.empty((2,3)) | Create empty tensor filled with uninitialzed data
+torch.manual_seed(50) | Reproduce random numbers
 torch.rand((2,3))| Tensor from a **uniform distribution** from [0, 1]
 torch.randn((2,3))| Tensor with mean 0 and variance 1 from **normal distribution**
 torch.randint(low = 10,high = 100,size = (2,3))| Tensor from a given range between 10 to 100
 my_tensor.shape | The shape of `my_tensor` tensor (we can say the size of a tensor)
 my_tensor.dtype | The datatype of `my_tensor` tensor
+my_tensor.item() | Tensor to number
 torch.ones_like(my_tensor) | Create a new tensor that matches `my_tensor` attributes (shape and datatype) with all ones.
 torch.flatten(torch.arange(18).view(2,-1)) | Flattening a torch to 1 dimentional
+
 
 ## Concatenating torches:
 
@@ -1005,7 +980,6 @@ for param_tensor in model.state_dict().keys():
     print(param_tensor, "\t", model.state_dict()[param_tensor].size())
 ```
 
-
 ## Loss function
 Defining the loss function A machine learning model, when being trained, may have some deviation between the predicted output and the actual output, and this difference is called the **error** of the model. The function that lets us calculate this error is called the **loss function**, or error function.
 This function provides a metric to evaluate all possible solutions and choose the most optimized model. The loss function has to be able to reduce all attributes of the model down to a single number so that an improvement in that loss function value is representative of a better model.
@@ -1068,7 +1042,32 @@ nn.Dropout(p=0.25)
 
 ## torchvision
 
-###Augmentations
+
+Torchvision is compiled from 4 parts:
+
+* Datasets (like MNIST and Fashion-MNIST)
+
+* Models
+
+* Transforms
+
+* Utils
+
+### Display images as grid
+
+```python
+num_images_per_row = 5
+grid = torchvision.utils.make_grid(images, nrow=num_images_per_row, padding=2)
+plt.figure(figsize=(10, 3))
+
+# Now for imshow function requirement we arrange the axis
+# from grid.shape: [3,62,152] to transfer to shape of: [62,152,3]
+plt.imshow(np.transpose(grid, (1, 2, 0)))
+plt.show()
+```
+
+
+### Augmentations
 
 Few exaples of transforms on the data to create more data from existing data:
 
@@ -1219,25 +1218,6 @@ print("derivative_for_two_variables, result x.grad: ", x.grad)
 print("derivative_for_two_variables, result z.grad: ", z.grad)
 ```
 
-## Generate random numbers
-
-Generate 100 random numbers between 0 to 10
-```python
-torch.randn(100, 1) * 10
-```
-
-## Reproduce random numbers
-
-```python
-torch.manual_seed(50)
-```
-
-
-## Tensor to number
-
-```python
-my_tensor.item()
-```
 
 ```python
 import torch
