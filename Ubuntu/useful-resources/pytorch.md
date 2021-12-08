@@ -73,6 +73,7 @@
       * [Transfer learning](#transfer-learning)
          * [Freezing the model](#freezing-the-model)
          * [Replacing the last two layers](#replacing-the-last-two-layers)
+      * [Checkpoints](#checkpoints)
          * [Saving the model (Saving checkpoint)](#saving-the-model-saving-checkpoint)
          * [Loading the model (Loading checkpoint)](#loading-the-model-loading-checkpoint)
       * [Useful for plotting](#useful-for-plotting)
@@ -88,7 +89,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Wed 08 Dec 2021 16:28:11 IST -->
+<!-- Added by: gil_diy, at: Wed 08 Dec 2021 16:28:31 IST -->
 
 <!--te-->
 
@@ -1153,6 +1154,7 @@ nn.LogSoftMax(dim=1)
 
 ```
 
+## Checkpoints
 ### Saving the model (Saving checkpoint)
 ```python
 def save_checkpoint(state, filename="my_checkpoint.pth.tar"):
