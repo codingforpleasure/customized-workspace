@@ -51,8 +51,6 @@
          * [<strong>CNN Output Size formula (Square)</strong>](#cnn-output-size-formula-square)
          * [<strong>CNN Output Size formula (Non Square)</strong>](#cnn-output-size-formula-non-square)
       * [Batch normalization](#batch-normalization)
-      * [Batch size](#batch-size)
-      * [Load data](#load-data)
       * [Inspecting the weight and bias and layers](#inspecting-the-weight-and-bias-and-layers)
       * [Loss function](#loss-function)
          * [Negative log likelihood](#negative-log-likelihood)
@@ -79,7 +77,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Thu 09 Dec 2021 00:34:30 IST -->
+<!-- Added by: gil_diy, at: Thu 09 Dec 2021 00:38:10 IST -->
 
 <!--te-->
 
@@ -894,11 +892,6 @@ network2 = nn.Sequential(
 
 [Explained well](https://www.youtube.com/watch?v=dXB-KQYkzNU)
 
-
-## Batch size
-A higher batch size means that the model has fewer training steps and learns faster, whereas a high batch size results in high memory requirements.
-
-## Load data
 
 ## Inspecting the weight and bias and layers
 
