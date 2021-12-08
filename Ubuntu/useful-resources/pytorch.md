@@ -89,7 +89,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Thu 09 Dec 2021 00:12:39 IST -->
+<!-- Added by: gil_diy, at: Thu 09 Dec 2021 00:15:34 IST -->
 
 <!--te-->
 
@@ -811,7 +811,6 @@ example_dataset_train = My_data_set()
 # A higher batch size means that the model has fewer training steps and learns faster,
 # whereas a high batch size results in high memory requirements.
 
-# 
 
 train_loader = torch.utils.data.Dataloader(example_dataset_train) 
 ```
@@ -822,12 +821,10 @@ import torchvision
 import torch.vision,transforms as transforms
 
 train_set = torchvision.datasets.FasshionMNIST(
-root = './data/FashionMNIST',
-train = True,
-download = True,
-transform = transforms.Compose([
-	transforms.ToTensor()
-	])
+  root = './data/FashionMNIST',
+  train = True,
+  download = True,
+  transform = transforms.Compose([transforms.ToTensor()])
 )
 
 train_loader = torch.utils.data.Dataloader(
