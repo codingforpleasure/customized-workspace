@@ -52,8 +52,8 @@
       * [Loading images directory into a dataset](#loading-images-directory-into-a-dataset)
       * [Subsetting Dataset](#subsetting-dataset)
       * [Dataloader](#dataloader)
-      * [Dataset &amp;&amp; DataLoader](#dataset--dataloader)
       * [Utilizing the multiple process capabilities of the PyTorch DataLoader class](#utilizing-the-multiple-process-capabilities-of-the-pytorch-dataloader-class)
+      * [Dataset &amp;&amp; DataLoader](#dataset--dataloader)
          * [To better understand your data](#to-better-understand-your-data)
       * [Calculating the Output size of a CNN](#calculating-the-output-size-of-a-cnn)
          * [<strong>CNN Output Size formula (Square)</strong>](#cnn-output-size-formula-square)
@@ -89,7 +89,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Thu 09 Dec 2021 00:15:34 IST -->
+<!-- Added by: gil_diy, at: Thu 09 Dec 2021 00:16:49 IST -->
 
 <!--te-->
 
@@ -814,6 +814,20 @@ example_dataset_train = My_data_set()
 
 train_loader = torch.utils.data.Dataloader(example_dataset_train) 
 ```
+
+## Utilizing the multiple process capabilities of the PyTorch DataLoader class
+
+The natural question that arises is, how many worker processes should we add? 
+There are a lot of factors that can affect the optimal number here, so the best way to find out is to test. 
+
+```python
+# To speed up the training process, we will make use of the num_workers optional attribute of the DataLoader class.
+# The num_workers attribute tells the data loader instance how many sub-processes to use for data loading. 
+# By default, the num_workers value is set to zero, and a value of zero tells the loader to load the data inside the main process. 
+
+train_loader = torch.utils.data.Dataloader(train_set, batch_size = 10, num_workers=5)
+```
+
 ## Dataset && DataLoader
 ```python
 import torch 
@@ -832,18 +846,7 @@ train_set, batch_size = 10
 )
 ```
 
-## Utilizing the multiple process capabilities of the PyTorch DataLoader class
 
-The natural question that arises is, how many worker processes should we add? 
-There are a lot of factors that can affect the optimal number here, so the best way to find out is to test. 
-
-```python
-# To speed up the training process, we will make use of the num_workers optional attribute of the DataLoader class.
-# The num_workers attribute tells the data loader instance how many sub-processes to use for data loading. 
-# By default, the num_workers value is set to zero, and a value of zero tells the loader to load the data inside the main process. 
-
-train_loader = torch.utils.data.Dataloader(train_set, batch_size = 10, num_workers=5)
-```
 
 ### To better understand your data
 ```python
