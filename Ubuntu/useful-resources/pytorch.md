@@ -89,7 +89,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Thu 09 Dec 2021 00:05:05 IST -->
+<!-- Added by: gil_diy, at: Thu 09 Dec 2021 00:05:12 IST -->
 
 <!--te-->
 
@@ -180,10 +180,6 @@ torch.randn((2,3))
 ```python
 torch.randint(low=10, high = 100, size = (2, 3))
 ```
-
-lower_limit = 10
-upper_limit = 100
-
 
 #### Create a tensor with attributes from another tensor
 
