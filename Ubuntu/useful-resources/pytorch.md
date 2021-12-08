@@ -89,7 +89,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Wed 08 Dec 2021 16:28:31 IST -->
+<!-- Added by: gil_diy, at: Wed 08 Dec 2021 16:32:13 IST -->
 
 <!--te-->
 
@@ -1171,9 +1171,6 @@ checkpoint = {"state_dict": model.state_dict(),
 
 # invoking save checkpoint for saving the model parameters:
 save_checkpoint(checkpoint)
-
-
-torch.save(my_model.state_dict(), model_path)
 ```
 [Reference](https://pytorch.org/docs/stable/generated/torch.save.html#torch.save)
 
