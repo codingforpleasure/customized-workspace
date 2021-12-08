@@ -88,7 +88,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Wed 08 Dec 2021 16:23:52 IST -->
+<!-- Added by: gil_diy, at: Wed 08 Dec 2021 16:24:19 IST -->
 
 <!--te-->
 
@@ -1178,7 +1178,13 @@ torch.save(my_model.state_dict(), model_path)
 ## Loading the model (Loading checkpoint)
 ```python
 
-torch.load('tensors.pt', map_location=torch.device('cpu'))
+def load_checkpoint(checkpoint, model, optimizer):
+    print("=> Loading checkpoint")
+    model.load_state_dict(checkpoint["state_dict"])
+    optimizer.load_state_dict(checkpoint["optimizer"])
+
+
+load_checkpoint(torch.load("my_checkpoint.pth.tar"), model, optimizer)
 ```
 
 [Reference](https://pytorch.org/docs/stable/generated/torch.load.html#torch.load)
