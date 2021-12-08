@@ -55,7 +55,6 @@
       * [Utilizing the multiple process capabilities of the PyTorch DataLoader class](#utilizing-the-multiple-process-capabilities-of-the-pytorch-dataloader-class)
       * [Dataset &amp;&amp; DataLoader](#dataset--dataloader)
          * [To better understand your data](#to-better-understand-your-data)
-      * [Calculating the Output size of a CNN](#calculating-the-output-size-of-a-cnn)
          * [<strong>CNN Output Size formula (Square)</strong>](#cnn-output-size-formula-square)
          * [<strong>CNN Output Size formula (Non Square)</strong>](#cnn-output-size-formula-non-square)
       * [Batch normalization](#batch-normalization)
@@ -89,7 +88,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Thu 09 Dec 2021 00:16:49 IST -->
+<!-- Added by: gil_diy, at: Thu 09 Dec 2021 00:18:31 IST -->
 
 <!--te-->
 
@@ -847,7 +846,6 @@ train_set, batch_size = 10
 ```
 
 
-
 ### To better understand your data
 ```python
 import numpy as np
@@ -880,9 +878,7 @@ print('label:',label)
 
 [Link](https://youtu.be/mUueSPmcOBc?t=665)
 
-## Calculating the Output size of a CNN
 
-[Link](https://youtu.be/cin4YcGBh3Q?list=PLZbbT5o_s2xrfNyHZsM6ufI0iZENK9xgG)
 
 ### **CNN Output Size formula (Square)**
 
@@ -897,6 +893,9 @@ print('label:',label)
 <p align="center"> <!-- style="width:400px;" -->
   <img src="images/pytorch/cnn_output_size_non_square.png" title="tool tip here">
 </p>
+
+
+[Link](https://youtu.be/cin4YcGBh3Q?list=PLZbbT5o_s2xrfNyHZsM6ufI0iZENK9xgG)
 
 
 ## Batch normalization
