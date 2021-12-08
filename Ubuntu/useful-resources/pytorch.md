@@ -89,7 +89,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Wed 08 Dec 2021 16:32:23 IST -->
+<!-- Added by: gil_diy, at: Thu 09 Dec 2021 00:05:05 IST -->
 
 <!--te-->
 
@@ -178,7 +178,7 @@ torch.randn((2,3))
 #### Create a tensor from a given range of values
 
 ```python
-torch.randint(10,100, (2,3))
+torch.randint(low=10, high = 100, size = (2, 3))
 ```
 
 lower_limit = 10
