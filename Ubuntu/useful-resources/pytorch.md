@@ -88,7 +88,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Wed 08 Dec 2021 16:23:27 IST -->
+<!-- Added by: gil_diy, at: Wed 08 Dec 2021 16:23:36 IST -->
 
 <!--te-->
 
@@ -1167,7 +1167,7 @@ optimizer = optim.Adam(model.parameters())
 checkpoint = {"state_dict": model.state_dict(), 
 			  "optimizer": optimizer.state_dict()}
 
-# invoking save checkpoint
+# invoking save checkpoint for saving the model:
 save_checkpoint(checkpoint)
 
 
