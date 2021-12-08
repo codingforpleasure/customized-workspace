@@ -6,15 +6,9 @@
       * [Checking versions](#checking-versions)
       * [Basics - Tensors](#basics---tensors)
          * [Create tensors](#create-tensors)
-            * [Create a tensor with all the same values](#create-a-tensor-with-all-the-same-values)
-            * [Create a tensor from uniform distribution](#create-a-tensor-from-uniform-distribution)
-            * [Create a tensor from a given range of values](#create-a-tensor-from-a-given-range-of-values)
             * [Create a tensor with attributes from another tensor](#create-a-tensor-with-attributes-from-another-tensor)
             * [Create a tensor from numpy array](#create-a-tensor-from-numpy-array)
             * [Create a numpy array from tensor](#create-a-numpy-array-from-tensor)
-            * [Create an Identity tensor](#create-an-identity-tensor)
-            * [Create all zeros tensor](#create-all-zeros-tensor)
-            * [Create all ones tensor](#create-all-ones-tensor)
          * [Get number of elements in a tensor](#get-number-of-elements-in-a-tensor)
          * [Tensor Operation types](#tensor-operation-types)
             * [Reshape operations](#reshape-operations)
@@ -85,7 +79,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Thu 09 Dec 2021 00:24:42 IST -->
+<!-- Added by: gil_diy, at: Thu 09 Dec 2021 00:34:30 IST -->
 
 <!--te-->
 
@@ -131,27 +125,6 @@ print("torch.version.cuda = ", torch.version.cuda)
 
 ### Create tensors
 
-####  Create a tensor with all the same values
-
-creating a tensor of 2 rows and 3 columns with all 4's.
-
-```python
-x = torch.full((2,3), 4)
-```
-
-#### Create a tensor from uniform distribution
-
-with mean 0 and variance 1
-
-```python
-torch.randn((2,3))
-```
-#### Create a tensor from a given range of values
-
-```python
-torch.randint(low=10, high = 100, size = (2, 3))
-```
-
 #### Create a tensor with attributes from another tensor
 
 ```python
@@ -191,22 +164,6 @@ Shared Data | Copy Data
 my_torch_tensor.cpu().detach().numpy()
 ```
 
-#### Create an Identity tensor
-
-```python
-torch.eye(2)
-```
-#### Create all zeros tensor
-
-```python
-torch.zeros(2,2)
-```
-
-#### Create all ones tensor
-
-```python
-torch.ones(2,2)
-```
 
 ### Get number of elements in a tensor
 
