@@ -1,0 +1,13 @@
+<templateSet group="Click-Python">
+  <template name="gc-click-exmple" value="@click.command()&#10;@click.option('--$OPTION1$', default=$DEFAULT_VALUE$, help='$HELPER_MSG_1$')&#10;@click.option('--$OPTION2$', prompt='$PROMPT_SCREEN$', help='$HELPER_MSG_2$')&#10;def hello(count, name):&#10;    #Simple program that greets NAME for a total of COUNT times.&quot;&quot;&quot;&#10;    for x in range(count):&#10;        click.echo('Hello %s!' % name)" description="example" toReformat="false" toShortenFQNames="true">
+    <variable name="OPTION1" expression="" defaultValue="&quot;count&quot;" alwaysStopAt="true" />
+    <variable name="DEFAULT_VALUE" expression="" defaultValue="&quot;1&quot;" alwaysStopAt="true" />
+    <variable name="HELPER_MSG_1" expression="" defaultValue="&quot;Number of greetings.&quot;" alwaysStopAt="true" />
+    <variable name="OPTION2" expression="" defaultValue="&quot;name&quot;" alwaysStopAt="true" />
+    <variable name="PROMPT_SCREEN" expression="" defaultValue="&quot;Your name&quot;" alwaysStopAt="true" />
+    <variable name="HELPER_MSG_2" expression="" defaultValue="&quot;The person to greet.&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+</templateSet>

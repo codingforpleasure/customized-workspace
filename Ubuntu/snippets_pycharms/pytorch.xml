@@ -1,0 +1,108 @@
+<templateSet group="pytorch">
+  <template name="gc-torch-logistic-regression" value="import torch.nn as nn&#10;&#10;loss_function = $LOSS_FUNCTION$&#10;&#10;# SGD: Stochastic Gradient Descent&#10;optimizer = $OPITIMIZER$&#10;&#10;epochs = $EPOCHS$&#10;losses = []&#10;&#10;for i in range(epochs):&#10;    y_pred = model.forward(x_data)&#10;    loss = loss_function(y_pred, y_data)&#10;    print(&quot;epoch: &quot;, i, &quot;loss&quot;, loss.item())&#10;&#10;    losses.append(loss.item())&#10;    optimizer.zero_grad()&#10;    loss.backward()&#10;    optimizer.step()" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="LOSS_FUNCTION" expression="" defaultValue="&quot;nn.BCELoss()&quot;" alwaysStopAt="true" />
+    <variable name="OPITIMIZER" expression="" defaultValue="&quot;torch.optim.SGD(model.parameters(), lr=0.01)&quot;" alwaysStopAt="true" />
+    <variable name="EPOCHS" expression="" defaultValue="&quot;1000&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="gc-torch-dataloader" value="# We use torch.utils.data.DataLoader to load this processed data into batches, along with&#10;# other operations such as shuffling and loading to the right device—CPU or GPU.&#10;&#10;from torch.utils.data import DataLoader&#10;&#10;# The batch size determines the numנer of images to be extracted from the dataset in each iterations&#10;train_data_loader = DataLoader(train_dataset, batch_size=13, shuffle=True)&#10;val_data_loader = DataLoader(valid_dataset, batch_size=13, shuffle=False)&#10;&#10;for x, y in train_data_loader:&#10;    print(x.shape)&#10;    print(y.shape)&#10;    break&#10;    &#10;for x, y in val_data_loader:&#10;    print(x.shape)&#10;    print(y.shape)&#10;    break" description="pytorch data loader" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="gc-torch-move-to-GPU-device" value="print(&quot;The model is hosted on: &quot;, next(model.parameters()).device)&#10;device = torch.device(&quot;cuda:0&quot;)&#10;model.to(device)&#10;print(&quot;Now the model is hosted on: &quot;, next(model.parameters()).device)" description="Moving the model  to be hosted on GPU" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="gc-torch-summary-model" value="from torchsummary import summary&#10;&#10;# Display the model summary when executed&#10;summary(model, input_size=(1, 28, 28), device=device.type)" description="Display the model summary when executed" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="gc-torch-transform" value="from torchvision import transforms&#10;&#10;# Transformation for the training dataset&#10;train_transformer = transforms.Compose([&#10;    transforms.Resize((10, 10)),&#10;    transforms.RandomHorizontalFlip(p=0.5),&#10;    transforms.RandomVerticalFlip(p=0.5),&#10;    transforms.RandomRotation(45),&#10;    transforms.RandomSizedCrop(96, scale=(0.8, 1.0), ratio=(1.0, 1.0)),&#10;    transforms.ToTensor()&#10;])&#10;&#10;# for validation set, we don't need any augmentation,&#10;# So we only convert the images into tensors:&#10;&#10;val_transformer = transforms.Compose([&#10;    transforms.ToTensor()&#10;])&#10;&#10;# overwrite the transform functions&#10;# The dataset should be of type torch.utils.data.dataset.Subset:&#10; &#10;$TRAIN_DS$.transform=train_transformer&#10;$VALID_DS$.transform=val_transformer" description="Apply transform on train and validation  datasets" toReformat="false" toShortenFQNames="true">
+    <variable name="TRAIN_DS" expression="" defaultValue="&quot;train_ds&quot;" alwaysStopAt="true" />
+    <variable name="VALID_DS" expression="" defaultValue="&quot;valid_ds&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="gc-torch-splitting-dataset" value="from torch.utils.data import random_split&#10;&#10;# Since we don't have two seperate folders for training and for validation,&#10;# we will create two sub sets: &#10;len_whole_dataset = len(len($MY_DATASET$))&#10;len_train = int(0.8 * len_whole_dataset)&#10;len_validation = len_whole_dataset - len_train&#10;train_dataset, validation_dataset = random_split($MY_DATASET$, [len_train, len_validation])&#10;&#10;print(&quot;Train dataset length: &quot;, len(train_dataset))&#10;print(&quot;Validation dataset length: &quot;, len(validation_dataset))" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="MY_DATASET" expression="" defaultValue="my_data" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="gc-torch-roadmap" value="# Roadmap for building a classification model&#10;# ********************************************&#10;# * Step 1: Exploring the dataset&#10;# * Step 2: Creating a custom dataset&#10;# * Step 3: Splitting the dataset&#10;# * Step 4: Transforming the data&#10;# * Step 5: Creating the data-loaders&#10;# * Step 6: Building the classification model&#10;# * Step 7: Defining the loss function&#10;# * Step 8: Defining the optimizer&#10;# * Step 9: Training and evaluation of the model&#10;# * Step 10: Deploying the model&#10;# * Step 11:Model inference on test data" description="Roadmap for building image classifier" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="gc-torch-dataset-custom" value="from PIL import Image&#10;import os&#10;import  torch.utils.data.dataset as Dataset&#10;from torchvision import transforms&#10;&#10;class $DATASET_NAME$(Dataset):&#10;    def __init__(self, data_dir, transformers, data_type=&quot;train&quot;):&#10;        path_to_data = os.path.join(data_dir, data_type)&#10;        filenames = os.listdir(path_to_data)&#10;        # store the full path to images&#10;        self.full_path_to_filenames = [os.path.join(path_to_data, f) for f in filenames]&#10;        self.labels = []&#10;        self.transform = transformers&#10;&#10;    def __len__(self):&#10;        # Returns size of dataset&#10;        return len(self.full_path_to_filenames)&#10;&#10;    # Returns the transformed image at the given index and its corresponding label&#10;    def __getitem__(self, idx):&#10;        # open image, apply transforms and return with label&#10;        image = Image.open(self.full_path_to_filenames[idx])&#10;        image = self.transform(image)&#10;        return image, self.labels[idx]&#10;&#10;data_transformer = transforms.Compose([transforms.ToTensor()])&#10;data_path = ''&#10;train_dataset = $DATASET_NAME$(data_path, data_transformer,&quot;train&quot;)" description="custom dataset" toReformat="false" toShortenFQNames="true">
+    <variable name="DATASET_NAME" expression="" defaultValue="&quot;Custom_dataset&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="gc-torch-hyperparameter-tuning" value="from itertools import product&#10;&#10;parameters = dict(&#10;&#9;lr = [.01, .001],&#10;&#9;batch_size = [10,100,1000],&#10;&#9;shuffle = [True, False]&#9;&#10;&#9;)&#10;&#10;for lr,batch_size, shuffle in product(*param_values):&#10;&#9;print(lr, batch_size, shuffle)&#10;&#9;comment = f' batch_size={batch_size} lr={lr} shuffle={shuffle}'" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="gc-torch-dropout" value="# We added a dropout layer before the output layer to reduce the overfitting problem in deep learning models&#10;# The dropout layer is only applied during training, at deployment the dropout layer should be deactivated.&#10;# to do so make sure to set training argument of the dropout layer to False at deployment&#10;&#10;x = F.dropout(x, self.dropout_rate, training=self.training)" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="gc-torch-optimizer" value="from torch.optim.lr_scheduler import ReduceLROnPlateau&#10;import torch.optim as optim&#10;&#10;# For binary classification tasks, SGD and Adam optimizers are used the most&#10;# The cnn_model.parameters() returns an iterator over module parameters that are passed to the optimizer.&#10;opt = optim.Adam(cnn_model.parameters(), lr=3e-4)&#10;&#10;# The ReduceLROnPlateau scheduler reads a metric quantity and if no improvement is&#10;# seen for a patience number of epochs, the learning rate is reduced by a factor of 0.5&#10;# The &quot;mode&quot; argument defines whether the metric quantity is increasing or decreasing during training&#10;# if we monitor the loss value, we set mode = 'min', if we monitor the accuracy, we should set mode='max'&#10;lr_scheduler = ReduceLROnPlateau(opt,&#10;                                 mode=&quot;min&quot;,&#10;                                 factor=0.5,&#10;                                 patience=20,&#10;                                 verbose=1)" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="gc-torch-dataset-from-image-library" value="import torchvision&#10;&#10;dataset_dir='$PATH$'&#10;dataset_train = torchvision.datasets.ImageFolder(root=os.path.join(dataset_dir, &quot;train&quot;),&#10;                                           transform=train_tfms)" description="Set dataset from image library" toReformat="false" toShortenFQNames="true">
+    <variable name="PATH" expression="" defaultValue="&quot;images_data&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="gc-torch-transfer-learning" value="model_ft = models.$MODEL$(pretrained=True)&#10;num_ftrs = model_ft.fc.in_features&#10;&#10;# Replace the last fc layer with an untrained one (requires grad by default)&#10;model_ft.fc = nn.Linear(num_ftrs, $NUM_CLASSES$) # Second argument is the number of classes&#10;model_ft = model_ft.to(device)" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="MODEL" expression="" defaultValue="&quot;resnet34&quot;" alwaysStopAt="true" />
+    <variable name="NUM_CLASSES" expression="" defaultValue="&quot;196&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="gc-torch-save-model" value="torch.save(model.state_dict(), f&quot;model_{fold}.bin&quot;)" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="gc-torch-has-gpu=device" value="device = torch.device('cuda') if torch.cuda.is_available() else torch.device('cpu')&#10;print('The device is:', device)" description="Check for gpu existance" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="gc-torch-export-to-torchscript" value="import torch&#10;&#10;model = torch.hub.load(&quot;pytorch/vision&quot;, &quot;deeplabv3_resnet50&quot;, pretrained=True)&#10;model.eval()&#10;script_model = torch.jit.script(model)&#10;&#10;# Not applying quantization therefore the model size is quite big 160mb&#10;torch.jit.save(script_model, &quot;deeplabv3_resnet50.pt&quot;)" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="gc-torch-formula-output-size" value="# In case of a square:&#10;# We have an nxn input&#10;# We have an fxf filter&#10;# We have a padding of p and stride of s&#10;#&#10;# the output size is:&#10;# output size = (n - f + 2p)/s + 1" description="CNN output Size Formula (Square)" toReformat="false" toShortenFQNames="true" />
+  <template name="gc-torch-training-loop" value="train_loader = torch.utils.data.DataLoader(train_set, batch_size=$NUMBER_OF_ELEMENTS_IN_BATCH$)&#10;optimizer = optim.Adam(params=$MY_NETWORK_NAME$.parameters(), lr=$LEARNING_RATE$)&#10;&#10;for idx_epoch in range($NUMBER_OF_EPOCHS$):  # Get Batch&#10;    total_loss = 0&#10;    total_correct = 0&#10;&#10;    for idx_batch, batch in enumerate(train_loader):  # Get Batch&#10;        # print(&quot;idx_batch: &quot;, idx_batch)&#10;        images, labels = batch&#10;&#10;        preds = $MY_NETWORK_NAME$(images)  # Pass Batch to your network model&#10;&#10;        # Cross-entropy is widely used as a loss function when optimizing classification models.&#10;        loss = F.cross_entropy(preds, labels)&#10;&#10;        # We need to say to the optimizer to zero out&#10;        # the gradients that being held in the grad attribute&#10;        # of the weights and this is because pytorch accumulates gradients&#10;        # which just means adds&#10;&#10;        optimizer.zero_grad()&#10;        loss.backward()  # Calculate Gradients&#10;        optimizer.step()  # Update Weights&#10;&#10;        total_loss += loss.item()&#10;        total_correct += get_num_correct(preds, labels)&#10;&#10;    print(&quot;epoch #&quot;, idx_epoch, &quot; total_correct:&quot;, total_correct, &quot;, loss:&quot;, total_loss)&#10;" description="Set a training loop for training from scratch" toReformat="false" toShortenFQNames="true">
+    <variable name="NUMBER_OF_ELEMENTS_IN_BATCH" expression="" defaultValue="&quot;10&quot;" alwaysStopAt="true" />
+    <variable name="LEARNING_RATE" expression="" defaultValue="&quot;0.01&quot;" alwaysStopAt="true" />
+    <variable name="NUMBER_OF_EPOCHS" expression="" defaultValue="&quot;20&quot;" alwaysStopAt="true" />
+    <variable name="MY_NETWORK_NAME" expression="" defaultValue="&quot;network&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="gc-torch-get-model-parameters" value="# Print model's state_dict&#10;print(&quot;Model's state_dict:&quot;)&#10;for param_tensor in $MODEL_NAME$.state_dict():&#10;    print(param_tensor, &quot;\t&quot;, $MODEL_NAME$.state_dict()[param_tensor].size())" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="MODEL_NAME" expression="" defaultValue="&quot;model&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+</templateSet>

@@ -1,0 +1,60 @@
+<templateSet group="OpenCV-Python">
+  <template name="gc-cv2-erode-morphological-transformations" value="kernel = np.ones(($NUM_ROWS$, $NUM_COLUMNS$), np.uint8)&#10;erosion = cv2.erode($IMAGE_NAME$, kernel, iterations=$NUM_ITERATIONS$)" description="erode" toReformat="false" toShortenFQNames="true">
+    <variable name="NUM_ROWS" expression="" defaultValue="&quot;3&quot;" alwaysStopAt="true" />
+    <variable name="NUM_COLUMNS" expression="" defaultValue="&quot;3&quot;" alwaysStopAt="true" />
+    <variable name="IMAGE_NAME" expression="" defaultValue="&quot;img&quot;" alwaysStopAt="true" />
+    <variable name="NUM_ITERATIONS" expression="" defaultValue="&quot;1&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="gc-cv2-threshold" value="gray = cv2.cvtColor($IMAGE_NAME$, cv2.COLOR_BGR2GRAY)&#10;max_val = $MAX_VAL$&#10;_, thresh = cv2.threshold(gray, 0, $MAX_VAL$, cv2.$THRESH_TYPE$ | cv2.THRESH_OTSU)" description="Thresholding" toReformat="false" toShortenFQNames="true">
+    <variable name="IMAGE_NAME" expression="" defaultValue="&quot;img&quot;" alwaysStopAt="true" />
+    <variable name="MAX_VAL" expression="" defaultValue="&quot;255&quot;" alwaysStopAt="true" />
+    <variable name="THRESH_TYPE" expression="" defaultValue="&quot;THRESH_BINARY_INV&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="gc-cv2-resize" value="img_new_size = ($HEIGHT$, $WIDTH$)&#10;letter = cv2.resize($IMG$[y:y + h, x:x + w], img_new_size)&#10;" description="Resize object" toReformat="false" toShortenFQNames="true">
+    <variable name="HEIGHT" expression="" defaultValue="&quot;100&quot;" alwaysStopAt="true" />
+    <variable name="WIDTH" expression="" defaultValue="&quot;100&quot;" alwaysStopAt="true" />
+    <variable name="IMG" expression="" defaultValue="&quot;img&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="gc-cv2-rec" value="cv2.rectangle(image, (x, y), (x + w, y + h), 100, 2)" description="draws a rectangle outline or filled" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="gc-cv2-show" value="cv2.imshow(&quot;$IMG_TITLE$&quot;, $IMG_NAME$)&#10;cv2.moveWindow(&quot;$IMG_TITLE$&quot;, 0, 0)&#10;cv2.waitKey(0)&#10;cv2.destroyAllWindows()" description="Display an image in a window" toReformat="false" toShortenFQNames="true">
+    <variable name="IMG_TITLE" expression="" defaultValue="&quot;Window's title&quot;" alwaysStopAt="true" />
+    <variable name="IMG_NAME" expression="" defaultValue="&quot;my_image&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="gc-cv2-load-image" value="img= cv2.imread(&quot;$IMG_PATH$&quot;)" description="load image from disk" toReformat="false" toShortenFQNames="true">
+    <variable name="IMG_PATH" expression="" defaultValue="&quot;~/images/img.png&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="gc-cv2-save-image" value="cv2.imwrite(&quot;$IMG_PATH$&quot;, $IMG_NAME$)" description="Write image into disk (save it as image file)." toReformat="false" toShortenFQNames="true">
+    <variable name="IMG_PATH" expression="" defaultValue="&quot;~/codingForPleasure/example.png&quot;" alwaysStopAt="true" />
+    <variable name="IMG_NAME" expression="" defaultValue="&quot;my_image&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="gc-cv2-rotate-image" value="rows, columns, channels = $IMG_NAME$.shape&#10;&#10;# Generate an rotation matrix clockwise by $DEG$ degress and rescale sizw with factor = $RESCALE_VALUE$:&#10;R = cv2.getRotationMatrix2D((columns / 2, rows / 2), $DEG$, $RESCALE_VALUE$)&#10;&#10;# Now apply the rotation matrix on the image&#10;output = cv2.warpAffine($IMG_NAME$, R, (columns, rows))" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="IMG_NAME" expression="" defaultValue="&quot;my_image&quot;" alwaysStopAt="true" />
+    <variable name="DEG" expression="" defaultValue="&quot;45&quot;" alwaysStopAt="true" />
+    <variable name="RESCALE_VALUE" expression="" defaultValue="&quot;1&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+</templateSet>

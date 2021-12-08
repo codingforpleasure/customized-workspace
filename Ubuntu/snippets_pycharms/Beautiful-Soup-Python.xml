@@ -1,0 +1,62 @@
+<templateSet group="Beautiful-Soup-Python">
+  <template name="gc-bs-setup" value="url = &quot;$ADDRESS$&quot;&#10;content = urllib.request.urlopen(url).read()&#10;soup = BeautifulSoup(content, '$PARSER_TYPE$')" description="Set url and parser using beautifulsoup" toReformat="false" toShortenFQNames="true">
+    <variable name="ADDRESS" expression="" defaultValue="&quot;http://en.wikipedia.org/wiki/Billboard_Year-End_Hot_100_singles_of_1970&quot;" alwaysStopAt="true" />
+    <variable name="PARSER_TYPE" expression="" defaultValue="&quot;html.parser&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="gc-bs-get-all-table-rows" value="for tr in soup.find_all('tr'):&#10;    print(tr.text)" description="Iterate over all Table Rows" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="gc-bs-get-all-links" value="for tr in soup.find_all('a'):&#10;    print(tr.text)" description="Iterate over all Hyperlinks" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="gc-bs-get-all-paragraphs" value="for paragraph in soup.find_all('p'):&#10;    print(paragraph.text)" description="Iterate over all paragraphs" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="gc-bs-get-all-tags-by-regex" value="import re&#10;# For example finds all the tags whose names start with the letter “b”,&#10;# so the matching tags will be b and body&#10;&#10;for tag in soup.find_all(re.compile(&quot;$PATTERN$&quot;)):&#10;    print(tag.name)" description="Filter tags against that regular expression" toReformat="false" toShortenFQNames="true">
+    <variable name="PATTERN" expression="" defaultValue="&quot;^b&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="gc-bs-get-all-tag-names" value="for tag in soup.find_all(True):&#10;    print(tag.name)" description="Iterate and grab all tags in the document" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="gc-bs-get-all-by-css-class" value="soup.find_all(&quot;a&quot;, class_=$CLASS_NAME$)" description="Searching by CSS class" toReformat="false" toShortenFQNames="true">
+    <variable name="CLASS_NAME" expression="" defaultValue="&quot;sister&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="gc-bs-get-elements-by-class" value="$DIVS_COLLECTION$ = soup.findAll(&quot;div&quot;, {&quot;class&quot;: &quot;$CLASS_NAME$&quot;})&#10;&#10;# you can also write:&#10;# $DIVS_COLLECTION$ = soup.find_all(&quot;div&quot;, class_=$CLASS_NAME$) &#10;" description="Find elements by class name" toReformat="false" toShortenFQNames="true">
+    <variable name="DIVS_COLLECTION" expression="" defaultValue="&quot;mydivs&quot;" alwaysStopAt="true" />
+    <variable name="CLASS_NAME" expression="" defaultValue="&quot;class_name_here&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="gc-get-tags-filtered-by-regex" value="import re&#10;&#10;for tag in cl.find_all('$TAG_TYPE$', href=re.compile(&quot;$REGEX$&quot;)):&#10;        print(tag.text)" description="Filter specific tags against that regular expression" toReformat="false" toShortenFQNames="true">
+    <variable name="TAG_TYPE" expression="" defaultValue="a" alwaysStopAt="true" />
+    <variable name="REGEX" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="gc-bs-get-all-tags-by-style" value="group_tds_by_style = soup.find_all(&quot;$TAG_TYPE$&quot;, attrs={'style': '$ACTUAL_STYLE$'})&#10;" description="Retrieve specific tags by their style" toReformat="false" toShortenFQNames="true">
+    <variable name="TAG_TYPE" expression="" defaultValue="&quot;td&quot;" alwaysStopAt="true" />
+    <variable name="ACTUAL_STYLE" expression="" defaultValue="&quot;vertical-align:top;text-align:right;&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+</templateSet>

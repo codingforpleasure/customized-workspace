@@ -1,0 +1,7 @@
+<templateSet group="Conversion">
+  <template name="GC-Conversion-string-to-list" value="import ast&#10;    &#10;my_str = &quot;[2,3,4,5]&quot;&#10;print(type(my_str))&#10;my_list = ast.literal_eval(my_str)&#10;print(type(my_list))" description="Using ast library" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+</templateSet>

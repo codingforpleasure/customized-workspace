@@ -1,0 +1,33 @@
+<templateSet group="OS">
+  <template name="gc-os-clean-directory-content" value="def cleanup(list_of_directories):&#10;    for idx, current_directory in enumerate(list_of_directories):&#10;        print(idx, &quot;. Cleaning directory:&quot;, current_directory)&#10;&#10;        for sub_directory in os.listdir(current_directory):&#10;            dir_path = os.path.join(current_directory, sub_directory)&#10;&#10;            if os.path.isdir(dir_path):&#10;                shutil.rmtree(dir_path)&#10;            else:&#10;                # It's a file and not a directory&#10;                os.remove(dir_path)&#10;&#10;&#10;cleanup(['directory1', directory2])" description="Emptying the directory content" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="gc-os-iterate-files" value="import os&#10;&#10;src_directory = '$PATH$'&#10;&#10;&#10;# print(os.path.dirname(src_directory)&#10;# print(os.path.basename(&quot;/home/gil_diy/bla.c&quot;))&#10;&#10;for filename in os.listdir(src_directory):&#10;    if filename.endswith(&quot;.asm&quot;) or filename.endswith(&quot;.py&quot;):&#10;        # print(os.path.join(directory, filename))&#10;" description="Iterate over files in directory" toReformat="false" toShortenFQNames="true">
+    <variable name="PATH" expression="" defaultValue="&quot;/home/gil_diy/PycharmProjects/&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="gc-os-copy-file" value="import shutil&#10;&#10;shutil.copy(src = os.path.join(SRC_DIR,filename),&#10;            dst = os.path.join(DST_DIR,filename))" description="copy file from src directory to dst directory" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="gc-os-save-files-with-consecutive--number" value="# The following code Should be in a loop&#10;p = os.path.sep.join([output_folder, &quot;{}.jpg&quot;.format(str(total).zfill(8))])&#10;f = open(p, &quot;wb&quot;)&#10;f.write(r.content)&#10;f.close()&#10;&#10;# update the counter&#10;total += 1" description="padding files with zeros before saving file" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="gc-os-iterated-nested-directories" value="# Iterating over all nested hierarchy directories &#10;rootdir = '/your/directory'&#10;for subdir, dirs, files in os.walk(rootdir):&#10;    for file in files:&#10;        print(os.path.join(subdir, file))" description="IIterating over all nested hierarchy directories" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="gc-os-rename-files" value="shutil.move(src=path, &#10;            dst=os.path.join('/bla',filename))" description="Rename-files" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+</templateSet>

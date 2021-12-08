@@ -1,0 +1,12 @@
+<templateSet group="python-other">
+  <template name="gc-map" value="stuff = map(lambda w: [w.upper(), w.lower(), len(w)], words)" description="example of map" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="gc-unpack-dictionary-double-asterisk" value="date_info = {'year': &quot;2020&quot;, 'month': &quot;01&quot;, 'day': &quot;01&quot;}&#10;filename = &quot;{year}-{month}-{day}.txt&quot;.format(**date_info)&#10;print(filename)" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+</templateSet>

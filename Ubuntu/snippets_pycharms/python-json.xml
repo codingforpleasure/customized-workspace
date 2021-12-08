@@ -1,0 +1,7 @@
+<templateSet group="python-json">
+  <template name="gc-json-dump" value="filename = &quot;bla.json&quot;&#10;data = dict()&#10;data['id'] = 'Description'&#10;&#10;if os.path.exists(filename):&#10;    with open(filename, &quot;r&quot;) as fd:&#10;        data = json.load(fd)&#10;else:&#10;    print(&quot;File does not exist. creating a new file&quot;)&#10;    with open(filename, &quot;w+&quot;, encoding='utf-8') as fd:&#10;        json.dump(data, fd, indent=2, ensure_ascii=False)&#10;" description="dumping data into json file" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+</templateSet>

@@ -1,0 +1,24 @@
+<templateSet group="Python">
+  <template name="dd" value="&quot;&quot;&quot;$SENTENCE$.&quot;&quot;&quot;" description="Adding docstring" toReformat="false" toShortenFQNames="true">
+    <variable name="SENTENCE" expression="" defaultValue="&quot;Example of docstring, update this line&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="cc" value="&quot;&quot;&quot;$SENTENCE$.&quot;&quot;&quot;" description="Adding docstring" toReformat="false" toShortenFQNames="true">
+    <variable name="SENTENCE" expression="" defaultValue="&quot;Example of docstring, update this line&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="gc-padding-zeros" value="number = '12345'&#10;padded_number = number.zfill(7)" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="gc-wget" value="import wget&#10;&#10;if not os.path.exists(an4_audio):&#10;    an4_audio_url = &quot;https://nemo-public.s3.us-east-2.amazonaws.com/an4_diarize_test.wav&quot;&#10;    an4_audio = wget.download(url = an4_audio_url, out = data_dir)" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+</templateSet>

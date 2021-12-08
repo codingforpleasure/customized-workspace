@@ -1,0 +1,7 @@
+<templateSet group="colorma">
+  <template name="gc-color-text" value="from colorama import Fore, Style&#10;print(Fore.BLUE + &quot;This is blue&quot; + Style.RESET_ALL)&#10;print(&quot;This is black&quot;)" description="Modify Text color" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+</templateSet>

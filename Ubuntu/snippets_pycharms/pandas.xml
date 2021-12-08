@@ -1,0 +1,12 @@
+<templateSet group="pandas">
+  <template name="gc-pandas-shuffle-rows" value="df = df.sample(frac=1).reset_index(drop=True)" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="gc-pandas-show-all" value="pd.set_option('display.max_rows', 500)  # To see all rows&#10;pd.set_option('display.max_columns', 500)  # To see all columns&#10;pd.set_option('display.width', 1000)" description="pandas show all rows and columns" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+</templateSet>

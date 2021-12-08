@@ -1,0 +1,150 @@
+<templateSet group="OpenCV">
+  <template name="gc-opencv-convert" value="$IMG_MODE$ = cv2.cvtColor(img, cv2.$COLOR_SPACE$)" description="convert the image from the one colorspace to another" toReformat="false" toShortenFQNames="true">
+    <variable name="IMG_MODE" expression="" defaultValue="&quot;img_gray&quot;" alwaysStopAt="true" />
+    <variable name="COLOR_SPACE" expression="" defaultValue="&quot;COLOR_BGR2GRAY&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="gc-opencv-draw-circle" value="cv2.circle($IMG$, center=(int($CX$), int($CY$)), radius=2, color=(0, 255, 0), thickness=5)" description="Draw a simple circle on image" toReformat="false" toShortenFQNames="true">
+    <variable name="IMG" expression="" defaultValue="&quot;img&quot;" alwaysStopAt="true" />
+    <variable name="CX" expression="" defaultValue="&quot;Cx&quot;" alwaysStopAt="true" />
+    <variable name="CY" expression="" defaultValue="&quot;Cy&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="gc-opencv-draw-line" value="cv2.line(img=$IMG$, pt1=(x1, y1), pt2=(x2, y2), color=($B$, $G$, $R$), thickness=$THICKNESS$)" description="Draw a simple line on image" toReformat="false" toShortenFQNames="true">
+    <variable name="IMG" expression="" defaultValue="&quot;img&quot;" alwaysStopAt="true" />
+    <variable name="B" expression="" defaultValue="&quot;255&quot;" alwaysStopAt="true" />
+    <variable name="G" expression="" defaultValue="&quot;0&quot;" alwaysStopAt="true" />
+    <variable name="R" expression="" defaultValue="&quot;0&quot;" alwaysStopAt="true" />
+    <variable name="THICKNESS" expression="" defaultValue="&quot;2&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="gc-opencv-draw-rectangle" value="cv2.rectangle(img=$IMG$, pt1=$PT1$, pt2=$PT2$, color=(0, 255, 0), thickness=5)" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="IMG" expression="" defaultValue="&quot;img&quot;" alwaysStopAt="true" />
+    <variable name="PT1" expression="" defaultValue="&quot;pt1&quot;" alwaysStopAt="true" />
+    <variable name="PT2" expression="" defaultValue="&quot;pt2&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="gc-opencv-drawContour" value="# Make sure the actual array of vertices are of type integer&#10;# You can convert it with [vertices.astype(int)]&#10;cv2.drawContours(image=$IMG$, contours=[], contourIdx=0, color=($BLUE$, $GREEN$, $RED$), thickness=-1)&#10;cv2.imshow(winname=&quot;contour&quot;, mat=$IMG$)&#10;cv2.waitKey(0)" description="Draw Contours" toReformat="false" toShortenFQNames="true">
+    <variable name="IMG" expression="" defaultValue="&quot;img&quot;" alwaysStopAt="true" />
+    <variable name="BLUE" expression="" defaultValue="&quot;0&quot;" alwaysStopAt="true" />
+    <variable name="GREEN" expression="" defaultValue="&quot;255&quot;" alwaysStopAt="true" />
+    <variable name="RED" expression="" defaultValue="&quot;0&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="gc-opencv-findContours" value="contours, _ = cv2.findContours(image=$IMG$, mode=cv2.RETR_TREE, method=cv2.CHAIN_APPROX_NONE)&#10;&#10;for idx, cnt in enumerate(contours):&#10;        print(&quot;Contour #&quot;, idx)&#10;        # Make sure the actual array of vertices are of type integer&#10;        # You can convert it with [vertices.astype(int)]&#10;        cv2.drawContours(image=img, contours=[cnt], contourIdx=0, color=(255, 0, 0), thickness=3)&#10;        cv2.imshow(winname=&quot;contour&quot; + str(idx), mat=img)&#10;        cv2.waitKey(0)&#10;" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="IMG" expression="" defaultValue="&quot;thr_img&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="gc-opencv-floodfill" value="h, w = img.shape[:2]&#10;&#10;cv2.floodFill(image=$IMG$,&#10;              mask=np.zeros((h + 2, w + 2), np.uint8),&#10;              seedPoint=($X$, $Y$),&#10;              newVal=$COLOR_FILL$) # Fill Black Color therfore the zero &#10;              &#10;cv2.imshow('floodfill', $IMG$)&#10;cv2.waitKey()" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="IMG" expression="" defaultValue="&quot;img_gray&quot;" alwaysStopAt="true" />
+    <variable name="X" expression="" defaultValue="&quot;624&quot;" alwaysStopAt="true" />
+    <variable name="Y" expression="" defaultValue="&quot;520&quot;" alwaysStopAt="true" />
+    <variable name="COLOR_FILL" expression="" defaultValue="&quot;0&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="gc-opencv-histogram-color" value="hist = cv2.calcHist([$IMG$], channels=[0], mask=None, histSize=[$HISTSIZE$], ranges=[0, $HISTSIZE$])&#10;print(&quot;The most common grayscale color in the picture is:&quot;, str(np.argmax(hist)))&#10;plt.figure()&#10;plt.title(&quot;Grayscale Histogram&quot;)&#10;plt.xlabel(&quot;grayscale value&quot;)&#10;plt.ylabel(&quot;number of pixels&quot;)&#10;plt.plot(hist)&#10;plt.xlim([0, $HISTSIZE$])&#10;plt.show()&#10;" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="IMG" expression="" defaultValue="&quot;img_grayscale&quot;" alwaysStopAt="true" />
+    <variable name="HISTSIZE" expression="" defaultValue="&quot;256&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="gc-opencv-init-read" value="&#10;# IMREAD_GRAYSCALE = 0, IMREAD_COLOR = 1, IMREAD_ANYDEPTH = 2, IMREAD_ANYCOLOR = 4  &#10;img = cv2.imread(filename='$FILENAME$')&#10;cv2.imshow(winname=&quot;Original&quot;, mat=img)&#10;cv2.waitKey(0)&#10;&#10;img_gray = cv2.cvtColor(img, code=cv2.$MODE$)&#10;cv2.imshow(winname=&quot;Grayscale image&quot;, mat=img_gray)&#10;cv2.waitKey(0)&#10;&#10;cv2.destroyAllWindows()" description="image read" toReformat="false" toShortenFQNames="true">
+    <variable name="FILENAME" expression="" defaultValue="&quot;img.jpeg&quot;" alwaysStopAt="true" />
+    <variable name="MODE" expression="" defaultValue="&quot; cv2.COLOR_BGR2GRAY&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="gc-opencv-invert" value="img_inv = cv2.bitwise_not($INPUT_IMG$)" description="invert colors" toReformat="false" toShortenFQNames="true">
+    <variable name="INPUT_IMG" expression="" defaultValue="&quot;img_black_white&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="gc-opencv-recognize-circles" value="## Attention: Always detect blobs on white background and the actual shape is black!&#10;&#10;img = cv2.imread(filename='input_img.jpeg')&#10;&#10;cv2.imshow(winname=&quot;Original&quot;, mat=img)&#10;cv2.waitKey(0)&#10;&#10;params = cv2.SimpleBlobDetector_Params()&#10;&#10;# Set area filtering parameters:&#10;params.filterByArea = False  # This property should be set to false it's mandatory.&#10;# params.minArea = 30&#10;&#10;# set Circularity filtering parameters:&#10;params.filterByCircularity = True&#10;# 1 being perfect circle, 0 the opposite&#10;params.minCircularity = 0.8&#10;&#10;# set Convexity filtering parameters:&#10;# params.filterByConvexity = False&#10;# params.minConvexity = 0.2&#10;&#10;# set Inertia filtering parameters:&#10;# Inertia is a measure of Ellipticalness (low being more elliptical,&#10;# high being more circular)&#10;# params.filterByInertia = True&#10;# params.minInertiaRatio = 0.01&#10;&#10;# create a detector with parameters&#10;detector = cv2.SimpleBlobDetector_create(parameters=params)&#10;&#10;keypoints = detector.detect(img)&#10;&#10;number_of_blobs = len(keypoints)&#10;text = &quot;Number of circular Blobs: &quot; + str(number_of_blobs)&#10;print(text)&#10;&#10;print(&quot;----&quot;)&#10;for kp in keypoints:&#10;    print(&quot;(%d, %d) size=%.1f resp=%.1f&quot; % (kp.pt[0], kp.pt[1], kp.size, kp.response))&#10;    # cv2.circle(img, (int(kp.pt[0]), int(kp.pt[1])), int(kp.size), (0, 0, 255))&#10;&#10;# Draw blobs on our image as red circles&#10;blank = np.zeros((1, 1))&#10;&#10;blobs_circles = cv2.drawKeypoints(image=img, keypoints=keypoints, outImage=blank, color=(0, 0, 255),&#10;                                  flags=cv2.DRAW_MATCHES_FLAGS_DRAW_RICH_KEYPOINTS)&#10;&#10;cv2.putText(img=img, text=text, org=(20, 20), fontFace=cv2.FONT_HERSHEY_COMPLEX, fontScale=1,&#10;            color=(0, 0, 255))&#10;&#10;# Display image with blob keypoints&#10;cv2.imshow(winname=&quot;Blobs using default parameters&quot;, mat=blobs_circles)&#10;cv2.waitKey(0)&#10;cv2.destroyAllWindows()" description="Find circles" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="gc-opencv-rectangle-cover-contour" value="#rect = cv2.minAreaRect(cnt)  # With roatated rectangle&#10;&#10;x, y, w, h = cv2.boundingRect(cnt)  # Without roatated rectangle (parallel to axis)" description="cover a contour with a rectangle" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="gc-opencv-skipping-video-frame" value="cap = cv2.VideoCapture('video_examples/input1.mp4')&#10;    count = 0&#10;&#10;    while cap.isOpened():&#10;        ret, frame = cap.read()&#10;&#10;        if ret:&#10;            cv2.imwrite('frames/frame{:d}.jpg'.format(count), frame)&#10;            count += 30  # i.e. at 30 fps, this advances one second&#10;            cap.set(1, count)&#10;        else:&#10;            cap.release()&#10;            break&#10;&#10;    print(&quot;Finished video.&quot;)&#10;    cap.release()&#10;    cv2.destroyAllWindows()&#10;" description="Skipping frames in a video" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="gc-opencv-sort-contours-by-area" value="$CNTS$ = sorted($CNTS$, key=cv2.contourArea, reverse=$BOOL$) &#10;" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="CNTS" expression="" defaultValue="&quot;contours&quot;" alwaysStopAt="true" />
+    <variable name="BOOL" expression="" defaultValue="&quot;True&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="gc-opencv-text" value="&#10;# org is the position of the text (tuple of x,y )  &#10;cv2.putText(img=$IMG$, text=&quot;$TEXT$&quot;, org=(int(x), int(y)), fontFace=cv2.$FONT$, fontScale=1, color=(0, 0, 255))" description="Put some text  in specific position" toReformat="false" toShortenFQNames="true">
+    <variable name="IMG" expression="" defaultValue="&quot;img&quot;" alwaysStopAt="true" />
+    <variable name="TEXT" expression="" defaultValue="&quot;your text&quot;" alwaysStopAt="true" />
+    <variable name="FONT" expression="" defaultValue="&quot;FONT_HERSHEY_COMPLEX&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="gc-opencv-threshold" value="# Binary Threshold:&#10;# if pixel &gt; threshold pixel = max_val else pixel = 0&#10;# Attention would work only if the background is black and the shape is white&#10;# _, thr_img = cv2.threshold(img_gray, 0, 255, cv2.THRESH_BINARY_INV + cv2.THRESH_OTSU)&#10;&#10;_,thr_img = cv2.threshold($IMAGE$, thresh=$THRESHOLD$, maxval=$MAX_VAL$, type=cv2.$THRESHOLD_TYPE$)&#10;cv2.imshow(winname=&quot;after threshold&quot;, mat=thr_img)&#10;cv2.waitKey(0)" description="Binary threshold" toReformat="false" toShortenFQNames="true">
+    <variable name="IMAGE" expression="" defaultValue="&quot;img&quot;" alwaysStopAt="true" />
+    <variable name="THRESHOLD" expression="" defaultValue="&quot;50&quot;" alwaysStopAt="true" />
+    <variable name="MAX_VAL" expression="" defaultValue="&quot;255&quot;" alwaysStopAt="true" />
+    <variable name="THRESHOLD_TYPE" expression="" defaultValue="&quot;THRESH_BINARY_INV&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="gc-opencv-video-to-frames" value="cap = cv2.VideoCapture($VIDEO_FILE$)&#10;frame_number = 0&#10;while True:&#10;    grabbed, frame = cap.read()&#10;&#10;    # end of feed&#10;    if not grabbed:&#10;        break&#10;&#10;    frame_number += 1&#10;    print(&quot;Frame #&quot;, frame_number, &quot; is written.&quot;)&#10;    cv2.imwrite($OUTPUT_FOLDER$ + str(frame_number) + '.jpeg', frame)" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="VIDEO_FILE" expression="" defaultValue="&quot;'video.mp4'&quot;" alwaysStopAt="true" />
+    <variable name="OUTPUT_FOLDER" expression="" defaultValue="&quot;'frames/'&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="gc-opencv-approxPoly" value="# approxPolyDP() function acts on one polygon at a time, which is given in the input curve.&#10;&#10;# The parameter epsilon is the accuracy of approximation you require. The meaning&#10;# of the epsilon parameter is that this is the largest deviation you will allow between&#10;# the original polygon and the final approximated polygon&#10;&#10;epsilon = 0.01 * cv2.arcLength(cnt, True)&#10;approx = cv2.approxPolyDP(cnt, epsilon, True)&#10;cv2.drawContours(image=img, contours=approx, contourIdx=0,&#10;                 color=(0, 255, 0), thickness=5)" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="gc-opencv-blank-canvas" value="black_blank = np.zeros(img.shape, np.uint8)&#10;# white_blank = np.ones(img.shape, np.uint8)*255&#10;cv2.imshow(winname=&quot;contour&quot;, mat=blank)&#10;cv2.waitKey(0)" description="blank canvas" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="gc-opencv-capture-video" value="cap = cv2.VideoCapture(0)&#10;cap.set(3, 1280)  # set frame width&#10;cap.set(4, 720)  # set frame height&#10;&#10;while True:&#10;&#10;    (grabbed, frame0) = cap.read()&#10;    cv2.imshow(&quot;Frame0: Raw&quot;, frame0)&#10;&#10;    # end of feed&#10;    if not grabbed:&#10;        print(&quot;breaking from loop&quot;)&#10;        break&#10;&#10;    ch = 0xFF &amp; cv2.waitKey(1)  # Wait for a second&#10;    if ch == 27:&#10;        break" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="gc-opencv-rectangle" value="img_with_rec = cv2.rectangle(img=original_img,&#10;                             pt1=pt1, # should be tuple of int&#10;                             pt2=pt2, # should be tuple of int&#10;                             color=(255, 0, 0),&#10;                             thickness=5)" description="Draw rectangle" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="gc-opencv-dilated" value="# Attention would work only if the background is black and the shape is white&#10;_, thr_img = cv2.threshold(img_gray, 0, 255, cv2.THRESH_BINARY_INV + cv2.THRESH_OTSU)&#10;&#10;kernel = np.ones((5, 5), np.uint8)&#10;dilation = cv2.dilate(thr_img, kernel, iterations=1)" description="Applying dilation on image" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+</templateSet>

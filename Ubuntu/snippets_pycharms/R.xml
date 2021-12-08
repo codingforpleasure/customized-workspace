@@ -1,0 +1,186 @@
+<templateSet group="R">
+  <template name="gcr_tapply" value="# Description: tapply() is a very powerful function that l. by deafault we&#10;# simplify the result.&#10;# if we would like to get a list the fourth argument would be: simplify = FALSE.&#10;# Example below: Given a vector of numbers, one simple operation is to take group means.&#10;&#10;# Generating random numbers with different distributions&#10;$list$ &lt;- c(rnorm(10), runif(10), rnorm(10, 1)) &#10;# defining some groups&#10;$groups$&lt;- gl(3, 10) &#10;# Applying the mean function on each group&#10;res &lt;- tapply($list$, $groups$, $function$)" description="breaks a vector into GROUPS and then apply a function to each of the GROUPS" toReformat="false" toShortenFQNames="true">
+    <variable name="list" expression="" defaultValue="&quot;my_list&quot;" alwaysStopAt="true" />
+    <variable name="groups" expression="" defaultValue="&quot;groups&quot;" alwaysStopAt="true" />
+    <variable name="function" expression="" defaultValue="&quot;mean&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="R" value="true" />
+    </context>
+  </template>
+  <template name="gcr_add-comment" value="############################################################&#10;# Function name: $var$&#10;# Description:   $var2$&#10;# &#10;# Output:        $3$&#10;# Arguments:     $4$&#10;#&#10;#&#10;############################################################" description="R comment" toReformat="false" toShortenFQNames="true">
+    <variable name="var" expression="" defaultValue="&quot;Works?&quot;" alwaysStopAt="true" />
+    <variable name="var2" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="3" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="4" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="R" value="true" />
+    </context>
+  </template>
+  <template name="gcr_apply" value="# Description: Applys the function once on every column or row&#10;# First arg: Holds the data.&#10;# Second arg: Holds the column or row (row =1, col = 2)&#10;# Third arg: Aggregate function. &#10;my_data &lt;- matrix(1:12,3,4)&#10;result &lt;- apply(my_data,2,mean)" description="Apply" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="R" value="true" />
+    </context>
+  </template>
+  <template name="gc-r-tapply" value="# Description: tapply() lets you break a vector into GROUPS and then apply some function to each of the GROUPS.&#10;# if we would like to get a list the fourth argument would be: simplify = FALSE.&#10;# Example below: Given a vector of numbers, one simple operation is to take group means.&#10;&#10;# Generating random numbers with different distributions&#10;my_list &lt;- c(rnorm(10), runif(10), rnorm(10, 1)) &#10;# defining some groups&#10;groups &lt;- gl(3, 10) &#10;# Applying the mean function on each group&#10;res &lt;- tapply(my_list, groups, mean)" description="Apply aggregate function on each subgroup" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="R" value="true" />
+    </context>
+  </template>
+  <template name="gcr_rapply" value="# Description: rapply aims to apply a function operation recursivley on nested structures&#10;# Example below: nested list (not preserving the original structure)&#10;&#10;x=list(1,list(2,3),4,list(5,list(6,7)))&#10;str(x)&#10;rapply(x,function(x){x^2},class=c(&quot;numeric&quot;))" description="apply a function operation recursivley on nested structures" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="R" value="true" />
+    </context>
+  </template>
+  <template name="gc-r-filter" value="library(dplyr)&#10;my_data &lt;- data.frame(student_name = c(&quot;Gil&quot;,&quot;Shay&quot;,&quot;Itamar&quot;), grade = c(90,95,70));&#10;&#10;high_scores&lt;- filter(my_data, grade &gt;= 85)" description="Filter function" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="R" value="true" />
+    </context>
+  </template>
+  <template name="gcr_unique" value="library(dplyr)&#10;my_data &lt;- data.frame(student_name = c(&quot;Gil&quot;,&quot;Shay&quot;,&quot;Itamar&quot;,&quot;Gil&quot;),&#10;            grade = c(90,95,70,90));&#10;&#10;scores&lt;- unique(my_data)" description="Returns a vector, data frame or array like x but with duplicate elements/rows removed." toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="R" value="true" />
+    </context>
+  </template>
+  <template name="gcr_unite" value="library(tidyr)&#10;#### Example : Creating the dataframe - Input ######&#10;my_data &lt;- data.frame(City = c(&quot;Tel Aviv&quot;, &quot;Ramat Gan&quot;, &quot;New York&quot;),&#10;                      First_name = c(&quot;Gil&quot;, &quot;Shay&quot;, &quot;Itamar&quot;),&#10;                      Last_name = c(&quot;Tamari&quot;, &quot;Cohen&quot;, &quot;Skalim&quot;));&#10;&#10;###Concatenate between two columns#####&#10;res_1 &lt;- unite(my_data, &quot;Full_name&quot;, First_name, Last_name, sep = &quot; &quot;)&#10;&#10;###Concatenate between three columns#####&#10;res_2 &lt;- unite(my_data, &quot;Full_name&quot;, First_name, Last_name, City, sep = &quot; &quot;)" description="unite" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="R" value="true" />
+    </context>
+  </template>
+  <template name="gc-r-seperate" value="library(tidyr)&#10;#### Example : Creating the dataframe - Input ######&#10;my_data &lt;- data.frame(City= c(&quot;Tel Aviv&quot;,&quot;Ramat Gan&quot;,&quot;New York&quot;),Full_name=c(&quot;Gil Tamar&quot;,&quot;Shay Cohen&quot;,&quot;Itamar Skalim&quot;));&#10;### Separate between two columns#####&#10;res_1 &lt;- separate(my_data, Full_name, c(&quot;First name&quot;,&quot;Last Name&quot;),sep = &quot; &quot;)" description="Sepearate column into multiple columns" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="R" value="true" />
+    </context>
+  </template>
+  <template name="gc-r-init-matrix" value="# Initialize a matrix&#10;mat = matrix(data = c(1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3), nrow = 4, ncol = 3) # By column&#10;mat = matrix(data = c(1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3), nrow = 4, ncol = 3, byrow = TRUE) # By row&#10;" description="Init matrix" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="R" value="true" />
+    </context>
+  </template>
+  <template name="gc-r-example" value="Works well" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="R" value="true" />
+    </context>
+  </template>
+  <template name="gcr_bar-plot" value="library(ggplot2)&#10;my_df = data.frame(food_type = c('Fish', 'Beans', 'Yogurt', 'Apple', 'Lemon', 'Pineapple', 'Orange', 'Olive'),&#10;                   cost_for_1_KG = c(10.6, 5.8, 6.2, 5.4, 3.9, 4.1, 3.9, 7.56))&#10;&#10;g = ggplot(my_df, aes(x = food_type, y = cost_for_1_KG, fill = food_type)) +&#10;  ggtitle(&quot;The Average price for 1 KG among all markets&quot;) +&#10;  labs(y = &quot;Price per KG&quot;,&#10;       x = &quot;Food type&quot;) +&#10;  theme(plot.title = element_text(hjust = 0.5,&#10;                                  size = 25,&#10;                                  face = &quot;bold&quot;,&#10;                                  family = &quot;David&quot;),&#10;        axis.text.x = element_text(angle = 0)) +&#10;  geom_bar(stat = &quot;identity&quot;,&#10;           position = &quot;dodge&quot;,&#10;           colour = &quot;black&quot;,&#10;           width = .8) +&#10;  scale_y_continuous(breaks = seq(0, max(my_df$cost_for_1_KG), 2))&#10;g" description="Plot barplot with ggplot" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="R" value="true" />
+    </context>
+  </template>
+  <template name="gcr_scatter-plot-simple1" value="g = ggplot(iris, aes(x = Petal.Length, y = Petal.Width)) +&#10;  ggtitle(&quot;Is there a correlation between Petal Width to Petal Length?&quot;) +&#10;  labs(y = &quot;Petal Width&quot;,&#10;       x = &quot;Petal Length&quot;) +&#10;  theme(plot.title = element_text(hjust = 0.5,&#10;                                  size = 25,&#10;                                  face = &quot;bold&quot;,&#10;                                  family = &quot;David&quot;)) +&#10;  geom_point(col = &quot;steelblue&quot;, size = 3)&#10;&#10;g" description="Plot basic scatter plot" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="R" value="true" />
+    </context>
+  </template>
+  <template name="gcr_scatter-plot-simple2" value="library(ggplot2)&#10;g = ggplot(iris, aes(x = Petal.Length, y = Petal.Width)) +&#10;  ggtitle(&quot;Is there a correlation between Petal Width to Petal Length?&quot;) +&#10;  labs(y = &quot;Petal Width&quot;,&#10;       x = &quot;Petal Length&quot;) +&#10;  theme(plot.title = element_text(hjust = 0.5,&#10;                                  size = 25,&#10;                                  face = &quot;bold&quot;,&#10;                                  family = &quot;David&quot;)) +&#10;  geom_point(aes(col = Species), size = 3) +&#10;  scale_x_continuous(breaks = seq(0, max(iris$Petal.Length), 0.5)) +&#10;  scale_y_continuous(breaks = seq(0, max(iris$Petal.Width), 0.5))&#10;&#10;g" description="Plot scatter plot with category colors" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="R" value="true" />
+    </context>
+  </template>
+  <template name="gcr_scatter-plot-advance" value="library(ggplot2)&#10;g = ggplot(iris, aes(x = Petal.Length, y = Petal.Width)) +&#10;  ggtitle(&quot;Is there a correlation between Petal Width to Petal Length? (Size and color)&quot;) +&#10;  labs(y = &quot;Petal Width&quot;,&#10;       x = &quot;Petal Length&quot;) +&#10;  theme(plot.title = element_text(hjust = 0.5,&#10;                                  size = 25,&#10;                                  face = &quot;bold&quot;,&#10;                                  family = &quot;David&quot;)) +&#10;  # disk size and color size depends on Color and the Sepal width&#10;  geom_point(aes(col = Species , size = Sepal.Width) ) +&#10;  scale_x_continuous(breaks = seq(0, max(iris$Petal.Length), 0.5)) +&#10;  scale_y_continuous(breaks = seq(0, max(iris$Petal.Width), 0.5))&#10;&#10;g&#10;" description="Plot scatter plot (disk size and color)" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="R" value="true" />
+    </context>
+  </template>
+  <template name="gcr_boxplot-simple" value="library(ggplot2)&#10;data(airquality)&#10;airquality$Month = factor(airquality$Month,&#10;                          labels = c(&quot;May&quot;, &quot;Jun&quot;, &quot;Jul&quot;, &quot;Aug&quot;, &quot;Sep&quot;))&#10;&#10;fill_color = &quot;#4271AE&quot;&#10;line_color = &quot;#1F3552&quot;&#10;&#10;g = ggplot(airquality, aes(x = Month, y = Ozone)) +&#10;  theme_bw() +  # White background theme&#10;  ggtitle(&quot;Boxplot of mean ozone by month&quot;) +&#10;  theme(plot.title = element_text(hjust = 0.5,&#10;                                  size = 25,&#10;                                  face = &quot;bold&quot;,&#10;                                  family = &quot;David&quot;)) +&#10;  scale_x_discrete(name = &quot;Month&quot;) +&#10;  scale_y_continuous(name = &quot;Mean ozone in parts per billion&quot;,&#10;                     breaks = seq(0, 175, 25),&#10;                     limits = c(0, 175)) +&#10;  geom_boxplot(fill = fill_color,&#10;               colour = line_color,&#10;               alpha = 0.7) +&#10;  geom_jitter() # In case you want to see the actual dots&#10;&#10;g" description="Plot a simple boxplot" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="R" value="true" />
+    </context>
+  </template>
+  <template name="gcr_boxplot-advance" value="library(ggplot2)&#10;library(RColorBrewer)&#10;&#10;&#10;airquality_trimmed &lt;- airquality[which(airquality$Month == &quot;Jul&quot; |&#10;                                         airquality$Month == &quot;Aug&quot; |&#10;                                         airquality$Month == &quot;Sep&quot;),]&#10;&#10;airquality_trimmed$Temp.f &lt;- factor(ifelse(airquality_trimmed$Temp &gt; mean(airquality_trimmed$Temp), 1, 0),&#10;                                    labels = c(&quot;Low temp&quot;, &quot;High temp&quot;))&#10;&#10;g &lt;- ggplot(airquality_trimmed, aes(x = Month, y = Ozone, fill = Temp.f)) +&#10;  geom_boxplot(alpha = 0.7) +&#10;  scale_y_continuous(name = &quot;Mean ozone in\nparts per billion&quot;,&#10;                     breaks = seq(0, 175, 25),&#10;                     limits = c(0, 175)) +&#10;  scale_x_discrete(name = &quot;Month&quot;) +&#10;  ggtitle(&quot;Boxplot of mean ozone by month&quot;) +&#10;  theme_bw() +&#10;  theme(plot.title = element_text(hjust = 0.5,&#10;                                  size = 16,&#10;                                  family = &quot;Tahoma&quot;,&#10;                                  face = &quot;bold&quot;),&#10;        text = element_text(size = 12, family = &quot;Tahoma&quot;),&#10;        axis.title = element_text(face = &quot;bold&quot;),&#10;        axis.text.x = element_text(size = 11)) +&#10;  scale_fill_brewer(palette = &quot;Accent&quot;)&#10;g" description="Plot boxplot  with two groups" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="R" value="true" />
+    </context>
+  </template>
+  <template name="gcr_factor-ordinal-variable" value="# Example of ordinal variable (has clear ordering)&#10;status &lt;- c(&quot;Poor&quot;, &quot;Improved&quot;, &quot;Excellent&quot;, &quot;Poor&quot;)&#10;status &lt;- factor(status,order=T, levels=c(&quot;Poor&quot;, &quot;Improved&quot;, &quot;Excellent&quot;))&#10;" description="The factor functionality" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="R" value="true" />
+    </context>
+  </template>
+  <template name="gcr_factor-categorical-variable" value="# Example of adding labels for categorical variables&#10;gender &lt;- factor(c(1,2,1,1), levels = c(1,2), labels = c(&quot;male&quot;, &quot;female&quot;))" description="Factor  on categorical variable" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="R" value="true" />
+    </context>
+  </template>
+  <template name="gcr_import-excel-file" value="library(readxl)&#10;relevant_data &lt;- read_excel(&quot;$PATH$&quot;,&#10;                            sheet = &quot;$SHEET_NAME$&quot;)&#10;" description="Importing Excel file into R" toReformat="false" toShortenFQNames="true">
+    <variable name="PATH" expression="" defaultValue="&quot;your/path/to/the/excel/file&quot;" alwaysStopAt="true" />
+    <variable name="SHEET_NAME" expression="" defaultValue="&quot;name_of_the_sheet&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="R" value="true" />
+    </context>
+  </template>
+  <template name="gcr_filter-dplyr" value="library(dplyr)&#10;# Example of using filter functionality from dplyr library&#10;my_data &lt;- nycflights13::weather&#10;my_data$time_hour &lt;- as.Date(my_data$time_hour)&#10;print(paste0(&quot;Number rows of original dataset: &quot;,nrow(my_data)))&#10;filtered_data = my_data %&gt;% filter(time_hour &lt; as.Date(&quot;2013-06-11&quot;))&#10;print(paste0(&quot;Number rows after applying filter: &quot;,nrow(filtered_data)))" description="Filter dataset using dplyr" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="R" value="true" />
+    </context>
+  </template>
+  <template name="gcr_select-dplyr" value="library(dplyr)&#10;# Example of using filter functionality from dplyr library&#10;my_data = nycflights13::weather&#10;less_data1 = my_data %&gt;% select(humid, contains(&quot;wind&quot;))&#10;# You can remove the irrelvant columns&#10;less_data2 = my_data %&gt;% select(-month, -year, -contains(&quot;wind&quot;) )" description="Select few relevant columns in the data" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="R" value="true" />
+    </context>
+  </template>
+  <template name="gcr_add-new-columns-mutate-dplyr" value="library(dplyr)&#10;&#10;# Example1: Adds new variables and preserves existing ones&#10;res &lt;- nycflights13::flights %&gt;% mutate(speed = (distance / air_time) * 60)&#10;&#10;# Example2:&#10;sample_data &lt;- data.frame(blood_type = c(&quot;b&quot;,&quot;c&quot;,&quot;c&quot;,&quot;b&quot;,&quot;b&quot;,&quot;c&quot;),&#10;                          height=c(2,3,3,2,2,3),&#10;                          weight = c(11,13,15,16,10,12),&#10;                          score=c('b','c','d','b','b','c'))&#10;&#10;res &lt;- sample_data %&gt;% group_by(height, score) %&gt;%  mutate(resi = mean(weight))" description="mutate in dplyr example" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="R" value="true" />
+    </context>
+  </template>
+  <template name="gcr_groupby-dplyr" value="# Grouping rows based on their cylinder&#10;res &lt;- mtcars %&gt;% group_by(cyl)" description="Grouping rows based on a specific avriable (dplyr)" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="R" value="true" />
+    </context>
+  </template>
+  <template name="gcr_add-summarize-dplyr" value="library(dplyr)&#10;&#10;my_data &lt;- mpg %&gt;%&#10;  group_by(class, manufacturer) %&gt;%&#10;  summarise(group_size = n(),&#10;            avg_cyl_per_class_and_manufacture = mean(cyl),&#10;  )" description="summarize function in dplyr" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="R" value="true" />
+    </context>
+  </template>
+  <template name="gcr_sample-in-dplyr" value="library(dplyr)&#10;nycflights13::flights %&gt;% sample_n(100)" description="get sample of the data" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="R" value="true" />
+    </context>
+  </template>
+  <template name="gcr_join" value="library(dplyr)&#10;df1 &lt;- data.frame(student_id = c(3232443, 564656, 3243543, 65656, 7657754, 435456, 5435654),&#10;                  name = c('ofer', 'amir', 'shani', 'ofri', 'ran', 'omer', 'shay'))&#10;&#10;df2 &lt;- data.frame(weight = c(65, 80, 90, 53, 66, 71, 86),&#10;                  student_id = c(3232443, 564656, 3243543, 65656, 7657754, 435456, 5435654))&#10;&#10;full_join(df1, df2, by = 'student_id')" description="Inner join of two dataframes" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="R" value="true" />
+    </context>
+  </template>
+  <template name="gcr_clustering-plot" value="library(ggplot2)&#10;library(ggalt)&#10;library(ggfortify)&#10;theme_set(theme_classic())&#10;&#10;# Compute data with principal components ------------------&#10;df &lt;- iris[c(1, 2, 3, 4)]&#10;pca_mod &lt;- prcomp(df)  # compute principal components&#10;&#10;# Data frame of principal components ----------------------&#10;df_pc &lt;- data.frame(pca_mod$x, Species = iris$Species)  # dataframe of principal components&#10;df_pc_vir &lt;- df_pc[df_pc$Species == &quot;virginica&quot;,]  # df for 'virginica'&#10;df_pc_set &lt;- df_pc[df_pc$Species == &quot;setosa&quot;,]  # df for 'setosa'&#10;df_pc_ver &lt;- df_pc[df_pc$Species == &quot;versicolor&quot;,]  # df for 'versicolor'&#10;&#10;# Plot ----------------------------------------------------&#10;ggplot(df_pc, aes(PC1, PC2, col = Species)) +&#10;  geom_point(aes(shape = Species), size = 2) +   # draw points&#10;  labs(title = &quot;Iris Clustering&quot;,&#10;       subtitle = &quot;With principal components PC1 and PC2 as X and Y axis&quot;,&#10;       caption = &quot;Source: Iris&quot;) +&#10;  coord_cartesian(xlim = 1.2 * c(min(df_pc$PC1), max(df_pc$PC1)),&#10;                  ylim = 1.2 * c(min(df_pc$PC2), max(df_pc$PC2))) +   # change axis limits&#10;  geom_encircle(data = df_pc_vir, aes(x = PC1, y = PC2)) +   # draw circles&#10;  geom_encircle(data = df_pc_set, aes(x = PC1, y = PC2)) +&#10;  geom_encircle(data = df_pc_ver, aes(x = PC1, y = PC2))" description="Plot clusters" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="R" value="true" />
+    </context>
+  </template>
+  <template name="gcr_plot-line" value="library(ggplot2)&#10;theme_set(theme_classic())&#10;&#10;# Allow Default X Axis Labels&#10;ggplot(economics, aes(x=date)) +&#10;  geom_line(aes(y=psavert)) +&#10;  labs(title=&quot;Time Series Chart&quot;,&#10;       subtitle=&quot;Returns Percentage from 'Economics' Dataset&quot;,&#10;       caption=&quot;Source: Economics&quot;,&#10;       y=&quot;Returns %&quot;)" description="Line plot in R" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="R" value="true" />
+    </context>
+  </template>
+  <template name="gcr_plot-line_advance" value="library(ggplot2)&#10;library(lubridate)&#10;theme_set(theme_bw())&#10;&#10;df &lt;- economics[, c(&quot;date&quot;, &quot;psavert&quot;, &quot;uempmed&quot;)]&#10;df &lt;- df[lubridate::year(df$date) %in% c(1967:1981), ]&#10;&#10;# labels and breaks for X axis text&#10;brks &lt;- df$date[seq(1, length(df$date), 12)]&#10;lbls &lt;- lubridate::year(brks)&#10;&#10;# plot&#10;ggplot(df, aes(x=date)) +&#10;geom_line(aes(y=psavert, col=&quot;psavert&quot;)) +&#10;geom_line(aes(y=uempmed, col=&quot;uempmed&quot;)) +&#10;  labs(title=&quot;Time Series of Returns Percentage&quot;,&#10;       subtitle=&quot;Drawn From Wide Data format&quot;,&#10;       caption=&quot;Source: Economics&quot;, y=&quot;Returns %&quot;) +  # title and caption&#10;  scale_x_date(labels = lbls, breaks = brks) +  # change to monthly ticks and labels&#10;  scale_color_manual(name=&quot;&quot;,&#10;                     values = c(&quot;psavert&quot;=&quot;#00ba38&quot;, &quot;uempmed&quot;=&quot;#f8766d&quot;)) +  # line color&#10;  theme(panel.grid.minor = element_blank())" description="Line plot advance" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="R" value="true" />
+    </context>
+  </template>
+  <template name="gcr_linear_model" value="# Method 1, using ggplot2 and it's embedded method geom_smooth(method = 'lm')&#10;data &lt;- data.frame(x = c(1, 1, 2, 3, 4, 4, 5, 6, 7, 7, 8, 9, 10, 11, 11),&#10;                   y = c(13, 14, 17, 12, 23, 24, 25, 25, 24, 28, 32, 33, 35, 40, 41))&#10;&#10;g = ggplot(data, aes(x = x, y = y)) +&#10;  ggtitle(&quot;Is there a correlation between Petal Width to Petal Length?&quot;) +&#10;  labs(y = &quot;Petal Width&quot;,&#10;       x = &quot;Petal Length&quot;) +&#10;  theme(plot.title = element_text(hjust = 0.5,&#10;                                  size = 25,&#10;                                  face = &quot;bold&quot;,&#10;                                  family = &quot;David&quot;)) +&#10;  geom_point(col = &quot;steelblue&quot;, size = 3) +&#10;  geom_smooth(method = 'lm')&#10;&#10;g&#10;&#10;# Method 2, building the model with the simple plot function&#10;&#10;#create scatterplot of x and y values&#10;plot(data$x, data$y, pch = 16)&#10;&#10;#fit a linear regression model to the data&#10;reg_model &lt;- lm(y ~ x, data = data)&#10;&#10;#define intercept and slope values&#10;a &lt;- coefficients(reg_model)[1] #intercept&#10;b &lt;- coefficients(reg_model)[2] #slope&#10;&#10;#add the fitted regression line to the scatterplot&#10;abline(a=a, b=b, col=&quot;steelblue&quot;)" description="bring up a Linear model with plot" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="R" value="true" />
+    </context>
+  </template>
+  <template name="gcr_shiny_slider" value="sliderInput(inputId =  &quot;sd_noise_x&quot;,&#10;            label = &quot;Noise Variance X Axis&quot;,&#10;            min = 0,&#10;            max = 5,&#10;            value = 1,&#10;            step = 1)" description="Add slider to a shiny app" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="R" value="true" />
+    </context>
+  </template>
+  <template name="gcr-regex" value="tasty_food &lt;- c(&quot;pizza&quot;, &quot;avocado&quot;,&quot;popcorn&quot;, &quot;apple&quot;, &quot;onion&quot;)&#10;grep(&quot;^p&quot;,tasty_food)" description="Apply regex on list" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="R" value="true" />
+    </context>
+  </template>
+  <template name="gcr-pie-chart" value="library(plotrix)&#10;library(RColorBrewer)&#10;# display.brewer.all()&#10;&#10;darkcols &lt;- brewer.pal(8, &quot;Dark2&quot;)&#10;&#10;slices &lt;- c(10, 12, 4, 16, 8)&#10;lbls &lt;- c(&quot;US&quot;, &quot;UK&quot;, &quot;Australia&quot;, &quot;Germany&quot;, &quot;France&quot;)&#10;&#10;pie3D(slices, labels = lbls, explode = 0.1,&#10;      main = &quot;Pie Chart of Countries &quot;,&#10;      col = darkcols[1:4])" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="R" value="true" />
+    </context>
+  </template>
+  <template name="gcr-qqplot" value="set.seed(5432)                 # Set seed for reproducibility&#10;x &lt;- rnorm(10000)                # Create random normally distributed values&#10;&#10;# Approach #1&#10;#qqnorm(x)                        # QQplot of normally distributed values&#10;#qqline(x, col = &quot;red&quot;)           # Add qqline to plot&#10;&#10;# Now we get a QQplot of our normally distributed&#10;# random data compared to the theoretical normal distribution and a QQline.&#10;&#10;# Approach #2 with ggplot&#10;library(&quot;ggplot2&quot;)&#10;&#10;data &lt;- data.frame(x)            # Create data frame containing x&#10;variable_name &lt;- &quot;age&quot;&#10;g &lt;- ggplot(data, aes(sample = x)) +  # Create QQplot with ggplot2 package&#10;  stat_qq() +&#10;  stat_qq_line(col = &quot;red&quot;) +&#10;  ggtitle(paste0(&quot;Examining QQplot with QQline for the variable: &quot;, variable_name)) +&#10;  labs(y = &quot;Sample of Quantiles&quot;,&#10;       x = &quot;Theoretical Quantiles&quot;) +&#10;  theme(plot.title = element_text(hjust = 0.5,&#10;                                  size = 25,&#10;                                  face = &quot;bold&quot;,&#10;                                  family = &quot;David&quot;))&#10;  g&#10;&#10;" description="checking variables holds normal distribution" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="R" value="true" />
+    </context>
+  </template>
+</templateSet>
