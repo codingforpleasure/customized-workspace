@@ -88,7 +88,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Wed 08 Dec 2021 16:21:40 IST -->
+<!-- Added by: gil_diy, at: Wed 08 Dec 2021 16:21:56 IST -->
 
 <!--te-->
 
@@ -1155,6 +1155,15 @@ nn.LogSoftMax(dim=1)
 
 ## Saving the model (Saving checkpoint)
 ```python
+# Example
+model = torchvision.models.vgg16(pretrained=False)
+optimizer = optim.Adam(model.parameters())
+
+checkpoint = {"state_dict": model.state_dict(), "optimizer": optimizer.state_dict()}
+# Try save checkpoint
+save_checkpoint(checkpoint)
+
+
 torch.save(my_model.state_dict(), model_path)
 ```
 [Reference](https://pytorch.org/docs/stable/generated/torch.save.html#torch.save)
