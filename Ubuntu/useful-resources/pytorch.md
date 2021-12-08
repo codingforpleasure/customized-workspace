@@ -51,6 +51,7 @@
       * [Custom Dataset](#custom-dataset)
       * [Loading images directory into a dataset](#loading-images-directory-into-a-dataset)
       * [Subsetting Dataset](#subsetting-dataset)
+      * [Preprocessing](#preprocessing)
       * [Dataloader](#dataloader)
       * [Utilizing the multiple process capabilities of the PyTorch DataLoader class](#utilizing-the-multiple-process-capabilities-of-the-pytorch-dataloader-class)
       * [Dataset &amp;&amp; DataLoader](#dataset--dataloader)
@@ -58,7 +59,6 @@
          * [<strong>CNN Output Size formula (Square)</strong>](#cnn-output-size-formula-square)
          * [<strong>CNN Output Size formula (Non Square)</strong>](#cnn-output-size-formula-non-square)
       * [Batch normalization](#batch-normalization)
-      * [Preprocessing](#preprocessing)
       * [Batch size](#batch-size)
       * [Load data](#load-data)
       * [Inspecting the weight and bias and layers](#inspecting-the-weight-and-bias-and-layers)
@@ -88,7 +88,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Thu 09 Dec 2021 00:18:31 IST -->
+<!-- Added by: gil_diy, at: Thu 09 Dec 2021 00:19:35 IST -->
 
 <!--te-->
 
@@ -797,6 +797,25 @@ train_dataset = Subset(shape_dataset, train_index)
 test_dataset = Subset(shape_dataset, test_index)
 ```
 
+## Preprocessing
+There is a module called `transforms` that helps with a lot of
+image preprocessing tasks.
+
+[Reference](https://pytorch.org/docs/stable/torchvision/transforms.html)
+
+
+we first need to read from the image and convert it
+into a tensor using a transforms.ToTensor() transform. We then make the mean and standard deviation of the pixel values 0.5 and 0.5 respectively so that it becomes easier for the model to train;
+```python
+relevant_transform = transforms.Compose([transforms.ToTensor(),
+                                       transforms.Normalize(mean=(0.5,), std=(0.5,))
+                                       ])
+```
+
+
+* We combine all of the transformations together with `transform.Compose()`
+
+
 ## Dataloader
 
 The dataloader gives us access to the dataset, and gives us query capabilties,
@@ -879,7 +898,6 @@ print('label:',label)
 [Link](https://youtu.be/mUueSPmcOBc?t=665)
 
 
-
 ### **CNN Output Size formula (Square)**
 
 
@@ -944,23 +962,6 @@ network2 = nn.Sequential(
 
 [Explained well](https://www.youtube.com/watch?v=dXB-KQYkzNU)
 
-## Preprocessing
-There is a module called `transforms` that helps with a lot of
-image preprocessing tasks.
-
-[Reference](https://pytorch.org/docs/stable/torchvision/transforms.html)
-
-
-we first need to read from the image and convert it
-into a tensor using a transforms.ToTensor() transform. We then make the mean and standard deviation of the pixel values 0.5 and 0.5 respectively so that it becomes easier for the model to train;
-```python
-relevant_transform = transforms.Compose([transforms.ToTensor(),
-                                       transforms.Normalize(mean=(0.5,), std=(0.5,))
-                                       ])
-```
-
-
-* We combine all of the transformations together with `transform.Compose()`
 
 ## Batch size
 A higher batch size means that the model has fewer training steps and learns faster, whereas a high batch size results in high memory requirements.
