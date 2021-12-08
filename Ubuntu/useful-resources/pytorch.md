@@ -88,7 +88,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Wed 08 Dec 2021 16:22:46 IST -->
+<!-- Added by: gil_diy, at: Wed 08 Dec 2021 16:23:23 IST -->
 
 <!--te-->
 
@@ -1155,6 +1155,11 @@ nn.LogSoftMax(dim=1)
 
 ## Saving the model (Saving checkpoint)
 ```python
+def save_checkpoint(state, filename="my_checkpoint.pth.tar"):
+    print("=> Saving checkpoint")
+    torch.save(state, filename)
+
+
 # Example
 model = torchvision.models.vgg16(pretrained=False)
 optimizer = optim.Adam(model.parameters())
@@ -1162,7 +1167,7 @@ optimizer = optim.Adam(model.parameters())
 checkpoint = {"state_dict": model.state_dict(), 
 			  "optimizer": optimizer.state_dict()}
 
-# Try save checkpoint
+# invoking save checkpoint
 save_checkpoint(checkpoint)
 
 
@@ -1172,6 +1177,7 @@ torch.save(my_model.state_dict(), model_path)
 
 ## Loading the model (Loading checkpoint)
 ```python
+
 torch.load('tensors.pt', map_location=torch.device('cpu'))
 ```
 
