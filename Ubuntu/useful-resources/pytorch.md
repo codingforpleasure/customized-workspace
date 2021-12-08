@@ -73,7 +73,7 @@
       * [Transfer learning](#transfer-learning)
          * [Freezing the model](#freezing-the-model)
          * [Replacing the last two layers](#replacing-the-last-two-layers)
-      * [Saving the model](#saving-the-model)
+      * [Saving the model (Saving checkpoint)](#saving-the-model-saving-checkpoint)
       * [Loading the model](#loading-the-model)
       * [Useful for plotting](#useful-for-plotting)
       * [Derivatives](#derivatives)
@@ -88,7 +88,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Wed 08 Dec 2021 12:52:19 IST -->
+<!-- Added by: gil_diy, at: Wed 08 Dec 2021 16:21:28 IST -->
 
 <!--te-->
 
@@ -1153,7 +1153,7 @@ nn.LogSoftMax(dim=1)
 
 ```
 
-## Saving the model
+## Saving the model (Saving checkpoint)
 ```python
 torch.save(my_model.state_dict(), model_path)
 ```
