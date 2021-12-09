@@ -55,7 +55,7 @@
          * [The type of optimizers](#the-type-of-optimizers)
       * [Dropouts](#dropouts)
       * [Inference/Evaluation](#inferenceevaluation)
-            * [model.eval()](#modeleval)
+         * [model.eval()](#modeleval)
       * [torchvision](#torchvision)
          * [Display images as grid](#display-images-as-grid)
          * [Augmentations](#augmentations)
@@ -75,7 +75,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Thu 09 Dec 2021 14:32:19 IST -->
+<!-- Added by: gil_diy, at: Thu 09 Dec 2021 14:32:48 IST -->
 
 <!--te-->
 
@@ -991,7 +991,7 @@ nn.Dropout(p=0.25)
 ## Inference/Evaluation
 
 
-#### model.eval()
+### model.eval()
 
 **model.eval()** is a kind of switch for some specific layers/parts of the model
 that behave differently during training and inference (evaluating) time.
