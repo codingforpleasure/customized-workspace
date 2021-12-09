@@ -75,7 +75,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Thu 09 Dec 2021 14:30:40 IST -->
+<!-- Added by: gil_diy, at: Thu 09 Dec 2021 14:31:59 IST -->
 
 <!--te-->
 
@@ -1008,6 +1008,7 @@ In addition, the **common practice for evaluating/validation** is using
  **torch.no_grad()** in pair with **model.eval()** to turn off gradients computation:
 
 ```python
+# Now let's set the model in "evaluation (inference) mode"
 model.eval()
 
 for x, y, files in tqdm(loader):
@@ -1024,7 +1025,6 @@ df = pd.DataFrame({"image": filenames,
 df.to_csv(output_csv, index=False)
 
 # Now we will turn off "evaluation mode" by running model.train()
-# dual
 model.train()
 ```
 
