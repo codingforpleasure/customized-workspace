@@ -69,13 +69,14 @@
          * [Y(x)](#yx)
       * [Partial derivatives Y(x,z)](#partial-derivatives-yxz)
       * [AMP (Automatic Mixed Precision) for shorting the training time](#amp-automatic-mixed-precision-for-shorting-the-training-time)
+      * [Use of Neural Networks for Feature Extraction](#use-of-neural-networks-for-feature-extraction)
       * [Template for Regression](#template-for-regression)
       * [Integrating TensorBoard with pytorch](#integrating-tensorboard-with-pytorch)
       * [Segmentation with U-net  (Encoder-Decoder)](#segmentation-with-u-net--encoder-decoder)
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Thu 09 Dec 2021 14:32:48 IST -->
+<!-- Added by: gil_diy, at: Thu 09 Dec 2021 17:08:08 IST -->
 
 <!--te-->
 
@@ -530,9 +531,7 @@ print(x.device)
 ### Move the tensors to CPU
 
 ```python
-x = x.to(device)
-print(x)
-print(x.device)
+predictions.detach().cpu().numpy()
 ```
 
 ## matrix multiplication 
@@ -1246,6 +1245,12 @@ for epoch in epochs:
 [Link1](https://www.youtube.com/watch?v=X7iOkhGePXg)
 
 [Link2](https://www.youtube.com/watch?v=b5dAmcBKxHg)
+
+## Use of Neural Networks for Feature Extraction
+
+[Link](https://arxiv.org/abs/1805.02294)
+
+
 
 ## Template for Regression 
 
