@@ -25,7 +25,7 @@
          * [Using a process pool](#using-a-process-pool)
          * [Using a Thread pool](#using-a-thread-pool)
 
-<!-- Added by: gil_diy, at: Thu 09 Dec 2021 19:36:34 IST -->
+<!-- Added by: gil_diy, at: Thu 09 Dec 2021 19:38:08 IST -->
 
 <!--te-->
 
@@ -418,3 +418,5 @@ with concurrent.futures.ThreadPoolExecutor() as executor:
 	    df.to_csv(os.path.join('mapreducetemp', f'part-tmp-{i}.csv'), index=False)
     
 ```
+
+Reference was taken form miri IDC `final_solution_using_thread_pool.py`
