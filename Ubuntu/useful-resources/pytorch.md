@@ -67,7 +67,6 @@
       * [Checkpoints](#checkpoints)
          * [Saving the model (Saving checkpoint)](#saving-the-model-saving-checkpoint)
          * [Loading the model (Loading checkpoint)](#loading-the-model-loading-checkpoint)
-      * [Useful for plotting](#useful-for-plotting)
       * [Derivatives](#derivatives)
          * [Y(x)](#yx)
       * [Partial derivatives Y(x,z)](#partial-derivatives-yxz)
@@ -78,7 +77,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Thu 09 Dec 2021 08:41:06 IST -->
+<!-- Added by: gil_diy, at: Thu 09 Dec 2021 08:43:08 IST -->
 
 <!--te-->
 
@@ -1136,10 +1135,6 @@ load_checkpoint(torch.load("my_checkpoint.pth.tar"), model, optimizer)
 
 [Reference](https://pytorch.org/docs/stable/generated/torch.load.html#torch.load)
 
-## Useful for plotting
-```python
-torch.linespace(start = 0, end = 10, steps = 5) # Useful for plotting
-```
 
 ## Derivatives
 Let's calculate the derivative of the function **y** at x=2.0 , 
@@ -1168,14 +1163,6 @@ y.backward()
 print("derivative_for_two_variables, result x.grad: ", x.grad)
 print("derivative_for_two_variables, result z.grad: ", z.grad)
 ```
-
-
-```python
-import torch
-import torchvision
-from torchvision import transforms, datasets
-```
-
 
 ## Template for Regression 
 
