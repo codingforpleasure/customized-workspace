@@ -25,7 +25,7 @@
          * [Using a process pool](#using-a-process-pool)
          * [Using a Thread pool](#using-a-thread-pool)
 
-<!-- Added by: gil_diy, at: Thu 09 Dec 2021 19:35:45 IST -->
+<!-- Added by: gil_diy, at: Thu 09 Dec 2021 19:36:13 IST -->
 
 <!--te-->
 
@@ -412,5 +412,9 @@ import concurrent.futures
 
 with concurrent.futures.ThreadPoolExecutor() as executor: 
     results = [executor.submit(map_function, element) for element in input_data]
-    ....
+
+    for i, f in enumerate(concurrent.futures.as_completed(results)):
+    df = pd.DataFrame(f.result(), columns=["key", "value"])
+    df.to_csv(os.path.join('mapreducetemp', f'part-tmp-{i}.csv'), index=False)
+    
 ```
