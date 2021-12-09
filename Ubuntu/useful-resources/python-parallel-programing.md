@@ -15,7 +15,7 @@
          * [Evaluating the performance of multithread applications](#evaluating-the-performance-of-multithread-applications)
       * [Process-Based Parallelism](#process-based-parallelism)
          * [Spawning a process](#spawning-a-process)
-         * [naming a process](#naming-a-process)
+         * [Naming a process](#naming-a-process)
          * [Running process in the background](#running-process-in-the-background)
          * [Killing a process](#killing-a-process)
          * [Using a process in a subclass](#using-a-process-in-a-subclass)
@@ -23,8 +23,9 @@
          * [Synchronizing processes](#synchronizing-processes)
          * [Managing a state between processes](#managing-a-state-between-processes)
          * [Using a process pool](#using-a-process-pool)
+         * [Using a Thread pool](#using-a-thread-pool)
 
-<!-- Added by: gil_diy, at: 2019-08-13T13:13+03:00 -->
+<!-- Added by: gil_diy, at: Thu 09 Dec 2021 19:33:23 IST -->
 
 <!--te-->
 
@@ -288,7 +289,7 @@ if __name__ == '__main__':
 		p.join()
 ```
 
-### naming a process
+### Naming a process
 ```python
 import multiprocessing
 import time
@@ -384,7 +385,7 @@ to perform a simple calculation
 ```python
 import multiprocessing
 
-def func_square(data)
+def func_square(data):
 	result = data * data
 	return result
 
@@ -392,7 +393,7 @@ def func_square(data)
 if __name__ == '__main__':
 	inputs = list(range(0,100))
 	pool = multiprocessing.Pool(processes=4)
-	pool_outputs = pool.map(function_square, inputs)
+	pool_outputs = pool.map(func_square, inputs)
 
 	pool.close()
 	pool.join()
@@ -400,3 +401,5 @@ if __name__ == '__main__':
 	print('Pool:  ', pool_outputs)
 
 ```
+
+### Using a Thread pool
