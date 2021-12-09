@@ -55,7 +55,7 @@
          * [The type of optimizers](#the-type-of-optimizers)
       * [Dropouts](#dropouts)
          * [Inference/Evaluation](#inferenceevaluation)
-            * [Set](#set)
+            * [model.eval()](#modeleval)
       * [torchvision](#torchvision)
          * [Display images as grid](#display-images-as-grid)
          * [Augmentations](#augmentations)
@@ -75,7 +75,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Thu 09 Dec 2021 14:26:44 IST -->
+<!-- Added by: gil_diy, at: Thu 09 Dec 2021 14:30:31 IST -->
 
 <!--te-->
 
@@ -991,7 +991,42 @@ nn.Dropout(p=0.25)
 ### Inference/Evaluation
 
 
-#### Set 
+#### model.eval()
+
+**model.eval()** is a kind of switch for some specific layers/parts of the model
+that behave differently during training and inference (evaluating) time.
+For example:
+
+* Dropouts Layers
+
+* BatchNorm Layers
+
+You need to **turn off them** during model evaluation,
+and **.eval()** will do it for you.
+
+In addition, the **common practice for evaluating/validation** is using
+ **torch.no_grad()** in pair with **model.eval()** to turn off gradients computation:
+
+```python
+model.eval()
+
+for x, y, files in tqdm(loader):
+    x = x.to(config.DEVICE)
+
+    with torch.no_grad():
+        pred = model(x).argmax(1)
+        preds.append(pred.cpu().numpy())
+        filenames += files
+
+df = pd.DataFrame({"image": filenames,
+                   "level": np.concatenate(preds, axis=0)})
+
+df.to_csv(output_csv, index=False)
+
+# Now we will turn off "evaluation mode" by running model.train()
+# dual
+model.train()
+```
 
 ## torchvision
 
