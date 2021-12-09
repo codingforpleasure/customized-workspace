@@ -78,7 +78,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Thu 09 Dec 2021 08:38:14 IST -->
+<!-- Added by: gil_diy, at: Thu 09 Dec 2021 08:41:06 IST -->
 
 <!--te-->
 
@@ -1233,6 +1233,8 @@ for epoch in epochs:
         # Updates the scale for next iteration.
         scaler.update()
 ```
+
+[pytorch documentation](https://pytorch.org/docs/stable/notes/amp_examples.html#typical-mixed-precision-training)
 
 [Link1](https://www.youtube.com/watch?v=X7iOkhGePXg)
 
