@@ -70,14 +70,13 @@
       * [Derivatives](#derivatives)
          * [Y(x)](#yx)
       * [Partial derivatives Y(x,z)](#partial-derivatives-yxz)
-      * [Template for Regression](#template-for-regression)
       * [AMP (Automatic Mixed Precision) for shorting the training time](#amp-automatic-mixed-precision-for-shorting-the-training-time)
       * [Integrating TensorBoard with pytorch](#integrating-tensorboard-with-pytorch)
       * [Segmentation with U-net  (Encoder-Decoder)](#segmentation-with-u-net--encoder-decoder)
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Thu 09 Dec 2021 08:43:08 IST -->
+<!-- Added by: gil_diy, at: Thu 09 Dec 2021 08:43:20 IST -->
 
 <!--te-->
 
@@ -1164,28 +1163,6 @@ print("derivative_for_two_variables, result x.grad: ", x.grad)
 print("derivative_for_two_variables, result z.grad: ", z.grad)
 ```
 
-## Template for Regression 
-
-```python
-import torch.nn as nn
-
-loss_function = nn.BCELoss()
-optimizer = torch.optim.SGD(model.parameters(), lr=0.01)
-
-epochs = 1000
-losses = []
-
-for epoch_idx in range(epochs):
-  y_pred = model.forward(x_data)
-  loss = loss_function(y_pred, y_data)
-  print("epoch: ", epoch_idx, "loss", loss.item())
-
-  losses.append(loss.item())
-  optimizer.zero_grad()
-  loss.backward()
-  optimizer.step()
-  
-```
 
 ## AMP (Automatic Mixed Precision) for shorting the training time
 
