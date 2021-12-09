@@ -9,11 +9,8 @@
             * [Create a tensor with attributes from another tensor](#create-a-tensor-with-attributes-from-another-tensor)
             * [Create a tensor from numpy array](#create-a-tensor-from-numpy-array)
             * [Create a numpy array from tensor](#create-a-numpy-array-from-tensor)
-         * [Get number of elements in a tensor](#get-number-of-elements-in-a-tensor)
          * [Tensor Operation types](#tensor-operation-types)
             * [Reshape operations](#reshape-operations)
-               * [rehshape](#rehshape)
-               * [squeeze](#squeeze)
                * [flatten](#flatten)
                * [unsqueeze](#unsqueeze)
             * [Element-wise operations](#element-wise-operations)
@@ -22,8 +19,6 @@
          * [Get the data type of a tensor](#get-the-data-type-of-a-tensor)
          * [Reshaping tensor - View tensor differently](#reshaping-tensor---view-tensor-differently)
          * [matrix multiplication](#matrix-multiplication)
-         * [Converting tensors into numpy arrays](#converting-tensors-into-numpy-arrays)
-         * [Getting the actual value of a tensor of size 1x1](#getting-the-actual-value-of-a-tensor-of-size-1x1)
       * [Exploring Gradients](#exploring-gradients)
          * [Stop calculating the gradient function](#stop-calculating-the-gradient-function)
             * [Method #1: require_grad_(False)](#method-1-require_grad_false)
@@ -37,6 +32,7 @@
          * [Move the tensors to CPU](#move-the-tensors-to-cpu)
       * [matrix multiplication](#matrix-multiplication-1)
       * [Basic functions in pytorch](#basic-functions-in-pytorch)
+      * [Converting tensors into numpy arrays](#converting-tensors-into-numpy-arrays)
       * [Concatenating torches:](#concatenating-torches)
       * [Stacking](#stacking)
       * [Linear Layers in depth](#linear-layers-in-depth)
@@ -77,7 +73,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Thu 09 Dec 2021 08:52:33 IST -->
+<!-- Added by: gil_diy, at: Thu 09 Dec 2021 08:58:42 IST -->
 
 <!--te-->
 
@@ -163,39 +159,10 @@ my_torch_tensor.cpu().detach().numpy()
 ```
 
 
-### Get number of elements in a tensor
-
-```python
-
-t= torch.tensor([
-  [1,1,1,1],
-  [2,2,2,2],
-  [3,3,3,3],
-  ], dtype = torch.float32)
-
-print("number of elements in the tensor: ", torch.tensor(t.shape).prod())
-print("number of elements in the tensor: ", t.numel())
-```
-
-
 ### Tensor Operation types
 #### Reshape operations
 
-##### rehshape
 ```python
-print(t.reshape(1,12))
-print(t.reshape(1,12).shape)
-
-print(t.reshape(12,1))
-print(t.reshape(12,1).shape)
-
-print(t.reshape(2,2,3))
-print(t.reshape(2,2,3).shape)
-
-print(t.reshape(3,4))
-print(t.reshape(3,4).shape)
-
-```
 
 ##### squeeze
 
@@ -343,9 +310,6 @@ t.sum(dim = 0) # Output: tensor([6.,6.,6.,6.])
 t.sum(dim = 1) # Output: tensor([4.,8.,12.])
 ```
 
-
-
-
 #### Access operations
 
 ### Get the data type of a tensor
@@ -422,15 +386,8 @@ Output will be the number **10** .
 weight_matrix.matmul(in_features)
 ```
 
-### Converting tensors into numpy arrays
 
-```python
-numpy_converted = my_tensor_converted.numpy()
-print(numpy_converted)
-```
-
-
-```python
+``` python
 t_one = torch.tensor([1,2,3])
 t_two = torch.tensor([5,10,15])
 
@@ -440,15 +397,6 @@ print(5*t_one)
 
 dot_product = torch.product(t_two, t_two) # 1+5+2*10+3*15
 print(dot_product)
-```
-
-### Getting the actual value of a tensor of size 1x1
-
-```python
-x = torch.rand(5,3)
-print(x)
-
-print(x[1,1].item()) # <- retreiving the value from the tensor
 ```
 
 ## Exploring Gradients
@@ -582,6 +530,16 @@ my_tensor.item() | Tensor to number
 my_tensor.numel() | number of elements in a tensor
 torch.ones_like(my_tensor) | Create a new tensor that matches `my_tensor` attributes (shape and datatype) with all ones.
 torch.flatten(torch.arange(18).view(2,-1)) | Flattening a torch to 1 dimentional
+
+
+
+## Converting tensors into numpy arrays
+
+```python
+numpy_converted = my_tensor_converted.numpy()
+print(numpy_converted)
+```
+
 
 
 ## Concatenating torches:
