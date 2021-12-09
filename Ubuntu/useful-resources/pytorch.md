@@ -73,7 +73,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Thu 09 Dec 2021 08:58:42 IST -->
+<!-- Added by: gil_diy, at: Thu 09 Dec 2021 09:00:36 IST -->
 
 <!--te-->
 
@@ -560,14 +560,20 @@ print(torch.cat((tensor1,tensor2),1))
 `tensor([[30, 31, 32],
         [33, 34, 35]])`
 
-Output of: **print(torch.cat((tensor1,tensor2),0))**
+Output of: 
+```python
+print(torch.cat((tensor1,tensor2),0))
+```
 
 `tensor([[ 0,  1,  2],
         [ 3,  4,  5],
         [30, 31, 32],
         [33, 34, 35]])`
 
-Output of: **print(torch.cat((tensor1,tensor2),1))**
+Output of: 
+```
+print(torch.cat((tensor1,tensor2),1))
+```
 
 `tensor([[ 0,  1,  2, 30, 31, 32],
         [ 3,  4,  5, 33, 34, 35]])`
