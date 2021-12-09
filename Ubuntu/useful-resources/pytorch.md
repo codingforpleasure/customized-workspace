@@ -73,7 +73,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Thu 09 Dec 2021 09:00:36 IST -->
+<!-- Added by: gil_diy, at: Thu 09 Dec 2021 09:39:06 IST -->
 
 <!--te-->
 
@@ -425,11 +425,18 @@ print(x.grad) # will print the gradient of each element in x
 ```python
 import torch
 
-x=torch.randn(3, requires_grad=True)
+x = torch.randn(3, requires_grad=True)
 print(x)
-x.require_grad_(False)
+x.requires_grad = False
 print(x)
 ```
+
+**Output:**
+
+`
+tensor([-0.1308,  1.2437, -1.2573], requires_grad=True)
+tensor([-0.1308,  1.2437, -1.2573])
+`
 
 #### Method #2: detach
 
@@ -440,8 +447,15 @@ x=torch.randn(3, requires_grad=True)
 print(x)
 y = x.detach() # No more dependency on x
 print(y)
-
 ```
+**Output:**
+
+`
+tensor([-0.7538,  0.7917, -0.8920], requires_grad=True)
+tensor([-0.7538,  0.7917, -0.8920])
+`
+
+
 #### Method #3: with torch.no_grad()
 
 ```python
@@ -454,6 +468,12 @@ with torch.no_grad():
 	print(y)
 ```
 
+**Output:**
+
+`
+tensor([ 1.2526, -1.4044, -0.2214], requires_grad=True)
+tensor([3.2526, 0.5956, 1.7786])
+`
 
 ### Stop accumalting gradients, reset to zero
 
@@ -539,7 +559,6 @@ torch.flatten(torch.arange(18).view(2,-1)) | Flattening a torch to 1 dimentional
 numpy_converted = my_tensor_converted.numpy()
 print(numpy_converted)
 ```
-
 
 
 ## Concatenating torches:
