@@ -71,12 +71,13 @@
          * [Y(x)](#yx)
       * [Partial derivatives Y(x,z)](#partial-derivatives-yxz)
       * [AMP (Automatic Mixed Precision) for shorting the training time](#amp-automatic-mixed-precision-for-shorting-the-training-time)
+      * [Template for Regression](#template-for-regression)
       * [Integrating TensorBoard with pytorch](#integrating-tensorboard-with-pytorch)
       * [Segmentation with U-net  (Encoder-Decoder)](#segmentation-with-u-net--encoder-decoder)
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Thu 09 Dec 2021 08:43:20 IST -->
+<!-- Added by: gil_diy, at: Thu 09 Dec 2021 08:43:29 IST -->
 
 <!--te-->
 
@@ -1203,6 +1204,29 @@ for epoch in epochs:
 [Link1](https://www.youtube.com/watch?v=X7iOkhGePXg)
 
 [Link2](https://www.youtube.com/watch?v=b5dAmcBKxHg)
+
+## Template for Regression 
+
+```python
+import torch.nn as nn
+
+loss_function = nn.BCELoss()
+optimizer = torch.optim.SGD(model.parameters(), lr=0.01)
+
+epochs = 1000
+losses = []
+
+for epoch_idx in range(epochs):
+  y_pred = model.forward(x_data)
+  loss = loss_function(y_pred, y_data)
+  print("epoch: ", epoch_idx, "loss", loss.item())
+
+  losses.append(loss.item())
+  optimizer.zero_grad()
+  loss.backward()
+  optimizer.step()
+  
+```
 
 
 ## Integrating TensorBoard with pytorch
