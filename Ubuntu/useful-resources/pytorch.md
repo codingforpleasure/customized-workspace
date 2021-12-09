@@ -73,7 +73,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Thu 09 Dec 2021 09:39:06 IST -->
+<!-- Added by: gil_diy, at: Thu 09 Dec 2021 09:48:41 IST -->
 
 <!--te-->
 
@@ -401,6 +401,15 @@ print(dot_product)
 
 ## Exploring Gradients
 
+* The forward pass of your network defines the **computational graph**; 
+nodes in the graph are Tensors and edges are functions that produced the output Tensors from input Tensors. 
+
+* Back-propagation through this graph then gives the gradients.
+
+* **autograd** keeps a graph recording of all of the operations that created the data as you execute operations, 
+giving you a **directed acyclic graph** whose **leaves are the input tensors** and **roots are the output tensors**. 
+By tracing this graph from roots to leaves, you can automatically compute the gradients using the chain rule (back-propagation).
+
 
 ```python
 import torch
@@ -419,6 +428,8 @@ print(x.grad) # will print the gradient of each element in x
 
 
 ### Stop calculating the gradient function
+
+When creating a tensor the default property is `requires_grad=False`
 
 #### Method #1: require_grad_(False)
 
