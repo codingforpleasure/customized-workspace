@@ -78,7 +78,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Thu 09 Dec 2021 00:42:03 IST -->
+<!-- Added by: gil_diy, at: Thu 09 Dec 2021 08:38:07 IST -->
 
 <!--te-->
 
@@ -1203,7 +1203,35 @@ for epoch_idx in range(epochs):
 ## AMP (Automatic Mixed Precision) for shorting the training time
 
 ```python
+from torch.cuda import amp
+# Creates model and optimizer in default precision
+model = Net().cuda()
+optimizer = optim.SGD(model.parameters(), ...)
 
+# Creates a GradScaler once at the beginning of training.
+scaler = amp.GradScaler()
+
+for epoch in epochs:
+    for input, target in data:
+        optimizer.zero_grad()
+
+        # Runs the forward pass with autocasting.
+        with amp.autocast():
+            output = model(input)
+            loss = loss_fn(output, target)
+
+        # Scales loss.  Calls backward() on scaled loss to create scaled gradients.
+        # Backward passes under autocast are not recommended.
+        # Backward ops run in the same dtype autocast chose for corresponding forward ops.
+        scaler.scale(loss).backward()
+
+        # scaler.step() first unscales the gradients of the optimizer's assigned params.
+        # If these gradients do not contain infs or NaNs, optimizer.step() is then called,
+        # otherwise, optimizer.step() is skipped.
+        scaler.step(optimizer)
+
+        # Updates the scale for next iteration.
+        scaler.update()
 ```
 
 [Link1](https://www.youtube.com/watch?v=X7iOkhGePXg)
