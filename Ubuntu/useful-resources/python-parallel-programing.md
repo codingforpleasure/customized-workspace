@@ -25,7 +25,7 @@
          * [Using a process pool](#using-a-process-pool)
          * [Using a Thread pool](#using-a-thread-pool)
 
-<!-- Added by: gil_diy, at: Thu 09 Dec 2021 19:33:23 IST -->
+<!-- Added by: gil_diy, at: Thu 09 Dec 2021 19:35:22 IST -->
 
 <!--te-->
 
@@ -403,3 +403,15 @@ if __name__ == '__main__':
 ```
 
 ### Using a Thread pool
+
+The best practice is using the `concurrent.futures.ThreadPoolExecutor()`
+and using the `concurrent.futures.as_completed()`
+
+```python
+import concurrent.futures
+
+with concurrent.futures.ThreadPoolExecutor() as executor: 
+    results = [executor.submit(map_function, element) for element in input_data]
+
+
+```
