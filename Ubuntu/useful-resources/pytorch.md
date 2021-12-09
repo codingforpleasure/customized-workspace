@@ -77,7 +77,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Thu 09 Dec 2021 08:43:29 IST -->
+<!-- Added by: gil_diy, at: Thu 09 Dec 2021 08:52:33 IST -->
 
 <!--te-->
 
@@ -579,6 +579,7 @@ torch.randint(low = 10,high = 100,size = (2,3))| Tensor from a given range betwe
 my_tensor.shape | The shape of `my_tensor` tensor (we can say the size of a tensor)
 my_tensor.dtype | The datatype of `my_tensor` tensor
 my_tensor.item() | Tensor to number
+my_tensor.numel() | number of elements in a tensor
 torch.ones_like(my_tensor) | Create a new tensor that matches `my_tensor` attributes (shape and datatype) with all ones.
 torch.flatten(torch.arange(18).view(2,-1)) | Flattening a torch to 1 dimentional
 
@@ -1040,10 +1041,14 @@ transforms.Compose([
 ```
 
 ## Transfer learning
-Transfer learning is an important concept in deep learning that has made it possible for us to use deep learning for various day-to-day tasks. It is a machine learning technique where a model trained for a task is reused to create a new model for a similar task. We take a
-model trained on a large dataset and transfer its knowledge to a smaller dataset. For computer vision tasks with a convolutional neural network (CNN), we freeze the early convolutional layers of the network and only train the last few layers.
+Transfer learning is an important concept in deep learning that has made it possible for us to use deep learning for various day-to-day tasks. 
+It is a machine learning technique where a model trained for a task is reused to create a new model for a similar task. 
+We take a model trained on a large dataset and transfer its knowledge to a smaller dataset. 
+For computer vision tasks with a convolutional neural network (CNN), 
+we freeze the early convolutional layers of the network and **only train the last few layers**.
 
-The early convolutional layers extract general, low-level features that are applicable across images for detecting edges, patterns, and gradients, while the later layers identify specific features within an image, and are specific to the dataset.
+The early convolutional layers extract general, low-level features that are applicable across images for detecting edges,
+patterns, and gradients, while the **later layers identify specific features within an image, and are specific to the dataset**.
 
 
 ### Freezing the model
@@ -1054,7 +1059,7 @@ my_model = models.resnet50(pretrained=True)
 # freezes the weights of the model. By freezing the
 # weights, the lower convolutional layers are not updated
 for param in my_model.parameters():
-param.requires_grad = False
+  param.requires_grad = False
 ```
 
 ### Replacing the last two layers
@@ -1088,16 +1093,16 @@ class AdaptiveConcatPool2d(nn.Module):
 ```python
 my_model.avgpool = AdaptiveConcatPool2d()
 my_model.fc = nn.Sequential(
-nn.Flatten(),
-nn.BatchNorm1d(4096),
-nn.Dropout(0.5),
-nn.Linear(4096, 512),
-nn.Relu(),
-nn.BatchNorm1d(512),
-nn.Dropout(p = 0.5),
-nn.Linear(512, 2),
-nn.LogSoftMax(dim=1)
-)
+                            nn.Flatten(),
+                            nn.BatchNorm1d(4096),
+                            nn.Dropout(0.5),
+                            nn.Linear(4096, 512),
+                            nn.Relu(),
+                            nn.BatchNorm1d(512),
+                            nn.Dropout(p = 0.5),
+                            nn.Linear(512, 2),
+                            nn.LogSoftMax(dim=1)
+                            )
 
 ```
 
