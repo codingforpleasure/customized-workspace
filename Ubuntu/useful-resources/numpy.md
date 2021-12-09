@@ -13,6 +13,7 @@
             * [Stack 1-D arrays as columns into a 2-D array.](#stack-1-d-arrays-as-columns-into-a-2-d-array)
             * [vstack](#vstack)
             * [hstack](#hstack)
+            * [Concatenating](#concatenating)
          * [Retrieving info about an array](#retrieving-info-about-an-array)
          * [Counts the number of non-zero values in an array given a constraint](#counts-the-number-of-non-zero-values-in-an-array-given-a-constraint)
          * [Transpose a matrix/array](#transpose-a-matrixarray)
@@ -62,7 +63,7 @@
       * [Exporting txt files easily with specific format](#exporting-txt-files-easily-with-specific-format)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Thu 02 Dec 2021 01:02:27 IST -->
+<!-- Added by: gil_diy, at: Thu 09 Dec 2021 15:20:02 IST -->
 
 <!--te-->
 
@@ -134,6 +135,7 @@ Create a **row** vector with **random** numbers | a = np.random.randn(1, 5)
 Create a matrix with **random** numbers | a = np.random.randn(5, 3) # 5 Rows, 3 columns
 Create a matrix with ones on a diagonal (optionally offset) | np.eye(N=3)
 Create a matrix with specific values on a diagonal |np.diag([1, 82, 3, 5])
+Takes only the upper triangle above the matrix diagonal | np.triu()
 Reshape array to matrix 2x5 | np.arange(10).reshape(2, 5)
 ==>							| np.arange(10).reshape(2, -1)      (**Read tip #2**)
 == | ==
@@ -262,6 +264,27 @@ The output would be:
 
 ```python
 array([1, 2, 3, 4, 5, 6])
+```
+#### Concatenating
+
+```python
+a = np.array([[1, 2], [3, 4]])
+b = np.array([[5, 6]])
+
+np.concatenate((a, b), axis=0)
+
+# array([[1, 2],
+#        [3, 4],
+#        [5, 6]])
+
+np.concatenate((a, b.T), axis=1)
+
+# array([[1, 2, 5],
+#        [3, 4, 6]])
+
+np.concatenate((a, b), axis=None)
+
+# array([1, 2, 3, 4, 5, 6])
 ```
 
 ### Retrieving info about an array
