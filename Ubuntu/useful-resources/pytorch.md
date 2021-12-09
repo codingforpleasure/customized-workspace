@@ -54,7 +54,8 @@
          * [Check default values of an optimizer](#check-default-values-of-an-optimizer)
          * [The type of optimizers](#the-type-of-optimizers)
       * [Dropouts](#dropouts)
-         * [Inference](#inference)
+         * [Inference/Evaluation](#inferenceevaluation)
+            * [Set](#set)
       * [torchvision](#torchvision)
          * [Display images as grid](#display-images-as-grid)
          * [Augmentations](#augmentations)
@@ -74,7 +75,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Thu 09 Dec 2021 14:25:53 IST -->
+<!-- Added by: gil_diy, at: Thu 09 Dec 2021 14:26:44 IST -->
 
 <!--te-->
 
@@ -987,9 +988,10 @@ hidden layers** in order to prevent us from losing the input data and missing ou
 nn.Dropout(p=0.25)
 ```
 
-### Inference
+### Inference/Evaluation
 
 
+#### Set 
 
 ## torchvision
 
