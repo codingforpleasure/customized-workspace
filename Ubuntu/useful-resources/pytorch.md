@@ -78,7 +78,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Fri 10 Dec 2021 21:47:06 IST -->
+<!-- Added by: gil_diy, at: Fri 10 Dec 2021 22:27:09 IST -->
 
 <!--te-->
 
@@ -1108,6 +1108,21 @@ for param in my_model.parameters():
 
 ### Modify the model
 
+Make a specific exited layer just  transparent.
+
+```python
+class Identity(nn.Module):
+    def __init__(self):
+        super(Identity, self).__init__()
+
+    def forward(self, x):
+        return x
+
+model = models.vgg11(pretrained=True)
+model.avgpool = Identity()
+model.classifier = nn.Linear(in_features=4096, out_features=10)
+
+```
 
 
 ### Replacing the last two layers
