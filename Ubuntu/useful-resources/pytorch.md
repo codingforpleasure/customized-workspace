@@ -47,6 +47,8 @@
          * [To better understand your data](#to-better-understand-your-data)
          * [<strong>CNN Output Size formula (Square)</strong>](#cnn-output-size-formula-square)
          * [<strong>CNN Output Size formula (Non Square)</strong>](#cnn-output-size-formula-non-square)
+      * [Good practice for avoid mistakes](#good-practice-for-avoid-mistakes)
+         * [First train on a single batch](#first-train-on-a-single-batch)
       * [Batch normalization](#batch-normalization)
       * [Inspecting the weight and bias and layers](#inspecting-the-weight-and-bias-and-layers)
       * [Loss function](#loss-function)
@@ -78,7 +80,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Fri 10 Dec 2021 22:29:07 IST -->
+<!-- Added by: gil_diy, at: Fri 10 Dec 2021 23:16:32 IST -->
 
 <!--te-->
 
@@ -850,6 +852,18 @@ print('label:',label)
 
 [Link](https://youtu.be/cin4YcGBh3Q?list=PLZbbT5o_s2xrfNyHZsM6ufI0iZENK9xgG)
 
+
+## Good practice for avoid mistakes
+
+### First train on a single batch
+
+```python
+# retrieve single batch
+data, targets = next(iter(train_loader))
+
+
+
+```
 
 ## Batch normalization
 
