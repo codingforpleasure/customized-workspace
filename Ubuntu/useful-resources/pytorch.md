@@ -62,6 +62,7 @@
          * [Augmentations](#augmentations)
       * [Transfer learning](#transfer-learning)
          * [Freezing the model](#freezing-the-model)
+         * [Modify the model](#modify-the-model)
          * [Replacing the last two layers](#replacing-the-last-two-layers)
       * [Checkpoints](#checkpoints)
          * [Saving the model (Saving checkpoint)](#saving-the-model-saving-checkpoint)
@@ -77,7 +78,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Fri 10 Dec 2021 19:01:38 IST -->
+<!-- Added by: gil_diy, at: Fri 10 Dec 2021 21:47:06 IST -->
 
 <!--te-->
 
@@ -1104,6 +1105,10 @@ my_model = models.resnet50(pretrained=True)
 for param in my_model.parameters():
   param.requires_grad = False
 ```
+
+### Modify the model
+
+
 
 ### Replacing the last two layers
 
