@@ -77,7 +77,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Fri 10 Dec 2021 17:52:37 IST -->
+<!-- Added by: gil_diy, at: Fri 10 Dec 2021 17:53:19 IST -->
 
 <!--te-->
 
@@ -85,7 +85,7 @@
 
 ## Pytorch hierarchy structure
 
-<p align="center"> <!-- style="width:400px;" -->
+<p align="center" style="width:400px;"> <!--  -->
   <img src="images/pytorch/Pytorch-package-hierarchy.jpg" title="tool tip here">
 </p>
 
