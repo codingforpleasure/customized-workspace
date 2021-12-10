@@ -78,7 +78,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Fri 10 Dec 2021 22:28:47 IST -->
+<!-- Added by: gil_diy, at: Fri 10 Dec 2021 22:29:07 IST -->
 
 <!--te-->
 
@@ -1131,6 +1131,7 @@ print("After modification of the model")
 print(model)
 ```
 
+[Reference](https://youtu.be/qaDe0qQZ5AQ?list=PLhhyoLH6IjfxeoooqP9rhU3HJIAVAJ3Vz)
 
 ### Replacing the last two layers
 
