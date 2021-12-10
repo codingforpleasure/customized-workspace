@@ -80,7 +80,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Fri 10 Dec 2021 23:30:41 IST -->
+<!-- Added by: gil_diy, at: Fri 10 Dec 2021 23:32:12 IST -->
 
 <!--te-->
 
@@ -1272,7 +1272,7 @@ scaler = amp.GradScaler()
 
 for epoch in epochs:
     for input, target in data:
-        optimizer.zero_grad()
+        optimizer.zero_grad() # important to zero it otherwise it will accumulate
 
         # Runs the forward pass with autocasting.
         with amp.autocast():
