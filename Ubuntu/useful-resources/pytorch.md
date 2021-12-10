@@ -77,7 +77,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Fri 10 Dec 2021 17:53:29 IST -->
+<!-- Added by: gil_diy, at: Fri 10 Dec 2021 18:38:28 IST -->
 
 <!--te-->
 
@@ -1041,7 +1041,7 @@ Torchvision is compiled from 4 parts:
 
 * Datasets (like MNIST and Fashion-MNIST)
 
-* Models
+* Models (List of well known models: [Link](https://pytorch.org/vision/stable/models.html))
 
 * Transforms
 
