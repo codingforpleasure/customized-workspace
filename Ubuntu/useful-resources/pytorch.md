@@ -12,6 +12,7 @@
             * [Create a numpy array from tensor](#create-a-numpy-array-from-tensor)
          * [Tensor Operation types](#tensor-operation-types)
             * [Reshape operations](#reshape-operations)
+               * [permute](#permute)
                * [flatten](#flatten)
                * [unsqueeze](#unsqueeze)
             * [Element-wise operations](#element-wise-operations)
@@ -75,12 +76,13 @@
       * [AMP (Automatic Mixed Precision) for shorting the training time](#amp-automatic-mixed-precision-for-shorting-the-training-time)
       * [Use of Neural Networks for Feature Extraction](#use-of-neural-networks-for-feature-extraction)
       * [Template for Regression](#template-for-regression)
+      * [Getting deterministic](#getting-deterministic)
       * [Integrating TensorBoard with pytorch](#integrating-tensorboard-with-pytorch)
       * [Segmentation with U-net  (Encoder-Decoder)](#segmentation-with-u-net--encoder-decoder)
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Fri 10 Dec 2021 23:32:15 IST -->
+<!-- Added by: gil_diy, at: Fri 10 Dec 2021 23:50:15 IST -->
 
 <!--te-->
 
@@ -198,6 +200,17 @@ def my_flatten(t):
   return t
 ```
 
+##### permute
+
+```python
+x = torch.tensor([[1,2,3],[4,5,6]])
+
+print('x = ',x)
+
+print('x.permute(1,0) = ',x.permute(1,0))
+
+```
+
 ##### flatten 
 
 All the axis are squeeze together to a single axis
@@ -272,6 +285,8 @@ t.flatten(start_dim = 1) # The output would be: torch.Size([3,16])
 print(t.reshape(1,12).squeeze().unsqueeze(dim=0))
 print(t.reshape(1,12).squeeze().unsqueeze(dim=0).shape)
 ```
+
+
 
 #### Element-wise operations
 
@@ -780,7 +795,10 @@ There are a lot of factors that can affect the optimal number here, so the best 
 # The num_workers attribute tells the data loader instance how many sub-processes to use for data loading. 
 # By default, the num_workers value is set to zero, and a value of zero tells the loader to load the data inside the main process. 
 
-train_loader = torch.utils.data.Dataloader(train_set, batch_size = 10, num_workers=5)
+train_loader = torch.utils.data.Dataloader(train_set,
+										   batch_size = 10,
+										   num_workers=5,
+										   shuffle = True)
 ```
 
 ## Dataset && DataLoader
@@ -1272,7 +1290,9 @@ scaler = amp.GradScaler()
 
 for epoch in epochs:
     for input, target in data:
-        optimizer.zero_grad() # important to zero it otherwise it will accumulate
+    	# important to zero it otherwise it will accumulate 
+    	# all the grads is current batch
+        optimizer.zero_grad() 
 
         # Runs the forward pass with autocasting.
         with amp.autocast():
@@ -1328,7 +1348,15 @@ for epoch_idx in range(epochs):
   
 ```
 
+## Getting deterministic 
 
+```python
+seed = 0
+torch.backends.cudnn.deterministic = True
+torch.backends.cudnn.benchmark = False
+torch.manual_seed(seed)
+torch.cuda.manual_seed_all(seed)
+```
 ## Integrating TensorBoard with pytorch
 
 [Part1 : TensorBoard with PyTorch - Visualize Deep Learning Metrics](https://youtu.be/pSexXMdruFM)
