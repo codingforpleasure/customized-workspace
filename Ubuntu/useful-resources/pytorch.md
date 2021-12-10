@@ -80,7 +80,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Fri 10 Dec 2021 23:16:32 IST -->
+<!-- Added by: gil_diy, at: Fri 10 Dec 2021 23:18:25 IST -->
 
 <!--te-->
 
@@ -861,8 +861,11 @@ print('label:',label)
 # retrieve single batch
 data, targets = next(iter(train_loader))
 
-
-
+for epoch in range(num_epochs):
+	print(f"Epoch [{epoch+1/num_epochs}]")
+	data = data.to(device = device)
+	targets = targets.to(device = device)
+	...
 ```
 
 ## Batch normalization
