@@ -80,7 +80,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Fri 10 Dec 2021 23:29:38 IST -->
+<!-- Added by: gil_diy, at: Fri 10 Dec 2021 23:30:41 IST -->
 
 <!--te-->
 
@@ -1049,6 +1049,7 @@ df = pd.DataFrame({"image": filenames,
 df.to_csv(output_csv, index=False)
 
 # Now we will turn off "evaluation mode" by running model.train()
+# toggel it back on for future training.
 model.train()
 ```
 
