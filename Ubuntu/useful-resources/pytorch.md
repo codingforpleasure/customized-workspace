@@ -78,7 +78,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Fri 10 Dec 2021 22:27:09 IST -->
+<!-- Added by: gil_diy, at: Fri 10 Dec 2021 22:28:12 IST -->
 
 <!--te-->
 
@@ -1119,9 +1119,15 @@ class Identity(nn.Module):
         return x
 
 model = models.vgg11(pretrained=True)
+
+print("Before modification of the model:")
+print(model)
+
 model.avgpool = Identity()
 model.classifier = nn.Linear(in_features=4096, out_features=10)
 
+print("After modification of the model")
+print(model)
 ```
 
 
