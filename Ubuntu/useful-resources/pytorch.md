@@ -78,7 +78,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Fri 10 Dec 2021 22:28:12 IST -->
+<!-- Added by: gil_diy, at: Fri 10 Dec 2021 22:28:47 IST -->
 
 <!--te-->
 
@@ -1109,6 +1109,7 @@ for param in my_model.parameters():
 ### Modify the model
 
 Make a specific exited layer just  transparent.
+creating a simple identity class:
 
 ```python
 class Identity(nn.Module):
