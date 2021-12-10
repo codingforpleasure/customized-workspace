@@ -80,7 +80,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Fri 10 Dec 2021 23:25:01 IST -->
+<!-- Added by: gil_diy, at: Fri 10 Dec 2021 23:29:38 IST -->
 
 <!--te-->
 
@@ -1026,7 +1026,7 @@ For example:
 * BatchNorm Layers
 
 You need to **turn off them** during model evaluation,
-and **.eval()** will do it for you. it means during evaluation the dropouts and the batchnorm gets removed
+and **.eval()** will do it for you. it means during evaluation the dropouts and the BatchNorm will get removed.
 
 In addition, the **common practice for evaluating/validation** is using
  **torch.no_grad()** in pair with **model.eval()** to turn off gradients computation:
