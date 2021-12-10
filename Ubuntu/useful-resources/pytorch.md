@@ -1,5 +1,6 @@
 <!--ts-->
    * [Pytorch](#pytorch)
+      * [Pytorch hierarchy structure](#pytorch-hierarchy-structure)
       * [Road map](#road-map)
       * [The training process (Road map)](#the-training-process-road-map)
       * [Install](#install)
@@ -76,11 +77,17 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Thu 09 Dec 2021 17:08:14 IST -->
+<!-- Added by: gil_diy, at: Fri 10 Dec 2021 17:52:37 IST -->
 
 <!--te-->
 
 # Pytorch
+
+## Pytorch hierarchy structure
+
+<p align="center"> <!-- style="width:400px;" -->
+  <img src="images/pytorch/Pytorch-package-hierarchy.jpg" title="tool tip here">
+</p>
 
 ## Road map
 
