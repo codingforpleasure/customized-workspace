@@ -83,7 +83,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Sat 11 Dec 2021 11:12:27 IST -->
+<!-- Added by: gil_diy, at: Sat 11 Dec 2021 11:26:51 IST -->
 
 <!--te-->
 
@@ -1043,8 +1043,8 @@ print(optimizer.defaults)
 
 #### Learning rate scheduler
 ```python
-optimizer = optim.Adam(moedel.parameters(), lr=learning_rate)
-schedualer = optim.lr_scheduler.ReduceLROnPlateau(optimizer,
+optimizer = optim.Adam(model.parameters(), lr=learning_rate)
+scheduler = optim.lr_scheduler.ReduceLROnPlateau(optimizer,
 												  patience = 5,
 												  verbose = True)
 ```
