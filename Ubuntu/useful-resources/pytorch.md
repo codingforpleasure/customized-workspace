@@ -77,13 +77,13 @@
       * [AMP (Automatic Mixed Precision) for shorting the training time](#amp-automatic-mixed-precision-for-shorting-the-training-time)
       * [Use of Neural Networks for Feature Extraction](#use-of-neural-networks-for-feature-extraction)
       * [Template for Regression](#template-for-regression)
-      * [Getting deterministic](#getting-deterministic)
+      * [Getting deterministic behaviour for debugging](#getting-deterministic-behaviour-for-debugging)
       * [Integrating TensorBoard with pytorch](#integrating-tensorboard-with-pytorch)
       * [Segmentation with U-net  (Encoder-Decoder)](#segmentation-with-u-net--encoder-decoder)
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Sat 11 Dec 2021 12:26:09 IST -->
+<!-- Added by: gil_diy, at: Sat 11 Dec 2021 12:28:25 IST -->
 
 <!--te-->
 
@@ -1416,7 +1416,10 @@ for epoch_idx in range(epochs):
   
 ```
 
-## Getting deterministic 
+## Getting deterministic behaviour for debugging
+
+For reproducing the bug, we will get a consistent behaviour,
+But for trainig you should remove it:
 
 ```python
 seed = 0
