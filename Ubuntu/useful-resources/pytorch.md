@@ -82,7 +82,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Fri 10 Dec 2021 23:50:15 IST -->
+<!-- Added by: gil_diy, at: Sat 11 Dec 2021 10:08:40 IST -->
 
 <!--te-->
 
@@ -336,6 +336,30 @@ t = torch.tensor([
 
 t.sum(dim = 0) # Output: tensor([6.,6.,6.,6.])
 t.sum(dim = 1) # Output: tensor([4.,8.,12.])
+```
+
+Another useful example:
+
+```python
+def get_mean_std(loader):
+    # var[X] = E[X**2] - E[X]**2
+    channels_sum, channels_sqrd_sum, num_batches = 0, 0, 0
+
+    for data, _ in tqdm(loader):
+
+    	# Opperating mean for each channel separately
+        channels_sum += torch.mean(data, dim=[0, 2, 3])
+        channels_sqrd_sum += torch.mean(data ** 2, dim=[0, 2, 3])
+        num_batches += 1
+
+    mean = channels_sum / num_batches
+    std = (channels_sqrd_sum / num_batches - mean ** 2) ** 0.5
+
+    return mean, std
+
+train_loader = DataLoader(dataset=train_set, batch_size=64, shuffle=True)
+mean, std = get_mean_std(train_loader)
+
 ```
 
 #### Access operations
