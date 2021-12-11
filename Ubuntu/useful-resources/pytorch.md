@@ -83,7 +83,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Sat 11 Dec 2021 12:22:55 IST -->
+<!-- Added by: gil_diy, at: Sat 11 Dec 2021 12:26:09 IST -->
 
 <!--te-->
 
@@ -1423,6 +1423,8 @@ seed = 0
 torch.backends.cudnn.deterministic = True
 torch.backends.cudnn.benchmark = False
 torch.manual_seed(seed)
+
+# In case you're using cuda:
 torch.cuda.manual_seed_all(seed)
 ```
 ## Integrating TensorBoard with pytorch
