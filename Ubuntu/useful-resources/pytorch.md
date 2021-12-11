@@ -83,7 +83,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Sat 11 Dec 2021 12:28:25 IST -->
+<!-- Added by: gil_diy, at: Sat 11 Dec 2021 12:28:55 IST -->
 
 <!--te-->
 
@@ -1418,7 +1418,7 @@ for epoch_idx in range(epochs):
 
 ## Getting deterministic behaviour for debugging
 
-For reproducing the bug, we will get a consistent behaviour,
+For reproducible results, we will get a consistent behaviour,
 But for trainig you should remove it:
 
 ```python
