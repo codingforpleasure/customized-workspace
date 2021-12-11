@@ -57,6 +57,7 @@
       * [Optimizers](#optimizers)
          * [Check default values of an optimizer](#check-default-values-of-an-optimizer)
          * [The type of optimizers](#the-type-of-optimizers)
+            * [Learning rate scheduler](#learning-rate-scheduler)
       * [Dropouts](#dropouts)
       * [Inference/Evaluation](#inferenceevaluation)
          * [model.eval()](#modeleval)
@@ -82,7 +83,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Sat 11 Dec 2021 10:10:41 IST -->
+<!-- Added by: gil_diy, at: Sat 11 Dec 2021 11:12:27 IST -->
 
 <!--te-->
 
@@ -1023,6 +1024,7 @@ with respect to weights. The derivative shows the direction of a positive slope,
 
 The learning rate is a hyperparameter of the optimizer, which controls the amount by which the weights are updated. The learning rate ensures that the weights are not updated by a huge amount so that the algorithm fails to converge at all and the error gets bigger and bigger; however at the same time, the updating of the weight should not be so low that it takes forever to reach the minimum of the cost function/error function.
 
+
 ### Check default values of an optimizer
 ```python
 print(optimizer.defaults)
@@ -1037,6 +1039,15 @@ print(optimizer.defaults)
 * Adadelta
 * Adagrad
 * SGD
+
+
+#### Learning rate scheduler
+```python
+optimizer = optim.Adam(moedel.parameters(), lr=learning_rate)
+schedualer = optim.lr_scheduler.ReduceLROnPlateau(optimizer,
+												  patience = 5,
+												  verbose = True)
+```
 
 [Reference](https://pytorch.org/docs/stable/optim.html#torch.optim.Optimizer)
 
