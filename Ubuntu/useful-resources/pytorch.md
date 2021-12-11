@@ -67,7 +67,6 @@
       * [Transfer learning](#transfer-learning)
          * [Freezing the model](#freezing-the-model)
          * [Modify the model](#modify-the-model)
-         * [Replacing the last two layers](#replacing-the-last-two-layers)
       * [Checkpoints](#checkpoints)
          * [Saving the model (Saving checkpoint)](#saving-the-model-saving-checkpoint)
          * [Loading the model (Loading checkpoint)](#loading-the-model-loading-checkpoint)
@@ -83,7 +82,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Sat 11 Dec 2021 12:28:55 IST -->
+<!-- Added by: gil_diy, at: Sat 11 Dec 2021 13:21:41 IST -->
 
 <!--te-->
 
@@ -1212,7 +1211,7 @@ for param in my_model.parameters():
 
 ### Modify the model
 
-Make a specific exited layer just  transparent.
+Make a specific exited **layer transparent**.
 creating a simple identity class:
 
 ```python
@@ -1237,49 +1236,6 @@ print(model)
 
 [Reference](https://youtu.be/qaDe0qQZ5AQ?list=PLhhyoLH6IjfxeoooqP9rhU3HJIAVAJ3Vz)
 
-### Replacing the last two layers
-
-We will apply transfer learning on Resnet50, the actual architecture can be seen easily with:
-`print(my_model)`
-
-The last two layers:
-
-```
-(avgpool): AdaptiveAvgPool2d(output_size=(1, 1))
-(fc): Linear(in_features=2048, out_features=1000, bias=True)
-```
-we replaced the average pooling layer,
-with our AdaptiveConcatPool2d layer and added a fully connected classifier with two output units for the two classes available.
-
-```python
-# Performs concatenation between Average 2D pooling and Max 2D pooling
-class AdaptiveConcatPool2d(nn.Module):
-  def __init__(self, sz=None):
-      super().__init__()
-      sz = sz or (1, 1)
-      self.ap = nn.AdaptiveAvgPool2d(sz)
-      self.mp = nn.AdaptiveMaxPool2d(sz)
-
-  def forward(self, x):
-      return torch.cat([self.mp(x), self.ap(x)], 1)
-```
-
-
-```python
-my_model.avgpool = AdaptiveConcatPool2d()
-my_model.fc = nn.Sequential(
-                            nn.Flatten(),
-                            nn.BatchNorm1d(4096),
-                            nn.Dropout(0.5),
-                            nn.Linear(4096, 512),
-                            nn.Relu(),
-                            nn.BatchNorm1d(512),
-                            nn.Dropout(p = 0.5),
-                            nn.Linear(512, 2),
-                            nn.LogSoftMax(dim=1)
-                            )
-
-```
 
 ## Checkpoints
 ### Saving the model (Saving checkpoint)
