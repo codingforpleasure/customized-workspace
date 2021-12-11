@@ -82,7 +82,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Sat 11 Dec 2021 10:08:40 IST -->
+<!-- Added by: gil_diy, at: Sat 11 Dec 2021 10:10:41 IST -->
 
 <!--te-->
 
@@ -357,7 +357,7 @@ def get_mean_std(loader):
 
     return mean, std
 
-train_loader = DataLoader(dataset=train_set, batch_size=64, shuffle=True)
+train_loader = torch.utils.data.DataLoader(dataset=train_set, batch_size=64, shuffle=True)
 mean, std = get_mean_std(train_loader)
 
 ```
