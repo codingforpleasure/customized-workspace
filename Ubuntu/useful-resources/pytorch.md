@@ -57,7 +57,7 @@
       * [Optimizers](#optimizers)
          * [Check default values of an optimizer](#check-default-values-of-an-optimizer)
          * [The type of optimizers](#the-type-of-optimizers)
-            * [Learning rate scheduler](#learning-rate-scheduler)
+            * [Learning rate scheduler (ReduceLROnPlateau)](#learning-rate-scheduler-reducelronplateau)
       * [Dropouts](#dropouts)
       * [Inference/Evaluation](#inferenceevaluation)
          * [model.eval()](#modeleval)
@@ -83,7 +83,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Sat 11 Dec 2021 12:21:34 IST -->
+<!-- Added by: gil_diy, at: Sat 11 Dec 2021 12:22:55 IST -->
 
 <!--te-->
 
@@ -1041,7 +1041,9 @@ print(optimizer.defaults)
 * SGD
 
 
-#### Learning rate scheduler
+#### Learning rate scheduler (ReduceLROnPlateau)
+
+On each epoch our learning rates get updated, see below:
 ```python
 criterion = nn.CrossEntropyLoss()
 optimizer = optim.Adam(model.parameters(),
