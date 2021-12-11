@@ -83,7 +83,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Sat 11 Dec 2021 11:26:51 IST -->
+<!-- Added by: gil_diy, at: Sat 11 Dec 2021 12:21:31 IST -->
 
 <!--te-->
 
@@ -1043,10 +1043,41 @@ print(optimizer.defaults)
 
 #### Learning rate scheduler
 ```python
-optimizer = optim.Adam(model.parameters(), lr=learning_rate)
+criterion = nn.CrossEntropyLoss()
+optimizer = optim.Adam(model.parameters(),
+                       lr=learning_rate)
+
 scheduler = optim.lr_scheduler.ReduceLROnPlateau(optimizer,
-												  patience = 5,
-												  verbose = True)
+                                                 patience=5,
+                                                 verbose=True)
+
+for epoch in range(1, num_epochs):
+
+    # calculating loss per batch
+    losses = []
+    for idx_batch, (data, targets) in enumerate(train_loader):
+        data = data.reshape(data.shape[0], -1)
+        data = data.to(device)
+        targets = targets.to(device)
+
+        # forward
+        scores = model(data)
+        loss = criterion(scores, targets)
+        losses.append(loss.item())
+
+        # backward
+        loss.backward()
+
+        # Gradient descent or Adam step
+        optimizer.step()
+        optimizer.zero_grad()
+
+    mean_loss = sum(losses) / len(losses)
+
+    # After each epoch do scheduler.step
+    # Note in this scheduler we need to send in loss for that epoch!
+    scheduler.step(mean_loss)
+    print(f'Cost of epoch at {epoch} is {mean_loss}')
 ```
 
 [Reference](https://pytorch.org/docs/stable/optim.html#torch.optim.Optimizer)
