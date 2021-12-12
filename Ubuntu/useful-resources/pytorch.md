@@ -42,6 +42,7 @@
       * [Loading images directory into a dataset](#loading-images-directory-into-a-dataset)
       * [Subsetting Dataset](#subsetting-dataset)
       * [Preprocessing](#preprocessing)
+      * [Transpose Convolution, what is it?](#transpose-convolution-what-is-it)
       * [Dataloader](#dataloader)
       * [Utilizing the multiple process capabilities of the PyTorch DataLoader class](#utilizing-the-multiple-process-capabilities-of-the-pytorch-dataloader-class)
       * [Dataset &amp;&amp; DataLoader](#dataset--dataloader)
@@ -82,7 +83,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Sat 11 Dec 2021 13:21:44 IST -->
+<!-- Added by: gil_diy, at: Sun 12 Dec 2021 14:47:00 IST -->
 
 <!--te-->
 
@@ -792,6 +793,11 @@ relevant_transform = transforms.Compose([transforms.ToTensor(),
 * We combine all of the transformations together with `transform.Compose()`
 
 
+## Transpose Convolution, what is it?
+
+Transpose Convolution are upscaler, used for Encoder-Decoder architectures as "Decomprossor"
+
+
 ## Dataloader
 
 The dataloader gives us access to the dataset, and gives us query capabilties,
@@ -893,6 +899,8 @@ print('label:',label)
 
 
 [Link](https://youtu.be/cin4YcGBh3Q?list=PLZbbT5o_s2xrfNyHZsM6ufI0iZENK9xgG)
+
+
 
 
 ## Good practice for avoid mistakes
