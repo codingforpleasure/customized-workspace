@@ -2,9 +2,10 @@
    * [Split](#split)
       * [split into chunks of equal size](#split-into-chunks-of-equal-size)
       * [split into groups of the same number of lines](#split-into-groups-of-the-same-number-of-lines)
+      * [Split file in in specific line to two files](#split-file-in-in-specific-line-to-two-files)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Sun 12 Dec 2021 23:58:37 IST -->
+<!-- Added by: gil_diy, at: Mon 13 Dec 2021 00:17:16 IST -->
 
 <!--te-->
 
@@ -31,6 +32,16 @@ split -l 500 myfile segment
 
 This will output six 500-line files: segmentaa, segmentab, segmentac, segmentad, segmentae, and segmentaf.
 
+
+
+## Split file in in specific line to two files
+
+Will split the file into two pieces, 
+one piece up to (and including) line number N and the other piece from line number N+1 up to the last line.
+
+```bash
+csplit file N+1
+```
 
 ## Reference
 
