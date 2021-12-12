@@ -84,7 +84,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Mon 13 Dec 2021 00:48:43 IST -->
+<!-- Added by: gil_diy, at: Mon 13 Dec 2021 00:49:04 IST -->
 
 <!--te-->
 
@@ -617,7 +617,7 @@ torch.flatten(torch.arange(18).view(2,-1)) | Flattening a torch to 1 dimentional
 
 ## Clipping tensors
 
-Clamps all elements in input into the range [ min, max ]. Letting min_value and max_value be min and max, respectively, this returns:
+Clamps all elements in input into the range [ min, max ]. Letting min_value and max_value be min and max, respectively:
 
 ```pytorch
 a = torch.randn(4)
