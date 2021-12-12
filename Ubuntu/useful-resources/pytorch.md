@@ -83,7 +83,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Sun 12 Dec 2021 14:50:39 IST -->
+<!-- Added by: gil_diy, at: Sun 12 Dec 2021 15:00:30 IST -->
 
 <!--te-->
 
@@ -803,6 +803,9 @@ What is it used for?
 
 * Semantic Segmentation -> (From RGB image input to class based visualisation)
 
+<p align="center"> <!-- style="width:400px;" -->
+  <img src="images/pytorch/transpose_convolution.png" title="tool tip here">
+</p>
 
 ## Dataloader
 
