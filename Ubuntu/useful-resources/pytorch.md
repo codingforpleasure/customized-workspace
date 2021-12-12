@@ -83,7 +83,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Sun 12 Dec 2021 14:47:04 IST -->
+<!-- Added by: gil_diy, at: Sun 12 Dec 2021 14:49:52 IST -->
 
 <!--te-->
 
@@ -796,6 +796,12 @@ relevant_transform = transforms.Compose([transforms.ToTensor(),
 ## Transpose Convolution, what is it?
 
 Transpose Convolution are upscaler, used for Encoder-Decoder architectures as "Decomprossor"
+
+What is it used for?
+
+* Super resolution -> Upscaling the input image to higher resolutions
+
+* Semantic Segmentation -> Upscaling the input image to higher resolutions
 
 
 ## Dataloader
