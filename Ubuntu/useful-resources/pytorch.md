@@ -34,7 +34,7 @@
          * [Move the tensors to CPU](#move-the-tensors-to-cpu)
       * [matrix multiplication](#matrix-multiplication-1)
       * [Basic functions in pytorch](#basic-functions-in-pytorch)
-   * [Clipping tensors](#clipping-tensors)
+      * [Clipping tensors](#clipping-tensors)
       * [Converting tensors into numpy arrays](#converting-tensors-into-numpy-arrays)
       * [Concatenating torches:](#concatenating-torches)
       * [Stacking](#stacking)
@@ -84,7 +84,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Mon 13 Dec 2021 00:48:03 IST -->
+<!-- Added by: gil_diy, at: Mon 13 Dec 2021 00:48:43 IST -->
 
 <!--te-->
 
@@ -615,7 +615,7 @@ my_tensor.numel() | number of elements in a tensor
 torch.ones_like(my_tensor) | Create a new tensor that matches `my_tensor` attributes (shape and datatype) with all ones.
 torch.flatten(torch.arange(18).view(2,-1)) | Flattening a torch to 1 dimentional
 
-# Clipping tensors
+## Clipping tensors
 
 Clamps all elements in input into the range [ min, max ]. Letting min_value and max_value be min and max, respectively, this returns:
 
