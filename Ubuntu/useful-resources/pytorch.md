@@ -34,6 +34,7 @@
          * [Move the tensors to CPU](#move-the-tensors-to-cpu)
       * [matrix multiplication](#matrix-multiplication-1)
       * [Basic functions in pytorch](#basic-functions-in-pytorch)
+   * [Clipping tensors](#clipping-tensors)
       * [Converting tensors into numpy arrays](#converting-tensors-into-numpy-arrays)
       * [Concatenating torches:](#concatenating-torches)
       * [Stacking](#stacking)
@@ -83,7 +84,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Sun 12 Dec 2021 15:00:30 IST -->
+<!-- Added by: gil_diy, at: Mon 13 Dec 2021 00:47:44 IST -->
 
 <!--te-->
 
@@ -614,6 +615,14 @@ my_tensor.numel() | number of elements in a tensor
 torch.ones_like(my_tensor) | Create a new tensor that matches `my_tensor` attributes (shape and datatype) with all ones.
 torch.flatten(torch.arange(18).view(2,-1)) | Flattening a torch to 1 dimentional
 
+# Clipping tensors
+
+```pytorch
+a = torch.randn(4)
+print('a: ', a)
+b = torch.clamp(a, min=-0.5, max=0.5)
+print('b: ', b)
+```
 
 
 ## Converting tensors into numpy arrays
