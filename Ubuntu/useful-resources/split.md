@@ -2,8 +2,9 @@
    * [Split](#split)
       * [split into chunks of equal size](#split-into-chunks-of-equal-size)
       * [split into groups of the same number of lines](#split-into-groups-of-the-same-number-of-lines)
+      * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Sun 12 Dec 2021 23:57:58 IST -->
+<!-- Added by: gil_diy, at: Sun 12 Dec 2021 23:58:37 IST -->
 
 <!--te-->
 
@@ -29,3 +30,8 @@ split -l 500 myfile segment
 ```
 
 This will output six 500-line files: segmentaa, segmentab, segmentac, segmentad, segmentae, and segmentaf.
+
+
+## Reference
+
+[Link](https://kb.iu.edu/d/afar)
