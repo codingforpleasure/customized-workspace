@@ -83,7 +83,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Sun 12 Dec 2021 14:49:52 IST -->
+<!-- Added by: gil_diy, at: Sun 12 Dec 2021 14:50:39 IST -->
 
 <!--te-->
 
@@ -799,9 +799,9 @@ Transpose Convolution are upscaler, used for Encoder-Decoder architectures as "D
 
 What is it used for?
 
-* Super resolution -> Upscaling the input image to higher resolutions
+* Super resolution (Upscaling the input image to higher resolutions)
 
-* Semantic Segmentation -> Upscaling the input image to higher resolutions
+* Semantic Segmentation -> (From RGB image input to class based visualisation)
 
 
 ## Dataloader
