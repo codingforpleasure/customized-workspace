@@ -61,6 +61,7 @@
          * [Binary Cross Entropy (nn.BCELoss)](#binary-cross-entropy-nnbceloss)
          * [nn.BCEWithLogitsLoss](#nnbcewithlogitsloss)
          * [Negative Log-Likelihood Loss(nn.NLLLoss)](#negative-log-likelihood-lossnnnllloss)
+         * [Cross-Entropy Loss(nn.CrossEntropyLoss)](#cross-entropy-lossnncrossentropyloss)
          * [torch Loss functions for classification](#torch-loss-functions-for-classification)
          * [Negative log likelihood](#negative-log-likelihood)
       * [Optimizers](#optimizers)
@@ -91,7 +92,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Mon 13 Dec 2021 19:49:21 IST -->
+<!-- Added by: gil_diy, at: Mon 13 Dec 2021 19:50:20 IST -->
 
 <!--te-->
 
@@ -1125,7 +1126,12 @@ output.backward()
 print('input -: ', input)
 print('target -: ', target)
 print('output -: ', output)
+```
 
+### Cross-Entropy Loss(nn.CrossEntropyLoss)
+
+```python
+Cross-Entropy loss or Categorical Cross-Entropy (CCE) is an addition of the Negative Log-Likelihood and Log Softmax loss function, it is used for tasks where more than two classes have been used such as the classification of vehicle Car, motorcycle, truck, etc
 ```
 
 ### torch Loss functions for classification
