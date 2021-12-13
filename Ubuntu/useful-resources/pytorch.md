@@ -10,6 +10,7 @@
             * [Create a tensor with attributes from another tensor](#create-a-tensor-with-attributes-from-another-tensor)
             * [Create a tensor from numpy array](#create-a-tensor-from-numpy-array)
             * [Create a numpy array from tensor](#create-a-numpy-array-from-tensor)
+            * [Casting a tensor to another type](#casting-a-tensor-to-another-type)
          * [Tensor Operation types](#tensor-operation-types)
             * [Reshape operations](#reshape-operations)
                * [permute](#permute)
@@ -84,7 +85,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Mon 13 Dec 2021 10:02:25 IST -->
+<!-- Added by: gil_diy, at: Mon 13 Dec 2021 11:31:30 IST -->
 
 <!--te-->
 
@@ -174,6 +175,8 @@ Shared Data | Copy Data
 ```python
 my_torch_tensor.cpu().detach().numpy()
 ```
+
+#### Casting a tensor to another type
 
 
 ### Tensor Operation types
@@ -339,6 +342,8 @@ t = torch.tensor([
 t.sum(dim = 0) # Output: tensor([6.,6.,6.,6.])
 t.sum(dim = 1) # Output: tensor([4.,8.,12.])
 ```
+
+
 
 Another useful example:
 
