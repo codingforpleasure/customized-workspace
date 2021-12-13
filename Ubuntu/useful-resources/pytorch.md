@@ -92,7 +92,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Mon 13 Dec 2021 19:50:25 IST -->
+<!-- Added by: gil_diy, at: Mon 13 Dec 2021 19:50:43 IST -->
 
 <!--te-->
 
@@ -1130,8 +1130,11 @@ print('output -: ', output)
 
 ### Cross-Entropy Loss(nn.CrossEntropyLoss)
 
+Cross-Entropy loss or Categorical Cross-Entropy (CCE) is an addition of the Negative Log-Likelihood and Log Softmax loss function, 
+**it is used for tasks where more than two classes have been used** such as the classification of vehicle Car, motorcycle, truck, etc
+
 ```python
-Cross-Entropy loss or Categorical Cross-Entropy (CCE) is an addition of the Negative Log-Likelihood and Log Softmax loss function, it is used for tasks where more than two classes have been used such as the classification of vehicle Car, motorcycle, truck, etc
+
 ```
 
 ### torch Loss functions for classification
