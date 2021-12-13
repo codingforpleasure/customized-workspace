@@ -84,7 +84,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Mon 13 Dec 2021 00:49:04 IST -->
+<!-- Added by: gil_diy, at: Mon 13 Dec 2021 10:02:25 IST -->
 
 <!--te-->
 
@@ -720,6 +720,8 @@ print(fc(in_features))
 ## Custom Dataset
 
 ```python
+from torch.utils.data import Dataset
+
 class My_data_set(Dataset):
   def __init__(self, csv_file):
     self.data = pd.read_csv(csv_file)
