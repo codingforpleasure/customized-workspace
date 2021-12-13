@@ -85,7 +85,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Mon 13 Dec 2021 11:32:26 IST -->
+<!-- Added by: gil_diy, at: Mon 13 Dec 2021 11:35:30 IST -->
 
 <!--te-->
 
@@ -180,6 +180,15 @@ my_torch_tensor.cpu().detach().numpy()
 
 ```python
     t = torch.tensor([[1, 3, 2, 5],[-1, 3, 4, 5]])
+
+    print(t.mean(dim=0))
+    # You will get an Error:
+    # input dtype should be either floating point or complex dtypes
+
+    tensor_float = t.type(torch.float64)
+    print(tensor_float.mean(dim=0))
+
+
     
 
 ```
