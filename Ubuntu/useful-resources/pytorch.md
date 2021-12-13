@@ -56,6 +56,8 @@
       * [Batch normalization](#batch-normalization)
       * [Inspecting the weight and bias and layers](#inspecting-the-weight-and-bias-and-layers)
       * [Loss function](#loss-function)
+         * [Mean Absolute Error (nn.L1Loss)](#mean-absolute-error-nnl1loss)
+         * [torch Loss functions for classification](#torch-loss-functions-for-classification)
          * [Negative log likelihood](#negative-log-likelihood)
       * [Optimizers](#optimizers)
          * [Check default values of an optimizer](#check-default-values-of-an-optimizer)
@@ -85,7 +87,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Mon 13 Dec 2021 18:57:54 IST -->
+<!-- Added by: gil_diy, at: Mon 13 Dec 2021 19:40:46 IST -->
 
 <!--te-->
 
@@ -1046,7 +1048,20 @@ for param_tensor in model.state_dict().keys():
 * Defining the loss function A machine learning model, when being trained, may have some deviation between the predicted output and the actual output, and this difference is called the **error** of the model. 
 
 * The function that lets us calculate this error is called the **loss function**, or error function.
-This function provides a metric to evaluate all possible solutions and choose the most optimized model. The loss function has to be able to reduce all attributes of the model down to a single number so that an improvement in that loss function value is representative of a better model.
+This function provides a metric to evaluate all possible solutions and choose the most optimized model. 
+
+* The loss function has to be able to reduce all attributes of the model down to a single number so that an improvement in that loss function value is representative of a better model.
+
+### Mean Absolute Error (nn.L1Loss)
+
+*It is the simplest form of error metric. Mean Absolute Error(MAE) measures the numerical
+ distance between predicted and true value by subtracting and then dividing it by the total number of data points.
+ MAE is a linear score metric
+
+### torch Loss functions for classification
+
+
+[Reference](https://neptune.ai/blog/pytorch-loss-functions)
 
 ### Negative log likelihood
 
