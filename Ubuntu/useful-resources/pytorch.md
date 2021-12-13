@@ -60,6 +60,7 @@
          * [Mean Absolute Error (nn.L2Loss)](#mean-absolute-error-nnl2loss)
          * [Binary Cross Entropy (nn.BCELoss)](#binary-cross-entropy-nnbceloss)
          * [nn.BCEWithLogitsLoss](#nnbcewithlogitsloss)
+         * [Negative Log-Likelihood Loss(nn.NLLLoss)](#negative-log-likelihood-lossnnnllloss)
          * [torch Loss functions for classification](#torch-loss-functions-for-classification)
          * [Negative log likelihood](#negative-log-likelihood)
       * [Optimizers](#optimizers)
@@ -90,7 +91,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Mon 13 Dec 2021 19:48:20 IST -->
+<!-- Added by: gil_diy, at: Mon 13 Dec 2021 19:49:21 IST -->
 
 <!--te-->
 
@@ -1106,6 +1107,25 @@ output = torch.full([10, 64], 1.5)  # A prediction (logit)
 pos_weight = torch.ones([64])  # All weights are equal to 1
 criterion = torch.nn.BCEWithLogitsLoss(pos_weight=pos_weight)
 criterion(output, target)  # -log(sigmoid(1.5))
+```
+
+### Negative Log-Likelihood Loss(nn.NLLLoss)
+
+The negative log likelihood loss is mostly used in **classification problems**, 
+here Likelihood refers to the chances of some calculated parameters producing some known data.
+
+```python
+input = torch.randn(3, 5, requires_grad=True)
+# every element in target should have value(0 <= value < C)
+target = torch.tensor([1, 0, 4])
+m = nn.LogSoftmax(dim=1)
+nll_loss = nn.NLLLoss()
+output = nll_loss(m(input), target)
+output.backward()
+print('input -: ', input)
+print('target -: ', target)
+print('output -: ', output)
+
 ```
 
 ### torch Loss functions for classification
