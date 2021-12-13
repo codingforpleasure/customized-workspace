@@ -88,7 +88,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Mon 13 Dec 2021 19:42:53 IST -->
+<!-- Added by: gil_diy, at: Mon 13 Dec 2021 19:43:54 IST -->
 
 <!--te-->
 
@@ -1063,6 +1063,8 @@ This function provides a metric to evaluate all possible solutions and choose th
 
 * Like, Mean absolute error(MAE), Mean squared error(MSE) sums the squared paired differences
   between ground truth and prediction divided by the number of such pairs.
+
+* MSE loss function is generally used when larger errors are well-note
 
 ### torch Loss functions for classification
 
