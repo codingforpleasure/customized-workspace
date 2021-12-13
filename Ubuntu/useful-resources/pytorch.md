@@ -57,6 +57,7 @@
       * [Inspecting the weight and bias and layers](#inspecting-the-weight-and-bias-and-layers)
       * [Loss function](#loss-function)
          * [Mean Absolute Error (nn.L1Loss)](#mean-absolute-error-nnl1loss)
+         * [Mean Absolute Error (nn.L2Loss)](#mean-absolute-error-nnl2loss)
          * [torch Loss functions for classification](#torch-loss-functions-for-classification)
          * [Negative log likelihood](#negative-log-likelihood)
       * [Optimizers](#optimizers)
@@ -87,7 +88,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Mon 13 Dec 2021 19:41:14 IST -->
+<!-- Added by: gil_diy, at: Mon 13 Dec 2021 19:42:35 IST -->
 
 <!--te-->
 
@@ -1054,9 +1055,12 @@ This function provides a metric to evaluate all possible solutions and choose th
 
 ### Mean Absolute Error (nn.L1Loss)
 
-*It is the simplest form of error metric. Mean Absolute Error(MAE) measures the numerical
- distance between predicted and true value by subtracting and then dividing it by the total number of data points.
- MAE is a linear score metric
+* It is the simplest form of error metric. Mean Absolute Error(MAE) measures the numerical distance
+  between predicted and true value by subtracting and then dividing it by the total number of data points.
+  MAE is a linear score metric
+
+### Mean Absolute Error (nn.L2Loss)
+
 
 ### torch Loss functions for classification
 
