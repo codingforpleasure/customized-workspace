@@ -85,7 +85,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Mon 13 Dec 2021 11:31:33 IST -->
+<!-- Added by: gil_diy, at: Mon 13 Dec 2021 11:31:39 IST -->
 
 <!--te-->
 
@@ -178,6 +178,9 @@ my_torch_tensor.cpu().detach().numpy()
 
 #### Casting a tensor to another type
 
+```python
+
+```
 
 ### Tensor Operation types
 #### Reshape operations
