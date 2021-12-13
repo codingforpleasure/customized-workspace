@@ -85,7 +85,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Mon 13 Dec 2021 14:28:28 IST -->
+<!-- Added by: gil_diy, at: Mon 13 Dec 2021 18:57:49 IST -->
 
 <!--te-->
 
@@ -1042,7 +1042,10 @@ for param_tensor in model.state_dict().keys():
 ```
 
 ## Loss function
-Defining the loss function A machine learning model, when being trained, may have some deviation between the predicted output and the actual output, and this difference is called the **error** of the model. The function that lets us calculate this error is called the **loss function**, or error function.
+
+* Defining the loss function A machine learning model, when being trained, may have some deviation between the predicted output and the actual output, and this difference is called the **error** of the model. 
+
+* The function that lets us calculate this error is called the **loss function**, or error function.
 This function provides a metric to evaluate all possible solutions and choose the most optimized model. The loss function has to be able to reduce all attributes of the model down to a single number so that an improvement in that loss function value is representative of a better model.
 
 ### Negative log likelihood
