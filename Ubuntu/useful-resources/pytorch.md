@@ -58,6 +58,7 @@
       * [Loss function](#loss-function)
          * [Mean Absolute Error (nn.L1Loss)](#mean-absolute-error-nnl1loss)
          * [Mean Absolute Error (nn.L2Loss)](#mean-absolute-error-nnl2loss)
+         * [Binary Cross Entropy(BCELoss)](#binary-cross-entropybceloss)
          * [torch Loss functions for classification](#torch-loss-functions-for-classification)
          * [Negative log likelihood](#negative-log-likelihood)
       * [Optimizers](#optimizers)
@@ -88,7 +89,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Mon 13 Dec 2021 19:44:12 IST -->
+<!-- Added by: gil_diy, at: Mon 13 Dec 2021 19:45:34 IST -->
 
 <!--te-->
 
@@ -1074,6 +1075,18 @@ output.backward()
 print('input -: ', input)
 print('target -: ', target)
 print('output -: ', output)
+```
+
+### Binary Cross Entropy(BCELoss) 
+
+```python
+bce_loss = torch.nn.BCELoss()
+sigmoid = torch.nn.Sigmoid() # Ensuring inputs are between 0 and 1
+
+input = torch.tensor(y_pred)
+target = torch.tensor(y_true)
+output = bce_loss(input, target)
+output
 ```
 
 ### torch Loss functions for classification
