@@ -92,7 +92,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Mon 13 Dec 2021 19:50:43 IST -->
+<!-- Added by: gil_diy, at: Mon 13 Dec 2021 19:51:48 IST -->
 
 <!--te-->
 
@@ -1057,6 +1057,8 @@ This function provides a metric to evaluate all possible solutions and choose th
 
 * The loss function has to be able to reduce all attributes of the model down to a single number so that an improvement in that loss function value is representative of a better model.
 
+[Reference](https://analyticsindiamag.com/all-pytorch-loss-function/)
+
 ### Mean Absolute Error (nn.L1Loss)
 
 * It is the simplest form of error metric. Mean Absolute Error(MAE) measures the numerical distance
@@ -1134,7 +1136,14 @@ Cross-Entropy loss or Categorical Cross-Entropy (CCE) is an addition of the Nega
 **it is used for tasks where more than two classes have been used** such as the classification of vehicle Car, motorcycle, truck, etc
 
 ```python
-
+input = torch.randn(3, 5, requires_grad=True)
+target = torch.empty(3, dtype=torch.long).random_(5)
+cross_entropy_loss = nn.CrossEntropyLoss()
+output = cross_entropy_loss(input, target)
+output.backward()
+print('input: ', input)
+print('target: ', target)
+print('output: ', output)
 ```
 
 ### torch Loss functions for classification
