@@ -58,7 +58,7 @@
       * [Loss function](#loss-function)
          * [Mean Absolute Error (nn.L1Loss)](#mean-absolute-error-nnl1loss)
          * [Mean Absolute Error (nn.L2Loss)](#mean-absolute-error-nnl2loss)
-         * [Binary Cross Entropy(BCELoss)](#binary-cross-entropybceloss)
+         * [Binary Cross Entropy (BCELoss)](#binary-cross-entropy-bceloss)
          * [torch Loss functions for classification](#torch-loss-functions-for-classification)
          * [Negative log likelihood](#negative-log-likelihood)
       * [Optimizers](#optimizers)
@@ -89,7 +89,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Mon 13 Dec 2021 19:46:58 IST -->
+<!-- Added by: gil_diy, at: Mon 13 Dec 2021 19:47:05 IST -->
 
 <!--te-->
 
