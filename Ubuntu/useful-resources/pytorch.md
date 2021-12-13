@@ -85,7 +85,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Mon 13 Dec 2021 11:42:49 IST -->
+<!-- Added by: gil_diy, at: Mon 13 Dec 2021 14:28:23 IST -->
 
 <!--te-->
 
@@ -187,10 +187,6 @@ my_torch_tensor.cpu().detach().numpy()
 
     tensor_float = my_tensor.type(torch.float64)
     print(tensor_float.mean(dim=0))
-
-
-    
-
 ```
 
 ### Tensor Operation types
@@ -362,6 +358,8 @@ t.sum(dim = 1) # Output: tensor([4.,8.,12.])
 Another useful example:
 
 ```python
+from tqdm import tqdm
+
 def get_mean_std(loader):
     # var[X] = E[X**2] - E[X]**2
     channels_sum, channels_sqrd_sum, num_batches = 0, 0, 0
