@@ -89,7 +89,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Mon 13 Dec 2021 19:45:34 IST -->
+<!-- Added by: gil_diy, at: Mon 13 Dec 2021 19:46:58 IST -->
 
 <!--te-->
 
@@ -1077,7 +1077,12 @@ print('target -: ', target)
 print('output -: ', output)
 ```
 
-### Binary Cross Entropy(BCELoss) 
+### Binary Cross Entropy (BCELoss) 
+
+* This loss metric creates a criterion that measures the BCE between the target and the output.
+
+* Also with binary cross-entropy loss function, 
+we use the Sigmoid activation function which works as a squashing function and hence limits the output to a range between 0 and 1.
 
 ```python
 bce_loss = torch.nn.BCELoss()
