@@ -58,7 +58,8 @@
       * [Loss function](#loss-function)
          * [Mean Absolute Error (nn.L1Loss)](#mean-absolute-error-nnl1loss)
          * [Mean Absolute Error (nn.L2Loss)](#mean-absolute-error-nnl2loss)
-         * [Binary Cross Entropy (BCELoss)](#binary-cross-entropy-bceloss)
+         * [Binary Cross Entropy (nn.BCELoss)](#binary-cross-entropy-nnbceloss)
+         * [nn.BCEWithLogitsLoss](#nnbcewithlogitsloss)
          * [torch Loss functions for classification](#torch-loss-functions-for-classification)
          * [Negative log likelihood](#negative-log-likelihood)
       * [Optimizers](#optimizers)
@@ -89,7 +90,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Mon 13 Dec 2021 19:47:05 IST -->
+<!-- Added by: gil_diy, at: Mon 13 Dec 2021 19:48:16 IST -->
 
 <!--te-->
 
@@ -1077,7 +1078,7 @@ print('target -: ', target)
 print('output -: ', output)
 ```
 
-### Binary Cross Entropy (BCELoss) 
+### Binary Cross Entropy (nn.BCELoss) 
 
 * This loss metric creates a criterion that measures the BCE between the target and the output.
 
@@ -1092,6 +1093,19 @@ input = torch.tensor(y_pred)
 target = torch.tensor(y_true)
 output = bce_loss(input, target)
 output
+```
+
+### nn.BCEWithLogitsLoss
+
+It adds a Sigmoid layer and the BCELoss in one single class. This provides numerical stability for log-sum-exp.
+It is more numerically stable  than using a plain Sigmoid followed by a BCELoss.
+
+```python
+target = torch.ones([10, 64], dtype=torch.float32)  # 64 classes, batch size = 10
+output = torch.full([10, 64], 1.5)  # A prediction (logit)
+pos_weight = torch.ones([64])  # All weights are equal to 1
+criterion = torch.nn.BCEWithLogitsLoss(pos_weight=pos_weight)
+criterion(output, target)  # -log(sigmoid(1.5))
 ```
 
 ### torch Loss functions for classification
