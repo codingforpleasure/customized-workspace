@@ -91,7 +91,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Mon 13 Dec 2021 19:53:28 IST -->
+<!-- Added by: gil_diy, at: Tue 14 Dec 2021 13:03:32 IST -->
 
 <!--te-->
 
@@ -1089,6 +1089,8 @@ print('output -: ', output)
 
 * Also with binary cross-entropy loss function, 
 we use the Sigmoid activation function which works as a squashing function and hence limits the output to a range between 0 and 1.
+
+[Explanation here](https://youtu.be/gIx974WtVb4)
 
 ```python
 bce_loss = torch.nn.BCELoss()
