@@ -3,6 +3,7 @@
       * [Why use numpy?](#why-use-numpy)
          * [Data representation](#data-representation)
             * [Key attributes](#key-attributes)
+         * [Printing nicely](#printing-nicely)
          * [Creating](#creating)
             * [Creating a 3d array](#creating-a-3d-array)
             * [Import data from csv](#import-data-from-csv)
@@ -63,7 +64,7 @@
       * [Exporting txt files easily with specific format](#exporting-txt-files-easily-with-specific-format)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Thu 09 Dec 2021 15:24:15 IST -->
+<!-- Added by: gil_diy, at: Tue 14 Dec 2021 21:54:53 IST -->
 
 <!--te-->
 
@@ -118,6 +119,13 @@ Video (5D tensors)| (samples, frames, height, width, channels)
 2. **Shape** - A tuple of integers that describes how many dimensions the tensor **has along each axis**
 3. **Data type (usually called **dtype**)** - This is the type of the data contianed in the tensor,
 float32, uint8, float64 etc..
+
+
+### Printing nicely 
+
+```python
+np.set_printoptions(precision=4)
+```
 
 ### Creating
 
@@ -180,6 +188,7 @@ arr = np.empty(shape=(2, 3, 3))  # Initilaze a 3d array (with two layers)
 arr[0,:,:] = single_matrix # Adding to first layer
 arr[1,:,:] = single_matrix # Adding to second layer
 ```
+
 
 
 
