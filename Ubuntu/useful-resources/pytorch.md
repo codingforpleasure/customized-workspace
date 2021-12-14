@@ -5,6 +5,7 @@
       * [The training process (Road map)](#the-training-process-road-map)
       * [Install](#install)
       * [Checking versions](#checking-versions)
+      * [Set printing tensors nicely](#set-printing-tensors-nicely)
       * [Basics - Tensors](#basics---tensors)
          * [Create tensors](#create-tensors)
             * [Create a tensor with attributes from another tensor](#create-a-tensor-with-attributes-from-another-tensor)
@@ -91,7 +92,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Tue 14 Dec 2021 13:29:28 IST -->
+<!-- Added by: gil_diy, at: Tue 14 Dec 2021 21:47:33 IST -->
 
 <!--te-->
 
@@ -139,6 +140,12 @@ print("torchvision version = ",torchvision.__version__)
 print("torch.version.cuda = ", torch.version.cuda)
 ```
 
+## Set printing tensors nicely
+
+```python
+torch.set_printoptions(linewidth = 120)
+torch.set_printoptions(precision=10) # print floating point nicely
+```
 ## Basics - Tensors
 
 ### Create tensors
