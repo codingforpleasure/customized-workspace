@@ -91,7 +91,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Tue 14 Dec 2021 13:27:12 IST -->
+<!-- Added by: gil_diy, at: Tue 14 Dec 2021 13:27:38 IST -->
 
 <!--te-->
 
@@ -1093,7 +1093,7 @@ we use the Sigmoid activation function which works as a squashing function and h
 [Explanation here](https://youtu.be/gIx974WtVb4)
 
 <p align="center"> <!-- style="width:400px;" -->
-  <img src="images/3_Binary_Cross_Entropy_aka_Log_Loss.png" title="tool tip here">
+  <img src="images/pytorch/3_Binary_Cross_Entropy_aka_Log_Loss.png" title="tool tip here">
 </p>
 
 ```python
