@@ -91,7 +91,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Tue 14 Dec 2021 13:29:14 IST -->
+<!-- Added by: gil_diy, at: Tue 14 Dec 2021 13:29:28 IST -->
 
 <!--te-->
 
@@ -1092,11 +1092,13 @@ we use the Sigmoid activation function which works as a squashing function and h
 
 [Explanation here](https://youtu.be/gIx974WtVb4)
 
+**Attention**: `N` is the number of samples.
+
 <p align="center"> <!-- style="width:400px;" -->
   <img src="images/pytorch/Binary_Cross_Entropy_aka_Log_Loss.png" title="tool tip here">
 </p>
 
-**Attention**: `N` is the number of samples.
+
 
 ```python
 bce_loss = torch.nn.BCELoss()
