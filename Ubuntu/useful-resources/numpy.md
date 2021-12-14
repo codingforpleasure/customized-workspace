@@ -64,7 +64,7 @@
       * [Exporting txt files easily with specific format](#exporting-txt-files-easily-with-specific-format)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Tue 14 Dec 2021 21:58:03 IST -->
+<!-- Added by: gil_diy, at: Tue 14 Dec 2021 21:58:06 IST -->
 
 <!--te-->
 
@@ -127,7 +127,6 @@ float32, uint8, float64 etc..
 np.set_printoptions(precision=4)
 # prevent numpy exponential notation on print, default False:
 np.set_printoptions(suppress=True) 
-
 ```
 
 ### Creating
