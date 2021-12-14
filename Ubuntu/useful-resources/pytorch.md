@@ -91,7 +91,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Tue 14 Dec 2021 13:03:32 IST -->
+<!-- Added by: gil_diy, at: Tue 14 Dec 2021 13:27:07 IST -->
 
 <!--te-->
 
@@ -1091,6 +1091,10 @@ print('output -: ', output)
 we use the Sigmoid activation function which works as a squashing function and hence limits the output to a range between 0 and 1.
 
 [Explanation here](https://youtu.be/gIx974WtVb4)
+
+<p align="center"> <!-- style="width:400px;" -->
+  <img src="images/3_Binary_Cross_Entropy_aka_Log_Loss.png" title="tool tip here">
+</p>
 
 ```python
 bce_loss = torch.nn.BCELoss()
