@@ -91,7 +91,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Wed 15 Dec 2021 09:01:38 IST -->
+<!-- Added by: gil_diy, at: Wed 15 Dec 2021 09:24:02 IST -->
 
 <!--te-->
 
@@ -1120,6 +1120,10 @@ output
 
 It adds a Sigmoid layer and the BCELoss in one single class. This provides numerical stability for log-sum-exp.
 It is more numerically stable  than using a plain Sigmoid followed by a BCELoss.
+
+<p align="center"> <!-- style="width:400px;" -->
+  <img src="images/pytorch/Binary_Cross_Entropy_With_Logits_Loss.png" title="tool tip here">
+</p>
 
 ```python
 target = torch.ones([10, 64], dtype=torch.float32)  # 64 classes, batch size = 10
