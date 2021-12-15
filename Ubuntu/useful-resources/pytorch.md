@@ -91,7 +91,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Wed 15 Dec 2021 09:24:02 IST -->
+<!-- Added by: gil_diy, at: Wed 15 Dec 2021 10:01:29 IST -->
 
 <!--te-->
 
@@ -1172,6 +1172,11 @@ In PyTorch, the loss function is called a **criterion**, and so we named our los
 
 Cross-Entropy loss or Categorical Cross-Entropy (CCE) is an addition of the Negative Log-Likelihood and Log Softmax loss function, 
 **it is used for tasks where more than two classes have been used** such as the classification of vehicle Car, motorcycle, truck, etc
+
+
+<p align="center"> <!-- style="width:400px;" -->
+  <img src="images/pytorch/Cross_Entropy_loss.png" title="tool tip here">
+</p>
 
 ```python
 input = torch.randn(3, 5, requires_grad=True)
