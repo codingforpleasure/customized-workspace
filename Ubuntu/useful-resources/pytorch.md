@@ -92,7 +92,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Tue 14 Dec 2021 21:47:33 IST -->
+<!-- Added by: gil_diy, at: Wed 15 Dec 2021 08:59:00 IST -->
 
 <!--te-->
 
@@ -1147,6 +1147,9 @@ print('input -: ', input)
 print('target -: ', target)
 print('output -: ', output)
 ```
+<p align="center"> <!-- style="width:400px;" -->
+  <img src="images/pytorch/Negative_Log_Likelihood_Loss.jpeg" title="tool tip here">
+</p>
 
 ### Cross-Entropy Loss(nn.CrossEntropyLoss)
 
