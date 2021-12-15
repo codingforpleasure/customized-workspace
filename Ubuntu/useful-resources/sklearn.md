@@ -1,5 +1,6 @@
 <!--ts-->
    * [scikit-learn](#scikit-learn)
+      * [scikit-learn's functions](#scikit-learns-functions)
       * [Preprocessing data](#preprocessing-data)
          * [Scaler (Noramlization or Standardization)](#scaler-noramlization-or-standardization)
          * [Categorical encoding](#categorical-encoding)
@@ -18,11 +19,15 @@
          * [LeaveOneOut](#leaveoneout)
          * [Pipeline](#pipeline)
 
-<!-- Added by: gil_diy, at: Wed 01 Dec 2021 15:40:46 IST -->
+<!-- Added by: gil_diy, at: Wed 15 Dec 2021 11:34:13 IST -->
 
 <!--te-->
 
 # scikit-learn
+
+## scikit-learn's functions
+
+[Link](https://scikit-learn.org/stable/modules/classes.html)
 
 ## Preprocessing data
 
