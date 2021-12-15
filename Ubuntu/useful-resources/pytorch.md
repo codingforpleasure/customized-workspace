@@ -63,7 +63,6 @@
          * [nn.BCEWithLogitsLoss](#nnbcewithlogitsloss)
          * [Negative Log-Likelihood Loss(nn.NLLLoss)](#negative-log-likelihood-lossnnnllloss)
          * [Cross-Entropy Loss(nn.CrossEntropyLoss)](#cross-entropy-lossnncrossentropyloss)
-         * [Negative log likelihood](#negative-log-likelihood)
       * [Optimizers](#optimizers)
          * [Check default values of an optimizer](#check-default-values-of-an-optimizer)
          * [The type of optimizers](#the-type-of-optimizers)
@@ -92,7 +91,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Wed 15 Dec 2021 08:59:04 IST -->
+<!-- Added by: gil_diy, at: Wed 15 Dec 2021 09:01:38 IST -->
 
 <!--te-->
 
@@ -1151,6 +1150,20 @@ print('output -: ', output)
   <img src="images/pytorch/Negative_Log_Likelihood_Loss.jpeg" title="tool tip here">
 </p>
 
+we therefore use negative log likelihood when dealing with log softmax, as softmax is not compatible. It is useful in classification between n number of classes. The log would ensure
+that we are not dealing with very small values between 0 and 1, and negative values would ensure that a logarithm of probability that is less than 1 is nonzero. Our goal would be to reduce this negative log loss error function. In PyTorch, the loss function is called a
+criterion, and so we named our loss function criterion.
+
+<p align="center"> <!-- style="width:400px;" -->
+<img src="images/neural-networks/neg_log.png" title="tool tip here">
+</p>
+
+The negative log-likelihood becomes unhappy at smaller values, where it can reach infinite unhappiness (that’s too sad), and becomes less unhappy at larger values. Because we are summing the loss function to all the correct classes, what’s actually happening is that whenever the network assigns high confidence at the correct class, the unhappiness is low, but when the network assigns low confidence at the correct class, the unhappiness is high.
+
+In PyTorch, the loss function is called a **criterion**, and so we named our loss function criterion.
+
+[Reference](https://ljvmiranda921.github.io/notebook/2017/08/13/softmax-and-the-negative-log-likelihood/)
+
 ### Cross-Entropy Loss(nn.CrossEntropyLoss)
 
 Cross-Entropy loss or Categorical Cross-Entropy (CCE) is an addition of the Negative Log-Likelihood and Log Softmax loss function, 
@@ -1168,21 +1181,6 @@ print('output: ', output)
 ```
 
 
-### Negative log likelihood
-
-we therefore use negative log likelihood when dealing with log softmax, as softmax is not compatible. It is useful in classification between n number of classes. The log would ensure
-that we are not dealing with very small values between 0 and 1, and negative values would ensure that a logarithm of probability that is less than 1 is nonzero. Our goal would be to reduce this negative log loss error function. In PyTorch, the loss function is called a
-criterion, and so we named our loss function criterion.
-
-<p align="center"> <!-- style="width:400px;" -->
-<img src="images/neural-networks/neg_log.png" title="tool tip here">
-</p>
-
-The negative log-likelihood becomes unhappy at smaller values, where it can reach infinite unhappiness (that’s too sad), and becomes less unhappy at larger values. Because we are summing the loss function to all the correct classes, what’s actually happening is that whenever the network assigns high confidence at the correct class, the unhappiness is low, but when the network assigns low confidence at the correct class, the unhappiness is high.
-
-In PyTorch, the loss function is called a **criterion**, and so we named our loss function criterion.
-
-[Reference](https://ljvmiranda921.github.io/notebook/2017/08/13/softmax-and-the-negative-log-likelihood/)
 
 
 ## Optimizers
