@@ -92,7 +92,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Thu 16 Dec 2021 16:20:54 IST -->
+<!-- Added by: gil_diy, at: Thu 16 Dec 2021 16:45:24 IST -->
 
 <!--te-->
 
@@ -165,6 +165,16 @@ tensor2 = torch.ones_like(tensor1)
 print("tensor2 type is: ", tensor2.dtype)
 print("tensor2 shape is: ", tensor2.shape)
 ```
+
+**Pay attention:** Difference between **torch.Tensor** vs **torch.tensor**
+```
+torch.Tensor([1,2,3]).dtype => torch.float32
+torch.tensor([1, 2, 3]).dtype => torch.int64
+torch.Tensor([True, False]).dtype => torch.float32
+torch.tensor([True, False]).dtype => torch.uint8
+```
+
+To avoid all the mess just use torch.tensor([1,3,4], dtype=)
 
 #### Create a tensor from numpy array
 
