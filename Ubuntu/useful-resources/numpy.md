@@ -65,7 +65,7 @@
       * [Exporting txt files easily with specific format](#exporting-txt-files-easily-with-specific-format)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Thu 16 Dec 2021 12:31:31 IST -->
+<!-- Added by: gil_diy, at: Thu 16 Dec 2021 12:31:39 IST -->
 
 <!--te-->
 
@@ -394,7 +394,9 @@ Evaluate whether all elements are true | np.all(vec > -1) | True
 
 ### Aggregation function advance
 
+```python
 
+```
 
 ### Aggregation functions example on matrix:
 
