@@ -67,7 +67,7 @@
       * [Exporting txt files easily with specific format](#exporting-txt-files-easily-with-specific-format)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Thu 16 Dec 2021 13:09:50 IST -->
+<!-- Added by: gil_diy, at: Thu 16 Dec 2021 13:09:54 IST -->
 
 <!--te-->
 
@@ -422,6 +422,8 @@ def softmax(x):
 	exp_mat = np.exp(x)
 
 	# if we sum without keepdims we will get shape of: (3,) and NOT (3,1)
+	# 
+	
 	sum_exp_each_row = np.sum(exp_mat, axis=1, keepdims=True)
     res = exp_mat / sum_exp_each_row
     return res
