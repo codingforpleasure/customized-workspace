@@ -19,6 +19,7 @@
          * [Counts the number of non-zero values in an array given a constraint](#counts-the-number-of-non-zero-values-in-an-array-given-a-constraint)
          * [Transpose a matrix/array](#transpose-a-matrixarray)
          * [Aggregation functions](#aggregation-functions)
+         * [Aggregation function advance](#aggregation-function-advance)
          * [Aggregation functions example on matrix:](#aggregation-functions-example-on-matrix)
          * [Concatenating columns](#concatenating-columns)
          * [Unique and Other Set Logic](#unique-and-other-set-logic)
@@ -64,7 +65,7 @@
       * [Exporting txt files easily with specific format](#exporting-txt-files-easily-with-specific-format)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Tue 14 Dec 2021 21:58:06 IST -->
+<!-- Added by: gil_diy, at: Thu 16 Dec 2021 12:31:31 IST -->
 
 <!--te-->
 
@@ -390,6 +391,10 @@ Find index of maximum value | np.argmax(vec) | 9
 Compute median value | np.median(vec) | 5
 Evaluate whether any elements are true | np.any(vec > 5) True
 Evaluate whether all elements are true | np.all(vec > -1) | True
+
+### Aggregation function advance
+
+
 
 ### Aggregation functions example on matrix:
 
