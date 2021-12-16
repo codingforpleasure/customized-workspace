@@ -14,6 +14,7 @@
             * [Casting a tensor to another type](#casting-a-tensor-to-another-type)
          * [Tensor Operation types](#tensor-operation-types)
             * [Reshape operations](#reshape-operations)
+               * [squeeze](#squeeze)
                * [permute](#permute)
                * [flatten](#flatten)
                * [unsqueeze](#unsqueeze)
@@ -91,7 +92,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Thu 16 Dec 2021 16:14:56 IST -->
+<!-- Added by: gil_diy, at: Thu 16 Dec 2021 16:20:51 IST -->
 
 <!--te-->
 
@@ -191,20 +192,19 @@ my_torch_tensor.cpu().detach().numpy()
 #### Casting a tensor to another type
 
 ```python
-    my_tensor = torch.tensor([[1, 3, 2, 5],[-1, 3, 4, 5]])
+my_tensor = torch.tensor([[1, 3, 2, 5],[-1, 3, 4, 5]])
 
-    print(t.mean(dim=0))
-    # You will get an ERROR
-    # "input dtype should be either floating point or complex dtypes"
+print(t.mean(dim=0))
+# You will get an ERROR
+# "input dtype should be either floating point or complex dtypes"
 
-    tensor_float = my_tensor.type(torch.float64)
-    print(tensor_float.mean(dim=0))
+tensor_float = my_tensor.type(torch.float64)
+print(tensor_float.mean(dim=0))
 ```
 
 ### Tensor Operation types
 #### Reshape operations
 
-```python
 
 ##### squeeze
 
@@ -228,6 +228,10 @@ def my_flatten(t):
 ```
 
 ##### permute
+
+Arrange the axis in different order,
+it is similar to numpy function:
+`np.transpose(grid, axes = (1, 2, 0))` 
 
 ```python
 x = torch.tensor([[1,2,3],[4,5,6]])
