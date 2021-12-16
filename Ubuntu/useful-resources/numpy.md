@@ -20,6 +20,8 @@
          * [Transpose a matrix/array](#transpose-a-matrixarray)
          * [Aggregation functions](#aggregation-functions)
          * [Aggregation function advance](#aggregation-function-advance)
+            * [Axis](#axis)
+            * [keepdims](#keepdims)
          * [Aggregation functions example on matrix:](#aggregation-functions-example-on-matrix)
          * [Concatenating columns](#concatenating-columns)
          * [Unique and Other Set Logic](#unique-and-other-set-logic)
@@ -65,7 +67,7 @@
       * [Exporting txt files easily with specific format](#exporting-txt-files-easily-with-specific-format)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Thu 16 Dec 2021 12:57:01 IST -->
+<!-- Added by: gil_diy, at: Thu 16 Dec 2021 12:58:57 IST -->
 
 <!--te-->
 
@@ -394,6 +396,25 @@ Evaluate whether all elements are true | np.all(vec > -1) | True
 
 ### Aggregation function advance
 
+#### Axis
+A very important property in all those aggregation functions is: `axis`
+
+```python
+vec = np.array([[2,3,5,-6]])
+
+max_elem = np.max(x) # Will give: 5
+
+mat = np.array([[2,3],
+	            [5,9],
+	            [11,-6]])
+
+max_each_row = np.max(mat,axis=1) # Will give: [3 9 11]
+max_each_col = np.max(mat,axis=0) # Will give: [11 9]
+
+```
+
+#### keepdims
+
 A very important property in all those aggregation functions is: `keepdims`
 
 ```python
@@ -405,16 +426,12 @@ mat = np.array([[2,3],
 	            [5,9],
 	            [11,-6]])
 
-# Now let's find the max number of each row (therefore axis = 1)
 max_each_row = np.max(mat,axis=1) # Will give: [3 9 11]
 max_each_col = np.max(mat,axis=0) # Will give: [11 9]
 
-vec_exp = np.exp(vec) # Will give: [e^2 , e^3 , e^5 , e^(-6)]
-
-
-# BUT!!!
-mat_exp = np.exp(vec , axis = 1) 
 ```
+
+
 
 ### Aggregation functions example on matrix:
 
