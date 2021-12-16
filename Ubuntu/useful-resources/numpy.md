@@ -65,7 +65,7 @@
       * [Exporting txt files easily with specific format](#exporting-txt-files-easily-with-specific-format)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Thu 16 Dec 2021 12:43:00 IST -->
+<!-- Added by: gil_diy, at: Thu 16 Dec 2021 12:43:33 IST -->
 
 <!--te-->
 
@@ -405,10 +405,10 @@ mat = np.array([[2,3],
 	            [5,9],
 	            [11,-6]])
 
-# Now let's find the max number of each row
+# Now let's find the max number of each row (rehrefore axis = 1)
 max = np.max(mat,axis=1) # Will give: [3 9 11]
 
-
+np.exp()
 
 ```
 
