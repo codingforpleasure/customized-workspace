@@ -67,7 +67,7 @@
       * [Exporting txt files easily with specific format](#exporting-txt-files-easily-with-specific-format)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Thu 16 Dec 2021 13:42:06 IST -->
+<!-- Added by: gil_diy, at: Thu 16 Dec 2021 13:42:45 IST -->
 
 <!--te-->
 
@@ -418,7 +418,7 @@ max_each_col = np.max(mat,axis=0) # Will give: [11 9]
 A very important property in all those aggregation functions is: `keepdims`.
 let's implement the `softmax` function:
 
-<p align="center"> <!-- style="width:400px;" -->
+<p align="center"  style="width:300px;"> 
   <img src="images/numpy/softmax.png" title="Softmax function">
 </p>
 
