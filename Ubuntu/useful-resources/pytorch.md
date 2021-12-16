@@ -91,7 +91,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Thu 16 Dec 2021 13:42:12 IST -->
+<!-- Added by: gil_diy, at: Thu 16 Dec 2021 16:14:56 IST -->
 
 <!--te-->
 
@@ -1331,6 +1331,8 @@ Torchvision is compiled from 4 parts:
 ### Display images as grid
 
 ```python
+batch = next(iter(data_loader))
+images, labels = batch
 num_images_per_row = 5
 grid = torchvision.utils.make_grid(images, nrow=num_images_per_row, padding=2)
 plt.figure(figsize=(10, 3))
