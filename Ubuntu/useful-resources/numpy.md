@@ -67,7 +67,7 @@
       * [Exporting txt files easily with specific format](#exporting-txt-files-easily-with-specific-format)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Thu 16 Dec 2021 13:21:33 IST -->
+<!-- Added by: gil_diy, at: Thu 16 Dec 2021 13:22:05 IST -->
 
 <!--te-->
 
@@ -423,6 +423,7 @@ def softmax(x):
 
 	sum_exp_each_row = np.sum(exp_mat, axis=1, keepdims=True)
     res = exp_mat / sum_exp_each_row
+    
     return res
 
 if __name__ == '__main__':
