@@ -91,7 +91,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Wed 15 Dec 2021 10:01:29 IST -->
+<!-- Added by: gil_diy, at: Thu 16 Dec 2021 13:42:12 IST -->
 
 <!--te-->
 
@@ -1166,7 +1166,7 @@ The negative log-likelihood becomes unhappy at smaller values, where it can reac
 
 In PyTorch, the loss function is called a **criterion**, and so we named our loss function criterion.
 
-[Reference](https://ljvmiranda921.github.io/notebook/2017/08/13/softmax-and-the-negative-log-likelihood/)
+[Nice Reference](https://ljvmiranda921.github.io/notebook/2017/08/13/softmax-and-the-negative-log-likelihood/)
 
 ### Cross-Entropy Loss(nn.CrossEntropyLoss)
 
