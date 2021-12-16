@@ -65,7 +65,7 @@
       * [Exporting txt files easily with specific format](#exporting-txt-files-easily-with-specific-format)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Thu 16 Dec 2021 12:37:31 IST -->
+<!-- Added by: gil_diy, at: Thu 16 Dec 2021 12:37:45 IST -->
 
 <!--te-->
 
@@ -400,7 +400,7 @@ A very important property in all those aggregation functions is: `keepdims`
 
 vec = np.array([[2,3,5,-6]])
 
-max = np.max(x)
+max_elem = np.max(x) # Will give 5
 
 mat = np.array([[2,3],
 	            [5,9],
