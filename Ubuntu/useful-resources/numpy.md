@@ -65,7 +65,7 @@
       * [Exporting txt files easily with specific format](#exporting-txt-files-easily-with-specific-format)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Thu 16 Dec 2021 12:44:41 IST -->
+<!-- Added by: gil_diy, at: Thu 16 Dec 2021 12:45:55 IST -->
 
 <!--te-->
 
@@ -410,6 +410,9 @@ max = np.max(mat,axis=1) # Will give: [3 9 11]
 
 vec_exp = np.exp(vec) # Will give: [e^2 , e^3 , e^5 , e^(-6)]
 
+# BUT!!!
+
+mat_exp = np.exp(vec)
 ```
 
 ### Aggregation functions example on matrix:
