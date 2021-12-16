@@ -65,7 +65,7 @@
       * [Exporting txt files easily with specific format](#exporting-txt-files-easily-with-specific-format)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Thu 16 Dec 2021 12:35:49 IST -->
+<!-- Added by: gil_diy, at: Thu 16 Dec 2021 12:37:27 IST -->
 
 <!--te-->
 
@@ -400,12 +400,13 @@ A very important property in all those aggregation functions is: `keepdims`
 
 vec = np.array([[2,3,5,-6]])
 
+max = np.max(x)
 
 mat = np.array([[2,3],
 	            [5,9],
 	            [11,-6]])
 
-    max = np.max(x,axis=1,keepdims=True) #returns max of each row and keeps same 
+max = np.max(x,axis=1,keepdims=True) #returns max of each row and keeps same 
 ```
 
 ### Aggregation functions example on matrix:
