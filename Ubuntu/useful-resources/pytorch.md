@@ -92,7 +92,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Thu 16 Dec 2021 16:51:54 IST -->
+<!-- Added by: gil_diy, at: Thu 16 Dec 2021 17:06:29 IST -->
 
 <!--te-->
 
@@ -103,6 +103,13 @@
 <p align="center" style="width:600px;"> <!--  -->
   <img src="images/pytorch/Pytorch-package-hierarchy.jpg" title="tool tip here">
 </p>
+
+The functions appear in `from torch.nn import functional as F` are callable,
+for example:
+
+`nn.Softmax` - Not callable 
+`F.softmax` - callable 
+
 
 ## Road map
 
