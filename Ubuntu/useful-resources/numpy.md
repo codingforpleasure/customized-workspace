@@ -67,7 +67,7 @@
       * [Exporting txt files easily with specific format](#exporting-txt-files-easily-with-specific-format)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Thu 16 Dec 2021 12:58:57 IST -->
+<!-- Added by: gil_diy, at: Thu 16 Dec 2021 13:06:37 IST -->
 
 <!--te-->
 
@@ -418,17 +418,21 @@ max_each_col = np.max(mat,axis=0) # Will give: [11 9]
 A very important property in all those aggregation functions is: `keepdims`
 
 ```python
-vec = np.array([[2,3,5,-6]])
+def softmax(x):
+	exp_mat = np.exp(x)
 
-max_elem = np.max(x) # Will give: 5
+	# if we sum without keepdims we will get shape of: (3,1)
+	sum_exp_each_row = np.sum(exp_mat, axis=1, keepdims=True)
+    res = exp_mat / sum_exp_each_row
+    return res
 
-mat = np.array([[2,3],
-	            [5,9],
-	            [11,-6]])
+if __name__ == '__main__':
+	
+	mat = np.array([[2, 3],
+	                [5, 9],
+	                [11, -6]])
 
-max_each_row = np.max(mat,axis=1) # Will give: [3 9 11]
-max_each_col = np.max(mat,axis=0) # Will give: [11 9]
-
+	res = softmax(mat)
 ```
 
 
