@@ -65,7 +65,7 @@
       * [Exporting txt files easily with specific format](#exporting-txt-files-easily-with-specific-format)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Thu 16 Dec 2021 12:40:01 IST -->
+<!-- Added by: gil_diy, at: Thu 16 Dec 2021 12:40:05 IST -->
 
 <!--te-->
 
@@ -397,7 +397,6 @@ Evaluate whether all elements are true | np.all(vec > -1) | True
 A very important property in all those aggregation functions is: `keepdims`
 
 ```python
-
 vec = np.array([[2,3,5,-6]])
 
 max_elem = np.max(x) # Will give: 5
