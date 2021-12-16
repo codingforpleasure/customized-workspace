@@ -67,7 +67,7 @@
       * [Exporting txt files easily with specific format](#exporting-txt-files-easily-with-specific-format)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Thu 16 Dec 2021 13:21:22 IST -->
+<!-- Added by: gil_diy, at: Thu 16 Dec 2021 13:21:33 IST -->
 
 <!--te-->
 
@@ -444,7 +444,7 @@ if __name__ == '__main__':
 
 * **Python won't able to execute**:  `exp_mat / sum_exp_each_row`,
 
-   because the number of dimension is different
+     because the number of dimension is different
 `exp_mat.ndim = 1` and `sum_exp_each_row.ndim = 2`.
 
 
