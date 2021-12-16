@@ -67,7 +67,7 @@
       * [Exporting txt files easily with specific format](#exporting-txt-files-easily-with-specific-format)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Thu 16 Dec 2021 13:15:55 IST -->
+<!-- Added by: gil_diy, at: Thu 16 Dec 2021 13:16:33 IST -->
 
 <!--te-->
 
@@ -438,7 +438,10 @@ if __name__ == '__main__':
 **Attention:** 
 If we sum **WITHOUT keepdims** we will get shape of: (3,) => ndim = 1
 and NOT (3,1) (np.sum(exp_mat, axis=1, keepdims=True) => ndim = 2)
-Python won't able to execute:  exp_mat / sum_exp_each_row, because the number of dimension is different.
+
+**Python won't able to execute**:  `exp_mat / sum_exp_each_row`,
+ because the number of dimension is different
+`exp_mat.ndim = 1` and `sum_exp_each_row.ndim = 2`.
 
 
 ### Aggregation functions example on matrix:
