@@ -92,7 +92,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Thu 16 Dec 2021 16:51:34 IST -->
+<!-- Added by: gil_diy, at: Thu 16 Dec 2021 16:51:50 IST -->
 
 <!--te-->
 
@@ -174,7 +174,8 @@ torch.Tensor([True, False]).dtype => torch.float32
 torch.tensor([True, False]).dtype => torch.uint8
 ```
 
-To avoid all the mess just use `torch.tensor` with the `dtype` field for example: `torch.tensor([1,3,4], dtype=torch.float32)`
+To avoid all the mess just use `torch.tensor` with the `dtype` field.
+for example: `torch.tensor([1,3,4], dtype=torch.float32)`
 
 #### Create a tensor from numpy array
 
