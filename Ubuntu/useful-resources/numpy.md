@@ -65,7 +65,7 @@
       * [Exporting txt files easily with specific format](#exporting-txt-files-easily-with-specific-format)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Thu 16 Dec 2021 12:39:54 IST -->
+<!-- Added by: gil_diy, at: Thu 16 Dec 2021 12:39:57 IST -->
 
 <!--te-->
 
@@ -407,6 +407,8 @@ mat = np.array([[2,3],
 	            [11,-6]])
 
 max = np.max(mat,axis=1) # Will give: [3 9 11]
+
+
 ```
 
 ### Aggregation functions example on matrix:
