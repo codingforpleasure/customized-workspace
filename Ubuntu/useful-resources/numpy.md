@@ -65,9 +65,10 @@
       * [NPZ files](#npz-files)
          * [Saving our datasets to NPZ files](#saving-our-datasets-to-npz-files)
       * [Exporting txt files easily with specific format](#exporting-txt-files-easily-with-specific-format)
+      * [Exporting](#exporting)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Thu 16 Dec 2021 13:42:45 IST -->
+<!-- Added by: gil_diy, at: Sat 18 Dec 2021 21:38:15 IST -->
 
 <!--te-->
 
@@ -1071,6 +1072,8 @@ np.savetxt(
     fmt=["%d", "%f", "%f", "%f", "%f"]
 )
 ```
+
+## Exporting 
 
 ## Reference
 
