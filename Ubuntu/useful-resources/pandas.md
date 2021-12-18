@@ -67,7 +67,7 @@
          * [Dataframe Pivot table](#dataframe-pivot-table)
          * [Printing data so all columns will be presented](#printing-data-so-all-columns-will-be-presented)
          * [Get data ditribution of the data per column](#get-data-ditribution-of-the-data-per-column)
-      * [convert each consecutive pair columns into a tuple in a column](#convert-each-consecutive-pair-columns-into-a-tuple-in-a-column)
+      * [Convert each consecutive pair columns into a tuple in a column](#convert-each-consecutive-pair-columns-into-a-tuple-in-a-column)
       * [Mapping/Applying categorical values to a specified numerical values](#mappingapplying-categorical-values-to-a-specified-numerical-values)
       * [Mathematical functions](#mathematical-functions)
          * [Calculate correlation for all numerical columns pairs](#calculate-correlation-for-all-numerical-columns-pairs)
@@ -79,7 +79,7 @@
          * [Statsmodels](#statsmodels)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Sun 19 Dec 2021 00:25:58 IST -->
+<!-- Added by: gil_diy, at: Sun 19 Dec 2021 00:29:00 IST -->
 
 <!--te-->
 
@@ -685,9 +685,15 @@ plt.show()
 ```
 
 
-## convert each consecutive pair columns into a tuple in a column
+## Convert each consecutive pair columns into a tuple in a column
 ```python
 
+
+ps.Datframe({"nose_x":[1,3,5],"nose_y":[11,18,9],"left_eye_x":[0,3,2], "left_eye_y":[11,25,3],"chin":[13,21,45]})
+
+li = zip(df.columns[0:-1:2], df.columns[1:-1:2])
+
+new_df = pd.DataFrame({f"{i}y": zip(df[i], df[j]) for i, j in li})
 ```
 
 ## Mapping/Applying categorical values to a specified numerical values
