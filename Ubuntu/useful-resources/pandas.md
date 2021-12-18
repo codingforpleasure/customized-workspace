@@ -11,6 +11,7 @@
             * [Rename indexes (rename row names)](#rename-indexes-rename-row-names)
             * [Rename indexes to default range index](#rename-indexes-to-default-range-index)
             * [Get dataframe except specific rows](#get-dataframe-except-specific-rows)
+            * [Get dataframe except specific column](#get-dataframe-except-specific-column)
             * [Get row names](#get-row-names)
             * [Get column names](#get-column-names)
             * [rename column names](#rename-column-names)
@@ -66,7 +67,10 @@
          * [Dataframe Pivot table](#dataframe-pivot-table)
          * [Printing data so all columns will be presented](#printing-data-so-all-columns-will-be-presented)
          * [Get data ditribution of the data per column](#get-data-ditribution-of-the-data-per-column)
+      * [convert each consecutive pair columns into a tuple in a column](#convert-each-consecutive-pair-columns-into-a-tuple-in-a-column)
       * [Mapping/Applying categorical values to a specified numerical values](#mappingapplying-categorical-values-to-a-specified-numerical-values)
+      * [Mathematical functions](#mathematical-functions)
+         * [Calculate correlation for all numerical columns pairs](#calculate-correlation-for-all-numerical-columns-pairs)
       * [Time-Series](#time-series)
          * [Converting to Time-Stamp](#converting-to-time-stamp)
          * [Slicing date-time type](#slicing-date-time-type)
@@ -75,7 +79,7 @@
          * [Statsmodels](#statsmodels)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Wed 24 Nov 2021 20:45:35 IST -->
+<!-- Added by: gil_diy, at: Sun 19 Dec 2021 00:25:58 IST -->
 
 <!--te-->
 
@@ -190,6 +194,13 @@ I'd like to get all rows **excepts rows 3 and 5**:
 ```python
 not_relevant_rows = my_df1.index.isin([3,5])
 df_relevant = my_df1[~not_relevant_rows]
+```
+
+#### Get dataframe except specific column
+
+
+```python
+X = df.iloc[:, df.columns.drop('target-column')].values
 ```
 
 #### Get row names
@@ -674,7 +685,10 @@ plt.show()
 ```
 
 
+## convert each consecutive pair columns into a tuple in a column
+```python
 
+```
 
 ## Mapping/Applying categorical values to a specified numerical values
 
@@ -693,6 +707,16 @@ df['eventStrength'] = interactions_df['eventType'].apply(lambda x: event_type_st
 
 ```
 
+
+## Mathematical functions
+
+### Calculate correlation for all numerical columns pairs
+
+```python
+df.corr()
+```
+
+Attention: In case there is a categorical column in the dataframe it will get ignored it.
 
 ## Time-Series
 
