@@ -68,7 +68,7 @@
       * [Exporting numpy array as image](#exporting-numpy-array-as-image)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Sat 18 Dec 2021 21:39:55 IST -->
+<!-- Added by: gil_diy, at: Sat 18 Dec 2021 21:40:07 IST -->
 
 <!--te-->
 
@@ -1080,7 +1080,7 @@ from PIL import Image
 
 img_array = np.array(list_values, dtype=np.uint8).reshape(96, 96)
 im = Image.fromarray(img_array)
-im.save(f"training/face_{row_idx}.jpeg")
+im.save(f"face.jpeg")
 ```
 
 ## Reference
