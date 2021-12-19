@@ -88,12 +88,13 @@
       * [Use of Neural Networks for Feature Extraction](#use-of-neural-networks-for-feature-extraction)
       * [Template for Regression](#template-for-regression)
       * [Getting deterministic behaviour for debugging](#getting-deterministic-behaviour-for-debugging)
+      * [Debug with pycharm in pytorch](#debug-with-pycharm-in-pytorch)
       * [Integrating TensorBoard with pytorch](#integrating-tensorboard-with-pytorch)
       * [Segmentation with U-net  (Encoder-Decoder)](#segmentation-with-u-net--encoder-decoder)
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Sun 19 Dec 2021 23:31:03 IST -->
+<!-- Added by: gil_diy, at: Mon 20 Dec 2021 00:40:49 IST -->
 
 <!--te-->
 
@@ -1593,6 +1594,13 @@ torch.manual_seed(seed)
 # In case you're using cuda:
 torch.cuda.manual_seed_all(seed)
 ```
+
+## Debug with pycharm in pytorch
+
+* set `num_workers` to 0 during creation of the **DataLoader object**. 
+
+worked for me well!!!
+
 ## Integrating TensorBoard with pytorch
 
 [Part1 : TensorBoard with PyTorch - Visualize Deep Learning Metrics](https://youtu.be/pSexXMdruFM)
