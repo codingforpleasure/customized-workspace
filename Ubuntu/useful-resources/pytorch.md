@@ -68,6 +68,7 @@
          * [Check default values of an optimizer](#check-default-values-of-an-optimizer)
          * [The type of optimizers](#the-type-of-optimizers)
             * [Learning rate scheduler (ReduceLROnPlateau)](#learning-rate-scheduler-reducelronplateau)
+         * [What is The weight_decay for optimizer?](#what-is-the-weight_decay-for-optimizer)
       * [Dropouts](#dropouts)
       * [Inference/Evaluation](#inferenceevaluation)
          * [model.eval()](#modeleval)
@@ -92,7 +93,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Thu 16 Dec 2021 17:06:33 IST -->
+<!-- Added by: gil_diy, at: Sun 19 Dec 2021 23:31:03 IST -->
 
 <!--te-->
 
@@ -1282,6 +1283,10 @@ for epoch in range(1, num_epochs):
 ```
 
 [Reference](https://pytorch.org/docs/stable/optim.html#torch.optim.Optimizer)
+
+
+### What is The weight_decay for optimizer?
+
 
 
 ## Dropouts
