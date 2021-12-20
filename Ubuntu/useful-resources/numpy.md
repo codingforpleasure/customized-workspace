@@ -15,7 +15,7 @@
             * [vstack](#vstack)
             * [hstack](#hstack)
             * [Concatenating](#concatenating)
-         * [repeating an array](#repeating-an-array)
+         * [Repeating an array](#repeating-an-array)
          * [Retrieving info about an array](#retrieving-info-about-an-array)
          * [Counts the number of non-zero values in an array given a constraint](#counts-the-number-of-non-zero-values-in-an-array-given-a-constraint)
          * [Transpose a matrix/array](#transpose-a-matrixarray)
@@ -69,7 +69,7 @@
       * [Exporting numpy array as image](#exporting-numpy-array-as-image)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Mon 20 Dec 2021 02:24:19 IST -->
+<!-- Added by: gil_diy, at: Mon 20 Dec 2021 02:24:26 IST -->
 
 <!--te-->
 
@@ -303,7 +303,7 @@ np.concatenate((a, b), axis=None)
 # array([1, 2, 3, 4, 5, 6])
 ```
 
-### repeating an array
+### Repeating an array
 
 This code snippet is an exmaple of an image grayscale with single channel,
 we would like to triple the layer:
