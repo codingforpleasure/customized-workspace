@@ -69,7 +69,7 @@
       * [Exporting numpy array as image](#exporting-numpy-array-as-image)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Mon 20 Dec 2021 02:23:15 IST -->
+<!-- Added by: gil_diy, at: Mon 20 Dec 2021 02:24:19 IST -->
 
 <!--te-->
 
@@ -304,6 +304,9 @@ np.concatenate((a, b), axis=None)
 ```
 
 ### repeating an array
+
+This code snippet is an exmaple of an image grayscale with single channel,
+we would like to triple the layer:
 
 ```python
 image = np.array([0]*(96^2)
