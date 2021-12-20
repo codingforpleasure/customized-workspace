@@ -15,6 +15,7 @@
             * [vstack](#vstack)
             * [hstack](#hstack)
             * [Concatenating](#concatenating)
+         * [repeating an array](#repeating-an-array)
          * [Retrieving info about an array](#retrieving-info-about-an-array)
          * [Counts the number of non-zero values in an array given a constraint](#counts-the-number-of-non-zero-values-in-an-array-given-a-constraint)
          * [Transpose a matrix/array](#transpose-a-matrixarray)
@@ -68,7 +69,7 @@
       * [Exporting numpy array as image](#exporting-numpy-array-as-image)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Sat 18 Dec 2021 21:40:07 IST -->
+<!-- Added by: gil_diy, at: Mon 20 Dec 2021 02:22:57 IST -->
 
 <!--te-->
 
@@ -300,6 +301,15 @@ np.concatenate((a, b.T), axis=1)
 np.concatenate((a, b), axis=None)
 
 # array([1, 2, 3, 4, 5, 6])
+```
+
+### repeating an array
+
+```python
+image = np.array([0]*96^2)
+image = image.reshape(96,96)
+
+image = np.repeat(image.reshape(96, 96, 1), repeats=3, axis=2)
 ```
 
 ### Retrieving info about an array
