@@ -69,7 +69,7 @@
       * [Exporting numpy array as image](#exporting-numpy-array-as-image)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Mon 20 Dec 2021 02:24:26 IST -->
+<!-- Added by: gil_diy, at: Mon 20 Dec 2021 02:24:30 IST -->
 
 <!--te-->
 
