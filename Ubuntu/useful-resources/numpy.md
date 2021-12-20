@@ -69,7 +69,7 @@
       * [Exporting numpy array as image](#exporting-numpy-array-as-image)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Mon 20 Dec 2021 02:23:01 IST -->
+<!-- Added by: gil_diy, at: Mon 20 Dec 2021 02:23:04 IST -->
 
 <!--te-->
 
@@ -307,8 +307,6 @@ np.concatenate((a, b), axis=None)
 
 ```python
 image = np.array([0]*96^2)
-image = image.reshape(96,96)
-
 image = np.repeat(image.reshape(96, 96, 1), repeats=3, axis=2)
 ```
 
