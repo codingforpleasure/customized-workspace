@@ -7,7 +7,7 @@
       * [Draw eliipse and save](#draw-eliipse-and-save)
       * [Save image file](#save-image-file)
 
-<!-- Added by: gil_diy, at: Wed 22 Dec 2021 16:24:48 IST -->
+<!-- Added by: gil_diy, at: Wed 22 Dec 2021 16:24:56 IST -->
 
 <!--te-->
 
@@ -42,7 +42,6 @@ PIL.Image.Image.rotate(my_image, a, resample=PIL.Image.BICUBIC, expand=True)
 
 ```python
 import Image, ImageDraw
-
 image = Image.new('RGBA', (200, 200))
 draw = ImageDraw.Draw(image)
 draw.ellipse((20, 180, 180, 20), fill = 'blue', outline ='blue')
