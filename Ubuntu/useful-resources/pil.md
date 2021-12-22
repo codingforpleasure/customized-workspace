@@ -4,10 +4,10 @@
       * [Useful functions in PIL (Python Imaging Library)](#useful-functions-in-pil-python-imaging-library)
       * [Get pixel values](#get-pixel-values)
       * [Rotate image](#rotate-image)
-      * [Draw eliipse and save](#draw-eliipse-and-save)
+      * [Draw circle and save](#draw-circle-and-save)
       * [Save image file](#save-image-file)
 
-<!-- Added by: gil_diy, at: Wed 22 Dec 2021 16:24:56 IST -->
+<!-- Added by: gil_diy, at: Wed 22 Dec 2021 16:26:15 IST -->
 
 <!--te-->
 
@@ -38,14 +38,13 @@ list(pilImg.getdata())
 PIL.Image.Image.rotate(my_image, a, resample=PIL.Image.BICUBIC, expand=True)
 ```
 
-## Draw eliipse and save
+## Draw circle and save
 
 ```python
 import Image, ImageDraw
 image = Image.new('RGBA', (200, 200))
 draw = ImageDraw.Draw(image)
-draw.ellipse((20, 180, 180, 20), fill = 'blue', outline ='blue')
-draw.point((100, 100), 'red')
+draw.ellipse((20, 20, 180, 180), fill='blue', outline='blue')
 image.save('test.png')
 ```
 
