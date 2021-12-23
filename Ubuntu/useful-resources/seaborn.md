@@ -11,8 +11,10 @@
       * [Scatter plot](#scatter-plot)
       * [Scatter plot with linear regresssion](#scatter-plot-with-linear-regresssion)
       * [Categorical scatter plot to highlight the relationship between](#categorical-scatter-plot-to-highlight-the-relationship-between)
+      * [Histograms](#histograms)
+      * [Density plots](#density-plots)
 
-<!-- Added by: gil_diy, at: Thu 23 Dec 2021 16:16:20 IST -->
+<!-- Added by: gil_diy, at: Thu 23 Dec 2021 16:27:59 IST -->
 
 <!--te-->
 
@@ -119,4 +121,18 @@ sns.lmplot(x="bmi", y="charges", hue="smoker", data=insurance_data)
 
 ```python
 sns.swarmplot(x=candy_data['chocolate'], y=candy_data['winpercent'])
+```
+
+## Histograms
+
+```python
+sns.distplot(a=iris_data['Petal Length (cm)'], kde=False)
+```
+
+## Density plots
+
+You can think of it as a smoothed histogram
+
+```python
+sns.kdeplot(data=iris_data['Petal Length (cm)'], shade=True)
 ```
