@@ -36,6 +36,7 @@
          * [Importing only first 1000 rows from a HUGE CSV file](#importing-only-first-1000-rows-from-a-huge-csv-file)
          * [Importing only selected columns from a HUGE CSV file](#importing-only-selected-columns-from-a-huge-csv-file)
          * [Importing data from CSV with NA's](#importing-data-from-csv-with-nas)
+         * [Importing data from CSV with NA's](#importing-data-from-csv-with-nas-1)
          * [Exporting data into CSV](#exporting-data-into-csv)
       * [Excel File](#excel-file)
       * [JSON File](#json-file)
@@ -79,7 +80,7 @@
          * [Statsmodels](#statsmodels)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Sun 19 Dec 2021 00:30:56 IST -->
+<!-- Added by: gil_diy, at: Thu 23 Dec 2021 13:25:51 IST -->
 
 <!--te-->
 
@@ -375,6 +376,12 @@ df = pd.read_csv('data/large_dataset.csv',usecolumns = chosen_columns)
 ```python
 rawfile = pd.read_csv(filename, header=None, names=DataLabels, sep=',\s', na_values=["?"])
 ```
+
+### Importing data from CSV with NA's
+```python
+rawfile = pd.read_csv(filename, header=None, names=DataLabels, sep=',\s', na_values=["?"])
+```
+
 
 ### Exporting data into CSV
 ```python
