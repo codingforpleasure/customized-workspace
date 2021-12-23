@@ -8,8 +8,9 @@
       * [Adding legend](#adding-legend)
       * [Bar chart](#bar-chart)
       * [Heatmap](#heatmap)
+      * [Scatter plot](#scatter-plot)
 
-<!-- Added by: gil_diy, at: Thu 23 Dec 2021 15:24:31 IST -->
+<!-- Added by: gil_diy, at: Thu 23 Dec 2021 15:38:25 IST -->
 
 <!--te-->
 
@@ -88,4 +89,16 @@ plt.title("Average Score for Racing Games, by Platform")
 
 <p align="center"> <!-- style="width:400px;" -->
   <img src="images/sns/bar_plot.png" title="tool tip here">
+</p>
+
+## Scatter plot
+
+```python
+sns.scatterplot(x=insurance_data['bmi'],
+	y=insurance_data['charges'],
+	hue=insurance_data['smoker'])
+```
+
+<p align="center"> <!-- style="width:400px;" -->
+  <img src="images/scatter_plot.png" title="tool tip here">
 </p>
