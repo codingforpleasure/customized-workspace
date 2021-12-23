@@ -6,7 +6,7 @@
       * [Add label for horizontal axes](#add-label-for-horizontal-axes)
       * [Adding legend](#adding-legend)
 
-<!-- Added by: gil_diy, at: Thu 23 Dec 2021 13:44:21 IST -->
+<!-- Added by: gil_diy, at: Thu 23 Dec 2021 13:44:24 IST -->
 
 <!--te-->
 
