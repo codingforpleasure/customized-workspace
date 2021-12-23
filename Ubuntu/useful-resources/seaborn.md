@@ -7,8 +7,9 @@
       * [Add label for vertical axes](#add-label-for-vertical-axes)
       * [Adding legend](#adding-legend)
       * [Bar chart](#bar-chart)
+      * [Heatmap](#heatmap)
 
-<!-- Added by: gil_diy, at: Thu 23 Dec 2021 14:16:51 IST -->
+<!-- Added by: gil_diy, at: Thu 23 Dec 2021 14:44:59 IST -->
 
 <!--te-->
 
@@ -63,4 +64,11 @@ sns.lineplot(data=spotify_data['Despacito'], label="Despacito")
 
 ```python
 sns.barplot(x=flight_data.index, y=flight_data['NK'])
+```
+
+## Heatmap
+
+```python
+# Heatmap showing average arrival delay for each airline by month
+sns.heatmap(data=flight_data, annot=True)
 ```
