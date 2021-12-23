@@ -12,9 +12,9 @@
       * [Scatter plot with linear regresssion](#scatter-plot-with-linear-regresssion)
       * [Categorical scatter plot to highlight the relationship between](#categorical-scatter-plot-to-highlight-the-relationship-between)
       * [Histograms](#histograms)
-      * [Density plots](#density-plots)
+      * [Density plots (KDE - Kernel density estimate (KDE))](#density-plots-kde---kernel-density-estimate-kde)
 
-<!-- Added by: gil_diy, at: Thu 23 Dec 2021 16:27:59 IST -->
+<!-- Added by: gil_diy, at: Thu 23 Dec 2021 16:28:30 IST -->
 
 <!--te-->
 
@@ -129,7 +129,7 @@ sns.swarmplot(x=candy_data['chocolate'], y=candy_data['winpercent'])
 sns.distplot(a=iris_data['Petal Length (cm)'], kde=False)
 ```
 
-## Density plots
+## Density plots (KDE - Kernel density estimate (KDE))
 
 You can think of it as a smoothed histogram
 
