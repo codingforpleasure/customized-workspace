@@ -5,7 +5,7 @@
       * [Set width of the figure](#set-width-of-the-figure)
       * [Add label for horizontal axes](#add-label-for-horizontal-axes)
 
-<!-- Added by: gil_diy, at: Thu 23 Dec 2021 13:42:38 IST -->
+<!-- Added by: gil_diy, at: Thu 23 Dec 2021 13:43:14 IST -->
 
 <!--te-->
 
@@ -36,4 +36,14 @@ plt.figure(figsize=(14,6))
 ```python
 # Add label for horizontal axis
 plt.xlabel("Date")
+```
+
+## 
+
+```python
+# Line chart showing daily global streams of 'Shape of You'
+sns.lineplot(data=spotify_data['Shape of You'], label="Shape of You")
+
+# Line chart showing daily global streams of 'Despacito'
+sns.lineplot(data=spotify_data['Despacito'], label="Despacito")
 ```
