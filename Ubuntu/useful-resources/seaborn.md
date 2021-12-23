@@ -10,7 +10,7 @@
       * [Heatmap](#heatmap)
       * [Scatter plot](#scatter-plot)
 
-<!-- Added by: gil_diy, at: Thu 23 Dec 2021 15:38:27 IST -->
+<!-- Added by: gil_diy, at: Thu 23 Dec 2021 15:38:54 IST -->
 
 <!--te-->
 
@@ -100,5 +100,5 @@ sns.scatterplot(x=insurance_data['bmi'],
 ```
 
 <p align="center"> <!-- style="width:400px;" -->
-  <img src="images/scatter_plot.png" title="tool tip here">
+  <img src="images/sns/scatter_plot.png" title="tool tip here">
 </p>
