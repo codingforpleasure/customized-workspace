@@ -9,7 +9,7 @@
       * [Bar chart](#bar-chart)
       * [Heatmap](#heatmap)
 
-<!-- Added by: gil_diy, at: Thu 23 Dec 2021 15:24:16 IST -->
+<!-- Added by: gil_diy, at: Thu 23 Dec 2021 15:24:26 IST -->
 
 <!--te-->
 
@@ -87,5 +87,5 @@ plt.title("Average Score for Racing Games, by Platform")
 ```
 
 <p align="center"> <!-- style="width:400px;" -->
-  <img src="images/sns/" title="tool tip here">
+  <img src="images/sns/bar_plot.png" title="tool tip here">
 </p>
