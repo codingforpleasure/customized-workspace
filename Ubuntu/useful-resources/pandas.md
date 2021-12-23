@@ -81,7 +81,7 @@
          * [Statsmodels](#statsmodels)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Thu 23 Dec 2021 13:38:11 IST -->
+<!-- Added by: gil_diy, at: Thu 23 Dec 2021 15:03:49 IST -->
 
 <!--te-->
 
@@ -385,6 +385,8 @@ rawfile = pd.read_csv(filename, header=None, names=DataLabels, parse_dates=True)
 ```
 
 ### Setting a specific column as an index
+Labeling the rows while importing data
+
 ```python
 spotify_data = pd.read_csv(spotify_filepath, index_col="Date", parse_dates=True)
 ```
