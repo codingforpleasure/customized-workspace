@@ -9,7 +9,7 @@
       * [Bar chart](#bar-chart)
       * [Heatmap](#heatmap)
 
-<!-- Added by: gil_diy, at: Thu 23 Dec 2021 14:49:47 IST -->
+<!-- Added by: gil_diy, at: Thu 23 Dec 2021 15:23:52 IST -->
 
 <!--te-->
 
@@ -73,3 +73,16 @@ sns.barplot(x=flight_data.index, y=flight_data['NK'])
 # This ensures that the values for each cell appear on the chart
 sns.heatmap(data=flight_data, annot=True)
 ```
+
+Another example
+```python
+# Set the width and height of the figure
+plt.figure(figsize=(8, 6))
+# Bar chart showing average score for racing games by platform
+sns.barplot(x=ign_data['Racing'], y=ign_data.index)
+# Add label for horizontal axis
+plt.xlabel("")
+# Add label for vertical axis
+plt.title("Average Score for Racing Games, by Platform")
+```
+
