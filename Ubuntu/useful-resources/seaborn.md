@@ -9,8 +9,10 @@
       * [Bar chart](#bar-chart)
       * [Heatmap](#heatmap)
       * [Scatter plot](#scatter-plot)
+      * [Scatter plot with linear regresssion](#scatter-plot-with-linear-regresssion)
+      * [Categorical scatter plot to highlight the relationship between](#categorical-scatter-plot-to-highlight-the-relationship-between)
 
-<!-- Added by: gil_diy, at: Thu 23 Dec 2021 15:38:54 IST -->
+<!-- Added by: gil_diy, at: Thu 23 Dec 2021 16:16:20 IST -->
 
 <!--te-->
 
@@ -102,3 +104,19 @@ sns.scatterplot(x=insurance_data['bmi'],
 <p align="center"> <!-- style="width:400px;" -->
   <img src="images/sns/scatter_plot.png" title="tool tip here">
 </p>
+
+## Scatter plot with linear regresssion
+
+```python
+sns.lmplot(x="bmi", y="charges", hue="smoker", data=insurance_data)
+```
+
+<p align="center"> <!-- style="width:400px;" -->
+  <img src="images/labeling_example.png" title="tool tip here">
+</p>
+
+## Categorical scatter plot to highlight the relationship between
+
+```python
+sns.swarmplot(x=candy_data['chocolate'], y=candy_data['winpercent'])
+```
