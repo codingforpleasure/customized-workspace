@@ -4,8 +4,9 @@
       * [Set Title](#set-title)
       * [Set width of the figure](#set-width-of-the-figure)
       * [Add label for horizontal axes](#add-label-for-horizontal-axes)
+      * [Adding legend](#adding-legend)
 
-<!-- Added by: gil_diy, at: Thu 23 Dec 2021 13:43:14 IST -->
+<!-- Added by: gil_diy, at: Thu 23 Dec 2021 13:44:21 IST -->
 
 <!--te-->
 
@@ -38,7 +39,9 @@ plt.figure(figsize=(14,6))
 plt.xlabel("Date")
 ```
 
-## 
+## Adding legend
+
+ The label to make the line appear in the legend and set its corresponding label.
 
 ```python
 # Line chart showing daily global streams of 'Shape of You'
