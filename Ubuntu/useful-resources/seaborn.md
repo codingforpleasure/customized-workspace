@@ -6,8 +6,9 @@
       * [Add label for horizontal axes](#add-label-for-horizontal-axes)
       * [Add label for vertical axes](#add-label-for-vertical-axes)
       * [Adding legend](#adding-legend)
+      * [Bar chart](#bar-chart)
 
-<!-- Added by: gil_diy, at: Thu 23 Dec 2021 14:16:27 IST -->
+<!-- Added by: gil_diy, at: Thu 23 Dec 2021 14:16:51 IST -->
 
 <!--te-->
 
@@ -56,4 +57,10 @@ sns.lineplot(data=spotify_data['Shape of You'], label="Shape of You")
 
 # Line chart showing daily global streams of 'Despacito'
 sns.lineplot(data=spotify_data['Despacito'], label="Despacito")
+```
+
+## Bar chart
+
+```python
+sns.barplot(x=flight_data.index, y=flight_data['NK'])
 ```
