@@ -4,7 +4,7 @@
       * [Set Title](#set-title)
       * [Set width of the figure](#set-width-of-the-figure)
 
-<!-- Added by: gil_diy, at: Thu 23 Dec 2021 13:40:08 IST -->
+<!-- Added by: gil_diy, at: Thu 23 Dec 2021 13:40:21 IST -->
 
 <!--te-->
 
@@ -18,9 +18,15 @@ sns.lineplot(data=financial_data)
 
 ## Set Title 
 
+```python
+# Add title
+plt.title("Daily Global Streams of Popular Songs in 2017-2018")
+```
+
 ## Set width of the figure
 
 ```python
 # Set the width and height of the figure
 plt.figure(figsize=(14,6))
 ```
+
