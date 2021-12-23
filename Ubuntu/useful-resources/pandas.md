@@ -80,7 +80,7 @@
          * [Statsmodels](#statsmodels)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Thu 23 Dec 2021 13:26:43 IST -->
+<!-- Added by: gil_diy, at: Thu 23 Dec 2021 13:37:42 IST -->
 
 <!--te-->
 
@@ -381,6 +381,11 @@ rawfile = pd.read_csv(filename, header=None, names=DataLabels, sep=',\s', na_val
 ```python
 # fifa_data = pd.read_csv(fifa_filepath, index_col="Date", parse_dates=True)
 rawfile = pd.read_csv(filename, header=None, names=DataLabels, parse_dates=True)
+```
+
+### 
+```python
+spotify_data = pd.read_csv(spotify_filepath, index_col="Date", parse_dates=True)
 ```
 
 
