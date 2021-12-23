@@ -8,7 +8,7 @@
       * [Save image file](#save-image-file)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Thu 23 Dec 2021 23:28:28 IST -->
+<!-- Added by: gil_diy, at: Thu 23 Dec 2021 23:28:30 IST -->
 
 <!--te-->
 
