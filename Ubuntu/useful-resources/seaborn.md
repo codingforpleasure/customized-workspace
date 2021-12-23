@@ -9,7 +9,7 @@
       * [Bar chart](#bar-chart)
       * [Heatmap](#heatmap)
 
-<!-- Added by: gil_diy, at: Thu 23 Dec 2021 14:45:07 IST -->
+<!-- Added by: gil_diy, at: Thu 23 Dec 2021 14:49:47 IST -->
 
 <!--te-->
 
@@ -70,5 +70,6 @@ sns.barplot(x=flight_data.index, y=flight_data['NK'])
 
 ```python
 # Heatmap showing average arrival delay for each airline by month
+# This ensures that the values for each cell appear on the chart
 sns.heatmap(data=flight_data, annot=True)
 ```
