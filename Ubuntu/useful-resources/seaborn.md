@@ -4,9 +4,10 @@
       * [Set Title](#set-title)
       * [Set width of the figure](#set-width-of-the-figure)
       * [Add label for horizontal axes](#add-label-for-horizontal-axes)
+      * [Add label for vertical axes](#add-label-for-vertical-axes)
       * [Adding legend](#adding-legend)
 
-<!-- Added by: gil_diy, at: Thu 23 Dec 2021 13:44:24 IST -->
+<!-- Added by: gil_diy, at: Thu 23 Dec 2021 14:16:27 IST -->
 
 <!--te-->
 
@@ -37,6 +38,12 @@ plt.figure(figsize=(14,6))
 ```python
 # Add label for horizontal axis
 plt.xlabel("Date")
+```
+
+## Add label for vertical axes
+```python
+# Add label for vertical axis
+plt.ylabel("Arrival delay (in minutes)")
 ```
 
 ## Adding legend
