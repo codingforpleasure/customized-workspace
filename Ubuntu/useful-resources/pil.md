@@ -3,12 +3,13 @@
       * [Installation](#installation)
       * [Useful functions in PIL (Python Imaging Library)](#useful-functions-in-pil-python-imaging-library)
       * [Get pixel values](#get-pixel-values)
+      * [Get image dimenstions](#get-image-dimenstions)
       * [Rotate image](#rotate-image)
       * [Draw circle and save](#draw-circle-and-save)
       * [Save image file](#save-image-file)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Thu 23 Dec 2021 23:28:30 IST -->
+<!-- Added by: gil_diy, at: Fri 24 Dec 2021 22:17:06 IST -->
 
 <!--te-->
 
@@ -32,6 +33,15 @@ convert to RGB while opening image 	|  Image.open(img_path).convert("RGB")
 ```python
 list(pilImg.getdata())
 ```
+
+## Get image dimenstions
+
+```python
+rsize_x, rsize_y = rectangle.size
+```
+
+
+
 
 ## Rotate image
 
