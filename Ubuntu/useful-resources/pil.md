@@ -9,7 +9,7 @@
       * [Save image file](#save-image-file)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Fri 24 Dec 2021 22:17:17 IST -->
+<!-- Added by: gil_diy, at: Fri 24 Dec 2021 22:17:20 IST -->
 
 <!--te-->
 
