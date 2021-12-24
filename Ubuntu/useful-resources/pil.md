@@ -9,7 +9,7 @@
       * [Save image file](#save-image-file)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Fri 24 Dec 2021 22:17:06 IST -->
+<!-- Added by: gil_diy, at: Fri 24 Dec 2021 22:17:17 IST -->
 
 <!--te-->
 
@@ -37,11 +37,9 @@ list(pilImg.getdata())
 ## Get image dimenstions
 
 ```python
+rectangle = Image.open("...")
 rsize_x, rsize_y = rectangle.size
 ```
-
-
-
 
 ## Rotate image
 
