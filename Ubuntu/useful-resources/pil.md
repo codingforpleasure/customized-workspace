@@ -9,7 +9,7 @@
       * [Save image file](#save-image-file)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Fri 24 Dec 2021 22:17:20 IST -->
+<!-- Added by: gil_diy, at: Fri 24 Dec 2021 22:17:26 IST -->
 
 <!--te-->
 
@@ -37,7 +37,7 @@ list(pilImg.getdata())
 ## Get image dimenstions
 
 ```python
-rectangle = Image.open("...")
+rectangle = Image.open("bla.jpg")
 rsize_x, rsize_y = rectangle.size
 ```
 
