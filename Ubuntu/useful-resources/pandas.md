@@ -6,6 +6,7 @@
          * [Series](#series)
          * [DataFrame](#dataframe)
             * [Creating a dataframe](#creating-a-dataframe)
+            * [Creating dataframe (another approach)](#creating-dataframe-another-approach)
             * [Get dimensions of a dataframe](#get-dimensions-of-a-dataframe)
             * [Iterate over rows](#iterate-over-rows)
             * [Rename indexes (rename row names)](#rename-indexes-rename-row-names)
@@ -81,7 +82,7 @@
          * [Statsmodels](#statsmodels)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Thu 23 Dec 2021 15:03:49 IST -->
+<!-- Added by: gil_diy, at: Sun 26 Dec 2021 00:46:52 IST -->
 
 <!--te-->
 
@@ -151,6 +152,14 @@ Creating a dataframe of specific size and initializing it with -1's:
 ```python
 my_df3 = pd.DataFrame(index=range(5), columns=range(3))
 my_df3 = my_df3.fillna(-1)
+```
+
+#### Creating dataframe (another approach)
+
+```python
+import pandas as pd
+df = pd.DataFrame(some_list, columns=["colummn"])
+df.to_csv('list.csv', index=False)
 ```
 
 #### Get dimensions of a dataframe
