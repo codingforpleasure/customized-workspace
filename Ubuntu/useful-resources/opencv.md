@@ -57,7 +57,7 @@
          * [The function blobFromImage(s)](#the-function-blobfromimages)
             * [1. Mean subtraction](#1-mean-subtraction)
 
-<!-- Added by: gil_diy, at: Tue 06 Apr 2021 17:51:52 IDT -->
+<!-- Added by: gil_diy, at: Sat 25 Dec 2021 18:28:43 IST -->
 
 <!--te-->
 
@@ -78,6 +78,7 @@
 Description | command
 ------------------------------------|-----
 Load image | img = **cv2.imread**( "_path-to-file_")
+Load image with alpha channel| img = **cv2.imread**( "_path-to-file_", cv2.IMREAD_UNCHANGED)
 Write image to disk | **cv2.imwrite**( "_/codingForPleasure/example.png_", _img_ )
 Display image | **cv2.imshow**( "_window-title_" , _img_ )
 Get image size | rows, columns , _ = **cv2.shape()**
@@ -87,6 +88,7 @@ Retrieve contours | im2, contours, hierarchy = **cv2.findContours**(_img, **cv2.
 Calculate contour's area | area = **cv2.contourArea**(contour)
 Get the dimensions of a bounding rectangle | (x,y,w,h) = **cv2.boundingRect**(contour)
 Resize image | **cv2.resize**(_img, **(100, 100)**_)
+             |     resizedImg = cv2.resize(img, (int(imgwidth / descalingFactor), int(imgheight / descalingFactor)),interpolation=cv2.INTER_AREA)
 Draw a rectangle on an image | **cv2.rectangle**(img, (x, y), (x + w, y + h), color, thickness)
 split each color to different layer| b,g,r = cv2.split(img)
 
@@ -597,7 +599,7 @@ Define | Meaning
 cv2.CAP_PROP_FRAME_WIDTH | Set frame width
 cv2.CAP_PROP_FRAME_HEIGHT |  Set frame height
 cv2.CAP_PROP_POS_FRAMES | Skip to specific frame
-
+cv2.CAP_PROP_FRAME_COUNT | Get number of frames per video
 [Link](https://docs.opencv.org/3.4/dd/d01/group__videoio__c.html)
 
 ### distance transform
