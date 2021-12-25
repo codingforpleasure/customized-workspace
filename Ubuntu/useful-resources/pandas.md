@@ -82,7 +82,7 @@
          * [Statsmodels](#statsmodels)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Sun 26 Dec 2021 00:48:04 IST -->
+<!-- Added by: gil_diy, at: Sun 26 Dec 2021 00:48:08 IST -->
 
 <!--te-->
 
@@ -160,6 +160,7 @@ my_df3 = my_df3.fillna(-1)
 import pandas as pd
 df = pd.DataFrame([['a','b','c'],['gr','lt','eq']],
                   columns=["col1", "col2", "col3"])
+
 df.to_csv('list.csv', index=False)
 ```
 
