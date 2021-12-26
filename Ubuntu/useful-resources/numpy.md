@@ -69,7 +69,7 @@
       * [Exporting numpy array as image](#exporting-numpy-array-as-image)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Mon 20 Dec 2021 02:25:14 IST -->
+<!-- Added by: gil_diy, at: Sun 26 Dec 2021 09:48:05 IST -->
 
 <!--te-->
 
@@ -220,6 +220,8 @@ data = genfromtxt(filename, delimiter=',')
 
 
 ### Forming
+
+When using `stack` all inputs should have the same shape.
 
 ```python
 a = np.array((1, 2, 3))
