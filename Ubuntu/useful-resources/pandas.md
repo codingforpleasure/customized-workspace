@@ -82,7 +82,7 @@
          * [Statsmodels](#statsmodels)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Sun 26 Dec 2021 00:48:08 IST -->
+<!-- Added by: gil_diy, at: Mon 27 Dec 2021 00:22:53 IST -->
 
 <!--te-->
 
@@ -597,6 +597,8 @@ my_groups = df.groupby('city')
 for city,city_df in my_groups:
 	print(city)
 	print(city_df)
+
+
 
 # Get the dataframe of group city 'new york'
 my_groups.get_group('new york')
