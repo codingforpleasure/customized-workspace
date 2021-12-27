@@ -5,7 +5,7 @@
          * [Approach one - “Old Style” String Formatting (% Operator)](#approach-one---old-style-string-formatting--operator)
          * [f-Strings (Python 3.6+)](#f-strings-python-36)
 
-<!-- Added by: gil_diy, at: Mon 27 Dec 2021 12:51:30 IST -->
+<!-- Added by: gil_diy, at: Mon 27 Dec 2021 15:10:30 IST -->
 
 <!--te-->
 
@@ -29,6 +29,7 @@ different names which start and end with the double underscore. They are called 
 ```
 
 ### f-Strings (Python 3.6+)
+
 ```python
 f'Hello, {name}!'
 ```
