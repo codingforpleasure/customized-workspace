@@ -5,7 +5,7 @@
          * [Approach one - “Old Style” String Formatting (% Operator)](#approach-one---old-style-string-formatting--operator)
          * [String Interpolation / f-Strings (Python 3.6+)](#string-interpolation--f-strings-python-36)
 
-<!-- Added by: gil_diy, at: Mon 27 Dec 2021 12:51:25 IST -->
+<!-- Added by: gil_diy, at: Mon 27 Dec 2021 12:51:27 IST -->
 
 <!--te-->
 
