@@ -4,7 +4,7 @@
       * [S strings in python](#s-strings-in-python)
          * [Approach one - “Old Style” String Formatting (% Operator)](#approach-one---old-style-string-formatting--operator)
 
-<!-- Added by: gil_diy, at: Mon 27 Dec 2021 12:50:45 IST -->
+<!-- Added by: gil_diy, at: Mon 27 Dec 2021 12:51:16 IST -->
 
 <!--te-->
 
@@ -25,4 +25,9 @@ different names which start and end with the double underscore. They are called 
 
 ```python
 'Hello, %s' % name
+```
+
+### 
+```python
+f'Hello, {name}!'
 ```
