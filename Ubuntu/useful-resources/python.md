@@ -4,7 +4,7 @@
       * [S strings in python](#s-strings-in-python)
          * [Approach one - “Old Style” String Formatting (% Operator)](#approach-one---old-style-string-formatting--operator)
 
-<!-- Added by: gil_diy, at: Mon 27 Dec 2021 12:49:59 IST -->
+<!-- Added by: gil_diy, at: Mon 27 Dec 2021 12:50:04 IST -->
 
 <!--te-->
 
@@ -22,6 +22,7 @@ different names which start and end with the double underscore. They are called 
 [Link](https://realpython.com/python-string-formatting/)
 
 ### Approach one - “Old Style” String Formatting (% Operator)
+
 ```python
 #1 “Old Style” String Formatting (% Operator)
 ```
