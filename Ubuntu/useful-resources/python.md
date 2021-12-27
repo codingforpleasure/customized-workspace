@@ -3,8 +3,9 @@
       * [Magic methods (dunder methods)](#magic-methods-dunder-methods)
       * [S strings in python](#s-strings-in-python)
          * [Approach one - “Old Style” String Formatting (% Operator)](#approach-one---old-style-string-formatting--operator)
+         * [String Interpolation / f-Strings (Python 3.6+)](#string-interpolation--f-strings-python-36)
 
-<!-- Added by: gil_diy, at: Mon 27 Dec 2021 12:51:19 IST -->
+<!-- Added by: gil_diy, at: Mon 27 Dec 2021 12:51:25 IST -->
 
 <!--te-->
 
@@ -27,7 +28,7 @@ different names which start and end with the double underscore. They are called 
 'Hello, %s' % name
 ```
 
-### 
+### String Interpolation / f-Strings (Python 3.6+)
 ```python
 f'Hello, {name}!'
 ```
