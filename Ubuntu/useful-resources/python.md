@@ -4,7 +4,7 @@
       * [S strings in python](#s-strings-in-python)
          * [Approach one - “Old Style” String Formatting (% Operator)](#approach-one---old-style-string-formatting--operator)
 
-<!-- Added by: gil_diy, at: Mon 27 Dec 2021 12:50:43 IST -->
+<!-- Added by: gil_diy, at: Mon 27 Dec 2021 12:50:45 IST -->
 
 <!--te-->
 
