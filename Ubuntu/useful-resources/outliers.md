@@ -7,7 +7,7 @@
          * [Outer Fence](#outer-fence)
          * [Inner Fence](#inner-fence)
 
-<!-- Added by: gil_diy, at: Tue 28 Dec 2021 11:50:32 IST -->
+<!-- Added by: gil_diy, at: Tue 28 Dec 2021 11:53:30 IST -->
 
 <!--te-->
 
@@ -35,3 +35,6 @@ Q1 - 1.5IQR
 Values outside the inner fence (but inside the outer fence)
 are **mild outliers**.
 
+<p align="center"> <!-- style="width:400px;" -->
+  <img src="images/IQR_Boxplot_vs_PDF.png" title="tool tip here">
+</p>
