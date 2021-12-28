@@ -6,7 +6,7 @@
          * [Outer Fence](#outer-fence)
          * [Inner Fence](#inner-fence)
 
-<!-- Added by: gil_diy, at: Tue 28 Dec 2021 11:40:51 IST -->
+<!-- Added by: gil_diy, at: Tue 28 Dec 2021 11:41:16 IST -->
 
 <!--te-->
 
@@ -25,4 +25,4 @@ Q3 + 1.5IQR
 Q1 - 1.5IQR
 
 Values outside the inner fence (but inside the outer fence)
-are mild outliers.
+are **mild outliers**.
