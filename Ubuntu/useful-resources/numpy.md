@@ -41,6 +41,7 @@
       * [Unsquizzing](#unsquizzing)
       * [splitting data](#splitting-data)
       * [Removing rows/columns](#removing-rowscolumns)
+      * [Inserting data](#inserting-data)
       * [Multiplication:](#multiplication)
          * [Vectorized dot product of vectors](#vectorized-dot-product-of-vectors)
          * [Vectorized outer product](#vectorized-outer-product)
@@ -69,7 +70,7 @@
       * [Exporting numpy array as image](#exporting-numpy-array-as-image)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Sun 26 Dec 2021 09:48:08 IST -->
+<!-- Added by: gil_diy, at: Tue 28 Dec 2021 12:49:24 IST -->
 
 <!--te-->
 
@@ -693,6 +694,12 @@ new_shape = np.squeeze(x).shape
 
 ```python
 np.delete(orig_cord, np.where(con), axis=1)
+```
+
+## Inserting data
+
+```python
+np.insert()
 ```
 
 ## Multiplication:
