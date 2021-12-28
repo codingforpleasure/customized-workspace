@@ -70,7 +70,7 @@
       * [Exporting numpy array as image](#exporting-numpy-array-as-image)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Tue 28 Dec 2021 12:51:15 IST -->
+<!-- Added by: gil_diy, at: Tue 28 Dec 2021 12:51:19 IST -->
 
 <!--te-->
 
@@ -704,7 +704,7 @@ np.insert([1,23,45,9,100], list(range(2,6, 2)), 2)
 
 **output is:**
 
-array([  1,  23,   2,  45,   9,   2, 100])
+`array([  1,  23,   2,  45,   9,   2, 100])`
 
 
 ## Multiplication:
