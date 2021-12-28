@@ -7,12 +7,16 @@
          * [Outer Fence](#outer-fence)
          * [Inner Fence](#inner-fence)
 
-<!-- Added by: gil_diy, at: Tue 28 Dec 2021 11:49:22 IST -->
+<!-- Added by: gil_diy, at: Tue 28 Dec 2021 11:50:29 IST -->
 
 <!--te-->
 
 ## IQR
 
+Interquatile Range (IQR)
+
+Difference between third and first quartiles
+The IQR covers the middle 50 percents of the distribution.
 
 ## Upper and Lower Fences
 
