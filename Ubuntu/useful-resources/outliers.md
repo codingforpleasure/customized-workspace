@@ -2,18 +2,16 @@
 
 <!--ts-->
    * [Outliers](#outliers)
-      * [IQR](#iqr)
+      * [IQR (Interquatile Range)](#iqr-interquatile-range)
       * [Upper and Lower Fences](#upper-and-lower-fences)
          * [Outer Fence](#outer-fence)
          * [Inner Fence](#inner-fence)
 
-<!-- Added by: gil_diy, at: Tue 28 Dec 2021 11:54:04 IST -->
+<!-- Added by: gil_diy, at: Tue 28 Dec 2021 11:54:17 IST -->
 
 <!--te-->
 
-## IQR
-
-Interquatile Range (IQR)
+## IQR (Interquatile Range)
 
 Difference between third and first quartiles
 The **IQR covers the middle 50 percents of the distribution**.
