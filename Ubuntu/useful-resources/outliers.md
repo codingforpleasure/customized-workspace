@@ -2,13 +2,17 @@
 
 <!--ts-->
    * [Outliers](#outliers)
+      * [IQR](#iqr)
       * [Upper and Lower Fences](#upper-and-lower-fences)
          * [Outer Fence](#outer-fence)
          * [Inner Fence](#inner-fence)
 
-<!-- Added by: gil_diy, at: Tue 28 Dec 2021 11:42:33 IST -->
+<!-- Added by: gil_diy, at: Tue 28 Dec 2021 11:49:20 IST -->
 
 <!--te-->
+
+## IQR
+
 
 ## Upper and Lower Fences
 
@@ -26,3 +30,4 @@ Q1 - 1.5IQR
 
 Values outside the inner fence (but inside the outer fence)
 are **mild outliers**.
+
