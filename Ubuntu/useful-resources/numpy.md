@@ -70,7 +70,7 @@
       * [Exporting numpy array as image](#exporting-numpy-array-as-image)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Tue 28 Dec 2021 12:51:22 IST -->
+<!-- Added by: gil_diy, at: Wed 29 Dec 2021 10:04:59 IST -->
 
 <!--te-->
 
@@ -196,10 +196,6 @@ arr = np.empty(shape=(2, 3, 3))  # Initilaze a 3d array (with two layers)
 arr[0,:,:] = single_matrix # Adding to first layer
 arr[1,:,:] = single_matrix # Adding to second layer
 ```
-
-
-
-
 
 #### Import data from csv
 ```python
