@@ -16,7 +16,7 @@
       * [Measuring Object Detection models - mAP - What is Mean Average Precision?](#measuring-object-detection-models-map-what-is-mean-average-precision)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Wed 29 Dec 2021 02:10:46 IST -->
+<!-- Added by: gil_diy, at: Wed 29 Dec 2021 02:10:48 IST -->
 
 <!--te-->
 
@@ -245,7 +245,7 @@ It seems pycharm is unable to debug parallel programs. you can disable parallel 
 cfg = get_cfg()
  ....
  cfg.DATALOADER.NUM_WORKERS = 0
- ````
+````
 
 ## Measuring Object Detection models - mAP - What is Mean Average Precision?
 
