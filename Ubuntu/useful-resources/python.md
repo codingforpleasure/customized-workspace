@@ -6,7 +6,7 @@
          * [f-Strings (Python 3.6+)](#f-strings-python-36)
       * [Create gridsearch easily](#create-gridsearch-easily)
 
-<!-- Added by: gil_diy, at: Thu 30 Dec 2021 09:53:42 IST -->
+<!-- Added by: gil_diy, at: Thu 30 Dec 2021 09:54:30 IST -->
 
 <!--te-->
 
@@ -55,3 +55,6 @@ if __name__ == '__main__':
     for settings in grid_parameters(parameters):
         print()
 ```
+
+
+[Reference](https://towardsdatascience.com/how-to-write-your-grid-search-function-in-python-43ad0da97522)
