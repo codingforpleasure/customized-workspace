@@ -8,7 +8,7 @@
          * [Type aliases](#type-aliases)
       * [Create gridsearch easily](#create-gridsearch-easily)
 
-<!-- Added by: gil_diy, at: Thu 30 Dec 2021 13:54:28 IST -->
+<!-- Added by: gil_diy, at: Thu 30 Dec 2021 14:09:59 IST -->
 
 <!--te-->
 
@@ -65,19 +65,20 @@ To avoid nested and inflexible for loops, I used the product function that is av
 What that does is building an iterable that returns the cartesian product of all iterables you are passing in
 
 ```python
-from typing import Iterable, Dict
+from typing import Iterable, Any, Dict  # List, Tuple, etc...
 from itertools import product
+
 
 def grid_parameters(parameters: Dict[str, Iterable[Any]]) -> Iterable[Dict[str, Any]]:
     for params in product(*parameters.values()):
         yield dict(zip(parameters.keys(), params))
 
-if __name__ == '__main__':
-	parameters = {"learning_rate": [0.1, 1, 2],
-              "penalty": [1, 2, 3]}
 
-    for settings in grid_parameters(parameters):
-        print()
+parameters = {"learning_rate": [0.1, 1, 2], "penalty": [1, 2, 3]}
+
+for settings in grid_parameters(parameters):
+    print(settings)
+
 ```
 
 * **Comment:** The ability to use the [] operator on types like list, dict for type hinting was added in 3.9. therefore use 
