@@ -3,12 +3,12 @@
       * [Magic methods (dunder methods)](#magic-methods-dunder-methods)
       * [S strings in python](#s-strings-in-python)
          * [Approach one - “Old Style” String Formatting (% Operator)](#approach-one---old-style-string-formatting--operator)
+         * [f-Strings (Python 3.6+)](#f-strings-python-36)
       * [Type hints](#type-hints)
          * [Type aliases](#type-aliases)
-         * [f-Strings (Python 3.6+)](#f-strings-python-36)
       * [Create gridsearch easily](#create-gridsearch-easily)
 
-<!-- Added by: gil_diy, at: Thu 30 Dec 2021 13:45:28 IST -->
+<!-- Added by: gil_diy, at: Thu 30 Dec 2021 13:45:42 IST -->
 
 <!--te-->
 
@@ -31,6 +31,12 @@ different names which start and end with the double underscore. They are called 
 'Hello, %s' % name
 ```
 
+### f-Strings (Python 3.6+)
+
+```python
+f'Hello, {name}!'
+```
+
 ## Type hints
 
 [Reference](https://docs.python.org/3/library/typing.html)
@@ -51,11 +57,7 @@ def scale(scalar: float, vector: Vector) -> Vector:
 new_vector = scale(2.0, [1.0, -4.2, 5.4])
 ```
 
-### f-Strings (Python 3.6+)
 
-```python
-f'Hello, {name}!'
-```
 
 ## Create gridsearch easily
 
