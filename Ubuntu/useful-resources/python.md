@@ -3,10 +3,11 @@
       * [Magic methods (dunder methods)](#magic-methods-dunder-methods)
       * [S strings in python](#s-strings-in-python)
          * [Approach one - “Old Style” String Formatting (% Operator)](#approach-one---old-style-string-formatting--operator)
+         * [Type hints](#type-hints)
          * [f-Strings (Python 3.6+)](#f-strings-python-36)
       * [Create gridsearch easily](#create-gridsearch-easily)
 
-<!-- Added by: gil_diy, at: Thu 30 Dec 2021 09:54:32 IST -->
+<!-- Added by: gil_diy, at: Thu 30 Dec 2021 13:42:28 IST -->
 
 <!--te-->
 
@@ -27,6 +28,14 @@ different names which start and end with the double underscore. They are called 
 
 ```python
 'Hello, %s' % name
+```
+
+### Type hints
+
+####Type aliases
+
+```python
+from ty
 ```
 
 ### f-Strings (Python 3.6+)
