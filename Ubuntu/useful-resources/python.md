@@ -8,7 +8,7 @@
          * [Type aliases](#type-aliases)
       * [Create gridsearch easily](#create-gridsearch-easily)
 
-<!-- Added by: gil_diy, at: Thu 30 Dec 2021 13:45:45 IST -->
+<!-- Added by: gil_diy, at: Thu 30 Dec 2021 13:50:46 IST -->
 
 <!--te-->
 
@@ -65,12 +65,12 @@ To avoid nested and inflexible for loops, I used the product function that is av
 What that does is building an iterable that returns the cartesian product of all iterables you are passing in
 
 ```python
-from itertools import product
+from itertools import product, Dict
 
 
-def grid_parameters(my_parameters):
-    for params in product(*my_parameters.values()):
-        yield dict(zip(my_parameters.keys(), params))
+def grid_parameters(parameters: Dict[str, Iterable[Any]]) -> Iterable[Dict[str, Any]]:
+    for params in product(*parameters.values()):
+        yield dict(zip(parameters.keys(), params))
 
 if __name__ == '__main__':
 	parameters = {"learning_rate": [0.1, 1, 2],
