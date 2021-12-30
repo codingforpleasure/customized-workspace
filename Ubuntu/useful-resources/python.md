@@ -8,7 +8,7 @@
          * [Type aliases](#type-aliases)
       * [Create gridsearch easily](#create-gridsearch-easily)
 
-<!-- Added by: gil_diy, at: Thu 30 Dec 2021 13:50:48 IST -->
+<!-- Added by: gil_diy, at: Thu 30 Dec 2021 13:51:49 IST -->
 
 <!--te-->
 
@@ -80,5 +80,6 @@ if __name__ == '__main__':
         print()
 ```
 
+* **Comment:** The ability to use the [] operator on types like list for type hinting was added in 3.9.
 
 [Reference](https://towardsdatascience.com/how-to-write-your-grid-search-function-in-python-43ad0da97522)
