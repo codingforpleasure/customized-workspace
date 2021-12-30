@@ -3,11 +3,11 @@
       * [Magic methods (dunder methods)](#magic-methods-dunder-methods)
       * [S strings in python](#s-strings-in-python)
          * [Approach one - “Old Style” String Formatting (% Operator)](#approach-one---old-style-string-formatting--operator)
-         * [Type hints](#type-hints)
+      * [Type hints](#type-hints)
          * [f-Strings (Python 3.6+)](#f-strings-python-36)
       * [Create gridsearch easily](#create-gridsearch-easily)
 
-<!-- Added by: gil_diy, at: Thu 30 Dec 2021 13:45:04 IST -->
+<!-- Added by: gil_diy, at: Thu 30 Dec 2021 13:45:22 IST -->
 
 <!--te-->
 
@@ -30,11 +30,11 @@ different names which start and end with the double underscore. They are called 
 'Hello, %s' % name
 ```
 
-### Type hints
+## Type hints
 
 [Reference](https://docs.python.org/3/library/typing.html)
 
-####Type aliases
+###Type aliases
 
 A type alias is defined by assigning the type to the alias. In this example, Vector and list[float] will be treated as interchangeable synonyms:
 
