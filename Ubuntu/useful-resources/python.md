@@ -7,7 +7,7 @@
          * [f-Strings (Python 3.6+)](#f-strings-python-36)
       * [Create gridsearch easily](#create-gridsearch-easily)
 
-<!-- Added by: gil_diy, at: Thu 30 Dec 2021 13:42:30 IST -->
+<!-- Added by: gil_diy, at: Thu 30 Dec 2021 13:43:33 IST -->
 
 <!--te-->
 
@@ -34,8 +34,18 @@ different names which start and end with the double underscore. They are called 
 
 ####Type aliases
 
+A type alias is defined by assigning the type to the alias. In this example, Vector and list[float] will be treated as interchangeable synonyms:
+
 ```python
-from ty
+from typing import List
+
+Vector = List[float]
+
+def scale(scalar: float, vector: Vector) -> Vector:
+    return [scalar * num for num in vector]
+
+# typechecks; a list of floats qualifies as a Vector.
+new_vector = scale(2.0, [1.0, -4.2, 5.4])
 ```
 
 ### f-Strings (Python 3.6+)
