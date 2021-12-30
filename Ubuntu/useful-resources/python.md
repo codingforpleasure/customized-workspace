@@ -8,7 +8,7 @@
          * [Type aliases](#type-aliases)
       * [Create gridsearch easily](#create-gridsearch-easily)
 
-<!-- Added by: gil_diy, at: Thu 30 Dec 2021 13:51:49 IST -->
+<!-- Added by: gil_diy, at: Thu 30 Dec 2021 13:53:45 IST -->
 
 <!--te-->
 
@@ -65,8 +65,8 @@ To avoid nested and inflexible for loops, I used the product function that is av
 What that does is building an iterable that returns the cartesian product of all iterables you are passing in
 
 ```python
-from itertools import product, Dict
-
+from typing import Iterable, Dict
+from itertools import product
 
 def grid_parameters(parameters: Dict[str, Iterable[Any]]) -> Iterable[Dict[str, Any]]:
     for params in product(*parameters.values()):
@@ -80,6 +80,6 @@ if __name__ == '__main__':
         print()
 ```
 
-* **Comment:** The ability to use the [] operator on types like list for type hinting was added in 3.9.
+* **Comment:** The ability to use the [] operator on types like list, dict for type hinting was added in 3.9. therefore use 
 
 [Reference](https://towardsdatascience.com/how-to-write-your-grid-search-function-in-python-43ad0da97522)
