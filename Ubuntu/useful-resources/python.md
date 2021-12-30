@@ -8,7 +8,7 @@
          * [Type aliases](#type-aliases)
       * [Create gridsearch easily](#create-gridsearch-easily)
 
-<!-- Added by: gil_diy, at: Thu 30 Dec 2021 13:54:20 IST -->
+<!-- Added by: gil_diy, at: Thu 30 Dec 2021 13:54:22 IST -->
 
 <!--te-->
 
