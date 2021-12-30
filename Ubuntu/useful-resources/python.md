@@ -6,7 +6,7 @@
          * [f-Strings (Python 3.6+)](#f-strings-python-36)
       * [Create gridsearch easily](#create-gridsearch-easily)
 
-<!-- Added by: gil_diy, at: Thu 30 Dec 2021 09:53:18 IST -->
+<!-- Added by: gil_diy, at: Thu 30 Dec 2021 09:53:42 IST -->
 
 <!--te-->
 
@@ -37,7 +37,8 @@ f'Hello, {name}!'
 
 ## Create gridsearch easily
 
-To avoid nested and inflexible for loops, I used the product function that is available from the awesome itertools module
+To avoid nested and inflexible for loops, I used the product function that is available from the awesome itertools module.
+What that does is building an iterable that returns the cartesian product of all iterables you are passing in
 
 ```python
 from itertools import product
