@@ -82,7 +82,7 @@
          * [Statsmodels](#statsmodels)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Mon 27 Dec 2021 00:23:00 IST -->
+<!-- Added by: gil_diy, at: Fri 31 Dec 2021 11:54:27 IST -->
 
 <!--te-->
 
@@ -631,6 +631,12 @@ df.groupby(df['Date'].dt.year)
 
 [Link](https://stackoverflow.com/questions/11073609/how-to-group-dataframe-by-a-period-of-time)
 
+[Link](https://coderedirect.com/questions/115764/pandas-groupby-range-of-values)
+
+
+```python
+df.groupby(pd.cut(df["B"], np.arange(0, 1.0+0.155, 0.155))).sum()
+```
 
 ## Concat Dataframes
 
