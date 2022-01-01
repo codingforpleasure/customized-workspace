@@ -12,7 +12,7 @@
          * [Type aliases](#type-aliases)
       * [Create gridsearch easily](#create-gridsearch-easily)
 
-<!-- Added by: gil_diy, at: Sat 01 Jan 2022 12:34:49 IST -->
+<!-- Added by: gil_diy, at: Sat 01 Jan 2022 12:34:54 IST -->
 
 <!--te-->
 
@@ -42,6 +42,7 @@ That print('3',\*fruits) line is passing all of the items in the fruits list int
 ```python
 fruits = ['lemon', 'pear', 'watermelon', 'tomato']
 print('1) ', fruits)
+
 print('2) ', fruits[0], fruits[1], fruits[2], fruits[3])
 
 print('3) ', *fruits) # <- How neat is this!
