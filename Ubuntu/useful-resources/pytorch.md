@@ -94,7 +94,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Sat 01 Jan 2022 11:17:47 IST -->
+<!-- Added by: gil_diy, at: Sat 01 Jan 2022 11:19:11 IST -->
 
 <!--te-->
 
@@ -268,8 +268,17 @@ Since Pytorch modules processing image data expect tensors in format
 **Channels x Height x Width** , whereas PILLOW, Matplotlib and OpenCV expect
 image arrays in the format of **Height x Width x Channels**
 
+You can either use:
 ```python
-img.permute(1, 2, 0).numpy() * 255).astype(np.uint8)
+img_tensor.permute(1, 2, 0).numpy() * 255).astype(np.uint8)
+```
+
+or 
+
+```python
+from torchvision import transforms.functional as F
+
+F.to_pil_image(image_tensor)
 ```
 
 ##### flatten 
