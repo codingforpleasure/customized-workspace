@@ -16,10 +16,11 @@
          * [Type aliases](#type-aliases)
       * [Create gridsearch easily](#create-gridsearch-easily)
       * [Dectorators](#dectorators)
+      * [Property decorator](#property-decorator)
       * [Python Generators](#python-generators)
-      * [Python](#python-1)
+      * [Python Closure](#python-closure)
 
-<!-- Added by: gil_diy, at: Sat 01 Jan 2022 12:55:54 IST -->
+<!-- Added by: gil_diy, at: Sat 01 Jan 2022 12:59:47 IST -->
 
 <!--te-->
 
@@ -200,14 +201,20 @@ for settings in grid_parameters(parameters):
 
 [Reference](https://towardsdatascience.com/how-to-write-your-grid-search-function-in-python-43ad0da97522)
 
+
+
 ## Dectorators
 
 [Reference](https://www.programiz.com/python-programming/decorator)
+
+## Property decorator
+
+[Reference](https://www.programiz.com/python-programming/property)
 
 ## Python Generators
 
 [Reference](https://www.programiz.com/python-programming/decorator)
 
-## Python 
+## Python Closure
 
 [Reference](https://www.programiz.com/python-programming/closure)
