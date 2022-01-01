@@ -4,7 +4,7 @@
       * [What is the meaning of asterisk in python?](#what-is-the-meaning-of-asterisk-in-python)
          * [Example #1: Single asterisks for unpacking into function call](#example-1-single-asterisks-for-unpacking-into-function-call)
          * [Example #2: Using * multiple times:](#example-2-using--multiple-times)
-         * [### Example #3: Single astrisks for tuple unpacking](#-example-3-single-astrisks-for-tuple-unpacking)
+         * [Example #3: Single astrisks for tuple unpacking](#example-3-single-astrisks-for-tuple-unpacking)
          * [Double Asterisks usage](#double-asterisks-usage)
       * [S strings in python](#s-strings-in-python)
          * [Approach one - “Old Style” String Formatting (% Operator)](#approach-one---old-style-string-formatting--operator)
@@ -13,7 +13,7 @@
          * [Type aliases](#type-aliases)
       * [Create gridsearch easily](#create-gridsearch-easily)
 
-<!-- Added by: gil_diy, at: Sat 01 Jan 2022 12:37:10 IST -->
+<!-- Added by: gil_diy, at: Sat 01 Jan 2022 12:37:18 IST -->
 
 <!--te-->
 
@@ -69,7 +69,7 @@ print(*numbers, *fruits)
 2 1 3 4 7 lemon pear watermelon tomato
 ```
 
-### ### Example #3: Single astrisks for tuple unpacking
+### Example #3: Single astrisks for tuple unpacking
 
 ```python
 fruits = ['lemon', 'pear', 'watermelon', 'tomato']
