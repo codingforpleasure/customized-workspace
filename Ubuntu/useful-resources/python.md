@@ -13,7 +13,7 @@
          * [Type aliases](#type-aliases)
       * [Create gridsearch easily](#create-gridsearch-easily)
 
-<!-- Added by: gil_diy, at: Sat 01 Jan 2022 12:37:32 IST -->
+<!-- Added by: gil_diy, at: Sat 01 Jan 2022 12:49:36 IST -->
 
 <!--te-->
 
@@ -88,9 +88,7 @@ print('2) ', remaining)
 
 ### Double Asterisks usage
 
-The ** operator does something similar, but with keyword arguments. 
-
-The ** operator allows us to take a dictionary of key-value pairs and unpack it into keyword arguments in a function call.
+The ** operator allows us to take a **dictionary of key-value pairs and unpack it** into keyword arguments in a function call.
 
 ```python
 date_info = {'year': "2020", 'month': "01", 'day': "01"}
