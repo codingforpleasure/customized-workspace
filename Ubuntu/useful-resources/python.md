@@ -1,7 +1,7 @@
 <!--ts-->
    * [Python](#python)
       * [Magic methods (dunder methods)](#magic-methods-dunder-methods)
-   * [What is the meaning of asterisk in python?](#what-is-the-meaning-of-asterisk-in-python)
+      * [What is the meaning of asterisk in python?](#what-is-the-meaning-of-asterisk-in-python)
       * [Single asterisks for unpacking into function call](#single-asterisks-for-unpacking-into-function-call)
       * [Single astrisks for tuple unpacking](#single-astrisks-for-tuple-unpacking)
       * [Double Asterisks usage](#double-asterisks-usage)
@@ -12,7 +12,7 @@
          * [Type aliases](#type-aliases)
       * [Create gridsearch easily](#create-gridsearch-easily)
 
-<!-- Added by: gil_diy, at: Sat 01 Jan 2022 12:26:25 IST -->
+<!-- Added by: gil_diy, at: Sat 01 Jan 2022 12:28:42 IST -->
 
 <!--te-->
 
@@ -24,7 +24,9 @@
 different names which start and end with the double underscore. They are called as magic methods
 
 
-# What is the meaning of asterisk in python?
+
+
+## What is the meaning of asterisk in python?
 
 ## Single asterisks for unpacking into function call
 
