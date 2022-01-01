@@ -94,7 +94,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Sat 01 Jan 2022 11:15:22 IST -->
+<!-- Added by: gil_diy, at: Sat 01 Jan 2022 11:17:44 IST -->
 
 <!--te-->
 
@@ -264,7 +264,9 @@ print('x.permute(1,0) = ',x.permute(1,0))
 
 ```
 
-Since Pytorch modules 
+Since Pytorch modules processing image data expect tensors in format 
+**Channels x Height x Width** , whereas PILLOW, Matplotlib and OpenCV expect
+image arrays in the format of **Height x Width x Channels**
 
 ```python
 img.permute(1, 2, 0).numpy() * 255).astype(np.uint8)
