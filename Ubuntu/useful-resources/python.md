@@ -6,6 +6,8 @@
          * [Example #2: Using * multiple times:](#example-2-using--multiple-times)
          * [Example #3: Single astrisks for tuple unpacking](#example-3-single-astrisks-for-tuple-unpacking)
          * [Double Asterisks usage](#double-asterisks-usage)
+            * [Example #1: unpacking dictionary](#example-1-unpacking-dictionary)
+            * [Example #2: unpacking twice for naming a file](#example-2-unpacking-twice-for-naming-a-file)
       * [S strings in python](#s-strings-in-python)
          * [Approach one - “Old Style” String Formatting (% Operator)](#approach-one---old-style-string-formatting--operator)
          * [f-Strings (Python 3.6+)](#f-strings-python-36)
@@ -13,7 +15,7 @@
          * [Type aliases](#type-aliases)
       * [Create gridsearch easily](#create-gridsearch-easily)
 
-<!-- Added by: gil_diy, at: Sat 01 Jan 2022 12:49:36 IST -->
+<!-- Added by: gil_diy, at: Sat 01 Jan 2022 12:50:50 IST -->
 
 <!--te-->
 
@@ -90,6 +92,9 @@ print('2) ', remaining)
 
 The ** operator allows us to take a **dictionary of key-value pairs and unpack it** into keyword arguments in a function call.
 
+
+#### Example #1: unpacking dictionary
+
 ```python
 date_info = {'year': "2020", 'month': "01", 'day': "01"}
 filename = "{year}-{month}-{day}.txt".format(**date_info)
@@ -102,7 +107,7 @@ print(filename)
 2020-01-01.txt
 ```
 
-
+#### Example #2: unpacking twice for naming a file
 
 **Another example**
 Using ** multiple times can sometimes be handy:
