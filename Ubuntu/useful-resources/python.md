@@ -2,9 +2,10 @@
    * [Python](#python)
       * [Magic methods (dunder methods)](#magic-methods-dunder-methods)
       * [What is the meaning of asterisk in python?](#what-is-the-meaning-of-asterisk-in-python)
-         * [Example #1: Single asterisks for unpacking into function call](#example-1-single-asterisks-for-unpacking-into-function-call)
-         * [Example #2: Using * multiple times:](#example-2-using--multiple-times)
-         * [Example #3: Single astrisks for tuple unpacking](#example-3-single-astrisks-for-tuple-unpacking)
+         * [Single asterisk](#single-asterisk)
+            * [Example #1: Single asterisks for unpacking into function call](#example-1-single-asterisks-for-unpacking-into-function-call)
+            * [Example #2: Using * multiple times:](#example-2-using--multiple-times)
+            * [Example #3: Single astrisks for tuple unpacking](#example-3-single-astrisks-for-tuple-unpacking)
          * [Double Asterisks usage](#double-asterisks-usage)
             * [Example #1: unpacking dictionary](#example-1-unpacking-dictionary)
             * [Example #2: unpacking twice for naming a file](#example-2-unpacking-twice-for-naming-a-file)
@@ -15,7 +16,7 @@
          * [Type aliases](#type-aliases)
       * [Create gridsearch easily](#create-gridsearch-easily)
 
-<!-- Added by: gil_diy, at: Sat 01 Jan 2022 12:50:50 IST -->
+<!-- Added by: gil_diy, at: Sat 01 Jan 2022 12:52:13 IST -->
 
 <!--te-->
 
@@ -37,7 +38,9 @@ dir(int)
 
 ## What is the meaning of asterisk in python?
 
-### Example #1: Single asterisks for unpacking into function call
+### Single asterisk
+
+#### Example #1: Single asterisks for unpacking into function call
 
 That print('3',\*fruits) line is passing all of the items in the fruits list into the print function call as separate arguments, without even needing to know how many arguments are in the list
 
@@ -58,7 +61,7 @@ print('3) ', *fruits) # <- How neat is this!
 3)  lemon pear watermelon tomato
 ```
 
-### Example #2: Using * multiple times:
+#### Example #2: Using * multiple times:
 
 
 ```python
@@ -71,7 +74,7 @@ print(*numbers, *fruits)
 2 1 3 4 7 lemon pear watermelon tomato
 ```
 
-### Example #3: Single astrisks for tuple unpacking
+#### Example #3: Single astrisks for tuple unpacking
 
 ```python
 fruits = ['lemon', 'pear', 'watermelon', 'tomato']
