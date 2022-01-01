@@ -94,7 +94,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Mon 20 Dec 2021 02:25:49 IST -->
+<!-- Added by: gil_diy, at: Sat 01 Jan 2022 11:09:20 IST -->
 
 <!--te-->
 
@@ -252,6 +252,7 @@ def my_flatten(t):
 
 Arrange the axis in different order,
 it is similar to numpy function:
+
 `np.transpose(grid, axes = (1, 2, 0))` 
 
 ```python
