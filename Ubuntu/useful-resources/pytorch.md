@@ -94,7 +94,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Sat 01 Jan 2022 11:09:20 IST -->
+<!-- Added by: gil_diy, at: Sat 01 Jan 2022 11:09:41 IST -->
 
 <!--te-->
 
@@ -261,6 +261,12 @@ x = torch.tensor([[1,2,3],[4,5,6]])
 print('x = ',x)
 
 print('x.permute(1,0) = ',x.permute(1,0))
+
+```
+
+Another example:
+
+```python
 
 ```
 
