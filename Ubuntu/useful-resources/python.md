@@ -16,8 +16,10 @@
          * [Type aliases](#type-aliases)
       * [Create gridsearch easily](#create-gridsearch-easily)
       * [Dectorators](#dectorators)
+      * [Python Generators](#python-generators)
+      * [Python](#python-1)
 
-<!-- Added by: gil_diy, at: Sat 01 Jan 2022 12:54:14 IST -->
+<!-- Added by: gil_diy, at: Sat 01 Jan 2022 12:55:54 IST -->
 
 <!--te-->
 
@@ -200,4 +202,12 @@ for settings in grid_parameters(parameters):
 
 ## Dectorators
 
-[Reference](https://www.programiz.com/python-programming/property)
+[Reference](https://www.programiz.com/python-programming/decorator)
+
+## Python Generators
+
+[Reference](https://www.programiz.com/python-programming/decorator)
+
+## Python 
+
+[Reference](https://www.programiz.com/python-programming/closure)
