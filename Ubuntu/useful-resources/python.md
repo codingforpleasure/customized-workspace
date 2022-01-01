@@ -12,7 +12,7 @@
          * [Type aliases](#type-aliases)
       * [Create gridsearch easily](#create-gridsearch-easily)
 
-<!-- Added by: gil_diy, at: Sat 01 Jan 2022 12:29:27 IST -->
+<!-- Added by: gil_diy, at: Sat 01 Jan 2022 12:30:41 IST -->
 
 <!--te-->
 
@@ -29,6 +29,8 @@ Built-in classes in Python define many magic methods. Use the `dir()` function t
 dir(int)
 ```
 
+
+[Reference](https://www.tutorialsteacher.com/python/magic-methods-in-python)
 ## What is the meaning of asterisk in python?
 
 ## Single asterisks for unpacking into function call
