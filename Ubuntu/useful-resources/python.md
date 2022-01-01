@@ -3,7 +3,7 @@
       * [Magic methods (dunder methods)](#magic-methods-dunder-methods)
       * [What is the meaning of asterisk in python?](#what-is-the-meaning-of-asterisk-in-python)
          * [Single asterisks for unpacking into function call](#single-asterisks-for-unpacking-into-function-call)
-      * [Single astrisks for tuple unpacking](#single-astrisks-for-tuple-unpacking)
+         * [Single astrisks for tuple unpacking](#single-astrisks-for-tuple-unpacking)
       * [Double Asterisks usage](#double-asterisks-usage)
       * [S strings in python](#s-strings-in-python)
          * [Approach one - “Old Style” String Formatting (% Operator)](#approach-one---old-style-string-formatting--operator)
@@ -12,7 +12,7 @@
          * [Type aliases](#type-aliases)
       * [Create gridsearch easily](#create-gridsearch-easily)
 
-<!-- Added by: gil_diy, at: Sat 01 Jan 2022 12:30:56 IST -->
+<!-- Added by: gil_diy, at: Sat 01 Jan 2022 12:31:06 IST -->
 
 <!--te-->
 
@@ -66,7 +66,7 @@ print(*numbers, *fruits)
 2 1 3 4 7 lemon pear watermelon tomato
 ```
 
-## Single astrisks for tuple unpacking
+### Single astrisks for tuple unpacking
 
 ```python
 fruits = ['lemon', 'pear', 'watermelon', 'tomato']
