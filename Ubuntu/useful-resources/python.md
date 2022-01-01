@@ -4,7 +4,7 @@
       * [What is the meaning of asterisk in python?](#what-is-the-meaning-of-asterisk-in-python)
          * [Single asterisks for unpacking into function call](#single-asterisks-for-unpacking-into-function-call)
          * [Single astrisks for tuple unpacking](#single-astrisks-for-tuple-unpacking)
-      * [Double Asterisks usage](#double-asterisks-usage)
+         * [Double Asterisks usage](#double-asterisks-usage)
       * [S strings in python](#s-strings-in-python)
          * [Approach one - “Old Style” String Formatting (% Operator)](#approach-one---old-style-string-formatting--operator)
          * [f-Strings (Python 3.6+)](#f-strings-python-36)
@@ -12,7 +12,7 @@
          * [Type aliases](#type-aliases)
       * [Create gridsearch easily](#create-gridsearch-easily)
 
-<!-- Added by: gil_diy, at: Sat 01 Jan 2022 12:31:06 IST -->
+<!-- Added by: gil_diy, at: Sat 01 Jan 2022 12:31:10 IST -->
 
 <!--te-->
 
@@ -83,7 +83,7 @@ print('2) ', remaining)
 2)  ['pear', 'watermelon', 'tomato']
 ```
 
-## Double Asterisks usage
+### Double Asterisks usage
 
 The ** operator does something similar, but with keyword arguments. 
 
