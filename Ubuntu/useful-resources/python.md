@@ -3,6 +3,7 @@
       * [Magic methods (dunder methods)](#magic-methods-dunder-methods)
       * [What is the meaning of asterisk in python?](#what-is-the-meaning-of-asterisk-in-python)
          * [Example #1: Single asterisks for unpacking into function call](#example-1-single-asterisks-for-unpacking-into-function-call)
+         * [Example #2: Using * multiple times can sometimes be handy:](#example-2-using--multiple-times-can-sometimes-be-handy)
          * [Single astrisks for tuple unpacking](#single-astrisks-for-tuple-unpacking)
          * [Double Asterisks usage](#double-asterisks-usage)
       * [S strings in python](#s-strings-in-python)
@@ -12,7 +13,7 @@
          * [Type aliases](#type-aliases)
       * [Create gridsearch easily](#create-gridsearch-easily)
 
-<!-- Added by: gil_diy, at: Sat 01 Jan 2022 12:34:54 IST -->
+<!-- Added by: gil_diy, at: Sat 01 Jan 2022 12:36:42 IST -->
 
 <!--te-->
 
@@ -55,8 +56,8 @@ print('3) ', *fruits) # <- How neat is this!
 3)  lemon pear watermelon tomato
 ```
 
-**Another example**
-Using * multiple times can sometimes be handy:
+### Example #2: Using * multiple times can sometimes be handy:
+
 
 ```python
 fruits = ['lemon', 'pear', 'watermelon', 'tomato']
