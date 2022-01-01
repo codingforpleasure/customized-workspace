@@ -15,8 +15,9 @@
       * [Type hints](#type-hints)
          * [Type aliases](#type-aliases)
       * [Create gridsearch easily](#create-gridsearch-easily)
+      * [Dectorators](#dectorators)
 
-<!-- Added by: gil_diy, at: Sat 01 Jan 2022 12:53:25 IST -->
+<!-- Added by: gil_diy, at: Sat 01 Jan 2022 12:54:14 IST -->
 
 <!--te-->
 
@@ -196,3 +197,7 @@ for settings in grid_parameters(parameters):
 `from typing import Dict, List`
 
 [Reference](https://towardsdatascience.com/how-to-write-your-grid-search-function-in-python-43ad0da97522)
+
+## Dectorators
+
+[Reference](https://www.programiz.com/python-programming/property)
