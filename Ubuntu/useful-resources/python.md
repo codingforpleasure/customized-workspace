@@ -12,7 +12,7 @@
          * [Type aliases](#type-aliases)
       * [Create gridsearch easily](#create-gridsearch-easily)
 
-<!-- Added by: gil_diy, at: Sat 01 Jan 2022 12:34:22 IST -->
+<!-- Added by: gil_diy, at: Sat 01 Jan 2022 12:34:26 IST -->
 
 <!--te-->
 
@@ -36,7 +36,7 @@ dir(int)
 
 ### Example #1: Single asterisks for unpacking into function call
 
-That print('3',\*fruits) line is passing all of the items in the fruits list into the print function call as separate arguments, without us even needing to know how many arguments are in the list
+That print('3',\*fruits) line is passing all of the items in the fruits list into the print function call as separate arguments, without even needing to know how many arguments are in the list
 
 
 ```python
