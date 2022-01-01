@@ -94,7 +94,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Sat 01 Jan 2022 11:20:14 IST -->
+<!-- Added by: gil_diy, at: Sat 01 Jan 2022 11:21:06 IST -->
 
 <!--te-->
 
@@ -110,6 +110,7 @@ The functions appear in `from torch.nn import functional as F` are callable,
 for example:
 
 `nn.Softmax` - Not callable 
+
 `F.softmax` - callable 
 
 
