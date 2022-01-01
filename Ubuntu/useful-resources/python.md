@@ -12,7 +12,7 @@
          * [Type aliases](#type-aliases)
       * [Create gridsearch easily](#create-gridsearch-easily)
 
-<!-- Added by: gil_diy, at: Sat 01 Jan 2022 12:29:01 IST -->
+<!-- Added by: gil_diy, at: Sat 01 Jan 2022 12:29:27 IST -->
 
 <!--te-->
 
@@ -25,6 +25,9 @@ different names which start and end with the double underscore. They are called 
 
 Built-in classes in Python define many magic methods. Use the `dir()` function to see the number of magic methods inherited by a class. For example, the following lists all the attributes and methods defined in the int class. 
 
+```python
+dir(int)
+```
 
 ## What is the meaning of asterisk in python?
 
