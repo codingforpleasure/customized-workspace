@@ -2,7 +2,7 @@
    * [Python](#python)
       * [Magic methods (dunder methods)](#magic-methods-dunder-methods)
       * [What is the meaning of asterisk in python?](#what-is-the-meaning-of-asterisk-in-python)
-      * [Single asterisks for unpacking into function call](#single-asterisks-for-unpacking-into-function-call)
+         * [Single asterisks for unpacking into function call](#single-asterisks-for-unpacking-into-function-call)
       * [Single astrisks for tuple unpacking](#single-astrisks-for-tuple-unpacking)
       * [Double Asterisks usage](#double-asterisks-usage)
       * [S strings in python](#s-strings-in-python)
@@ -12,7 +12,7 @@
          * [Type aliases](#type-aliases)
       * [Create gridsearch easily](#create-gridsearch-easily)
 
-<!-- Added by: gil_diy, at: Sat 01 Jan 2022 12:30:41 IST -->
+<!-- Added by: gil_diy, at: Sat 01 Jan 2022 12:30:56 IST -->
 
 <!--te-->
 
@@ -31,9 +31,10 @@ dir(int)
 
 
 [Reference](https://www.tutorialsteacher.com/python/magic-methods-in-python)
+
 ## What is the meaning of asterisk in python?
 
-## Single asterisks for unpacking into function call
+### Single asterisks for unpacking into function call
 
 That print('3',\*fruits) line is passing all of the items in the fruits list into the print function call as separate arguments, without us even needing to know how many arguments are in the list
 
