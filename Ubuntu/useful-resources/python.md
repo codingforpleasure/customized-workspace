@@ -2,7 +2,7 @@
    * [Python](#python)
       * [Magic methods (dunder methods)](#magic-methods-dunder-methods)
       * [What is the meaning of asterisk in python?](#what-is-the-meaning-of-asterisk-in-python)
-         * [Single asterisk](#single-asterisk)
+         * [Single asterisk usage](#single-asterisk-usage)
             * [Example #1: Single asterisks for unpacking into function call](#example-1-single-asterisks-for-unpacking-into-function-call)
             * [Example #2: Using * multiple times:](#example-2-using--multiple-times)
             * [Example #3: Single astrisks for tuple unpacking](#example-3-single-astrisks-for-tuple-unpacking)
@@ -16,7 +16,7 @@
          * [Type aliases](#type-aliases)
       * [Create gridsearch easily](#create-gridsearch-easily)
 
-<!-- Added by: gil_diy, at: Sat 01 Jan 2022 12:52:13 IST -->
+<!-- Added by: gil_diy, at: Sat 01 Jan 2022 12:53:25 IST -->
 
 <!--te-->
 
@@ -38,7 +38,7 @@ dir(int)
 
 ## What is the meaning of asterisk in python?
 
-### Single asterisk
+### Single asterisk usage
 
 #### Example #1: Single asterisks for unpacking into function call
 
@@ -191,7 +191,8 @@ for settings in grid_parameters(parameters):
 
 ```
 
-* **Comment:** The ability to use the [] operator on types like list, dict for type hinting was added in 3.9. therefore use 
+* **Comment:** The ability to use the [] operator on types like list, dict for type hinting was added in 3.9. therefore use:
+
 `from typing import Dict, List`
 
 [Reference](https://towardsdatascience.com/how-to-write-your-grid-search-function-in-python-43ad0da97522)
