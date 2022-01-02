@@ -21,7 +21,7 @@
       * [Python Generators](#python-generators)
       * [Python Closure](#python-closure)
 
-<!-- Added by: gil_diy, at: Sun 02 Jan 2022 10:18:23 IST -->
+<!-- Added by: gil_diy, at: Sun 02 Jan 2022 17:15:19 IST -->
 
 <!--te-->
 
@@ -209,6 +209,12 @@ for settings in grid_parameters(parameters):
 ## Dectorators
 
 [Reference](https://www.programiz.com/python-programming/decorator)
+
+```python
+def display_info(func):
+  
+```
+
 
 ## Property decorator
 
