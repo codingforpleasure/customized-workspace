@@ -21,7 +21,7 @@
       * [Python Generators](#python-generators)
       * [Python Closure](#python-closure)
 
-<!-- Added by: gil_diy, at: Sun 02 Jan 2022 17:15:22 IST -->
+<!-- Added by: gil_diy, at: Sun 02 Jan 2022 18:08:12 IST -->
 
 <!--te-->
 
@@ -210,9 +210,12 @@ for settings in grid_parameters(parameters):
 
 [Reference](https://www.programiz.com/python-programming/decorator)
 
+Decorators are an advanced feature of the Python language that allow you to modify the behavior of a function or method without touching its code
+
 ```python
 def display_info(func):
-  
+  def inner():
+
 ```
 
 
