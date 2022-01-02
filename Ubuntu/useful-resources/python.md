@@ -21,7 +21,7 @@
       * [Python Generators](#python-generators)
       * [Python Closure](#python-closure)
 
-<!-- Added by: gil_diy, at: Sun 02 Jan 2022 18:08:12 IST -->
+<!-- Added by: gil_diy, at: Sun 02 Jan 2022 18:08:15 IST -->
 
 <!--te-->
 
