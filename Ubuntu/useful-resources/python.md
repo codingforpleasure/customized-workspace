@@ -17,11 +17,12 @@
       * [Create gridsearch easily](#create-gridsearch-easily)
       * [try, Except](#try-except)
       * [Dectorators](#dectorators)
+         * [Example #1: For Logging a function](#example-1-for-logging-a-function)
       * [Property decorator](#property-decorator)
       * [Python Generators](#python-generators)
       * [Python Closure](#python-closure)
 
-<!-- Added by: gil_diy, at: Sun 02 Jan 2022 18:08:15 IST -->
+<!-- Added by: gil_diy, at: Mon 03 Jan 2022 09:18:12 IST -->
 
 <!--te-->
 
@@ -212,10 +213,26 @@ for settings in grid_parameters(parameters):
 
 Decorators are an advanced feature of the Python language that allow you to modify the behavior of a function or method without touching its code
 
+### Example #1: For Logging a function
 ```python
-def display_info(func):
-  def inner():
+def my_logger(orig_func):
+    import logging
+    logging.basicConfig(filename=f'{orig_func.__name__}.log', level=logging.INFO)
 
+    def wrapper(*args, **kwargs):
+        logging.info(f'Ran with args: {args}, and kwargs: {kwargs}')
+        return orig_func(*args, **kwargs)
+
+    return wrapper
+
+
+@my_logger
+def display_info(name, age):
+    print(f'display_info ran with arguments ({name},{age})')
+
+
+if __name__ == '__main__':
+    display_info('John', 25)
 ```
 
 
