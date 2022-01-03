@@ -23,7 +23,7 @@
       * [Python Generators](#python-generators)
       * [Python Closure](#python-closure)
 
-<!-- Added by: gil_diy, at: Mon 03 Jan 2022 09:20:42 IST -->
+<!-- Added by: gil_diy, at: Mon 03 Jan 2022 09:20:51 IST -->
 
 <!--te-->
 
@@ -244,7 +244,7 @@ def my_timer(orig_func):
 
     def wrapper(*args, **kwargs):
         t1 = time.time()
-        # We are calling the original function in our case it's 'display_info()'
+        # We are calling the original function in our case it's 'display_info(name, age)'
         result = orig_func(*args, **kwargs)
         t2 = time.time() - t1
         print(f'{orig_func.__name__} ran in: {t2} sec')
