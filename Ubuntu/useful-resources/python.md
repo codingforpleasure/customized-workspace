@@ -23,7 +23,7 @@
       * [Python Generators](#python-generators)
       * [Python Closure](#python-closure)
 
-<!-- Added by: gil_diy, at: Mon 03 Jan 2022 09:20:39 IST -->
+<!-- Added by: gil_diy, at: Mon 03 Jan 2022 09:20:42 IST -->
 
 <!--te-->
 
