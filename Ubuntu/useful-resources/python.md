@@ -22,9 +22,9 @@
       * [Property decorator](#property-decorator)
       * [Python Generators](#python-generators)
       * [Python Closure](#python-closure)
-      * [jsonify](#jsonify)
+      * [jsonify with numpy arrays](#jsonify-with-numpy-arrays)
 
-<!-- Added by: gil_diy, at: Mon 03 Jan 2022 15:01:29 IST -->
+<!-- Added by: gil_diy, at: Mon 03 Jan 2022 15:01:39 IST -->
 
 <!--te-->
 
@@ -275,7 +275,7 @@ if __name__ == '__main__':
 
 [Reference](https://www.programiz.com/python-programming/closure)
 
-## jsonify 
+## jsonify with numpy arrays
 
 ```python
 import json
