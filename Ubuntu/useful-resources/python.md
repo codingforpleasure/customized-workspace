@@ -22,8 +22,9 @@
       * [Property decorator](#property-decorator)
       * [Python Generators](#python-generators)
       * [Python Closure](#python-closure)
+      * [jsonify](#jsonify)
 
-<!-- Added by: gil_diy, at: Mon 03 Jan 2022 09:21:14 IST -->
+<!-- Added by: gil_diy, at: Mon 03 Jan 2022 15:01:27 IST -->
 
 <!--te-->
 
@@ -273,3 +274,23 @@ if __name__ == '__main__':
 ## Python Closure
 
 [Reference](https://www.programiz.com/python-programming/closure)
+
+## jsonify 
+
+```python
+import json
+import numpy as np
+
+class NumpyEncoder(json.JSONEncoder):
+    """ Special json encoder for numpy types """
+    def default(self, obj):
+        if isinstance(obj, np.integer):
+            return int(obj)
+        elif isinstance(obj, np.floating):
+            return float(obj)
+        elif isinstance(obj, np.ndarray):
+            return obj.tolist()
+        return json.JSONEncoder.default(self, obj)
+
+dumped = json.dumps(data, cls=NumpyEncoder)
+```
