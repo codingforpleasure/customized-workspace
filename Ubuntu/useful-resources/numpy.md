@@ -70,7 +70,7 @@
       * [Exporting numpy array as image](#exporting-numpy-array-as-image)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Wed 29 Dec 2021 10:05:03 IST -->
+<!-- Added by: gil_diy, at: Mon 03 Jan 2022 12:57:04 IST -->
 
 <!--te-->
 
@@ -693,6 +693,8 @@ np.delete(orig_cord, np.where(con), axis=1)
 ```
 
 ## Inserting data
+
+the second arguemtn defines the index or indices before which `values` is inserted.
 
 ```python
 np.insert([1,23,45,9,100], list(range(2,6, 2)), 2)
