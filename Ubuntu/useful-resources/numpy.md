@@ -6,7 +6,7 @@
          * [Printing nicely](#printing-nicely)
          * [Creating](#creating)
             * [Creating a 3d array](#creating-a-3d-array)
-            * [Converting](#converting)
+         * [Converting from numpy array to simple list](#converting-from-numpy-array-to-simple-list)
             * [Import data from csv](#import-data-from-csv)
          * [Random generation](#random-generation)
             * [randn](#randn)
@@ -71,7 +71,7 @@
       * [Exporting numpy array as image](#exporting-numpy-array-as-image)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Tue 04 Jan 2022 01:44:58 IST -->
+<!-- Added by: gil_diy, at: Tue 04 Jan 2022 01:46:10 IST -->
 
 <!--te-->
 
@@ -198,7 +198,12 @@ arr[0,:,:] = single_matrix # Adding to first layer
 arr[1,:,:] = single_matrix # Adding to second layer
 ```
 
-#### Converting 
+### Converting from numpy array to simple list
+
+```python
+my_array = np.array([1,2,5,7,8])
+my_list = my_array.tolist()
+```
 
 #### Import data from csv
 ```python
