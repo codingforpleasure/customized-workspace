@@ -23,7 +23,7 @@
       * [Python Generators](#python-generators)
       * [Python Closure](#python-closure)
 
-<!-- Added by: gil_diy, at: Mon 03 Jan 2022 09:18:44 IST -->
+<!-- Added by: gil_diy, at: Mon 03 Jan 2022 09:18:49 IST -->
 
 <!--te-->
 
@@ -237,6 +237,10 @@ if __name__ == '__main__':
 ```
 
 ### Example #2: For Logging a function
+
+```python
+
+```
 
 ## Property decorator
 
