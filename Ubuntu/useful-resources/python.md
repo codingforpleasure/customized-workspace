@@ -18,12 +18,12 @@
       * [try, Except](#try-except)
       * [Dectorators](#dectorators)
          * [Example #1: For Logging a function](#example-1-for-logging-a-function)
-         * [Example #2: For Logging a function](#example-2-for-logging-a-function)
+         * [Example #2: profiling function with Timer](#example-2-profiling-function-with-timer)
       * [Property decorator](#property-decorator)
       * [Python Generators](#python-generators)
       * [Python Closure](#python-closure)
 
-<!-- Added by: gil_diy, at: Mon 03 Jan 2022 09:18:49 IST -->
+<!-- Added by: gil_diy, at: Mon 03 Jan 2022 09:19:33 IST -->
 
 <!--te-->
 
@@ -236,9 +236,28 @@ if __name__ == '__main__':
     display_info('John', 25)
 ```
 
-### Example #2: For Logging a function
+### Example #2: profiling function with Timer
 
 ```python
+def my_timer(orig_func):
+    import time
+
+    def wrapper(*args, **kwargs):
+        t1 = time.time()
+        result = orig_func(*args, **kwargs)
+        t2 = time.time() - t1
+        print(f'{orig_func.__name__} ran in: {t2} sec')
+
+    return wrapper
+
+
+@my_timer
+def display_info(name, age):
+    print(f'display_info ran with arguments ({name},{age})')
+
+
+if __name__ == '__main__':
+    display_info('John', 25)
 
 ```
 
