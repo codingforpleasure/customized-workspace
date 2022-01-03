@@ -6,6 +6,7 @@
          * [Printing nicely](#printing-nicely)
          * [Creating](#creating)
             * [Creating a 3d array](#creating-a-3d-array)
+            * [Converting](#converting)
             * [Import data from csv](#import-data-from-csv)
          * [Random generation](#random-generation)
             * [randn](#randn)
@@ -70,7 +71,7 @@
       * [Exporting numpy array as image](#exporting-numpy-array-as-image)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Mon 03 Jan 2022 12:57:22 IST -->
+<!-- Added by: gil_diy, at: Tue 04 Jan 2022 01:44:58 IST -->
 
 <!--te-->
 
@@ -196,6 +197,8 @@ arr = np.empty(shape=(2, 3, 3))  # Initilaze a 3d array (with two layers)
 arr[0,:,:] = single_matrix # Adding to first layer
 arr[1,:,:] = single_matrix # Adding to second layer
 ```
+
+#### Converting 
 
 #### Import data from csv
 ```python
