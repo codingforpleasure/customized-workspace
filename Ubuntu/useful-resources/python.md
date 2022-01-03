@@ -18,11 +18,12 @@
       * [try, Except](#try-except)
       * [Dectorators](#dectorators)
          * [Example #1: For Logging a function](#example-1-for-logging-a-function)
+         * [Example #2: For Logging a function](#example-2-for-logging-a-function)
       * [Property decorator](#property-decorator)
       * [Python Generators](#python-generators)
       * [Python Closure](#python-closure)
 
-<!-- Added by: gil_diy, at: Mon 03 Jan 2022 09:18:15 IST -->
+<!-- Added by: gil_diy, at: Mon 03 Jan 2022 09:18:41 IST -->
 
 <!--te-->
 
@@ -235,6 +236,7 @@ if __name__ == '__main__':
     display_info('John', 25)
 ```
 
+### Example #2: For Logging a function
 
 ## Property decorator
 
