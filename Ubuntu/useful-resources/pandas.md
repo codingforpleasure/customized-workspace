@@ -7,6 +7,7 @@
          * [DataFrame](#dataframe)
             * [Creating a dataframe](#creating-a-dataframe)
             * [Creating dataframe (another approach)](#creating-dataframe-another-approach)
+            * [Creating a dataframe and adding row on each iteration](#creating-a-dataframe-and-adding-row-on-each-iteration)
             * [Get dimensions of a dataframe](#get-dimensions-of-a-dataframe)
             * [Iterate over rows](#iterate-over-rows)
             * [Rename indexes (rename row names)](#rename-indexes-rename-row-names)
@@ -82,7 +83,7 @@
          * [Statsmodels](#statsmodels)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Fri 31 Dec 2021 11:54:30 IST -->
+<!-- Added by: gil_diy, at: Tue 04 Jan 2022 12:44:41 IST -->
 
 <!--te-->
 
@@ -162,6 +163,16 @@ df = pd.DataFrame([['a','b','c'],['gr','lt','eq']],
                   columns=["col1", "col2", "col3"])
 
 df.to_csv('list.csv', index=False)
+```
+
+#### Creating a dataframe and adding row on each iteration
+
+```python
+
+df = pd.DataFrame(columns=["a", "b", "c"])
+
+ for i in range(5):
+     df.loc[len(df)] = ['name5', 9, 0]
 ```
 
 #### Get dimensions of a dataframe
