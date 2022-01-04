@@ -83,7 +83,7 @@
          * [Statsmodels](#statsmodels)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Tue 04 Jan 2022 12:44:44 IST -->
+<!-- Added by: gil_diy, at: Tue 04 Jan 2022 12:46:32 IST -->
 
 <!--te-->
 
@@ -229,7 +229,7 @@ X = df.iloc[:, df.columns.drop('target-column')].values
 
 #### Get row names
 ```python
-print(my_df.index.values)
+print(my_df.index.values) # equivallent to  print(list(my_df.index))
 ```
 
 #### Get column names
