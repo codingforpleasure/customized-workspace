@@ -73,6 +73,7 @@
          * [Get data ditribution of the data per column](#get-data-ditribution-of-the-data-per-column)
       * [Convert each consecutive pair of columns into a tuple in a single column](#convert-each-consecutive-pair-of-columns-into-a-tuple-in-a-single-column)
       * [Mapping/Applying categorical values to a specified numerical values](#mappingapplying-categorical-values-to-a-specified-numerical-values)
+      * [One hot encoding](#one-hot-encoding)
       * [Mathematical functions](#mathematical-functions)
          * [Calculate correlation for all numerical columns pairs](#calculate-correlation-for-all-numerical-columns-pairs)
       * [Time-Series](#time-series)
@@ -83,7 +84,7 @@
          * [Statsmodels](#statsmodels)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Wed 05 Jan 2022 10:23:14 IST -->
+<!-- Added by: gil_diy, at: Wed 05 Jan 2022 10:25:24 IST -->
 
 <!--te-->
 
@@ -757,7 +758,14 @@ df['eventStrength'] = interactions_df['eventType'].apply(lambda x: event_type_st
 
 ```
 
+## One hot encoding
 
+```python
+categorical_columns = ['Gender', 'House Type']
+
+for column in categorical_columns:
+    tempdf = pd.get_dummies(df[column], prefix=column)
+```
 ## Mathematical functions
 
 ### Calculate correlation for all numerical columns pairs
