@@ -25,7 +25,7 @@
       * [Specifying version numbers](#specifying-version-numbers)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Wed 05 Jan 2022 18:51:34 IST -->
+<!-- Added by: gil_diy, at: Wed 05 Jan 2022 18:51:58 IST -->
 
 <!--te-->
 # Anaconda
@@ -48,7 +48,7 @@ To see a list of available python versions first, type:
 conda create -n my_environment_name python=3.6.9
 ```
 
-All environments are located in:
+By default all environments are located in:
 `/home/gil_diy/miniconda3/envs`
 
 ## Removing environment
@@ -56,6 +56,9 @@ All environments are located in:
 ```bash
 conda env remove -n env_name
 ```
+
+By default all environments are located in:
+`/home/gil_diy/miniconda3/envs`
 
 ## Activating an environment
 
