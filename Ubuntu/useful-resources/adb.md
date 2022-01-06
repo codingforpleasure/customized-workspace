@@ -7,7 +7,7 @@
       * [To copy a file or directory and its sub-directories to the device:](#to-copy-a-file-or-directory-and-its-sub-directories-to-the-device)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Thu 06 Jan 2022 17:59:56 IST -->
+<!-- Added by: gil_diy, at: Thu 06 Jan 2022 18:00:08 IST -->
 
 <!--te-->
 
@@ -35,7 +35,7 @@ internal_storage/DCIM/Camera/IMG_20220106_170542.jpg
 mapped to in adb shell:
 
 ```bash
-/storage/self/primary/DCIM/Camera
+/storage/self/primary/DCIM/Camera/IMG_20220106_170542.jpg
 ```
 
 ## Copy from device to your local pc
