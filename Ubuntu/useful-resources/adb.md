@@ -7,7 +7,7 @@
       * [To copy a file or directory and its sub-directories to the device:](#to-copy-a-file-or-directory-and-its-sub-directories-to-the-device)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Thu 06 Jan 2022 17:59:54 IST -->
+<!-- Added by: gil_diy, at: Thu 06 Jan 2022 17:59:56 IST -->
 
 <!--te-->
 
@@ -37,7 +37,6 @@ mapped to in adb shell:
 ```bash
 /storage/self/primary/DCIM/Camera
 ```
-
 
 ## Copy from device to your local pc
 
