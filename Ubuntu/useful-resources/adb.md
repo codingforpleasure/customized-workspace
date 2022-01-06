@@ -7,7 +7,7 @@
       * [To copy a file or directory and its sub-directories to the device:](#to-copy-a-file-or-directory-and-its-sub-directories-to-the-device)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Thu 06 Jan 2022 17:59:46 IST -->
+<!-- Added by: gil_diy, at: Thu 06 Jan 2022 17:59:49 IST -->
 
 <!--te-->
 
