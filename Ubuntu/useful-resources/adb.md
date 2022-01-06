@@ -7,7 +7,7 @@
       * [To copy a file or directory and its sub-directories to the device:](#to-copy-a-file-or-directory-and-its-sub-directories-to-the-device)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Thu 06 Jan 2022 17:57:40 IST -->
+<!-- Added by: gil_diy, at: Thu 06 Jan 2022 17:58:05 IST -->
 
 <!--te-->
 
@@ -21,7 +21,9 @@ adb devices
 ```
 
 ## Where the Images directory of camera is mounted?
+```bash
 
+```
 
 
 ```bash
