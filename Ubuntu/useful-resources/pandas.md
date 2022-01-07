@@ -64,7 +64,6 @@
       * [Get the nsmallest or nlargest element](#get-the-nsmallest-or-nlargest-element)
       * [Group by:](#group-by)
          * [Group with aggregate](#group-with-aggregate)
-         * [Segment and sort data values into bins](#segment-and-sort-data-values-into-bins)
          * [Group by time slot](#group-by-time-slot)
       * [Concat Dataframes](#concat-dataframes)
          * [Join two dataframes one <strong>below</strong> the other.](#join-two-dataframes-one-below-the-other)
@@ -85,7 +84,7 @@
          * [Statsmodels](#statsmodels)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Fri 07 Jan 2022 22:56:49 IST -->
+<!-- Added by: gil_diy, at: Fri 07 Jan 2022 22:57:12 IST -->
 
 <!--te-->
 
@@ -639,21 +638,6 @@ df.groupby(df['Date'].dt.year)
 
 ```
 [Link](https://www.youtube.com/watch?v=txMdrV1Ut64)
-
-### Segment and sort data values into bins
-
-
-```python
-data_to_split = [1,16,5,9,32,42]
-pd.cut(x = data_to_split , bins = np.arange(0, 46, 5))
-```
-**The output is:**
-
-```
-[(0, 5], (15, 20], (0, 5], (5, 10], (30, 35], (40, 45]]
-Categories (9, interval[int64, right]): [(0, 5] < (5, 10] < (10, 15] < (15, 20] ... (25, 30] <
-                                         (30, 35] < (35, 40] < (40, 45]]
-```
 
 
 ### Group by time slot
