@@ -94,7 +94,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Sat 08 Jan 2022 00:18:18 IST -->
+<!-- Added by: gil_diy, at: Sat 08 Jan 2022 00:18:57 IST -->
 
 <!--te-->
 
@@ -1622,7 +1622,11 @@ torch.cuda.manual_seed_all(seed)
 
 * set `num_workers` to 0 during creation of the **DataLoader object**. 
 
+from the documentation `use num_workers=0 to disable multiprocessing`
+
 worked for me well!!!
+
+
 
 ## Integrating TensorBoard with pytorch
 
