@@ -85,7 +85,7 @@
          * [Statsmodels](#statsmodels)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Fri 07 Jan 2022 22:59:00 IST -->
+<!-- Added by: gil_diy, at: Fri 07 Jan 2022 22:59:08 IST -->
 
 <!--te-->
 
@@ -603,9 +603,9 @@ print('The 2nd smallest element  is:', str(df.msmallest(2,'Points')))
 
 ## Segment and sort data values into bins
 
-Use cut when you need to segment and sort data values into bins. 
+* Use cut when you need to segment and sort data values into bins. 
 
-This function is also **useful for going from a continuous variable to a categorical variable**. 
+* This function is also **useful for going from a continuous variable to a categorical variable**. 
 For example, cut could convert ages to groups of age ranges
 
 ```python
