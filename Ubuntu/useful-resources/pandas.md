@@ -85,7 +85,7 @@
          * [Statsmodels](#statsmodels)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Fri 07 Jan 2022 22:54:22 IST -->
+<!-- Added by: gil_diy, at: Fri 07 Jan 2022 22:55:04 IST -->
 
 <!--te-->
 
@@ -645,7 +645,7 @@ df.groupby(df['Date'].dt.year)
 
 ```python
 data_to_split = [1,16,5,9,32,42]
-pd.cut(data_to_split , np.arange(0, 46, 5))
+pd.cut(x = data_to_split , bins = np.arange(0, 46, 5))
 ```
 
 
