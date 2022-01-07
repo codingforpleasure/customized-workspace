@@ -85,7 +85,7 @@
          * [Statsmodels](#statsmodels)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Fri 07 Jan 2022 22:59:08 IST -->
+<!-- Added by: gil_diy, at: Fri 07 Jan 2022 22:59:47 IST -->
 
 <!--te-->
 
@@ -647,11 +647,6 @@ my_groups.describe()
 
 [Reference](http://tiny.cc/h6hdaz)
 
-<!-- ### Group by year in date column
-
-```python
-df.groupby(df['Date'].dt.year)
-``` -->
 
 ### Group with aggregate
 
