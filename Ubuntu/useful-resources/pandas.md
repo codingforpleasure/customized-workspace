@@ -64,6 +64,7 @@
       * [Get the nsmallest or nlargest element](#get-the-nsmallest-or-nlargest-element)
       * [Group by:](#group-by)
          * [Group with aggregate](#group-with-aggregate)
+         * [Segment and sort data values into bins](#segment-and-sort-data-values-into-bins)
          * [Group by time slot](#group-by-time-slot)
       * [Concat Dataframes](#concat-dataframes)
          * [Join two dataframes one <strong>below</strong> the other.](#join-two-dataframes-one-below-the-other)
@@ -84,7 +85,7 @@
          * [Statsmodels](#statsmodels)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Wed 05 Jan 2022 10:25:28 IST -->
+<!-- Added by: gil_diy, at: Fri 07 Jan 2022 22:54:18 IST -->
 
 <!--te-->
 
@@ -639,6 +640,15 @@ df.groupby(df['Date'].dt.year)
 ```
 [Link](https://www.youtube.com/watch?v=txMdrV1Ut64)
 
+### Segment and sort data values into bins
+
+
+```python
+data_to_split = [1,16,5,9,32,42]
+pd.cut(data_to_split , np.arange(0, 46, 5))
+```
+
+
 ### Group by time slot
 
 [Link](https://stackoverflow.com/questions/11073609/how-to-group-dataframe-by-a-period-of-time)
@@ -649,6 +659,9 @@ df.groupby(df['Date'].dt.year)
 ```python
 df.groupby(pd.cut(df["B"], np.arange(0, 1.0+0.155, 0.155))).sum()
 ```
+
+
+
 
 ## Concat Dataframes
 
