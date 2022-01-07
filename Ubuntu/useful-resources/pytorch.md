@@ -94,7 +94,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Sat 01 Jan 2022 11:21:06 IST -->
+<!-- Added by: gil_diy, at: Sat 08 Jan 2022 00:18:09 IST -->
 
 <!--te-->
 
@@ -927,6 +927,8 @@ train_loader = torch.utils.data.Dataloader(train_set,
 										   num_workers=5,
 										   shuffle = True)
 ```
+
+**use num_workers=0 to disable multiprocessing**
 
 ## Dataset && DataLoader
 ```python
