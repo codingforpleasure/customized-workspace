@@ -62,6 +62,7 @@
       * [fill](#fill)
       * [Get the index of the min or the max element](#get-the-index-of-the-min-or-the-max-element)
       * [Get the nsmallest or nlargest element](#get-the-nsmallest-or-nlargest-element)
+      * [Segment and sort data values into bins](#segment-and-sort-data-values-into-bins)
       * [Group by:](#group-by)
          * [Group with aggregate](#group-with-aggregate)
          * [Group by time slot](#group-by-time-slot)
@@ -84,7 +85,7 @@
          * [Statsmodels](#statsmodels)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Fri 07 Jan 2022 22:57:12 IST -->
+<!-- Added by: gil_diy, at: Fri 07 Jan 2022 22:57:26 IST -->
 
 <!--te-->
 
@@ -597,6 +598,22 @@ df = pd.DataFrame({
 
 print('The fourth element in size is:', str(df.mslargest(4,'Points')))
 print('The 2nd smallest element  is:', str(df.msmallest(2,'Points')))
+```
+
+
+## Segment and sort data values into bins
+
+
+```python
+data_to_split = [1,16,5,9,32,42]
+pd.cut(x = data_to_split , bins = np.arange(0, 46, 5))
+```
+**The output is:**
+
+```
+[(0, 5], (15, 20], (0, 5], (5, 10], (30, 35], (40, 45]]
+Categories (9, interval[int64, right]): [(0, 5] < (5, 10] < (10, 15] < (15, 20] ... (25, 30] <
+                                         (30, 35] < (35, 40] < (40, 45]]
 ```
 
 ## Group by:
