@@ -85,7 +85,7 @@
          * [Statsmodels](#statsmodels)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Fri 07 Jan 2022 22:55:45 IST -->
+<!-- Added by: gil_diy, at: Fri 07 Jan 2022 22:56:43 IST -->
 
 <!--te-->
 
@@ -648,6 +648,7 @@ data_to_split = [1,16,5,9,32,42]
 pd.cut(x = data_to_split , bins = np.arange(0, 46, 5))
 ```
 **The output is:**
+
 `
 [(0, 5], (15, 20], (0, 5], (5, 10], (30, 35], (40, 45]]
 Categories (9, interval[int64, right]): [(0, 5] < (5, 10] < (10, 15] < (15, 20] ... (25, 30] <
