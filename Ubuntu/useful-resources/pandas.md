@@ -85,7 +85,7 @@
          * [Statsmodels](#statsmodels)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Fri 07 Jan 2022 22:56:43 IST -->
+<!-- Added by: gil_diy, at: Fri 07 Jan 2022 22:56:49 IST -->
 
 <!--te-->
 
@@ -649,11 +649,11 @@ pd.cut(x = data_to_split , bins = np.arange(0, 46, 5))
 ```
 **The output is:**
 
-`
+```
 [(0, 5], (15, 20], (0, 5], (5, 10], (30, 35], (40, 45]]
 Categories (9, interval[int64, right]): [(0, 5] < (5, 10] < (10, 15] < (15, 20] ... (25, 30] <
                                          (30, 35] < (35, 40] < (40, 45]]
-`
+```
 
 
 ### Group by time slot
