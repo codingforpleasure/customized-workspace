@@ -1,8 +1,9 @@
 <!--ts-->
    * [Kaggle](#kaggle)
       * [Kaggle Rankings](#kaggle-rankings)
+   * [Kaggle titles](#kaggle-titles)
 
-<!-- Added by: gil_diy, at: Sun 09 Jan 2022 11:03:36 IST -->
+<!-- Added by: gil_diy, at: Sun 09 Jan 2022 11:03:43 IST -->
 
 <!--te-->
 
@@ -13,5 +14,5 @@
 
 [Link](https://www.kaggle.com/rankings)
 
-# 
+# Kaggle titles
 [Link](https://www.kaggle.com/progression)
