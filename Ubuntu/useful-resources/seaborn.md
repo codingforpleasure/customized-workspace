@@ -14,7 +14,7 @@
       * [Histograms](#histograms)
       * [Density plots (KDE - Kernel density estimate (KDE))](#density-plots-kde---kernel-density-estimate-kde)
 
-<!-- Added by: gil_diy, at: Thu 23 Dec 2021 16:28:30 IST -->
+<!-- Added by: gil_diy, at: Sun 09 Jan 2022 10:32:54 IST -->
 
 <!--te-->
 
@@ -78,6 +78,14 @@ sns.barplot(x=flight_data.index, y=flight_data['NK'])
 # This ensures that the values for each cell appear on the chart
 sns.heatmap(data=flight_data, annot=True)
 ```
+
+```python
+train_dummies = pd.get_dummies(train, columns=["Title","CabinClass","Embarked"]).corr()
+sns.heatmap(train_dummies.corr(), square=True, annot=False)
+```
+
+[Reference](https://www.kaggle.com/jamesmcguigan/python-titanic-exploration#Confusion-Matrix)
+
 
 Another example
 ```python
