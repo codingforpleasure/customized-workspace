@@ -71,7 +71,7 @@
       * [Exporting numpy array as image](#exporting-numpy-array-as-image)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Tue 04 Jan 2022 01:46:13 IST -->
+<!-- Added by: gil_diy, at: Sun 09 Jan 2022 17:59:51 IST -->
 
 <!--te-->
 
@@ -222,6 +222,9 @@ data = genfromtxt(filename, delimiter=',')
 #### rand
 
 `numpy.random.rand` generates samples from unifrom (in range [0,1))
+
+
+#### 
 
 
 ### Forming
