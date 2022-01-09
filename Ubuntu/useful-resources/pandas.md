@@ -85,7 +85,7 @@
          * [Statsmodels](#statsmodels)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Sun 09 Jan 2022 10:35:54 IST -->
+<!-- Added by: gil_diy, at: Sun 09 Jan 2022 10:37:40 IST -->
 
 <!--te-->
 
@@ -774,11 +774,12 @@ event_type_strength = {
  }
 
 # mapping:
-dataset['Gender'] =df['eventStrength'] = interactions_df['eventType'].apply(lambda x: event_type_strength[x])
+df['eventStrength'] = interactions_df['eventType'].apply(lambda x: event_type_strength[x])
+
 ```
 
 ```python
-dataset['Sex'].map({'female': 0, 'male': 1}).astype(int)
+dataset['Gender'] = dataset['Sex'].map({'female': 0, 'male': 1}).astype(int)
 ```
 
 ## One hot encoding
