@@ -18,7 +18,7 @@
       * [Support Vector Machine (SVM)](#support-vector-machine-svm)
       * [Naive Bayes](#naive-bayes)
 
-<!-- Added by: gil_diy, at: Mon 10 Jan 2022 18:39:42 IST -->
+<!-- Added by: gil_diy, at: Mon 10 Jan 2022 18:40:11 IST -->
 
 <!--te-->
 
@@ -91,7 +91,7 @@ In other words a set of low accurate classifier to create a highly accurate clas
 </p>
 
 
-* Boosting algorithms consist of iteratively learning weak classifiers with respect to a distribution and adding them to a final strong classifier.
+* Boosting algorithms consist of **iteratively learning weak classifiers** with respect to a distribution and adding them to a final strong classifier.
 
 * When they are added, they are weighted in a way that is related to the weak learners' accuracy. After a weak learner is added, the data weights are readjusted, known as "re-weighting".
 
