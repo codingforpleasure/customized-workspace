@@ -18,7 +18,7 @@
       * [Support Vector Machine (SVM)](#support-vector-machine-svm)
       * [Naive Bayes](#naive-bayes)
 
-<!-- Added by: gil_diy, at: Mon 10 Jan 2022 18:36:50 IST -->
+<!-- Added by: gil_diy, at: Mon 10 Jan 2022 18:37:19 IST -->
 
 <!--te-->
 
@@ -87,9 +87,8 @@ In other words a set of low accurate classifier to create a highly accurate clas
 
 
 <p align="center"> <!-- style="width:400px;" -->
-  <img src="images/machine_learning/Ensemble_Boosting.png" title="tool tip here">
+  <img src="images/machine-learning/Ensemble_Boosting.png" title="tool tip here">
 </p>
-
 
 #### Adaboost (Adaptive boosting)
 
