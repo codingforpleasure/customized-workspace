@@ -18,7 +18,7 @@
       * [Support Vector Machine (SVM)](#support-vector-machine-svm)
       * [Naive Bayes](#naive-bayes)
 
-<!-- Added by: gil_diy, at: Mon 10 Jan 2022 18:53:04 IST -->
+<!-- Added by: gil_diy, at: Mon 10 Jan 2022 18:57:05 IST -->
 
 <!--te-->
 
@@ -118,7 +118,7 @@ The stump with the **lowest entropy/gini** will be first.
 
 * It iteratively corrects the mistakes of the weak classifier and improves accuracy by combining weak learners.
 
-* The **weights of the records gets updated**, all the missclasiffied records/entries (all the records which the praticular weak model did not perform well), thier weights are increased, which means more weights is given to those records for the next weak model.
+* The **weights of the records gets updated**, all the missclasiffied records/entries (all the records which the praticular weak model did not perform well), thier weights are increased, which means more weight is given to those records for the next weak model.
 
 * You can use many base classifiers with AdaBoost. AdaBoost is not prone to overfitting.
 
