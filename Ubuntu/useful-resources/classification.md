@@ -18,7 +18,7 @@
       * [Support Vector Machine (SVM)](#support-vector-machine-svm)
       * [Naive Bayes](#naive-bayes)
 
-<!-- Added by: gil_diy, at: Mon 10 Jan 2022 18:43:18 IST -->
+<!-- Added by: gil_diy, at: Mon 10 Jan 2022 18:44:32 IST -->
 
 <!--te-->
 
@@ -109,7 +109,7 @@ In other words a set of low accurate classifier to create a highly accurate clas
 
 * AdaBoost is an **iterative ensemble** method
 
-* All the base learners are dicision trees will be a **single node with two leaves**.
+* All the base learners are decision trees will consist of a **single node with two leaves** (Thet are called** stumps**)
 
 * It iteratively corrects the mistakes of the weak classifier and improves accuracy by combining weak learners.
 
