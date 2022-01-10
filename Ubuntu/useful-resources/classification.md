@@ -18,7 +18,7 @@
       * [Support Vector Machine (SVM)](#support-vector-machine-svm)
       * [Naive Bayes](#naive-bayes)
 
-<!-- Added by: gil_diy, at: Mon 10 Jan 2022 18:37:22 IST -->
+<!-- Added by: gil_diy, at: Mon 10 Jan 2022 18:39:42 IST -->
 
 <!--te-->
 
@@ -89,6 +89,15 @@ In other words a set of low accurate classifier to create a highly accurate clas
 <p align="center"> <!-- style="width:400px;" -->
   <img src="images/machine-learning/Ensemble_Boosting.png" title="tool tip here">
 </p>
+
+
+* Boosting algorithms consist of iteratively learning weak classifiers with respect to a distribution and adding them to a final strong classifier.
+
+* When they are added, they are weighted in a way that is related to the weak learners' accuracy. After a weak learner is added, the data weights are readjusted, known as "re-weighting".
+
+* Misclassified input data gain a higher weight and examples that are classified correctly lose weight.
+
+* Thus, future weak learners focus more on the examples that previous weak learners misclassified. 
 
 #### Adaboost (Adaptive boosting)
 
