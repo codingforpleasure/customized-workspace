@@ -18,7 +18,7 @@
       * [Support Vector Machine (SVM)](#support-vector-machine-svm)
       * [Naive Bayes](#naive-bayes)
 
-<!-- Added by: gil_diy, at: Mon 10 Jan 2022 18:21:10 IST -->
+<!-- Added by: gil_diy, at: Mon 10 Jan 2022 18:24:31 IST -->
 
 <!--te-->
 
@@ -81,7 +81,7 @@ classifier.fit(X_train,y_train)
 
 ### Boosting techniques
 
-**Boosting is an ensemble technique** that attempts to create a strong classifier from a number of weak classifiers**.
+**Boosting is an ensemble technique** that attempts to create a strong classifier from a number of weak classifiers (weak learners).
 
 In other words a set of low accurate classifier to create a highly accurate classifier.
 
