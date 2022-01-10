@@ -18,7 +18,7 @@
       * [Support Vector Machine (SVM)](#support-vector-machine-svm)
       * [Naive Bayes](#naive-bayes)
 
-<!-- Added by: gil_diy, at: Mon 10 Jan 2022 20:26:46 IST -->
+<!-- Added by: gil_diy, at: Mon 10 Jan 2022 20:26:49 IST -->
 
 <!--te-->
 
@@ -50,8 +50,7 @@ Allow training instances to be sampled several times across multiple predictors,
 
 
 Each individual predictor has a higher bias than if it were trained on the original training set, but
-aggregation reduces both bias and variance.  Generally, the net result is that the ensemble has a similar bias but a **lower variance** than a single predictor trained on the
-original training set.
+aggregation reduces both bias and variance.  Generally, the net result is that the ensemble has a similar bias but a **lower variance** than a single predictor trained on the original training set.
 
 [Youtube explanation](https://youtu.be/KIOeZ5cFZ50)
 
