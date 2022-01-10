@@ -11,12 +11,14 @@
             * [Adaboost (Adaptive boosting)](#adaboost-adaptive-boosting)
             * [Gradient Boosting](#gradient-boosting)
             * [XGboost (Extreme Gradient boosted trees)](#xgboost-extreme-gradient-boosted-trees)
+            * [LightGBM](#lightgbm)
+            * [Catboost](#catboost)
          * [The difference between Random Forest to Adaboost](#the-difference-between-random-forest-to-adaboost)
          * [The difference between Adaboost to Gradient Boost](#the-difference-between-adaboost-to-gradient-boost)
       * [Support Vector Machine (SVM)](#support-vector-machine-svm)
       * [Naive Bayes](#naive-bayes)
 
-<!-- Added by: gil_diy, at: Wed 08 Sep 2021 12:46:08 IDT -->
+<!-- Added by: gil_diy, at: Mon 10 Jan 2022 18:21:10 IST -->
 
 <!--te-->
 
@@ -60,7 +62,7 @@ Bagging and boosting are ways to implement ensemble models.
 
 
 * **Has low Bias**
-* As we we discussed of desicion tree, we mentioned it has a high variance, BUT when we combine all the decision tree with the respect to the majority vote the high variance will be converted to **low variance**.
+* As we we discussed of desicion tree, we mentioned it has a high variance, BUT when we combine all the decision trees with the respect to the majority vote the high variance will be converted to **low variance**.
 
 * **classifier uses majority vote** and in case of **Regressor it will actually find the mean or median of the praticular output of all the decision trees**.
 
@@ -187,11 +189,14 @@ gbrt.fit(X,y)
 
 * Tree pruning (generally results in deeper, but optimized trees)
 
-
-
 * **XGboost** is ensemble technique
 
 [Link](https://youtu.be/OQKQHNCVf5k)
+
+
+#### LightGBM
+
+#### Catboost
 
 ### The difference between Random Forest to Adaboost
 
