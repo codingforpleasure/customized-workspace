@@ -18,7 +18,7 @@
       * [Support Vector Machine (SVM)](#support-vector-machine-svm)
       * [Naive Bayes](#naive-bayes)
 
-<!-- Added by: gil_diy, at: Mon 10 Jan 2022 18:25:42 IST -->
+<!-- Added by: gil_diy, at: Mon 10 Jan 2022 18:36:27 IST -->
 
 <!--te-->
 
@@ -84,6 +84,11 @@ classifier.fit(X_train,y_train)
 **Boosting is an ensemble technique** that attempts to create a strong classifier from a number of weak classifiers (weak learners).
 
 In other words a set of low accurate classifier to create a highly accurate classifier.
+
+
+<p align="center"> <!-- style="width:400px;" -->
+  <img src="images/machine_learning/labeling_example.png" title="tool tip here">
+</p>
 
 
 #### Adaboost (Adaptive boosting)
