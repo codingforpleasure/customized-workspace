@@ -18,7 +18,7 @@
       * [Support Vector Machine (SVM)](#support-vector-machine-svm)
       * [Naive Bayes](#naive-bayes)
 
-<!-- Added by: gil_diy, at: Mon 10 Jan 2022 19:17:30 IST -->
+<!-- Added by: gil_diy, at: Mon 10 Jan 2022 19:18:19 IST -->
 
 <!--te-->
 
@@ -185,6 +185,8 @@ print("Accuracy:",metrics.accuracy_score(y_test, y_pred))
 
 
 #### Gradient Boosting
+
+The learning is done by updating the loss function.
 
 ```python
 from sklearn.ensemble import GradientBoostingRegressor
