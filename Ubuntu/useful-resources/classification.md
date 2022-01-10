@@ -18,7 +18,7 @@
       * [Support Vector Machine (SVM)](#support-vector-machine-svm)
       * [Naive Bayes](#naive-bayes)
 
-<!-- Added by: gil_diy, at: Mon 10 Jan 2022 18:52:35 IST -->
+<!-- Added by: gil_diy, at: Mon 10 Jan 2022 18:53:04 IST -->
 
 <!--te-->
 
@@ -112,9 +112,7 @@ In other words a set of low accurate classifier to create a highly accurate clas
 * All the base learners are decision trees will consist of a **single node with two leaves** (Thet are called** stumps**)
 
 
-* The order of the stumps is order sequentailly according to the lowset gini index/entropy value.
-The stump with the lowest entrop/gini will be first.
-
+The stump with the **lowest entropy/gini** will be first.
 
 
 
