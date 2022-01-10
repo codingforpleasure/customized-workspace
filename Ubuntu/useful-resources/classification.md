@@ -18,7 +18,7 @@
       * [Support Vector Machine (SVM)](#support-vector-machine-svm)
       * [Naive Bayes](#naive-bayes)
 
-<!-- Added by: gil_diy, at: Mon 10 Jan 2022 18:40:31 IST -->
+<!-- Added by: gil_diy, at: Mon 10 Jan 2022 18:41:20 IST -->
 
 <!--te-->
 
@@ -101,7 +101,7 @@ In other words a set of low accurate classifier to create a highly accurate clas
 
 #### Adaboost (Adaptive boosting)
 
-* Adaboost is ensemble technique
+* Adaboost is ensemble technique spcefically it's a Boosting technique
 
 * The output of **weak learners** is combined into a weighted sum that represents the final output of the boosted classifier.
 
