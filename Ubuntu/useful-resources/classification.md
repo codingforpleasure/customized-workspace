@@ -18,7 +18,7 @@
       * [Support Vector Machine (SVM)](#support-vector-machine-svm)
       * [Naive Bayes](#naive-bayes)
 
-<!-- Added by: gil_diy, at: Mon 10 Jan 2022 20:24:21 IST -->
+<!-- Added by: gil_diy, at: Mon 10 Jan 2022 20:24:24 IST -->
 
 <!--te-->
 
