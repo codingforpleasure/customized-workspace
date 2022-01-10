@@ -18,7 +18,7 @@
       * [Support Vector Machine (SVM)](#support-vector-machine-svm)
       * [Naive Bayes](#naive-bayes)
 
-<!-- Added by: gil_diy, at: Mon 10 Jan 2022 19:20:08 IST -->
+<!-- Added by: gil_diy, at: Mon 10 Jan 2022 20:24:21 IST -->
 
 <!--te-->
 
@@ -41,6 +41,12 @@ Ensemble methods are the most important and powerful machine learning tool and t
 Bagging and boosting are ways to implement ensemble models. 
 
 ### Bagging technique (Bootstrap aggregation)
+
+
+Allow training instances to be sampled several times across multiple predictors, but only bagging allows training instances to be sampled several times for the same predictor.
+
+
+* When sampling is performed **without replacement**, it is called **pasting** .
 
 [Youtube explanation](https://youtu.be/KIOeZ5cFZ50)
 
@@ -188,7 +194,7 @@ print("Accuracy:",metrics.accuracy_score(y_test, y_pred))
 
 The learning is done by optimizing the loss function.
 
-In differ to Adaboost the trees depth is between 8 to 32.
+In differ to Adaboost the trees depth in Gradient Boost is between 8 to 32.
 
 ```python
 from sklearn.ensemble import GradientBoostingRegressor
