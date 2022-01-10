@@ -18,7 +18,7 @@
       * [Support Vector Machine (SVM)](#support-vector-machine-svm)
       * [Naive Bayes](#naive-bayes)
 
-<!-- Added by: gil_diy, at: Mon 10 Jan 2022 18:44:35 IST -->
+<!-- Added by: gil_diy, at: Mon 10 Jan 2022 18:47:34 IST -->
 
 <!--te-->
 
@@ -116,6 +116,8 @@ In other words a set of low accurate classifier to create a highly accurate clas
 * The **weights of the records gets updated**, all the missclasiffied records/entries (all the records which the praticular weak model did not perform well), thier weights are increased, which means more weights is given to those records for the next weak model.
 
 * You can use many base classifiers with AdaBoost. AdaBoost is not prone to overfitting.
+
+* AdaBoost algorithms can be used for both classification and regression problem.
 
 * The cons: AdaBoost is **sensitive to noise data**. It is highly affected by outliers because it tries to fit each point perfectly
 
