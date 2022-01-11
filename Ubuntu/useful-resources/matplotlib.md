@@ -36,7 +36,7 @@
          * [Draw contour lines and filled contours](#draw-contour-lines-and-filled-contours)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Tue 11 Jan 2022 14:54:19 IST -->
+<!-- Added by: gil_diy, at: Tue 11 Jan 2022 14:54:24 IST -->
 
 <!--te-->
 
@@ -115,10 +115,6 @@ plt.show()
 ```
 
 
-bla| gjdkg    bla| gjdkg    
-----|-----    ---|-----
-f | fd         g | yn
-frdg | fed     od | frd
 
 Color-type | character     
 ------------|-----
