@@ -36,7 +36,7 @@
          * [Draw contour lines and filled contours](#draw-contour-lines-and-filled-contours)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Tue 11 Jan 2022 14:46:32 IST -->
+<!-- Added by: gil_diy, at: Tue 11 Jan 2022 14:52:24 IST -->
 
 <!--te-->
 
@@ -106,6 +106,42 @@ plt.savefig('sinc.png', transparent = True)
 ```python
 
 ```
+
+
+Color-type | character
+------------|-----
+blue | b
+green | g
+red | r
+c | cyan
+magenta | m
+yellow | y
+black | k 
+white | w
+
+
+Symbol-type | character
+------------|-----
+point | .
+circle | o
+x-mark | x
+plus | +
+star | *
+square | s
+diamond | d
+triangle (down) | v 
+triangle (up) | ^
+triangle (left) | <
+triangle (right) |  >
+
+
+Line-type | character
+------------|-----
+solid | -
+dotted | :
+dashdot | -.
+dahsed | --
+
 
 ### Bar Charts
 ```python
