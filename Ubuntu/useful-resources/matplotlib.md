@@ -39,7 +39,7 @@
          * [Draw contour lines and filled contours](#draw-contour-lines-and-filled-contours)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Tue 11 Jan 2022 15:49:23 IST -->
+<!-- Added by: gil_diy, at: Tue 11 Jan 2022 15:50:06 IST -->
 
 <!--te-->
 
@@ -649,6 +649,7 @@ if __name__ == '__main__':
     plt.show()
 ```
 
+Animation output:
 
 ![](images/matplotlib/animation.gif)
 
