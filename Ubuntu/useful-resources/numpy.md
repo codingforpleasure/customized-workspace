@@ -42,7 +42,7 @@
       * [Squizzing](#squizzing)
       * [ravel (contiguous flattened array)](#ravel-contiguous-flattened-array)
       * [Flatten](#flatten)
-      * [Unsquizzing](#unsquizzing)
+      * [Expand the shape of an array](#expand-the-shape-of-an-array)
       * [splitting data](#splitting-data)
       * [Removing rows/columns](#removing-rowscolumns)
       * [Inserting data](#inserting-data)
@@ -74,7 +74,7 @@
       * [Exporting numpy array as image](#exporting-numpy-array-as-image)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Tue 11 Jan 2022 13:19:33 IST -->
+<!-- Added by: gil_diy, at: Tue 11 Jan 2022 13:22:51 IST -->
 
 <!--te-->
 
@@ -711,7 +711,9 @@ vec.flatten()
 ```
 
 
-## Unsquizzing
+## Expand the shape of an array
+
+
 
 
 
