@@ -74,7 +74,7 @@
       * [Exporting numpy array as image](#exporting-numpy-array-as-image)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Tue 11 Jan 2022 13:23:37 IST -->
+<!-- Added by: gil_diy, at: Tue 11 Jan 2022 13:49:07 IST -->
 
 <!--te-->
 
@@ -715,10 +715,8 @@ vec.flatten()
 
 ```python
 x = np.array([1, 2])
-
+print(x.shape) # Outptut: (2,)
 ```
-
-
 
 
 ## splitting data
