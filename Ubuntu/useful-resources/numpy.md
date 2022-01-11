@@ -73,7 +73,7 @@
       * [Exporting numpy array as image](#exporting-numpy-array-as-image)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Tue 11 Jan 2022 13:09:26 IST -->
+<!-- Added by: gil_diy, at: Tue 11 Jan 2022 13:09:41 IST -->
 
 <!--te-->
 
@@ -697,7 +697,7 @@ new_shape = np.squeeze(x).shape
 result = np.ravel([[1,2,3,56,64,100,-50],
                    [1,3,4,5,7,3,5]])
 
-result # array([1,2,3,56,64,100,-50,1,3,4,5,7,3,5])
+# Output: array([1,2,3,56,64,100,-50,1,3,4,5,7,3,5])
 ```
 
 
