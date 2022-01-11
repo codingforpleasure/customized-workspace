@@ -36,7 +36,7 @@
          * [Draw contour lines and filled contours](#draw-contour-lines-and-filled-contours)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Tue 11 Jan 2022 14:53:02 IST -->
+<!-- Added by: gil_diy, at: Tue 11 Jan 2022 14:53:05 IST -->
 
 <!--te-->
 
@@ -113,7 +113,6 @@ y = np.linspace(2,20,10)
 plt.plot(x,y, 'rs--')
 plt.show()
 ```
-
 
 Color-type | character
 ------------|-----
