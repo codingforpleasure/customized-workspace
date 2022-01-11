@@ -5,6 +5,9 @@
             * [Example #1:](#example-1)
             * [Example #2:](#example-2)
             * [Example #3 (line types + colors + symbols):](#example-3-line-types--colors--symbols)
+                  * [Color](#color)
+                  * [Symbol](#symbol)
+                  * [Line type](#line-type)
          * [Bar Charts](#bar-charts)
          * [Create a Bar Chart Race](#create-a-bar-chart-race)
          * [Line plots](#line-plots)
@@ -36,7 +39,7 @@
          * [Draw contour lines and filled contours](#draw-contour-lines-and-filled-contours)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Tue 11 Jan 2022 14:54:24 IST -->
+<!-- Added by: gil_diy, at: Tue 11 Jan 2022 14:55:05 IST -->
 
 <!--te-->
 
@@ -115,7 +118,7 @@ plt.show()
 ```
 
 
-
+###### Color 
 Color-type | character     
 ------------|-----
 blue | b
@@ -128,6 +131,7 @@ black | k
 white | w
 
 
+###### Symbol
 Symbol-type | character
 ------------|-----
 point | .
@@ -142,6 +146,9 @@ triangle (up) | ^
 triangle (left) | <
 triangle (right) |  >
 
+
+
+###### Line type
 
 Line-type | character
 ------------|-----
