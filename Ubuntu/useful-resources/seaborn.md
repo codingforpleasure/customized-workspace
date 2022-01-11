@@ -14,7 +14,7 @@
       * [Histograms](#histograms)
       * [Density plots (KDE - Kernel density estimate (KDE))](#density-plots-kde---kernel-density-estimate-kde)
 
-<!-- Added by: gil_diy, at: Sun 09 Jan 2022 10:32:54 IST -->
+<!-- Added by: gil_diy, at: Tue 11 Jan 2022 14:34:00 IST -->
 
 <!--te-->
 
@@ -78,6 +78,8 @@ sns.barplot(x=flight_data.index, y=flight_data['NK'])
 # This ensures that the values for each cell appear on the chart
 sns.heatmap(data=flight_data, annot=True)
 ```
+
+Example of correlation:
 
 ```python
 train_dummies = pd.get_dummies(train, columns=["Title","CabinClass","Embarked"]).corr()
