@@ -2,6 +2,7 @@
    * [matplotlib](#matplotlib)
       * [Basics (Stateful appraoch)](#basics-stateful-appraoch)
          * [Simple plot](#simple-plot)
+            * [Example #2:](#example-2)
          * [Bar Charts](#bar-charts)
          * [Create a Bar Chart Race](#create-a-bar-chart-race)
          * [Line plots](#line-plots)
@@ -32,7 +33,7 @@
             * [Ticks text size](#ticks-text-size)
          * [Draw contour lines and filled contours](#draw-contour-lines-and-filled-contours)
 
-<!-- Added by: gil_diy, at: Tue 11 Jan 2022 12:52:48 IST -->
+<!-- Added by: gil_diy, at: Tue 11 Jan 2022 14:25:41 IST -->
 
 <!--te-->
 
@@ -66,6 +67,20 @@ plt.legend()
 # Showing what we've plotted
 plt.show()
 
+```
+
+#### Example #2:
+
+```python
+import numpy as np
+from matplotlib import pyplot as plt
+
+X = np.linspace(-10, 10, 1024)
+Y = np.sinc(X)
+
+plt.plot(X, Y)
+plt.savefig('sinc.png', c = 'k')
+plt.show()
 ```
 
 ### Bar Charts
