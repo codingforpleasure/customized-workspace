@@ -36,7 +36,7 @@
          * [Draw contour lines and filled contours](#draw-contour-lines-and-filled-contours)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Tue 11 Jan 2022 14:52:27 IST -->
+<!-- Added by: gil_diy, at: Tue 11 Jan 2022 14:53:02 IST -->
 
 <!--te-->
 
@@ -104,7 +104,14 @@ plt.savefig('sinc.png', transparent = True)
 
 
 ```python
+import matplotlib.pyplot as plt
+import numpy as np
 
+x = np.linspace(1,10,10)
+y = np.linspace(2,20,10)
+
+plt.plot(x,y, 'rs--')
+plt.show()
 ```
 
 
