@@ -39,7 +39,7 @@
          * [Draw contour lines and filled contours](#draw-contour-lines-and-filled-contours)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Tue 11 Jan 2022 15:14:57 IST -->
+<!-- Added by: gil_diy, at: Tue 11 Jan 2022 15:48:19 IST -->
 
 <!--te-->
 
@@ -646,7 +646,7 @@ if __name__ == '__main__':
 ```
 
 
-time_series_plot.png
+![](images/matplotlib/animation.gif)
 
 ## Animation 
 
