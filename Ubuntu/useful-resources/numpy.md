@@ -42,7 +42,7 @@
       * [Squizzing](#squizzing)
       * [ravel (contiguous flattened array)](#ravel-contiguous-flattened-array)
       * [Flatten](#flatten)
-      * [Expand the shape of an array](#expand-the-shape-of-an-array)
+      * [Expand the shape of an array (similar to torch.unsqueeze)](#expand-the-shape-of-an-array-similar-to-torchunsqueeze)
       * [splitting data](#splitting-data)
       * [Removing rows/columns](#removing-rowscolumns)
       * [Inserting data](#inserting-data)
@@ -74,7 +74,7 @@
       * [Exporting numpy array as image](#exporting-numpy-array-as-image)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Tue 11 Jan 2022 13:22:51 IST -->
+<!-- Added by: gil_diy, at: Tue 11 Jan 2022 13:23:37 IST -->
 
 <!--te-->
 
@@ -711,8 +711,12 @@ vec.flatten()
 ```
 
 
-## Expand the shape of an array
+## Expand the shape of an array (similar to torch.unsqueeze)
 
+```python
+x = np.array([1, 2])
+
+```
 
 
 
