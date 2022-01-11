@@ -39,7 +39,7 @@
          * [Draw contour lines and filled contours](#draw-contour-lines-and-filled-contours)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Tue 11 Jan 2022 15:13:36 IST -->
+<!-- Added by: gil_diy, at: Tue 11 Jan 2022 15:14:01 IST -->
 
 <!--te-->
 
@@ -113,7 +113,7 @@ import numpy as np
 x = np.linspace(1,10,10)
 y = np.linspace(2,20,10)
 
-plt.plot(x,y, 'rs--') # rs-- means: 'red' and 'square' and 
+plt.plot(x,y, 'rs--') # rs-- means: 'red' and 'square' and 'dashed' line.
 plt.show()
 ```
 
@@ -161,7 +161,7 @@ Line-type | character
 solid | -
 dotted | :
 dashdot | -.
-dahsed | --
+dashed | --
 
 
 ### Bar Charts
