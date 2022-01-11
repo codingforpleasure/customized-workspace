@@ -30,8 +30,9 @@
             * [Title plot size](#title-plot-size)
             * [Legend text size](#legend-text-size)
             * [Ticks text size](#ticks-text-size)
+         * [Draw contour lines and filled contours](#draw-contour-lines-and-filled-contours)
 
-<!-- Added by: gil_diy, at: Tue 11 Jan 2022 12:44:38 IST -->
+<!-- Added by: gil_diy, at: Tue 11 Jan 2022 12:52:29 IST -->
 
 <!--te-->
 
@@ -729,3 +730,6 @@ ax.legend(fontsize='x-large')  # 'xx-small', 'x-small', 'small', 'medium', 'larg
 ax.xaxis.label.set_size(16)
 ax.yaxis.label.set_size(18)
 ```
+
+### Draw contour lines and filled contours
+
