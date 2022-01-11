@@ -53,11 +53,12 @@
          * [How to detect all the connected neighboring pixels which have same color value?](#how-to-detect-all-the-connected-neighboring-pixels-which-have-same-color-value)
          * [Defines for video capture](#defines-for-video-capture)
          * [distance transform](#distance-transform)
+         * [Create a transparent image](#create-a-transparent-image)
       * [Deep learning in OpenCV](#deep-learning-in-opencv)
          * [The function blobFromImage(s)](#the-function-blobfromimages)
             * [1. Mean subtraction](#1-mean-subtraction)
 
-<!-- Added by: gil_diy, at: Sat 25 Dec 2021 18:28:52 IST -->
+<!-- Added by: gil_diy, at: Tue 11 Jan 2022 17:39:11 IST -->
 
 <!--te-->
 
@@ -606,6 +607,22 @@ cv2.CAP_PROP_FRAME_COUNT | Get number of frames per video
 
 https://homepages.inf.ed.ac.uk/rbf/HIPR2/distance.htm
 
+
+### Create a transparent image
+
+```python
+    img_height, img_width = 300, 300
+    n_channels = 4
+
+    transparent_img = np.zeros((img_height, img_width, n_channels), dtype=np.uint8)
+    transparent_img[:, :, :3] = np.ones((img_height, img_width, n_channels - 1), dtype=np.uint8) * 255
+    transparent_img[:, :, 3] = np.ones((img_height, img_width), dtype=np.uint8) * 255
+
+    cv2.circle(img=transparent_img, thickness=-1, radius=100, center=(150, 150), color=(255, 0, 0))
+
+    # Save the image for visualization
+    cv2.imwrite("./transparent_img.png", transparent_img)
+```
 
 ## Deep learning in OpenCV
 
