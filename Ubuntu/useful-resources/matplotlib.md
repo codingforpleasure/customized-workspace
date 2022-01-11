@@ -39,7 +39,7 @@
          * [Draw contour lines and filled contours](#draw-contour-lines-and-filled-contours)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Tue 11 Jan 2022 15:50:06 IST -->
+<!-- Added by: gil_diy, at: Tue 11 Jan 2022 15:59:15 IST -->
 
 <!--te-->
 
@@ -641,7 +641,7 @@ if __name__ == '__main__':
                         func=animate,
                         interval=1000)
 
-    # Exporting the animation:
+    # Exporting the animation as gif file:
     ani.save('animation.gif', writer='imagemagick', fps=60)
 
 
