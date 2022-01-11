@@ -18,7 +18,7 @@
       * [Support Vector Machine (SVM)](#support-vector-machine-svm)
       * [Naive Bayes](#naive-bayes)
 
-<!-- Added by: gil_diy, at: Mon 10 Jan 2022 20:26:51 IST -->
+<!-- Added by: gil_diy, at: Tue 11 Jan 2022 09:20:16 IST -->
 
 <!--te-->
 
@@ -249,7 +249,7 @@ Random Forest | Adaboost
 
 Adaboost | Gradient boost
 ------------|-----
-Many weak models are get trained sequentially (one by one) The** weights'** of the records of all missclassfied records are get updated | Learning by **optimizing the loss function**
+Many weak models are get trained sequentially (one by one) The **weights** of the records of all missclassfied records are get updated | Learning by **optimizing the loss function**
 
 The trees are **Stumps**| The **trees are much bigger**, the number of leaf nodes is in the range 8 to 32.
 
