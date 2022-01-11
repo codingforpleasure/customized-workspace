@@ -41,7 +41,7 @@
       * [reshape](#reshape)
       * [Squizzing](#squizzing)
       * [Unsquizzing](#unsquizzing)
-      * [Flatten](#flatten)
+      * [Flatten (contiguous flattened array)](#flatten-contiguous-flattened-array)
       * [splitting data](#splitting-data)
       * [Removing rows/columns](#removing-rowscolumns)
       * [Inserting data](#inserting-data)
@@ -73,7 +73,7 @@
       * [Exporting numpy array as image](#exporting-numpy-array-as-image)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Tue 11 Jan 2022 13:06:30 IST -->
+<!-- Added by: gil_diy, at: Tue 11 Jan 2022 13:09:26 IST -->
 
 <!--te-->
 
@@ -691,10 +691,13 @@ new_shape = np.squeeze(x).shape
 
 ## Unsquizzing
 
-##  Flatten
+##  Flatten (contiguous flattened array)
 
 ```python
+result = np.ravel([[1,2,3,56,64,100,-50],
+                   [1,3,4,5,7,3,5]])
 
+result # array([1,2,3,56,64,100,-50,1,3,4,5,7,3,5])
 ```
 
 
