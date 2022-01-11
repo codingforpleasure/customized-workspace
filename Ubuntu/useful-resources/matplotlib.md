@@ -34,7 +34,7 @@
             * [Ticks text size](#ticks-text-size)
          * [Draw contour lines and filled contours](#draw-contour-lines-and-filled-contours)
 
-<!-- Added by: gil_diy, at: Tue 11 Jan 2022 14:37:52 IST -->
+<!-- Added by: gil_diy, at: Tue 11 Jan 2022 14:39:01 IST -->
 
 <!--te-->
 
@@ -87,7 +87,7 @@ plt.savefig('sinc.png', c = 'k')
 plt.show()
 ```
 
-* You can save with tranparency by:
+* You can save the image with tranparency support by:
 
 ```python
 plt.savefig('sinc.png', transparent = True)
