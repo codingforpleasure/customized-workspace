@@ -39,7 +39,7 @@
          * [Draw contour lines and filled contours](#draw-contour-lines-and-filled-contours)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Tue 11 Jan 2022 14:55:45 IST -->
+<!-- Added by: gil_diy, at: Tue 11 Jan 2022 14:56:16 IST -->
 
 <!--te-->
 
@@ -125,7 +125,7 @@ Color-type | character
 blue | b
 green | g
 red | r
-c | cyan
+cyan | c
 magenta | m
 yellow | y
 black | k 
