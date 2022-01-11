@@ -2,7 +2,7 @@
    * [matplotlib](#matplotlib)
       * [Basics (Stateful appraoch)](#basics-stateful-appraoch)
          * [Example #1:](#example-1)
-            * [Example #2:](#example-2)
+         * [Example #2:](#example-2)
          * [Bar Charts](#bar-charts)
          * [Create a Bar Chart Race](#create-a-bar-chart-race)
          * [Line plots](#line-plots)
@@ -33,7 +33,7 @@
             * [Ticks text size](#ticks-text-size)
          * [Draw contour lines and filled contours](#draw-contour-lines-and-filled-contours)
 
-<!-- Added by: gil_diy, at: Tue 11 Jan 2022 14:30:48 IST -->
+<!-- Added by: gil_diy, at: Tue 11 Jan 2022 14:31:06 IST -->
 
 <!--te-->
 
@@ -69,7 +69,7 @@ plt.show()
 
 ```
 
-#### Example #2:
+### Example #2:
 
 
 
