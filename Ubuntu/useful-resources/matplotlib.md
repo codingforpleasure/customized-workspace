@@ -39,7 +39,7 @@
          * [Draw contour lines and filled contours](#draw-contour-lines-and-filled-contours)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Tue 11 Jan 2022 14:56:20 IST -->
+<!-- Added by: gil_diy, at: Tue 11 Jan 2022 15:10:52 IST -->
 
 <!--te-->
 
@@ -117,6 +117,9 @@ plt.plot(x,y, 'rs--')
 plt.show()
 ```
 
+<p align="center"> <!-- style="width:400px;" -->
+  <img src="images/matplotlib/plot_with_symbol_and_color.png" title="tool tip here">
+</p>
 
 ###### Color 
 
