@@ -39,7 +39,7 @@
          * [Draw contour lines and filled contours](#draw-contour-lines-and-filled-contours)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Tue 11 Jan 2022 15:14:44 IST -->
+<!-- Added by: gil_diy, at: Tue 11 Jan 2022 15:14:49 IST -->
 
 <!--te-->
 
@@ -123,8 +123,8 @@ plt.show()
 
 ###### Color 
 
-<p align="center"> <!-- style="width:400px;" -->
-  Color-type | character     
+
+Color-type | character     
 ------------|-----
 blue | b
 green | g
@@ -134,8 +134,6 @@ magenta | m
 yellow | y
 black | k 
 white | w
-
-</p>
 
 
 
