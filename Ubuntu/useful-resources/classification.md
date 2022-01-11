@@ -18,7 +18,7 @@
       * [Support Vector Machine (SVM)](#support-vector-machine-svm)
       * [Naive Bayes](#naive-bayes)
 
-<!-- Added by: gil_diy, at: Tue 11 Jan 2022 09:20:54 IST -->
+<!-- Added by: gil_diy, at: Tue 11 Jan 2022 09:21:14 IST -->
 
 <!--te-->
 
@@ -239,7 +239,7 @@ gbrt.fit(X,y)
 Random Forest | Adaboost
 ------------|-----
  **Parallel** - The individual Decision Trees are built from the main data parallelly independently from each other   | **Sequential** - model2 is depend on model1 and similary model3 is depend on model2 etc.
- All models have **equal say** or equall vote in the final model | All the models **don't have equal say** (weights)
+All models have **equal say** or equall vote in the final model | All the models **don't have equal say** (weights)
 Uses fully **grown trees** | Each weak model uses **Stumps - one root node and two leaf nodes** 
 
 
