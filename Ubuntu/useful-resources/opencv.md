@@ -53,12 +53,12 @@
          * [How to detect all the connected neighboring pixels which have same color value?](#how-to-detect-all-the-connected-neighboring-pixels-which-have-same-color-value)
          * [Defines for video capture](#defines-for-video-capture)
          * [distance transform](#distance-transform)
-         * [Create a transparent image](#create-a-transparent-image)
+      * [Create a transparent image](#create-a-transparent-image)
       * [Deep learning in OpenCV](#deep-learning-in-opencv)
          * [The function blobFromImage(s)](#the-function-blobfromimages)
             * [1. Mean subtraction](#1-mean-subtraction)
 
-<!-- Added by: gil_diy, at: Tue 11 Jan 2022 17:40:00 IST -->
+<!-- Added by: gil_diy, at: Tue 11 Jan 2022 17:40:36 IST -->
 
 <!--te-->
 
@@ -608,7 +608,7 @@ cv2.CAP_PROP_FRAME_COUNT | Get number of frames per video
 https://homepages.inf.ed.ac.uk/rbf/HIPR2/distance.htm
 
 
-### Create a transparent image
+## Create a transparent image
 
 ```python
     img_height, img_width = 300, 300
