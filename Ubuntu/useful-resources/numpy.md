@@ -74,7 +74,7 @@
       * [Exporting numpy array as image](#exporting-numpy-array-as-image)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Tue 11 Jan 2022 13:16:03 IST -->
+<!-- Added by: gil_diy, at: Tue 11 Jan 2022 13:16:23 IST -->
 
 <!--te-->
 
@@ -699,7 +699,7 @@ result = np.ravel([[1,2,3,56,64,100,-50],
 # Output: array([1,2,3,56,64,100,-50,1,3,4,5,7,3,5])
 ```
 
-[Link]()
+[Link](https://stackoverflow.com/questions/28930465/what-is-the-difference-between-flatten-and-ravel-functions-in-numpy)
 
 ## Flatten
 
@@ -708,7 +708,6 @@ vec = np.array([[1,2,3,56,64,100,-50],
                    [1,3,4,5,7,3,5]])
 
 vec.flatten()
-# Output: array([1,2,3,56,64,100,-50,1,3,4,5,7,3,5])
 ```
 
 
