@@ -32,7 +32,7 @@
             * [Ticks text size](#ticks-text-size)
          * [Draw contour lines and filled contours](#draw-contour-lines-and-filled-contours)
 
-<!-- Added by: gil_diy, at: Tue 11 Jan 2022 12:52:29 IST -->
+<!-- Added by: gil_diy, at: Tue 11 Jan 2022 12:52:48 IST -->
 
 <!--te-->
 
@@ -733,3 +733,6 @@ ax.yaxis.label.set_size(18)
 
 ### Draw contour lines and filled contours
 
+```python
+plt.contourf(x1, x2, y_pred, alpha=0.3, cmap=custom_cmap)
+```
