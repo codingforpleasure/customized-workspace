@@ -21,7 +21,7 @@
          * [Simple plot](#simple-plot-1)
          * [Configuring the axis](#configuring-the-axis)
             * [Plot image without showing axis:](#plot-image-without-showing-axis)
-            * [Plot image without showing axis:](#plot-image-without-showing-axis-1)
+            * [Set the current Axes:](#set-the-current-axes)
             * [Linestyles](#linestyles)
          * [Plot with logarithmic scale for y-axis](#plot-with-logarithmic-scale-for-y-axis)
          * [Export plot](#export-plot)
@@ -31,7 +31,7 @@
             * [Legend text size](#legend-text-size)
             * [Ticks text size](#ticks-text-size)
 
-<!-- Added by: gil_diy, at: Sun 05 Dec 2021 00:54:13 IST -->
+<!-- Added by: gil_diy, at: Tue 11 Jan 2022 12:44:38 IST -->
 
 <!--te-->
 
@@ -655,10 +655,11 @@ By default we will see the axis.
 plt.axis('off')
 ```
 
-#### Plot image without showing axis:
+#### Set the current Axes:
 
 ```python
-
+fix, axes = plt.subplots(ncols=2, figsize=(10, 4), sharey=True)
+plt.sca(axes[0])
 ```
 #### Linestyles
 ```python
