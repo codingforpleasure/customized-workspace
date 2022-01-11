@@ -4,6 +4,7 @@
          * [Simple plot](#simple-plot)
             * [Example #1:](#example-1)
             * [Example #2:](#example-2)
+            * [Example #3 (line types + colors + symbols):](#example-3-line-types--colors--symbols)
          * [Bar Charts](#bar-charts)
          * [Create a Bar Chart Race](#create-a-bar-chart-race)
          * [Line plots](#line-plots)
@@ -35,7 +36,7 @@
          * [Draw contour lines and filled contours](#draw-contour-lines-and-filled-contours)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Tue 11 Jan 2022 14:40:50 IST -->
+<!-- Added by: gil_diy, at: Tue 11 Jan 2022 14:46:23 IST -->
 
 <!--te-->
 
@@ -45,7 +46,7 @@
 ## Basics (Stateful appraoch)
 
 ### Simple plot
-#### Example #1: 
+#### Example #1:
 
 ```python
 import matplotlib.pyplot as plt
@@ -97,6 +98,9 @@ plt.savefig('sinc.png', transparent = True)
 <p align="center"> <!-- style="width:400px;" -->
   <img src="images/matplotlib/sinc.png" title="tool tip here">
 </p>
+
+
+#### Example #3 (line types + colors + symbols):
 
 ### Bar Charts
 ```python
