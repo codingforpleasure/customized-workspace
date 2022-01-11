@@ -40,8 +40,9 @@
             * [<strong>5. argmin, argmax, argsort</strong>](#5-argmin-argmax-argsort)
       * [reshape](#reshape)
       * [Squizzing](#squizzing)
+      * [ravel (contiguous flattened array)](#ravel-contiguous-flattened-array)
+      * [Flatten](#flatten)
       * [Unsquizzing](#unsquizzing)
-      * [Flatten (contiguous flattened array)](#flatten-contiguous-flattened-array)
       * [splitting data](#splitting-data)
       * [Removing rows/columns](#removing-rowscolumns)
       * [Inserting data](#inserting-data)
@@ -73,7 +74,7 @@
       * [Exporting numpy array as image](#exporting-numpy-array-as-image)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Tue 11 Jan 2022 13:09:41 IST -->
+<!-- Added by: gil_diy, at: Tue 11 Jan 2022 13:16:03 IST -->
 
 <!--te-->
 
@@ -689,9 +690,7 @@ new_shape = np.squeeze(x).shape
 # Output: (3,)
 ```
 
-## Unsquizzing
-
-##  Flatten (contiguous flattened array)
+## ravel (contiguous flattened array)
 
 ```python
 result = np.ravel([[1,2,3,56,64,100,-50],
@@ -699,6 +698,22 @@ result = np.ravel([[1,2,3,56,64,100,-50],
 
 # Output: array([1,2,3,56,64,100,-50,1,3,4,5,7,3,5])
 ```
+
+[Link]()
+
+## Flatten
+
+```python
+vec = np.array([[1,2,3,56,64,100,-50],
+                   [1,3,4,5,7,3,5]])
+
+vec.flatten()
+# Output: array([1,2,3,56,64,100,-50,1,3,4,5,7,3,5])
+```
+
+
+## Unsquizzing
+
 
 
 ## splitting data
