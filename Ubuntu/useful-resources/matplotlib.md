@@ -1,7 +1,7 @@
 <!--ts-->
    * [matplotlib](#matplotlib)
       * [Basics (Stateful appraoch)](#basics-stateful-appraoch)
-         * [Simple plot](#simple-plot)
+         * [Example #1:](#example-1)
             * [Example #2:](#example-2)
          * [Bar Charts](#bar-charts)
          * [Create a Bar Chart Race](#create-a-bar-chart-race)
@@ -19,7 +19,7 @@
       * [Visualising correlation using Seaborn library](#visualising-correlation-using-seaborn-library)
       * [Subplots (Object oriented approach)](#subplots-object-oriented-approach)
          * [Multiple plots](#multiple-plots)
-         * [Simple plot](#simple-plot-1)
+         * [Simple plot](#simple-plot)
          * [Configuring the axis](#configuring-the-axis)
             * [Plot image without showing axis:](#plot-image-without-showing-axis)
             * [Set the current Axes:](#set-the-current-axes)
@@ -33,7 +33,7 @@
             * [Ticks text size](#ticks-text-size)
          * [Draw contour lines and filled contours](#draw-contour-lines-and-filled-contours)
 
-<!-- Added by: gil_diy, at: Tue 11 Jan 2022 14:30:25 IST -->
+<!-- Added by: gil_diy, at: Tue 11 Jan 2022 14:30:48 IST -->
 
 <!--te-->
 
@@ -42,7 +42,7 @@
 
 ## Basics (Stateful appraoch)
 
-### Simple plot
+### Example #1: 
 
 ```python
 import matplotlib.pyplot as plt
