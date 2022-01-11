@@ -33,7 +33,7 @@
             * [Ticks text size](#ticks-text-size)
          * [Draw contour lines and filled contours](#draw-contour-lines-and-filled-contours)
 
-<!-- Added by: gil_diy, at: Tue 11 Jan 2022 14:30:12 IST -->
+<!-- Added by: gil_diy, at: Tue 11 Jan 2022 14:30:25 IST -->
 
 <!--te-->
 
@@ -86,7 +86,7 @@ plt.show()
 ```
 
 <p align="center"> <!-- style="width:400px;" -->
-  <img src="images/sinc.png" title="tool tip here">
+  <img src="images/matplotlib/sinc.png" title="tool tip here">
 </p>
 
 ### Bar Charts
