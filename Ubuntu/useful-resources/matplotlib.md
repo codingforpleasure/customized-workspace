@@ -33,7 +33,7 @@
             * [Ticks text size](#ticks-text-size)
          * [Draw contour lines and filled contours](#draw-contour-lines-and-filled-contours)
 
-<!-- Added by: gil_diy, at: Tue 11 Jan 2022 14:25:41 IST -->
+<!-- Added by: gil_diy, at: Tue 11 Jan 2022 14:30:08 IST -->
 
 <!--te-->
 
@@ -71,6 +71,8 @@ plt.show()
 
 #### Example #2:
 
+
+
 ```python
 import numpy as np
 from matplotlib import pyplot as plt
@@ -82,6 +84,10 @@ plt.plot(X, Y)
 plt.savefig('sinc.png', c = 'k')
 plt.show()
 ```
+
+<p align="center"> <!-- style="width:400px;" -->
+  <img src="images/sinc.png" title="tool tip here">
+</p>
 
 ### Bar Charts
 ```python
