@@ -72,7 +72,7 @@
       * [Exporting numpy array as image](#exporting-numpy-array-as-image)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Tue 11 Jan 2022 12:49:39 IST -->
+<!-- Added by: gil_diy, at: Tue 11 Jan 2022 12:50:21 IST -->
 
 <!--te-->
 
@@ -201,7 +201,7 @@ arr[1,:,:] = single_matrix # Adding to second layer
 #### Creating evenly spaced numbers over a specified interval.
 
 ```python
-
+np.linspace(start = 0, stop = 10, num = 100)
 ```
 
 ### Converting from numpy array to simple list
