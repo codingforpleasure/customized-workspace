@@ -41,6 +41,7 @@
       * [reshape](#reshape)
       * [Squizzing](#squizzing)
       * [Unsquizzing](#unsquizzing)
+      * [Flatten](#flatten)
       * [splitting data](#splitting-data)
       * [Removing rows/columns](#removing-rowscolumns)
       * [Inserting data](#inserting-data)
@@ -72,7 +73,7 @@
       * [Exporting numpy array as image](#exporting-numpy-array-as-image)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Tue 11 Jan 2022 12:51:06 IST -->
+<!-- Added by: gil_diy, at: Tue 11 Jan 2022 13:06:30 IST -->
 
 <!--te-->
 
@@ -690,6 +691,11 @@ new_shape = np.squeeze(x).shape
 
 ## Unsquizzing
 
+##  Flatten
+
+```python
+
+```
 
 
 ## splitting data
