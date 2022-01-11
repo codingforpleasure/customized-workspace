@@ -74,7 +74,7 @@
       * [Exporting numpy array as image](#exporting-numpy-array-as-image)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Tue 11 Jan 2022 13:16:57 IST -->
+<!-- Added by: gil_diy, at: Tue 11 Jan 2022 13:19:33 IST -->
 
 <!--te-->
 
@@ -1031,8 +1031,11 @@ np.linalg.det(A)
 Take the matrix M and decompose or represent it as the product of three other matrices.
 
 Has a wide array of applications:
+
 1. dimensionality reduction
+
 2. image compression
+
 3. denoising data
 
 <p align="center" style="width:400px;" >
