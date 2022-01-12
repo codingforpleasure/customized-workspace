@@ -58,7 +58,7 @@
          * [The function blobFromImage(s)](#the-function-blobfromimages)
             * [1. Mean subtraction](#1-mean-subtraction)
 
-<!-- Added by: gil_diy, at: Wed 12 Jan 2022 10:58:21 IST -->
+<!-- Added by: gil_diy, at: Wed 12 Jan 2022 11:30:01 IST -->
 
 <!--te-->
 
@@ -100,6 +100,12 @@ split each color to different layer| b,g,r = cv2.split(img)
 ### Reading images in different modes:
 ```python
 img = cv2.imread("path-to-file", cv2.IMREAD_COLOR)
+```
+
+Reading images with alpha channel:
+
+```python
+img = cv2.imread("path-to-file",cv2.IMREAD_UNCHANGED)
 ```
 
 Description | Flags
