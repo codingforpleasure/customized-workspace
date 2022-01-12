@@ -72,9 +72,10 @@
          * [Saving our datasets to NPZ files](#saving-our-datasets-to-npz-files)
       * [Exporting txt files easily with specific format](#exporting-txt-files-easily-with-specific-format)
       * [Exporting numpy array as image](#exporting-numpy-array-as-image)
+      * [Flip image with numpy](#flip-image-with-numpy)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Tue 11 Jan 2022 13:49:11 IST -->
+<!-- Added by: gil_diy, at: Wed 12 Jan 2022 13:35:42 IST -->
 
 <!--te-->
 
@@ -1153,6 +1154,15 @@ from PIL import Image
 img_array = np.array(list_values, dtype=np.uint8).reshape(96, 96)
 im = Image.fromarray(img_array)
 im.save(f"face.jpeg")
+```
+
+## Flip image with numpy
+
+```python
+# Flipping images with Numpy
+flipped_img = np.fliplr(img)
+plt.imshow(flipped_img)
+plt.show()
 ```
 
 ## Reference
