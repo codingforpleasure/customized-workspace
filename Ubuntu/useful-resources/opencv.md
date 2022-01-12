@@ -58,7 +58,7 @@
          * [The function blobFromImage(s)](#the-function-blobfromimages)
             * [1. Mean subtraction](#1-mean-subtraction)
 
-<!-- Added by: gil_diy, at: Wed 12 Jan 2022 10:41:40 IST -->
+<!-- Added by: gil_diy, at: Wed 12 Jan 2022 10:57:03 IST -->
 
 <!--te-->
 
@@ -161,6 +161,11 @@ cv2.COLOR_BGR2GRAY | Convert from BGR to grayscale
 cv2.COLOR_BGR2HSV | Convert from BGR to HSV
 cv2.COLOR_BGR2BGRA | Adds an Alpha channel
 cv2.COLOR_BGR2RGB | Order the layers differently
+
+
+<p align="center"> <!-- style="width:400px;" -->
+  <img src="images/opencv/bgr_to_rgb.jpg" title="tool tip here">
+</p>
 
 **Attention:** 
 1) So if we apply **cv2.COLOR_BGR2RGB** then the **all red pixels will become blue pixels**
