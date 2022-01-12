@@ -58,7 +58,7 @@
          * [The function blobFromImage(s)](#the-function-blobfromimages)
             * [1. Mean subtraction](#1-mean-subtraction)
 
-<!-- Added by: gil_diy, at: Wed 12 Jan 2022 11:30:11 IST -->
+<!-- Added by: gil_diy, at: Wed 12 Jan 2022 11:33:05 IST -->
 
 <!--te-->
 
@@ -120,6 +120,7 @@ Equivalent to combining: IMREAD_ANYCOLOR + IMREAD_ANYDEPTH | IMREAD_UNCHANGED
 
 ```python
 img = cv2.imwrite(filename = "path-to-file", img = img, params = cv2.IMREAD_COLOR)
+
 ```
 Description | Flags
 ------------|-----
