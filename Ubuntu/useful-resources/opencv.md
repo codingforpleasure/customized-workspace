@@ -58,7 +58,7 @@
          * [The function blobFromImage(s)](#the-function-blobfromimages)
             * [1. Mean subtraction](#1-mean-subtraction)
 
-<!-- Added by: gil_diy, at: Wed 12 Jan 2022 10:07:25 IST -->
+<!-- Added by: gil_diy, at: Wed 12 Jan 2022 10:31:17 IST -->
 
 <!--te-->
 
@@ -159,6 +159,7 @@ Title1 | Title2
 ------------|-----
 COLOR_BGR2GRAY | Convert from BGR to grayscale
 COLOR_BGR2HSV | Convert from BGR to HSV
+cv2.COLOR_BGR2BGRA | Adds an Alpha channel
 
 
 
