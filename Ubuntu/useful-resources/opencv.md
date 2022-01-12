@@ -58,7 +58,7 @@
          * [The function blobFromImage(s)](#the-function-blobfromimages)
             * [1. Mean subtraction](#1-mean-subtraction)
 
-<!-- Added by: gil_diy, at: Wed 12 Jan 2022 10:31:47 IST -->
+<!-- Added by: gil_diy, at: Wed 12 Jan 2022 10:32:40 IST -->
 
 <!--te-->
 
@@ -162,7 +162,8 @@ COLOR_BGR2HSV | Convert from BGR to HSV
 cv2.COLOR_BGR2BGRA | Adds an Alpha channel
 cv2.COLOR_BGR2RGB | Order the layers differently
 
-
+**Attention:** 
+So if we apply **cv2.COLOR_BGR2RGB** 
 
 
 
