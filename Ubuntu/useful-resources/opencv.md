@@ -1,10 +1,9 @@
 <!--ts-->
    * [An OpenCV glimpse](#an-opencv-glimpse)
-      * [Basics](#basics)
-         * [Color-spaces in OpenCV](#color-spaces-in-opencv)
-            * [<strong>Gray</strong>](#gray)
-            * [<strong>BGR</strong>](#bgr)
-            * [<strong>HSV</strong>](#hsv)
+      * [Color-spaces in OpenCV](#color-spaces-in-opencv)
+         * [<strong>Gray</strong>](#gray)
+         * [<strong>BGR</strong>](#bgr)
+         * [<strong>HSV</strong>](#hsv)
          * [Convert between colorspaces](#convert-between-colorspaces)
             * [Get the unique colors](#get-the-unique-colors)
          * [Histograms](#histograms)
@@ -59,7 +58,7 @@
          * [The function blobFromImage(s)](#the-function-blobfromimages)
             * [1. Mean subtraction](#1-mean-subtraction)
 
-<!-- Added by: gil_diy, at: Wed 12 Jan 2022 12:16:04 IST -->
+<!-- Added by: gil_diy, at: Wed 12 Jan 2022 12:16:56 IST -->
 
 <!--te-->
 
@@ -73,23 +72,22 @@
 
 [Great reference-3](https://medium.com/analytics-vidhya/tutorial-how-to-scale-and-rotate-contours-in-opencv-using-python-f48be59c35a2)
 
-## Basics
 
-### Color-spaces in OpenCV
+## Color-spaces in OpenCV
 
 **Attention:** by default in openCV image holds the following layers in the following order: **BGR**
 
 
-#### **Gray**
+### **Gray**
 liminates color information translating
 to shades of gray: this color space is extremely useful for intermediate
 processing, such as face detection.
 
-#### **BGR**
+### **BGR**
 blue-green-red color space, in which each pixel is a three-element
 array, each value representing the blue, green, and red colors:
 
-#### **HSV**
+### **HSV**
 hue is a color tone, saturation is the intensity of a color, and value
 represents its darkness
 
