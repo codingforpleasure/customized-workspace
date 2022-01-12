@@ -58,7 +58,7 @@
          * [The function blobFromImage(s)](#the-function-blobfromimages)
             * [1. Mean subtraction](#1-mean-subtraction)
 
-<!-- Added by: gil_diy, at: Wed 12 Jan 2022 10:57:52 IST -->
+<!-- Added by: gil_diy, at: Wed 12 Jan 2022 10:58:18 IST -->
 
 <!--te-->
 
@@ -180,7 +180,7 @@ cv2.COLOR_BGR2RGB | Order the layers differently
 #### Get the unique colors
 ```python
 # List of all colors in an image using opencv and python
-	print(np.unique(img, axis=0, return_counts=True))
+print(np.unique(img, axis=0, return_counts=True))
 ```
 
 ### Histograms
