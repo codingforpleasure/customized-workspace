@@ -13,7 +13,7 @@
             * [Reading image with alpha channel](#reading-image-with-alpha-channel)
          * [Writing images in different modes:](#writing-images-in-different-modes)
       * [Draw on screen shapes](#draw-on-screen-shapes)
-         * [Arithmetic Operations on Images](#arithmetic-operations-on-images)
+      * [Arithmetic Operations on Images](#arithmetic-operations-on-images)
             * [Addition](#addition)
             * [Substruction](#substruction)
          * [Logical Operations on images](#logical-operations-on-images)
@@ -59,7 +59,7 @@
          * [The function blobFromImage(s)](#the-function-blobfromimages)
             * [1. Mean subtraction](#1-mean-subtraction)
 
-<!-- Added by: gil_diy, at: Wed 12 Jan 2022 12:14:43 IST -->
+<!-- Added by: gil_diy, at: Wed 12 Jan 2022 12:16:00 IST -->
 
 <!--te-->
 
@@ -215,7 +215,7 @@ y1, y2 = 100, 400
 cv2.rectangle(img, (x1, y1), (x2, y2), (0, 255, 0), 3)
 ```
 
-### Arithmetic Operations on Images
+## Arithmetic Operations on Images
 
 apply a simple arithmation operation on each pixel of the image
 #### Addition
