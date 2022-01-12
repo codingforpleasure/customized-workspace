@@ -58,7 +58,7 @@
          * [The function blobFromImage(s)](#the-function-blobfromimages)
             * [1. Mean subtraction](#1-mean-subtraction)
 
-<!-- Added by: gil_diy, at: Wed 12 Jan 2022 10:57:06 IST -->
+<!-- Added by: gil_diy, at: Wed 12 Jan 2022 10:57:30 IST -->
 
 <!--te-->
 
@@ -164,7 +164,7 @@ cv2.COLOR_BGR2RGB | Order the layers differently
 
 
 <p align="center"> <!-- style="width:400px;" -->
-  <img src="images/opencv/bgr_to_rgb.jpg" title="tool tip here">
+  <img src="images/open-cv/bgr_to_rgb.jpg" title="tool tip here">
 </p>
 
 **Attention:** 
