@@ -58,7 +58,7 @@
          * [The function blobFromImage(s)](#the-function-blobfromimages)
             * [1. Mean subtraction](#1-mean-subtraction)
 
-<!-- Added by: gil_diy, at: Wed 12 Jan 2022 10:57:03 IST -->
+<!-- Added by: gil_diy, at: Wed 12 Jan 2022 10:57:06 IST -->
 
 <!--te-->
 
