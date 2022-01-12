@@ -7,6 +7,9 @@
          * [Convert between colorspaces](#convert-between-colorspaces)
             * [Get the unique colors](#get-the-unique-colors)
          * [Histograms](#histograms)
+      * [Operations on Layers](#operations-on-layers)
+         * [Gather layers into image](#gather-layers-into-image)
+         * [Seperate layers from image](#seperate-layers-from-image)
          * [Useful functions in open CV](#useful-functions-in-open-cv)
          * [Reading images in different modes:](#reading-images-in-different-modes)
             * [Reading image with alpha channel](#reading-image-with-alpha-channel)
@@ -58,7 +61,7 @@
          * [The function blobFromImage(s)](#the-function-blobfromimages)
             * [1. Mean subtraction](#1-mean-subtraction)
 
-<!-- Added by: gil_diy, at: Wed 12 Jan 2022 12:16:56 IST -->
+<!-- Added by: gil_diy, at: Wed 12 Jan 2022 12:58:27 IST -->
 
 <!--te-->
 
@@ -146,6 +149,20 @@ hist = cv2.calcHist([img_grayscale], channels=[0], mask=None, histSize=[256], ra
 
 
 [Intresting article about histogram](https://lmcaraig.com/understanding-image-histograms-with-opencv)
+
+## Operations on Layers
+
+### Gather layers into image
+
+```python
+overlay_color = cv2.merge((b, g, r))
+```
+
+### Seperate layers from image
+
+```python
+b, g, r, a = cv2.split(img_with_alpha_channel)
+```
 
 
 ### Useful functions in open CV
