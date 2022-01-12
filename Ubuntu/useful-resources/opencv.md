@@ -58,7 +58,7 @@
          * [The function blobFromImage(s)](#the-function-blobfromimages)
             * [1. Mean subtraction](#1-mean-subtraction)
 
-<!-- Added by: gil_diy, at: Wed 12 Jan 2022 10:06:48 IST -->
+<!-- Added by: gil_diy, at: Wed 12 Jan 2022 10:07:25 IST -->
 
 <!--te-->
 
@@ -133,7 +133,7 @@ cv2.rectangle(img, (x1, y1), (x2, y2), (0, 255, 0), 3)
 ```
 ### Color-spaces in OpenCV
 
-**Attention** by default in openCV  image holds the following layers in the following order: **BGR**
+**Attention:** by default in openCV image holds the following layers in the following order: **BGR**
 
 
 #### **Gray**
