@@ -58,7 +58,7 @@
          * [The function blobFromImage(s)](#the-function-blobfromimages)
             * [1. Mean subtraction](#1-mean-subtraction)
 
-<!-- Added by: gil_diy, at: Wed 12 Jan 2022 10:35:00 IST -->
+<!-- Added by: gil_diy, at: Wed 12 Jan 2022 10:36:27 IST -->
 
 <!--te-->
 
@@ -163,7 +163,9 @@ cv2.COLOR_BGR2BGRA | Adds an Alpha channel
 cv2.COLOR_BGR2RGB | Order the layers differently
 
 **Attention:** 
-So if we apply **cv2.COLOR_BGR2RGB** then the **all red pixels will become blue pixels**
+1) So if we apply **cv2.COLOR_BGR2RGB** then the **all red pixels will become blue pixels**
+
+2) Full transparency is by using mask of 255 values in the alpha channel
 
 
 
