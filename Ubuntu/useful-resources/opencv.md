@@ -1,10 +1,6 @@
 <!--ts-->
    * [An OpenCV glimpse](#an-opencv-glimpse)
       * [Basics](#basics)
-         * [Useful functions in open CV](#useful-functions-in-open-cv)
-         * [Reading images in different modes:](#reading-images-in-different-modes)
-         * [Writing images in different modes:](#writing-images-in-different-modes)
-      * [Draw on screen](#draw-on-screen)
          * [Color-spaces in OpenCV](#color-spaces-in-opencv)
             * [<strong>Gray</strong>](#gray)
             * [<strong>BGR</strong>](#bgr)
@@ -12,15 +8,20 @@
          * [Convert between colorspaces](#convert-between-colorspaces)
             * [Get the unique colors](#get-the-unique-colors)
          * [Histograms](#histograms)
+         * [Useful functions in open CV](#useful-functions-in-open-cv)
+         * [Reading images in different modes:](#reading-images-in-different-modes)
+            * [Reading image with alpha channel](#reading-image-with-alpha-channel)
+         * [Writing images in different modes:](#writing-images-in-different-modes)
+      * [Draw on screen shapes](#draw-on-screen-shapes)
          * [Arithmetic Operations on Images](#arithmetic-operations-on-images)
             * [Addition](#addition)
             * [Substruction](#substruction)
          * [Logical Operations on images](#logical-operations-on-images)
-         * [Thresholding Types](#thresholding-types)
-            * [Threshold Global](#threshold-global)
-               * [Threshold set manually](#threshold-set-manually)
-            * [Threshold calculated automatically (THRESH_OTSU)](#threshold-calculated-automatically-thresh_otsu)
-            * [Adaptive thresholding](#adaptive-thresholding)
+      * [Thresholding Types](#thresholding-types)
+         * [Threshold Global](#threshold-global)
+         * [Threshold set manually](#threshold-set-manually)
+         * [Threshold calculated automatically (THRESH_OTSU)](#threshold-calculated-automatically-thresh_otsu)
+         * [Adaptive thresholding](#adaptive-thresholding)
          * [blurring/smoothening techniques](#blurringsmoothening-techniques)
             * [Averaging](#averaging)
             * [Gaussian Blurring](#gaussian-blurring)
@@ -58,7 +59,7 @@
          * [The function blobFromImage(s)](#the-function-blobfromimages)
             * [1. Mean subtraction](#1-mean-subtraction)
 
-<!-- Added by: gil_diy, at: Wed 12 Jan 2022 11:33:05 IST -->
+<!-- Added by: gil_diy, at: Wed 12 Jan 2022 12:14:43 IST -->
 
 <!--te-->
 
@@ -74,70 +75,6 @@
 
 ## Basics
 
-### Useful functions in open CV
-
-Description | command
-------------------------------------|-----
-Load image | img = **cv2.imread**( "_path-to-file_")
-Load image with alpha channel| img = **cv2.imread**( "_path-to-file_", cv2.IMREAD_UNCHANGED)
-Write image to disk | **cv2.imwrite**( "_/codingForPleasure/example.png_", _img_ )
-Display image | **cv2.imshow**( "_window-title_" , _img_ )
-Get image size | rows, columns , _ = **cv2.shape()**
-Convert to grayscale | grayImg = **cv2.cvtColor**(_img, **cv2.COLOR_BGR2GRAY**_)
-Threshold | thresholdImg = **cv2.threshold**(_grayImg, &lt;threshold value&gt; ,&lt;max value&gt; **cv2.THRESH_BINARY_INV** \| **cv2.THRESH_OTSU**_ )
-Retrieve contours | im2, contours, hierarchy = **cv2.findContours**(_img, **cv2.RETR_EXTERNAL**, **cv2.CHAIN_APPROX_SIMPLE**_)
-Calculate contour's area | area = **cv2.contourArea**(contour)
-Get the dimensions of a bounding rectangle | (x,y,w,h) = **cv2.boundingRect**(contour)
-Resize image | **cv2.resize**(_img, **(100, 100)**_)
-             |     resizedImg = cv2.resize(img, (int(imgwidth / descalingFactor), int(imgheight / descalingFactor)),interpolation=cv2.INTER_AREA)
-Draw a rectangle on an image | **cv2.rectangle**(img, (x, y), (x + w, y + h), color, thickness)
-split each color to different layer| b,g,r = cv2.split(img)
-
-
-* findContours should opperate on black and white image **ONLY**
-
-
-### Reading images in different modes:
-```python
-img = cv2.imread("path-to-file", cv2.IMREAD_COLOR)
-```
-
-Reading images with alpha channel:
-
-```python
-img = cv2.imread("path-to-file",cv2.IMREAD_UNCHANGED)
-```
-
-Description | Flags
-------------|-----
-Always load to three-channel array | IMREAD_COLOR
-Always load to single-channel array | IMREAD_GRAYSCALE
-Channels as indicated by file (up to three) | IMREAD_ANYCOLOR
-Allow loading of more than 8-bit depth | IMREAD_ANYDEPTH
-Equivalent to combining: IMREAD_ANYCOLOR + IMREAD_ANYDEPTH | IMREAD_UNCHANGED
-
-### Writing images in different modes:
-
-```python
-img = cv2.imwrite(filename = "path-to-file", img = img, params = cv2.IMREAD_COLOR)
-
-```
-Description | Flags
-------------|-----
-JPEG quality | IMWRITE_JPG_QUALITY
-PNG compression (higher values mean more compression)y | IMWRITE_PNG_COMPRESSION
-Channels as indicated by file (up to three) | IMREAD_ANYCOLOR
-
-## Draw on screen
-
-* top-left corner and bottom-right corner of rectangle
-
-
-```python
-x1, x2 = 200, 300
-y1, y2 = 100, 400
-cv2.rectangle(img, (x1, y1), (x2, y2), (0, 255, 0), 3)
-```
 ### Color-spaces in OpenCV
 
 **Attention:** by default in openCV image holds the following layers in the following order: **BGR**
@@ -212,6 +149,72 @@ hist = cv2.calcHist([img_grayscale], channels=[0], mask=None, histSize=[256], ra
 
 [Intresting article about histogram](https://lmcaraig.com/understanding-image-histograms-with-opencv)
 
+
+### Useful functions in open CV
+
+Description | command
+------------------------------------|-----
+Load image | img = **cv2.imread**( "_path-to-file_")
+Load image with alpha channel| img = **cv2.imread**( "_path-to-file_", cv2.IMREAD_UNCHANGED)
+Write image to disk | **cv2.imwrite**( "_/codingForPleasure/example.png_", _img_ )
+Display image | **cv2.imshow**( "_window-title_" , _img_ )
+Get image size | rows, columns , _ = **cv2.shape()**
+Convert to grayscale | grayImg = **cv2.cvtColor**(_img, **cv2.COLOR_BGR2GRAY**_)
+Threshold | thresholdImg = **cv2.threshold**(_grayImg, &lt;threshold value&gt; ,&lt;max value&gt; **cv2.THRESH_BINARY_INV** \| **cv2.THRESH_OTSU**_ )
+Retrieve contours | im2, contours, hierarchy = **cv2.findContours**(_img, **cv2.RETR_EXTERNAL**, **cv2.CHAIN_APPROX_SIMPLE**_)
+Calculate contour's area | area = **cv2.contourArea**(contour)
+Get the dimensions of a bounding rectangle | (x,y,w,h) = **cv2.boundingRect**(contour)
+Resize image | **cv2.resize**(_img, **(100, 100)**_)
+             |     resizedImg = cv2.resize(img, (int(imgwidth / descalingFactor), int(imgheight / descalingFactor)),interpolation=cv2.INTER_AREA)
+Draw a rectangle on an image | **cv2.rectangle**(img, (x, y), (x + w, y + h), color, thickness)
+split each color to different layer| b,g,r = cv2.split(img)
+
+
+* findContours should opperate on black and white image **ONLY**
+
+
+### Reading images in different modes:
+```python
+img = cv2.imread("path-to-file", cv2.IMREAD_COLOR)
+```
+
+#### Reading image with alpha channel
+
+```python
+img = cv2.imread("path-to-file",cv2.IMREAD_UNCHANGED)
+```
+
+Description | Flags
+------------|-----
+Always load to three-channel array | IMREAD_COLOR
+Always load to single-channel array | IMREAD_GRAYSCALE
+Channels as indicated by file (up to three) | IMREAD_ANYCOLOR
+Allow loading of more than 8-bit depth | IMREAD_ANYDEPTH
+Equivalent to combining: IMREAD_ANYCOLOR + IMREAD_ANYDEPTH | IMREAD_UNCHANGED
+
+### Writing images in different modes:
+
+```python
+img = cv2.imwrite(filename = "path-to-file", img = img, params = cv2.IMREAD_COLOR)
+
+```
+Description | Flags
+------------|-----
+JPEG quality | IMWRITE_JPG_QUALITY
+PNG compression (higher values mean more compression)y | IMWRITE_PNG_COMPRESSION
+Channels as indicated by file (up to three) | IMREAD_ANYCOLOR
+
+## Draw on screen shapes
+
+* top-left corner and bottom-right corner of rectangle
+
+
+```python
+x1, x2 = 200, 300
+y1, y2 = 100, 400
+cv2.rectangle(img, (x1, y1), (x2, y2), (0, 255, 0), 3)
+```
+
 ### Arithmetic Operations on Images
 
 apply a simple arithmation operation on each pixel of the image
@@ -232,13 +235,14 @@ img4 = cv2.bitwise_and(img1, img2)
 img5 = cv2.bitwise_or(img1, img2)
 img6 = cv2.bitwise_xor(img1, img2)
 ```
-### Thresholding Types
+## Thresholding Types
 
-#### Threshold Global
+### Threshold Global
 
 [Link](https://www.youtube.com/watch?v=f1SaYzOthCM)
 
-##### Threshold set manually
+### Threshold set manually
+
 **Binary:**  `if pixel > threshold
 	pixel = max_val`
 else
@@ -271,7 +275,7 @@ What about those two: THRESH_TRIANGLE, THRESH_MASK ?
 
 
 
-#### Threshold calculated automatically (THRESH_OTSU)
+### Threshold calculated automatically (THRESH_OTSU)
 
 Will automatically calculate the appropriate threshold and then apply the binarization algorithm we are using with it.
 Is used to **automatically** perform clustering-based image thresholding,
@@ -283,7 +287,7 @@ cv2.threshold(img,0,max_val, cv2.THRESH_BINARY + cv2.THRESH_OTSU)
 
 http://www.labbookpages.co.uk/software/imgProc/otsuThreshold.html
 
-#### Adaptive thresholding
+### Adaptive thresholding
 
 When the THRESH_OTSU approach fails, we should consider adaptive thresholding:
 
