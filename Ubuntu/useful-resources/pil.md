@@ -10,7 +10,7 @@
       * [Save image file](#save-image-file)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Thu 13 Jan 2022 17:14:23 IST -->
+<!-- Added by: gil_diy, at: Thu 13 Jan 2022 17:49:54 IST -->
 
 <!--te-->
 
@@ -45,7 +45,7 @@ rsize_x, rsize_y = rectangle.size
 ## Rotate image
 
 ```python
-PIL.Image.Image.rotate(my_image, a, resample=PIL.Image.BICUBIC, expand=True)
+Image.rotate(my_image, a, resample=PIL.Image.BICUBIC, expand=True)
 ```
 
 ## Draw circle and save
