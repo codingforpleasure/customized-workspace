@@ -6,10 +6,11 @@
       * [Get image dimenstions](#get-image-dimenstions)
       * [Rotate image](#rotate-image)
       * [Draw circle and save](#draw-circle-and-save)
+      * [Pasting image on to an image](#pasting-image-on-to-an-image)
       * [Save image file](#save-image-file)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Fri 24 Dec 2021 22:17:26 IST -->
+<!-- Added by: gil_diy, at: Thu 13 Jan 2022 16:57:12 IST -->
 
 <!--te-->
 
@@ -55,6 +56,23 @@ image = Image.new('RGBA', (200, 200))
 draw = ImageDraw.Draw(image)
 draw.ellipse((20, 20, 180, 180), fill='blue', outline='blue')
 image.save('test.png')
+```
+
+## Pasting image on to an image
+
+```python
+# Open background and foreground and ensure they are RGB (not palette)
+bg = Image.open('paddington.png').convert('RGB')
+fg = Image.open('star.png').convert('RGBA')
+
+# Resize foreground down from 500x500 to 100x100
+fg_resized = fg.resize((100,100))
+
+# Overlay foreground onto background at top right corner, using transparency of foreground as mask
+bg.paste(fg_resized,box=(300,0),mask=fg_resized)
+
+# Save result
+bg.save('result.png')
 ```
 
 ## Save image file
