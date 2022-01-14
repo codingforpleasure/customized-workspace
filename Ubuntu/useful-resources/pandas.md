@@ -80,7 +80,7 @@
          * [Calculate correlation for all numerical columns pairs](#calculate-correlation-for-all-numerical-columns-pairs)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Fri 14 Jan 2022 10:37:44 IST -->
+<!-- Added by: gil_diy, at: Fri 14 Jan 2022 10:37:51 IST -->
 
 <!--te-->
 
@@ -513,7 +513,7 @@ data_df['my_column'].value_counts(ascending=False).nlargest(5)
 ```
 ## Get `mode` - value that appears most often
 
-`df.mode()`
+The function `df.mode()` will 
 
 ```python
     df = pd.DataFrame({
