@@ -80,7 +80,7 @@
          * [Calculate correlation for all numerical columns pairs](#calculate-correlation-for-all-numerical-columns-pairs)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Fri 14 Jan 2022 08:14:18 IST -->
+<!-- Added by: gil_diy, at: Fri 14 Jan 2022 08:14:40 IST -->
 
 <!--te-->
 
@@ -517,6 +517,7 @@ data_df['my_column'].value_counts(ascending=False).nlargest(5)
 df.mode(axis='columns')
 ```
 
+[Reference](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.mode.html)
 
 ## Datatypes conversions
 
