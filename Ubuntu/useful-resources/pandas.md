@@ -80,7 +80,7 @@
          * [Calculate correlation for all numerical columns pairs](#calculate-correlation-for-all-numerical-columns-pairs)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Fri 14 Jan 2022 10:37:51 IST -->
+<!-- Added by: gil_diy, at: Fri 14 Jan 2022 10:47:38 IST -->
 
 <!--te-->
 
@@ -513,17 +513,14 @@ data_df['my_column'].value_counts(ascending=False).nlargest(5)
 ```
 ## Get `mode` - value that appears most often
 
-The function `df.mode()` will 
+Replacing the missing values with the most frequent values present in each column:
 
 ```python
     df = pd.DataFrame({
-        'ord_no': [70001, np.nan, 70002, 70004, np.nan, 70005, np.nan, 70010, 70003, 70012, np.nan, 70013],
-        'purch_amt': [150.5, np.nan, 65.26, 110.5, 948.5, np.nan, 5760, 1983.43, np.nan, 250.45, 75.29, 3045.6],
-        'sale_amt': [10.5, 20.65, np.nan, 11.5, 98.5, np.nan, 57, 19.43, np.nan, 25.45, 75.29, 35.6],
-        'ord_date': ['2012-10-05', '2012-09-10', np.nan, '2012-08-17', '2012-09-10', '2012-07-27', '2012-09-10',
-                     '2012-10-10', '2012-10-10', '2012-06-27', '2012-08-17', '2012-04-25'],
-        'customer_id': [3002, 3001, 3001, 3003, 3002, 3001, 3001, 3004, 3003, 3002, 3001, 3001],
-        'salesman_id': [5002, 5003, 5001, np.nan, 5002, 5001, 5001, np.nan, 5003, 5002, 5003, np.nan]})
+        'column_1': [np.nan, 5, 9, 15, np.nan, 15, 15],
+        'column_2': [9, 5, 9, 15, np.nan, 50, 9],
+        'column_3': ['apple1', np.nan, 'apple2', 'apple1', 'apple1','apple3','apple3'],
+    })
     print("Original Orders DataFrame:")
     print(df)
     print("\nReplace the missing values with the most frequent values present in each column:")
