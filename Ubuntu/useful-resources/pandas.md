@@ -50,6 +50,7 @@
       * [Get information about the memory usage of a dataframe stored in the memory](#get-information-about-the-memory-usage-of-a-dataframe-stored-in-the-memory)
       * [Get statistics (count, mean, std, min, max))](#get-statistics-count-mean-std-min-max)
       * [Get counts for spcific column (Exactly like table function in R)](#get-counts-for-spcific-column-exactly-like-table-function-in-r)
+      * [get mode - value that appears most often](#get-mode---value-that-appears-most-often)
       * [Datatypes conversions](#datatypes-conversions)
       * [Dealing with NA's](#dealing-with-nas)
          * [Check the column-wise distribution of null values](#check-the-column-wise-distribution-of-null-values)
@@ -79,7 +80,7 @@
          * [Calculate correlation for all numerical columns pairs](#calculate-correlation-for-all-numerical-columns-pairs)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Fri 14 Jan 2022 08:08:38 IST -->
+<!-- Added by: gil_diy, at: Fri 14 Jan 2022 08:14:18 IST -->
 
 <!--te-->
 
@@ -510,7 +511,11 @@ data_df['my_column'].value_counts(ascending=False).nlargest(5)
 
 
 ```
+## get `mode` - value that appears most often
 
+```python
+df.mode(axis='columns')
+```
 
 
 ## Datatypes conversions
