@@ -5,8 +5,9 @@
       * [Rolling Window Statistics](#rolling-window-statistics)
       * [Expanding Window Statistics](#expanding-window-statistics)
       * [Statsmodels](#statsmodels)
+      * [Useful packages for time series](#useful-packages-for-time-series)
 
-<!-- Added by: gil_diy, at: Fri 14 Jan 2022 08:09:11 IST -->
+<!-- Added by: gil_diy, at: Fri 14 Jan 2022 08:25:40 IST -->
 
 <!--te-->
 
@@ -86,3 +87,6 @@ for t in range(test_ts.shape[0]):
 
 
 
+## Useful packages for time series
+
+[Merlion](https://github.com/salesforce/Merlion)
