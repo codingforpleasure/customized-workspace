@@ -50,7 +50,7 @@
       * [Get information about the memory usage of a dataframe stored in the memory](#get-information-about-the-memory-usage-of-a-dataframe-stored-in-the-memory)
       * [Get statistics (count, mean, std, min, max))](#get-statistics-count-mean-std-min-max)
       * [Get counts for spcific column (Exactly like table function in R)](#get-counts-for-spcific-column-exactly-like-table-function-in-r)
-      * [Get mode - value that appears most often](#get-mode---value-that-appears-most-often)
+      * [Get mode - value that appears most often in either column or row](#get-mode---value-that-appears-most-often-in-either-column-or-row)
       * [Datatypes conversions](#datatypes-conversions)
       * [Dealing with NA's](#dealing-with-nas)
          * [Check the column-wise distribution of null values](#check-the-column-wise-distribution-of-null-values)
@@ -80,7 +80,7 @@
          * [Calculate correlation for all numerical columns pairs](#calculate-correlation-for-all-numerical-columns-pairs)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Fri 14 Jan 2022 10:47:55 IST -->
+<!-- Added by: gil_diy, at: Fri 14 Jan 2022 10:48:25 IST -->
 
 <!--te-->
 
@@ -511,7 +511,7 @@ data_df['my_column'].value_counts(ascending=False).nlargest(5)
 
 
 ```
-## Get `mode` - value that appears most often
+## Get `mode` - value that appears most often in either column or row
 
 Replacing the missing values with the most frequent values present in each column:
 
