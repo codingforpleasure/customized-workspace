@@ -50,7 +50,7 @@
       * [Get information about the memory usage of a dataframe stored in the memory](#get-information-about-the-memory-usage-of-a-dataframe-stored-in-the-memory)
       * [Get statistics (count, mean, std, min, max))](#get-statistics-count-mean-std-min-max)
       * [Get counts for spcific column (Exactly like table function in R)](#get-counts-for-spcific-column-exactly-like-table-function-in-r)
-      * [get mode - value that appears most often](#get-mode---value-that-appears-most-often)
+      * [Get mode - value that appears most often](#get-mode---value-that-appears-most-often)
       * [Datatypes conversions](#datatypes-conversions)
       * [Dealing with NA's](#dealing-with-nas)
          * [Check the column-wise distribution of null values](#check-the-column-wise-distribution-of-null-values)
@@ -80,7 +80,7 @@
          * [Calculate correlation for all numerical columns pairs](#calculate-correlation-for-all-numerical-columns-pairs)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Fri 14 Jan 2022 08:14:44 IST -->
+<!-- Added by: gil_diy, at: Fri 14 Jan 2022 10:37:44 IST -->
 
 <!--te-->
 
@@ -511,10 +511,23 @@ data_df['my_column'].value_counts(ascending=False).nlargest(5)
 
 
 ```
-## get `mode` - value that appears most often
+## Get `mode` - value that appears most often
+
+`df.mode()`
 
 ```python
-df.mode(axis='columns')
+    df = pd.DataFrame({
+        'ord_no': [70001, np.nan, 70002, 70004, np.nan, 70005, np.nan, 70010, 70003, 70012, np.nan, 70013],
+        'purch_amt': [150.5, np.nan, 65.26, 110.5, 948.5, np.nan, 5760, 1983.43, np.nan, 250.45, 75.29, 3045.6],
+        'sale_amt': [10.5, 20.65, np.nan, 11.5, 98.5, np.nan, 57, 19.43, np.nan, 25.45, 75.29, 35.6],
+        'ord_date': ['2012-10-05', '2012-09-10', np.nan, '2012-08-17', '2012-09-10', '2012-07-27', '2012-09-10',
+                     '2012-10-10', '2012-10-10', '2012-06-27', '2012-08-17', '2012-04-25'],
+        'customer_id': [3002, 3001, 3001, 3003, 3002, 3001, 3001, 3004, 3003, 3002, 3001, 3001],
+        'salesman_id': [5002, 5003, 5001, np.nan, 5002, 5001, 5001, np.nan, 5003, 5002, 5003, np.nan]})
+    print("Original Orders DataFrame:")
+    print(df)
+    print("\nReplace the missing values with the most frequent values present in each column:")
+    result = df.fillna(df.mode().iloc[0])
 ```
 
 [Reference](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.mode.html)
