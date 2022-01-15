@@ -12,7 +12,7 @@
       * [Create a Bar Chart Race](#create-a-bar-chart-race)
       * [Line plots](#line-plots)
       * [Pie Charts](#pie-charts)
-         * [Stack Plots](#stack-plots)
+      * [Stack Plots](#stack-plots)
          * [Histograms](#histograms)
          * [Boxplot](#boxplot)
          * [Scatter Plots](#scatter-plots)
@@ -39,7 +39,7 @@
          * [Draw contour lines and filled contours](#draw-contour-lines-and-filled-contours)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Sat 15 Jan 2022 18:45:22 IST -->
+<!-- Added by: gil_diy, at: Sat 15 Jan 2022 18:45:25 IST -->
 
 <!--te-->
 
@@ -342,7 +342,7 @@ def pie_chart_with_explode():
   <img src="images/matplotlib/pie_chart2.png" title="tool tip here">
 </p>
 
-### Stack Plots
+## Stack Plots
 ```python
 from matplotlib import pyplot as plt
 
