@@ -11,7 +11,7 @@
          * [Bar Charts](#bar-charts)
       * [Create a Bar Chart Race](#create-a-bar-chart-race)
       * [Line plots](#line-plots)
-         * [Pie Charts](#pie-charts)
+      * [Pie Charts](#pie-charts)
          * [Stack Plots](#stack-plots)
          * [Histograms](#histograms)
          * [Boxplot](#boxplot)
@@ -39,7 +39,7 @@
          * [Draw contour lines and filled contours](#draw-contour-lines-and-filled-contours)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Sat 15 Jan 2022 18:45:17 IST -->
+<!-- Added by: gil_diy, at: Sat 15 Jan 2022 18:45:22 IST -->
 
 <!--te-->
 
@@ -309,7 +309,7 @@ def line_plot_with_fill_between_functions():
   <img src="images/matplotlib/line_plot4.png" title="tool tip here">
 </p>
 
-### Pie Charts
+## Pie Charts
 ```python
 from matplotlib import pyplot as plt
 
