@@ -1,8 +1,8 @@
 <!--ts-->
    * [matplotlib](#matplotlib)
-      * [Basics (Stateful appraoch)](#basics-stateful-appraoch)
-         * [Simple plot](#simple-plot)
-            * [Example #1:](#example-1)
+   * [Basics (Stateful appraoch)](#basics-stateful-appraoch)
+      * [Simple plot](#simple-plot)
+         * [Example #1:](#example-1)
             * [Example #2:](#example-2)
             * [Example #3 (line types + colors + symbols):](#example-3-line-types--colors--symbols)
                * [Color](#color)
@@ -39,17 +39,17 @@
          * [Draw contour lines and filled contours](#draw-contour-lines-and-filled-contours)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Sat 15 Jan 2022 18:42:19 IST -->
+<!-- Added by: gil_diy, at: Sat 15 Jan 2022 18:43:17 IST -->
 
 <!--te-->
 
 # matplotlib
 
 
-## Basics (Stateful appraoch)
+# Basics (Stateful appraoch)
 
-### Simple plot
-#### Example #1:
+## Simple plot
+### Example #1:
 
 ```python
 import matplotlib.pyplot as plt
