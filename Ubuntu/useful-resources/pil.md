@@ -10,7 +10,7 @@
       * [Save image file](#save-image-file)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Sat 15 Jan 2022 14:20:39 IST -->
+<!-- Added by: gil_diy, at: Sat 15 Jan 2022 14:21:30 IST -->
 
 <!--te-->
 
@@ -46,7 +46,7 @@ rsize_x, rsize_y = rectangle.size
 
 ```python
 foreground = Image.open("rec.png").convert('RGBA')
-rotated_image = fg.rotate(30, expand=True)
+rotated_image = fg.rotate(angle = 30, expand=True)
 rotated_image.save('result.png')
 ```
 
