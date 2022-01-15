@@ -10,7 +10,7 @@
             * [Line type](#line-type)
          * [Bar Charts](#bar-charts)
       * [Create a Bar Chart Race](#create-a-bar-chart-race)
-         * [Line plots](#line-plots)
+      * [Line plots](#line-plots)
          * [Pie Charts](#pie-charts)
          * [Stack Plots](#stack-plots)
          * [Histograms](#histograms)
@@ -39,7 +39,7 @@
          * [Draw contour lines and filled contours](#draw-contour-lines-and-filled-contours)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Sat 15 Jan 2022 18:45:09 IST -->
+<!-- Added by: gil_diy, at: Sat 15 Jan 2022 18:45:17 IST -->
 
 <!--te-->
 
@@ -244,7 +244,7 @@ plt.show()
 
 [Link](https://swdevnotes.com/python/2020/create-bar-chart-race-1/)
 
-### Line plots
+## Line plots
 ```python
 from matplotlib import pyplot as plt
 
