@@ -4,7 +4,7 @@
       * [Simple plot](#simple-plot)
          * [Example #1:](#example-1)
          * [Example #2:](#example-2)
-            * [Example #3 (line types + colors + symbols):](#example-3-line-types--colors--symbols)
+         * [Example #3 (line types + colors + symbols):](#example-3-line-types--colors--symbols)
                * [Color](#color)
                * [Symbol](#symbol)
                * [Line type](#line-type)
@@ -39,7 +39,7 @@
          * [Draw contour lines and filled contours](#draw-contour-lines-and-filled-contours)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Sat 15 Jan 2022 18:43:20 IST -->
+<!-- Added by: gil_diy, at: Sat 15 Jan 2022 18:43:23 IST -->
 
 <!--te-->
 
@@ -103,7 +103,7 @@ plt.savefig('sinc.png', transparent = True)
 </p>
 
 
-#### Example #3 (line types + colors + symbols):
+### Example #3 (line types + colors + symbols):
 
 
 ```python
