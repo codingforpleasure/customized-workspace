@@ -13,7 +13,7 @@
       * [Line plots](#line-plots)
       * [Pie Charts](#pie-charts)
       * [Stack Plots](#stack-plots)
-         * [Histograms](#histograms)
+      * [Histograms](#histograms)
          * [Boxplot](#boxplot)
          * [Scatter Plots](#scatter-plots)
          * [Draw arrows](#draw-arrows)
@@ -39,7 +39,7 @@
          * [Draw contour lines and filled contours](#draw-contour-lines-and-filled-contours)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Sat 15 Jan 2022 18:45:25 IST -->
+<!-- Added by: gil_diy, at: Sat 15 Jan 2022 18:45:28 IST -->
 
 <!--te-->
 
@@ -375,7 +375,7 @@ plt.show()
   <img src="images/matplotlib/stack_plot.png" title="tool tip here">
 </p>
 
-### Histograms
+## Histograms
 ```python
 def histogram_basic_with_declared_bins():
     ages = [18, 19, 21, 25, 26, 26, 30, 32, 38, 45, 55, 47]
