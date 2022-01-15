@@ -5,8 +5,8 @@
             * [Example #1:](#example-1)
             * [Example #2:](#example-2)
             * [Example #3 (line types + colors + symbols):](#example-3-line-types--colors--symbols)
-                  * [Color](#color)
-                  * [Symbol](#symbol)
+               * [Color](#color)
+               * [Symbol](#symbol)
                   * [Line type](#line-type)
          * [Bar Charts](#bar-charts)
          * [Create a Bar Chart Race](#create-a-bar-chart-race)
@@ -39,7 +39,7 @@
          * [Draw contour lines and filled contours](#draw-contour-lines-and-filled-contours)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Sat 15 Jan 2022 18:41:48 IST -->
+<!-- Added by: gil_diy, at: Sat 15 Jan 2022 18:42:03 IST -->
 
 <!--te-->
 
@@ -122,7 +122,7 @@ plt.show()
 </p>
 
 
-###### Color 
+##### Color 
 
 Color-type | character     
 ------------|-----
@@ -137,7 +137,7 @@ white | w
 
 
 
-###### Symbol
+##### Symbol
 
 Symbol-type | character
 ------------|-----
