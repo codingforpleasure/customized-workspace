@@ -6,7 +6,7 @@
          * [Example #2:](#example-2)
          * [Example #3 (line types + colors + symbols):](#example-3-line-types--colors--symbols)
             * [Color](#color)
-               * [Symbol](#symbol)
+            * [Symbol](#symbol)
                * [Line type](#line-type)
          * [Bar Charts](#bar-charts)
          * [Create a Bar Chart Race](#create-a-bar-chart-race)
@@ -39,7 +39,7 @@
          * [Draw contour lines and filled contours](#draw-contour-lines-and-filled-contours)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Sat 15 Jan 2022 18:43:29 IST -->
+<!-- Added by: gil_diy, at: Sat 15 Jan 2022 18:43:32 IST -->
 
 <!--te-->
 
@@ -137,7 +137,7 @@ white | w
 
 
 
-##### Symbol
+#### Symbol
 
 Symbol-type | character
 ------------|-----
