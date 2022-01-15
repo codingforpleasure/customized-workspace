@@ -14,9 +14,9 @@
       * [Pie Charts](#pie-charts)
       * [Stack Plots](#stack-plots)
       * [Histograms](#histograms)
-         * [Boxplot](#boxplot)
-         * [Scatter Plots](#scatter-plots)
-         * [Draw arrows](#draw-arrows)
+      * [Boxplot](#boxplot)
+      * [Scatter Plots](#scatter-plots)
+      * [Draw arrows](#draw-arrows)
          * [Draw 3d vectors](#draw-3d-vectors)
          * [Plotting time series](#plotting-time-series)
          * [Plotting Live data in real-time](#plotting-live-data-in-real-time)
@@ -39,7 +39,7 @@
          * [Draw contour lines and filled contours](#draw-contour-lines-and-filled-contours)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Sat 15 Jan 2022 18:45:28 IST -->
+<!-- Added by: gil_diy, at: Sat 15 Jan 2022 18:45:39 IST -->
 
 <!--te-->
 
@@ -427,7 +427,7 @@ plt.hist(arr, bins='auto')
 
 [Reference](https://www.youtube.com/watch?v=XDv6T4a0RNc&list=PL-osiE80TeTvipOqomVEeZ1HRrcEvtZB_&index=6)
 
-### Boxplot
+## Boxplot
 ```python
 from matplotlib import pyplot as plt
 
@@ -454,7 +454,7 @@ from matplotlib import pyplot as plt
   <img src="images/matplotlib/boxplot.png" title="tool tip here">
 </p>
 
-### Scatter Plots
+## Scatter Plots
 
 ```python
 def scatter_plot_with_different_sizes_and_colors():
@@ -499,7 +499,7 @@ def scatter_plot_with_different_sizes_and_colors():
   <img src="images/matplotlib/scatter3.png" title="tool tip here">
 </p>
 
-### Draw arrows
+## Draw arrows
 
 ```python
 def draw_vector(v0, v1, ax=None):
