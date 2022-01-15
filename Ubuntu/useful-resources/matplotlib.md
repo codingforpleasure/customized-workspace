@@ -7,7 +7,7 @@
             * [Example #3 (line types + colors + symbols):](#example-3-line-types--colors--symbols)
                * [Color](#color)
                * [Symbol](#symbol)
-                  * [Line type](#line-type)
+               * [Line type](#line-type)
          * [Bar Charts](#bar-charts)
          * [Create a Bar Chart Race](#create-a-bar-chart-race)
          * [Line plots](#line-plots)
@@ -39,7 +39,7 @@
          * [Draw contour lines and filled contours](#draw-contour-lines-and-filled-contours)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Sat 15 Jan 2022 18:42:03 IST -->
+<!-- Added by: gil_diy, at: Sat 15 Jan 2022 18:42:07 IST -->
 
 <!--te-->
 
@@ -155,7 +155,7 @@ triangle (right) |  >
 
 
 
-###### Line type
+##### Line type
 
 Line-type | character
 ------------|-----
