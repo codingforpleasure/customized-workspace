@@ -10,7 +10,7 @@
       * [Save image file](#save-image-file)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Sat 15 Jan 2022 14:23:10 IST -->
+<!-- Added by: gil_diy, at: Sun 16 Jan 2022 11:51:25 IST -->
 
 <!--te-->
 
@@ -58,6 +58,9 @@ rotated_image.save('result.png')
 import Image, ImageDraw
 image = Image.new('RGBA', (200, 200))
 draw = ImageDraw.Draw(image)
+
+# Pay attention: (20, 20, 180, 180) is (x1,y1,x2,y2)
+# Bounding box of the ellipse
 draw.ellipse((20, 20, 180, 180), fill='blue', outline='blue')
 image.save('test.png')
 ```
