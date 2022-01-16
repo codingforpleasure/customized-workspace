@@ -75,7 +75,7 @@
       * [Flip image with numpy](#flip-image-with-numpy)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Wed 12 Jan 2022 13:35:42 IST -->
+<!-- Added by: gil_diy, at: Sun 16 Jan 2022 12:13:10 IST -->
 
 <!--te-->
 
@@ -967,6 +967,7 @@ Operation | Explanation
 Description | Function
 ------------|-----
 Convert from radian to degree | `np.degree(np.pi/2)`
+Convert from degree to radian | `np.radians(angle)`
 
 
 
