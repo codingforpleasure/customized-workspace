@@ -60,7 +60,6 @@
          * [Replace string with other thing in a column](#replace-string-with-other-thing-in-a-column)
          * [Replace string with other thing in a dataframe](#replace-string-with-other-thing-in-a-dataframe)
          * [Retrieve NaN values](#retrieve-nan-values)
-      * [fill](#fill)
       * [Get the index of the min or the max element](#get-the-index-of-the-min-or-the-max-element)
       * [Get the nsmallest or nlargest element](#get-the-nsmallest-or-nlargest-element)
       * [Segment and sort data values into bins](#segment-and-sort-data-values-into-bins)
@@ -80,7 +79,7 @@
          * [Calculate correlation for all numerical columns pairs](#calculate-correlation-for-all-numerical-columns-pairs)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Fri 14 Jan 2022 10:48:25 IST -->
+<!-- Added by: gil_diy, at: Sun 16 Jan 2022 10:07:33 IST -->
 
 <!--te-->
 
@@ -584,8 +583,6 @@ df.replace('?', np.NaN)
 <columnname>.notnull()
 ```
 
-
-## fill
 
 ## Get the index of the min or the max element
 
