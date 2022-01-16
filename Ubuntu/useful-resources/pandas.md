@@ -69,6 +69,7 @@
       * [Concat Dataframes](#concat-dataframes)
          * [Join two dataframes one <strong>below</strong> the other.](#join-two-dataframes-one-below-the-other)
          * [Join two dataframes one <strong>besides</strong> the other.](#join-two-dataframes-one-besides-the-other)
+         * [Join two dataframes one <strong>besides</strong> the other when share the same key (inner join)](#join-two-dataframes-one-besides-the-other-when-share-the-same-key-inner-join)
          * [Dataframe Pivot table](#dataframe-pivot-table)
          * [Printing data so all columns will be presented](#printing-data-so-all-columns-will-be-presented)
          * [Get data ditribution of the data per column](#get-data-ditribution-of-the-data-per-column)
@@ -79,7 +80,7 @@
          * [Calculate correlation for all numerical columns pairs](#calculate-correlation-for-all-numerical-columns-pairs)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Sun 16 Jan 2022 10:07:33 IST -->
+<!-- Added by: gil_diy, at: Sun 16 Jan 2022 10:11:03 IST -->
 
 <!--te-->
 
@@ -727,6 +728,13 @@ df2.loc['Israel']
 ```
 
 [Reference](https://www.youtube.com/watch?v=WGOEFok1szA&list=PLeo1K3hjS3uuASpe-1LjfG5f14Bnozjwy&index=8)
+
+
+### Join two dataframes one **besides** the other when share the same key (inner join)
+
+```python
+result = ffp_train_df.merge(reviews_train_df, on='ID')
+```
 
 ### Dataframe Pivot table 
 
