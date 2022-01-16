@@ -80,7 +80,7 @@
          * [Calculate correlation for all numerical columns pairs](#calculate-correlation-for-all-numerical-columns-pairs)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Sun 16 Jan 2022 10:11:03 IST -->
+<!-- Added by: gil_diy, at: Sun 16 Jan 2022 10:28:23 IST -->
 
 <!--te-->
 
@@ -735,6 +735,7 @@ df2.loc['Israel']
 ```python
 result = ffp_train_df.merge(reviews_train_df, on='ID')
 ```
+[Reference](https://pandas.pydata.org/pandas-docs/stable/user_guide/merging.html)
 
 ### Dataframe Pivot table 
 
