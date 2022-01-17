@@ -11,7 +11,7 @@
       * [Save image file](#save-image-file)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Mon 17 Jan 2022 15:46:43 IST -->
+<!-- Added by: gil_diy, at: Mon 17 Jan 2022 15:46:46 IST -->
 
 <!--te-->
 
