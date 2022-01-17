@@ -94,7 +94,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Mon 17 Jan 2022 10:49:28 IST -->
+<!-- Added by: gil_diy, at: Mon 17 Jan 2022 10:54:31 IST -->
 
 <!--te-->
 
@@ -354,7 +354,7 @@ t.flatten(start_dim = 1) # The output would be: torch.Size([3,16])
 
 ##### unsqueeze
 
-Adds a dummy dimenstion, usually so it will look like a batch.
+Adds a dummy dimension, usually so it will look like a batch.
 
 ```python
 print(t.reshape(1,12).squeeze().unsqueeze(dim=0))
