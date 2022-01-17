@@ -11,7 +11,7 @@
       * [Save image file](#save-image-file)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Mon 17 Jan 2022 15:40:41 IST -->
+<!-- Added by: gil_diy, at: Mon 17 Jan 2022 15:46:43 IST -->
 
 <!--te-->
 
@@ -86,8 +86,10 @@ bg.save('result.png')
 ## Horizontal flip
 
 ```python
-
+out = im.transpose(PIL.Image.FLIP_LEFT_RIGHT)
 ```
+
+[Link](https://pythonexamples.org/python-pillow-flip-image-vertical-horizontal/)
 
 ## Save image file
 ```python
