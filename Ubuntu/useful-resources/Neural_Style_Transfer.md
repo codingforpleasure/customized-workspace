@@ -2,7 +2,7 @@
    * [NST - Neural Style Transfer](#nst---neural-style-transfer)
       * [Artistic Vs Photorealistic](#artistic-vs-photorealistic)
 
-<!-- Added by: gil_diy, at: Mon 17 Jan 2022 09:35:53 IST -->
+<!-- Added by: gil_diy, at: Mon 17 Jan 2022 09:50:11 IST -->
 
 <!--te-->
 
@@ -14,3 +14,6 @@ It all started when the paper:
 Leon Gatys - "A Neural Algorithm of Artistic Style"
 
 [Link](https://arxiv.org/pdf/1508.06576.pdf)
+
+We constuct a feature space over the feature maps using 
+Gram transformers (Set of Gram matrices represents image style).
