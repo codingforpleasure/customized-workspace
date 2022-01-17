@@ -1,7 +1,7 @@
 <!--ts-->
    * [CNN](#cnn)
 
-<!-- Added by: gil_diy, at: Mon 17 Jan 2022 11:31:04 IST -->
+<!-- Added by: gil_diy, at: Mon 17 Jan 2022 11:33:17 IST -->
 
 <!--te-->
 
@@ -15,3 +15,4 @@ Article name | Description
 [Texture Synthesis Using Convolutional Neural Networks](https://arxiv.org/pdf/1505.07376.pdf) | 
 [Batch Normalization: Accelerating Deep Network Training by Reducing Internal Covariate Shift](https://arxiv.org/pdf/1502.03167.pdf) | 
 [Arbitrary Style Transfer in Real-time with Adaptive Instance Normalization](https://arxiv.org/pdf/1703.06868.pdf)
+[Link](https://arxiv.org/pdf/1705.08086.pdf)| 
