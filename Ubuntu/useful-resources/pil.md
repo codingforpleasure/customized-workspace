@@ -7,10 +7,11 @@
       * [Rotate image](#rotate-image)
       * [Draw circle and save](#draw-circle-and-save)
       * [Pasting image on to an image](#pasting-image-on-to-an-image)
+      * [Horizontal flip](#horizontal-flip)
       * [Save image file](#save-image-file)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Sun 16 Jan 2022 11:51:25 IST -->
+<!-- Added by: gil_diy, at: Mon 17 Jan 2022 15:40:41 IST -->
 
 <!--te-->
 
@@ -80,6 +81,12 @@ bg.paste(fg, box=(50, 50), mask=fg)
 
 # Save result
 bg.save('result.png')
+```
+
+## Horizontal flip
+
+```python
+
 ```
 
 ## Save image file
