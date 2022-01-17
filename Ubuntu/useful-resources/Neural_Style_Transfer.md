@@ -2,10 +2,15 @@
    * [NST - Neural Style Transfer](#nst---neural-style-transfer)
       * [Artistic Vs Photorealistic](#artistic-vs-photorealistic)
 
-<!-- Added by: gil_diy, at: Mon 17 Jan 2022 09:34:34 IST -->
+<!-- Added by: gil_diy, at: Mon 17 Jan 2022 09:35:53 IST -->
 
 <!--te-->
 
 # NST - Neural Style Transfer
 
 ## Artistic Vs Photorealistic
+
+It all started when the paper:
+Leon Gatys - "A Neural Algorithm of Artistic Style"
+
+[Link](https://arxiv.org/pdf/1508.06576.pdf)
