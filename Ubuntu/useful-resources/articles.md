@@ -1,12 +1,12 @@
 <!--ts-->
-   * [CNN](#cnn)
+   * [Articles speak about Neural Style Transfer and Convolution Neural Networks](#articles-speak-about-neural-style-transfer-and-convolution-neural-networks)
 
-<!-- Added by: gil_diy, at: Mon 17 Jan 2022 11:41:07 IST -->
+<!-- Added by: gil_diy, at: Mon 17 Jan 2022 11:44:31 IST -->
 
 <!--te-->
 
 
-# CNN
+# Articles speak about Neural Style Transfer and Convolution Neural Networks
 
 
 [Reference](https://youtu.be/8pp0Oa3t52s?list=PLBoQnSflObcmbfshq9oNs41vODgXG-608)
