@@ -1,7 +1,7 @@
 <!--ts-->
    * [CNN](#cnn)
 
-<!-- Added by: gil_diy, at: Mon 17 Jan 2022 11:06:16 IST -->
+<!-- Added by: gil_diy, at: Mon 17 Jan 2022 11:07:06 IST -->
 
 <!--te-->
 
@@ -10,4 +10,4 @@
 
 Article name | Description
 ------------|-----
- | element-description
+ [Link](Visualizing and Understanding Convolutional Networks)| element-description
