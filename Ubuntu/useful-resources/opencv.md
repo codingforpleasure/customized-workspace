@@ -61,7 +61,7 @@
          * [The function blobFromImage(s)](#the-function-blobfromimages)
             * [1. Mean subtraction](#1-mean-subtraction)
 
-<!-- Added by: gil_diy, at: Wed 12 Jan 2022 12:58:27 IST -->
+<!-- Added by: gil_diy, at: Mon 17 Jan 2022 16:30:08 IST -->
 
 <!--te-->
 
@@ -233,7 +233,9 @@ cv2.rectangle(img, (x1, y1), (x2, y2), (0, 255, 0), 3)
 ## Arithmetic Operations on Images
 
 apply a simple arithmation operation on each pixel of the image
+
 #### Addition
+
 **Commutative operation**
 #### Substruction
 ### Logical Operations on images
