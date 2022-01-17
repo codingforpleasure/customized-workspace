@@ -1,12 +1,15 @@
 <!--ts-->
    * [CNN](#cnn)
 
-<!-- Added by: gil_diy, at: Mon 17 Jan 2022 11:33:31 IST -->
+<!-- Added by: gil_diy, at: Mon 17 Jan 2022 11:37:59 IST -->
 
 <!--te-->
 
 
 # CNN
+
+
+[Reference](https://youtu.be/8pp0Oa3t52s?list=PLBoQnSflObcmbfshq9oNs41vODgXG-608)
 
 Article name | Description
 ------------|-----
