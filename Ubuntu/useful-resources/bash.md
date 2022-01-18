@@ -54,7 +54,7 @@ Table of Contents
       * [Tricks](#tricks)
       * [<em><strong>Great reference</strong></em>](#great-reference)
 
-<!-- Added by: gil_diy, at: Fri 02 Jul 2021 00:00:56 IDT -->
+<!-- Added by: gil_diy, at: Tue 18 Jan 2022 07:48:49 IST -->
 
 <!--te-->
 
@@ -594,6 +594,9 @@ do
     [ -f "$f" ] && mv "$f" "${f%txt}srt"
 done
 ```
+
+${f%.txt} is a parameter expansion, replaced by the value of the f variable with .txt removed from the end.
+
 
 ### Padding list of numbers with zeros
 
