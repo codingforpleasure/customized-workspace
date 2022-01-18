@@ -56,7 +56,7 @@ Table of Contents
       * [Tricks](#tricks)
       * [<em><strong>Great reference</strong></em>](#great-reference)
 
-<!-- Added by: gil_diy, at: Tue 18 Jan 2022 08:18:50 IST -->
+<!-- Added by: gil_diy, at: Tue 18 Jan 2022 08:19:36 IST -->
 
 <!--te-->
 
@@ -555,6 +555,8 @@ Arguments are evaluated left to right.
 ```bash
 a=5
 let a=a+1
+echo $a
+let a+=2
 echo $a
 ```
 
