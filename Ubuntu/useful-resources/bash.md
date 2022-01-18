@@ -44,6 +44,7 @@ Table of Contents
          * [Trim last n characters from a String](#trim-last-n-characters-from-a-string)
       * [<em><strong>Useful snippets for daily-work</strong></em>](#useful-snippets-for-daily-work)
          * [Running All Scripts in a Directory](#running-all-scripts-in-a-directory)
+         * [Running over all lines in a file](#running-over-all-lines-in-a-file)
          * [Setting Default Values for arguments](#setting-default-values-for-arguments)
          * [“Daemon-izing” Your Script](#daemon-izing-your-script)
          * [Reusing Code with Includes and Sourcing](#reusing-code-with-includes-and-sourcing)
@@ -54,7 +55,7 @@ Table of Contents
       * [Tricks](#tricks)
       * [<em><strong>Great reference</strong></em>](#great-reference)
 
-<!-- Added by: gil_diy, at: Tue 18 Jan 2022 07:48:49 IST -->
+<!-- Added by: gil_diy, at: Tue 18 Jan 2022 07:50:18 IST -->
 
 <!--te-->
 
@@ -535,6 +536,14 @@ do
 		$SCRIPT
 	fi
 done
+```
+### Running over all lines in a file
+
+```bash
+while read -r line
+do
+  echo "$line"
+done < my_file.txt
 ```
 
 ### Setting Default Values for arguments
