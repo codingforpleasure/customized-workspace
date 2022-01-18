@@ -45,6 +45,7 @@ Table of Contents
       * [<em><strong>Useful snippets for daily-work</strong></em>](#useful-snippets-for-daily-work)
          * [Running All Scripts in a Directory](#running-all-scripts-in-a-directory)
          * [Running over all lines in a file](#running-over-all-lines-in-a-file)
+         * [Doing arithmetic operations](#doing-arithmetic-operations)
          * [Setting Default Values for arguments](#setting-default-values-for-arguments)
          * [“Daemon-izing” Your Script](#daemon-izing-your-script)
          * [Reusing Code with Includes and Sourcing](#reusing-code-with-includes-and-sourcing)
@@ -55,7 +56,7 @@ Table of Contents
       * [Tricks](#tricks)
       * [<em><strong>Great reference</strong></em>](#great-reference)
 
-<!-- Added by: gil_diy, at: Tue 18 Jan 2022 07:50:21 IST -->
+<!-- Added by: gil_diy, at: Tue 18 Jan 2022 08:18:50 IST -->
 
 <!--te-->
 
@@ -544,6 +545,17 @@ while read -r line
 do
   echo "$line"
 done < my_file.txt
+```
+
+### Doing arithmetic operations
+
+`let` evaluates each argument, arg, as a math expression.
+Arguments are evaluated left to right.
+
+```bash
+a=5
+let a=a+1
+echo $a
 ```
 
 ### Setting Default Values for arguments
