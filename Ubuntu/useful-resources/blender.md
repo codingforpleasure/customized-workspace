@@ -4,11 +4,12 @@
          * [Transforms Hotkeys](#transforms-hotkeys)
          * [How to rotate in 45 degrees in the y axis?](#how-to-rotate-in-45-degrees-in-the-y-axis)
          * [How to grab and move up by 1m on the z axis?](#how-to-grab-and-move-up-by-1m-on-the-z-axis)
+      * [What is edit mode?](#what-is-edit-mode)
       * [Applying shade smooth](#applying-shade-smooth)
       * [Adding Subdivision surface](#adding-subdivision-surface)
       * [Add Autocomplete](#add-autocomplete)
 
-<!-- Added by: gil_diy, at: Wed 19 Jan 2022 12:05:05 IST -->
+<!-- Added by: gil_diy, at: Wed 19 Jan 2022 12:06:56 IST -->
 
 <!--te-->
 
@@ -42,6 +43,10 @@ Pan | press the middle button on the mouse and Shift
 
 * Pressing `1` as for 1 meter
 
+
+## What is edit mode?
+You'll be edit vertices, edges, phaces and to change the
+shape of your mesh
 
 
 Description | Hotkey
