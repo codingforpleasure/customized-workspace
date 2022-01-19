@@ -12,7 +12,7 @@
       * [Add Autocomplete](#add-autocomplete)
       * [Useful web pages](#useful-web-pages)
 
-<!-- Added by: gil_diy, at: Wed 19 Jan 2022 13:32:15 IST -->
+<!-- Added by: gil_diy, at: Wed 19 Jan 2022 14:30:47 IST -->
 
 <!--te-->
 
@@ -94,3 +94,5 @@ Click on the rench icon in the properties -> press add modifier -> Pick 'subdivi
 [Blender Documentation](https://docs.blender.org/manual/en/latest/)
 
 [Blender Python API](https://docs.blender.org/api/current/)
+
+[Link](https://b3d.interplanety.org/en/using-external-ide-pycharm-for-writing-blender-scripts/)
