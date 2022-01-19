@@ -10,7 +10,7 @@
       * [Adding Subdivision surface](#adding-subdivision-surface)
       * [Add Autocomplete](#add-autocomplete)
 
-<!-- Added by: gil_diy, at: Wed 19 Jan 2022 12:08:47 IST -->
+<!-- Added by: gil_diy, at: Wed 19 Jan 2022 12:22:26 IST -->
 
 <!--te-->
 
@@ -56,6 +56,7 @@ You'll be able to move, rotate, and resize
 
 Description | Hotkey
 ------------|-----
+Move and orbit | press down the Middle button mouse
 Focus on object in the horizon | click on the object and press period key `.`
 Add Object | `Shift+A`
 Search Bar | `F3`
