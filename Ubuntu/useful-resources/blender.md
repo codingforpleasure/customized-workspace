@@ -12,7 +12,7 @@
       * [Add Autocomplete](#add-autocomplete)
       * [Useful web pages](#useful-web-pages)
 
-<!-- Added by: gil_diy, at: Wed 19 Jan 2022 13:18:14 IST -->
+<!-- Added by: gil_diy, at: Wed 19 Jan 2022 13:19:05 IST -->
 
 <!--te-->
 
@@ -91,6 +91,6 @@ Click on the rench icon in the properties -> press add modifier -> Pick 'subdivi
 
 ## Useful web pages
 
-[Blender Documentation](http://www.my-website.com)
+[Blender Documentation](https://docs.blender.org/manual/en/latest/)
 
 [Blender Documentation](http://www.my-website.com)
