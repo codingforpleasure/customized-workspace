@@ -14,7 +14,7 @@
       * [Add Autocomplete](#add-autocomplete)
       * [Useful web pages](#useful-web-pages)
 
-<!-- Added by: gil_diy, at: Wed 19 Jan 2022 19:41:16 IST -->
+<!-- Added by: gil_diy, at: Wed 19 Jan 2022 19:42:05 IST -->
 
 <!--te-->
 
@@ -85,7 +85,7 @@ Inherit  | `Ctrl + l`
 ## Modifiers
 
 Modifiers are automatic operations that affects geometry in non destructive way.
-
+This means you can apply many modeling operation automatically without changing the base geometry of your object.
 
 ### 
 
