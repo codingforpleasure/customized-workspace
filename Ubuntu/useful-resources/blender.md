@@ -9,10 +9,11 @@
       * [What is object mode?](#what-is-object-mode)
       * [Applying shade smooth](#applying-shade-smooth)
       * [Adding Subdivision surface](#adding-subdivision-surface)
+      * [Python with Blender](#python-with-blender)
       * [Add Autocomplete](#add-autocomplete)
       * [Useful web pages](#useful-web-pages)
 
-<!-- Added by: gil_diy, at: Wed 19 Jan 2022 14:30:56 IST -->
+<!-- Added by: gil_diy, at: Wed 19 Jan 2022 15:35:08 IST -->
 
 <!--te-->
 
@@ -85,9 +86,22 @@ Pick  `Object Mode` and right click your mesh, and pick `shade smooth`
 ## Adding Subdivision surface
 Click on the rench icon in the properties -> press add modifier -> Pick 'subdivision surface'
 
+## Python with Blender
+
+```python
+import bpy
+import os
+ 
+dir_path = "/media/gil_diy/Backup/Blender_Lectures/3D_Rendered_Datasets_in_Blender_for_Beginners_Playlist/my_project"
+filename = os.path.join(dir_path, "main.py")
+exec(compile(open(filename).read(), filename, 'exec'))
+```
+
 ## Add Autocomplete
 
 [Link](https://github.com/Korchy/blender_autocomplete)
+
+
 
 ## Useful web pages
 
