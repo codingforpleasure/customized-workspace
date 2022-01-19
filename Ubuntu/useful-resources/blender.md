@@ -1,11 +1,14 @@
 <!--ts-->
    * [Blender](#blender)
       * [Hot keys](#hot-keys)
+         * [Transforms Hotkeys](#transforms-hotkeys)
+         * [How to rotate in 45 degrees in the y axis?](#how-to-rotate-in-45-degrees-in-the-y-axis)
+         * [How to move/grab up by 1m on the z axis?](#how-to-movegrab-up-by-1m-on-the-z-axis)
       * [Applying shade smooth](#applying-shade-smooth)
       * [Adding Subdivision surface](#adding-subdivision-surface)
       * [Add Autocomplete](#add-autocomplete)
 
-<!-- Added by: gil_diy, at: Tue 09 Feb 2021 14:57:42 IST -->
+<!-- Added by: gil_diy, at: Wed 19 Jan 2022 12:03:55 IST -->
 
 <!--te-->
 
@@ -13,13 +16,36 @@
 
 ## Hot keys
 
-Description | Hotkey
+
+### Transforms Hotkeys
+
+
+ Description | Hotkey
 ------------|-----
 Grab | G (pick axis and press: x,y,z)
 Rotate | R (pick axis and press: x,y,z)
 Scale | S (pick axis and press: x,y,z)
 Orbiting (Rotating the view) | press the middle button on the mouse
 Pan | press the middle button on the mouse and Shift
+
+
+### How to rotate in 45 degrees in the y axis?
+
+* Pressing r for `rotate`,  afterwards press `y` (focus on the y axis)
+
+* Pressing `45` as for degrees
+
+
+### How to move/grab up by 1m on the z axis?
+
+* Pressing `g`,  afterwards press `z` (focus on the y axis)
+
+* Pressing `1` as for 1 meter
+
+
+
+Description | Hotkey
+------------|-----
 Focus on object in the horizon | click on the object and press period key `.`
 Add Object | `Shift+A`
 Search Bar | `F3`
@@ -28,6 +54,12 @@ Duplicate | `Shift+d`
 Seperate | `p`
 Xray | `Alt+z`
 See location | `n`
+See Toolbox | `t`
+Wireframe mode | `Shift + z`
+Apply transfrom | `Ctrl + a`
+Duplicate Object | `Shift + d`
+Duplicate Linked (All properties are inherited) | `Alt + d`
+Inherit  | `Ctrl + l`
 
 ## Applying shade smooth
 
