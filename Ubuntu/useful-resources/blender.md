@@ -10,8 +10,9 @@
       * [Applying shade smooth](#applying-shade-smooth)
       * [Adding Subdivision surface](#adding-subdivision-surface)
       * [Add Autocomplete](#add-autocomplete)
+      * [Useful web pages](#useful-web-pages)
 
-<!-- Added by: gil_diy, at: Wed 19 Jan 2022 12:29:22 IST -->
+<!-- Added by: gil_diy, at: Wed 19 Jan 2022 13:18:14 IST -->
 
 <!--te-->
 
@@ -88,4 +89,8 @@ Click on the rench icon in the properties -> press add modifier -> Pick 'subdivi
 
 [Link](https://github.com/Korchy/blender_autocomplete)
 
-removeAll
+## Useful web pages
+
+[Blender Documentation](http://www.my-website.com)
+
+[Blender Documentation](http://www.my-website.com)
