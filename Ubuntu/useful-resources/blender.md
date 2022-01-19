@@ -3,12 +3,12 @@
       * [Hot keys](#hot-keys)
          * [Transforms Hotkeys](#transforms-hotkeys)
          * [How to rotate in 45 degrees in the y axis?](#how-to-rotate-in-45-degrees-in-the-y-axis)
-         * [How to move/grab up by 1m on the z axis?](#how-to-movegrab-up-by-1m-on-the-z-axis)
+         * [How to grab and move up by 1m on the z axis?](#how-to-grab-and-move-up-by-1m-on-the-z-axis)
       * [Applying shade smooth](#applying-shade-smooth)
       * [Adding Subdivision surface](#adding-subdivision-surface)
       * [Add Autocomplete](#add-autocomplete)
 
-<!-- Added by: gil_diy, at: Wed 19 Jan 2022 12:03:57 IST -->
+<!-- Added by: gil_diy, at: Wed 19 Jan 2022 12:05:05 IST -->
 
 <!--te-->
 
@@ -36,9 +36,9 @@ Pan | press the middle button on the mouse and Shift
 * Pressing `45` as for degrees
 
 
-### How to move/grab up by 1m on the z axis?
+### How to grab and move up by 1m on the z axis?
 
-* Pressing `g`,  afterwards press `z` (focus on the y axis)
+* Pressing `g` and `m`,  afterwards press `z` (focus on the y axis)
 
 * Pressing `1` as for 1 meter
 
