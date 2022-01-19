@@ -1,5 +1,6 @@
 <!--ts-->
    * [Blender](#blender)
+      * [Increase UI size](#increase-ui-size)
       * [Hot keys](#hot-keys)
          * [Transforms Hotkeys](#transforms-hotkeys)
          * [How to rotate in 45 degrees in the y axis?](#how-to-rotate-in-45-degrees-in-the-y-axis)
@@ -10,11 +11,15 @@
       * [Adding Subdivision surface](#adding-subdivision-surface)
       * [Add Autocomplete](#add-autocomplete)
 
-<!-- Added by: gil_diy, at: Wed 19 Jan 2022 12:22:31 IST -->
+<!-- Added by: gil_diy, at: Wed 19 Jan 2022 12:29:22 IST -->
 
 <!--te-->
 
 # Blender
+
+## Increase UI size
+
+[Link](https://www.youtube.com/watch?v=Py9CHZkHh4U)
 
 ## Hot keys
 
