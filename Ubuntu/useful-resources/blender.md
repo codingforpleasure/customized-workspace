@@ -7,13 +7,14 @@
          * [How to grab and move up by 1m on the z axis?](#how-to-grab-and-move-up-by-1m-on-the-z-axis)
       * [What is edit mode?](#what-is-edit-mode)
       * [What is object mode?](#what-is-object-mode)
+      * [Modifiers](#modifiers)
       * [Applying shade smooth](#applying-shade-smooth)
       * [Adding Subdivision surface](#adding-subdivision-surface)
       * [Python with Blender](#python-with-blender)
       * [Add Autocomplete](#add-autocomplete)
       * [Useful web pages](#useful-web-pages)
 
-<!-- Added by: gil_diy, at: Wed 19 Jan 2022 15:35:13 IST -->
+<!-- Added by: gil_diy, at: Wed 19 Jan 2022 19:41:13 IST -->
 
 <!--te-->
 
@@ -61,6 +62,7 @@ shape of your mesh
 
 You'll be able to move, rotate, and resize
 
+
 Description | Hotkey
 ------------|-----
 Move and orbit | press down the Middle button mouse
@@ -79,6 +81,14 @@ Duplicate Object | `Shift + d`
 Duplicate Linked (All properties are inherited) | `Alt + d`
 Inherit  | `Ctrl + l`
 
+
+## Modifiers
+
+Modifiers are automatic operations that affects geometry in non destructive way.
+
+
+### 
+
 ## Applying shade smooth
 
 Pick  `Object Mode` and right click your mesh, and pick `shade smooth`
@@ -94,6 +104,7 @@ import os
  
 dir_path = "/media/gil_diy/Backup/Blender_Lectures/3D_Rendered_Datasets_in_Blender_for_Beginners_Playlist/my_project"
 filename = os.path.join(dir_path, "main.py")
+
 exec(compile(open(filename).read(), filename, 'exec'))
 ```
 
