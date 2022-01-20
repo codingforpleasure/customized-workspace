@@ -14,7 +14,7 @@
       * [Add Autocomplete](#add-autocomplete)
       * [Useful web pages](#useful-web-pages)
 
-<!-- Added by: gil_diy, at: Wed 19 Jan 2022 19:51:34 IST -->
+<!-- Added by: gil_diy, at: Thu 20 Jan 2022 09:49:19 IST -->
 
 <!--te-->
 
@@ -107,6 +107,9 @@ filename = os.path.join(dir_path, "main.py")
 
 exec(compile(open(filename).read(), filename, 'exec'))
 ```
+
+
+[Reference](https://docs.blender.org/api/current/info_tips_and_tricks.html#executing-external-scripts)
 
 ## Add Autocomplete
 
