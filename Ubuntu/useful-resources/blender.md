@@ -16,7 +16,7 @@
          * [Executing External Scripts](#executing-external-scripts)
       * [Useful web pages](#useful-web-pages)
 
-<!-- Added by: gil_diy, at: Thu 20 Jan 2022 12:39:33 IST -->
+<!-- Added by: gil_diy, at: Thu 20 Jan 2022 12:40:25 IST -->
 
 <!--te-->
 
@@ -101,6 +101,8 @@ Click on the rench icon in the properties -> press add modifier -> Pick 'subdivi
 ## Python with Blender
 
 ### Show all python operations done under the hood
+
+Enabling the debug option before running Blender:
 
 ```python
 blender --debug-wm
