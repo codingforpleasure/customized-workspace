@@ -16,7 +16,7 @@
       * [Add Autocomplete](#add-autocomplete)
       * [Useful web pages](#useful-web-pages)
 
-<!-- Added by: gil_diy, at: Thu 20 Jan 2022 10:54:36 IST -->
+<!-- Added by: gil_diy, at: Thu 20 Jan 2022 10:54:39 IST -->
 
 <!--te-->
 
@@ -106,6 +106,7 @@ Click on the rench icon in the properties -> press add modifier -> Pick 'subdivi
 ```bash
 /opt/blender-3.0.0-linux-x64/3.0/scripts/templates_py
 ```
+
 ### Executing External Scripts
 ```python
 import bpy
