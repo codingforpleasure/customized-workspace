@@ -13,10 +13,9 @@
       * [Python with Blender](#python-with-blender)
          * [Adding Scripts to Blender For the Templates Menu](#adding-scripts-to-blender-for-the-templates-menu)
          * [Executing External Scripts](#executing-external-scripts)
-      * [Add Autocomplete](#add-autocomplete)
       * [Useful web pages](#useful-web-pages)
 
-<!-- Added by: gil_diy, at: Thu 20 Jan 2022 10:55:35 IST -->
+<!-- Added by: gil_diy, at: Thu 20 Jan 2022 10:56:11 IST -->
 
 <!--te-->
 
@@ -123,9 +122,6 @@ exec(compile(open(filename).read(), filename, 'exec'))
 
 [Reference](https://docs.blender.org/api/current/info_tips_and_tricks.html#executing-external-scripts)
 
-## Add Autocomplete
-
-[Link](https://github.com/Korchy/blender_autocomplete)
 
 
 
@@ -136,3 +132,6 @@ exec(compile(open(filename).read(), filename, 'exec'))
 [Blender Python API](https://docs.blender.org/api/current/)
 
 [Pycharm with Blender](https://b3d.interplanety.org/en/using-external-ide-pycharm-for-writing-blender-scripts/)
+
+
+[Add Autocomplete](https://github.com/Korchy/blender_autocomplete)
