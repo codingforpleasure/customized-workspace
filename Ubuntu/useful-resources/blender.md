@@ -16,7 +16,7 @@
       * [Add Autocomplete](#add-autocomplete)
       * [Useful web pages](#useful-web-pages)
 
-<!-- Added by: gil_diy, at: Thu 20 Jan 2022 10:55:28 IST -->
+<!-- Added by: gil_diy, at: Thu 20 Jan 2022 10:55:30 IST -->
 
 <!--te-->
 
@@ -104,6 +104,7 @@ Click on the rench icon in the properties -> press add modifier -> Pick 'subdivi
 ### Adding Scripts to Blender For the Templates Menu
 
 All Templates are well orginized in the following directory:
+
 ```bash
 /opt/blender-3.0.0-linux-x64/3.0/scripts/templates_py
 ```
