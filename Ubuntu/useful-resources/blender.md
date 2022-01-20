@@ -16,7 +16,7 @@
          * [Executing External Scripts](#executing-external-scripts)
       * [Useful web pages](#useful-web-pages)
 
-<!-- Added by: gil_diy, at: Thu 20 Jan 2022 12:33:24 IST -->
+<!-- Added by: gil_diy, at: Thu 20 Jan 2022 12:39:33 IST -->
 
 <!--te-->
 
@@ -103,7 +103,7 @@ Click on the rench icon in the properties -> press add modifier -> Pick 'subdivi
 ### Show all python operations done under the hood
 
 ```python
-
+blender --debug-wm
 ```
 
 ### Adding Scripts to Blender For the Templates Menu
