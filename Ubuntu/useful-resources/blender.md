@@ -11,11 +11,12 @@
       * [Applying shade smooth](#applying-shade-smooth)
       * [Adding Subdivision surface](#adding-subdivision-surface)
       * [Python with Blender](#python-with-blender)
+         * [Adding Scripts to Blender For Templates Menu:](#adding-scripts-to-blender-for-templates-menu)
          * [Executing External Scripts](#executing-external-scripts)
       * [Add Autocomplete](#add-autocomplete)
       * [Useful web pages](#useful-web-pages)
 
-<!-- Added by: gil_diy, at: Thu 20 Jan 2022 09:51:22 IST -->
+<!-- Added by: gil_diy, at: Thu 20 Jan 2022 10:54:28 IST -->
 
 <!--te-->
 
@@ -100,6 +101,11 @@ Click on the rench icon in the properties -> press add modifier -> Pick 'subdivi
 ## Python with Blender
 
 
+### Adding Scripts to Blender For Templates Menu:
+
+```bash
+/opt/blender-3.0.0-linux-x64/3.0/scripts/templates_py
+```
 ### Executing External Scripts
 ```python
 import bpy
