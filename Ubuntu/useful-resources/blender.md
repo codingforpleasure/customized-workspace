@@ -15,7 +15,7 @@
          * [Executing External Scripts](#executing-external-scripts)
       * [Useful web pages](#useful-web-pages)
 
-<!-- Added by: gil_diy, at: Thu 20 Jan 2022 10:56:11 IST -->
+<!-- Added by: gil_diy, at: Thu 20 Jan 2022 10:56:13 IST -->
 
 <!--te-->
 
@@ -132,6 +132,5 @@ exec(compile(open(filename).read(), filename, 'exec'))
 [Blender Python API](https://docs.blender.org/api/current/)
 
 [Pycharm with Blender](https://b3d.interplanety.org/en/using-external-ide-pycharm-for-writing-blender-scripts/)
-
 
 [Add Autocomplete](https://github.com/Korchy/blender_autocomplete)
