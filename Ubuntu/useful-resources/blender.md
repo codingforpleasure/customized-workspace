@@ -11,11 +11,12 @@
       * [Applying shade smooth](#applying-shade-smooth)
       * [Adding Subdivision surface](#adding-subdivision-surface)
       * [Python with Blender](#python-with-blender)
+         * [Show all python operations done under the hood](#show-all-python-operations-done-under-the-hood)
          * [Adding Scripts to Blender For the Templates Menu](#adding-scripts-to-blender-for-the-templates-menu)
          * [Executing External Scripts](#executing-external-scripts)
       * [Useful web pages](#useful-web-pages)
 
-<!-- Added by: gil_diy, at: Thu 20 Jan 2022 10:56:16 IST -->
+<!-- Added by: gil_diy, at: Thu 20 Jan 2022 12:33:24 IST -->
 
 <!--te-->
 
@@ -99,6 +100,11 @@ Click on the rench icon in the properties -> press add modifier -> Pick 'subdivi
 
 ## Python with Blender
 
+### Show all python operations done under the hood
+
+```python
+
+```
 
 ### Adding Scripts to Blender For the Templates Menu
 
