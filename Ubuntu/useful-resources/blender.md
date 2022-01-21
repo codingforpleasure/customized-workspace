@@ -17,7 +17,7 @@
          * [Executing External Scripts](#executing-external-scripts)
       * [Useful web pages](#useful-web-pages)
 
-<!-- Added by: gil_diy, at: Fri 21 Jan 2022 23:12:18 IST -->
+<!-- Added by: gil_diy, at: Fri 21 Jan 2022 23:12:53 IST -->
 
 <!--te-->
 
@@ -102,6 +102,7 @@ Click on the rench icon in the properties -> press add modifier -> Pick 'subdivi
 
 ## Installing addon in Blender
 
+Edit -> Preferences... -> Addons
 
 ## Python with Blender
 
