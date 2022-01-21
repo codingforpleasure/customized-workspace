@@ -17,7 +17,7 @@
          * [Executing External Scripts](#executing-external-scripts)
       * [Useful web pages](#useful-web-pages)
 
-<!-- Added by: gil_diy, at: Fri 21 Jan 2022 23:12:53 IST -->
+<!-- Added by: gil_diy, at: Sat 22 Jan 2022 00:13:46 IST -->
 
 <!--te-->
 
@@ -68,6 +68,7 @@ You'll be able to move, rotate, and resize
 
 Description | Hotkey
 ------------|-----
+Show properties | 'n'
 Move and orbit | press down the Middle button mouse
 Focus on object in the horizon | click on the object and press period key `.`
 Add Object | `Shift+A`
@@ -102,7 +103,7 @@ Click on the rench icon in the properties -> press add modifier -> Pick 'subdivi
 
 ## Installing addon in Blender
 
-Edit -> Preferences... -> Addons
+Edit -> Preferences... -> Addons (Press 'Install' button)
 
 ## Python with Blender
 
