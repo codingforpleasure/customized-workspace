@@ -10,13 +10,14 @@
       * [Modifiers](#modifiers)
       * [Applying shade smooth](#applying-shade-smooth)
       * [Adding Subdivision surface](#adding-subdivision-surface)
+      * [Installing addon in Blender](#installing-addon-in-blender)
       * [Python with Blender](#python-with-blender)
          * [Show all python operations done under the hood](#show-all-python-operations-done-under-the-hood)
          * [Adding Scripts to Blender For the Templates Menu](#adding-scripts-to-blender-for-the-templates-menu)
          * [Executing External Scripts](#executing-external-scripts)
       * [Useful web pages](#useful-web-pages)
 
-<!-- Added by: gil_diy, at: Thu 20 Jan 2022 12:40:27 IST -->
+<!-- Added by: gil_diy, at: Fri 21 Jan 2022 23:12:18 IST -->
 
 <!--te-->
 
@@ -97,6 +98,10 @@ Pick  `Object Mode` and right click your mesh, and pick `shade smooth`
 
 ## Adding Subdivision surface
 Click on the rench icon in the properties -> press add modifier -> Pick 'subdivision surface'
+
+
+## Installing addon in Blender
+
 
 ## Python with Blender
 
