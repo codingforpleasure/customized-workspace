@@ -1,7 +1,7 @@
 <!--ts-->
    * [Blender](#blender)
       * [Increase UI size](#increase-ui-size)
-      * [Hot keys](#hot-keys)
+      * [Main hotkey conventions](#main-hotkey-conventions)
          * [Transforms Hotkeys](#transforms-hotkeys)
          * [How to rotate in 45 degrees in the y axis?](#how-to-rotate-in-45-degrees-in-the-y-axis)
          * [How to grab and move up by 1m on the z axis?](#how-to-grab-and-move-up-by-1m-on-the-z-axis)
@@ -19,7 +19,7 @@
          * [Executing External Scripts](#executing-external-scripts)
       * [Useful web pages](#useful-web-pages)
 
-<!-- Added by: gil_diy, at: Sat 22 Jan 2022 16:26:48 IST -->
+<!-- Added by: gil_diy, at: Sat 22 Jan 2022 16:33:33 IST -->
 
 <!--te-->
 
@@ -29,7 +29,15 @@
 
 [Link](https://www.youtube.com/watch?v=Py9CHZkHh4U)
 
-## Hot keys
+## Main hotkey conventions
+
+`Alt` key is the opposite operation
+
+for example:
+
+`h` vs `Alt + h`
+
+`h` vs `Alt + h`
 
 
 ### Transforms Hotkeys
@@ -72,7 +80,7 @@ You'll be able to move, rotate, and resize
 Description | Hotkey
 ------------|-----
 hide object | pick object and press `h`
-unhide object |  press Alt+`h`
+unhide object | press Alt+`h`
 Show properties | 'n'
 Move and orbit | press down the Middle button mouse
 Focus on object in the horizon | click on the object and press period key `.`
