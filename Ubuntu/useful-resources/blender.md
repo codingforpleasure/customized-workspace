@@ -8,8 +8,7 @@
       * [What is edit mode?](#what-is-edit-mode)
       * [What is object mode?](#what-is-object-mode)
       * [Give color to objects](#give-color-to-objects)
-      * [Hide object](#hide-object)
-      * [Hide object](#hide-object-1)
+      * [What is edit mode?](#what-is-edit-mode-1)
       * [Modifiers](#modifiers)
       * [Applying shade smooth](#applying-shade-smooth)
       * [Adding Subdivision surface](#adding-subdivision-surface)
@@ -20,7 +19,7 @@
          * [Executing External Scripts](#executing-external-scripts)
       * [Useful web pages](#useful-web-pages)
 
-<!-- Added by: gil_diy, at: Sat 22 Jan 2022 21:20:20 IST -->
+<!-- Added by: gil_diy, at: Sat 22 Jan 2022 21:41:35 IST -->
 
 <!--te-->
 
@@ -104,17 +103,21 @@ Duplicate Object | `Shift + d`
 Duplicate Linked (All properties are inherited) | `Alt + d`
 Inherit  | `Ctrl + l`
 
+
 ## Give color to objects
 
 `color +l` => link material
 
 [Link](https://youtu.be/kVXTmUWK_nI?t=2070)
 
-## Hide object
+## What is edit mode?
 
-In object mode press `h`
-
-## Hide object
+Description | Hotkey
+------------|-----
+vertex | `1`
+Edge | `2`
+Phase | `3`
+Loop Cut () | `Ctrl + R`
 
 ## Modifiers
 
