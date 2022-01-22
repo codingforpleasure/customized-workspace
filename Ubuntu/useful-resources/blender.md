@@ -19,7 +19,7 @@
          * [Executing External Scripts](#executing-external-scripts)
       * [Useful web pages](#useful-web-pages)
 
-<!-- Added by: gil_diy, at: Sat 22 Jan 2022 21:48:17 IST -->
+<!-- Added by: gil_diy, at: Sat 22 Jan 2022 21:57:38 IST -->
 
 <!--te-->
 
@@ -85,6 +85,7 @@ Description | Hotkey
 ------------|-----
 Add object | `Shift+a`
 focus on single object | click on the object and press `/`
+Return to simple view after focusing an object | press `/`
 hide object | pick object and press `h`
 unhide object | press `Alt + h`
 Show properties | 'n'
