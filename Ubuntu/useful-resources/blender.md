@@ -20,7 +20,7 @@
          * [Executing External Scripts](#executing-external-scripts)
       * [Useful web pages](#useful-web-pages)
 
-<!-- Added by: gil_diy, at: Sat 22 Jan 2022 21:19:08 IST -->
+<!-- Added by: gil_diy, at: Sat 22 Jan 2022 21:20:18 IST -->
 
 <!--te-->
 
@@ -106,6 +106,7 @@ Inherit  | `Ctrl + l`
 
 ## Give color to objects
 
+`color +l` => link material
 
 [Link](https://youtu.be/kVXTmUWK_nI?t=2070)
 
