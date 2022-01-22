@@ -19,7 +19,7 @@
          * [Executing External Scripts](#executing-external-scripts)
       * [Useful web pages](#useful-web-pages)
 
-<!-- Added by: gil_diy, at: Sat 22 Jan 2022 16:26:42 IST -->
+<!-- Added by: gil_diy, at: Sat 22 Jan 2022 16:26:48 IST -->
 
 <!--te-->
 
@@ -72,7 +72,7 @@ You'll be able to move, rotate, and resize
 Description | Hotkey
 ------------|-----
 hide object | pick object and press `h`
-unhide object | pick object and press Alt+`h`
+unhide object |  press Alt+`h`
 Show properties | 'n'
 Move and orbit | press down the Middle button mouse
 Focus on object in the horizon | click on the object and press period key `.`
