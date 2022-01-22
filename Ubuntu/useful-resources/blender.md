@@ -19,7 +19,7 @@
          * [Executing External Scripts](#executing-external-scripts)
       * [Useful web pages](#useful-web-pages)
 
-<!-- Added by: gil_diy, at: Sat 22 Jan 2022 21:41:40 IST -->
+<!-- Added by: gil_diy, at: Sat 22 Jan 2022 21:48:14 IST -->
 
 <!--te-->
 
@@ -84,6 +84,7 @@ You'll be able to move, rotate, and resize
 Description | Hotkey
 ------------|-----
 Add object | `Shift+a`
+focus on single object | click on the object and press `/`
 hide object | pick object and press `h`
 unhide object | press `Alt + h`
 Show properties | 'n'
