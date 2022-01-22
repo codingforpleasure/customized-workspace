@@ -19,7 +19,7 @@
          * [Executing External Scripts](#executing-external-scripts)
       * [Useful web pages](#useful-web-pages)
 
-<!-- Added by: gil_diy, at: Sat 22 Jan 2022 21:57:38 IST -->
+<!-- Added by: gil_diy, at: Sat 22 Jan 2022 22:19:19 IST -->
 
 <!--te-->
 
@@ -120,6 +120,8 @@ vertex | `1`
 Edge | `2`
 Phase | `3`
 Loop Cut () | `Ctrl + R`
+on `Phase` you can press `i` | internal
+on `Phase` you can press `e` | external
 
 ## Modifiers
 
