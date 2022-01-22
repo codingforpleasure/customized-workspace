@@ -7,6 +7,8 @@
          * [How to grab and move up by 1m on the z axis?](#how-to-grab-and-move-up-by-1m-on-the-z-axis)
       * [What is edit mode?](#what-is-edit-mode)
       * [What is object mode?](#what-is-object-mode)
+      * [Hide object](#hide-object)
+      * [Hide object](#hide-object-1)
       * [Modifiers](#modifiers)
       * [Applying shade smooth](#applying-shade-smooth)
       * [Adding Subdivision surface](#adding-subdivision-surface)
@@ -17,7 +19,7 @@
          * [Executing External Scripts](#executing-external-scripts)
       * [Useful web pages](#useful-web-pages)
 
-<!-- Added by: gil_diy, at: Sat 22 Jan 2022 00:13:48 IST -->
+<!-- Added by: gil_diy, at: Sat 22 Jan 2022 16:26:40 IST -->
 
 <!--te-->
 
@@ -61,6 +63,7 @@ Pan | press the middle button on the mouse and Shift
 You'll be edit vertices, edges, phaces and to change the
 shape of your mesh
 
+
 ## What is object mode?
 
 You'll be able to move, rotate, and resize
@@ -68,6 +71,8 @@ You'll be able to move, rotate, and resize
 
 Description | Hotkey
 ------------|-----
+hide object | pick object and press `h`
+unhide object | pick object and press Alt+`h`
 Show properties | 'n'
 Move and orbit | press down the Middle button mouse
 Focus on object in the horizon | click on the object and press period key `.`
@@ -85,6 +90,11 @@ Duplicate Object | `Shift + d`
 Duplicate Linked (All properties are inherited) | `Alt + d`
 Inherit  | `Ctrl + l`
 
+## Hide object
+
+In object mode press `h`
+
+## Hide object
 
 ## Modifiers
 
