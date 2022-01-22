@@ -7,6 +7,7 @@
          * [How to grab and move up by 1m on the z axis?](#how-to-grab-and-move-up-by-1m-on-the-z-axis)
       * [What is edit mode?](#what-is-edit-mode)
       * [What is object mode?](#what-is-object-mode)
+      * [Give color to objects](#give-color-to-objects)
       * [Hide object](#hide-object)
       * [Hide object](#hide-object-1)
       * [Modifiers](#modifiers)
@@ -19,7 +20,7 @@
          * [Executing External Scripts](#executing-external-scripts)
       * [Useful web pages](#useful-web-pages)
 
-<!-- Added by: gil_diy, at: Sat 22 Jan 2022 16:51:12 IST -->
+<!-- Added by: gil_diy, at: Sat 22 Jan 2022 21:19:08 IST -->
 
 <!--te-->
 
@@ -102,6 +103,11 @@ Apply transfrom | `Ctrl + a`
 Duplicate Object | `Shift + d`
 Duplicate Linked (All properties are inherited) | `Alt + d`
 Inherit  | `Ctrl + l`
+
+## Give color to objects
+
+
+[Link](https://youtu.be/kVXTmUWK_nI?t=2070)
 
 ## Hide object
 
