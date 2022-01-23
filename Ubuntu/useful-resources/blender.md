@@ -22,7 +22,7 @@
          * [Jeff Heaton explaines](#jeff-heaton-explaines)
       * [Useful web pages](#useful-web-pages)
 
-<!-- Added by: gil_diy, at: Sun 23 Jan 2022 20:16:27 IST -->
+<!-- Added by: gil_diy, at: Sun 23 Jan 2022 20:17:17 IST -->
 
 <!--te-->
 
@@ -208,6 +208,10 @@ In Blender press `F3` and choose:
 **Step 4:**
 In pycharm choose:
 Choose `Auto-detect` path mapping settings
+
+**Step 5:**
+Now you can debug code in pycharm flawllesly, 
+with F8 and F7.
 
 ### Jeff Heaton explaines 
 
