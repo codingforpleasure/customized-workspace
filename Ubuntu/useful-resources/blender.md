@@ -17,10 +17,11 @@
          * [Show all python operations done under the hood](#show-all-python-operations-done-under-the-hood)
          * [Adding Scripts to Blender For the Templates Menu](#adding-scripts-to-blender-for-the-templates-menu)
          * [Executing External Scripts](#executing-external-scripts)
+         * [Debugging with Pycharm](#debugging-with-pycharm)
          * [Jeff Heaton explaines](#jeff-heaton-explaines)
       * [Useful web pages](#useful-web-pages)
 
-<!-- Added by: gil_diy, at: Sun 23 Jan 2022 10:02:51 IST -->
+<!-- Added by: gil_diy, at: Sun 23 Jan 2022 12:18:42 IST -->
 
 <!--te-->
 
@@ -175,6 +176,9 @@ exec(compile(open(filename).read(), filename, 'exec'))
 
 [Reference](https://docs.blender.org/api/current/info_tips_and_tricks.html#executing-external-scripts)
 
+### Debugging with Pycharm
+
+[Link](https://code.blender.org/2015/10/debugging-python-code-with-pycharm/)
 
 ### Jeff Heaton explaines 
 
