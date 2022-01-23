@@ -22,7 +22,7 @@
          * [Jeff Heaton explaines](#jeff-heaton-explaines)
       * [Useful web pages](#useful-web-pages)
 
-<!-- Added by: gil_diy, at: Sun 23 Jan 2022 20:13:09 IST -->
+<!-- Added by: gil_diy, at: Sun 23 Jan 2022 20:15:28 IST -->
 
 <!--te-->
 
@@ -204,8 +204,8 @@ In Blender press `F3` and choose:
 `Connect to remote PyCharm Debugger`
 
 **Step 4:**
-
-Choose `Autodetect`
+In pycharm choose:
+Choose `Auto-detect` path mapping settings
 
 ### Jeff Heaton explaines 
 
