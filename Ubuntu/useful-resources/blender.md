@@ -22,7 +22,7 @@
          * [Jeff Heaton explaines](#jeff-heaton-explaines)
       * [Useful web pages](#useful-web-pages)
 
-<!-- Added by: gil_diy, at: Sun 23 Jan 2022 20:09:32 IST -->
+<!-- Added by: gil_diy, at: Sun 23 Jan 2022 20:11:28 IST -->
 
 <!--te-->
 
@@ -188,6 +188,18 @@ exec(compile(open(filename).read(), filename, 'exec'))
 
 #### 
 
+
+**Step 1:**
+make sure in the blender python code is:
+```python
+import pydevd_pycharm
+pydevd_pycharm.settrace('localhost', port=1090, stdoutToServer=True, stderrToServer=True)
+```
+
+**Step 2:**
+Run the Debugger Server in pycharm with `Debug icon`
+
+**Step 2:**
 
 Choose `Autodetect`
 
