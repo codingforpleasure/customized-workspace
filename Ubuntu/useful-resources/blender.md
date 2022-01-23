@@ -22,7 +22,7 @@
          * [Jeff Heaton explaines](#jeff-heaton-explaines)
       * [Useful web pages](#useful-web-pages)
 
-<!-- Added by: gil_diy, at: Sun 23 Jan 2022 20:11:34 IST -->
+<!-- Added by: gil_diy, at: Sun 23 Jan 2022 20:13:06 IST -->
 
 <!--te-->
 
@@ -190,7 +190,7 @@ exec(compile(open(filename).read(), filename, 'exec'))
 
 
 **Step 1:**
-make sure in the blender python code is:
+Make sure in the blender python code is:
 ```python
 import pydevd_pycharm
 pydevd_pycharm.settrace('localhost', port=1090, stdoutToServer=True, stderrToServer=True)
@@ -200,8 +200,10 @@ pydevd_pycharm.settrace('localhost', port=1090, stdoutToServer=True, stderrToSer
 Run the Debugger Server in pycharm with `Debug icon`
 
 **Step 3:**
+In Blender press `F3` and choose:
+`Connect to remote PyCharm Debugger`
 
-
+**Step 4:**
 
 Choose `Autodetect`
 
