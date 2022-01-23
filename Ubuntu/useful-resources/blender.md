@@ -19,10 +19,11 @@
          * [Adding Scripts to Blender For the Templates Menu](#adding-scripts-to-blender-for-the-templates-menu)
          * [Executing External Scripts](#executing-external-scripts)
          * [Debugging with Pycharm](#debugging-with-pycharm)
+            * [How to set Breakpoint and debug in pycharm code in Blender?](#how-to-set-breakpoint-and-debug-in-pycharm-code-in-blender)
          * [Jeff Heaton explaines](#jeff-heaton-explaines)
       * [Useful web pages](#useful-web-pages)
 
-<!-- Added by: gil_diy, at: Sun 23 Jan 2022 20:17:20 IST -->
+<!-- Added by: gil_diy, at: Sun 23 Jan 2022 20:17:55 IST -->
 
 <!--te-->
 
@@ -186,7 +187,7 @@ exec(compile(open(filename).read(), filename, 'exec'))
 
 [Link](https://code.blender.org/2015/10/debugging-python-code-with-pycharm/)
 
-#### 
+#### How to set Breakpoint and debug in pycharm code in Blender?
 
 
 **Step 1:**
