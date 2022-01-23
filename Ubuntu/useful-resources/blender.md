@@ -1,5 +1,6 @@
 <!--ts-->
    * [Blender](#blender)
+      * [Search in blender](#search-in-blender)
       * [Increase UI size](#increase-ui-size)
       * [Main hotkey conventions](#main-hotkey-conventions)
          * [Transforms Hotkeys](#transforms-hotkeys)
@@ -21,11 +22,16 @@
          * [Jeff Heaton explaines](#jeff-heaton-explaines)
       * [Useful web pages](#useful-web-pages)
 
-<!-- Added by: gil_diy, at: Sun 23 Jan 2022 12:18:42 IST -->
+<!-- Added by: gil_diy, at: Sun 23 Jan 2022 16:29:54 IST -->
 
 <!--te-->
 
 # Blender
+
+
+## Search in blender
+
+A pop-up menu with access to all Blender tools is available press `F3`
 
 ## Increase UI size
 
