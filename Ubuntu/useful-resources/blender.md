@@ -22,7 +22,7 @@
          * [Jeff Heaton explaines](#jeff-heaton-explaines)
       * [Useful web pages](#useful-web-pages)
 
-<!-- Added by: gil_diy, at: Sun 23 Jan 2022 20:11:28 IST -->
+<!-- Added by: gil_diy, at: Sun 23 Jan 2022 20:11:34 IST -->
 
 <!--te-->
 
@@ -199,7 +199,9 @@ pydevd_pycharm.settrace('localhost', port=1090, stdoutToServer=True, stderrToSer
 **Step 2:**
 Run the Debugger Server in pycharm with `Debug icon`
 
-**Step 2:**
+**Step 3:**
+
+
 
 Choose `Autodetect`
 
