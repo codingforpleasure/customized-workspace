@@ -23,7 +23,7 @@
          * [Jeff Heaton explaines](#jeff-heaton-explaines)
       * [Useful web pages](#useful-web-pages)
 
-<!-- Added by: gil_diy, at: Mon 24 Jan 2022 09:55:47 IST -->
+<!-- Added by: gil_diy, at: Mon 24 Jan 2022 09:56:40 IST -->
 
 <!--te-->
 
@@ -206,7 +206,7 @@ pydevd_pycharm.settrace('localhost', port=1090, stdoutToServer=True, stderrToSer
 Run the Debugger Server in pycharm with `Debug icon`
 
 <p align="center"> <!-- style="width:400px;" -->
-  <img src="images/Blender/remote_debugging.jpg" title="tool tip here">
+  <img src="images/Blender/debug-server.jpg" title="tool tip here">
 </p>
 
 You should see in the console:
