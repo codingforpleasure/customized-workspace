@@ -21,10 +21,12 @@
          * [Get the datapath from GUI (Very useful)](#get-the-datapath-from-gui-very-useful)
          * [Debugging with Pycharm](#debugging-with-pycharm)
             * [How to set Breakpoint and debug in pycharm code in Blender?](#how-to-set-breakpoint-and-debug-in-pycharm-code-in-blender)
+      * [Animation](#animation)
+         * [Interpolation](#interpolation)
          * [Jeff Heaton explaines](#jeff-heaton-explaines)
       * [Useful web pages](#useful-web-pages)
 
-<!-- Added by: gil_diy, at: Mon 24 Jan 2022 16:41:24 IST -->
+<!-- Added by: gil_diy, at: Mon 24 Jan 2022 17:47:56 IST -->
 
 <!--te-->
 
@@ -273,6 +275,15 @@ to local path (Python) then choose:
 Now you can debug code in pycharm flawllesly, 
 with F8 and F7.
 
+
+
+## Animation
+
+### Interpolation
+
+```python
+bpy.ops.graph.interpolation_type()
+```
 ### Jeff Heaton explaines 
 
 [Link](https://youtu.be/EaXy-m2I5hs?t=895)
