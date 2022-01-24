@@ -24,7 +24,7 @@
          * [Jeff Heaton explaines](#jeff-heaton-explaines)
       * [Useful web pages](#useful-web-pages)
 
-<!-- Added by: gil_diy, at: Mon 24 Jan 2022 13:49:21 IST -->
+<!-- Added by: gil_diy, at: Mon 24 Jan 2022 13:49:24 IST -->
 
 <!--te-->
 
@@ -94,7 +94,7 @@ You'll be able to move, rotate, and resize
 Description | Hotkey
 ------------|-----
 Add object | `Shift+a`
-Parenting object to another object | `Ctrl+p`
+Parenting object to another object | `Ctrl + p`
 focus on single object | click on the object and press `/`
 Return to simple view after focusing an object | press `/`
 hide object | pick object and press `h`
