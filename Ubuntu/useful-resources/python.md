@@ -23,8 +23,9 @@
       * [Python Generators](#python-generators)
       * [Python Closure](#python-closure)
       * [jsonify with numpy arrays](#jsonify-with-numpy-arrays)
+      * [Useful packages](#useful-packages)
 
-<!-- Added by: gil_diy, at: Mon 03 Jan 2022 15:01:50 IST -->
+<!-- Added by: gil_diy, at: Mon 24 Jan 2022 11:48:03 IST -->
 
 <!--te-->
 
@@ -294,3 +295,7 @@ class NumpyEncoder(json.JSONEncoder):
 
 dumped = json.dumps(data, cls=NumpyEncoder)
 ```
+
+## Useful packages
+
+[Link](https://github.com/joke2k/faker)
