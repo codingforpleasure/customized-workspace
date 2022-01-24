@@ -24,7 +24,7 @@
          * [Jeff Heaton explaines](#jeff-heaton-explaines)
       * [Useful web pages](#useful-web-pages)
 
-<!-- Added by: gil_diy, at: Mon 24 Jan 2022 13:51:29 IST -->
+<!-- Added by: gil_diy, at: Mon 24 Jan 2022 16:41:24 IST -->
 
 <!--te-->
 
@@ -280,6 +280,8 @@ with F8 and F7.
 ## Useful web pages
 
 [Blender Documentation](https://docs.blender.org/manual/en/latest/)
+
+[Blender Best practice](https://docs.blender.org/api/current/info_best_practice.html)
 
 [Blender Python API](https://docs.blender.org/api/current/)
 
