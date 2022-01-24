@@ -23,7 +23,7 @@
          * [Jeff Heaton explaines](#jeff-heaton-explaines)
       * [Useful web pages](#useful-web-pages)
 
-<!-- Added by: gil_diy, at: Mon 24 Jan 2022 09:57:45 IST -->
+<!-- Added by: gil_diy, at: Mon 24 Jan 2022 09:58:01 IST -->
 
 <!--te-->
 
@@ -238,6 +238,7 @@ and then go to Pycharm.
 
 
 **Step 6:**
+
 You should make sure the mapping is configured well 
 from remote path (Blender) to local path (Pycharm Project).
 
