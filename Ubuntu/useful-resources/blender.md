@@ -23,7 +23,7 @@
          * [Jeff Heaton explaines](#jeff-heaton-explaines)
       * [Useful web pages](#useful-web-pages)
 
-<!-- Added by: gil_diy, at: Mon 24 Jan 2022 09:58:01 IST -->
+<!-- Added by: gil_diy, at: Mon 24 Jan 2022 09:58:24 IST -->
 
 <!--te-->
 
@@ -242,7 +242,8 @@ and then go to Pycharm.
 You should make sure the mapping is configured well 
 from remote path (Blender) to local path (Pycharm Project).
 
-For example:
+**For example:**
+
 in case I'm working on in blender:
 
 `/home/gil_diy/Downloads/jeffheaton-blender/intro/block-world.blend/junk.py`
