@@ -23,7 +23,7 @@
          * [Jeff Heaton explaines](#jeff-heaton-explaines)
       * [Useful web pages](#useful-web-pages)
 
-<!-- Added by: gil_diy, at: Mon 24 Jan 2022 09:43:07 IST -->
+<!-- Added by: gil_diy, at: Mon 24 Jan 2022 09:52:06 IST -->
 
 <!--te-->
 
@@ -237,12 +237,18 @@ You should make sure the mapping is configured well
 from remote path (Blender) to local path (Pycharm Project).
 
 For example:
-in case I'm working on:
+in case I'm working on in blender:
 
 `/home/gil_diy/Downloads/jeffheaton-blender/intro/block-world.blend/junk.py`
 
+Then in your Local path you should refer to:
+
+`/media/gil_diy/Backup/Blender_Lectures/3D_Rendered_Datasets_in_Blender_for_Beginners_Playlist/my_project/demo-junk.py`
 
 
+<p align="center"> <!-- style="width:400px;" -->
+  <img src="" title="tool tip here">
+</p>
 
 **Attention:** If Pycharm doesn't detect the mapping from remote path (Blender)
 to local path (Python) then choose:
