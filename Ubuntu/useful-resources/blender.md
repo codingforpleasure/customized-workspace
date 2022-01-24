@@ -23,7 +23,7 @@
          * [Jeff Heaton explaines](#jeff-heaton-explaines)
       * [Useful web pages](#useful-web-pages)
 
-<!-- Added by: gil_diy, at: Mon 24 Jan 2022 09:15:25 IST -->
+<!-- Added by: gil_diy, at: Mon 24 Jan 2022 09:18:44 IST -->
 
 <!--te-->
 
@@ -206,28 +206,36 @@ pydevd_pycharm.settrace('localhost', port=1090, stdoutToServer=True, stderrToSer
 Run the Debugger Server in pycharm with `Debug icon`
 
 You should see in the console:
-`
+
+```
 Starting debug server at port 1,090
 Use the following code to connect to the debugger:
 import pydevd_pycharm
 pydevd_pycharm.settrace('localhost', port=1090, stdoutToServer=True, stderrToServer=True)
 Waiting for process connection…
-`
+```
 
 **Step 4:**
 In Blender press `F3` and choose:
 `Connect to remote PyCharm Debugger`
 
-After this you should see two new lines in pycharm console:
+After this you you can notice 
+two new lines in pycharm's console were added:
+
 ```
 Expected: /home/gil_diy/Downloads/pycharm-2021.3.1/debug-eggs/pydevd-pycharm.egg/pydevd_attach_to_process/attach_linux_amd64.so to exist.
 ```
 
 **Step 5:**
+
+Run the script in Blender,
+and then go to Pycharm.
+
+**Step 6:**
 In pycharm choose:
 Choose `Auto-detect` path mapping settings
 
-**Step 6:**
+**Step 7:**
 Now you can debug code in pycharm flawllesly, 
 with F8 and F7.
 
