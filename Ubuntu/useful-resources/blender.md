@@ -23,7 +23,7 @@
          * [Jeff Heaton explaines](#jeff-heaton-explaines)
       * [Useful web pages](#useful-web-pages)
 
-<!-- Added by: gil_diy, at: Sun 23 Jan 2022 20:17:58 IST -->
+<!-- Added by: gil_diy, at: Mon 24 Jan 2022 09:11:27 IST -->
 
 <!--te-->
 
@@ -189,8 +189,11 @@ exec(compile(open(filename).read(), filename, 'exec'))
 
 #### How to set Breakpoint and debug in pycharm code in Blender?
 
-
 **Step 1:**
+Re-open Blender
+(Because sometimes the server on pycharm doesn't catches Blender)
+
+**Step 2:**
 Make sure in the blender python code is:
 ```python
 import pydevd_pycharm
@@ -199,18 +202,18 @@ import pydevd_pycharm
 pydevd_pycharm.settrace('localhost', port=1090, stdoutToServer=True, stderrToServer=True)
 ```
 
-**Step 2:**
+**Step 3:**
 Run the Debugger Server in pycharm with `Debug icon`
 
-**Step 3:**
+**Step 4:**
 In Blender press `F3` and choose:
 `Connect to remote PyCharm Debugger`
 
-**Step 4:**
+**Step 5:**
 In pycharm choose:
 Choose `Auto-detect` path mapping settings
 
-**Step 5:**
+**Step 6:**
 Now you can debug code in pycharm flawllesly, 
 with F8 and F7.
 
