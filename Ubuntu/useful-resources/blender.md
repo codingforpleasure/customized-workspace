@@ -23,10 +23,10 @@
             * [How to set Breakpoint and debug in pycharm code in Blender?](#how-to-set-breakpoint-and-debug-in-pycharm-code-in-blender)
       * [Animation](#animation)
          * [Interpolation](#interpolation)
-         * [Jeff Heaton explaines](#jeff-heaton-explaines)
+      * [Jeff Heaton explaines](#jeff-heaton-explaines)
       * [Useful web pages](#useful-web-pages)
 
-<!-- Added by: gil_diy, at: Mon 24 Jan 2022 17:47:59 IST -->
+<!-- Added by: gil_diy, at: Mon 24 Jan 2022 17:49:15 IST -->
 
 <!--te-->
 
@@ -282,9 +282,12 @@ with F8 and F7.
 ### Interpolation
 
 ```python
-bpy.ops.graph.interpolation_type()
+bpy.ops.graph.interpolation_type(type = 'BEZIER')
 ```
-### Jeff Heaton explaines 
+
+[Link](https://docs.blender.org/api/current/bpy.ops.graph.html#bpy.ops.graph.interpolation_type)
+
+## Jeff Heaton explaines 
 
 [Link](https://youtu.be/EaXy-m2I5hs?t=895)
 
