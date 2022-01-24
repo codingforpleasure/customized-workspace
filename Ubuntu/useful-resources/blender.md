@@ -18,12 +18,13 @@
          * [Show all python operations done under the hood](#show-all-python-operations-done-under-the-hood)
          * [Adding Scripts to Blender For the Templates Menu](#adding-scripts-to-blender-for-the-templates-menu)
          * [Executing External Scripts](#executing-external-scripts)
+         * [Get the datapath from GUI (Very useful)](#get-the-datapath-from-gui-very-useful)
          * [Debugging with Pycharm](#debugging-with-pycharm)
             * [How to set Breakpoint and debug in pycharm code in Blender?](#how-to-set-breakpoint-and-debug-in-pycharm-code-in-blender)
          * [Jeff Heaton explaines](#jeff-heaton-explaines)
       * [Useful web pages](#useful-web-pages)
 
-<!-- Added by: gil_diy, at: Mon 24 Jan 2022 10:02:25 IST -->
+<!-- Added by: gil_diy, at: Mon 24 Jan 2022 13:34:26 IST -->
 
 <!--te-->
 
@@ -182,6 +183,10 @@ exec(compile(open(filename).read(), filename, 'exec'))
 
 
 [Reference](https://docs.blender.org/api/current/info_tips_and_tricks.html#executing-external-scripts)
+
+### Get the datapath from GUI (Very useful)
+
+[Link](https://blender.stackexchange.com/a/34592/140491)
 
 ### Debugging with Pycharm
 
