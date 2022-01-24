@@ -23,7 +23,7 @@
          * [Jeff Heaton explaines](#jeff-heaton-explaines)
       * [Useful web pages](#useful-web-pages)
 
-<!-- Added by: gil_diy, at: Mon 24 Jan 2022 09:56:58 IST -->
+<!-- Added by: gil_diy, at: Mon 24 Jan 2022 09:57:43 IST -->
 
 <!--te-->
 
@@ -227,6 +227,7 @@ After this you you can notice
 two new lines in pycharm's console were added:
 
 ```
+Connected to pydev debugger (build 213.6461.77)
 Expected: /home/gil_diy/Downloads/pycharm-2021.3.1/debug-eggs/pydevd-pycharm.egg/pydevd_attach_to_process/attach_linux_amd64.so to exist.
 ```
 
