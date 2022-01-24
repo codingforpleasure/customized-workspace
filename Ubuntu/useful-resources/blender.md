@@ -23,7 +23,7 @@
          * [Jeff Heaton explaines](#jeff-heaton-explaines)
       * [Useful web pages](#useful-web-pages)
 
-<!-- Added by: gil_diy, at: Mon 24 Jan 2022 09:58:24 IST -->
+<!-- Added by: gil_diy, at: Mon 24 Jan 2022 10:02:25 IST -->
 
 <!--te-->
 
@@ -188,6 +188,8 @@ exec(compile(open(filename).read(), filename, 'exec'))
 [Link](https://code.blender.org/2015/10/debugging-python-code-with-pycharm/)
 
 #### How to set Breakpoint and debug in pycharm code in Blender?
+
+I'm assuming you have installed an Addon for Debugging in Blender ([Link](https://github.com/sybrenstuvel/random-blender-addons/blob/main/remote_debugger.py))
 
 **Step 1:**
 Re-open Blender
