@@ -25,7 +25,7 @@
       * [jsonify with numpy arrays](#jsonify-with-numpy-arrays)
       * [Useful packages](#useful-packages)
 
-<!-- Added by: gil_diy, at: Mon 24 Jan 2022 11:48:03 IST -->
+<!-- Added by: gil_diy, at: Mon 24 Jan 2022 11:48:13 IST -->
 
 <!--te-->
 
@@ -298,4 +298,4 @@ dumped = json.dumps(data, cls=NumpyEncoder)
 
 ## Useful packages
 
-[Link](https://github.com/joke2k/faker)
+[Generate fake data easily](https://github.com/joke2k/faker)
