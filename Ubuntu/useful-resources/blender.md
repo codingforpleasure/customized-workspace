@@ -23,7 +23,7 @@
          * [Jeff Heaton explaines](#jeff-heaton-explaines)
       * [Useful web pages](#useful-web-pages)
 
-<!-- Added by: gil_diy, at: Mon 24 Jan 2022 09:18:47 IST -->
+<!-- Added by: gil_diy, at: Mon 24 Jan 2022 09:20:14 IST -->
 
 <!--te-->
 
@@ -228,7 +228,7 @@ Expected: /home/gil_diy/Downloads/pycharm-2021.3.1/debug-eggs/pydevd-pycharm.egg
 
 **Step 5:**
 
-Run the script in Blender,
+Run the script in Blender (you'll notice Blender is kinda stuck),
 and then go to Pycharm.
 
 **Step 6:**
