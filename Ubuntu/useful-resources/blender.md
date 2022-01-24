@@ -23,7 +23,7 @@
          * [Jeff Heaton explaines](#jeff-heaton-explaines)
       * [Useful web pages](#useful-web-pages)
 
-<!-- Added by: gil_diy, at: Mon 24 Jan 2022 09:20:14 IST -->
+<!-- Added by: gil_diy, at: Mon 24 Jan 2022 09:43:04 IST -->
 
 <!--te-->
 
@@ -231,9 +231,23 @@ Expected: /home/gil_diy/Downloads/pycharm-2021.3.1/debug-eggs/pydevd-pycharm.egg
 Run the script in Blender (you'll notice Blender is kinda stuck),
 and then go to Pycharm.
 
+
 **Step 6:**
-In pycharm choose:
-Choose `Auto-detect` path mapping settings
+You should make sure the mapping is configured well 
+from remote path (Blender) to local path (Pycharm Project).
+
+For example:
+in case I'm working on:
+
+`/home/gil_diy/Downloads/jeffheaton-blender/intro/block-world.blend/junk.py`
+
+
+
+
+**Attention:** If Pycharm doesn't detect the mapping from remote path (Blender)
+to local path (Python) then choose:
+
+`Auto-detect` path mapping settings
 
 **Step 7:**
 Now you can debug code in pycharm flawllesly, 
