@@ -24,7 +24,7 @@
          * [Jeff Heaton explaines](#jeff-heaton-explaines)
       * [Useful web pages](#useful-web-pages)
 
-<!-- Added by: gil_diy, at: Mon 24 Jan 2022 13:49:26 IST -->
+<!-- Added by: gil_diy, at: Mon 24 Jan 2022 13:50:33 IST -->
 
 <!--te-->
 
@@ -91,30 +91,30 @@ shape of your mesh
 You'll be able to move, rotate, and resize
 
 
-Description | Hotkey
-------------|-----
-Add object | `Shift+a`
-Parenting object to another object | `Ctrl + p`
-focus on single object | click on the object and press `/`
-Return to simple view after focusing an object | press `/`
-hide object | pick object and press `h`
-unhide object | press `Alt + h`
-Show properties | 'n'
-Move and orbit | press down the Middle button mouse
-Focus on object in the horizon | click on the object and press period key `.`
-Add Object | `Shift+A`
-Search Bar | `F3`
-Switch between `Edit mode` to `Object mode` | tab
-Duplicate | `Shift+d`
-Seperate | `p`
-Xray | `Alt+z`
-See location | `n`
-See Toolbox | `t`
-Wireframe mode | `Shift + z`
-Apply transfrom | `Ctrl + a`
-Duplicate Object | `Shift + d`
-Duplicate Linked (All properties are inherited) | `Alt + d`
-Inherit  | `Ctrl + l`
+Description | Hotkey | Reference
+------------|--------|------------
+Add object | `Shift+a` | 
+Parenting object to another object | `Ctrl + p` |
+focus on single object | click on the object and press `/` |
+Return to simple view after focusing an object | press `/` |
+hide object | pick object and press `h` |
+unhide object | press `Alt + h` |
+Show properties | press `n` |
+Move and orbit | press down the Middle button mouse |
+Focus on object in the horizon | click on the object and press period key `.` |
+Add Object | `Shift+A` | 
+Search Bar | `F3` | 
+Switch between `Edit mode` to `Object mode` | tab |
+Duplicate | `Shift+d` |
+Seperate | `p` |
+Xray | `Alt+z` |
+See location | `n` |
+See Toolbox | `t` | 
+Wireframe mode | `Shift + z` | 
+Apply transfrom | `Ctrl + a` | 
+Duplicate Object | `Shift + d` |
+Duplicate Linked (All properties are inherited) | `Alt + d` | 
+Inherit  | `Ctrl + l` |
 
 
 ## Give color to objects
