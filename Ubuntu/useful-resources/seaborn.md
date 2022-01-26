@@ -14,7 +14,7 @@
       * [Histograms](#histograms)
       * [Density plots (KDE - Kernel density estimate (KDE))](#density-plots-kde---kernel-density-estimate-kde)
 
-<!-- Added by: gil_diy, at: Tue 11 Jan 2022 14:34:00 IST -->
+<!-- Added by: gil_diy, at: Wed 26 Jan 2022 20:27:55 IST -->
 
 <!--te-->
 
@@ -124,7 +124,7 @@ sns.lmplot(x="bmi", y="charges", hue="smoker", data=insurance_data)
 ```
 
 <p align="center"> <!-- style="width:400px;" -->
-  <img src="images/labeling_example.png" title="tool tip here">
+  <img src="images/sns/scatter_plot_with_linear_regression.png" title="tool tip here">
 </p>
 
 ## Categorical scatter plot to highlight the relationship between
