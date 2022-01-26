@@ -7,13 +7,14 @@
          * [Median](#median)
          * [Create a seperate model just for predicting the NaN values](#create-a-seperate-model-just-for-predicting-the-nan-values)
 
-<!-- Added by: gil_diy, at: Wed 26 Jan 2022 20:38:11 IST -->
+<!-- Added by: gil_diy, at: Wed 26 Jan 2022 20:38:22 IST -->
 
 <!--te-->
 
 
 # Imputations
 
+Mean, median and mode are all measures of central tendency in statistics. In different ways they each tell us what value in a data set is typical or representative of the data set.
 
 Please read here: [Link](https://statistics.laerd.com/statistical-guides/measures-central-tendency-mean-mode-median.php)
 
@@ -25,7 +26,7 @@ mode is used for categorical data where we wish to know which is the most common
 
 ## Numerical columns
 
-Mean, median and mode are all measures of central tendency in statistics. In different ways they each tell us what value in a data set is typical or representative of the data set.
+
 
 ### Mean
 
