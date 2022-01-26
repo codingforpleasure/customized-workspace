@@ -7,7 +7,7 @@
          * [Median](#median)
          * [Create a seperate model just for predicting the NaN values](#create-a-seperate-model-just-for-predicting-the-nan-values)
 
-<!-- Added by: gil_diy, at: Wed 26 Jan 2022 20:38:22 IST -->
+<!-- Added by: gil_diy, at: Wed 26 Jan 2022 20:42:40 IST -->
 
 <!--te-->
 
@@ -24,9 +24,16 @@ Please read here: [Link](https://statistics.laerd.com/statistical-guides/measure
 
 mode is used for categorical data where we wish to know which is the most common category
 
+<p align="center"> <!-- style="width:400px;" -->
+  <img src="images/mode-1a.png" title="tool tip here">
+</p>
+
+
+<p align="center"> <!-- style="width:400px;" -->
+  <img src="images/mode-2.png" title="tool tip here">
+</p>
+
 ## Numerical columns
-
-
 
 ### Mean
 
