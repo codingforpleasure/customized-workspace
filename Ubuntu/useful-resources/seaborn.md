@@ -14,7 +14,7 @@
       * [Histograms](#histograms)
       * [Density plots (KDE - Kernel density estimate (KDE))](#density-plots-kde---kernel-density-estimate-kde)
 
-<!-- Added by: gil_diy, at: Wed 26 Jan 2022 21:12:37 IST -->
+<!-- Added by: gil_diy, at: Wed 26 Jan 2022 21:13:16 IST -->
 
 <!--te-->
 
@@ -132,7 +132,12 @@ plt.show()
 
 
 ```python
-
+    sns.set_style("whitegrid")
+    sns.countplot(x='Survived',
+                  hue = 'Sex',
+                  data = train_df,
+                  palette = 'RdBu_r')
+    plt.show()
 ```
 
 <p align="center"> <!-- style="width:400px;" -->
