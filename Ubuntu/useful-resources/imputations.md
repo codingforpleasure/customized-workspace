@@ -7,7 +7,7 @@
          * [Median](#median)
          * [Create a seperate model just for predicting the NaN values](#create-a-seperate-model-just-for-predicting-the-nan-values)
 
-<!-- Added by: gil_diy, at: Wed 26 Jan 2022 20:43:43 IST -->
+<!-- Added by: gil_diy, at: Wed 26 Jan 2022 20:44:24 IST -->
 
 <!--te-->
 
@@ -40,7 +40,7 @@ mode is used for categorical data where we wish to know which is the most common
 
 ### Mean
 
-The mean has one main disadvantage: it is particularly susceptible to the influence of outliers. These are values that are unusual compared to the rest of the data set by being especially small or large in numerical value.
+The mean has one main disadvantage: it is **particularly susceptible to the influence of outliers**. These are values that are unusual compared to the rest of the data set by being especially small or large in numerical value.
 
 
 ### Median
