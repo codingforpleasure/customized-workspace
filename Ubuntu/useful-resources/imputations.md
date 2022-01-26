@@ -1,13 +1,13 @@
 <!--ts-->
    * [Imputations](#imputations)
       * [Categorical columns](#categorical-columns)
+         * [Mode (By frequency)](#mode-by-frequency)
       * [Numerical columns](#numerical-columns)
          * [Median](#median)
          * [Mean](#mean)
-         * [Mode](#mode)
          * [Create a seperate model just for predicting the the NaN values](#create-a-seperate-model-just-for-predicting-the-the-nan-values)
 
-<!-- Added by: gil_diy, at: Wed 26 Jan 2022 19:41:56 IST -->
+<!-- Added by: gil_diy, at: Wed 26 Jan 2022 20:34:07 IST -->
 
 <!--te-->
 
@@ -17,6 +17,9 @@
 
 ## Categorical columns
 
+### Mode (By frequency)
+
+mode is used for categorical data where we wish to know which is the most common category
 
 ## Numerical columns
 
@@ -26,8 +29,6 @@ Mean, median and mode are all measures of central tendency in statistics. In dif
 ### Median
 
 ### Mean
-
-### Mode
 
 ### Create a seperate model just for predicting the the NaN values
 
