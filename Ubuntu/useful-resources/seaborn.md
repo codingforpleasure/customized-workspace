@@ -14,7 +14,7 @@
       * [Histograms](#histograms)
       * [Density plots (KDE - Kernel density estimate (KDE))](#density-plots-kde---kernel-density-estimate-kde)
 
-<!-- Added by: gil_diy, at: Wed 26 Jan 2022 21:06:01 IST -->
+<!-- Added by: gil_diy, at: Wed 26 Jan 2022 21:09:16 IST -->
 
 <!--te-->
 
@@ -114,11 +114,18 @@ sns.heatmap(train_df.isnull(),
 
 plt.show()
 
+```
+
+<p align="center"> <!-- style="width:400px;" -->
+  <img src="images/sns/get_nan.png" title="tool tip here">
+</p>
+
+
+```python
 sns.set_style("whitegrid")
 sns.countplot(x='Survived', data = train_df, palette = 'RdBu_r')
 plt.show()
 ```
-
 <p align="center"> <!-- style="width:400px;" -->
   <img src="images/sns/count_plot.png" title="tool tip here">
 </p>
