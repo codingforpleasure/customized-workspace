@@ -7,7 +7,7 @@
          * [Median](#median)
          * [Create a seperate model just for predicting the NaN values](#create-a-seperate-model-just-for-predicting-the-nan-values)
 
-<!-- Added by: gil_diy, at: Wed 26 Jan 2022 20:43:23 IST -->
+<!-- Added by: gil_diy, at: Wed 26 Jan 2022 20:43:41 IST -->
 
 <!--te-->
 
@@ -30,6 +30,7 @@ mode is used for categorical data where we wish to know which is the most common
   <img src="images/mode-1a.png" title="tool tip here">
 </p>
 
+* one of the problems with the mode is that it is not unique, so it leaves us with problems when we have two or more values that share the highest frequency, such as below:
 
 <p align="center"> <!-- style="width:400px;" -->
   <img src="images/mode-2.png" title="tool tip here">
