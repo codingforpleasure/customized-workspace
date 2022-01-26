@@ -7,7 +7,7 @@
          * [Median](#median)
          * [Create a seperate model just for predicting the NaN values](#create-a-seperate-model-just-for-predicting-the-nan-values)
 
-<!-- Added by: gil_diy, at: Wed 26 Jan 2022 20:42:40 IST -->
+<!-- Added by: gil_diy, at: Wed 26 Jan 2022 20:43:23 IST -->
 
 <!--te-->
 
@@ -22,7 +22,9 @@ Please read here: [Link](https://statistics.laerd.com/statistical-guides/measure
 
 ### Mode (By frequency)
 
-mode is used for categorical data where we wish to know which is the most common category
+mode is used for categorical data where we wish to know which is the most common category.
+
+* We can see above that the most common form of transport, in this particular data set, is the bus:
 
 <p align="center"> <!-- style="width:400px;" -->
   <img src="images/mode-1a.png" title="tool tip here">
