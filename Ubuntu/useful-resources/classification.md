@@ -18,7 +18,7 @@
       * [Support Vector Machine (SVM)](#support-vector-machine-svm)
       * [Naive Bayes](#naive-bayes)
 
-<!-- Added by: gil_diy, at: Tue 11 Jan 2022 09:21:14 IST -->
+<!-- Added by: gil_diy, at: Thu 27 Jan 2022 00:56:06 IST -->
 
 <!--te-->
 
@@ -254,3 +254,5 @@ The trees are **Stumps**| The **trees are much bigger**, the number of leaf node
 ## Support Vector Machine (SVM)
 
 ## Naive Bayes
+
+[Ensembling with StackNet](https://www.kaggle.com/carlolepelaars/ensembling-with-stacknet)
