@@ -14,7 +14,7 @@
       * [Histograms](#histograms)
       * [Density plots (KDE - Kernel density estimate (KDE))](#density-plots-kde---kernel-density-estimate-kde)
 
-<!-- Added by: gil_diy, at: Wed 26 Jan 2022 20:27:58 IST -->
+<!-- Added by: gil_diy, at: Wed 26 Jan 2022 21:02:19 IST -->
 
 <!--te-->
 
@@ -145,4 +145,19 @@ You can think of it as a smoothed histogram
 
 ```python
 sns.kdeplot(data=iris_data['Petal Length (cm)'], shade=True)
+```
+
+## 
+
+```python
+sns.heatmap(train_df.isnull(),
+            yticklabels=False,
+            cbar=False,
+            cmap='viridis')
+
+plt.show()
+
+sns.set_style("whitegrid")
+sns.countplot(x='Survived', data = train_df, palette = 'RdBu_r')
+plt.show()
 ```
