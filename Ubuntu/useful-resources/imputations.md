@@ -7,13 +7,15 @@
          * [Mean](#mean)
          * [Create a seperate model just for predicting the NaN values](#create-a-seperate-model-just-for-predicting-the-nan-values)
 
-<!-- Added by: gil_diy, at: Wed 26 Jan 2022 20:34:14 IST -->
+<!-- Added by: gil_diy, at: Wed 26 Jan 2022 20:36:09 IST -->
 
 <!--te-->
 
 
 # Imputations
 
+
+Please read here: [Link](https://statistics.laerd.com/statistical-guides/measures-central-tendency-mean-mode-median.php)
 
 ## Categorical columns
 
