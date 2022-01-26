@@ -14,7 +14,7 @@
       * [Histograms](#histograms)
       * [Density plots (KDE - Kernel density estimate (KDE))](#density-plots-kde---kernel-density-estimate-kde)
 
-<!-- Added by: gil_diy, at: Wed 26 Jan 2022 21:02:19 IST -->
+<!-- Added by: gil_diy, at: Wed 26 Jan 2022 21:04:59 IST -->
 
 <!--te-->
 
@@ -105,6 +105,24 @@ plt.title("Average Score for Racing Games, by Platform")
   <img src="images/sns/bar_plot.png" title="tool tip here">
 </p>
 
+
+```python
+sns.heatmap(train_df.isnull(),
+            yticklabels=False,
+            cbar=False,
+            cmap='viridis')
+
+plt.show()
+
+sns.set_style("whitegrid")
+sns.countplot(x='Survived', data = train_df, palette = 'RdBu_r')
+plt.show()
+```
+
+<p align="center"> <!-- style="width:400px;" -->
+  <img src="images/count_plot.png" title="tool tip here">
+</p>
+
 ## Scatter plot
 
 ```python
@@ -149,15 +167,3 @@ sns.kdeplot(data=iris_data['Petal Length (cm)'], shade=True)
 
 ## 
 
-```python
-sns.heatmap(train_df.isnull(),
-            yticklabels=False,
-            cbar=False,
-            cmap='viridis')
-
-plt.show()
-
-sns.set_style("whitegrid")
-sns.countplot(x='Survived', data = train_df, palette = 'RdBu_r')
-plt.show()
-```
