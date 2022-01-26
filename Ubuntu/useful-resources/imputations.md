@@ -5,9 +5,9 @@
       * [Numerical columns](#numerical-columns)
          * [Median](#median)
          * [Mean](#mean)
-         * [Create a seperate model just for predicting the the NaN values](#create-a-seperate-model-just-for-predicting-the-the-nan-values)
+         * [Create a seperate model just for predicting the NaN values](#create-a-seperate-model-just-for-predicting-the-nan-values)
 
-<!-- Added by: gil_diy, at: Wed 26 Jan 2022 20:34:07 IST -->
+<!-- Added by: gil_diy, at: Wed 26 Jan 2022 20:34:14 IST -->
 
 <!--te-->
 
@@ -30,7 +30,7 @@ Mean, median and mode are all measures of central tendency in statistics. In dif
 
 ### Mean
 
-### Create a seperate model just for predicting the the NaN values
+### Create a seperate model just for predicting the NaN values
 
 All features in the rest of the columns are the X and the single column with the
 NaN values is the target column.
