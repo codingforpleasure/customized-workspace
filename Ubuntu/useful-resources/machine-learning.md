@@ -1,7 +1,10 @@
 <!--ts-->
    * [Machine learning](#machine-learning)
-      * [The relationship between all terminalogy](#the-relationship-between-all-terminalogy)
+      * [The relationship between all terminalogy (illustration)](#the-relationship-between-all-terminalogy-illustration)
       * [Machine learning techniques:](#machine-learning-techniques)
+      * [Flavors of Machine Learning](#flavors-of-machine-learning)
+         * [<strong>Supervised</strong>](#supervised)
+         * [<strong>Unsupervised</strong>](#unsupervised)
       * [Unsupervised learning techniques:](#unsupervised-learning-techniques)
       * [Supervised vs Unsupervised learning](#supervised-vs-unsupervised-learning)
       * [Under and Over-fitting](#under-and-over-fitting)
@@ -12,8 +15,9 @@
       * [Regression accuracy](#regression-accuracy)
       * [Classification algorithms in machine learning](#classification-algorithms-in-machine-learning)
       * [K Nearest Neighbhors (KNN)](#k-nearest-neighbhors-knn)
+         * [Selecting the best model in scikit-learn using cross-validation](#selecting-the-best-model-in-scikit-learn-using-cross-validation)
 
-<!-- Added by: gil_diy, at: 2019-09-21T23:48+03:00 -->
+<!-- Added by: gil_diy, at: Thu 27 Jan 2022 15:56:42 IST -->
 
 <!--te-->
 
@@ -27,6 +31,8 @@
   <img src="images/machine-learning/machine_learning_terms.jpg" title="sun_of_terms">
 </p>
 
+
+Cardinality = How many unique values
 
 ## Machine learning techniques:
 
