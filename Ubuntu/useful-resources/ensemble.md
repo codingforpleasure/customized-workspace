@@ -13,7 +13,7 @@
          * [The difference between Adaboost to Gradient Boost](#the-difference-between-adaboost-to-gradient-boost)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Fri 28 Jan 2022 22:24:57 IST -->
+<!-- Added by: gil_diy, at: Fri 28 Jan 2022 22:29:38 IST -->
 
 <!--te-->
 
@@ -198,7 +198,7 @@ In differ to Adaboost the trees depth in Gradient Boost is between 8 to 32.
 
 The learning is done by optimizing the loss function.
 
-Thus, to prevent overfitting, we introduce a hyperparameter called learning rate. When we make a prediction, each residual is multiplied by the learning rate. This forces us to use more decision trees, each taking a small step towards the final solution.
+Thus, to prevent overfitting, we introduce a **hyperparameter called learning rate**. When we make a prediction, each residual is multiplied by the learning rate. This forces us to use more decision trees, each taking a small step towards the final solution.
 
 
 
