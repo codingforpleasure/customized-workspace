@@ -13,7 +13,7 @@
          * [The difference between Adaboost to Gradient Boost](#the-difference-between-adaboost-to-gradient-boost)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Fri 28 Jan 2022 22:30:39 IST -->
+<!-- Added by: gil_diy, at: Fri 28 Jan 2022 22:31:02 IST -->
 
 <!--te-->
 
@@ -194,7 +194,9 @@ print("Accuracy:",metrics.accuracy_score(y_test, y_pred))
 
 #### Gradient Boosting
 
-In differ to Adaboost the trees depth in Gradient Boost is between 8 to 32.
+* Generalization of AdaBoost as Gradient Boosting
+
+* In differ to Adaboost the trees depth in Gradient Boost is between 8 to 32.
 
 The learning is done by optimizing the loss function.
 
