@@ -13,7 +13,7 @@
          * [The difference between Adaboost to Gradient Boost](#the-difference-between-adaboost-to-gradient-boost)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Fri 28 Jan 2022 22:32:08 IST -->
+<!-- Added by: gil_diy, at: Fri 28 Jan 2022 22:33:22 IST -->
 
 <!--te-->
 
@@ -203,6 +203,13 @@ print("Accuracy:",metrics.accuracy_score(y_test, y_pred))
 * Thus, to prevent overfitting, we introduce a **hyperparameter called learning rate**. When we make a prediction, each residual is multiplied by the learning rate. This forces us to use more decision trees, each taking a small step towards the final solution.
 
 * The generalization allowed **arbitrary differentiable loss functions** to be used, expanding the technique beyond binary classification problems to support regression, multiclass classification and more.
+
+**Gradient boosting involves three elements:**
+
+**1.** A loss function to be optimized.
+**2.** A weak learner to make predictions.
+**3.** An additive model to add weak learners to minimize the loss function.
+
 
 ```python
 from sklearn.ensemble import GradientBoostingRegressor
