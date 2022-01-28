@@ -13,7 +13,7 @@
          * [The difference between Adaboost to Gradient Boost](#the-difference-between-adaboost-to-gradient-boost)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Fri 28 Jan 2022 22:29:38 IST -->
+<!-- Added by: gil_diy, at: Fri 28 Jan 2022 22:30:37 IST -->
 
 <!--te-->
 
@@ -200,7 +200,7 @@ The learning is done by optimizing the loss function.
 
 Thus, to prevent overfitting, we introduce a **hyperparameter called learning rate**. When we make a prediction, each residual is multiplied by the learning rate. This forces us to use more decision trees, each taking a small step towards the final solution.
 
-
+* The generalization allowed arbitrary differentiable loss functions to be used, expanding the technique beyond binary classification problems to support regression, multiclass classification and more.
 
 ```python
 from sklearn.ensemble import GradientBoostingRegressor
