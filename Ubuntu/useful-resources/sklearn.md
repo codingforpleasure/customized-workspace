@@ -19,7 +19,7 @@
          * [LeaveOneOut](#leaveoneout)
          * [Pipeline](#pipeline)
 
-<!-- Added by: gil_diy, at: Sat 29 Jan 2022 12:03:37 IST -->
+<!-- Added by: gil_diy, at: Sat 29 Jan 2022 12:17:33 IST -->
 
 <!--te-->
 
@@ -134,7 +134,22 @@ The same way as I have written above, just place the most common value in the em
 imputer_categorical = SimpleImputer(missing_values=np.nan, strategy='most_frequent')
 ```
 
+####
 
+```python
+from sklearn.model_selection import KFold
+
+x = data.loc[:, all_columns_except_target]
+y = data.loc[:, "Target"]
+
+kf = KFold(n_splits=5, random_state=42, shuffle=True)
+
+# Split dataset into k consecutive folds 
+# Each fold is then used once as a validation while the k - 1 remaining folds form the training set.
+
+for train_index, test_index in kf.split(x, y):
+    print("bla")
+```
 
 ### ColumnTransformer (Super nice)
 
