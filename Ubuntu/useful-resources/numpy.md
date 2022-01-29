@@ -75,7 +75,7 @@
       * [Flip image with numpy](#flip-image-with-numpy)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Sat 29 Jan 2022 10:31:45 IST -->
+<!-- Added by: gil_diy, at: Sat 29 Jan 2022 11:15:25 IST -->
 
 <!--te-->
 
