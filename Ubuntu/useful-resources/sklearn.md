@@ -23,7 +23,7 @@
          * [LeaveOneOut](#leaveoneout)
          * [Pipeline](#pipeline)
 
-<!-- Added by: gil_diy, at: Sat 29 Jan 2022 12:30:08 IST -->
+<!-- Added by: gil_diy, at: Sat 29 Jan 2022 12:30:31 IST -->
 
 <!--te-->
 
@@ -241,8 +241,8 @@ for train_index, test_index in split.split(housing, housing["income_cat"]):
 
 ### StratifiedKFold
 
-If you have many classes for a classification type predictive modeling problem or the **classes are imbalanced** (there are a lot more instances for one class than another), it can be a good idea to create stratified folds when performing cross-validation. This has the effect of enforcing the same
-distribution of classes in each fold as in the whole training dataset when performing the cross-validation evaluation.
+If you have many classes for a classification type predictive modeling problem or the **classes are imbalanced** (there are a lot more instances for one class than another), it can be a good idea to **create stratified folds** when performing cross-validation. 
+This has the **effect of enforcing the same distribution of classes in each fold** as in the whole training dataset when performing the cross-validation evaluation.
 
 ```python
 
