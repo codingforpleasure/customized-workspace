@@ -13,7 +13,7 @@
          * [The difference between Adaboost to Gradient Boost](#the-difference-between-adaboost-to-gradient-boost)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Sat 29 Jan 2022 10:27:54 IST -->
+<!-- Added by: gil_diy, at: Sat 29 Jan 2022 10:27:59 IST -->
 
 <!--te-->
 
@@ -202,7 +202,7 @@ print("Accuracy:",metrics.accuracy_score(y_test, y_pred))
 
 *  Gradient boosting is an approach where new models are created that predict the residuals or errors of prior models and then added together to make the final prediction.
 It is called gradient boosting because **it uses a gradient descent algorithm to minimize the loss when adding new
-models**. This approach supports both regression and classification predictive modeling problems.
+models** . This approach supports both regression and classification predictive modeling problems.
 
 * Thus, to prevent overfitting, we introduce a **hyperparameter called learning rate**. When we make a prediction, each residual is multiplied by the learning rate. This forces us to use more decision trees, each taking a small step towards the final solution.
 
