@@ -13,7 +13,7 @@
          * [The difference between Adaboost to Gradient Boost](#the-difference-between-adaboost-to-gradient-boost)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Sat 29 Jan 2022 11:17:18 IST -->
+<!-- Added by: gil_diy, at: Sat 29 Jan 2022 11:17:46 IST -->
 
 <!--te-->
 
@@ -271,6 +271,7 @@ model.fit(X_train, y_train)
 predictions = model.predict(X_test)
 # evaluate predictions
 accuracy = accuracy_score(y_test, predictions)
+print("Accuracy: %.2f%%" % (accuracy * 100.0))
 ```
 
 
