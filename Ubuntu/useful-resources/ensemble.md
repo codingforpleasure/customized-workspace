@@ -13,7 +13,7 @@
          * [The difference between Adaboost to Gradient Boost](#the-difference-between-adaboost-to-gradient-boost)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Sat 29 Jan 2022 10:18:29 IST -->
+<!-- Added by: gil_diy, at: Sat 29 Jan 2022 10:21:10 IST -->
 
 <!--te-->
 
@@ -243,7 +243,49 @@ gbrt.fit(X,y)
 [Link](https://youtu.be/OQKQHNCVf5k)
 
 ```python
+    
+from sklearn.datasets import load_iris
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import accuracy_score
+import xgboost as xgb
 
+iris = load_iris()
+
+num_samples, num_features = iris.data.shape
+print("num_samples = ", num_samples)
+print("num_features = ", num_features)
+print("iris.target_names = ", list(iris.target_names))
+
+X_train, X_test, y_train, y_test = train_test_split(iris.data,
+                                                    iris.target,
+                                                    test_size=0.2,
+                                                    random_state=0)
+
+train_data = xgb.DMatrix(X_train, label=y_train)
+test_data = xgb.DMatrix(X_test, label=y_test)
+
+# Let's define our hyperparameters, we are choosing softmax since this
+# is a multiple classification problem, but the other parameters should
+# ideally be tuned through experimentation.
+
+# Take a look here:
+# https://xgboost.readthedocs.io/en/latest/parameter.html
+
+my_params = {
+    "max_depth": 4,
+    "eta": 0.3,  # Step size - Shrinks the feature weights
+    # to make the boosting process more conservative
+    "objective": "multi:softmax",
+    "num_class": 3
+}
+
+num_epochs = 10
+
+model = xgb.train(params=my_params, dtrain=train_data, num_boost_round=num_epochs)
+predictions = model.predict(test_data)
+print(predictions)
+
+print("accuracy_score: ", accuracy_score(y_test, predictions))
 ```
 
 #### LightGBM (LGBM) - gradient boosting framework developed by **Microsft**
