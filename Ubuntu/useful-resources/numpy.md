@@ -75,7 +75,7 @@
       * [Flip image with numpy](#flip-image-with-numpy)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Sun 16 Jan 2022 12:13:13 IST -->
+<!-- Added by: gil_diy, at: Sat 29 Jan 2022 10:31:17 IST -->
 
 <!--te-->
 
@@ -220,6 +220,15 @@ from numpy import genfromtxt
 
 data = genfromtxt(filename, delimiter=',')
 ```
+
+Or you can use:
+
+```python
+# load data
+
+dataset = loadtxt( ' pima-indians-diabetes.csv ' , delimiter=",")
+```
+
 
 ### Random generation
 
