@@ -9,4 +9,9 @@
       <option name="Python" value="true" />
     </context>
   </template>
+  <template name="gc-grid-parameters" value="from typing import Iterable, Any, Dict # List, Tuple, etc...&#10;from itertools import product&#10;&#10;def grid_parameters(parameters: Dict[str, Iterable[Any]]) -&gt; Iterable[Dict[str, Any]]:&#10;    for params in product(*parameters.values()):&#10;        yield dict(zip(parameters.keys(), params))&#10;&#10;&#10;parameters = {&quot;learning_rate&quot;: [0.1, 1, 2], &quot;penalty&quot;: [1, 2, 3]}&#10;&#10;for settings in grid_parameters(parameters):&#10;    print(settings)&#10;" description="Avoiding endless nested loops" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
 </templateSet>

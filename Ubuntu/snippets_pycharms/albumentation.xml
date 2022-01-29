@@ -1,0 +1,7 @@
+<templateSet group="albumentation">
+  <template name="gc-albumentation-transfrom-keypoints" value="train_transforms = A.Compose(&#10;    [&#10;        # A.Resize(width=96, height=96),&#10;        # # important: BORDER_CONSTANT otherwise it will mess the keypoints!!!&#10;        # A.Rotate(limit=15, border_mode=cv2.BORDER_CONSTANT, p=0.8),&#10;        # A.IAAAffine(shear=15, scale=1.0, mode=&quot;constant&quot;, p=0.2),&#10;        # A.RandomBrightnessContrast(contrast_limit=0.5, brightness_limit=0.5, p=0.2),&#10;        # A.OneOf([&#10;        #     A.GaussNoise(p=0.8),&#10;        #     A.CLAHE(p=0.8),&#10;        # ], p=1.0),&#10;        # A.Normalize(&#10;        #     mean=[0.4899, 0.4899, 0.4899],&#10;        #     std=[0.2327, 0.2327, 0.2327],&#10;        #     max_pixel_value=255.0&#10;        # ),&#10;        ToTensorV2(),&#10;    ], keypoint_params=A.KeypointParams(format=&quot;xy&quot;, remove_invisible=False)&#10;)" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+</templateSet>

@@ -1,0 +1,19 @@
+<templateSet group="Seaborn">
+  <template name="gc-sns-heatmap" value="sns.heatmap($DF$.corr(), cmap=&quot;YlGnBu&quot;)&#10;plt.show()" description="heatmap" toReformat="false" toShortenFQNames="true">
+    <variable name="DF" expression="" defaultValue="df" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="gc-sns-eda-is-nan" value="import seaborn as sns&#10;&#10;sns.heatmap($DATA$.isnull(),&#10;            yticklabels=False,&#10;            cbar=False,&#10;            cmap='viridis')&#10;&#10;plt.show()" description="Check for NaN in dataframe" toReformat="false" toShortenFQNames="true">
+    <variable name="DATA" expression="" defaultValue="&quot;train_df&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="gc-sns-histogram" value="sns.set_style(&quot;whitegrid&quot;)&#10;sns.countplot(x='Survived', data = train_df, palette = 'RdBu_r')&#10;plt.show()" description="Show histogram for single column" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+</templateSet>

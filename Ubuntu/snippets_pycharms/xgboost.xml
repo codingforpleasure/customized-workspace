@@ -1,0 +1,17 @@
+<templateSet group="xgboost">
+  <template name="gc-xgboost-classifier" value="from xgboost import XGBClassifier&#10;&#10;X_train, X_test, y_train, y_test = train_test_split(X, Y, test_size=test_size, random_state=seed)&#10;# fit model on training data&#10;model = XGBClassifier()&#10;model.fit(X_train, y_train)&#10;# make predictions for test data&#10;predictions = model.predict(X_test)&#10;# evaluate predictions&#10;accuracy = accuracy_score(y_test, predictions)" description="Add XGBoost classifier" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="gc-xgboost-plot-importance" value="from xgboost import plot_importance&#10;&#10;# plot feature importance&#10;plot_importance(model)&#10;plt.show()" description="xgboost plot feature importance plot" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="gc-xgboost-evaluate-during-training" value="from numpy import loadtxt&#10;from xgboost import XGBClassifier&#10;from sklearn.model_selection import train_test_split&#10;from sklearn.metrics import accuracy_score&#10;&#10;# load data&#10;dataset = loadtxt('pima-indians-diabetes.csv' , delimiter=&quot;,&quot;)&#10;&#10;# split data into X and y&#10;X = dataset[:,0:8]&#10;Y = dataset[:,8]&#10;&#10;# split data into train and test sets&#10;X_train, X_test, y_train, y_test = train_test_split(X, Y, test_size=0.33, random_state=7)&#10;&#10;# fit model on training data&#10;model = XGBClassifier()&#10;eval_set = [(X_test, y_test)]&#10;&#10;# We can see that the classification error is reported each training iteration (after each boosted tree is added to the model)&#10;model.fit(X_train, y_train, eval_metric=&quot;error&quot;, eval_set=eval_set, verbose=True)&#10;&#10;# make predictions for test data&#10;predictions = model.predict(X_test)&#10;&#10;# evaluate predictions&#10;accuracy = accuracy_score(y_test, predictions)&#10;print(&quot;Accuracy: %.2f%%&quot; % (accuracy * 100.0))" description="Monitoring Training Performance With XGBoost" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+</templateSet>

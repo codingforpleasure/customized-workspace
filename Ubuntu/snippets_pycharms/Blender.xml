@@ -1,0 +1,37 @@
+<templateSet group="Blender">
+  <template name="gc-blender-add-cube" value="bpy.ops.mesh.primitive_cube_add(location=(0,0,0))" description="Adding cube" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="gc-blender-add-camera" value="def camera(location, rotation):&#10;    bpy.ops.object.add(type='CAMERA', location=location)&#10;    cam = bpy.context.object&#10;    cam.rotation_euler = Euler((radians(rotation[0]),&#10;                                radians(rotation[1]), radians(rotation[2])), 'XYZ')&#10;    bpy.context.scene.camera = cam&#10;    return cam&#10;&#10;camera(location=(25, -30, 20), rotation=(70, 0, 30))" description="Setup a camera" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="gc-blender-lamp" value="def lamp(location, type='POINT', energy=1, color=(1, 1, 1), target=None):&#10;    # Lamp types: 'POINT', 'SUN', 'SPOT', 'HEMI', 'AREA'&#10;    print('createLamp called')&#10;    bpy.ops.object.add(type='LIGHT', location=location)&#10;    obj = bpy.context.object&#10;    obj.data.type = type&#10;    obj.data.energy = energy&#10;    obj.data.color = color&#10;&#10;    if target: trackToConstraint(obj, target) # unclear&#10;    return obj&#10;    &#10;lamp((21.249, -8.4169, 20), energy=10000)" description="lamp" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="gc-blender-texture" value="def material_for_texture(name, path):&#10;    mat = bpy.data.materials.new(name=name)&#10;    mat.use_nodes = True&#10;    bsdf = mat.node_tree.nodes[&quot;Principled BSDF&quot;]&#10;    texImage = mat.node_tree.nodes.new('ShaderNodeTexImage')&#10;    texImage.image = bpy.data.images.load(path)&#10;    mat.node_tree.links.new(bsdf.inputs['Base Color'], texImage.outputs['Color'])&#10;    return mat&#10;    &#10;    &#10;floor_mat = material_for_texture(&quot;Mat-red&quot;, os.path.join(PATH, &quot;wood-floor.jpg&quot;))" description="Add texture for material" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="gc-blender-add-floor" value="def floor(mat):&#10;    bpy.ops.mesh.primitive_plane_add(size=1, enter_editmode=False, align='WORLD', location=(0, 0, 0))&#10;    pl = bpy.context.object&#10;    pl.name = 'ground'&#10;    pl.scale = (100, 100, 0.1)&#10;    pl.data.materials.append(mat)&#10;    bpy.ops.rigidbody.object_add(type='PASSIVE')" description="Adding floor plane" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="gc-blender-remove-all-elements-in-scene" value="def removeAll(type=None):&#10;    # Possible type: ‘MESH’, ‘CURVE’, ‘SURFACE’, ‘META’, ‘FONT’, ‘ARMATURE’, ‘LATTICE’, ‘EMPTY’, ‘CAMERA’, ‘LAMP’&#10;    if type:&#10;        bpy.ops.object.select_all(action='DESELECT')&#10;        bpy.ops.object.select_by_type(type=type)&#10;        bpy.ops.object.delete()&#10;    else:&#10;        # Remove all elements in scene&#10;        bpy.ops.object.select_all(action=&quot;SELECT&quot;)&#10;        bpy.ops.object.delete(use_global=False)" description="Clean all objects in the scene" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="gc-blender-render-scene" value="def render(filename):&#10;    rnd = bpy.data.scenes['Scene'].render&#10;    rnd.resolution_x = 1280&#10;    rnd.resolution_y = 720&#10;    rnd.resolution_percentage = 100&#10;    rnd.filepath = os.path.join(OUTPUT_PATH, filename)&#10;    bpy.ops.render.render(animation=False, write_still=True)" description="Render the scene" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+</templateSet>

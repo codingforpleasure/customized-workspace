@@ -1,5 +1,5 @@
 <templateSet group="matplotlib">
-  <template name="gc-line-plot" value="import matplotlib.pyplot as plt&#10;import numpy as np&#10;&#10;plt.style.use('seaborn-whitegrid')&#10;&#10;fig = plt.figure()&#10;ax = plt.axes()&#10;x = np.linspace(start=$START$, stop=$STOP$, num=$NUM_SAMPLES$)&#10;&#10;plt.plot(x, $FUNC_OF_X$, color='$COLOR1$', linestyle='$LINE_STYLE1$', label='$LABEL1$')&#10;plt.plot(x, $FUNC2_OF_X$, color='$COLOR2$', linestyle='$LINE_STYLE2$', label='$LABEL2$')&#10;plt.xlabel(&quot;x&quot;)&#10;plt.ylabel(&quot;$FUNC_OF_X$&quot;)&#10;plt.title(&quot;$TITLE$&quot;)&#10;plt.xlim($X_MIN$, $X_MAX$)&#10;plt.ylim($Y_MIN$, $Y_MAX$)&#10;plt.show()&#10;" description="Draw line plot graph" toReformat="false" toShortenFQNames="true">
+  <template name="gc-matplotlib-line-plot" value="import matplotlib.pyplot as plt&#10;import numpy as np&#10;&#10;plt.style.use('seaborn-whitegrid')&#10;&#10;fig = plt.figure()&#10;ax = plt.axes()&#10;x = np.linspace(start=$START$, stop=$STOP$, num=$NUM_SAMPLES$)&#10;&#10;plt.plot(x, $FUNC_OF_X$, color='$COLOR1$', linestyle='$LINE_STYLE1$', label='$LABEL1$')&#10;plt.plot(x, $FUNC2_OF_X$, color='$COLOR2$', linestyle='$LINE_STYLE2$', label='$LABEL2$')&#10;plt.xlabel(&quot;x&quot;)&#10;plt.ylabel(&quot;$FUNC_OF_X$&quot;)&#10;plt.title(&quot;$TITLE$&quot;)&#10;plt.xlim($X_MIN$, $X_MAX$)&#10;plt.ylim($Y_MIN$, $Y_MAX$)&#10;plt.show()&#10;" description="Draw line plot graph" toReformat="false" toShortenFQNames="true">
     <variable name="START" expression="" defaultValue="&quot;0&quot;" alwaysStopAt="true" />
     <variable name="STOP" expression="" defaultValue="&quot;10&quot;" alwaysStopAt="true" />
     <variable name="NUM_SAMPLES" expression="" defaultValue="&quot;100&quot;" alwaysStopAt="true" />
@@ -20,7 +20,7 @@
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="gc-scatter-plot" value="import matplotlib.pyplot as plt&#10;import numpy as np&#10;&#10;rng = np.random.RandomState(0)  # Generating seed&#10;x = rng.randn(100)&#10;y = rng.randn(100)&#10;colors = rng.rand(100)&#10;sizes = 1000 * rng.rand(100)&#10;&#10;plt.scatter(x, y, c=colors, s=sizes, alpha=0.3, cmap='viridis')&#10;&#10;plt.xlabel(&quot;x&quot;)&#10;plt.ylabel(&quot;y&quot;)&#10;plt.title(&quot;$TITLE$&quot;)&#10;plt.xlim($X_MIN$, $X_MAX$)&#10;plt.ylim($Y_MIN$, $Y_MAX$)&#10;&#10;plt.colorbar()  # show color scale&#10;plt.show()&#10;" description="Draw line plot graph" toReformat="false" toShortenFQNames="true">
+  <template name="gc-matplotlib-scatter-plot" value="import matplotlib.pyplot as plt&#10;import numpy as np&#10;&#10;rng = np.random.RandomState(0)  # Generating seed&#10;x = rng.randn(100)&#10;y = rng.randn(100)&#10;colors = rng.rand(100)&#10;sizes = 1000 * rng.rand(100)&#10;&#10;plt.scatter(x, y, c=colors, s=sizes, alpha=0.3, cmap='viridis')&#10;&#10;plt.xlabel(&quot;x&quot;)&#10;plt.ylabel(&quot;y&quot;)&#10;plt.title(&quot;$TITLE$&quot;)&#10;plt.xlim($X_MIN$, $X_MAX$)&#10;plt.ylim($Y_MIN$, $Y_MAX$)&#10;&#10;plt.colorbar()  # show color scale&#10;plt.show()&#10;" description="Draw line plot graph" toReformat="false" toShortenFQNames="true">
     <variable name="TITLE" expression="" defaultValue="&quot;Example title&quot;" alwaysStopAt="true" />
     <variable name="X_MIN" expression="" defaultValue="&quot;-3&quot;" alwaysStopAt="true" />
     <variable name="X_MAX" expression="" defaultValue="&quot;3&quot;" alwaysStopAt="true" />
@@ -30,19 +30,19 @@
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="gc-histogram" value="import matplotlib.pyplot as plt&#10;import numpy as np&#10;&#10;plt.style.use('seaborn-white')&#10;data = np.random.randn(1000)&#10;plt.title(&quot;$TITLE$&quot;)&#10;plt.hist(data,&#10;         bins=30,&#10;         normed=True,&#10;         alpha=0.5,&#10;         histtype='stepfilled',&#10;         color='steelblue',&#10;         edgecolor='none')&#10;&#10;plt.show()" description="Draw histogram" toReformat="false" toShortenFQNames="true">
-    <variable name="TITLE" expression="" defaultValue="&quot;Histogram Demo&quot;" alwaysStopAt="true" />
+  <template name="gc-matplotlib-histogram" value="import matplotlib.pyplot as plt&#10;import numpy as np&#10;&#10;plt.style.use('seaborn-white')&#10;data = np.random.randn(1000)&#10;plt.title($TITLE$)&#10;plt.hist(data,&#10;         bins=30,&#10;         alpha=0.5,&#10;         histtype='stepfilled',&#10;         color='steelblue',&#10;         edgecolor='none')&#10;&#10;plt.show()&#10;" description="Draw histogram" toReformat="false" toShortenFQNames="true">
+    <variable name="TITLE" expression="" defaultValue="&quot;'Histogram Demo'&quot;" alwaysStopAt="true" />
     <context>
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="gc-multiple-histogram" value="import matplotlib.pyplot as plt&#10;import numpy as np&#10;&#10;x1 = np.random.normal(0, 0.8, 1000)&#10;x2 = np.random.normal(-2, 1, 1000)&#10;x3 = np.random.normal(3, 2, 1000)&#10;&#10;kwargs = dict(histtype='stepfilled',&#10;              alpha=0.3,&#10;              normed=True,&#10;              bins=40)&#10;&#10;plt.title(&quot;$TITLE$&quot;)&#10;      &#10;plt.hist(x1, **kwargs)&#10;plt.hist(x2, **kwargs)&#10;plt.hist(x3, **kwargs)&#10;&#10;plt.show()" description="Draw multiple histograms" toReformat="false" toShortenFQNames="true">
+  <template name="gc-matplotlib-multiple-histogram" value="import matplotlib.pyplot as plt&#10;import numpy as np&#10;&#10;x1 = np.random.normal(0, 0.8, 1000)&#10;x2 = np.random.normal(-2, 1, 1000)&#10;x3 = np.random.normal(3, 2, 1000)&#10;&#10;kwargs = dict(histtype='stepfilled',&#10;              alpha=0.3,&#10;              normed=True,&#10;              bins=40)&#10;&#10;plt.title(&quot;$TITLE$&quot;)&#10;      &#10;plt.hist(x1, **kwargs)&#10;plt.hist(x2, **kwargs)&#10;plt.hist(x3, **kwargs)&#10;&#10;plt.show()" description="Draw multiple histograms" toReformat="false" toShortenFQNames="true">
     <variable name="TITLE" expression="" defaultValue="&quot;Mulltiple histograms&quot;" alwaysStopAt="true" />
     <context>
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="gc-stacked-plot" value="import matplotlib.pyplot as plt&#10;import numpy as np&#10;&#10;fig = plt.figure()&#10;ax1 = fig.add_axes([$X_OFFSET$, 0.5, $WIDTH$, $HEIGTH$],&#10;                   xticklabels=[],&#10;                   ylim=(-1.2, 1.2))&#10;&#10;ax2 = fig.add_axes([$X_OFFSET$, 0.1, $WIDTH$, $HEIGTH$],&#10;                   ylim=(-1.2, 1.2))&#10;&#10;x = np.linspace(0, 10)&#10;ax1.plot(np.sin(x))&#10;ax2.plot(np.cos(x))&#10;plt.show()&#10;" description="Stack two plots one on the other" toReformat="false" toShortenFQNames="true">
+  <template name="gc-matplotlib-stacked-plot" value="import matplotlib.pyplot as plt&#10;import numpy as np&#10;&#10;fig = plt.figure()&#10;ax1 = fig.add_axes([$X_OFFSET$, 0.5, $WIDTH$, $HEIGTH$],&#10;                   xticklabels=[],&#10;                   ylim=(-1.2, 1.2))&#10;&#10;ax2 = fig.add_axes([$X_OFFSET$, 0.1, $WIDTH$, $HEIGTH$],&#10;                   ylim=(-1.2, 1.2))&#10;&#10;x = np.linspace(0, 10)&#10;ax1.plot(np.sin(x))&#10;ax2.plot(np.cos(x))&#10;plt.show()&#10;" description="Stack two plots one on the other" toReformat="false" toShortenFQNames="true">
     <variable name="X_OFFSET" expression="" defaultValue="&quot;0.1&quot;" alwaysStopAt="true" />
     <variable name="WIDTH" expression="" defaultValue="&quot;0.8&quot;" alwaysStopAt="true" />
     <variable name="HEIGTH" expression="" defaultValue="&quot;0.4&quot;" alwaysStopAt="true" />
@@ -50,7 +50,7 @@
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="gc-grid-plot" value="import matplotlib.pyplot as plt&#10;&#10;fig = plt.figure()&#10;fig.subplots_adjust(hspace=0.4, wspace=0.4)&#10;for i in range(1, $NUM_ROWS$ * $NUM_COLS$ + 1):&#10;    ax = fig.add_subplot($NUM_ROWS$, $NUM_COLS$, i)  # grid dimensions&#10;    ax.text(0.5, 0.5, str(($NUM_ROWS$, $NUM_COLS$, i)), fontsize=18, ha='center')&#10;&#10;plt.show()&#10;" description="Draw grid of plots" toReformat="false" toShortenFQNames="true">
+  <template name="gc-matplolib-grid-plot" value="import matplotlib.pyplot as plt&#10;&#10;fig = plt.figure()&#10;fig.subplots_adjust(hspace=0.4, wspace=0.4)&#10;for i in range(1, $NUM_ROWS$ * $NUM_COLS$ + 1):&#10;    ax = fig.add_subplot($NUM_ROWS$, $NUM_COLS$, i)  # grid dimensions&#10;    ax.text(0.5, 0.5, str(($NUM_ROWS$, $NUM_COLS$, i)), fontsize=18, ha='center')&#10;&#10;plt.show()&#10;" description="Draw grid of plots" toReformat="false" toShortenFQNames="true">
     <variable name="NUM_ROWS" expression="" defaultValue="&quot;2&quot;" alwaysStopAt="true" />
     <variable name="NUM_COLS" expression="" defaultValue="&quot;3&quot;" alwaysStopAt="true" />
     <context>

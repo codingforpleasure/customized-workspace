@@ -12,4 +12,40 @@
       <option name="Python" value="true" />
     </context>
   </template>
+  <template name="gc-sklearn-metrics" value="from sklearn.metrics import accuracy_score, confusion_matrix, classification_report&#10;&#10;x_train, x_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)&#10;predictions = rfc.predict(X=x_test)&#10;&#10;# metrics:&#10;print(confusion_matrix(y_test,predictions))&#10;print(accuracy_score(y_test, predictions))&#10;print(classification_report(y_test, predictions))" description="metrics precision, recall, accuracy" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="gc-sklearn-kfold" value="from sklearn.model_selection import KFold&#10;&#10;x = data.loc[:, all_columns_except_target]&#10;y = data.loc[:, &quot;Target&quot;]&#10;&#10;kf = KFold(n_splits=5, random_state=42, shuffle=True)&#10;&#10;# Split dataset into k consecutive folds &#10;# Each fold is then used once as a validation while the k - 1 remaining folds form the training set.&#10;&#10;for train_index, test_index in kf.split(x, y):&#10;    print(&quot;bla)" description="apply kfold" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="gc-sklearn-pipeline" value="from sklearn.pipeline import make_pipeline&#10;from sklearn.preprocessing import MinMaxScaler&#10;&#10;# pipline - Sequentially apply a list of transforms and a final estimator&#10;poly_scaled_lr = make_pipeline(PolynomialFeatures(), MinMaxScaler(), LogisticRegression())&#10;&#10;#or pipe = Pipeline([('scaler', StandardScaler()), ('svc', SVC())]) &#10;" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="gc-sklearn-cross-validation" value="# k-fold cross validation evaluation of xgboost model&#10;from numpy import loadtxt&#10;from xgboost import XGBClassifier&#10;from sklearn.model_selection import KFold&#10;from sklearn.model_selection import cross_val_score&#10;# load data&#10;dataset = loadtxt( ' pima-indians-diabetes.csv ' , delimiter=&quot;,&quot;)&#10;# split data into X and y&#10;X = dataset[:,0:8]&#10;Y = dataset[:,8]&#10;# CV model&#10;model = XGBClassifier()&#10;kfold = KFold(n_splits=10, random_state=7)&#10;results = cross_val_score(model, X, Y, cv=kfold)&#10;print(&quot;Accuracy: %.2f%% (%.2f%%)&quot; % (results.mean()*100, results.std()*100))" description="cross validation with k-fold" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="gc-pickle-save-model" value="# save model to file&#10;pickle.dump($MODEL_NAME$, open(&quot;my_model.pickle.dat&quot;, &quot;wb&quot;))" description="Save model" toReformat="false" toShortenFQNames="true">
+    <variable name="MODEL_NAME" expression="" defaultValue="&quot;model&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="gc-pickle-load-model" value="# load model from file&#10;loaded_model = pickle.load(open(&quot;pima.pickle.dat&quot;, &quot;rb&quot;))" description="load model from hard-drive" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="gc-sklearn-feature-selection" value="# Fit model using each importance as a threshold&#10;thresholds = sort(model.feature_importances_)&#10;&#10;for thresh in thresholds:&#10;    # select features using threshold&#10;    selection = SelectFromModel(model, threshold=thresh, prefit=True)&#10;    select_X_train = selection.transform(X_train)&#10;&#10;    # train model&#10;    selection_model = XGBClassifier()&#10;    selection_model.fit(select_X_train, y_train)&#10;&#10;    # eval model&#10;    select_X_test = selection.transform(X_test)&#10;    predictions = selection_model.predict(select_X_test)&#10;    accuracy = accuracy_score(y_test, predictions)&#10;&#10;    # Output of Model Performance With Feature Subsets by Importance Scores.&#10;    print(&quot;Thresh=%.3f, n=%d, Accuracy: %.2f%%&quot; % (thresh, select_X_train.shape[1], accuracy*100.0))" description="Feature selection by importance" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
 </templateSet>
