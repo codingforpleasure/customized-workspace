@@ -23,6 +23,7 @@
             * [Get column index for a given specific name](#get-column-index-for-a-given-specific-name)
             * [Dropping columns in pandas](#dropping-columns-in-pandas)
             * [Concatentaing columns and rows](#concatentaing-columns-and-rows)
+            * [Treat pandas strings as numeric value  (casting)](#treat-pandas-strings-as-numeric-value--casting)
             * [Converting from numpy table to pandas dataframe](#converting-from-numpy-table-to-pandas-dataframe)
             * [Converting from pandas dataframe to numpy table](#converting-from-pandas-dataframe-to-numpy-table)
             * [Converting categorical columns to numbers (4 Methods)](#converting-categorical-columns-to-numbers-4-methods)
@@ -80,7 +81,7 @@
          * [Calculate correlation for all numerical columns pairs](#calculate-correlation-for-all-numerical-columns-pairs)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Sat 29 Jan 2022 11:38:34 IST -->
+<!-- Added by: gil_diy, at: Sat 29 Jan 2022 11:41:05 IST -->
 
 <!--te-->
 
@@ -306,6 +307,12 @@ result = pd.concat([df[0:2], df[-2:]], axis = 0)
 ```python
 # Adding a row to my_df:
 my_df.loc["two"] = [4,5,6]
+```
+#### Treat pandas strings as numeric value  (casting)
+
+```python
+# convert to numeric
+X = X.astype( ' float32 ' )
 ```
 
 #### Converting from numpy table to pandas dataframe
