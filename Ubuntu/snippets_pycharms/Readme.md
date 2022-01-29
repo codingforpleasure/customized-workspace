@@ -1,0 +1,1 @@
+All snippets appear in: `/home/gil_diy/.config/JetBrains/PyCharmCE2021.1/templates`
