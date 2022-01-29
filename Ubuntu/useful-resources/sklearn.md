@@ -19,10 +19,11 @@
             * [PCA (Principal Component Analysis)](#pca-principal-component-analysis)
       * [Splitting data](#splitting-data)
          * [Stratified Shuffle Split](#stratified-shuffle-split)
+         * [StratifiedKFold](#stratifiedkfold)
          * [LeaveOneOut](#leaveoneout)
          * [Pipeline](#pipeline)
 
-<!-- Added by: gil_diy, at: Sat 29 Jan 2022 12:26:07 IST -->
+<!-- Added by: gil_diy, at: Sat 29 Jan 2022 12:30:05 IST -->
 
 <!--te-->
 
@@ -236,6 +237,15 @@ split = StratifiedShuffleSplit(n_splits=1, test_size=0.2, random_state=42)
 for train_index, test_index in split.split(housing, housing["income_cat"]):
     strat_train_set = housing.loc[train_index]
     strat_test_set = housing.loc[test_index]
+```
+
+### StratifiedKFold
+
+If you have many classes for a classification type predictive modeling problem or the **classes are imbalanced** (there are a lot more instances for one class than another), it can be a good idea to create stratified folds when performing cross-validation. This has the effect of enforcing the same
+distribution of classes in each fold as in the whole training dataset when performing the cross-validation evaluation.
+
+```python
+
 ```
 
 ### LeaveOneOut
