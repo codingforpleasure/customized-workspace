@@ -13,7 +13,7 @@
          * [The difference between Adaboost to Gradient Boost](#the-difference-between-adaboost-to-gradient-boost)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Sat 29 Jan 2022 10:23:16 IST -->
+<!-- Added by: gil_diy, at: Sat 29 Jan 2022 10:23:38 IST -->
 
 <!--te-->
 
@@ -235,6 +235,8 @@ gbrt.fit(X,y)
 * Can handle missing values automatically, Sparse Aware implementation with automatic handling of missing data values.
 
 * Parallel processing (Scale well on multiple machine/cores)
+
+* Block Structure to support the parallelization of tree construction.
 
 * Can cross-validate at each iteration (Enables early stopping, finding optimal number of iterations)
 
