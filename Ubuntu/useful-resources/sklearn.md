@@ -22,8 +22,9 @@
          * [StratifiedKFold](#stratifiedkfold)
          * [LeaveOneOut](#leaveoneout)
          * [Pipeline](#pipeline)
+      * [Feature Selection](#feature-selection)
 
-<!-- Added by: gil_diy, at: Sat 29 Jan 2022 12:30:34 IST -->
+<!-- Added by: gil_diy, at: Sat 29 Jan 2022 13:44:37 IST -->
 
 <!--te-->
 
@@ -245,7 +246,21 @@ If you have many classes for a classification type predictive modeling problem o
 This has the **effect of enforcing the same distribution of classes in each fold** as in the whole training dataset when performing the cross-validation evaluation.
 
 ```python
-
+# stratified k-fold cross validation evaluation of xgboost model
+from numpy import loadtxt
+from xgboost import XGBClassifier
+from sklearn.model_selection import StratifiedKFold
+from sklearn.model_selection import cross_val_score
+# load data
+dataset = loadtxt( ' pima-indians-diabetes.csv ' , delimiter=",")
+# split data into X and y
+X = dataset[:,0:8]
+Y = dataset[:,8]
+# CV model
+model = XGBClassifier()
+kfold = StratifiedKFold(n_splits=10, random_state=7)
+results = cross_val_score(model, X, Y, cv=kfold)
+print("Accuracy: %.2f%% (%.2f%%)" % (results.mean()*100, results.std()*100))
 ```
 
 ### LeaveOneOut
@@ -296,7 +311,34 @@ for classifier in classifiers:
 [LeaveOneOut](https://youtu.be/e0JcXMzhtdY?t=824)
 
 
-
 [Reference1](https://youtu.be/QdBy02ExhGI)
 
 [Reference2](https://www.youtube.com/watch?v=OFyyWcw2cyM)
+
+
+## Feature Selection
+
+```python
+# use feature importance for feature selection
+from numpy import loadtxt
+from numpy import sort
+from xgboost import XGBClassifier
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import accuracy_score
+from sklearn.feature_selection import SelectFromModel
+# load data
+dataset = loadtxt( 'pima-indians-diabetes.csv' , delimiter=",")
+# split data into X and y
+X = dataset[:,0:8]
+Y = dataset[:,8]
+# split data into train and test sets
+X_train, X_test, y_train, y_test = train_test_split(X, Y, test_size=0.33, random_state=7)
+# fit model on all training data
+model = XGBClassifier()
+model.fit(X_train, y_train)
+# make predictions for test data and evaluate
+predictions = model.predict(X_test)
+accuracy = accuracy_score(y_test, predictions)
+print("Accuracy: %.2f%%" % (accuracy * 100.0))
+# Fit model using each importance as a threshold
+```
