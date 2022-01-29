@@ -19,7 +19,7 @@
          * [LeaveOneOut](#leaveoneout)
          * [Pipeline](#pipeline)
 
-<!-- Added by: gil_diy, at: Sat 29 Jan 2022 12:03:02 IST -->
+<!-- Added by: gil_diy, at: Sat 29 Jan 2022 12:03:37 IST -->
 
 <!--te-->
 
@@ -119,7 +119,7 @@ with **imputer_median** as seen below:
 imputer_median = SimpleImputer(missing_values=np.nan, strategy='median')
 ```
 
-moreover you can use:
+moreover you can use from the `sklearn.preprocessing`:
 
 ```python
 form sklearn.preprocessing import Imputer
