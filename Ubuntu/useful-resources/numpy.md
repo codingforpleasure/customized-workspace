@@ -75,7 +75,7 @@
       * [Flip image with numpy](#flip-image-with-numpy)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Sat 29 Jan 2022 10:31:17 IST -->
+<!-- Added by: gil_diy, at: Sat 29 Jan 2022 10:31:45 IST -->
 
 <!--te-->
 
@@ -224,9 +224,10 @@ data = genfromtxt(filename, delimiter=',')
 Or you can use:
 
 ```python
-# load data
+import numpy as np
 
-dataset = loadtxt( ' pima-indians-diabetes.csv ' , delimiter=",")
+# load data
+dataset = np.loadtxt('pima-indians-diabetes.csv' , delimiter=",")
 ```
 
 
