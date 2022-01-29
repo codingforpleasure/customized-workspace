@@ -12,6 +12,8 @@
             * [Missing value for numeric columns](#missing-value-for-numeric-columns)
             * [Missing value for categorical columns](#missing-value-for-categorical-columns)
             * [Cross-validation Kfold](#cross-validation-kfold)
+               * [Kfold](#kfold)
+               * [cross_val_score](#cross_val_score)
          * [ColumnTransformer (Super nice)](#columntransformer-super-nice)
          * [Dimension Reduction techniques](#dimension-reduction-techniques)
             * [PCA (Principal Component Analysis)](#pca-principal-component-analysis)
@@ -20,7 +22,7 @@
          * [LeaveOneOut](#leaveoneout)
          * [Pipeline](#pipeline)
 
-<!-- Added by: gil_diy, at: Sat 29 Jan 2022 12:22:48 IST -->
+<!-- Added by: gil_diy, at: Sat 29 Jan 2022 12:24:25 IST -->
 
 <!--te-->
 
@@ -147,6 +149,9 @@ After running cross-validation you **end up with k-different performance scores 
 The result is a more reliable estimate of the performance of the algorithm on new data given your test data. It is more accurate because the algorithm is trained and evaluated multiple times on different data. The choice of k must allow the size of each test partition to be large enough to be a reasonable sample of the problem, whilst allowing enough repetitions of the train-test evaluation of the algorithm to provide a fair estimate of the algorithms performance
 on unseen data.
 
+
+##### Kfold
+
 ```python
 from sklearn.model_selection import KFold
 
@@ -160,6 +165,27 @@ kf = KFold(n_splits=5, random_state=42, shuffle=True)
 
 for train_index, test_index in kf.split(x, y):
     print("bla")
+```
+
+
+##### cross_val_score
+
+```python
+# k-fold cross validation evaluation of xgboost model
+from numpy import loadtxt
+from xgboost import XGBClassifier
+from sklearn.model_selection import KFold
+from sklearn.model_selection import cross_val_score
+# load data
+dataset = loadtxt( ' pima-indians-diabetes.csv ' , delimiter=",")
+# split data into X and y
+X = dataset[:,0:8]
+Y = dataset[:,8]
+# CV model
+model = XGBClassifier()
+kfold = KFold(n_splits=10, random_state=7)
+results = cross_val_score(model, X, Y, cv=kfold)
+print("Accuracy: %.2f%% (%.2f%%)" % (results.mean()*100, results.std()*100))
 ```
 
 ### ColumnTransformer (Super nice)
