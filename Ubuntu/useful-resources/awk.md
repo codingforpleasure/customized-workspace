@@ -1,4 +1,23 @@
-## **awk (text processing and used as a data extraction tool)**
+<!--ts-->
+   * [AWK example <strong>awk (text processing and used as a data extraction tool)</strong>](#awk-example-awk-text-processing-and-used-as-a-data-extraction-tool)
+         * [Example #1: as a warm up print all lines with awk:](#example-1-as-a-warm-up-print-all-lines-with-awk)
+         * [Example #2: Prints the second column in every line](#example-2-prints-the-second-column-in-every-line)
+         * [Example #3: Prints the concatenat second column with third column in every line](#example-3-prints-the-concatenat-second-column-with-third-column-in-every-line)
+         * [Example #4: Grabs every line that contains numbers](#example-4-grabs-every-line-that-contains-numbers)
+         * [Example #5: Grabs every line that starts with a number](#example-5-grabs-every-line-that-starts-with-a-number)
+         * [Example #6: Grabs every line that ends with a number](#example-6-grabs-every-line-that-ends-with-a-number)
+         * [Example #7: Prints the second column when the delimeter is now colon](#example-7-prints-the-second-column-when-the-delimeter-is-now-colon)
+         * [Example #8: Prints the second column from line 4 (skips the first 3 lines).](#example-8-prints-the-second-column-from-line-4-skips-the-first-3-lines)
+
+<!-- Added by: gil_diy, at: Sat 29 Jan 2022 22:03:39 IST -->
+
+<!--te-->
+
+
+
+#
+# AWK example **awk (text processing and used as a data extraction tool)**
+
 ### Example #1: as a warm up print all lines with awk:
 ```bash
 awk '{ print }' my_data.txt
