@@ -9,7 +9,7 @@
          * [Example #7: Prints the second column when the delimeter is now colon](#example-7-prints-the-second-column-when-the-delimeter-is-now-colon)
          * [Example #8: Prints the second column from line 4 (skips the first 3 lines).](#example-8-prints-the-second-column-from-line-4-skips-the-first-3-lines)
 
-<!-- Added by: gil_diy, at: Sat 29 Jan 2022 22:03:39 IST -->
+<!-- Added by: gil_diy, at: Sat 29 Jan 2022 22:03:41 IST -->
 
 <!--te-->
 
