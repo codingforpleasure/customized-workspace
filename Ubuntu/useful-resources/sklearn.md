@@ -19,7 +19,7 @@
          * [LeaveOneOut](#leaveoneout)
          * [Pipeline](#pipeline)
 
-<!-- Added by: gil_diy, at: Wed 15 Dec 2021 11:34:13 IST -->
+<!-- Added by: gil_diy, at: Sat 29 Jan 2022 12:02:59 IST -->
 
 <!--te-->
 
@@ -111,7 +111,6 @@ imputer_mean = SimpleImputer(missing_values=np.nan, strategy='mean')
 # Now let's say on columns 1,2,5 we would like to apply the imputer_mean:
 X_train[:,[1,2,5]] = imputer_mean.fit_transform(X_train[:,[1,2,5]])
 
-
 ```
 
 **Attention:** In case you would like to modify the type of the imputer just replace **imputer_mean**
@@ -119,6 +118,14 @@ with **imputer_median** as seen below:
 ```python
 imputer_median = SimpleImputer(missing_values=np.nan, strategy='median')
 ```
+
+moreover you can use:
+
+```python
+form sklearn.preprocessing import Imputer
+imp = Imputer(missing_values='NaN', strategy='mean', axis=0, verbose=0, copy=True)
+```
+
 #### Missing value for categorical columns
 
 The same way as I have written above, just place the most common value in the empty cells:
