@@ -13,7 +13,7 @@
          * [The difference between Adaboost to Gradient Boost](#the-difference-between-adaboost-to-gradient-boost)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Sat 29 Jan 2022 10:22:51 IST -->
+<!-- Added by: gil_diy, at: Sat 29 Jan 2022 10:23:16 IST -->
 
 <!--te-->
 
@@ -232,7 +232,7 @@ gbrt.fit(X,y)
 
 * Regularized boosting (prevents overfitting)
 
-* Can handle missing values automatically
+* Can handle missing values automatically, Sparse Aware implementation with automatic handling of missing data values.
 
 * Parallel processing (Scale well on multiple machine/cores)
 
