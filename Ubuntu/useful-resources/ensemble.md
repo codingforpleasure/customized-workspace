@@ -13,7 +13,7 @@
          * [The difference between Adaboost to Gradient Boost](#the-difference-between-adaboost-to-gradient-boost)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Sat 29 Jan 2022 10:21:10 IST -->
+<!-- Added by: gil_diy, at: Sat 29 Jan 2022 10:22:51 IST -->
 
 <!--te-->
 
@@ -226,6 +226,8 @@ gbrt.fit(X,y)
 
 #### XGboost (Extreme Gradient boosted trees)
 
+* **XGboost** is ensemble technique
+
 * Each tree boosts attributes that led to misclassifications of previous tree
 
 * Regularized boosting (prevents overfitting)
@@ -237,8 +239,6 @@ gbrt.fit(X,y)
 * Can cross-validate at each iteration (Enables early stopping, finding optimal number of iterations)
 
 * Tree pruning (generally results in deeper, but optimized trees)
-
-* **XGboost** is ensemble technique
 
 [Link](https://youtu.be/OQKQHNCVf5k)
 
