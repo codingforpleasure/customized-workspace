@@ -13,7 +13,7 @@
          * [The difference between Adaboost to Gradient Boost](#the-difference-between-adaboost-to-gradient-boost)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Sat 29 Jan 2022 10:23:38 IST -->
+<!-- Added by: gil_diy, at: Sat 29 Jan 2022 10:24:02 IST -->
 
 <!--te-->
 
@@ -241,6 +241,8 @@ gbrt.fit(X,y)
 * Can cross-validate at each iteration (Enables early stopping, finding optimal number of iterations)
 
 * Tree pruning (generally results in deeper, but optimized trees)
+
+* Continued Training so that you can further boost an already fitted model on new data.
 
 [Link](https://youtu.be/OQKQHNCVf5k)
 
