@@ -20,7 +20,7 @@
          * [LeaveOneOut](#leaveoneout)
          * [Pipeline](#pipeline)
 
-<!-- Added by: gil_diy, at: Sat 29 Jan 2022 12:21:04 IST -->
+<!-- Added by: gil_diy, at: Sat 29 Jan 2022 12:22:46 IST -->
 
 <!--te-->
 
@@ -142,6 +142,10 @@ It works by splitting the dataset into k-parts (e.g. k = 5 or k = 10). Each spli
 
 The algorithm is trained on **k − 1** folds with one held back and tested on the held back fold. This is repeated so that each fold of the dataset is given a chance to be the held back test set. 
 After running cross-validation you **end up with k-different performance scores that you can summarize using a mean and a standard deviation**.
+
+
+The result is a more reliable estimate of the performance of the algorithm on new data given your test data. It is more accurate because the algorithm is trained and evaluated multiple times on different data. The choice of k must allow the size of each test partition to be large enough to be a reasonable sample of the problem, whilst allowing enough repetitions of the train-test evaluation of the algorithm to provide a fair estimate of the algorithms performance
+on unseen data.
 
 ```python
 from sklearn.model_selection import KFold
