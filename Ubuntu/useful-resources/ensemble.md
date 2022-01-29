@@ -13,7 +13,7 @@
          * [The difference between Adaboost to Gradient Boost](#the-difference-between-adaboost-to-gradient-boost)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Sat 29 Jan 2022 10:28:02 IST -->
+<!-- Added by: gil_diy, at: Sat 29 Jan 2022 11:17:18 IST -->
 
 <!--te-->
 
@@ -249,6 +249,30 @@ gbrt.fit(X,y)
 * Continued Training so that you can further boost an already fitted model on new data.
 
 [Link](https://youtu.be/OQKQHNCVf5k)
+```python
+from numpy import loadtxt
+from xgboost import XGBClassifier
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import accuracy_score
+# load data
+dataset = loadtxt('pima-indians-diabetes.csv' , delimiter=",")
+# split data into X and y
+X = dataset[:,0:8]
+Y = dataset[:,8]
+# split data into train and test sets
+seed = 7
+test_size = 0.33
+X_train, X_test, y_train, y_test = train_test_split(X, Y, test_size=test_size,
+random_state=seed)
+# fit model on training data
+model = XGBClassifier()
+model.fit(X_train, y_train)
+# make predictions for test data
+predictions = model.predict(X_test)
+# evaluate predictions
+accuracy = accuracy_score(y_test, predictions)
+```
+
 
 ```python
     
