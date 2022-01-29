@@ -20,7 +20,7 @@
          * [LeaveOneOut](#leaveoneout)
          * [Pipeline](#pipeline)
 
-<!-- Added by: gil_diy, at: Sat 29 Jan 2022 12:20:43 IST -->
+<!-- Added by: gil_diy, at: Sat 29 Jan 2022 12:20:50 IST -->
 
 <!--te-->
 
@@ -140,8 +140,8 @@ imputer_categorical = SimpleImputer(missing_values=np.nan, strategy='most_freque
 Cross-validation is an approach that you can use to estimate the performance of a machine learning algorithm with less variance than a single train-test set split.
 It works by splitting the dataset into k-parts (e.g. k = 5 or k = 10). Each split of the data is called a fold.
 
-The algorithm is trained on **k − 1** folds with one held back and tested on the held back fold. This is repeated so that each fold of the dataset is given a chance to be the held back test set. After
-running cross-validation you end up with k-different performance scores that you can summarize using a mean and a standard deviation.
+The algorithm is trained on **k − 1** folds with one held back and tested on the held back fold. This is repeated so that each fold of the dataset is given a chance to be the held back test set. 
+After running cross-validation you end up with k-different performance scores that you can summarize using a mean and a standard deviation.
 
 ```python
 from sklearn.model_selection import KFold
