@@ -11,7 +11,7 @@
          * [Imputation of missing values](#imputation-of-missing-values)
             * [Missing value for numeric columns](#missing-value-for-numeric-columns)
             * [Missing value for categorical columns](#missing-value-for-categorical-columns)
-            * [Cross-validation Kfold](#cross-validation-kfold)
+            * [Kfold and Cross-validation](#kfold-and-cross-validation)
                * [Kfold](#kfold)
                * [cross_val_score](#cross_val_score)
          * [ColumnTransformer (Super nice)](#columntransformer-super-nice)
@@ -22,7 +22,7 @@
          * [LeaveOneOut](#leaveoneout)
          * [Pipeline](#pipeline)
 
-<!-- Added by: gil_diy, at: Sat 29 Jan 2022 12:24:25 IST -->
+<!-- Added by: gil_diy, at: Sat 29 Jan 2022 12:24:35 IST -->
 
 <!--te-->
 
@@ -137,7 +137,7 @@ The same way as I have written above, just place the most common value in the em
 imputer_categorical = SimpleImputer(missing_values=np.nan, strategy='most_frequent')
 ```
 
-#### Cross-validation Kfold 
+#### Kfold and Cross-validation  
 
 Cross-validation is an approach that you can use to estimate the performance of a machine learning algorithm with less variance than a single train-test set split.
 It works by splitting the dataset into k-parts (e.g. k = 5 or k = 10). Each split of the data is called a fold.
