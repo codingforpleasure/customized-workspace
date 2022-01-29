@@ -81,7 +81,7 @@
          * [Calculate correlation for all numerical columns pairs](#calculate-correlation-for-all-numerical-columns-pairs)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Sat 29 Jan 2022 11:41:08 IST -->
+<!-- Added by: gil_diy, at: Sat 29 Jan 2022 11:41:14 IST -->
 
 <!--te-->
 
@@ -312,7 +312,7 @@ my_df.loc["two"] = [4,5,6]
 
 ```python
 # convert to numeric
-X = X.astype( ' float32 ' )
+X = X.astype('float32')
 ```
 
 #### Converting from numpy table to pandas dataframe
