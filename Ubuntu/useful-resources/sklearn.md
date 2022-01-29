@@ -22,7 +22,7 @@
          * [LeaveOneOut](#leaveoneout)
          * [Pipeline](#pipeline)
 
-<!-- Added by: gil_diy, at: Sat 29 Jan 2022 12:24:35 IST -->
+<!-- Added by: gil_diy, at: Sat 29 Jan 2022 12:26:07 IST -->
 
 <!--te-->
 
@@ -177,7 +177,7 @@ from xgboost import XGBClassifier
 from sklearn.model_selection import KFold
 from sklearn.model_selection import cross_val_score
 # load data
-dataset = loadtxt( ' pima-indians-diabetes.csv ' , delimiter=",")
+dataset = loadtxt( 'pima-indians-diabetes.csv' , delimiter=",")
 # split data into X and y
 X = dataset[:,0:8]
 Y = dataset[:,8]
