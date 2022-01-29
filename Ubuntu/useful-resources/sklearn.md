@@ -11,6 +11,7 @@
          * [Imputation of missing values](#imputation-of-missing-values)
             * [Missing value for numeric columns](#missing-value-for-numeric-columns)
             * [Missing value for categorical columns](#missing-value-for-categorical-columns)
+            * [Kfold](#kfold)
          * [ColumnTransformer (Super nice)](#columntransformer-super-nice)
          * [Dimension Reduction techniques](#dimension-reduction-techniques)
             * [PCA (Principal Component Analysis)](#pca-principal-component-analysis)
@@ -19,7 +20,7 @@
          * [LeaveOneOut](#leaveoneout)
          * [Pipeline](#pipeline)
 
-<!-- Added by: gil_diy, at: Sat 29 Jan 2022 12:17:35 IST -->
+<!-- Added by: gil_diy, at: Sat 29 Jan 2022 12:18:10 IST -->
 
 <!--te-->
 
@@ -134,7 +135,10 @@ The same way as I have written above, just place the most common value in the em
 imputer_categorical = SimpleImputer(missing_values=np.nan, strategy='most_frequent')
 ```
 
-####
+#### Kfold 
+
+Cross-validation is an approach that you can use to estimate the performance of a machine learning algorithm with less variance than a single train-test set split. It works by splitting the dataset into k-parts (e.g. k = 5 or k = 10). Each split of the data is called a fold. The algorithm is trained on k − 1 folds with one held back and tested on the held back fold. This is repeated so that each fold of the dataset is given a chance to be the held back test set. After
+running cross-validation you end up with k-different performance scores that you can summarize using a mean and a standard deviation.
 
 ```python
 from sklearn.model_selection import KFold
