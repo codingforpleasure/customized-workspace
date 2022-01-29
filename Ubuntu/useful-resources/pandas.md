@@ -80,7 +80,7 @@
          * [Calculate correlation for all numerical columns pairs](#calculate-correlation-for-all-numerical-columns-pairs)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Sat 29 Jan 2022 11:38:14 IST -->
+<!-- Added by: gil_diy, at: Sat 29 Jan 2022 11:38:34 IST -->
 
 <!--te-->
 
@@ -272,6 +272,10 @@ df.select_dtypes(include='category')
 ```python
 df.drop('column_name',axis = 1,inplace=True)
 ```
+
+Axis = 1 => Column
+
+Axis = 0 => Row
 
 #### Concatentaing columns and rows
 
