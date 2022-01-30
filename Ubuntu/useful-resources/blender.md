@@ -27,7 +27,7 @@
       * [Jeff Heaton explaines](#jeff-heaton-explaines)
       * [Useful web pages](#useful-web-pages)
 
-<!-- Added by: gil_diy, at: Sun 30 Jan 2022 10:02:52 IST -->
+<!-- Added by: gil_diy, at: Sun 30 Jan 2022 10:02:57 IST -->
 
 <!--te-->
 
@@ -149,6 +149,7 @@ This means you can apply many modeling operation automatically without changing 
 Pick  `Object Mode` and right click your mesh, and pick `shade smooth`
 
 ## Adding Subdivision surface
+
 Click on the rench icon in the properties -> press add modifier -> Pick 'subdivision surface'
 
 ## Render images with transparent background 
