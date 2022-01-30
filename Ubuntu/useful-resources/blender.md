@@ -27,7 +27,7 @@
       * [Jeff Heaton explaines](#jeff-heaton-explaines)
       * [Useful web pages](#useful-web-pages)
 
-<!-- Added by: gil_diy, at: Sun 30 Jan 2022 09:59:44 IST -->
+<!-- Added by: gil_diy, at: Sun 30 Jan 2022 10:02:52 IST -->
 
 <!--te-->
 
@@ -159,6 +159,8 @@ To set `render properties` (Left sidebar) -> Film -> Mark the checkbox `Transpar
 
 Then press again `F12`
 
+
+[Reference](https://www.youtube.com/watch?v=Z6UrNz6Pvz0)
 
 ## Installing addon in Blender
 
