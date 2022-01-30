@@ -27,7 +27,7 @@
       * [Jeff Heaton explaines](#jeff-heaton-explaines)
       * [Useful web pages](#useful-web-pages)
 
-<!-- Added by: gil_diy, at: Sun 30 Jan 2022 09:58:50 IST -->
+<!-- Added by: gil_diy, at: Sun 30 Jan 2022 09:59:13 IST -->
 
 <!--te-->
 
@@ -155,7 +155,7 @@ Click on the rench icon in the properties -> press add modifier -> Pick 'subdivi
 
 Simple render would be press `F12`
 
-To set `render properties` -> Film -> Mark the checkbox `Transparent`
+To set `render properties` (Left sidebar) -> Film -> Mark the checkbox `Transparent`
 
 ## Installing addon in Blender
 
