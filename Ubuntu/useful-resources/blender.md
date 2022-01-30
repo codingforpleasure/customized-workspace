@@ -13,6 +13,7 @@
       * [Modifiers](#modifiers)
       * [Applying shade smooth](#applying-shade-smooth)
       * [Adding Subdivision surface](#adding-subdivision-surface)
+      * [Render images with transparent background](#render-images-with-transparent-background)
       * [Installing addon in Blender](#installing-addon-in-blender)
       * [Python with Blender](#python-with-blender)
          * [Show all python operations done under the hood](#show-all-python-operations-done-under-the-hood)
@@ -26,7 +27,7 @@
       * [Jeff Heaton explaines](#jeff-heaton-explaines)
       * [Useful web pages](#useful-web-pages)
 
-<!-- Added by: gil_diy, at: Mon 24 Jan 2022 17:49:17 IST -->
+<!-- Added by: gil_diy, at: Sun 30 Jan 2022 09:57:06 IST -->
 
 <!--te-->
 
@@ -150,6 +151,9 @@ Pick  `Object Mode` and right click your mesh, and pick `shade smooth`
 ## Adding Subdivision surface
 Click on the rench icon in the properties -> press add modifier -> Pick 'subdivision surface'
 
+## Render images with transparent background 
+
+Simple render would be press `F12`
 
 ## Installing addon in Blender
 
