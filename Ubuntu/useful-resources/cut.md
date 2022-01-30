@@ -16,7 +16,7 @@
             * [Example #11: Print from specific column to the end of the line:](#example-11-print-from-specific-column-to-the-end-of-the-line)
             * [Example #12: Change the delimeter to another character:](#example-12-change-the-delimeter-to-another-character)
 
-<!-- Added by: gil_diy, at: Sun 30 Jan 2022 20:32:55 IST -->
+<!-- Added by: gil_diy, at: Sun 30 Jan 2022 20:32:57 IST -->
 
 <!--te-->
 
@@ -93,6 +93,7 @@ cat /etc/passwd | cut -d: -f1
 #### Example #11: Print from specific column to the end of the line:
 
 from third column to the end of the line, therefore I wrote: `-f3-`
+
 ```bash
 cut -d, -f3- list_columns.txt
 ```
