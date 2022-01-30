@@ -13,9 +13,10 @@
             * [Example #8: Print specific multiple columns (i.e: column one and column three) of each line:](#example-8-print-specific-multiple-columns-ie-column-one-and-column-three-of-each-line)
             * [Example #9: Print range of columns (i.e: column one <strong>to</strong> column three) of each line:](#example-9-print-range-of-columns-ie-column-one-to-column-three-of-each-line)
             * [Example #10: Print specific multiple columns with specified delimeter (i.e: comma):](#example-10-print-specific-multiple-columns-with-specified-delimeter-ie-comma)
-            * [Example #11: Change the delimeter to another character:](#example-11-change-the-delimeter-to-another-character)
+            * [Example #11: Print specific multiple columns with specified delimeter (i.e: comma):](#example-11-print-specific-multiple-columns-with-specified-delimeter-ie-comma)
+            * [Example #12: Change the delimeter to another character:](#example-12-change-the-delimeter-to-another-character)
 
-<!-- Added by: gil_diy, at: 2018-11-30T06:40+02:00 -->
+<!-- Added by: gil_diy, at: Sun 30 Jan 2022 20:31:52 IST -->
 
 <!--te-->
 
@@ -89,7 +90,9 @@ cat /etc/passwd | cut -d: -f1
 (here the delimeter was colon)
 
 
-#### Example #11: Change the delimeter to another character:
+#### Example #11: Print specific multiple columns with specified delimeter (i.e: comma):
+
+#### Example #12: Change the delimeter to another character:
 
 ```bash
 cat list_columns.txt | cut -d: -f2,3 --output-delimeter="#"
