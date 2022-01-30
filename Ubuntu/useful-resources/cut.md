@@ -13,10 +13,10 @@
             * [Example #8: Print specific multiple columns (i.e: column one and column three) of each line:](#example-8-print-specific-multiple-columns-ie-column-one-and-column-three-of-each-line)
             * [Example #9: Print range of columns (i.e: column one <strong>to</strong> column three) of each line:](#example-9-print-range-of-columns-ie-column-one-to-column-three-of-each-line)
             * [Example #10: Print specific multiple columns with specified delimeter (i.e: comma):](#example-10-print-specific-multiple-columns-with-specified-delimeter-ie-comma)
-            * [Example #11: Print specific multiple columns with specified delimeter (i.e: comma):](#example-11-print-specific-multiple-columns-with-specified-delimeter-ie-comma)
+            * [Example #11: Print from specific column to the end of the line:](#example-11-print-from-specific-column-to-the-end-of-the-line)
             * [Example #12: Change the delimeter to another character:](#example-12-change-the-delimeter-to-another-character)
 
-<!-- Added by: gil_diy, at: Sun 30 Jan 2022 20:31:52 IST -->
+<!-- Added by: gil_diy, at: Sun 30 Jan 2022 20:32:55 IST -->
 
 <!--te-->
 
@@ -90,7 +90,12 @@ cat /etc/passwd | cut -d: -f1
 (here the delimeter was colon)
 
 
-#### Example #11: Print specific multiple columns with specified delimeter (i.e: comma):
+#### Example #11: Print from specific column to the end of the line:
+
+from third column to the end of the line, therefore I wrote: `-f3-`
+```bash
+cut -d, -f3- list_columns.txt
+```
 
 #### Example #12: Change the delimeter to another character:
 
