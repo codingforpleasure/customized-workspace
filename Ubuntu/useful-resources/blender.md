@@ -30,7 +30,7 @@
       * [Jeff Heaton explaines](#jeff-heaton-explaines)
       * [Useful web pages](#useful-web-pages)
 
-<!-- Added by: gil_diy, at: Mon 31 Jan 2022 14:08:50 IST -->
+<!-- Added by: gil_diy, at: Mon 31 Jan 2022 15:10:51 IST -->
 
 <!--te-->
 
@@ -102,6 +102,7 @@ Description | Hotkey | Reference
 Add object | `Shift+a` | 
 different type of views (Wireframe/Solid/Rendered) | press `z` and pick
 X-ray mode | `Alt + z`
+reset to position (0,0,0) | `Alt+g`
 Parenting object to another object | `Ctrl + p` | [Link](https://youtu.be/LMA3S2EGM6U?t=93)
 focus on single object | click on the object and press `/` |
 Return to simple view after focusing an object | press `/` |
