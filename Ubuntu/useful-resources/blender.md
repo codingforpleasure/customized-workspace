@@ -19,6 +19,7 @@
       * [Applying shade smooth](#applying-shade-smooth)
       * [Adding Subdivision surface](#adding-subdivision-surface)
       * [Render images with transparent background](#render-images-with-transparent-background)
+      * [Annotate in Blender](#annotate-in-blender)
       * [Installing addon in Blender](#installing-addon-in-blender)
       * [Python with Blender](#python-with-blender)
          * [Show all python operations done under the hood](#show-all-python-operations-done-under-the-hood)
@@ -32,7 +33,7 @@
       * [Jeff Heaton explaines](#jeff-heaton-explaines)
       * [Useful web pages](#useful-web-pages)
 
-<!-- Added by: gil_diy, at: Mon 31 Jan 2022 15:58:25 IST -->
+<!-- Added by: gil_diy, at: Mon 31 Jan 2022 16:14:14 IST -->
 
 <!--te-->
 
@@ -201,7 +202,11 @@ Then press again `F12`
 
 [Link](https://www.youtube.com/watch?v=K02hlKyoWNI)
 
+## Annotate in Blender
 
+To annotate easily:
+
+[Youtube](https://youtu.be/99M_TypmX3k)
 ## Installing addon in Blender
 
 Edit -> Preferences... -> Addons (Press 'Install' button)
