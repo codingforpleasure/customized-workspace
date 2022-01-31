@@ -3,7 +3,7 @@
       * [Optimizers](#optimizers-1)
          * [LBFGS](#lbfgs)
 
-<!-- Added by: gil_diy, at: Mon 17 Jan 2022 09:47:07 IST -->
+<!-- Added by: gil_diy, at: Mon 31 Jan 2022 19:11:34 IST -->
 
 <!--te-->
 
@@ -16,3 +16,5 @@
 ### LBFGS 
 
 The optimizer was used it in [Neural Style Transfer](https://youtu.be/B22nIUhXo4E?list=PLBoQnSflObcmbfshq9oNs41vODgXG-608&t=593)
+
+
