@@ -33,7 +33,7 @@
       * [Jeff Heaton explaines](#jeff-heaton-explaines)
       * [Useful web pages](#useful-web-pages)
 
-<!-- Added by: gil_diy, at: Mon 31 Jan 2022 19:28:18 IST -->
+<!-- Added by: gil_diy, at: Mon 31 Jan 2022 19:29:44 IST -->
 
 <!--te-->
 
@@ -131,7 +131,7 @@ Reset to scale | `Alt+s`
 Extrude | `e`
 Edge Slide | `gg`
 
-
+**gil**
 
 ## Give color to objects
 
