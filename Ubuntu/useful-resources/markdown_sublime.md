@@ -10,7 +10,7 @@
       * [Snippets](#snippets)
       * [Build systems (Useful stuff)](#build-systems-useful-stuff)
 
-<!-- Added by: gil_diy, at: Mon 31 Jan 2022 19:37:17 IST -->
+<!-- Added by: gil_diy, at: Mon 31 Jan 2022 19:41:18 IST -->
 
 <!--te-->
 
@@ -24,7 +24,7 @@ Write math equations in Latex format | mark the text and press ctrl + m
 Comment text | mark the text and press ctrl + /
 Build with to run external programs |  ctrl + Shift + b
 
-
+* The **key-binding** list of hotkeys appear in the file: `Default (Linux).sublime-keymap`
 * The **build scripts** appear in: `~/.config/sublime-text-3/Packages/User`
 * The **markdown snippets** appear in: `~/.config/sublime-text-3/Packages/User/Markdown-Snippets`
 
