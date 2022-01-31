@@ -11,6 +11,7 @@
       * [Give color to objects](#give-color-to-objects)
       * [What is edit mode?](#what-is-edit-mode-1)
       * [Modifiers](#modifiers)
+      * [Pick all loop](#pick-all-loop)
       * [Draw path](#draw-path)
       * [Walk with Camera](#walk-with-camera)
       * [Applying shade smooth](#applying-shade-smooth)
@@ -29,7 +30,7 @@
       * [Jeff Heaton explaines](#jeff-heaton-explaines)
       * [Useful web pages](#useful-web-pages)
 
-<!-- Added by: gil_diy, at: Mon 31 Jan 2022 12:16:06 IST -->
+<!-- Added by: gil_diy, at: Mon 31 Jan 2022 13:45:45 IST -->
 
 <!--te-->
 
@@ -145,6 +146,12 @@ Modifiers are automatic operations that affects geometry in non destructive way.
 This means you can apply many modeling operation automatically without changing the base geometry of your object.
 
 [Link](https://youtu.be/idcFMhoSdIc)
+
+## Pick all loop
+
+Enter `edit mode` (press tab) and pick `1/2/3` (vertex/edge/phase),
+after this press `Alt` and click on the phase you would like to get all phases which create a 
+loop.
 
 ## Draw path
 
