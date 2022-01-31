@@ -33,7 +33,7 @@
       * [Jeff Heaton explaines](#jeff-heaton-explaines)
       * [Useful web pages](#useful-web-pages)
 
-<!-- Added by: gil_diy, at: Mon 31 Jan 2022 16:14:21 IST -->
+<!-- Added by: gil_diy, at: Mon 31 Jan 2022 16:25:23 IST -->
 
 <!--te-->
 
@@ -128,6 +128,7 @@ Duplicate Object | `Shift + d` |
 Duplicate Linked (All properties are inherited) | `Alt + d` | 
 Inherit  | `Ctrl + l` |
 Reset to scale | `Alt+s`
+Extrude | `e`
 
 
 
