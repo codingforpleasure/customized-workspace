@@ -11,6 +11,7 @@
       * [Give color to objects](#give-color-to-objects)
       * [What is edit mode?](#what-is-edit-mode-1)
       * [Modifiers](#modifiers)
+      * [Draw path](#draw-path)
       * [Applying shade smooth](#applying-shade-smooth)
       * [Adding Subdivision surface](#adding-subdivision-surface)
       * [Render images with transparent background](#render-images-with-transparent-background)
@@ -27,7 +28,7 @@
       * [Jeff Heaton explaines](#jeff-heaton-explaines)
       * [Useful web pages](#useful-web-pages)
 
-<!-- Added by: gil_diy, at: Sun 30 Jan 2022 10:02:57 IST -->
+<!-- Added by: gil_diy, at: Mon 31 Jan 2022 11:08:58 IST -->
 
 <!--te-->
 
@@ -144,6 +145,10 @@ This means you can apply many modeling operation automatically without changing 
 
 [Link](https://youtu.be/idcFMhoSdIc)
 
+## Draw path
+
+Press `Shift+a` pick `Curve` and choose `path` or other.
+
 ## Applying shade smooth
 
 Pick  `Object Mode` and right click your mesh, and pick `shade smooth`
@@ -162,6 +167,11 @@ Then press again `F12`
 
 
 [Reference](https://www.youtube.com/watch?v=Z6UrNz6Pvz0)
+
+## 
+
+[Link](https://www.youtube.com/watch?v=K02hlKyoWNI)
+
 
 ## Installing addon in Blender
 
