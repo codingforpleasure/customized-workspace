@@ -12,6 +12,7 @@
       * [What is edit mode?](#what-is-edit-mode-1)
       * [Modifiers](#modifiers)
       * [Draw path](#draw-path)
+      * [Walk with Camera](#walk-with-camera)
       * [Applying shade smooth](#applying-shade-smooth)
       * [Adding Subdivision surface](#adding-subdivision-surface)
       * [Render images with transparent background](#render-images-with-transparent-background)
@@ -28,7 +29,7 @@
       * [Jeff Heaton explaines](#jeff-heaton-explaines)
       * [Useful web pages](#useful-web-pages)
 
-<!-- Added by: gil_diy, at: Mon 31 Jan 2022 11:08:58 IST -->
+<!-- Added by: gil_diy, at: Mon 31 Jan 2022 12:16:03 IST -->
 
 <!--te-->
 
@@ -148,6 +149,10 @@ This means you can apply many modeling operation automatically without changing 
 ## Draw path
 
 Press `Shift+a` pick `Curve` and choose `path` or other.
+
+## Walk with Camera
+
+`Shift+w` - I have assigned this hotkey
 
 ## Applying shade smooth
 
