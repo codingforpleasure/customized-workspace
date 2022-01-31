@@ -30,7 +30,7 @@
       * [Jeff Heaton explaines](#jeff-heaton-explaines)
       * [Useful web pages](#useful-web-pages)
 
-<!-- Added by: gil_diy, at: Mon 31 Jan 2022 13:59:20 IST -->
+<!-- Added by: gil_diy, at: Mon 31 Jan 2022 14:06:40 IST -->
 
 <!--te-->
 
@@ -140,7 +140,7 @@ Description | Hotkey
 vertex | `1`
 Edge | `2`
 Phase | `3`
-Loop Cut () | `Ctrl + R`
+Adding Loop Cut | `Ctrl + R`
 on `Phase` you can press `i` ([Link](https://youtu.be/3cM2eUaSAPQ?t=1064)) | internal
 on `Phase` you can press `e` ([Link](https://youtu.be/3cM2eUaSAPQ?t=1064))| external
 
