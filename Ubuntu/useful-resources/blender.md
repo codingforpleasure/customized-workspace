@@ -31,7 +31,7 @@
       * [Jeff Heaton explaines](#jeff-heaton-explaines)
       * [Useful web pages](#useful-web-pages)
 
-<!-- Added by: gil_diy, at: Mon 31 Jan 2022 15:56:31 IST -->
+<!-- Added by: gil_diy, at: Mon 31 Jan 2022 15:57:30 IST -->
 
 <!--te-->
 
@@ -155,7 +155,7 @@ loop.
 
 ## Apply scale
 
-Press `Ctrl+a` the Apply menu will popup and choose `scale`
+Press `Ctrl+a` the Apply menu will popup and choose `scale` -> now all scale x,y,z will be 1,1,1
 
 ## Modifiers
 
