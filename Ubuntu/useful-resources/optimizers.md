@@ -3,7 +3,7 @@
       * [Optimizers](#optimizers-1)
          * [LBFGS](#lbfgs)
 
-<!-- Added by: gil_diy, at: Mon 31 Jan 2022 19:51:48 IST -->
+<!-- Added by: gil_diy, at: Mon 31 Jan 2022 19:52:00 IST -->
 
 <!--te-->
 
@@ -23,6 +23,7 @@ The optimizer was used it in [Neural Style Transfer](https://youtu.be/B22nIUhXo4
 
 <img src="https://render.githubusercontent.com/render/math?math=\alpha">
 <img src="https://render.githubusercontent.com/render/math?math=\beta">
+<img src="https://render.githubusercontent.com/render/math?math=\theta">
 
 
 <!-- Cost function <img src="https://render.githubusercontent.com/render/math?math=J( \theta )"> want to <img src="https://render.githubusercontent.com/render/math?math=min\thetaJ(\theta)">
