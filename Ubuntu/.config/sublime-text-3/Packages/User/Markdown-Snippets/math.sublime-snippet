@@ -1,0 +1,8 @@
+<snippet>
+<content><![CDATA[
+<img src="https://render.githubusercontent.com/render/math?math=${0:$TM_SELECTED_TEXT}">
+]]></content>
+	<tabTrigger>bold</tabTrigger>
+	<scope>text.html.markdown</scope>
+	<description>Make the current text selection bold</description>
+</snippet>

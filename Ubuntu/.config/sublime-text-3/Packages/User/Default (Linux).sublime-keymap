@@ -1,4 +1,5 @@
 [
 	{ "keys": ["ctrl+b"], "command": "insert_snippet", "args": {"name": "Packages/User/Markdown-Snippets/bold.sublime-snippet" } },
-	{ "keys": ["ctrl+i"], "command": "insert_snippet", "args": {"name": "Packages/User/Markdown-Snippets/italic.sublime-snippet" } }
+	{ "keys": ["ctrl+i"], "command": "insert_snippet", "args": {"name": "Packages/User/Markdown-Snippets/italic.sublime-snippet" } },
+	{ "keys": ["ctrl+m"], "command": "insert_snippet", "args": {"name": "Packages/User/Markdown-Snippets/math.sublime-snippet" } }
 ]
