@@ -10,8 +10,8 @@
       * [What is object mode?](#what-is-object-mode)
       * [Give color to objects](#give-color-to-objects)
       * [What is edit mode?](#what-is-edit-mode-1)
-      * [Modifiers](#modifiers)
       * [Pick all loop](#pick-all-loop)
+      * [Modifiers](#modifiers)
       * [Draw path](#draw-path)
       * [Walk with Camera](#walk-with-camera)
       * [Applying shade smooth](#applying-shade-smooth)
@@ -30,7 +30,7 @@
       * [Jeff Heaton explaines](#jeff-heaton-explaines)
       * [Useful web pages](#useful-web-pages)
 
-<!-- Added by: gil_diy, at: Mon 31 Jan 2022 13:56:31 IST -->
+<!-- Added by: gil_diy, at: Mon 31 Jan 2022 13:57:07 IST -->
 
 <!--te-->
 
@@ -143,6 +143,13 @@ Loop Cut () | `Ctrl + R`
 on `Phase` you can press `i` ([Link](https://youtu.be/3cM2eUaSAPQ?t=1064)) | internal
 on `Phase` you can press `e` ([Link](https://youtu.be/3cM2eUaSAPQ?t=1064))| external
 
+## Pick all loop
+
+Enter `edit mode` (press tab) and pick `1/2/3` (vertex/edge/phase),
+after this press `Alt` and click on the phase you would like to get all phases which create a 
+loop.
+
+
 ## Modifiers
 
 Modifiers are automatic operations that affects geometry in non destructive way.
@@ -150,11 +157,6 @@ This means you can apply many modeling operation automatically without changing 
 
 [Link](https://youtu.be/idcFMhoSdIc)
 
-## Pick all loop
-
-Enter `edit mode` (press tab) and pick `1/2/3` (vertex/edge/phase),
-after this press `Alt` and click on the phase you would like to get all phases which create a 
-loop.
 
 ## Draw path
 
