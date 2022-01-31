@@ -30,7 +30,7 @@
       * [Jeff Heaton explaines](#jeff-heaton-explaines)
       * [Useful web pages](#useful-web-pages)
 
-<!-- Added by: gil_diy, at: Mon 31 Jan 2022 14:06:40 IST -->
+<!-- Added by: gil_diy, at: Mon 31 Jan 2022 14:08:50 IST -->
 
 <!--te-->
 
@@ -116,7 +116,7 @@ Switch between `Edit mode` to `Object mode` | tab |
 Duplicate | `Shift+d` |
 Seperate | `p` |
 Xray | `Alt+z` |
-See location | `n` |
+See properies (Rotate/Position) | `n` |
 See Toolbox | `t` | 
 Wireframe mode | `Shift + z` | 
 Apply transfrom | `Ctrl + a` | 
