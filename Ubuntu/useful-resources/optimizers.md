@@ -3,7 +3,7 @@
       * [Optimizers](#optimizers-1)
          * [LBFGS](#lbfgs)
 
-<!-- Added by: gil_diy, at: Mon 31 Jan 2022 19:32:21 IST -->
+<!-- Added by: gil_diy, at: Mon 31 Jan 2022 19:46:52 IST -->
 
 <!--te-->
 
@@ -21,5 +21,5 @@ The optimizer was used it in [Neural Style Transfer](https://youtu.be/B22nIUhXo4
 <img src="https://render.githubusercontent.com/render/math?math=e^{i \pi} = -1">
 
 
-<img src="https://render.githubusercontent.com/render/math?math=i^2">
 
+<img src="https://render.githubusercontent.com/render/math?math=J(\theta)">
