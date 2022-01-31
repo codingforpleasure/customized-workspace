@@ -30,7 +30,7 @@
       * [Jeff Heaton explaines](#jeff-heaton-explaines)
       * [Useful web pages](#useful-web-pages)
 
-<!-- Added by: gil_diy, at: Mon 31 Jan 2022 13:45:48 IST -->
+<!-- Added by: gil_diy, at: Mon 31 Jan 2022 13:56:19 IST -->
 
 <!--te-->
 
@@ -100,6 +100,7 @@ You'll be able to move, rotate, and resize
 Description | Hotkey | Reference
 ------------|--------|------------
 Add object | `Shift+a` | 
+Naviagte easily between different type of views (Wireframe/Solid) | press `z`
 Parenting object to another object | `Ctrl + p` | [Link](https://youtu.be/LMA3S2EGM6U?t=93)
 focus on single object | click on the object and press `/` |
 Return to simple view after focusing an object | press `/` |
@@ -121,6 +122,8 @@ Apply transfrom | `Ctrl + a` |
 Duplicate Object | `Shift + d` |
 Duplicate Linked (All properties are inherited) | `Alt + d` | 
 Inherit  | `Ctrl + l` |
+
+
 
 
 ## Give color to objects
