@@ -33,7 +33,7 @@
       * [Jeff Heaton explaines](#jeff-heaton-explaines)
       * [Useful web pages](#useful-web-pages)
 
-<!-- Added by: gil_diy, at: Mon 31 Jan 2022 16:25:26 IST -->
+<!-- Added by: gil_diy, at: Mon 31 Jan 2022 16:30:12 IST -->
 
 <!--te-->
 
@@ -129,7 +129,7 @@ Duplicate Linked (All properties are inherited) | `Alt + d` |
 Inherit  | `Ctrl + l` |
 Reset to scale | `Alt+s`
 Extrude | `e`
-
+Edge Slide | `gg`
 
 
 
