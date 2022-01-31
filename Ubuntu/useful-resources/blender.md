@@ -12,6 +12,7 @@
       * [What is edit mode?](#what-is-edit-mode-1)
       * [Pick all loop](#pick-all-loop)
       * [Apply scale](#apply-scale)
+      * [Add Bevel](#add-bevel)
       * [Modifiers](#modifiers)
       * [Draw path](#draw-path)
       * [Walk with Camera](#walk-with-camera)
@@ -31,7 +32,7 @@
       * [Jeff Heaton explaines](#jeff-heaton-explaines)
       * [Useful web pages](#useful-web-pages)
 
-<!-- Added by: gil_diy, at: Mon 31 Jan 2022 15:57:30 IST -->
+<!-- Added by: gil_diy, at: Mon 31 Jan 2022 15:58:25 IST -->
 
 <!--te-->
 
@@ -156,6 +157,10 @@ loop.
 ## Apply scale
 
 Press `Ctrl+a` the Apply menu will popup and choose `scale` -> now all scale x,y,z will be 1,1,1
+
+## Add Bevel
+
+Press `Ctrl+b`, will add bevel
 
 ## Modifiers
 
