@@ -11,6 +11,7 @@
       * [Give color to objects](#give-color-to-objects)
       * [What is edit mode?](#what-is-edit-mode-1)
       * [Pick all loop](#pick-all-loop)
+      * [Apply scale](#apply-scale)
       * [Modifiers](#modifiers)
       * [Draw path](#draw-path)
       * [Walk with Camera](#walk-with-camera)
@@ -30,7 +31,7 @@
       * [Jeff Heaton explaines](#jeff-heaton-explaines)
       * [Useful web pages](#useful-web-pages)
 
-<!-- Added by: gil_diy, at: Mon 31 Jan 2022 15:51:01 IST -->
+<!-- Added by: gil_diy, at: Mon 31 Jan 2022 15:56:31 IST -->
 
 <!--te-->
 
@@ -152,6 +153,9 @@ Enter `edit mode` (press tab) and pick `1/2/3` (vertex/edge/phase),
 after this press `Alt` and click on the phase you would like to get all phases which create a 
 loop.
 
+## Apply scale
+
+Press `Ctrl+a` the Apply menu will popup and choose `scale`
 
 ## Modifiers
 
