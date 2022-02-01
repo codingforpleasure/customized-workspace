@@ -82,7 +82,7 @@
          * [Calculate correlation for all numerical columns pairs](#calculate-correlation-for-all-numerical-columns-pairs)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Tue 01 Feb 2022 10:22:13 IST -->
+<!-- Added by: gil_diy, at: Tue 01 Feb 2022 10:22:20 IST -->
 
 <!--te-->
 
@@ -511,7 +511,7 @@ df.describe(include='all')
 
 ## Get statistics for Categorical columns
 
-A summary for nonnumerical columns can be produced by specifying include='O' (the alias for np.object )
+A summary for nonnumerical columns can be produced by specifying include='O' (the alias for `np.object` )
 
 ```python
 df[['country', 'speaker']].describe(include='O').T
