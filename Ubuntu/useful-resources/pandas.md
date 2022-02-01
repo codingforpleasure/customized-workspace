@@ -81,7 +81,7 @@
          * [Calculate correlation for all numerical columns pairs](#calculate-correlation-for-all-numerical-columns-pairs)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Sat 29 Jan 2022 11:41:14 IST -->
+<!-- Added by: gil_diy, at: Tue 01 Feb 2022 10:19:50 IST -->
 
 <!--te-->
 
@@ -554,6 +554,11 @@ movies_df['Star Ratings'] = movies_df['Star Ratings'].astype('int')
 
 ```python
 print(df.isnull().sum())
+```
+Equivalent to:
+
+```python
+print(df.isnan().sum())
 ```
 
 ### Remove rows with NA's
