@@ -23,9 +23,10 @@
       * [Python Generators](#python-generators)
       * [Python Closure](#python-closure)
       * [jsonify with numpy arrays](#jsonify-with-numpy-arrays)
+      * [Counting words with a counter](#counting-words-with-a-counter)
       * [Useful packages](#useful-packages)
 
-<!-- Added by: gil_diy, at: Mon 24 Jan 2022 11:48:13 IST -->
+<!-- Added by: gil_diy, at: Tue 01 Feb 2022 16:28:09 IST -->
 
 <!--te-->
 
@@ -294,6 +295,18 @@ class NumpyEncoder(json.JSONEncoder):
         return json.JSONEncoder.default(self, obj)
 
 dumped = json.dumps(data, cls=NumpyEncoder)
+```
+
+## Counting words with a counter
+
+```python
+from collection  import Counter
+
+tokens = tokenize("She likes my cats and my cats like my sofa")
+counter = Counter(tokens)
+
+print(counter)
+
 ```
 
 ## Useful packages
