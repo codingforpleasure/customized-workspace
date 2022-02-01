@@ -50,6 +50,7 @@
       * [Get information of the data types for a given dataframe](#get-information-of-the-data-types-for-a-given-dataframe)
       * [Get information about the memory usage of a dataframe stored in the memory](#get-information-about-the-memory-usage-of-a-dataframe-stored-in-the-memory)
       * [Get statistics (count, mean, std, min, max))](#get-statistics-count-mean-std-min-max)
+      * [Get statistics for Categorical columns](#get-statistics-for-categorical-columns)
       * [Get counts for spcific column (Exactly like table function in R)](#get-counts-for-spcific-column-exactly-like-table-function-in-r)
       * [Get mode - value that appears most often in either column or row](#get-mode---value-that-appears-most-often-in-either-column-or-row)
       * [Datatypes conversions](#datatypes-conversions)
@@ -81,7 +82,7 @@
          * [Calculate correlation for all numerical columns pairs](#calculate-correlation-for-all-numerical-columns-pairs)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Tue 01 Feb 2022 10:19:50 IST -->
+<!-- Added by: gil_diy, at: Tue 01 Feb 2022 10:22:13 IST -->
 
 <!--te-->
 
@@ -508,6 +509,13 @@ df.describe(include='all')
 * 75%
 * max
 
+## Get statistics for Categorical columns
+
+A summary for nonnumerical columns can be produced by specifying include='O' (the alias for np.object )
+
+```python
+df[['country', 'speaker']].describe(include='O').T
+```
 
 ## Get counts for spcific column (Exactly like table function in R)
 ```python
