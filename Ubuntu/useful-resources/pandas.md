@@ -73,7 +73,7 @@
          * [Join two dataframes one <strong>besides</strong> the other.](#join-two-dataframes-one-besides-the-other)
          * [Join two dataframes one <strong>besides</strong> the other when share the same key (inner join)](#join-two-dataframes-one-besides-the-other-when-share-the-same-key-inner-join)
          * [Dataframe Pivot table](#dataframe-pivot-table)
-         * [Printing data so all columns will be presented](#printing-data-so-all-columns-will-be-presented)
+         * [Printing data so all columns will be presented (Display all columns)](#printing-data-so-all-columns-will-be-presented-display-all-columns)
          * [Get data ditribution of the data per column](#get-data-ditribution-of-the-data-per-column)
       * [Convert each consecutive pair of columns into a tuple in a single column](#convert-each-consecutive-pair-of-columns-into-a-tuple-in-a-single-column)
       * [Mapping/Applying categorical values to a specified numerical values](#mappingapplying-categorical-values-to-a-specified-numerical-values)
@@ -82,7 +82,7 @@
          * [Calculate correlation for all numerical columns pairs](#calculate-correlation-for-all-numerical-columns-pairs)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Tue 01 Feb 2022 10:22:20 IST -->
+<!-- Added by: gil_diy, at: Tue 01 Feb 2022 11:40:23 IST -->
 
 <!--te-->
 
@@ -513,6 +513,11 @@ df.describe(include='all')
 
 A summary for nonnumerical columns can be produced by specifying include='O' (the alias for `np.object` )
 
+
+In this case, we also get the count, the number of unique values,
+the top-most element (or one of them if there are many with the same number
+of occurrences), and its frequency.
+
 ```python
 df[['country', 'speaker']].describe(include='O').T
 ```
@@ -777,7 +782,7 @@ result = ffp_train_df.merge(reviews_train_df, on='ID')
 ```
 [Link](https://www.youtube.com/watch?v=5yFox2cReTw)
 
-### Printing data so all columns will be presented
+### Printing data so all columns will be presented (Display all columns)
 ```python
 pd.set_option('display.max_rows', 500)    # To see all rows
 pd.set_option('display.max_columns', 500) # To see all columns
