@@ -24,9 +24,11 @@
       * [Pipeline](#pipeline)
       * [Feature Selection](#feature-selection)
          * [Approach 1: Drop columns with constant values (Like Person's ID)](#approach-1-drop-columns-with-constant-values-like-persons-id)
-         * [Approach 1: Drop columns with constant values (Like Person's ID)](#approach-1-drop-columns-with-constant-values-like-persons-id-1)
+         * [Approach 2:](#approach-2)
+         * [Approach 3:](#approach-3)
+         * [Approach 4:](#approach-4)
 
-<!-- Added by: gil_diy, at: Wed 02 Feb 2022 08:43:42 IST -->
+<!-- Added by: gil_diy, at: Wed 02 Feb 2022 08:44:44 IST -->
 
 <!--te-->
 
@@ -376,10 +378,12 @@ I'll be showing 10 different techniques of feature selections:
 ```python
 import pandas as pd
 
-df['id'].drop(axis = 0)
+df['id'].drop(axis = 0, inplace=True)
 ```
 
-### Approach 1: Drop columns with constant values (Like Person's ID)
+### Approach 2: 
+### Approach 3: 
+### Approach 4: 
 
 ```python
 # use feature importance for feature selection
