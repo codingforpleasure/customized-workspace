@@ -31,7 +31,7 @@
             * [Numerical values](#numerical-values)
          * [Approach 5: features selection using Chi2 Statistical Analysis](#approach-5-features-selection-using-chi2-statistical-analysis)
 
-<!-- Added by: gil_diy, at: Wed 02 Feb 2022 11:28:24 IST -->
+<!-- Added by: gil_diy, at: Wed 02 Feb 2022 11:47:23 IST -->
 
 <!--te-->
 
@@ -410,8 +410,11 @@ print("number of columns left: ", df_after_feature_selection.shape[1])
 
 ```python
 
-# Removing the diagonal:
-res = (mat_corr - np.eye(mat_corr.shape[0])) > corr_threshold
+# Since the correlation matrix is symmetry to the diagonal
+# we will focus on half of the matrix and ignore the actual diagonal
+
+column_idx = np.where((np.triu(mat_corr) - np.eye(mat_corr.shape[0])) > 0.8)
+
 ```
 
 
