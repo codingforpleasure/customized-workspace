@@ -24,7 +24,7 @@
       * [Pipeline](#pipeline)
       * [Feature Selection](#feature-selection)
 
-<!-- Added by: gil_diy, at: Wed 02 Feb 2022 07:08:16 IST -->
+<!-- Added by: gil_diy, at: Wed 02 Feb 2022 07:09:03 IST -->
 
 <!--te-->
 
@@ -175,8 +175,6 @@ Explained very well here for creating a concise code neat [Link](https://www.you
 
 
 ## Splitting data
-
-
 ### Cross-validation  
 
 Cross-validation is an approach that you can use to estimate the performance of a machine learning algorithm with less variance than a single train-test set split.
