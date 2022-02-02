@@ -24,7 +24,7 @@
       * [Pipeline](#pipeline)
       * [Feature Selection](#feature-selection)
 
-<!-- Added by: gil_diy, at: Wed 02 Feb 2022 07:09:06 IST -->
+<!-- Added by: gil_diy, at: Wed 02 Feb 2022 08:23:26 IST -->
 
 <!--te-->
 
@@ -189,7 +189,52 @@ on unseen data.
 
 
 
+Advantages of **cross-validation**:
+
+* More accurate estimate of out-of-sample accuracy
+
+* More "efficient" use of data (every observation is used for both training and testing)
+
+
+
+Advantages of **train/test split**:
+
+* Runs K times faster than K-fold cross-validation
+
+* Simpler to examine the details results of testing process
+
+
+
 ##### Kfold
+
+
+**Steps for K-folded cross-validation**
+
+1. Split the dataset into K equal partitions (or "folds")
+
+2. Use fold 1 as **testing set** and the union of other folds as the **training set**
+
+3. Calculate **testing accuarcy**
+
+4. Repeat steps 2 and 3 K times, using a **different fold** as the testing set each time.
+
+5. Use the **average testing accuracy** as the estimate of out-of-sample accuracy.
+
+
+<p align="center">
+  <img src="images/machine-learning/5_folds_example.png" title="check it">
+</p>
+
+
+A great code example which demostrates what is done under the hood can be seen below:
+
+```python
+from sklearn.model_selection import cross_val_score
+
+kf = KFold(25,n_folds = 5, shuffle = False)
+
+```
+
 
 ```python
 from sklearn.model_selection import KFold
@@ -208,6 +253,8 @@ for train_index, test_index in kf.split(x, y):
 
 
 ##### cross_val_score
+
+
 
 ```python
 # k-fold cross validation evaluation of xgboost model
