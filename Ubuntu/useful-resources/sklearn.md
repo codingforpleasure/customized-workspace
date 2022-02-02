@@ -30,8 +30,9 @@
             * [Categorical values](#categorical-values)
             * [Numerical values](#numerical-values)
          * [Approach 5: features selection using Chi2 Statistical Analysis](#approach-5-features-selection-using-chi2-statistical-analysis)
+      * [<a href="https://youtu.be/_AWQ4Myxlcg?list=PLZoTAELRMXVPgjwJ8VyRoqmfNs2CJwhVH" rel="nofollow">Link</a>](#link)
 
-<!-- Added by: gil_diy, at: Wed 02 Feb 2022 12:43:47 IST -->
+<!-- Added by: gil_diy, at: Wed 02 Feb 2022 12:46:26 IST -->
 
 <!--te-->
 
@@ -422,7 +423,20 @@ print()
 
 #### Categorical values
 
+
+[Link](http://www.my-website.com)
+
 #### Numerical values
+```python
+
+from sklearn.feature_selection import mutual_info_regression
+# determine the mutual information
+mutual_info = mutual_info_regression(X_train.fillna(0), y_train)
+
+```
+
+
+[Link](http://www.my-website.com)
 
 ### Approach 5: features selection using Chi2 Statistical Analysis
 
@@ -431,7 +445,7 @@ from sklearn.feature_selection import chi2
 
 f_p_values=chi2(X_train,y_train)
 ```
-
+[Link](https://youtu.be/_AWQ4Myxlcg?list=PLZoTAELRMXVPgjwJ8VyRoqmfNs2CJwhVH)
 --------------------------------------------------------
 
 
