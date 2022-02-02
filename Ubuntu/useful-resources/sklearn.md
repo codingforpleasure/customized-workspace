@@ -24,7 +24,7 @@
          * [Pipeline](#pipeline)
       * [Feature Selection](#feature-selection)
 
-<!-- Added by: gil_diy, at: Wed 02 Feb 2022 06:45:44 IST -->
+<!-- Added by: gil_diy, at: Wed 02 Feb 2022 06:46:05 IST -->
 
 <!--te-->
 
@@ -300,7 +300,12 @@ X_train = normalized_df.drop('TenYearCHD', axis=1)
 
 from sklearn.pipeline import Pipeline
 
-classifiers = [LogisticRegression(),SVC(),DecisionTreeClassifier(),KNeighborsClassifier(2)]
+classifiers = [
+               LogisticRegression(),
+               SVC(),
+               DecisionTreeClassifier(),
+               KNeighborsClassifier(2)
+               ]
 
 for classifier in classifiers:
     pipe = Pipeline(steps=[('classifier', classifier)])
