@@ -28,7 +28,7 @@
          * [Approach 3: Remove highly correlated features](#approach-3-remove-highly-correlated-features)
          * [Approach 4:](#approach-4)
 
-<!-- Added by: gil_diy, at: Wed 02 Feb 2022 10:17:38 IST -->
+<!-- Added by: gil_diy, at: Wed 02 Feb 2022 10:17:54 IST -->
 
 <!--te-->
 
@@ -408,7 +408,7 @@ print("number of columns left: ", df_after_feature_selection.shape[1])
 ```python
 
 # Removing the diognal:
-res = (mat_corr - np.eye(mat_corr.shape[0])) > 0.8
+res = (mat_corr - np.eye(mat_corr.shape[0])) > corr_threshold
 ```
 
 
