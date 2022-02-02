@@ -24,7 +24,7 @@
       * [Pipeline](#pipeline)
       * [Feature Selection](#feature-selection)
 
-<!-- Added by: gil_diy, at: Wed 02 Feb 2022 08:23:26 IST -->
+<!-- Added by: gil_diy, at: Wed 02 Feb 2022 08:23:36 IST -->
 
 <!--te-->
 
@@ -227,13 +227,6 @@ Advantages of **train/test split**:
 
 
 A great code example which demostrates what is done under the hood can be seen below:
-
-```python
-from sklearn.model_selection import cross_val_score
-
-kf = KFold(25,n_folds = 5, shuffle = False)
-
-```
 
 
 ```python
