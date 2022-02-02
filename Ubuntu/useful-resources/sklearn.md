@@ -24,7 +24,7 @@
       * [Pipeline](#pipeline)
       * [Feature Selection](#feature-selection)
 
-<!-- Added by: gil_diy, at: Wed 02 Feb 2022 08:26:16 IST -->
+<!-- Added by: gil_diy, at: Wed 02 Feb 2022 08:26:43 IST -->
 
 <!--te-->
 
@@ -196,7 +196,7 @@ Cross-validation is an approach that you can use to estimate the performance of 
 5. Use the **average testing accuracy** as the estimate of out-of-sample accuracy.
 
 
-<p align="center" style="width:200px;">
+<p align="center" style="width:300px;">
   <img src="images/machine-learning/5_folds_example.png" title="check it">
 </p>
 
