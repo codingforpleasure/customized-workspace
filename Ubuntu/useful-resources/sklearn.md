@@ -26,9 +26,9 @@
          * [Approach 1: Drop columns with constant values (Like Person's ID)](#approach-1-drop-columns-with-constant-values-like-persons-id)
          * [Approach 2: Variance Thresold (Remove all low-variance features)](#approach-2-variance-thresold-remove-all-low-variance-features)
          * [Approach 3: Remove highly correlated features](#approach-3-remove-highly-correlated-features)
-         * [Approach 4:](#approach-4)
+         * [Approach 4: Choosing features using Information Gain](#approach-4-choosing-features-using-information-gain)
 
-<!-- Added by: gil_diy, at: Wed 02 Feb 2022 10:27:17 IST -->
+<!-- Added by: gil_diy, at: Wed 02 Feb 2022 11:16:12 IST -->
 
 <!--te-->
 
@@ -412,7 +412,7 @@ res = (mat_corr - np.eye(mat_corr.shape[0])) > corr_threshold
 ```
 
 
-### Approach 4: 
+### Approach 4: Choosing features using Information Gain
 
 ```python
 # use feature importance for feature selection
