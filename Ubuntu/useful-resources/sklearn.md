@@ -28,7 +28,7 @@
          * [Approach 3:](#approach-3)
          * [Approach 4:](#approach-4)
 
-<!-- Added by: gil_diy, at: Wed 02 Feb 2022 09:31:27 IST -->
+<!-- Added by: gil_diy, at: Wed 02 Feb 2022 09:31:38 IST -->
 
 <!--te-->
 
@@ -399,7 +399,7 @@ var_thres = VarianceThreshold(threshold=3)
 feature_variances = var_thres.fit(df)
 print(dict(zip(feature_variances.feature_names_in_, feature_variances.variances_)))
 
-df_after_feature_selection = var_thres.fit_transform(df) # Reduce X to the selected features.
+df_after_feature_selection = var_thres.fit_transform(df) # Fit to data, then transform it
 print("number of columns left: ", df_after_feature_selection.shape[1])
 ```
 
