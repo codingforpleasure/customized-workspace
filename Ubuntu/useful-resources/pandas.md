@@ -82,7 +82,7 @@
          * [Calculate correlation for all numerical columns pairs](#calculate-correlation-for-all-numerical-columns-pairs)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Tue 01 Feb 2022 11:40:26 IST -->
+<!-- Added by: gil_diy, at: Wed 02 Feb 2022 10:14:08 IST -->
 
 <!--te-->
 
@@ -224,6 +224,12 @@ df_relevant = my_df1[~not_relevant_rows]
 
 ```python
 X = df.iloc[:, df.columns.drop('target-column')].values
+```
+
+or 
+
+```python
+df.loc[:, ~df.columns.isin(['target'])]
 ```
 
 #### Get row names
