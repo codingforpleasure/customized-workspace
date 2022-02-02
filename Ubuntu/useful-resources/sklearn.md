@@ -26,11 +26,12 @@
          * [Approach 1: Drop columns with constant values (Like Person's ID)](#approach-1-drop-columns-with-constant-values-like-persons-id)
          * [Approach 2: Variance Thresold (Remove all low-variance features)](#approach-2-variance-thresold-remove-all-low-variance-features)
          * [Approach 3: Remove highly correlated features](#approach-3-remove-highly-correlated-features)
-         * [Approach 4: Choosing features using Information Gain](#approach-4-choosing-features-using-information-gain)
+         * [Approach 4: features selection using Information Gain](#approach-4-features-selection-using-information-gain)
             * [Categorical values](#categorical-values)
             * [Numerical values](#numerical-values)
+         * [Approach 5: features selection using Chi2 Statistical Analysis](#approach-5-features-selection-using-chi2-statistical-analysis)
 
-<!-- Added by: gil_diy, at: Wed 02 Feb 2022 11:17:02 IST -->
+<!-- Added by: gil_diy, at: Wed 02 Feb 2022 11:28:24 IST -->
 
 <!--te-->
 
@@ -414,11 +415,14 @@ res = (mat_corr - np.eye(mat_corr.shape[0])) > corr_threshold
 ```
 
 
-### Approach 4: Choosing features using Information Gain
+### Approach 4: features selection using Information Gain
 
 #### Categorical values
 
 #### Numerical values
+
+### Approach 5: features selection using Chi2 Statistical Analysis
+
 
 
 ```python
