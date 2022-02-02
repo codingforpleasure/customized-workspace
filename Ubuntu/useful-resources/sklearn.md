@@ -28,7 +28,7 @@
          * [Approach 3:](#approach-3)
          * [Approach 4:](#approach-4)
 
-<!-- Added by: gil_diy, at: Wed 02 Feb 2022 08:45:47 IST -->
+<!-- Added by: gil_diy, at: Wed 02 Feb 2022 09:02:57 IST -->
 
 <!--te-->
 
@@ -382,6 +382,21 @@ df['id'].drop(axis = 0, inplace=True)
 ```
 
 ### Approach 2: Variance Thresold (Remove all low-variance features) 
+
+```python
+from sklearn.feature_selection import VarianceThreshold
+
+data = pd.DataFrame({
+                    "feature_A":[9,7,8,3,7,7],
+                    "feature_B":[1,3,5,1,2,1],
+                    "feature_C":[0,0,0,0,0,0],
+                    "feature_D":[1,1,1,1,1,1]
+                    })
+
+var_thres = VarianceThreshold(threshold=0)
+var_thres.fit(data)
+```
+
 ### Approach 3: 
 ### Approach 4: 
 
