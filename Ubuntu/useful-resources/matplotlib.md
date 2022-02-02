@@ -40,7 +40,7 @@
          * [Draw contour lines and filled contours](#draw-contour-lines-and-filled-contours)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Wed 02 Feb 2022 10:03:09 IST -->
+<!-- Added by: gil_diy, at: Wed 02 Feb 2022 10:03:12 IST -->
 
 <!--te-->
 
@@ -51,9 +51,8 @@
 Choose the color map available from:
 [See all colors](https://astromsshin.github.io/science/code/matplotlib_cm/index.html)
 
-
+i.e:
 ```python
-
 sns.heatmap(df.corr(), cmap=plt.cm.gist_stern,annot=True )
 ```
 
