@@ -24,7 +24,7 @@
       * [Pipeline](#pipeline)
       * [Feature Selection](#feature-selection)
 
-<!-- Added by: gil_diy, at: Wed 02 Feb 2022 08:24:54 IST -->
+<!-- Added by: gil_diy, at: Wed 02 Feb 2022 08:26:12 IST -->
 
 <!--te-->
 
@@ -178,6 +178,32 @@ Explained very well here for creating a concise code neat [Link](https://www.you
 ### Cross-validation  
 
 Cross-validation is an approach that you can use to estimate the performance of a machine learning algorithm with less variance than a single train-test set split.
+
+
+##### Kfold
+
+
+**Steps for K-folded cross-validation**
+
+1. Split the dataset into K equal partitions (or "folds")
+
+2. Use fold 1 as **testing set** and the union of other folds as the **training set**
+
+3. Calculate **testing accuarcy**
+
+4. Repeat steps 2 and 3 K times, using a **different fold** as the testing set each time.
+
+5. Use the **average testing accuracy** as the estimate of out-of-sample accuracy.
+
+
+
+<p align="center"> <!-- style="width:400px;" -->
+  <img src="images/labeling_example.png" title="tool tip here">
+</p>
+<p align="center" style="width:200px;">
+  <img src="images/machine-learning/5_folds_example.png" title="check it">
+</p>
+
 It works by splitting the dataset into k-parts (e.g. k = 5 or k = 10). Each split of the data is called a fold.
 
 The algorithm is trained on **k − 1** folds with one held back and tested on the held back fold. This is repeated so that each fold of the dataset is given a chance to be the held back test set. 
@@ -202,29 +228,6 @@ Advantages of **train/test split**:
 * Runs K times faster than K-fold cross-validation
 
 * Simpler to examine the details results of testing process
-
-
-
-##### Kfold
-
-
-**Steps for K-folded cross-validation**
-
-1. Split the dataset into K equal partitions (or "folds")
-
-2. Use fold 1 as **testing set** and the union of other folds as the **training set**
-
-3. Calculate **testing accuarcy**
-
-4. Repeat steps 2 and 3 K times, using a **different fold** as the testing set each time.
-
-5. Use the **average testing accuracy** as the estimate of out-of-sample accuracy.
-
-
-<p align="center">
-  <img src="images/machine-learning/5_folds_example.png" title="check it">
-</p>
-
 
 A great code example which demostrates what is done under the hood can be seen below:
 
