@@ -21,10 +21,10 @@
          * [Stratified Shuffle Split](#stratified-shuffle-split)
          * [StratifiedKFold](#stratifiedkfold)
          * [LeaveOneOut](#leaveoneout)
-         * [Pipeline](#pipeline)
+      * [Pipeline](#pipeline)
       * [Feature Selection](#feature-selection)
 
-<!-- Added by: gil_diy, at: Wed 02 Feb 2022 07:05:17 IST -->
+<!-- Added by: gil_diy, at: Wed 02 Feb 2022 07:06:03 IST -->
 
 <!--te-->
 
@@ -293,7 +293,7 @@ X_train =  [[1 2][3 4]], X_test =  [[5 6]] , y_train = [1 2], y_test =  [3]
 *****************************************************************************
 ```
 
-### Pipeline
+## Pipeline
 
 ```python
 y_train = normalized_df['TenYearCHD']
