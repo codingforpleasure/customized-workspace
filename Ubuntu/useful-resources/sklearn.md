@@ -23,8 +23,10 @@
          * [LeaveOneOut](#leaveoneout)
       * [Pipeline](#pipeline)
       * [Feature Selection](#feature-selection)
+         * [Approach 1: Drop columns with constant values (Like Person's ID)](#approach-1-drop-columns-with-constant-values-like-persons-id)
+         * [Approach 1: Drop columns with constant values (Like Person's ID)](#approach-1-drop-columns-with-constant-values-like-persons-id-1)
 
-<!-- Added by: gil_diy, at: Wed 02 Feb 2022 08:38:37 IST -->
+<!-- Added by: gil_diy, at: Wed 02 Feb 2022 08:43:39 IST -->
 
 <!--te-->
 
@@ -369,7 +371,15 @@ Curse of dimensionality [Link](https://en.wikipedia.org/wiki/Curse_of_dimensiona
 
 I'll be showing 10 different techniques of feature selections:
 
-###
+### Approach 1: Drop columns with constant values (Like Person's ID)
+
+```python
+import pandas as pd
+
+df['id'].drop(axis = 0)
+```
+
+### Approach 1: Drop columns with constant values (Like Person's ID)
 
 ```python
 # use feature importance for feature selection
