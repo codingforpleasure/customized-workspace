@@ -24,11 +24,11 @@
       * [Pipeline](#pipeline)
       * [Feature Selection](#feature-selection)
          * [Approach 1: Drop columns with constant values (Like Person's ID)](#approach-1-drop-columns-with-constant-values-like-persons-id)
-         * [Approach 2:](#approach-2)
+         * [Approach 2: Variance Thresold (Remove all low-variance features)](#approach-2-variance-thresold-remove-all-low-variance-features)
          * [Approach 3:](#approach-3)
          * [Approach 4:](#approach-4)
 
-<!-- Added by: gil_diy, at: Wed 02 Feb 2022 08:44:44 IST -->
+<!-- Added by: gil_diy, at: Wed 02 Feb 2022 08:45:47 IST -->
 
 <!--te-->
 
@@ -381,7 +381,7 @@ import pandas as pd
 df['id'].drop(axis = 0, inplace=True)
 ```
 
-### Approach 2: 
+### Approach 2: Variance Thresold (Remove all low-variance features) 
 ### Approach 3: 
 ### Approach 4: 
 
