@@ -82,7 +82,7 @@
          * [Calculate correlation for all numerical columns pairs](#calculate-correlation-for-all-numerical-columns-pairs)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Wed 02 Feb 2022 11:22:33 IST -->
+<!-- Added by: gil_diy, at: Wed 02 Feb 2022 11:22:57 IST -->
 
 <!--te-->
 
@@ -268,7 +268,7 @@ or
 
 ```python
 numeric_list_types = ['int16', 'int32','int64', 'float16', 'float32', 'float64']
-df.select_dtypes(include='number')
+df.select_dtypes(include=numeric_list_types)
 ```
 
 #### Get categorical columns in pandas
