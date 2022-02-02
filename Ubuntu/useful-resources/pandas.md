@@ -82,7 +82,7 @@
          * [Calculate correlation for all numerical columns pairs](#calculate-correlation-for-all-numerical-columns-pairs)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Wed 02 Feb 2022 10:14:08 IST -->
+<!-- Added by: gil_diy, at: Wed 02 Feb 2022 11:22:29 IST -->
 
 <!--te-->
 
@@ -261,6 +261,13 @@ df_new = df.rename(columns={'A': 'a'}, index={'ONE': 'one'}, inplace=True)
 
 #### Get numeric columns in pandas
 ```python
+df.select_dtypes(include='number')
+```
+
+or 
+
+```python
+numeric_list_types = ['int16', 'int32','int64', 'float16', 'float32', 'float64']
 df.select_dtypes(include='number')
 ```
 
