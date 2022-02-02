@@ -24,7 +24,7 @@
       * [Pipeline](#pipeline)
       * [Feature Selection](#feature-selection)
 
-<!-- Added by: gil_diy, at: Wed 02 Feb 2022 08:26:50 IST -->
+<!-- Added by: gil_diy, at: Wed 02 Feb 2022 08:38:32 IST -->
 
 <!--te-->
 
@@ -364,6 +364,11 @@ for classifier in classifiers:
 [Deep Dive into pipeline](https://www.kaggle.com/baghern/a-deep-dive-into-sklearn-pipelines)
 
 ## Feature Selection
+
+Curse of dimensionality [Link](https://en.wikipedia.org/wiki/Curse_of_dimensionality)
+I'll be showing 10 different techniques of feature selections:
+
+###
 
 ```python
 # use feature importance for feature selection
