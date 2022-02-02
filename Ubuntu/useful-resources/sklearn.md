@@ -25,10 +25,10 @@
       * [Feature Selection](#feature-selection)
          * [Approach 1: Drop columns with constant values (Like Person's ID)](#approach-1-drop-columns-with-constant-values-like-persons-id)
          * [Approach 2: Variance Thresold (Remove all low-variance features)](#approach-2-variance-thresold-remove-all-low-variance-features)
-         * [Approach 3: Remove highly correlaten features](#approach-3-remove-highly-correlaten-features)
+         * [Approach 3: Remove highly correlated features](#approach-3-remove-highly-correlated-features)
          * [Approach 4:](#approach-4)
 
-<!-- Added by: gil_diy, at: Wed 02 Feb 2022 09:34:29 IST -->
+<!-- Added by: gil_diy, at: Wed 02 Feb 2022 09:36:18 IST -->
 
 <!--te-->
 
@@ -403,7 +403,9 @@ df_after_feature_selection = var_thres.fit_transform(df) # Fit to data, then tra
 print("number of columns left: ", df_after_feature_selection.shape[1])
 ```
 
-### Approach 3: Remove highly correlaten features
+### Approach 3: Remove highly correlated features
+
+
 ### Approach 4: 
 
 ```python
