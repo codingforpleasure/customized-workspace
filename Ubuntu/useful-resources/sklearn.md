@@ -24,7 +24,7 @@
       * [Pipeline](#pipeline)
       * [Feature Selection](#feature-selection)
 
-<!-- Added by: gil_diy, at: Wed 02 Feb 2022 08:23:36 IST -->
+<!-- Added by: gil_diy, at: Wed 02 Feb 2022 08:24:51 IST -->
 
 <!--te-->
 
@@ -361,7 +361,6 @@ for classifier in classifiers:
 [Reference1](https://youtu.be/QdBy02ExhGI)
 
 [Reference2](https://www.youtube.com/watch?v=OFyyWcw2cyM)
-
 
 [Deep Dive into pipeline](https://www.kaggle.com/baghern/a-deep-dive-into-sklearn-pipelines)
 
