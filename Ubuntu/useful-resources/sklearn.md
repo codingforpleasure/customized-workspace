@@ -28,7 +28,7 @@
          * [Approach 3:](#approach-3)
          * [Approach 4:](#approach-4)
 
-<!-- Added by: gil_diy, at: Wed 02 Feb 2022 09:03:00 IST -->
+<!-- Added by: gil_diy, at: Wed 02 Feb 2022 09:24:49 IST -->
 
 <!--te-->
 
@@ -385,16 +385,22 @@ df['id'].drop(axis = 0, inplace=True)
 
 ```python
 from sklearn.feature_selection import VarianceThreshold
+import pandas as pd
 
-data = pd.DataFrame({
-                    "feature_A":[9,7,8,3,7,7],
-                    "feature_B":[1,3,5,1,2,1],
-                    "feature_C":[0,0,0,0,0,0],
-                    "feature_D":[1,1,1,1,1,1]
-                    })
+df = pd.DataFrame({
+  "feature_A": [9, 7, 8, 3, 7, 7],
+  "feature_B": [1, 3, 5, 1, 2, 1],
+  "feature_C": [0, 0, 0, 0, 0, 0],
+  "feature_D": [1, 1, 1, 1, 1, 1]
+})
 
-var_thres = VarianceThreshold(threshold=0)
-var_thres.fit(data)
+# Removing all columns which their variance is less than 3
+var_thres = VarianceThreshold(threshold=3)
+feature_variances = var_thres.fit(df)
+print(dict(zip(feature_variances.feature_names_in_, feature_variances.variances_)))
+
+df_after_feature_selection = var_thres.fit_transform(df)
+print("number of columns left: ", df_after_feature_selection.shape[1])
 ```
 
 ### Approach 3: 
