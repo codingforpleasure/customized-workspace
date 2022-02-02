@@ -27,8 +27,10 @@
          * [Approach 2: Variance Thresold (Remove all low-variance features)](#approach-2-variance-thresold-remove-all-low-variance-features)
          * [Approach 3: Remove highly correlated features](#approach-3-remove-highly-correlated-features)
          * [Approach 4: Choosing features using Information Gain](#approach-4-choosing-features-using-information-gain)
+            * [Categorical values](#categorical-values)
+            * [Numerical values](#numerical-values)
 
-<!-- Added by: gil_diy, at: Wed 02 Feb 2022 11:16:12 IST -->
+<!-- Added by: gil_diy, at: Wed 02 Feb 2022 11:17:02 IST -->
 
 <!--te-->
 
@@ -413,6 +415,11 @@ res = (mat_corr - np.eye(mat_corr.shape[0])) > corr_threshold
 
 
 ### Approach 4: Choosing features using Information Gain
+
+#### Categorical values
+
+#### Numerical values
+
 
 ```python
 # use feature importance for feature selection
