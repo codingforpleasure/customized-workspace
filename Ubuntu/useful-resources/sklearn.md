@@ -11,20 +11,20 @@
          * [Imputation of missing values](#imputation-of-missing-values)
             * [Missing value for numeric columns](#missing-value-for-numeric-columns)
             * [Missing value for categorical columns](#missing-value-for-categorical-columns)
-            * [Kfold and Cross-validation](#kfold-and-cross-validation)
-               * [Kfold](#kfold)
-               * [cross_val_score](#cross_val_score)
          * [ColumnTransformer (Super nice)](#columntransformer-super-nice)
          * [Dimension Reduction techniques](#dimension-reduction-techniques)
             * [PCA (Principal Component Analysis)](#pca-principal-component-analysis)
       * [Splitting data](#splitting-data)
+         * [Cross-validation](#cross-validation)
+               * [Kfold](#kfold)
+               * [cross_val_score](#cross_val_score)
          * [Stratified Shuffle Split](#stratified-shuffle-split)
          * [StratifiedKFold](#stratifiedkfold)
          * [LeaveOneOut](#leaveoneout)
       * [Pipeline](#pipeline)
       * [Feature Selection](#feature-selection)
 
-<!-- Added by: gil_diy, at: Wed 02 Feb 2022 07:06:03 IST -->
+<!-- Added by: gil_diy, at: Wed 02 Feb 2022 07:08:13 IST -->
 
 <!--te-->
 
@@ -139,7 +139,45 @@ The same way as I have written above, just place the most common value in the em
 imputer_categorical = SimpleImputer(missing_values=np.nan, strategy='most_frequent')
 ```
 
-#### Kfold and Cross-validation  
+
+### ColumnTransformer (Super nice)
+
+Explained very well here for creating a concise code neat [Link](https://www.youtube.com/watch?v=OTEokOJ12ao)
+
+[Reference](https://machinelearningmastery.com/columntransformer-for-numerical-and-categorical-data/)
+
+
+### Dimension Reduction techniques
+
+#### PCA (Principal Component Analysis)
+
+```python    
+    scaler = StandardScaler()
+    X_train = scaler.fit_transform(X_train)
+
+    print("reduced_data.shape: ", X_train.shape)
+
+    # PCA - for PCA for Data Visualization
+    reduced_data = PCA(n_components=2).fit_transform(X_train)
+
+    print("reduced_data.shape: ", reduced_data.shape)
+
+    plt.figure(figsize=(8, 6))
+    
+    colors = {0: 'green', 1: 'black'}
+
+    plt.scatter(reduced_data[:, 0], reduced_data[:, 1], c=Y_train_dry_or_wet.apply(lambda x: colors[x]))
+    plt.xlabel('principal component 1')
+    plt.ylabel('principal component 2')
+
+    plt.show()
+```
+
+
+## Splitting data
+
+
+### Cross-validation  
 
 Cross-validation is an approach that you can use to estimate the performance of a machine learning algorithm with less variance than a single train-test set split.
 It works by splitting the dataset into k-parts (e.g. k = 5 or k = 10). Each split of the data is called a fold.
@@ -191,41 +229,6 @@ results = cross_val_score(model, X, Y, cv=kfold)
 print("Accuracy: %.2f%% (%.2f%%)" % (results.mean()*100, results.std()*100))
 ```
 
-### ColumnTransformer (Super nice)
-
-Explained very well here for creating a concise code neat [Link](https://www.youtube.com/watch?v=OTEokOJ12ao)
-
-[Reference](https://machinelearningmastery.com/columntransformer-for-numerical-and-categorical-data/)
-
-
-### Dimension Reduction techniques
-
-#### PCA (Principal Component Analysis)
-
-```python    
-    scaler = StandardScaler()
-    X_train = scaler.fit_transform(X_train)
-
-    print("reduced_data.shape: ", X_train.shape)
-
-    # PCA - for PCA for Data Visualization
-    reduced_data = PCA(n_components=2).fit_transform(X_train)
-
-    print("reduced_data.shape: ", reduced_data.shape)
-
-    plt.figure(figsize=(8, 6))
-    
-    colors = {0: 'green', 1: 'black'}
-
-    plt.scatter(reduced_data[:, 0], reduced_data[:, 1], c=Y_train_dry_or_wet.apply(lambda x: colors[x]))
-    plt.xlabel('principal component 1')
-    plt.ylabel('principal component 2')
-
-    plt.show()
-```
-
-
-## Splitting data
 
 ### Stratified Shuffle Split
 
