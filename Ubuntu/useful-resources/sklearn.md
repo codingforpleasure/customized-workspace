@@ -24,7 +24,7 @@
       * [Pipeline](#pipeline)
       * [Feature Selection](#feature-selection)
 
-<!-- Added by: gil_diy, at: Wed 02 Feb 2022 08:38:35 IST -->
+<!-- Added by: gil_diy, at: Wed 02 Feb 2022 08:38:37 IST -->
 
 <!--te-->
 
@@ -366,6 +366,7 @@ for classifier in classifiers:
 ## Feature Selection
 
 Curse of dimensionality [Link](https://en.wikipedia.org/wiki/Curse_of_dimensionality)
+
 I'll be showing 10 different techniques of feature selections:
 
 ###
