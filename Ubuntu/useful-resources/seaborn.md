@@ -1,5 +1,6 @@
 <!--ts-->
    * [seaborn: statistical data visualization](#seaborn-statistical-data-visualization)
+      * [color pallete](#color-pallete)
       * [Plot line chart](#plot-line-chart)
       * [Set Title](#set-title)
       * [Set width of the figure](#set-width-of-the-figure)
@@ -14,11 +15,22 @@
       * [Histograms](#histograms)
       * [Density plots (KDE - Kernel density estimate (KDE))](#density-plots-kde---kernel-density-estimate-kde)
 
-<!-- Added by: gil_diy, at: Wed 26 Jan 2022 21:13:24 IST -->
+<!-- Added by: gil_diy, at: Wed 02 Feb 2022 10:04:09 IST -->
 
 <!--te-->
 
 # seaborn: statistical data visualization
+
+## color pallete
+
+Choose the color map available from here:
+
+[See all colors](https://astromsshin.github.io/science/code/matplotlib_cm/index.html)
+
+i.e:
+```python
+sns.heatmap(df.corr(), cmap=plt.cm.gist_stern,annot=True )
+```
 
 ## Plot line chart
 
