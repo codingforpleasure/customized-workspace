@@ -24,7 +24,7 @@
          * [Pipeline](#pipeline)
       * [Feature Selection](#feature-selection)
 
-<!-- Added by: gil_diy, at: Wed 02 Feb 2022 06:46:05 IST -->
+<!-- Added by: gil_diy, at: Wed 02 Feb 2022 07:05:17 IST -->
 
 <!--te-->
 
@@ -152,6 +152,7 @@ The result is a more reliable estimate of the performance of the algorithm on ne
 on unseen data.
 
 
+
 ##### Kfold
 
 ```python
@@ -252,7 +253,7 @@ from xgboost import XGBClassifier
 from sklearn.model_selection import StratifiedKFold
 from sklearn.model_selection import cross_val_score
 # load data
-dataset = loadtxt( ' pima-indians-diabetes.csv ' , delimiter=",")
+dataset = loadtxt('pima-indians-diabetes.csv' , delimiter=",")
 # split data into X and y
 X = dataset[:,0:8]
 Y = dataset[:,8]
