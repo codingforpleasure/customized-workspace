@@ -31,7 +31,7 @@
             * [Numerical values](#numerical-values)
          * [Approach 5: features selection using Chi2 Statistical Analysis](#approach-5-features-selection-using-chi2-statistical-analysis)
 
-<!-- Added by: gil_diy, at: Wed 02 Feb 2022 11:47:26 IST -->
+<!-- Added by: gil_diy, at: Wed 02 Feb 2022 12:43:44 IST -->
 
 <!--te-->
 
@@ -414,7 +414,7 @@ print("number of columns left: ", df_after_feature_selection.shape[1])
 # we will focus on half of the matrix and ignore the actual diagonal
 
 column_idx = np.where((np.triu(mat_corr) - np.eye(mat_corr.shape[0])) > 0.8)
-
+print()
 ```
 
 
@@ -426,6 +426,13 @@ column_idx = np.where((np.triu(mat_corr) - np.eye(mat_corr.shape[0])) > 0.8)
 
 ### Approach 5: features selection using Chi2 Statistical Analysis
 
+```python
+from sklearn.feature_selection import chi2
+
+f_p_values=chi2(X_train,y_train)
+```
+
+--------------------------------------------------------
 
 
 ```python
