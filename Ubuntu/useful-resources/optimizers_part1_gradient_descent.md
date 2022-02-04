@@ -2,7 +2,7 @@
    * [Gradient Descent](#gradient-descent)
       * [Understanding Gradient](#understanding-gradient)
 
-<!-- Added by: gil_diy, at: Fri 04 Feb 2022 10:21:03 IST -->
+<!-- Added by: gil_diy, at: Fri 04 Feb 2022 10:26:05 IST -->
 
 <!--te-->
 
@@ -26,3 +26,7 @@ if __name__ == '__main__':
 	plt.title('f(x) = $x^2$')
 	plt.show()
 ```
+
+<p align="center"> <!-- style="width:400px;" -->
+  <img src="images/machine-learning/gradient_descent_basic_function.png" title="tool tip here">
+</p>
