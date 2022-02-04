@@ -3,7 +3,7 @@
       * [Understanding Gradient](#understanding-gradient)
       * [First implementation](#first-implementation)
 
-<!-- Added by: gil_diy, at: Fri 04 Feb 2022 11:36:21 IST -->
+<!-- Added by: gil_diy, at: Fri 04 Feb 2022 11:39:02 IST -->
 
 <!--te-->
 
@@ -71,3 +71,9 @@ if __name__ == '__main__':
     plt.title('f(x) = $x^2$')
     plt.show()
 ```
+
+In each iteration, `x -= lr*grad_fn(x)` makes it always moving to the minimum, and we can also plot the trajectory of x:
+
+<p align="center"> <!-- style="width:400px;" -->
+  <img src="images/machine-learning/gradient_descent_basic_function_2.png" title="tool tip here">
+</p>
