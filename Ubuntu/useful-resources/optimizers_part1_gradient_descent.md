@@ -2,7 +2,7 @@
    * [Gradient Descent](#gradient-descent)
       * [Understanding Gradient](#understanding-gradient)
 
-<!-- Added by: gil_diy, at: Fri 04 Feb 2022 11:21:59 IST -->
+<!-- Added by: gil_diy, at: Fri 04 Feb 2022 11:22:06 IST -->
 
 <!--te-->
 
@@ -63,7 +63,8 @@ if __name__ == '__main__':
     plt.plot(x_range, y)  # Original graph
 
     # No need so many points so we are skipping 
-    # every 4 consecutive points.
+    # every 4 consecutive points:
+
     plt.plot(x_output[::5], y_output[::5], 'rx')
     plt.title('f(x) = $x^2$')
     plt.show()main()	
