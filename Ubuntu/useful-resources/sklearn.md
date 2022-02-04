@@ -32,7 +32,7 @@
          * [Approach 5: features selection using Chi2 Statistical Analysis](#approach-5-features-selection-using-chi2-statistical-analysis)
       * [<a href="https://youtu.be/_AWQ4Myxlcg?list=PLZoTAELRMXVPgjwJ8VyRoqmfNs2CJwhVH" rel="nofollow">Link</a>](#link)
 
-<!-- Added by: gil_diy, at: Wed 02 Feb 2022 12:46:29 IST -->
+<!-- Added by: gil_diy, at: Fri 04 Feb 2022 10:26:12 IST -->
 
 <!--te-->
 
@@ -427,16 +427,14 @@ print()
 [Link](http://www.my-website.com)
 
 #### Numerical values
-```python
 
+```python
 from sklearn.feature_selection import mutual_info_regression
 # determine the mutual information
 mutual_info = mutual_info_regression(X_train.fillna(0), y_train)
-
 ```
 
-
-[Link](http://www.my-website.com)
+[Link](https://youtu.be/i-MF3CXWWEM?list=PLZoTAELRMXVPgjwJ8VyRoqmfNs2CJwhVH)
 
 ### Approach 5: features selection using Chi2 Statistical Analysis
 
