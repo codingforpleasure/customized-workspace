@@ -1,9 +1,10 @@
 <!--ts-->
    * [Optimizers](#optimizers)
       * [Optimizers](#optimizers-1)
+         * [Adam (Adaptive Moment Estimation)](#adam-adaptive-moment-estimation)
          * [LBFGS](#lbfgs)
 
-<!-- Added by: gil_diy, at: Mon 31 Jan 2022 19:55:22 IST -->
+<!-- Added by: gil_diy, at: Fri 04 Feb 2022 09:26:14 IST -->
 
 <!--te-->
 
@@ -12,6 +13,13 @@
 [Pytorch optimizers](https://pytorch.org/docs/1.9.1/optim.html)
 
 ## Optimizers 
+
+
+### Adam (Adaptive Moment Estimation)
+
+```python
+
+```
 
 ### LBFGS 
 
@@ -26,7 +34,30 @@ The optimizer was used it in [Neural Style Transfer](https://youtu.be/B22nIUhXo4
 <img src="https://render.githubusercontent.com/render/math?math=\theta">
  -->
 
-Cost function <img src="https://render.githubusercontent.com/render/math?math=J( \theta )">,  want to <img src="https://render.githubusercontent.com/render/math?math=min\thetaJ(\theta)">
-Given <img src="https://render.githubusercontent.com/render/math?math=\theta"> , we have code that can compute
+Cost function $J(\theta)$, Want $min_\theta J(\theta)$.
+Given $\theta$, we have code that can compute:
+* $J(\theta)$
+* $\frac{d}{d\theta_j}J(\theta)$               (for $j=0,1,...n$)
 
-<img src="https://render.githubusercontent.com/render/math?math=sum_{\substack{0<i<m\0<j<n}}">
+**Gradient descent:**
+
+Repeat {
+
+   $\theta_j = \theta_j - \alpha\frac{d}{d\theta_j}J(\theta)$
+
+}
+
+Other than Gradient descent, a more advance is:
+
+* Conjugate gradient
+* BFGS
+* L-BFGS
+
+The advantages are:
+* no need to manually pick $\alpha$ (Learning rate)
+* Often faster than gradient descent (Those algorithms converge much faster)
+
+Disadvatages:
+* More complex
+
+
