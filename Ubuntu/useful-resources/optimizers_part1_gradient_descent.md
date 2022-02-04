@@ -2,7 +2,7 @@
    * [Gradient Descent](#gradient-descent)
       * [Understanding Gradient](#understanding-gradient)
 
-<!-- Added by: gil_diy, at: Fri 04 Feb 2022 11:21:56 IST -->
+<!-- Added by: gil_diy, at: Fri 04 Feb 2022 11:21:59 IST -->
 
 <!--te-->
 
