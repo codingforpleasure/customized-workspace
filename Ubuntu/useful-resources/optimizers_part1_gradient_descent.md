@@ -2,7 +2,7 @@
    * [Gradient Descent](#gradient-descent)
       * [Understanding Gradient](#understanding-gradient)
 
-<!-- Added by: gil_diy, at: Fri 04 Feb 2022 11:22:06 IST -->
+<!-- Added by: gil_diy, at: Fri 04 Feb 2022 11:22:50 IST -->
 
 <!--te-->
 
@@ -67,5 +67,5 @@ if __name__ == '__main__':
 
     plt.plot(x_output[::5], y_output[::5], 'rx')
     plt.title('f(x) = $x^2$')
-    plt.show()main()	
+    plt.show()
 ```
