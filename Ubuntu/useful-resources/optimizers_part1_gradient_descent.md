@@ -3,7 +3,7 @@
       * [Understanding Gradient](#understanding-gradient)
       * [First implementation](#first-implementation)
 
-<!-- Added by: gil_diy, at: Fri 04 Feb 2022 11:36:18 IST -->
+<!-- Added by: gil_diy, at: Fri 04 Feb 2022 11:36:21 IST -->
 
 <!--te-->
 
