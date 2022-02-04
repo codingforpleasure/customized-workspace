@@ -1,10 +1,12 @@
 <!--ts-->
    * [Optimizers](#optimizers)
       * [Optimizers](#optimizers-1)
+         * [Gradient Descent](#gradient-descent)
+         * [Stochastic Gradient Descent](#stochastic-gradient-descent)
          * [Adam (Adaptive Moment Estimation)](#adam-adaptive-moment-estimation)
          * [LBFGS](#lbfgs)
 
-<!-- Added by: gil_diy, at: Fri 04 Feb 2022 09:26:14 IST -->
+<!-- Added by: gil_diy, at: Fri 04 Feb 2022 09:31:56 IST -->
 
 <!--te-->
 
@@ -13,6 +15,11 @@
 [Pytorch optimizers](https://pytorch.org/docs/1.9.1/optim.html)
 
 ## Optimizers 
+
+
+### Gradient Descent
+
+### Stochastic Gradient Descent
 
 
 ### Adam (Adaptive Moment Estimation)
