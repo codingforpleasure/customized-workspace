@@ -2,7 +2,7 @@
    * [Gradient Descent](#gradient-descent)
       * [Understanding Gradient](#understanding-gradient)
 
-<!-- Added by: gil_diy, at: Fri 04 Feb 2022 11:20:37 IST -->
+<!-- Added by: gil_diy, at: Fri 04 Feb 2022 11:21:28 IST -->
 
 <!--te-->
 
@@ -61,6 +61,9 @@ if __name__ == '__main__':
 
     plt.figure(figsize=[8, 4])
     plt.plot(x_range, y)  # Original graph
+
+    # No need to so many points so we are skipping 
+    # few points.
     plt.plot(x_output[::5], y_output[::5], 'rx')
     plt.title('f(x) = $x^2$')
     plt.show()main()	
