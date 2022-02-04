@@ -6,7 +6,7 @@
          * [Adam (Adaptive Moment Estimation)](#adam-adaptive-moment-estimation)
          * [LBFGS](#lbfgs)
 
-<!-- Added by: gil_diy, at: Fri 04 Feb 2022 10:06:09 IST -->
+<!-- Added by: gil_diy, at: Fri 04 Feb 2022 10:06:14 IST -->
 
 <!--te-->
 
@@ -16,7 +16,7 @@
 
 ## Optimizers 
 
-[Link](home/gil_diy/my_documentation_helper/optimizers/optimizers.html)
+[Link](//home/gil_diy/my_documentation_helper/optimizers/optimizers.html)
 
 ### Gradient Descent
 
