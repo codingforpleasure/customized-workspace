@@ -2,7 +2,7 @@
    * [Gradient Descent](#gradient-descent)
       * [Understanding Gradient](#understanding-gradient)
 
-<!-- Added by: gil_diy, at: Fri 04 Feb 2022 11:22:50 IST -->
+<!-- Added by: gil_diy, at: Fri 04 Feb 2022 11:23:52 IST -->
 
 <!--te-->
 
@@ -48,7 +48,8 @@ def gd(init_x, grad_fn, lr=0.01, n_iter=10):
 
 if __name__ == '__main__':
     init_x_val = -1
-    grad_func = lambda x: 2 * x
+    
+    grad_func = lambda x: 2 * x # derivative
 
     x_output = gd(init_x=init_x_val,
                   grad_fn=grad_func,
