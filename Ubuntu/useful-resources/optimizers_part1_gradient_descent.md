@@ -1,8 +1,9 @@
 <!--ts-->
    * [Gradient Descent](#gradient-descent)
       * [Understanding Gradient](#understanding-gradient)
+      * [First implementation](#first-implementation)
 
-<!-- Added by: gil_diy, at: Fri 04 Feb 2022 11:34:33 IST -->
+<!-- Added by: gil_diy, at: Fri 04 Feb 2022 11:36:18 IST -->
 
 <!--te-->
 
@@ -33,7 +34,7 @@ if __name__ == '__main__':
 
 
 
-
+## First implementation
 
 ```python
 def gd(init_x, grad_fn, lr=0.01, n_iter=10):
