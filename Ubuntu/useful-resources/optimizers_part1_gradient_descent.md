@@ -2,8 +2,9 @@
    * [Gradient Descent](#gradient-descent)
       * [Understanding Gradient](#understanding-gradient)
       * [First implementation](#first-implementation)
+      * [Optimizing parameters](#optimizing-parameters)
 
-<!-- Added by: gil_diy, at: Fri 04 Feb 2022 11:39:02 IST -->
+<!-- Added by: gil_diy, at: Fri 04 Feb 2022 11:40:21 IST -->
 
 <!--te-->
 
@@ -77,3 +78,8 @@ In each iteration, `x -= lr*grad_fn(x)` makes it always moving to the minimum, a
 <p align="center"> <!-- style="width:400px;" -->
   <img src="images/machine-learning/gradient_descent_basic_function_2.png" title="tool tip here">
 </p>
+
+Starting from -1, x descent to 0 gradually. Also notice that it moves faster at the beginning and slows down when approaching the goal, this is because the absolute gradient is higher at start.
+
+## Optimizing parameters
+
