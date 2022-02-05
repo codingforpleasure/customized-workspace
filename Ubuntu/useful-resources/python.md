@@ -26,7 +26,7 @@
       * [Counting words with a counter](#counting-words-with-a-counter)
       * [Useful packages](#useful-packages)
 
-<!-- Added by: gil_diy, at: Tue 01 Feb 2022 16:28:09 IST -->
+<!-- Added by: gil_diy, at: Sat 05 Feb 2022 05:12:20 IST -->
 
 <!--te-->
 
@@ -69,6 +69,20 @@ print('3) ', *fruits) # <- How neat is this!
 1)  ['lemon', 'pear', 'watermelon', 'tomato']
 2)  lemon pear watermelon tomato
 3)  lemon pear watermelon tomato
+```
+
+```python
+
+def my_func(*args):
+    num_args = len(args)
+
+
+x = np.
+y = x
+a = 
+b = 
+my_func(x,y,a,b)
+
 ```
 
 #### Example #2: Using * multiple times:
