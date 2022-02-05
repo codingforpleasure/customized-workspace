@@ -38,9 +38,10 @@
             * [Legend text size](#legend-text-size)
             * [Ticks text size](#ticks-text-size)
          * [Draw contour lines and filled contours](#draw-contour-lines-and-filled-contours)
+      * [Writing mathematical expression](#writing-mathematical-expression)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Wed 02 Feb 2022 10:03:15 IST -->
+<!-- Added by: gil_diy, at: Sat 05 Feb 2022 03:10:21 IST -->
 
 <!--te-->
 
@@ -849,6 +850,9 @@ ax.yaxis.label.set_size(18)
 plt.contourf(x1, x2, y_pred, alpha=0.3, cmap=custom_cmap)
 ```
 
+## Writing mathematical expression
+
+[Link](https://matplotlib.org/2.0.2/users/mathtext.html)
 
 # Reference
 
