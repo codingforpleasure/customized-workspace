@@ -7,7 +7,7 @@
          * [LBFGS](#lbfgs)
    * [References](#references)
 
-<!-- Added by: gil_diy, at: Sat 05 Feb 2022 12:23:04 IST -->
+<!-- Added by: gil_diy, at: Sat 05 Feb 2022 12:26:19 IST -->
 
 <!--te-->
 
@@ -73,3 +73,5 @@ Disadvatages:
 # References
 
 [Link](https://youtu.be/mdKjMPmcWjY)
+
+[Stochastic Gradient Descent vs Gradient Descent](https://youtu.be/FpDsDn-fBKA)
