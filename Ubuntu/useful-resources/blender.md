@@ -8,6 +8,7 @@
          * [How to grab and move up by 1m on the z axis?](#how-to-grab-and-move-up-by-1m-on-the-z-axis)
       * [What is edit mode?](#what-is-edit-mode)
       * [What is object mode?](#what-is-object-mode)
+      * [Reset position to the origin axis](#reset-position-to-the-origin-axis)
       * [Give color to objects](#give-color-to-objects)
       * [What is edit mode?](#what-is-edit-mode-1)
       * [Pick all loop](#pick-all-loop)
@@ -33,7 +34,7 @@
       * [Jeff Heaton explaines](#jeff-heaton-explaines)
       * [Useful web pages](#useful-web-pages)
 
-<!-- Added by: gil_diy, at: Sat 05 Feb 2022 15:43:14 IST -->
+<!-- Added by: gil_diy, at: Sat 05 Feb 2022 15:58:55 IST -->
 
 <!--te-->
 
@@ -100,6 +101,11 @@ shape of your mesh
 You'll be able to move, rotate, and resize
 
 
+## Reset position to the origin axis
+
+press on the object and press `alt+g`
+
+
 Description | Hotkey | Reference
 ------------|--------|------------
 Add object | `Shift+a` | 
@@ -134,7 +140,7 @@ Zoom region | `Shift + b` | [Link](https://docs.blender.org/manual/en/latest/edi
 reset view (in case you get lost) | `Home`
 
 
-**gil**
+
 
 ## Give color to objects
 
