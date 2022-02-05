@@ -9,6 +9,7 @@
       * [What is edit mode?](#what-is-edit-mode)
       * [What is object mode?](#what-is-object-mode)
       * [Reset position to the origin axis](#reset-position-to-the-origin-axis)
+      * [Disable selection of object](#disable-selection-of-object)
       * [Give color to objects](#give-color-to-objects)
       * [What is edit mode?](#what-is-edit-mode-1)
       * [Pick all loop](#pick-all-loop)
@@ -34,7 +35,7 @@
       * [Jeff Heaton explaines](#jeff-heaton-explaines)
       * [Useful web pages](#useful-web-pages)
 
-<!-- Added by: gil_diy, at: Sat 05 Feb 2022 15:58:55 IST -->
+<!-- Added by: gil_diy, at: Sat 05 Feb 2022 16:21:35 IST -->
 
 <!--te-->
 
@@ -139,6 +140,10 @@ Edge Slide | `gg`
 Zoom region | `Shift + b` | [Link](https://docs.blender.org/manual/en/latest/editors/3dview/navigate/navigation.html#zoom-region)
 reset view (in case you get lost) | `Home`
 
+
+## Disable selection of object
+
+[Link](https://blender.stackexchange.com/a/144962/140491)
 
 
 
