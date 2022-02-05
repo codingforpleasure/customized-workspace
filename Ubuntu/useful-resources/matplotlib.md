@@ -41,7 +41,7 @@
       * [Writing mathematical expression](#writing-mathematical-expression)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Sat 05 Feb 2022 03:10:21 IST -->
+<!-- Added by: gil_diy, at: Sat 05 Feb 2022 03:13:37 IST -->
 
 <!--te-->
 
@@ -852,7 +852,7 @@ plt.contourf(x1, x2, y_pred, alpha=0.3, cmap=custom_cmap)
 
 ## Writing mathematical expression
 
-[Link](https://matplotlib.org/2.0.2/users/mathtext.html)
+[Link](https://matplotlib.org/stable/tutorials/text/mathtext.html?highlight=writing%20mathematical%20expressions)
 
 # Reference
 
