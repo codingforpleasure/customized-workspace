@@ -4,7 +4,7 @@
       * [First implementation](#first-implementation)
       * [Optimizing parameters](#optimizing-parameters)
 
-<!-- Added by: gil_diy, at: Fri 04 Feb 2022 11:40:21 IST -->
+<!-- Added by: gil_diy, at: Sat 05 Feb 2022 15:29:52 IST -->
 
 <!--te-->
 
@@ -82,4 +82,6 @@ In each iteration, `x -= lr*grad_fn(x)` makes it always moving to the minimum, a
 Starting from -1, x descent to 0 gradually. Also notice that it moves faster at the beginning and slows down when approaching the goal, this is because the absolute gradient is higher at start.
 
 ## Optimizing parameters
+
+
 
