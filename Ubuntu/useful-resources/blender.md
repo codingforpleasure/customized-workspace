@@ -10,6 +10,7 @@
       * [What is edit mode?](#what-is-edit-mode-1)
       * [What is object mode?](#what-is-object-mode)
       * [Reset position to the origin axis](#reset-position-to-the-origin-axis)
+      * [Materials](#materials)
       * [Give color to objects](#give-color-to-objects)
       * [Pick all loop](#pick-all-loop)
       * [Apply scale](#apply-scale)
@@ -34,7 +35,7 @@
       * [Jeff Heaton explaines](#jeff-heaton-explaines)
       * [Useful web pages](#useful-web-pages)
 
-<!-- Added by: gil_diy, at: Sat 05 Feb 2022 16:58:25 IST -->
+<!-- Added by: gil_diy, at: Sat 05 Feb 2022 20:01:40 IST -->
 
 <!--te-->
 
@@ -155,6 +156,8 @@ Zoom region | `Shift + b` | [Link](https://docs.blender.org/manual/en/latest/edi
 reset view (in case you get lost) | `Home`
 round edge loop in a sphere shape | `Shift+Alt+s`
 
+
+## Materials
 
 
 
