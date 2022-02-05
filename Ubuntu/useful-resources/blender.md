@@ -2,16 +2,15 @@
    * [Blender](#blender)
       * [Search in blender](#search-in-blender)
       * [Increase UI size](#increase-ui-size)
-      * [Main hotkey conventions](#main-hotkey-conventions)
          * [Transforms Hotkeys](#transforms-hotkeys)
+      * [What is edit mode?](#what-is-edit-mode)
+      * [Main hotkey conventions](#main-hotkey-conventions)
          * [How to rotate in 45 degrees in the y axis?](#how-to-rotate-in-45-degrees-in-the-y-axis)
          * [How to grab and move up by 1m on the z axis?](#how-to-grab-and-move-up-by-1m-on-the-z-axis)
-      * [What is edit mode?](#what-is-edit-mode)
+      * [What is edit mode?](#what-is-edit-mode-1)
       * [What is object mode?](#what-is-object-mode)
       * [Reset position to the origin axis](#reset-position-to-the-origin-axis)
-      * [Disable selection of object](#disable-selection-of-object)
       * [Give color to objects](#give-color-to-objects)
-      * [What is edit mode?](#what-is-edit-mode-1)
       * [Pick all loop](#pick-all-loop)
       * [Apply scale](#apply-scale)
       * [Add Bevel](#add-bevel)
@@ -35,7 +34,7 @@
       * [Jeff Heaton explaines](#jeff-heaton-explaines)
       * [Useful web pages](#useful-web-pages)
 
-<!-- Added by: gil_diy, at: Sat 05 Feb 2022 16:21:35 IST -->
+<!-- Added by: gil_diy, at: Sat 05 Feb 2022 16:45:28 IST -->
 
 <!--te-->
 
@@ -49,6 +48,30 @@ A pop-up menu with access to all Blender tools is available press `F3`
 ## Increase UI size
 
 [Link](https://www.youtube.com/watch?v=Py9CHZkHh4U)
+
+### Transforms Hotkeys
+
+
+ Description | Hotkey
+------------|-----
+Grab | G (pick axis and press: x,y,z)
+Rotate | R (pick axis and press: x,y,z)
+Scale | S (pick axis and press: x,y,z)
+Orbiting (Rotating the view) | press the middle button on the mouse
+Pan | press the middle button on the mouse and Shift
+
+
+## What is edit mode?
+
+Description | Hotkey
+------------|-----
+vertex | `1`
+Edge | `2`
+Phase | `3`
+Adding Loop Cut | `Ctrl + R`
+on `Phase` you can press `i` ([Link](https://youtu.be/3cM2eUaSAPQ?t=1064)) | internal
+on `Phase` you can press `e` ([Link](https://youtu.be/3cM2eUaSAPQ?t=1064))| external
+
 
 ## Main hotkey conventions
 
@@ -65,16 +88,7 @@ for example:
 `s` vs `Alt + s`
 
 
-### Transforms Hotkeys
 
-
- Description | Hotkey
-------------|-----
-Grab | G (pick axis and press: x,y,z)
-Rotate | R (pick axis and press: x,y,z)
-Scale | S (pick axis and press: x,y,z)
-Orbiting (Rotating the view) | press the middle button on the mouse
-Pan | press the middle button on the mouse and Shift
 
 
 ### How to rotate in 45 degrees in the y axis?
@@ -141,9 +155,6 @@ Zoom region | `Shift + b` | [Link](https://docs.blender.org/manual/en/latest/edi
 reset view (in case you get lost) | `Home`
 
 
-## Disable selection of object
-
-[Link](https://blender.stackexchange.com/a/144962/140491)
 
 
 
@@ -153,16 +164,7 @@ reset view (in case you get lost) | `Home`
 
 [Link](https://youtu.be/kVXTmUWK_nI?t=2070)
 
-## What is edit mode?
 
-Description | Hotkey
-------------|-----
-vertex | `1`
-Edge | `2`
-Phase | `3`
-Adding Loop Cut | `Ctrl + R`
-on `Phase` you can press `i` ([Link](https://youtu.be/3cM2eUaSAPQ?t=1064)) | internal
-on `Phase` you can press `e` ([Link](https://youtu.be/3cM2eUaSAPQ?t=1064))| external
 
 ## Pick all loop
 
