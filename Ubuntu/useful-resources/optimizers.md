@@ -5,8 +5,9 @@
          * [Stochastic Gradient Descent](#stochastic-gradient-descent)
          * [Adam (Adaptive Moment Estimation)](#adam-adaptive-moment-estimation)
          * [LBFGS](#lbfgs)
+   * [References](#references)
 
-<!-- Added by: gil_diy, at: Fri 04 Feb 2022 10:08:07 IST -->
+<!-- Added by: gil_diy, at: Sat 05 Feb 2022 12:23:04 IST -->
 
 <!--te-->
 
@@ -69,3 +70,6 @@ Disadvatages:
 * More complex
 
 
+# References
+
+[Link](https://youtu.be/mdKjMPmcWjY)
