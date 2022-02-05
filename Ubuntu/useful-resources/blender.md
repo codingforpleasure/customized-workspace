@@ -34,7 +34,7 @@
       * [Jeff Heaton explaines](#jeff-heaton-explaines)
       * [Useful web pages](#useful-web-pages)
 
-<!-- Added by: gil_diy, at: Sat 05 Feb 2022 16:45:28 IST -->
+<!-- Added by: gil_diy, at: Sat 05 Feb 2022 16:58:21 IST -->
 
 <!--te-->
 
@@ -153,7 +153,7 @@ Extrude | `e`
 Edge Slide | `gg`
 Zoom region | `Shift + b` | [Link](https://docs.blender.org/manual/en/latest/editors/3dview/navigate/navigation.html#zoom-region)
 reset view (in case you get lost) | `Home`
-
+round edge loop in a sphere shape | Shift+Alt+s
 
 
 
