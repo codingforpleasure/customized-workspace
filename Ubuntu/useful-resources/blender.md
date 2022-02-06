@@ -21,7 +21,7 @@
       * [Applying shade smooth](#applying-shade-smooth)
       * [Adding Subdivision surface](#adding-subdivision-surface)
       * [Render images with transparent background](#render-images-with-transparent-background)
-      * [Shader Editor](#shader-editor)
+      * [Shader Editor (Node)](#shader-editor-node)
       * [Annotate in Blender](#annotate-in-blender)
       * [Installing addon in Blender](#installing-addon-in-blender)
       * [Python with Blender](#python-with-blender)
@@ -36,7 +36,7 @@
       * [Jeff Heaton explaines](#jeff-heaton-explaines)
       * [Useful web pages](#useful-web-pages)
 
-<!-- Added by: gil_diy, at: Sun 06 Feb 2022 09:34:55 IST -->
+<!-- Added by: gil_diy, at: Sun 06 Feb 2022 09:35:27 IST -->
 
 <!--te-->
 
@@ -219,7 +219,9 @@ Then press again `F12`
 
 [Reference](https://www.youtube.com/watch?v=Z6UrNz6Pvz0)
 
-## Shader Editor 
+## Shader Editor (Node)
+
+Materials, lights and backgrounds are all defined using a network of shading nodes. These nodes output values, vectors, colors and shaders.
 
 [Link](https://www.youtube.com/watch?v=K02hlKyoWNI)
 
