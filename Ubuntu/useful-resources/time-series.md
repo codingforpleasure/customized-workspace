@@ -8,7 +8,7 @@
       * [Statsmodels](#statsmodels)
       * [Useful packages for time series](#useful-packages-for-time-series)
 
-<!-- Added by: gil_diy, at: Sun 06 Feb 2022 19:10:39 IST -->
+<!-- Added by: gil_diy, at: Sun 06 Feb 2022 19:10:55 IST -->
 
 <!--te-->
 
@@ -94,7 +94,7 @@ or the window can consist of four values:
 </p>
 
 
-[https://corporatefinanceinstitute.com/resources/knowledge/trading-investing/exponentially-weighted-moving-average-ewma/](Reference)
+[Reference](https://corporatefinanceinstitute.com/resources/knowledge/trading-investing/exponentially-weighted-moving-average-ewma/)
 
 ## Statsmodels
 
