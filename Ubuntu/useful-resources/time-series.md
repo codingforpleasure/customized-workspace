@@ -4,10 +4,11 @@
       * [Slicing date-time type](#slicing-date-time-type)
       * [Rolling Window Statistics](#rolling-window-statistics)
       * [Expanding Window Statistics](#expanding-window-statistics)
+      * [Exponentially Weighted Moving Average (EWMA)](#exponentially-weighted-moving-average-ewma)
       * [Statsmodels](#statsmodels)
       * [Useful packages for time series](#useful-packages-for-time-series)
 
-<!-- Added by: gil_diy, at: Fri 14 Jan 2022 08:25:40 IST -->
+<!-- Added by: gil_diy, at: Sun 06 Feb 2022 18:44:06 IST -->
 
 <!--te-->
 
@@ -64,6 +65,11 @@ new_dataframe.columns = ['min','mean','max', 'load+1']
 
 print(new_dataframe.head(10))
 ```
+
+
+## Exponentially Weighted Moving Average (EWMA)
+
+
 
 ## Statsmodels
 
