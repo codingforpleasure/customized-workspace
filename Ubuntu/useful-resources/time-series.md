@@ -8,7 +8,7 @@
       * [Statsmodels](#statsmodels)
       * [Useful packages for time series](#useful-packages-for-time-series)
 
-<!-- Added by: gil_diy, at: Sun 06 Feb 2022 19:03:53 IST -->
+<!-- Added by: gil_diy, at: Sun 06 Feb 2022 19:04:44 IST -->
 
 <!--te-->
 
@@ -75,7 +75,7 @@ The moving average is designed as such that older observations are given lower w
 
 The only decision a user of the EWMA must make is the parameter alpha. The parameter decides how important the current observation is in the calculation of the EWMA. The higher the value of alpha, the more closely the EWMA tracks the original time series.
 
-The window size can be of size two, current value and the previous:
+The window size can be of size two, current/original value and the previous:
 
 <p align="center" style="width:400px;" >
   <img src="images/time-series/Exponentially_Weighted_Moving_Average_1.jpg" title="tool tip here">
