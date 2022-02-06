@@ -8,7 +8,7 @@
       * [Statsmodels](#statsmodels)
       * [Useful packages for time series](#useful-packages-for-time-series)
 
-<!-- Added by: gil_diy, at: Sun 06 Feb 2022 18:44:06 IST -->
+<!-- Added by: gil_diy, at: Sun 06 Feb 2022 18:52:17 IST -->
 
 <!--te-->
 
@@ -69,6 +69,11 @@ print(new_dataframe.head(10))
 
 ## Exponentially Weighted Moving Average (EWMA)
 
+The Exponentially Weighted Moving Average (EWMA) is a quantitative or statistical measure used to model or describe a time series. The EWMA is widely used in finance, the main applications being technical analysis and volatility modeling.
+
+The moving average is designed as such that older observations are given lower weights. The weights fall exponentially as the data point gets older – hence the name exponentially weighted.
+
+The only decision a user of the EWMA must make is the parameter alpha. The parameter decides how important the current observation is in the calculation of the EWMA. The higher the value of alpha, the more closely the EWMA tracks the original time series.
 
 
 ## Statsmodels
