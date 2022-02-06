@@ -8,7 +8,7 @@
       * [Statsmodels](#statsmodels)
       * [Useful packages for time series](#useful-packages-for-time-series)
 
-<!-- Added by: gil_diy, at: Sun 06 Feb 2022 19:05:18 IST -->
+<!-- Added by: gil_diy, at: Sun 06 Feb 2022 19:05:47 IST -->
 
 <!--te-->
 
@@ -83,13 +83,13 @@ The window size can be of size two, current value and the previous:
 
 or the window can consist of three values:
 
-<p align="center" style="width:400px;" >
+<p align="center" style="width:450px;" >
   <img src="images/time-series/Exponentially_Weighted_Moving_Average_2.jpg" title="tool tip here">
 </p>
 
 or the window can consist of four values:
 
-<p align="center" style="width:400px;" >
+<p align="center" style="width:500px;" >
   <img src="images/time-series/Exponentially_Weighted_Moving_Average_3.jpg" title="tool tip here">
 </p>
 
