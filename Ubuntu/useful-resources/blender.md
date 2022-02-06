@@ -36,7 +36,7 @@
       * [Jeff Heaton explaines](#jeff-heaton-explaines)
       * [Useful web pages](#useful-web-pages)
 
-<!-- Added by: gil_diy, at: Sun 06 Feb 2022 09:35:27 IST -->
+<!-- Added by: gil_diy, at: Sun 06 Feb 2022 09:37:05 IST -->
 
 <!--te-->
 
@@ -222,6 +222,8 @@ Then press again `F12`
 ## Shader Editor (Node)
 
 Materials, lights and backgrounds are all defined using a network of shading nodes. These nodes output values, vectors, colors and shaders.
+
+[Blender documnetation about shader](https://docs.blender.org/manual/en/latest/render/shader_nodes/index.html)
 
 [Link](https://www.youtube.com/watch?v=K02hlKyoWNI)
 
