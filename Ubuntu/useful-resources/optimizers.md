@@ -5,11 +5,13 @@
          * [Stochastic Gradient Descent (SGD)](#stochastic-gradient-descent-sgd)
          * [Stochastic Gradient Descent with mini-batches](#stochastic-gradient-descent-with-mini-batches)
          * [SGD With momentum (with Exponentially Weighted Moving Average)](#sgd-with-momentum-with-exponentially-weighted-moving-average)
+         * [Adagradient (Adaptive gradient)](#adagradient-adaptive-gradient)
+         * [RMSprop (Root mean square prop)](#rmsprop-root-mean-square-prop)
          * [Adam (Adaptive Moment Estimation)](#adam-adaptive-moment-estimation)
          * [LBFGS](#lbfgs)
    * [References](#references)
 
-<!-- Added by: gil_diy, at: Sun 06 Feb 2022 19:20:13 IST -->
+<!-- Added by: gil_diy, at: Sun 06 Feb 2022 19:57:41 IST -->
 
 <!--te-->
 
@@ -31,7 +33,11 @@
 
 The above shows gradient descent with momentum term, where the `lr` is actually fixed for all parameters on different dimension. 
 
-### 
+### Adagradient (Adaptive gradient)
+
+### RMSprop (Root mean square prop)
+
+which can also accelerate gradient descent. RMSprop uses the same concept of the exponentially weighted average of gradient as gradient descent with momentum but the difference is parameter update.
 
 ### Adam (Adaptive Moment Estimation)
 
