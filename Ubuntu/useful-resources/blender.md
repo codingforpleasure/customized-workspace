@@ -9,6 +9,7 @@
          * [How to grab and move up by 1m on the z axis?](#how-to-grab-and-move-up-by-1m-on-the-z-axis)
       * [What is edit mode?](#what-is-edit-mode-1)
       * [What is object mode?](#what-is-object-mode)
+      * [Operations in object mode](#operations-in-object-mode)
       * [Reset position to the origin axis](#reset-position-to-the-origin-axis)
       * [Materials](#materials)
       * [Give color to objects](#give-color-to-objects)
@@ -36,7 +37,7 @@
       * [Jeff Heaton explaines](#jeff-heaton-explaines)
       * [Useful web pages](#useful-web-pages)
 
-<!-- Added by: gil_diy, at: Sun 06 Feb 2022 09:37:11 IST -->
+<!-- Added by: gil_diy, at: Sun 06 Feb 2022 10:57:36 IST -->
 
 <!--te-->
 
@@ -117,6 +118,11 @@ shape of your mesh
 
 You'll be able to move, rotate, and resize
 
+## Operations in object mode
+
+Description | Hotkey | Reference
+------------|--------|------------
+Duplicate | `Shift+d` | Duplicates an object
 
 ## Reset position to the origin axis
 
@@ -140,7 +146,7 @@ Focus on object in the horizon | click on the object and press period key `.` |
 Add Object | `Shift+A` | 
 Search Bar | `F3` | 
 Switch between `Edit mode` to `Object mode` | tab |
-Duplicate | `Shift+d` |
+
 Seperate | `p` |
 Xray | `Alt+z` |
 See properies (Rotate/Position) | `n` |
