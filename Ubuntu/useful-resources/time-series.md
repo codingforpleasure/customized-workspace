@@ -5,9 +5,10 @@
       * [Rolling Window Statistics](#rolling-window-statistics)
       * [Expanding Window Statistics](#expanding-window-statistics)
       * [Exponentially Weighted Moving Average (EWMA)](#exponentially-weighted-moving-average-ewma)
+      * [Statsmodels](#statsmodels)
       * [Useful packages for time series](#useful-packages-for-time-series)
 
-<!-- Added by: gil_diy, at: Sun 06 Feb 2022 19:01:10 IST -->
+<!-- Added by: gil_diy, at: Sun 06 Feb 2022 19:01:46 IST -->
 
 <!--te-->
 
@@ -85,6 +86,13 @@ or three values:
 <p align="center"> <!-- style="width:400px;" -->
   <img src="images/time-series/Exponentially_Weighted_Moving_Average_2.jpg" title="tool tip here">
 </p>
+
+or four values:
+
+<p align="center"> <!-- style="width:400px;" -->
+  <img src="images/time-series/Exponentially_Weighted_Moving_Average_3.jpg" title="tool tip here">
+</p>
+
 ## Statsmodels
 
 ```python
