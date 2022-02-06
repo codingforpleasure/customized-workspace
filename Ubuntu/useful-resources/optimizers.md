@@ -2,12 +2,14 @@
    * [Optimizers](#optimizers)
       * [Optimizers](#optimizers-1)
          * [Gradient Descent](#gradient-descent)
-         * [Stochastic Gradient Descent](#stochastic-gradient-descent)
+         * [Stochastic Gradient Descent (SGD)](#stochastic-gradient-descent-sgd)
+         * [Stochastic Gradient Descent with mini-batches](#stochastic-gradient-descent-with-mini-batches)
+         * [SGD With momentum (with Exponentially Weighted Moving Average)](#sgd-with-momentum-with-exponentially-weighted-moving-average)
          * [Adam (Adaptive Moment Estimation)](#adam-adaptive-moment-estimation)
          * [LBFGS](#lbfgs)
    * [References](#references)
 
-<!-- Added by: gil_diy, at: Sat 05 Feb 2022 12:26:24 IST -->
+<!-- Added by: gil_diy, at: Sun 06 Feb 2022 19:19:44 IST -->
 
 <!--te-->
 
@@ -21,8 +23,13 @@
 
 ### Gradient Descent
 
-### Stochastic Gradient Descent
+### Stochastic Gradient Descent (SGD)
 
+### Stochastic Gradient Descent with mini-batches
+
+### SGD With momentum (with Exponentially Weighted Moving Average)
+
+### 
 
 ### Adam (Adaptive Moment Estimation)
 
