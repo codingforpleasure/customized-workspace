@@ -47,6 +47,7 @@
       * [Removing rows/columns](#removing-rowscolumns)
       * [Inserting data](#inserting-data)
       * [Multiplication:](#multiplication)
+         * [Cross product](#cross-product)
          * [Vectorized dot product of vectors](#vectorized-dot-product-of-vectors)
          * [Vectorized outer product](#vectorized-outer-product)
          * [Vectorized elementwise multiplication](#vectorized-elementwise-multiplication)
@@ -75,7 +76,7 @@
       * [Flip image with numpy](#flip-image-with-numpy)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Sat 29 Jan 2022 11:15:25 IST -->
+<!-- Added by: gil_diy, at: Sun 06 Feb 2022 19:01:44 IST -->
 
 <!--te-->
 
@@ -763,6 +764,16 @@ np.insert([1,23,45,9,100], list(range(2,6, 2)), 2)
 
 
 ## Multiplication:
+
+### Cross product
+
+```python
+u = [2,3,1]
+v = [0,5,4]
+np.cross(u,v)
+```
+
+
 
 ### Vectorized dot product of vectors
 The dot product or **scalar product** is an algebraic operation that takes two equal-length sequences of numbers (usually coordinate vectors) and returns a single number.
