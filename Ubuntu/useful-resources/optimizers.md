@@ -9,7 +9,7 @@
          * [LBFGS](#lbfgs)
    * [References](#references)
 
-<!-- Added by: gil_diy, at: Sun 06 Feb 2022 19:19:44 IST -->
+<!-- Added by: gil_diy, at: Sun 06 Feb 2022 19:20:13 IST -->
 
 <!--te-->
 
@@ -28,6 +28,8 @@
 ### Stochastic Gradient Descent with mini-batches
 
 ### SGD With momentum (with Exponentially Weighted Moving Average)
+
+The above shows gradient descent with momentum term, where the `lr` is actually fixed for all parameters on different dimension. 
 
 ### 
 
