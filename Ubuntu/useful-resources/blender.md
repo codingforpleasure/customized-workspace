@@ -32,12 +32,13 @@
          * [Get the datapath from GUI (Very useful)](#get-the-datapath-from-gui-very-useful)
          * [Debugging with Pycharm](#debugging-with-pycharm)
             * [How to set Breakpoint and debug in pycharm code in Blender?](#how-to-set-breakpoint-and-debug-in-pycharm-code-in-blender)
+      * [Customizing Blender](#customizing-blender)
       * [Animation](#animation)
          * [Interpolation](#interpolation)
       * [Jeff Heaton explaines](#jeff-heaton-explaines)
       * [Useful web pages](#useful-web-pages)
 
-<!-- Added by: gil_diy, at: Sun 06 Feb 2022 10:57:36 IST -->
+<!-- Added by: gil_diy, at: Sun 06 Feb 2022 12:30:37 IST -->
 
 <!--te-->
 
@@ -359,6 +360,8 @@ to local path (Python) then choose:
 **Step 7:**
 Now you can debug code in pycharm flawllesly, 
 with F8 and F7.
+
+## Customizing Blender
 
 
 
