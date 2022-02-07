@@ -11,7 +11,7 @@
          * [LBFGS](#lbfgs)
    * [References](#references)
 
-<!-- Added by: gil_diy, at: Mon 07 Feb 2022 09:32:12 IST -->
+<!-- Added by: gil_diy, at: Mon 07 Feb 2022 10:05:31 IST -->
 
 <!--te-->
 
@@ -28,6 +28,8 @@
 ### Stochastic Gradient Descent (SGD)
 
 SGD adds some randomness into traditional gradient descent
+
+Stochastic Gradient Descent is a common method for optimization. It is conceptually simple and can often be efficiently implemented. However, it features a parameter (the step size) that needs to be manually tuned
 
 ### Stochastic Gradient Descent with mini-batches
 
