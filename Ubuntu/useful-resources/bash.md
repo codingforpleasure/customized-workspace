@@ -55,10 +55,11 @@ Table of Contents
          * [Produce range with step in bash](#produce-range-with-step-in-bash)
       * [Working with numbers in bash](#working-with-numbers-in-bash)
          * [square root of a decimal number](#square-root-of-a-decimal-number)
+         * [Truncate a decimal number](#truncate-a-decimal-number)
       * [Tricks](#tricks)
       * [<em><strong>Great reference</strong></em>](#great-reference)
 
-<!-- Added by: gil_diy, at: Mon 07 Feb 2022 12:43:44 IST -->
+<!-- Added by: gil_diy, at: Mon 07 Feb 2022 12:43:53 IST -->
 
 <!--te-->
 
@@ -702,7 +703,7 @@ for i in `seq 0 2 10`; do echo $i; done
 ```bash
 number=136
 square_root=`echo "scale=$number; sqrt($number)" | bc` # 11.66190379
-``
+```
 
 ### Truncate a decimal number
 
