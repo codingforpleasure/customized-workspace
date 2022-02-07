@@ -11,7 +11,7 @@
          * [LBFGS](#lbfgs)
    * [References](#references)
 
-<!-- Added by: gil_diy, at: Mon 07 Feb 2022 09:31:46 IST -->
+<!-- Added by: gil_diy, at: Mon 07 Feb 2022 09:32:12 IST -->
 
 <!--te-->
 
@@ -32,6 +32,8 @@ SGD adds some randomness into traditional gradient descent
 ### Stochastic Gradient Descent with mini-batches
 
 ### SGD With momentum (with Exponentially Weighted Moving Average)
+
+momentum helps to accelerate the process of SGD.
 
 The above shows gradient descent with momentum term, where the `lr` is actually fixed for all parameters on different dimension. 
 
