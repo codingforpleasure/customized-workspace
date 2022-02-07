@@ -13,7 +13,7 @@
          * [LBFGS](#lbfgs)
    * [References](#references)
 
-<!-- Added by: gil_diy, at: Mon 07 Feb 2022 11:37:55 IST -->
+<!-- Added by: gil_diy, at: Mon 07 Feb 2022 11:38:08 IST -->
 
 <!--te-->
 
@@ -23,7 +23,7 @@
 
 ## Optimizers 
 
-<p align="center" style="width:400px;" >
+<p align="center" style="width:500px;" >
   <img src="images/optimizers/collection_of_optimizers.gif" title="tool tip here">
 </p>
 
