@@ -11,7 +11,7 @@
          * [LBFGS](#lbfgs)
    * [References](#references)
 
-<!-- Added by: gil_diy, at: Sun 06 Feb 2022 19:57:41 IST -->
+<!-- Added by: gil_diy, at: Mon 07 Feb 2022 09:31:46 IST -->
 
 <!--te-->
 
@@ -26,6 +26,8 @@
 ### Gradient Descent
 
 ### Stochastic Gradient Descent (SGD)
+
+SGD adds some randomness into traditional gradient descent
 
 ### Stochastic Gradient Descent with mini-batches
 
