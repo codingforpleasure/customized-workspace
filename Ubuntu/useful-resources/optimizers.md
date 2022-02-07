@@ -7,12 +7,13 @@
          * [SGD With momentum (with Exponentially Weighted Moving Average)](#sgd-with-momentum-with-exponentially-weighted-moving-average)
          * [Adagradient (Adaptive gradient)](#adagradient-adaptive-gradient)
             * [Diagonal AdaGrad (this version is the one used in practice)](#diagonal-adagrad-this-version-is-the-one-used-in-practice)
+            * [Ada Delta](#ada-delta)
          * [RMSprop (Root mean square prop)](#rmsprop-root-mean-square-prop)
          * [Adam (Adaptive Moment Estimation)](#adam-adaptive-moment-estimation)
          * [LBFGS](#lbfgs)
    * [References](#references)
 
-<!-- Added by: gil_diy, at: Mon 07 Feb 2022 10:47:16 IST -->
+<!-- Added by: gil_diy, at: Mon 07 Feb 2022 11:23:51 IST -->
 
 <!--te-->
 
@@ -79,6 +80,8 @@ The above shows gradient descent with momentum term, where the `lr` is actually 
 #### Diagonal AdaGrad (this version is the one used in practice)
 
 * its main characteristic is to maintain and adapts one learning rate per dimension.
+
+#### Ada Delta
 
 ### RMSprop (Root mean square prop)
 
