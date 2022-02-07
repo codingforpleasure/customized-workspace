@@ -13,7 +13,7 @@
          * [LBFGS](#lbfgs)
    * [References](#references)
 
-<!-- Added by: gil_diy, at: Mon 07 Feb 2022 11:25:36 IST -->
+<!-- Added by: gil_diy, at: Mon 07 Feb 2022 11:37:43 IST -->
 
 <!--te-->
 
@@ -22,6 +22,10 @@
 [Pytorch optimizers](https://pytorch.org/docs/1.9.1/optim.html)
 
 ## Optimizers 
+
+<p align="center" style="width:400px;" >
+  <img src="images/collection_of_optimizers.gif" title="tool tip here">
+</p>
 
 [Link](file:///home/gil_diy/my_documentation_helper/opencv/opencv.html)
 
