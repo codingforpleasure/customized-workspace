@@ -12,7 +12,7 @@
          * [LBFGS](#lbfgs)
    * [References](#references)
 
-<!-- Added by: gil_diy, at: Mon 07 Feb 2022 10:21:15 IST -->
+<!-- Added by: gil_diy, at: Mon 07 Feb 2022 10:27:51 IST -->
 
 <!--te-->
 
@@ -54,6 +54,16 @@ While **standard stochastic subgradient **methods mainly follow a predetermined 
 * It performs larger updates (e.g. high learning rates) for those parameters that are related to infrequent features.
 
 * Smaller updates (low learning rates) for frequent one.
+
+
+Advantages of Using AdaGrad
+
+1) It eliminates the need to manually tune the learning rate
+
+2) Convergence is faster and more reliable – than simple SGD when the scaling of the weights is unequal.
+
+3) It is not very sensitive to the size of the master step
+
 
 #### Diagonal AdaGrad (this version is the one used in practice)
 
