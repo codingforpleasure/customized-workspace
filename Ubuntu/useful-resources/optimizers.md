@@ -12,7 +12,7 @@
          * [LBFGS](#lbfgs)
    * [References](#references)
 
-<!-- Added by: gil_diy, at: Mon 07 Feb 2022 10:47:09 IST -->
+<!-- Added by: gil_diy, at: Mon 07 Feb 2022 10:47:16 IST -->
 
 <!--te-->
 
@@ -61,7 +61,7 @@ The above shows gradient descent with momentum term, where the `lr` is actually 
 * Smaller updates (low learning rates) for frequent one.
 
 
-<p align="center"style="width:500px;" >
+<p align="center"style="width:600px;" >
   <img src="images/optimizers/adagrad.jpg" title="tool tip here">
 </p>
 
