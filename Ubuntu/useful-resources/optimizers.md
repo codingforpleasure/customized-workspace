@@ -12,7 +12,7 @@
          * [LBFGS](#lbfgs)
    * [References](#references)
 
-<!-- Added by: gil_diy, at: Mon 07 Feb 2022 10:31:27 IST -->
+<!-- Added by: gil_diy, at: Mon 07 Feb 2022 10:31:36 IST -->
 
 <!--te-->
 
@@ -32,7 +32,7 @@ SGD adds some randomness into traditional gradient descent
 
 Stochastic Gradient Descent is a common method for optimization. It is conceptually simple and can often be efficiently implemented. However, it features a parameter (the step size) that needs to be manually tuned
 
-**Drawbacks:**
+**Drawbacks**
 
 * **standard stochastic subgradient** methods mainly follow a predetermined procedural scheme that **disregards the characteristics of the data being observed.**
 
