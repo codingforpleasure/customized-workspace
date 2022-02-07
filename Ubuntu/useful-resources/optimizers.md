@@ -11,7 +11,7 @@
          * [LBFGS](#lbfgs)
    * [References](#references)
 
-<!-- Added by: gil_diy, at: Mon 07 Feb 2022 10:05:31 IST -->
+<!-- Added by: gil_diy, at: Mon 07 Feb 2022 10:15:45 IST -->
 
 <!--te-->
 
@@ -40,6 +40,10 @@ momentum helps to accelerate the process of SGD.
 The above shows gradient descent with momentum term, where the `lr` is actually fixed for all parameters on different dimension. 
 
 ### Adagradient (Adaptive gradient)
+
+* Adagradient is one of the options to automate tuning for the step size.
+
+While **standard stochastic subgradient **methods mainly follow a predetermined procedural scheme that **disregards the characteristics of the data being observed**. In contrast, AdaGrad’s algorithms dynamically incorporate knowledge of the geometry of the data observed in earlier iterations to perform more informative gradient-based learning
 
 ### RMSprop (Root mean square prop)
 
