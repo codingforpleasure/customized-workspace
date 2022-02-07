@@ -12,7 +12,7 @@
          * [LBFGS](#lbfgs)
    * [References](#references)
 
-<!-- Added by: gil_diy, at: Mon 07 Feb 2022 10:20:49 IST -->
+<!-- Added by: gil_diy, at: Mon 07 Feb 2022 10:21:10 IST -->
 
 <!--te-->
 
@@ -51,7 +51,9 @@ While **standard stochastic subgradient **methods mainly follow a predetermined 
 
 * The learning rate is adapted component-wise to the parameters by incorporating knowledge of past observations.
 
-* It performs larger updates (e.g. high learning rates) for those parameters that are related to infrequent features and smaller updates (low learning rates) for frequent one.
+* It performs larger updates (e.g. high learning rates) for those parameters that are related to infrequent features.
+
+* smaller updates (low learning rates) for frequent one.
 
 #### Diagonal AdaGrad (this version is the one used in practice)
 
