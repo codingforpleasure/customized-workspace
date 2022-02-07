@@ -12,7 +12,7 @@
          * [LBFGS](#lbfgs)
    * [References](#references)
 
-<!-- Added by: gil_diy, at: Mon 07 Feb 2022 10:31:36 IST -->
+<!-- Added by: gil_diy, at: Mon 07 Feb 2022 10:33:25 IST -->
 
 <!--te-->
 
@@ -25,6 +25,9 @@
 [Link](file:///home/gil_diy/my_documentation_helper/opencv/opencv.html)
 
 ### Gradient Descent
+
+It calculates the error for each example in the training dataset,
+however, it only updates the model **after all training examples have been evaluated**. 
 
 ### Stochastic Gradient Descent (SGD)
 
