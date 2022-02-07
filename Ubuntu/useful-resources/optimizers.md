@@ -12,7 +12,7 @@
          * [LBFGS](#lbfgs)
    * [References](#references)
 
-<!-- Added by: gil_diy, at: Mon 07 Feb 2022 10:28:41 IST -->
+<!-- Added by: gil_diy, at: Mon 07 Feb 2022 10:31:02 IST -->
 
 <!--te-->
 
@@ -32,6 +32,10 @@ SGD adds some randomness into traditional gradient descent
 
 Stochastic Gradient Descent is a common method for optimization. It is conceptually simple and can often be efficiently implemented. However, it features a parameter (the step size) that needs to be manually tuned
 
+Drawbacks:
+
+* **standard stochastic subgradient** methods mainly follow a predetermined procedural scheme that **disregards the characteristics of the data being observed**.
+
 ### Stochastic Gradient Descent with mini-batches
 
 ### SGD With momentum (with Exponentially Weighted Moving Average)
@@ -44,9 +48,7 @@ The above shows gradient descent with momentum term, where the `lr` is actually 
 
 * Adagradient is one of the options to automate tuning for the step size.
 
-While **standard stochastic subgradient **methods mainly follow a predetermined procedural scheme that **disregards the characteristics of the data being observed**. 
-
-* In contrast, **AdaGrad’s algorithms dynamically incorporate knowledge of the geometry of the data observed in earlier iterations to perform more informative gradient-based learning** .
+* **AdaGrad’s algorithms dynamically incorporate knowledge of the geometry of the data observed in earlier iterations to perform more informative gradient-based learning** .
 
 
 * The learning rate is adapted component-wise to the parameters by incorporating knowledge of past observations.
