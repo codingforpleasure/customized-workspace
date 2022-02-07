@@ -12,7 +12,7 @@
          * [LBFGS](#lbfgs)
    * [References](#references)
 
-<!-- Added by: gil_diy, at: Mon 07 Feb 2022 10:21:10 IST -->
+<!-- Added by: gil_diy, at: Mon 07 Feb 2022 10:21:13 IST -->
 
 <!--te-->
 
@@ -53,7 +53,7 @@ While **standard stochastic subgradient **methods mainly follow a predetermined 
 
 * It performs larger updates (e.g. high learning rates) for those parameters that are related to infrequent features.
 
-* smaller updates (low learning rates) for frequent one.
+* Smaller updates (low learning rates) for frequent one.
 
 #### Diagonal AdaGrad (this version is the one used in practice)
 
