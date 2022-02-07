@@ -13,7 +13,7 @@
          * [LBFGS](#lbfgs)
    * [References](#references)
 
-<!-- Added by: gil_diy, at: Mon 07 Feb 2022 11:24:24 IST -->
+<!-- Added by: gil_diy, at: Mon 07 Feb 2022 11:25:36 IST -->
 
 <!--te-->
 
@@ -74,7 +74,8 @@ The above shows gradient descent with momentum term, where the `lr` is actually 
 
 3) It is not very sensitive to the size of the master step
 
-[Link](https://www.youtube.com/watch?v=EGt-UOIIdDk)
+
+[youtube explanation](https://www.youtube.com/watch?v=EGt-UOIIdDk)
 
 
 #### Diagonal AdaGrad (this version is the one used in practice)
