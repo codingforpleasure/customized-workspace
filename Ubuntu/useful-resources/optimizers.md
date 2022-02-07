@@ -12,7 +12,7 @@
          * [LBFGS](#lbfgs)
    * [References](#references)
 
-<!-- Added by: gil_diy, at: Mon 07 Feb 2022 10:33:25 IST -->
+<!-- Added by: gil_diy, at: Mon 07 Feb 2022 10:33:32 IST -->
 
 <!--te-->
 
@@ -27,7 +27,7 @@
 ### Gradient Descent
 
 It calculates the error for each example in the training dataset,
-however, it only updates the model **after all training examples have been evaluated**. 
+however, it only updates the model **after all training examples have been evaluated.** 
 
 ### Stochastic Gradient Descent (SGD)
 
