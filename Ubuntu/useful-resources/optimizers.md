@@ -11,7 +11,7 @@
          * [LBFGS](#lbfgs)
    * [References](#references)
 
-<!-- Added by: gil_diy, at: Mon 07 Feb 2022 10:15:48 IST -->
+<!-- Added by: gil_diy, at: Mon 07 Feb 2022 10:16:26 IST -->
 
 <!--te-->
 
@@ -43,7 +43,9 @@ The above shows gradient descent with momentum term, where the `lr` is actually 
 
 * Adagradient is one of the options to automate tuning for the step size.
 
-While **standard stochastic subgradient **methods mainly follow a predetermined procedural scheme that **disregards the characteristics of the data being observed**. In contrast, AdaGrad’s algorithms dynamically incorporate knowledge of the geometry of the data observed in earlier iterations to perform more informative gradient-based learning
+While **standard stochastic subgradient **methods mainly follow a predetermined procedural scheme that **disregards the characteristics of the data being observed**. 
+
+* In contrast, **AdaGrad’s algorithms dynamically incorporate knowledge of the geometry of the data observed in earlier iterations to perform more informative gradient-based learning** .
 
 ### RMSprop (Root mean square prop)
 
