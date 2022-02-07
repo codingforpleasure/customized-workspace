@@ -6,12 +6,13 @@
          * [Stochastic Gradient Descent with mini-batches](#stochastic-gradient-descent-with-mini-batches)
          * [SGD With momentum (with Exponentially Weighted Moving Average)](#sgd-with-momentum-with-exponentially-weighted-moving-average)
          * [Adagradient (Adaptive gradient)](#adagradient-adaptive-gradient)
+            * [Diagonal AdaGrad (this version is the one used in practice)](#diagonal-adagrad-this-version-is-the-one-used-in-practice)
          * [RMSprop (Root mean square prop)](#rmsprop-root-mean-square-prop)
          * [Adam (Adaptive Moment Estimation)](#adam-adaptive-moment-estimation)
          * [LBFGS](#lbfgs)
    * [References](#references)
 
-<!-- Added by: gil_diy, at: Mon 07 Feb 2022 10:16:26 IST -->
+<!-- Added by: gil_diy, at: Mon 07 Feb 2022 10:20:47 IST -->
 
 <!--te-->
 
@@ -46,6 +47,15 @@ The above shows gradient descent with momentum term, where the `lr` is actually 
 While **standard stochastic subgradient **methods mainly follow a predetermined procedural scheme that **disregards the characteristics of the data being observed**. 
 
 * In contrast, **AdaGrad’s algorithms dynamically incorporate knowledge of the geometry of the data observed in earlier iterations to perform more informative gradient-based learning** .
+
+
+* The learning rate is adapted component-wise to the parameters by incorporating knowledge of past observations.
+
+* It performs larger updates (e.g. high learning rates) for those parameters that are related to infrequent features and smaller updates (low learning rates) for frequent one.
+
+#### Diagonal AdaGrad (this version is the one used in practice)
+
+* its main characteristic is to maintain and adapts one learning rate per dimension.
 
 ### RMSprop (Root mean square prop)
 
