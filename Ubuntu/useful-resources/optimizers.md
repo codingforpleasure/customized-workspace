@@ -13,7 +13,7 @@
          * [LBFGS](#lbfgs)
    * [References](#references)
 
-<!-- Added by: gil_diy, at: Mon 07 Feb 2022 11:40:03 IST -->
+<!-- Added by: gil_diy, at: Mon 07 Feb 2022 11:42:54 IST -->
 
 <!--te-->
 
@@ -145,4 +145,6 @@ Disadvatages:
 
 [Stochastic Gradient Descent vs Gradient Descent](https://youtu.be/FpDsDn-fBKA)
 
-[Link](https://mlfromscratch.com/optimizers-explained/)
+[Diagonal adagrad](https://medium.com/konvergen/an-introduction-to-adagrad-f130ae871827)
+
+[All optimizers explained](https://mlfromscratch.com/optimizers-explained/)
