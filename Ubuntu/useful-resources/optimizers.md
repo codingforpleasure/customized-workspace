@@ -12,7 +12,7 @@
          * [LBFGS](#lbfgs)
    * [References](#references)
 
-<!-- Added by: gil_diy, at: Mon 07 Feb 2022 10:28:33 IST -->
+<!-- Added by: gil_diy, at: Mon 07 Feb 2022 10:28:38 IST -->
 
 <!--te-->
 
@@ -56,7 +56,7 @@ While **standard stochastic subgradient **methods mainly follow a predetermined 
 * Smaller updates (low learning rates) for frequent one.
 
 
-**Advantages of Using AdaGrad**
+**Advantages of Using AdaGrad:**
 
 1) It eliminates the need to manually tune the learning rate
 
