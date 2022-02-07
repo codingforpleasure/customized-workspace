@@ -12,7 +12,7 @@
          * [LBFGS](#lbfgs)
    * [References](#references)
 
-<!-- Added by: gil_diy, at: Mon 07 Feb 2022 10:33:32 IST -->
+<!-- Added by: gil_diy, at: Mon 07 Feb 2022 10:46:53 IST -->
 
 <!--te-->
 
@@ -61,6 +61,10 @@ The above shows gradient descent with momentum term, where the `lr` is actually 
 * Smaller updates (low learning rates) for frequent one.
 
 
+<p align="center"style="width:400px;" >
+  <img src="images/optimizers/adagrad.jpg" title="tool tip here">
+</p>
+
 **Advantages of Using AdaGrad:**
 
 1) It eliminates the need to manually tune the learning rate
@@ -68,6 +72,8 @@ The above shows gradient descent with momentum term, where the `lr` is actually 
 2) Convergence is faster and more reliable – than simple SGD when the scaling of the weights is unequal.
 
 3) It is not very sensitive to the size of the master step
+
+
 
 
 #### Diagonal AdaGrad (this version is the one used in practice)
