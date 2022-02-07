@@ -12,7 +12,7 @@
          * [LBFGS](#lbfgs)
    * [References](#references)
 
-<!-- Added by: gil_diy, at: Mon 07 Feb 2022 10:31:05 IST -->
+<!-- Added by: gil_diy, at: Mon 07 Feb 2022 10:31:09 IST -->
 
 <!--te-->
 
@@ -34,7 +34,7 @@ Stochastic Gradient Descent is a common method for optimization. It is conceptua
 
 Drawbacks:
 
-* **standard stochastic subgradient** methods mainly follow a predetermined procedural scheme that **disregards the characteristics of the data being observed**.
+* **standard stochastic subgradient** methods mainly follow a predetermined procedural scheme that **disregards the characteristics of the data being observed.**
 
 ### Stochastic Gradient Descent with mini-batches
 
