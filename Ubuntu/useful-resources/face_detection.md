@@ -1,15 +1,21 @@
 <!--ts-->
    * [Face Recognition](#face-recognition)
+   * [Siamese Networks](#siamese-networks)
+      * [Usage of this kind of network](#usage-of-this-kind-of-network)
+      * [Network topolgy](#network-topolgy)
+      * [Loss Function](#loss-function)
    * [Reference](#reference)
+   * [Academia papers](#academia-papers)
 
-<!-- Added by: gil_diy, at: Tue 08 Feb 2022 11:56:21 IST -->
+<!-- Added by: gil_diy, at: Tue 08 Feb 2022 12:13:52 IST -->
 
 <!--te-->
 
 # Face Recognition
 
 Is not a classification problem because the number of faces in the world is not bounded.
-We don't train a neural network to classify me, we just use the existing network which was already trained on thousands of thousands faces of people to doing this, to put me somwhere in the latent space (aka latent feature space) and I record the location. then when I try again to unlock the phone does my new image goes to the same place in the space as the last one.
+We don't train a neural network to classify me, we just use the existing network which was already trained on thousands of thousands faces of people to doing this, to put me somwhere in the latent space (aka latent feature space) and I record the location. 
+when I try again to unlock the phone does my new image goes to the same place in the space as the last one.
 
 What happens is that you get an architecture capable of doing **one shot learning**.
 
@@ -41,6 +47,17 @@ What happens is that you get an architecture capable of doing **one shot learnin
 
 [Triplet Loss](https://youtu.be/d2XB5-tuCWU)
 
+# Siamese Networks
+
+## Usage of this kind of network
+
+Siemense Network are used for 
+
+## Network topolgy
+
+## Loss Function
+
+
 
 # Reference
 
@@ -50,3 +67,10 @@ What happens is that you get an architecture capable of doing **one shot learnin
 
 
 [FaceID ](https://towardsdatascience.com/how-i-implemented-iphone-xs-faceid-using-deep-learning-in-python-d5dbaa128e1d)
+
+
+[Link]()
+
+# Academia papers
+
+[FaceNet](https://arxiv.org/pdf/1503.03832.pdf)
