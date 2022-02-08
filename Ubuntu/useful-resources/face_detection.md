@@ -2,7 +2,7 @@
    * [Face Recognition](#face-recognition)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Tue 08 Feb 2022 11:56:03 IST -->
+<!-- Added by: gil_diy, at: Tue 08 Feb 2022 11:56:21 IST -->
 
 <!--te-->
 
@@ -30,7 +30,7 @@ What happens is that you get an architecture capable of doing **one shot learnin
 
 * A and P the same person, N is different person than A.
 
-<p align="center" style="width:400px;" >
+<p align="center" style="width:550px;" >
   <img src="images/cnn/Triplet_loss_function_in_Siamese_Network_img2.jpg" title="tool tip here">
 </p>
 
