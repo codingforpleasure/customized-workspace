@@ -2,14 +2,20 @@
    * [Face Recognition](#face-recognition)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Tue 08 Feb 2022 08:54:58 IST -->
+<!-- Added by: gil_diy, at: Tue 08 Feb 2022 09:31:59 IST -->
 
 <!--te-->
 
 # Face Recognition
 
+Use a special type of loss function called `triplet loss`.
+
+
 # Reference
 
-[How Face ID Works](https://youtu.be/mwTaISbA87A)
+[Detecting Faces - Viola Jones Algorithm](https://youtu.be/uEJ71VlUmMQ)
 
-[Detecting Faces](https://youtu.be/uEJ71VlUmMQ)
+[How Face ID Works (Face recognition)](https://youtu.be/mwTaISbA87A)
+
+
+[Link]()
