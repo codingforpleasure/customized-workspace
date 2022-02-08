@@ -2,7 +2,7 @@
    * [Face Recognition](#face-recognition)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Tue 08 Feb 2022 11:35:25 IST -->
+<!-- Added by: gil_diy, at: Tue 08 Feb 2022 11:42:39 IST -->
 
 <!--te-->
 
@@ -16,7 +16,18 @@ What happens is that you get an architecture capable of doing **one shot learnin
 * The name of the network is [Siamese Networks](https://towardsdatascience.com/a-friendly-introduction-to-siamese-networks-85ab17522942) (sometimes called a twin neural network) 
 
 * The network uses a special type of loss function called `triplet loss`.
+  The name triplet loss since the loss function recieves 3 variables:
 
+  $A$ is an anchor input
+  $P$ is a positive input of the same class as $A$
+  $N$ is a negative input of a different class from A
+  $/alpha$ is a margin between positive and negative pairs
+  $f$ is an embedding
+
+
+<p align="center"> <!-- style="width:400px;" -->
+  <img src="images/cnn/Triplet_loss_function_in_Siamese_Network.jpg" title="tool tip here">
+</p>
 
 [Link](https://medium.com/visionwizard/research-for-all-in-defense-of-triplet-loss-for-person-re-identification-9cce5616fb6)
 
