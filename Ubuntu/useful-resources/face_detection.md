@@ -2,7 +2,7 @@
    * [Face Recognition](#face-recognition)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Tue 08 Feb 2022 11:46:58 IST -->
+<!-- Added by: gil_diy, at: Tue 08 Feb 2022 11:56:03 IST -->
 
 <!--te-->
 
@@ -29,6 +29,10 @@ What happens is that you get an architecture capable of doing **one shot learnin
   * $f$ is an after embedding to the latent space
 
 * A and P the same person, N is different person than A.
+
+<p align="center" style="width:400px;" >
+  <img src="images/cnn/Triplet_loss_function_in_Siamese_Network_img2.jpg" title="tool tip here">
+</p>
 
 
 [Link](https://medium.com/visionwizard/research-for-all-in-defense-of-triplet-loss-for-person-re-identification-9cce5616fb6)
