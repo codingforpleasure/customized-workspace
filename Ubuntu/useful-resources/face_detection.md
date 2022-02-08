@@ -2,7 +2,7 @@
    * [Face Recognition](#face-recognition)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Tue 08 Feb 2022 10:05:51 IST -->
+<!-- Added by: gil_diy, at: Tue 08 Feb 2022 10:13:36 IST -->
 
 <!--te-->
 
@@ -14,6 +14,8 @@ We don't train a neural network to classify me, we just use the existing network
 What happens is that you get an architecture capable of doing **one shot learning**.
 
 The network uses a special type of loss function called `triplet loss`.
+The name od the network is [Siamese Networks](https://towardsdatascience.com/a-friendly-introduction-to-siamese-networks-85ab17522942)
+
 [Link](https://medium.com/visionwizard/research-for-all-in-defense-of-triplet-loss-for-person-re-identification-9cce5616fb6)
 
 
