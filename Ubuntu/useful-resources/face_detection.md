@@ -2,7 +2,7 @@
    * [Face Recognition](#face-recognition)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Tue 08 Feb 2022 09:32:27 IST -->
+<!-- Added by: gil_diy, at: Tue 08 Feb 2022 09:32:30 IST -->
 
 <!--te-->
 
