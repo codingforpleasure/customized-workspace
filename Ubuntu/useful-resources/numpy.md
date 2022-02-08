@@ -76,7 +76,7 @@
       * [Flip image with numpy](#flip-image-with-numpy)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Sun 06 Feb 2022 19:01:44 IST -->
+<!-- Added by: gil_diy, at: Tue 08 Feb 2022 08:44:58 IST -->
 
 <!--te-->
 
@@ -572,7 +572,7 @@ setdiff1d(x, y) | Set difference, elements in x that are not in y
 ```python
 x = np.array([1, 1, 1, 2, 2, 2, 5, 25, 1, 1])
 elements_count = np.bincount(x)
-elements = np.nonzero(y)[0]
+elements = np.nonzero(elements_count)[0]
 print(dict(zip(elements, elements_count[elements])))
 ```
 
