@@ -66,7 +66,7 @@
          * [The function blobFromImage(s)](#the-function-blobfromimages)
             * [1. Mean subtraction](#1-mean-subtraction)
 
-<!-- Added by: gil_diy, at: Wed 09 Feb 2022 11:24:58 IST -->
+<!-- Added by: gil_diy, at: Wed 09 Feb 2022 11:28:13 IST -->
 
 <!--te-->
 
@@ -701,7 +701,9 @@ The advantage of using this filter is that it uses a **double derivative in both
 laplacian = cv2.Laplacian(img, cv2.CV_64F)
 ```
 
-
+<p align="center" style="width:550px;" >
+  <img src="images/open-cv/laplacian-kernel.jpg" title="tool tip here">
+</p>
 
 ### Canny
 
