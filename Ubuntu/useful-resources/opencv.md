@@ -56,12 +56,17 @@
          * [How to detect all the connected neighboring pixels which have same color value?](#how-to-detect-all-the-connected-neighboring-pixels-which-have-same-color-value)
          * [Defines for video capture](#defines-for-video-capture)
          * [distance transform](#distance-transform)
+      * [Detecting Edges](#detecting-edges)
+         * [Sobel](#sobel)
+         * [Laplacian](#laplacian)
+         * [Canny](#canny)
+      * [Keypoints](#keypoints)
       * [Create a transparent image](#create-a-transparent-image)
       * [Deep learning in OpenCV](#deep-learning-in-opencv)
          * [The function blobFromImage(s)](#the-function-blobfromimages)
             * [1. Mean subtraction](#1-mean-subtraction)
 
-<!-- Added by: gil_diy, at: Wed 09 Feb 2022 10:40:03 IST -->
+<!-- Added by: gil_diy, at: Wed 09 Feb 2022 11:12:43 IST -->
 
 <!--te-->
 
@@ -640,7 +645,6 @@ cv2.floodFill(image=img_bw,
 
 ### Defines for video capture
 
-
 Define | Meaning
 ------------|-----
 cv2.CAP_PROP_FRAME_WIDTH | Set frame width
@@ -653,6 +657,27 @@ cv2.CAP_PROP_FRAME_COUNT | Get number of frames per video
 
 https://homepages.inf.ed.ac.uk/rbf/HIPR2/distance.htm
 
+## Detecting Edges
+
+### Sobel
+
+Simple edge detection filter known as the Sobel filter. Since edges can
+occur in both horizontal and vertical directions, the Sobel filter is composed of the
+following two kernels:
+
+<p align="center"style="width:400px;" >
+  <img src="images/open-cv/sobel-kernel.jpg" title="tool tip here">
+</p>
+
+
+### Laplacian
+
+### Canny
+
+
+## Keypoints
+
+### 
 
 ## Create a transparent image
 
@@ -669,6 +694,8 @@ https://homepages.inf.ed.ac.uk/rbf/HIPR2/distance.htm
     # Save the image for visualization
     cv2.imwrite("./transparent_img.png", transparent_img)
 ```
+
+
 
 ## Deep learning in OpenCV
 
