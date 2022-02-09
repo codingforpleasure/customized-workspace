@@ -66,7 +66,7 @@
          * [The function blobFromImage(s)](#the-function-blobfromimages)
             * [1. Mean subtraction](#1-mean-subtraction)
 
-<!-- Added by: gil_diy, at: Wed 09 Feb 2022 11:12:43 IST -->
+<!-- Added by: gil_diy, at: Wed 09 Feb 2022 11:21:22 IST -->
 
 <!--te-->
 
@@ -665,10 +665,31 @@ Simple edge detection filter known as the Sobel filter. Since edges can
 occur in both horizontal and vertical directions, the Sobel filter is composed of the
 following two kernels:
 
-<p align="center"style="width:400px;" >
+<p align="center" style="width:400px;" >
   <img src="images/open-cv/sobel-kernel.jpg" title="tool tip here">
 </p>
 
+The kernel on the left detects horizontal edges and the kernel on the right detects vertical
+edges.
+
+```python
+import cv2
+import numpy as np
+img = cv2.imread('images/input_shapes.png', cv2.IMREAD_GRAYSCALE)
+rows, cols = img.shape
+# It is used depth of cv2.CV_64F.
+sobel_horizontal = cv2.Sobel(img, cv2.CV_64F, 1, 0, ksize=5)
+# Kernel size can be: 1,3,5 or 7.
+sobel_vertical = cv2.Sobel(img, cv2.CV_64F, 0, 1, ksize=5)
+cv2.imshow('Original', img)
+cv2.imshow('Sobel horizontal', sobel_horizontal)
+cv2.imshow('Sobel vertical', sobel_vertical)
+cv2.waitKey(0)
+```
+
+<p align="center" style="width:400px;" >
+  <img src="images/open-cv/sobel-kernel_result.jpg" title="tool tip here">
+</p>
 
 ### Laplacian
 
