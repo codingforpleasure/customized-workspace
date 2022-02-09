@@ -16,8 +16,8 @@
          * [Writing images in different modes:](#writing-images-in-different-modes)
       * [Draw on screen shapes](#draw-on-screen-shapes)
       * [Arithmetic Operations on Images](#arithmetic-operations-on-images)
-            * [Addition](#addition)
-            * [Substruction](#substruction)
+         * [Addition](#addition)
+         * [Substruction](#substruction)
          * [Logical Operations on images](#logical-operations-on-images)
       * [Thresholding Types](#thresholding-types)
          * [Threshold Global](#threshold-global)
@@ -61,7 +61,7 @@
          * [The function blobFromImage(s)](#the-function-blobfromimages)
             * [1. Mean subtraction](#1-mean-subtraction)
 
-<!-- Added by: gil_diy, at: Mon 17 Jan 2022 16:30:16 IST -->
+<!-- Added by: gil_diy, at: Wed 09 Feb 2022 10:40:03 IST -->
 
 <!--te-->
 
@@ -234,10 +234,12 @@ cv2.rectangle(img, (x1, y1), (x2, y2), (0, 255, 0), 3)
 
 apply a simple arithmation operation on each pixel of the image
 
-#### Addition
+### Addition
 
 **Commutative operation**
-#### Substruction
+
+### Substruction
+
 ### Logical Operations on images
 
 ```python
