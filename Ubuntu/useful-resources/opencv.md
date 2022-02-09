@@ -60,7 +60,7 @@
          * [Sobel](#sobel)
          * [Laplacian](#laplacian)
          * [Canny](#canny)
-      * [Keypoints](#keypoints)
+      * [Keypoints (Interest points)](#keypoints-interest-points)
          * [SIFT (Scale-invariant feature transform )](#sift-scale-invariant-feature-transform-)
          * [SURF (Speeded-up robust features)](#surf-speeded-up-robust-features)
          * [FAST (Features from accelerated segment test)](#fast-features-from-accelerated-segment-test)
@@ -70,7 +70,7 @@
          * [The function blobFromImage(s)](#the-function-blobfromimages)
             * [1. Mean subtraction](#1-mean-subtraction)
 
-<!-- Added by: gil_diy, at: Wed 09 Feb 2022 12:05:38 IST -->
+<!-- Added by: gil_diy, at: Wed 09 Feb 2022 12:06:26 IST -->
 
 <!--te-->
 
@@ -734,7 +734,7 @@ It takes two numbers as arguments to indicate the thresholds. The second argumen
 
 
 
-## Keypoints
+## Keypoints (Interest points)
 
 ### SIFT (Scale-invariant feature transform )
 
