@@ -66,7 +66,7 @@
          * [The function blobFromImage(s)](#the-function-blobfromimages)
             * [1. Mean subtraction](#1-mean-subtraction)
 
-<!-- Added by: gil_diy, at: Wed 09 Feb 2022 11:23:10 IST -->
+<!-- Added by: gil_diy, at: Wed 09 Feb 2022 11:23:52 IST -->
 
 <!--te-->
 
@@ -694,6 +694,9 @@ cv2.waitKey(0)
 The **Sobel filter** detects edges in **either a horizontal or vertical direction** and it **doesn't give us a holistic view of all the edges**.
 
 ### Laplacian
+
+The advantage of using this filter is that it uses a **double derivative in both directions**
+
 
 ### Canny
 
