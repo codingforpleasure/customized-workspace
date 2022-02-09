@@ -66,7 +66,7 @@
          * [The function blobFromImage(s)](#the-function-blobfromimages)
             * [1. Mean subtraction](#1-mean-subtraction)
 
-<!-- Added by: gil_diy, at: Wed 09 Feb 2022 11:42:37 IST -->
+<!-- Added by: gil_diy, at: Wed 09 Feb 2022 11:43:48 IST -->
 
 <!--te-->
 
@@ -711,7 +711,7 @@ The Laplacian kernel gives rise to a noisy output,which is not exactly useful.
 
 To overcome Laplacian edge detection's problems, we use the Canny edge detector. To use the Canny edge detector, we can use the following function:
 
-<p align="center"> <!-- style="width:400px;" -->
+<p align="center" style="width:300px;" >
   <img src="images/open-cv/laplacian-vs-canny.jpg" title="tool tip here">
 </p>
 
@@ -722,9 +722,7 @@ As we can see, the quality of the **Canny edge detector is much better**!!
 canny = cv2.Canny(img, threshold1 = 50, , threshold2 = 240)
 ```
 
-It takes two numbers
-as arguments to indicate the thresholds. The second argument is called the low threshold
-value, and the third argument is called the high threshold value
+It takes two numbers as arguments to indicate the thresholds. The second argument is called the low threshold value, and the third argument is called the high threshold value.
 
 
 
