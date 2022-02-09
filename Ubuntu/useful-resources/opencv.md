@@ -66,7 +66,7 @@
          * [The function blobFromImage(s)](#the-function-blobfromimages)
             * [1. Mean subtraction](#1-mean-subtraction)
 
-<!-- Added by: gil_diy, at: Wed 09 Feb 2022 11:21:22 IST -->
+<!-- Added by: gil_diy, at: Wed 09 Feb 2022 11:21:53 IST -->
 
 <!--te-->
 
@@ -687,7 +687,7 @@ cv2.imshow('Sobel vertical', sobel_vertical)
 cv2.waitKey(0)
 ```
 
-<p align="center" style="width:400px;" >
+<p align="center" style="width:550px;" >
   <img src="images/open-cv/sobel-kernel_result.jpg" title="tool tip here">
 </p>
 
