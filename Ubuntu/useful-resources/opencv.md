@@ -66,7 +66,7 @@
          * [The function blobFromImage(s)](#the-function-blobfromimages)
             * [1. Mean subtraction](#1-mean-subtraction)
 
-<!-- Added by: gil_diy, at: Wed 09 Feb 2022 11:43:48 IST -->
+<!-- Added by: gil_diy, at: Wed 09 Feb 2022 11:44:00 IST -->
 
 <!--te-->
 
@@ -711,7 +711,7 @@ The Laplacian kernel gives rise to a noisy output,which is not exactly useful.
 
 To overcome Laplacian edge detection's problems, we use the Canny edge detector. To use the Canny edge detector, we can use the following function:
 
-<p align="center" style="width:300px;" >
+<p align="center" style="width:400px;" >
   <img src="images/open-cv/laplacian-vs-canny.jpg" title="tool tip here">
 </p>
 
