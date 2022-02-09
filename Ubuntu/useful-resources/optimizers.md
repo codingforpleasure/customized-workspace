@@ -13,7 +13,7 @@
          * [LBFGS](#lbfgs)
    * [References](#references)
 
-<!-- Added by: gil_diy, at: Mon 07 Feb 2022 11:42:54 IST -->
+<!-- Added by: gil_diy, at: Wed 09 Feb 2022 10:50:10 IST -->
 
 <!--te-->
 
@@ -51,6 +51,8 @@ Stochastic Gradient Descent is a common method for optimization. It is conceptua
 momentum helps to accelerate the process of SGD.
 
 The above shows gradient descent with momentum term, where the `lr` is actually fixed for all parameters on different dimension. 
+
+[Link to medium](https://towardsdatascience.com/stochastic-gradient-descent-momentum-explanation-8548a1cd264e)
 
 ### Adagradient (Adaptive gradient)
 
