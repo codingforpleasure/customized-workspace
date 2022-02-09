@@ -61,12 +61,16 @@
          * [Laplacian](#laplacian)
          * [Canny](#canny)
       * [Keypoints](#keypoints)
-      * [Create a transparent image](#create-a-transparent-image)
+         * [SIFT (Scale-invariant feature transform )](#sift-scale-invariant-feature-transform-)
+         * [SURF (Speeded-up robust features)](#surf-speeded-up-robust-features)
+         * [FAST (Features from accelerated segment test)](#fast-features-from-accelerated-segment-test)
+         * [BRIEF (Binary robust independent elementary features)](#brief-binary-robust-independent-elementary-features)
+         * [Create a transparent image](#create-a-transparent-image)
       * [Deep learning in OpenCV](#deep-learning-in-opencv)
          * [The function blobFromImage(s)](#the-function-blobfromimages)
             * [1. Mean subtraction](#1-mean-subtraction)
 
-<!-- Added by: gil_diy, at: Wed 09 Feb 2022 11:49:45 IST -->
+<!-- Added by: gil_diy, at: Wed 09 Feb 2022 11:55:28 IST -->
 
 <!--te-->
 
@@ -732,9 +736,19 @@ It takes two numbers as arguments to indicate the thresholds. The second argumen
 
 ## Keypoints
 
-### 
+### SIFT (Scale-invariant feature transform )
 
-## Create a transparent image
+We can use this algorithm to extract keypoints and build the corresponding feature descriptors.
+
+### SURF (Speeded-up robust features)
+
+### FAST (Features from accelerated segment test)
+
+### BRIEF (Binary robust independent elementary features)
+
+### Create a transparent image
+
+
 
 ```python
     img_height, img_width = 300, 300
