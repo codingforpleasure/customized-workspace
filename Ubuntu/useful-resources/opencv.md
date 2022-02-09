@@ -70,7 +70,7 @@
          * [The function blobFromImage(s)](#the-function-blobfromimages)
             * [1. Mean subtraction](#1-mean-subtraction)
 
-<!-- Added by: gil_diy, at: Wed 09 Feb 2022 11:55:28 IST -->
+<!-- Added by: gil_diy, at: Wed 09 Feb 2022 12:05:38 IST -->
 
 <!--te-->
 
@@ -739,6 +739,11 @@ It takes two numbers as arguments to indicate the thresholds. The second argumen
 ### SIFT (Scale-invariant feature transform )
 
 We can use this algorithm to extract keypoints and build the corresponding feature descriptors.
+
+We can use this algorithm to extract keypoints and build the corresponding feature descriptors. To identify a potential keypoint, SIFT builds a pyramid by downsampling an image and taking the difference of Gaussian.
+
+
+[SIFT Detector well explained](https://www.youtube.com/watch?v=KgsHoJYJ4S8)
 
 ### SURF (Speeded-up robust features)
 
