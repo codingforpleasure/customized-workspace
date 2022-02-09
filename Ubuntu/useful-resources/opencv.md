@@ -66,7 +66,7 @@
          * [The function blobFromImage(s)](#the-function-blobfromimages)
             * [1. Mean subtraction](#1-mean-subtraction)
 
-<!-- Added by: gil_diy, at: Wed 09 Feb 2022 11:44:00 IST -->
+<!-- Added by: gil_diy, at: Wed 09 Feb 2022 11:48:51 IST -->
 
 <!--te-->
 
@@ -359,8 +359,12 @@ takes median of all the pixels under kernel area and central element is replaced
 
 
 ```python
-median = cv2.medianBlur(img,5)
+median = cv2.medianBlur(src = img,ksize = 5)
 ```
+
+<p align="center" style="width:400px;" >
+  <img src="images/open-cv/median-blur.png" title="tool tip here">
+</p>
 
 #### Bilateral Filtering
 
