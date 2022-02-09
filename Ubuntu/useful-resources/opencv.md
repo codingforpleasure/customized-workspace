@@ -66,7 +66,7 @@
          * [The function blobFromImage(s)](#the-function-blobfromimages)
             * [1. Mean subtraction](#1-mean-subtraction)
 
-<!-- Added by: gil_diy, at: Wed 09 Feb 2022 11:48:51 IST -->
+<!-- Added by: gil_diy, at: Wed 09 Feb 2022 11:49:45 IST -->
 
 <!--te-->
 
@@ -363,7 +363,7 @@ median = cv2.medianBlur(src = img,ksize = 5)
 ```
 
 <p align="center" style="width:400px;" >
-  <img src="images/open-cv/median-blur.png" title="tool tip here">
+  <img src="images/open-cv/median-blur.jpg" title="tool tip here">
 </p>
 
 #### Bilateral Filtering
