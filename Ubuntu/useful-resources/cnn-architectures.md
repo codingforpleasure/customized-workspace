@@ -4,7 +4,7 @@
          * [Desciminator](#desciminator)
          * [Generator ()](#generator-)
 
-<!-- Added by: gil_diy, at: Thu 10 Feb 2022 11:40:59 IST -->
+<!-- Added by: gil_diy, at: Thu 10 Feb 2022 11:44:39 IST -->
 
 <!--te-->
 
@@ -30,6 +30,10 @@ So the **output of the discriminator** will not have softmax it will have only s
 
 Applying transpose convolution and fractional-strided convolutions.
 
+
+<p align="center"> <!-- style="width:400px;" -->
+  <img src="images/neural-networks-architectures/GAN-generator.jpg" title="tool tip here">
+</p>
 
 **Architecture guidelines for stable Deep Convolutions GANs:**
 
