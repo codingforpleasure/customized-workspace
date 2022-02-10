@@ -37,7 +37,7 @@
       * [Jeff Heaton explaines](#jeff-heaton-explaines)
       * [Useful web pages](#useful-web-pages)
 
-<!-- Added by: gil_diy, at: Sun 06 Feb 2022 12:30:44 IST -->
+<!-- Added by: gil_diy, at: Thu 10 Feb 2022 19:41:16 IST -->
 
 <!--te-->
 
@@ -146,7 +146,6 @@ Focus on object in the horizon | click on the object and press period key `.` |
 Add Object | `Shift+A` | 
 Search Bar | `F3` | 
 Switch between `Edit mode` to `Object mode` | tab |
-
 Seperate | `p` |
 Xray | `Alt+z` |
 See properies (Rotate/Position) | `n` |
