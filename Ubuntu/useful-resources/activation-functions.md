@@ -1,8 +1,12 @@
 <!--ts-->
    * [Activation functions](#activation-functions)
       * [Why to use activation functions?](#why-to-use-activation-functions)
+      * [Type of Activation Layers](#type-of-activation-layers)
+         * [Tanh](#tanh)
+         * [ReLU (Rectified Linear Unit)](#relu-rectified-linear-unit)
+         * [LeakyReLU](#leakyrelu)
 
-<!-- Added by: gil_diy, at: Mon 29 Nov 2021 10:34:01 IST -->
+<!-- Added by: gil_diy, at: Thu 10 Feb 2022 11:44:43 IST -->
 
 <!--te-->
 
@@ -26,3 +30,11 @@ tinuous function.
 
 
 [activation functions](https://keras.io/api/layers/activations/)
+
+## Type of Activation Layers
+
+### Tanh
+
+### ReLU (Rectified Linear Unit)
+
+### LeakyReLU
