@@ -1,14 +1,21 @@
 <!--ts-->
    * [Architecture Networks](#architecture-networks)
+      * [VGG](#vgg)
+      * [ResNet](#resnet)
       * [GAN - Generative Adversial Networks](#gan---generative-adversial-networks)
          * [Desciminator](#desciminator)
          * [Generator](#generator)
 
-<!-- Added by: gil_diy, at: Thu 10 Feb 2022 11:59:54 IST -->
+<!-- Added by: gil_diy, at: Thu 10 Feb 2022 12:08:27 IST -->
 
 <!--te-->
 
 # Architecture Networks
+
+
+## VGG
+
+## ResNet
 
 ## GAN - Generative Adversial Networks
 
@@ -28,7 +35,11 @@ So the **output of the discriminator** will not have softmax it will have only s
 
 ### Generator
 
-Applying transpose convolution and fractional-strided convolutions.
+* Generators try to generate Fake images.
+
+* Each Generator starts with a **Random Noise Seed** (Latent Vector)
+
+* Along the network the generator network upscales the image by using **transpose convolution** and fractional-strided convolutions.
 
 Reminder: Transpose Convolution are **upscaler**, used for Encoder-Decoder architectures as **"Decomprossor"**.
 
