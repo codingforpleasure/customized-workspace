@@ -6,7 +6,7 @@
          * [Desciminator](#desciminator)
          * [Generator](#generator)
 
-<!-- Added by: gil_diy, at: Thu 10 Feb 2022 12:08:27 IST -->
+<!-- Added by: gil_diy, at: Thu 10 Feb 2022 12:47:11 IST -->
 
 <!--te-->
 
@@ -20,6 +20,10 @@
 ## GAN - Generative Adversial Networks
 
 The Neural Network consist of 'Desciminator' and 'Genearator'
+
+When training the descriminator, hold the generator values constant;
+and when training the generator, hold the discrimiantor constant. Each Should train against a static adversary.
+
 
 ### Desciminator 
 
@@ -60,3 +64,5 @@ Reminder: Transpose Convolution are **upscaler**, used for Encoder-Decoder archi
 * Use ReLU activation in generator for all layers except for the output, which uses tanh hyperbolic tangent function).
 
 * Use LeakyReLU activation in the discriminator for all layers
+
+[Link](https://github.com/jantic/DeOldify)
