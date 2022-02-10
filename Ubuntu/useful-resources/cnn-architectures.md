@@ -4,7 +4,7 @@
          * [Desciminator](#desciminator)
          * [Generator ()](#generator-)
 
-<!-- Added by: gil_diy, at: Thu 10 Feb 2022 11:36:38 IST -->
+<!-- Added by: gil_diy, at: Thu 10 Feb 2022 11:37:10 IST -->
 
 <!--te-->
 
@@ -38,4 +38,4 @@ Applying transpose convolution and fractional-strided convolutions.
 
 * Remove fully connected hidden layers for deeper architectures.
 
-* Use ReLU activation in generator for all layers except for the output, which uses tanh.
+* Use ReLU activation in generator for all layers except for the output, which uses tanh hyperbolic tangent function).
