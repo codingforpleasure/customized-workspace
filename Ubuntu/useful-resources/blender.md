@@ -17,6 +17,7 @@
       * [Apply scale](#apply-scale)
       * [Add Bevel](#add-bevel)
       * [Modifiers](#modifiers)
+      * [How to import an object from a different blender project?](#how-to-import-an-object-from-a-different-blender-project)
       * [Draw path](#draw-path)
       * [Walk with Camera](#walk-with-camera)
       * [Applying shade smooth](#applying-shade-smooth)
@@ -37,7 +38,7 @@
       * [Jeff Heaton explaines](#jeff-heaton-explaines)
       * [Useful web pages](#useful-web-pages)
 
-<!-- Added by: gil_diy, at: Thu 10 Feb 2022 19:41:16 IST -->
+<!-- Added by: gil_diy, at: Thu 10 Feb 2022 19:50:00 IST -->
 
 <!--te-->
 
@@ -196,6 +197,10 @@ This means you can apply many modeling operation automatically without changing 
 
 [Link](https://youtu.be/idcFMhoSdIc)
 
+
+## How to import an object from a different blender project?
+
+[Link](https://youtu.be/ldHOfvE52QA)
 
 ## Draw path
 
