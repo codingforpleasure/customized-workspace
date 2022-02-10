@@ -4,7 +4,7 @@
          * [Desciminator](#desciminator)
          * [Generator](#generator)
 
-<!-- Added by: gil_diy, at: Thu 10 Feb 2022 11:57:50 IST -->
+<!-- Added by: gil_diy, at: Thu 10 Feb 2022 11:57:59 IST -->
 
 <!--te-->
 
@@ -30,7 +30,7 @@ So the **output of the discriminator** will not have softmax it will have only s
 
 Applying transpose convolution and fractional-strided convolutions.
 
-reminder: Transpose Convolution are **upscaler**, used for Encoder-Decoder architectures as **"Decomprossor"**.
+Reminder: Transpose Convolution are **upscaler**, used for Encoder-Decoder architectures as **"Decomprossor"**.
 
 [Link](file:///home/gil_diy/my_documentation_helper/pytorch/pytorch.html#transpose-convolution,-what-is-it?)
 
