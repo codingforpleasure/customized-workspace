@@ -4,7 +4,7 @@
          * [Desciminator](#desciminator)
          * [Generator ()](#generator-)
 
-<!-- Added by: gil_diy, at: Thu 10 Feb 2022 11:33:43 IST -->
+<!-- Added by: gil_diy, at: Thu 10 Feb 2022 11:34:16 IST -->
 
 <!--te-->
 
@@ -29,3 +29,6 @@ So the **output of the discriminator** will not have softmax it will have only s
 ### Generator ()
 
 Applying transpose convolution and fractional-strided convolutions.
+
+
+Using batchnorm in both the **generator** and the **discriminator**.
