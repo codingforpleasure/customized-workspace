@@ -4,7 +4,7 @@
          * [Desciminator](#desciminator)
          * [Generator ()](#generator-)
 
-<!-- Added by: gil_diy, at: Thu 10 Feb 2022 11:37:13 IST -->
+<!-- Added by: gil_diy, at: Thu 10 Feb 2022 11:40:59 IST -->
 
 <!--te-->
 
@@ -39,3 +39,5 @@ Applying transpose convolution and fractional-strided convolutions.
 * Remove fully connected hidden layers for deeper architectures.
 
 * Use ReLU activation in generator for all layers except for the output, which uses tanh hyperbolic tangent function).
+
+* Use LeakyReLU activation in the discriminator for all layers
