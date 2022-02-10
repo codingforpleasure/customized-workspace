@@ -16,7 +16,7 @@
       * [Generator](#generator)
    * [BCE (Binary Cross Entropy)](#bce-binary-cross-entropy)
 
-<!-- Added by: gil_diy, at: Thu 10 Feb 2022 14:19:06 IST -->
+<!-- Added by: gil_diy, at: Thu 10 Feb 2022 14:19:09 IST -->
 
 <!--te-->
 # GAN (Generative Adversial Network)
