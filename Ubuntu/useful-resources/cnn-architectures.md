@@ -4,7 +4,7 @@
          * [Desciminator](#desciminator)
          * [Generator ()](#generator-)
 
-<!-- Added by: gil_diy, at: Thu 10 Feb 2022 11:34:16 IST -->
+<!-- Added by: gil_diy, at: Thu 10 Feb 2022 11:36:38 IST -->
 
 <!--te-->
 
@@ -31,4 +31,11 @@ So the **output of the discriminator** will not have softmax it will have only s
 Applying transpose convolution and fractional-strided convolutions.
 
 
-Using batchnorm in both the **generator** and the **discriminator**.
+**Architecture guidelines for stable Deep Convolutions GANs:**
+
+
+* Using batchnorm in both the **generator** and the **discriminator**.
+
+* Remove fully connected hidden layers for deeper architectures.
+
+* Use ReLU activation in generator for all layers except for the output, which uses tanh.
