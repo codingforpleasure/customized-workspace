@@ -1,16 +1,16 @@
 <!--ts-->
    * [Architecture Networks](#architecture-networks)
-      * [GAN - Generative Networks](#gan---generative-networks)
+      * [GAN - Generative Adversial Networks](#gan---generative-adversial-networks)
          * [Desciminator](#desciminator)
          * [Generator](#generator)
 
-<!-- Added by: gil_diy, at: Thu 10 Feb 2022 11:57:59 IST -->
+<!-- Added by: gil_diy, at: Thu 10 Feb 2022 11:59:54 IST -->
 
 <!--te-->
 
 # Architecture Networks
 
-## GAN - Generative Networks
+## GAN - Generative Adversial Networks
 
 The Neural Network consist of 'Desciminator' and 'Genearator'
 
