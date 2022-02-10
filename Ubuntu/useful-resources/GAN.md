@@ -15,9 +15,8 @@
       * [Descriminator](#descriminator)
       * [Generator](#generator)
    * [BCE (Binary Cross Entropy)](#bce-binary-cross-entropy)
-      * [Pytorch for GAN](#pytorch-for-gan)
 
-<!-- Added by: gil_diy, at: Wed 20 Jan 2021 18:03:12 IST -->
+<!-- Added by: gil_diy, at: Thu 10 Feb 2022 14:19:06 IST -->
 
 <!--te-->
 # GAN (Generative Adversial Network)
@@ -120,13 +119,3 @@ How does the **generator** learn over time?
 * GANs train in an alternating fashion
 
 * The two models should always be at similar "skill" level"
-
-
-## Pytorch for GAN
-
-The advantages of pytorch compare to Tensorflow:
-
-Pytorch | TensorFlow
-------------|-----
- Imperative | Symbolic
- Dynamic Computational Graphs | Static Computational Graphs 
