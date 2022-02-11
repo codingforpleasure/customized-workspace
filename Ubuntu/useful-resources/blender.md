@@ -38,7 +38,7 @@
       * [Jeff Heaton explaines](#jeff-heaton-explaines)
       * [Useful web pages](#useful-web-pages)
 
-<!-- Added by: gil_diy, at: Thu 10 Feb 2022 20:06:43 IST -->
+<!-- Added by: gil_diy, at: Fri 11 Feb 2022 10:41:43 IST -->
 
 <!--te-->
 
@@ -132,6 +132,7 @@ press on the object and press `alt+g`
 
 Description | Hotkey | Reference
 ------------|--------|------------
+Render viewport | `F12`
 Add object | `Shift+a` | 
 different type of views (Wireframe/Solid/Rendered) | press `z` and pick
 X-ray mode | `Alt + z`
