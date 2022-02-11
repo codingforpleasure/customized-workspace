@@ -13,6 +13,7 @@
       * [Reset position to the origin axis](#reset-position-to-the-origin-axis)
       * [Materials](#materials)
       * [Give color to objects](#give-color-to-objects)
+      * [Adding image as plan](#adding-image-as-plan)
       * [Pick all loop](#pick-all-loop)
       * [Apply scale](#apply-scale)
       * [Add Bevel](#add-bevel)
@@ -38,7 +39,7 @@
       * [Jeff Heaton explaines](#jeff-heaton-explaines)
       * [Useful web pages](#useful-web-pages)
 
-<!-- Added by: gil_diy, at: Fri 11 Feb 2022 10:41:43 IST -->
+<!-- Added by: gil_diy, at: Fri 11 Feb 2022 11:52:31 IST -->
 
 <!--te-->
 
@@ -175,6 +176,10 @@ round edge loop in a sphere shape | `Shift+Alt+s`
 
 [Link](https://youtu.be/kVXTmUWK_nI?t=2070)
 
+
+## Adding image as plan
+
+[worked well for me](https://docs.blender.org/manual/en/latest/addons/import_export/images_as_planes.html)
 
 
 ## Pick all loop
