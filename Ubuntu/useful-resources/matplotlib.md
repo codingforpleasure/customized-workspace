@@ -17,6 +17,7 @@
       * [Histograms](#histograms)
       * [Boxplot](#boxplot)
       * [Scatter Plots](#scatter-plots)
+      * [Stem plot](#stem-plot)
       * [Draw arrows](#draw-arrows)
          * [Draw 3d vectors](#draw-3d-vectors)
          * [Plotting time series](#plotting-time-series)
@@ -41,7 +42,7 @@
       * [Writing mathematical expression](#writing-mathematical-expression)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Sat 05 Feb 2022 15:29:55 IST -->
+<!-- Added by: gil_diy, at: Sat 12 Feb 2022 09:55:34 IST -->
 
 <!--te-->
 
@@ -509,6 +510,18 @@ def scatter_plot_with_different_sizes_and_colors():
 <p align="center"> <!-- style="width:400px;" -->
   <img src="images/matplotlib/scatter3.png" title="tool tip here">
 </p>
+
+## Stem plot
+
+```python
+import matplotlib.pyplot as plt
+import numpy as np
+
+x = np.linspace(start=0.1, stop=2 * np.pi, num=20)
+plt.title("Stem Plot")
+plt.stem(x, np.cos(x), '-.')
+plt.show()
+```
 
 ## Draw arrows
 
