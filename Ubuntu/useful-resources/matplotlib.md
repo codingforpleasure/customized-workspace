@@ -18,6 +18,7 @@
       * [Boxplot](#boxplot)
       * [Scatter Plots](#scatter-plots)
       * [Stem plot](#stem-plot)
+      * [Draw arrows](#draw-arrows)
          * [Draw 3d vectors](#draw-3d-vectors)
          * [Plotting time series](#plotting-time-series)
          * [Plotting Live data in real-time](#plotting-live-data-in-real-time)
@@ -41,7 +42,7 @@
       * [Writing mathematical expression](#writing-mathematical-expression)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Sat 12 Feb 2022 09:57:10 IST -->
+<!-- Added by: gil_diy, at: Sat 12 Feb 2022 09:57:13 IST -->
 
 <!--te-->
 
@@ -526,6 +527,7 @@ plt.show()
 <p align="center" style="width:400px;" >
   <img src="images/matplotlib/stem_plot.png" title="tool tip here">
 </p>
+
 ## Draw arrows
 
 ```python
