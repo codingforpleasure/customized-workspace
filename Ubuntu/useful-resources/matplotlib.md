@@ -42,7 +42,7 @@
       * [Writing mathematical expression](#writing-mathematical-expression)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Sat 12 Feb 2022 09:58:36 IST -->
+<!-- Added by: gil_diy, at: Sat 12 Feb 2022 09:58:42 IST -->
 
 <!--te-->
 
@@ -524,7 +524,7 @@ plt.show()
 ```
 
 
-<p align="center"> <!-- style="width:400px;" > -->
+<p align="center"> 
   <img src="images/matplotlib/stem_plot.png" title="tool tip here">
 </p>
 
