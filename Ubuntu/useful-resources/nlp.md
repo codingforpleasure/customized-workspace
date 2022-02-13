@@ -4,7 +4,7 @@
       * [Topic Discovery](#topic-discovery)
          * [LDA - Latent Dirichlet Allocation](#lda---latent-dirichlet-allocation)
 
-<!-- Added by: gil_diy, at: Sun 13 Feb 2022 08:59:59 IST -->
+<!-- Added by: gil_diy, at: Sun 13 Feb 2022 09:56:02 IST -->
 
 <!--te-->
 
@@ -32,3 +32,5 @@ Is to discover topics in a collection of documents, and then automatically **cla
 * Terms cat, siamese, main coon, tabby, manx, meow, purr, and kitten would suggest a CAT_related theme.
 
 ### LDA - Latent Dirichlet Allocation
+
+[Link](https://youtu.be/T05t-SqKArY)
