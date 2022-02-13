@@ -33,6 +33,7 @@
       * [<a href="https://youtu.be/_AWQ4Myxlcg?list=PLZoTAELRMXVPgjwJ8VyRoqmfNs2CJwhVH" rel="nofollow">Link</a>](#link)
       * [models](#models)
          * [Linear Regression](#linear-regression)
+         * [PassiveAggressiveClassifier](#passiveaggressiveclassifier)
          * [Logistic Regression](#logistic-regression)
          * [Multi nomial Naive Bayes](#multi-nomial-naive-bayes)
          * [SVM](#svm)
@@ -42,7 +43,7 @@
          * [Adaboost (Boosting)](#adaboost-boosting)
          * [gradboost (Boosting)](#gradboost-boosting)
 
-<!-- Added by: gil_diy, at: Sun 13 Feb 2022 12:24:47 IST -->
+<!-- Added by: gil_diy, at: Sun 13 Feb 2022 18:41:08 IST -->
 
 <!--te-->
 
@@ -506,6 +507,8 @@ for thresh in thresholds:
 
 
 ### Linear Regression
+
+### PassiveAggressiveClassifier
 
 ### Logistic Regression
 
