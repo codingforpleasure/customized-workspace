@@ -5,8 +5,9 @@
          * [LDA - Latent Dirichlet Allocation](#lda---latent-dirichlet-allocation)
       * [Preprocessing](#preprocessing)
          * [Stemming](#stemming)
+         * [Lemmatiziation](#lemmatiziation)
 
-<!-- Added by: gil_diy, at: Sun 13 Feb 2022 10:49:51 IST -->
+<!-- Added by: gil_diy, at: Sun 13 Feb 2022 10:51:02 IST -->
 
 <!--te-->
 
@@ -45,6 +46,12 @@ Is to discover topics in a collection of documents, and then automatically **cla
 
 ### Stemming
 
-The problem using stemming it produces intermediate representation of the word may not have any meaning. 
+The problem using stemming it produces **intermediate representation of the word may not have any meaning**. 
 
-**Example:** intelligen, fina etc.
+**Example:** 
+
+`intelligent` gets converted into `intelligen`
+
+`final` gets converted into `fina`
+
+### Lemmatiziation
