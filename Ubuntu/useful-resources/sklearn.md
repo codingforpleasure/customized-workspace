@@ -42,8 +42,11 @@
          * [Random Forest (Bagging techinque)](#random-forest-bagging-techinque)
          * [Adaboost (Boosting)](#adaboost-boosting)
          * [gradboost (Boosting)](#gradboost-boosting)
+      * [Matrix Decomposition](#matrix-decomposition)
+         * [Latent Dirichlet Allocation](#latent-dirichlet-allocation)
+         * [Principal component analysis (PCA)](#principal-component-analysis-pca)
 
-<!-- Added by: gil_diy, at: Sun 13 Feb 2022 18:41:08 IST -->
+<!-- Added by: gil_diy, at: Sun 13 Feb 2022 19:15:40 IST -->
 
 <!--te-->
 
@@ -503,6 +506,7 @@ for thresh in thresholds:
 
 ```
 
+
 ## models
 
 
@@ -525,3 +529,9 @@ for thresh in thresholds:
 ### Adaboost (Boosting)
 
 ### gradboost (Boosting)
+
+## Matrix Decomposition
+
+### Latent Dirichlet Allocation
+
+### Principal component analysis (PCA)
