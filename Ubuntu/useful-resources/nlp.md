@@ -4,7 +4,7 @@
       * [Topic Discovery](#topic-discovery)
          * [LDA - Latent Dirichlet Allocation](#lda---latent-dirichlet-allocation)
 
-<!-- Added by: gil_diy, at: Sun 13 Feb 2022 09:56:07 IST -->
+<!-- Added by: gil_diy, at: Sun 13 Feb 2022 10:18:00 IST -->
 
 <!--te-->
 
@@ -33,4 +33,7 @@ Is to discover topics in a collection of documents, and then automatically **cla
 
 ### LDA - Latent Dirichlet Allocation
 
-[Link](https://youtu.be/T05t-SqKArY)
+[Link1](https://youtu.be/T05t-SqKArY)
+
+
+[Training Latent Dirichlet Allocation: Gibbs Sampling](https://youtu.be/BaM1uiCpj_E)
