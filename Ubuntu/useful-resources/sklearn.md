@@ -35,9 +35,14 @@
          * [Linear Regression](#linear-regression)
          * [Logistic Regression](#logistic-regression)
          * [Multi nomial Naive Bayes](#multi-nomial-naive-bayes)
+         * [SVM](#svm)
+         * [KNN](#knn)
          * [Decision Tree](#decision-tree)
+         * [Random Forest (Bagging techinque)](#random-forest-bagging-techinque)
+         * [Adaboost (Boosting)](#adaboost-boosting)
+         * [gradboost (Boosting)](#gradboost-boosting)
 
-<!-- Added by: gil_diy, at: Sun 13 Feb 2022 12:09:47 IST -->
+<!-- Added by: gil_diy, at: Sun 13 Feb 2022 12:24:47 IST -->
 
 <!--te-->
 
@@ -506,6 +511,14 @@ for thresh in thresholds:
 
 ### Multi nomial Naive Bayes
 
+### SVM
+
+### KNN
+
 ### Decision Tree
 
-### 
+### Random Forest (Bagging techinque)
+
+### Adaboost (Boosting)
+
+### gradboost (Boosting)
