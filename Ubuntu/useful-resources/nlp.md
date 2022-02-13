@@ -8,8 +8,9 @@
          * [Lemmatiziation](#lemmatiziation)
          * [Bag of Words](#bag-of-words)
          * [TFIDF](#tfidf)
+         * [Word2Vec](#word2vec)
 
-<!-- Added by: gil_diy, at: Sun 13 Feb 2022 11:30:36 IST -->
+<!-- Added by: gil_diy, at: Sun 13 Feb 2022 15:49:16 IST -->
 
 <!--te-->
 
@@ -76,3 +77,7 @@ dictionary = corpora.Dictionary(processed_corpus)
 dictionary.doc2bow(text)
 ```
 ### TFIDF
+
+### Word2Vec
+
+The drawbacks in of BOW and TFIDF is semantic information is not stored, which means the context the word appears is not take into account.
