@@ -16,8 +16,8 @@
             * [PCA (Principal Component Analysis)](#pca-principal-component-analysis)
       * [Splitting data](#splitting-data)
          * [Cross-validation](#cross-validation)
-               * [Kfold](#kfold)
-               * [cross_val_score](#cross_val_score)
+            * [Kfold](#kfold)
+            * [cross_val_score](#cross_val_score)
          * [Stratified Shuffle Split](#stratified-shuffle-split)
          * [StratifiedKFold](#stratifiedkfold)
          * [LeaveOneOut](#leaveoneout)
@@ -32,7 +32,7 @@
          * [Approach 5: features selection using Chi2 Statistical Analysis](#approach-5-features-selection-using-chi2-statistical-analysis)
       * [<a href="https://youtu.be/_AWQ4Myxlcg?list=PLZoTAELRMXVPgjwJ8VyRoqmfNs2CJwhVH" rel="nofollow">Link</a>](#link)
 
-<!-- Added by: gil_diy, at: Fri 04 Feb 2022 10:26:12 IST -->
+<!-- Added by: gil_diy, at: Sun 13 Feb 2022 10:17:54 IST -->
 
 <!--te-->
 
@@ -188,7 +188,7 @@ Explained very well here for creating a concise code neat [Link](https://www.you
 Cross-validation is an approach that you can use to estimate the performance of a machine learning algorithm with less variance than a single train-test set split.
 
 
-##### Kfold
+#### Kfold
 
 
 **Steps for K-folded cross-validation**
@@ -252,7 +252,7 @@ for train_index, test_index in kf.split(x, y):
 ```
 
 
-##### cross_val_score
+#### cross_val_score
 
 
 
