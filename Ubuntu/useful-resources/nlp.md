@@ -3,8 +3,10 @@
       * [Well known libraries in NLP](#well-known-libraries-in-nlp)
       * [Topic Discovery](#topic-discovery)
          * [LDA - Latent Dirichlet Allocation](#lda---latent-dirichlet-allocation)
+      * [Preprocessing](#preprocessing)
+         * [Stemming](#stemming)
 
-<!-- Added by: gil_diy, at: Sun 13 Feb 2022 10:18:00 IST -->
+<!-- Added by: gil_diy, at: Sun 13 Feb 2022 10:49:42 IST -->
 
 <!--te-->
 
@@ -37,3 +39,10 @@ Is to discover topics in a collection of documents, and then automatically **cla
 
 
 [Training Latent Dirichlet Allocation: Gibbs Sampling](https://youtu.be/BaM1uiCpj_E)
+
+
+## Preprocessing
+
+### Stemming
+
+The problem using stemming it produces intermediate representation of the word may not have any meaning. Example: intelligen, fina etc.
