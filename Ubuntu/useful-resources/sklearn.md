@@ -31,8 +31,13 @@
             * [Numerical values](#numerical-values)
          * [Approach 5: features selection using Chi2 Statistical Analysis](#approach-5-features-selection-using-chi2-statistical-analysis)
       * [<a href="https://youtu.be/_AWQ4Myxlcg?list=PLZoTAELRMXVPgjwJ8VyRoqmfNs2CJwhVH" rel="nofollow">Link</a>](#link)
+      * [models](#models)
+         * [Linear Regression](#linear-regression)
+         * [Logistic Regression](#logistic-regression)
+         * [Multi nomial Naive Bayes](#multi-nomial-naive-bayes)
+         * [Decision Tree](#decision-tree)
 
-<!-- Added by: gil_diy, at: Sun 13 Feb 2022 10:17:57 IST -->
+<!-- Added by: gil_diy, at: Sun 13 Feb 2022 12:09:47 IST -->
 
 <!--te-->
 
@@ -491,3 +496,16 @@ for thresh in thresholds:
     print("Thresh=%.3f, n=%d, Accuracy: %.2f%%" % (thresh, select_X_train.shape[1], accuracy*100.0))
 
 ```
+
+## models
+
+
+### Linear Regression
+
+### Logistic Regression
+
+### Multi nomial Naive Bayes
+
+### Decision Tree
+
+### 
