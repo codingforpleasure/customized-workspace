@@ -7,7 +7,7 @@
          * [Stemming](#stemming)
          * [Lemmatiziation](#lemmatiziation)
 
-<!-- Added by: gil_diy, at: Sun 13 Feb 2022 10:51:02 IST -->
+<!-- Added by: gil_diy, at: Sun 13 Feb 2022 10:51:04 IST -->
 
 <!--te-->
 
