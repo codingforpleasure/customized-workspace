@@ -6,7 +6,7 @@
       * [Preprocessing](#preprocessing)
          * [Stemming](#stemming)
 
-<!-- Added by: gil_diy, at: Sun 13 Feb 2022 10:49:44 IST -->
+<!-- Added by: gil_diy, at: Sun 13 Feb 2022 10:49:48 IST -->
 
 <!--te-->
 
@@ -45,4 +45,6 @@ Is to discover topics in a collection of documents, and then automatically **cla
 
 ### Stemming
 
-The problem using stemming it produces intermediate representation of the word may not have any meaning. Example: intelligen, fina etc.
+The problem using stemming it produces intermediate representation of the word may not have any meaning. 
+
+**Example:** intelligen, fina etc.
