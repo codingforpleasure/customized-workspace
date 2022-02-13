@@ -6,8 +6,10 @@
       * [Preprocessing](#preprocessing)
          * [Stemming](#stemming)
          * [Lemmatiziation](#lemmatiziation)
+         * [Bag of Words](#bag-of-words)
+         * [TFIDF](#tfidf)
 
-<!-- Added by: gil_diy, at: Sun 13 Feb 2022 10:51:04 IST -->
+<!-- Added by: gil_diy, at: Sun 13 Feb 2022 11:30:36 IST -->
 
 <!--te-->
 
@@ -55,3 +57,22 @@ The problem using stemming it produces **intermediate representation of the word
 `final` gets converted into `fina`
 
 ### Lemmatiziation
+
+
+### Bag of Words
+
+
+You can use either: 
+```python
+from sklearn.feature_extraction.text import CountVectorizer
+```
+
+or 
+
+```python
+from gensim import corpora
+...
+dictionary = corpora.Dictionary(processed_corpus)
+dictionary.doc2bow(text)
+```
+### TFIDF
