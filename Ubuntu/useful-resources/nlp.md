@@ -12,7 +12,7 @@
             * [Drawbacks](#drawbacks)
       * [BERT (Bidirectional Encoder Representation from Transformer)](#bert-bidirectional-encoder-representation-from-transformer)
 
-<!-- Added by: gil_diy, at: Mon 14 Feb 2022 15:00:51 IST -->
+<!-- Added by: gil_diy, at: Mon 14 Feb 2022 15:00:54 IST -->
 
 <!--te-->
 
