@@ -9,9 +9,10 @@
          * [Bag of Words](#bag-of-words)
          * [TFIDF](#tfidf)
          * [Word2Vec](#word2vec)
+            * [Drawbacks](#drawbacks)
       * [BERT (Bidirectional Encoder Representation from Transformer)](#bert-bidirectional-encoder-representation-from-transformer)
 
-<!-- Added by: gil_diy, at: Mon 14 Feb 2022 14:46:38 IST -->
+<!-- Added by: gil_diy, at: Mon 14 Feb 2022 14:57:22 IST -->
 
 <!--te-->
 
@@ -87,9 +88,14 @@ The drawbacks in BOW and TFIDF is:
 * There is definitely a chance of over fitting
 
 
-The drawbacks of `Word2Vec` which we have mentioned before is:
+* Word2vec is a group of related models that are used to produce word embeddings
 
-Is context-free model, which generate **static embeddings irrespective of the context**.
+* Word2vec takes as its input a large corpus of text and produces a vector space, typically of several hundred dimensions, with each unique word in the corpus being assigned a corresponding vector in the space
+
+
+#### Drawbacks
+
+* Is context-free model, which generate **static embeddings irrespective of the context**.
 
 ## BERT (Bidirectional Encoder Representation from Transformer)
 
@@ -121,3 +127,4 @@ BERT, on the other hand, is a context-based model. It will understand the contex
 generate the embedding for the word based on the context. So, for the preceding two
 sentences, it will give different embeddings for the word 'Python' based on the context.
 
+* The encoder of the transformer is bidirectional in nature since it can read a sentence in both directions. 
