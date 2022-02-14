@@ -6,7 +6,7 @@
          * [Compute Similarities](#compute-similarities)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Mon 14 Feb 2022 09:46:19 IST -->
+<!-- Added by: gil_diy, at: Mon 14 Feb 2022 09:47:51 IST -->
 
 <!--te-->
 
@@ -62,7 +62,7 @@ model.similarity('Porsche 718 Cayman', 'Nissan Van')
 ```
 
 
-We also can use the built-in function model.most_similar() to get a set of the **most similar** make models for a given make model based on the Euclidean distance.
+We also can use the built-in function model.most_similar() to get a set of the **most similar** make models for a given make model **based on the Euclidean distance**.
 
 ```python
 model1.most_similar('Mercedes-Benz SLK-Class')[:5]
