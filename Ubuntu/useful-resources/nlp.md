@@ -11,7 +11,7 @@
          * [Word2Vec](#word2vec)
       * [BERT](#bert)
 
-<!-- Added by: gil_diy, at: Mon 14 Feb 2022 14:19:44 IST -->
+<!-- Added by: gil_diy, at: Mon 14 Feb 2022 14:23:51 IST -->
 
 <!--te-->
 
@@ -103,3 +103,7 @@ Gor example:
 
 By reading the preceding two sentences, we can understand that the meaning of the words `Python`
 is different in both sentences. 
+
+In sentence A, the word `Python` refers toa snake.
+
+In sentence B, the word `Python` refers toa snake.
