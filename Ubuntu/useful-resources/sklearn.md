@@ -46,7 +46,7 @@
          * [Latent Dirichlet Allocation](#latent-dirichlet-allocation)
          * [Principal component analysis (PCA)](#principal-component-analysis-pca)
 
-<!-- Added by: gil_diy, at: Sun 13 Feb 2022 19:15:40 IST -->
+<!-- Added by: gil_diy, at: Mon 14 Feb 2022 18:44:45 IST -->
 
 <!--te-->
 
@@ -290,6 +290,20 @@ print("Accuracy: %.2f%% (%.2f%%)" % (results.mean()*100, results.std()*100))
 
 
 ### Stratified Shuffle Split
+
+
+Making sure the distribution of classes is done in the same manner both in the train set and the testing set. for example:
+
+class 1: 20 
+class 2: 40
+
+
+then if we split to train and testing set with ratio 0.25, so would like to get:
+
+train: class 1 (15), class 2 (30) 
+test: class 1 (5), class 2 (10) 
+
+
 
 The split operations returns 
 
