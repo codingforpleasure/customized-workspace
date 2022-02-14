@@ -5,7 +5,7 @@
       * [Get the list of tuples with words and parts of speech tags:](#get-the-list-of-tuples-with-words-and-parts-of-speech-tags)
       * [Getting dependency parse](#getting-dependency-parse)
 
-<!-- Added by: gil_diy, at: Mon 14 Feb 2022 10:21:48 IST -->
+<!-- Added by: gil_diy, at: Mon 14 Feb 2022 14:57:25 IST -->
 
 <!--te-->
 
@@ -60,3 +60,7 @@ doc = nlp(sentence)
 for token in doc:
    print(token.text, "\t", token.dep_, "\t", spacy.explain(token.dep_))
 ```
+
+<p align="center"> <!-- style="width:400px;" -->
+  <img src="images/nlp/" title="tool tip here">
+</p>
