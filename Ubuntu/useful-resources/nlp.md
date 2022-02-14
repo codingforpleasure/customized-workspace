@@ -9,8 +9,9 @@
          * [Bag of Words](#bag-of-words)
          * [TFIDF](#tfidf)
          * [Word2Vec](#word2vec)
+      * [BERT](#bert)
 
-<!-- Added by: gil_diy, at: Mon 14 Feb 2022 09:26:56 IST -->
+<!-- Added by: gil_diy, at: Mon 14 Feb 2022 14:09:24 IST -->
 
 <!--te-->
 
@@ -84,3 +85,9 @@ The drawbacks in BOW and TFIDF is:
 * **Semantic information is not stored**, which means the context/order of a word appears in a sentence is not taken into account.
 
 * There is definitely a chance of over fitting
+
+## BERT 
+
+The drawbacks of `Word2Vec` which we have mentioned before is:
+
+*
