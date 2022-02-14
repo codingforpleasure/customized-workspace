@@ -2,7 +2,7 @@
    * [Gensim](#gensim)
       * [word2vec](#word2vec)
 
-<!-- Added by: gil_diy, at: Mon 14 Feb 2022 09:19:34 IST -->
+<!-- Added by: gil_diy, at: Mon 14 Feb 2022 09:20:40 IST -->
 
 <!--te-->
 
@@ -11,9 +11,20 @@
 ## word2vec
 
 
+There are two main training algorithms for word2vec:
+
+1) CBOW - continuous bag of words
+
+2) skip-gram
+
+The major difference between these two methods is that **CBOW** is using context to predict a target word while skip-gram is using a word to predict a target context
+
 <p align="center"> <!-- style="width:400px;" -->
   <img src="images/nlp/word2vec.jpg" title="tool tip here">
 </p>
+
+
+
 
 ```python
 model = Word2Vec(sent, min_count=1,size= 50,workers=3, window =3, sg = 1)
