@@ -14,7 +14,7 @@
             * [Drawbacks](#drawbacks-2)
       * [BERT (Bidirectional Encoder Representation from Transformer)](#bert-bidirectional-encoder-representation-from-transformer)
 
-<!-- Added by: gil_diy, at: Mon 14 Feb 2022 15:03:39 IST -->
+<!-- Added by: gil_diy, at: Mon 14 Feb 2022 15:03:58 IST -->
 
 <!--te-->
 
@@ -105,9 +105,9 @@ dictionary.doc2bow(text)
 
 * Word2vec can utilize either of two model architectures to produce a distributed representation of words: 
 
-      continuous bag-of-words (CBOW) 
+      **(1)** continuous bag-of-words (CBOW) 
 
-      continuous skip-gram
+      **(2)** continuous skip-gram
 
 ```python
 model = Word2Vec(sent, min_count=1,size= 50,workers=3, window =3, sg = 1) # sg = skip-gram
