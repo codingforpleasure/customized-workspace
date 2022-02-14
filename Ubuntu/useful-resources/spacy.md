@@ -4,7 +4,7 @@
       * [Divide text into sentences](#divide-text-into-sentences)
       * [Get the list of tuples with words and parts of speech tags:](#get-the-list-of-tuples-with-words-and-parts-of-speech-tags)
 
-<!-- Added by: gil_diy, at: Mon 14 Feb 2022 10:05:27 IST -->
+<!-- Added by: gil_diy, at: Mon 14 Feb 2022 10:07:09 IST -->
 
 <!--te-->
 
@@ -35,3 +35,5 @@ words = [token.text for token in doc]
 pos = [token.pos_ for token in doc]
 word_pos_tuples = list(zip(words, pos))
 ```
+
+## 
