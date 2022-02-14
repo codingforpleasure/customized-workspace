@@ -2,7 +2,7 @@
    * [Gensim](#gensim)
       * [word2vec](#word2vec)
 
-<!-- Added by: gil_diy, at: Mon 14 Feb 2022 09:27:37 IST -->
+<!-- Added by: gil_diy, at: Mon 14 Feb 2022 09:28:56 IST -->
 
 <!--te-->
 
@@ -39,3 +39,9 @@ model = Word2Vec(sent, min_count=1,size= 50,workers=3, window =3, sg = 1)
 **workers** : The number of partitions during training and the default workers is 3.
 
 **sg**: The training algorithm, either CBOW(0) or skip gram(1). The default training algorithm is CBOW.
+
+After training the word2vec model, we can obtain the word embedding directly from the training model as following.
+
+```python
+model['Toyota Camry']
+```
