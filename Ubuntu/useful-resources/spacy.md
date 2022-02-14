@@ -5,7 +5,7 @@
       * [Get the list of tuples with words and parts of speech tags:](#get-the-list-of-tuples-with-words-and-parts-of-speech-tags)
       * [Getting dependency parse](#getting-dependency-parse)
 
-<!-- Added by: gil_diy, at: Mon 14 Feb 2022 10:21:09 IST -->
+<!-- Added by: gil_diy, at: Mon 14 Feb 2022 10:21:48 IST -->
 
 <!--te-->
 
@@ -43,6 +43,9 @@ word_pos_tuples = list(zip(words, pos))
 
 
 The dependency parse can be very useful in many NLP tasks since it shows the grammatical structure of the sentence, along with the subject, the main verb, the object, and so on.
+
+
+use spaCy's **explain** function, which shows the meanings of the tags.
 
 ```python
 import spacy
