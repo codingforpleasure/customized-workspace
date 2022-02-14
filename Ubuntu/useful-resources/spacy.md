@@ -5,7 +5,7 @@
       * [Get the list of tuples with words and parts of speech tags:](#get-the-list-of-tuples-with-words-and-parts-of-speech-tags)
       * [Getting dependency parse](#getting-dependency-parse)
 
-<!-- Added by: gil_diy, at: Mon 14 Feb 2022 10:20:37 IST -->
+<!-- Added by: gil_diy, at: Mon 14 Feb 2022 10:20:40 IST -->
 
 <!--te-->
 
