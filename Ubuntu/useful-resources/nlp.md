@@ -12,7 +12,7 @@
             * [Drawbacks](#drawbacks)
       * [BERT (Bidirectional Encoder Representation from Transformer)](#bert-bidirectional-encoder-representation-from-transformer)
 
-<!-- Added by: gil_diy, at: Mon 14 Feb 2022 14:57:22 IST -->
+<!-- Added by: gil_diy, at: Mon 14 Feb 2022 14:57:47 IST -->
 
 <!--te-->
 
@@ -83,6 +83,7 @@ dictionary.doc2bow(text)
 ### Word2Vec
 
 The drawbacks in BOW and TFIDF is:
+
 * **Semantic information is not stored**, which means the context/order of a word appears in a sentence is not taken into account.
 
 * There is definitely a chance of over fitting
