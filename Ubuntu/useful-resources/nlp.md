@@ -11,7 +11,7 @@
          * [Word2Vec](#word2vec)
       * [BERT](#bert)
 
-<!-- Added by: gil_diy, at: Mon 14 Feb 2022 14:11:21 IST -->
+<!-- Added by: gil_diy, at: Mon 14 Feb 2022 14:12:16 IST -->
 
 <!--te-->
 
@@ -91,3 +91,6 @@ The drawbacks in BOW and TFIDF is:
 The drawbacks of `Word2Vec` which we have mentioned before is:
 
 * Is conetxt-free model, which generate static embeddings irrespective of the context.
+
+
+On the otherhand `BERT` generates dynamic embeddings based on the context.
