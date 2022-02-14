@@ -46,7 +46,7 @@
          * [Latent Dirichlet Allocation](#latent-dirichlet-allocation)
          * [Principal component analysis (PCA)](#principal-component-analysis-pca)
 
-<!-- Added by: gil_diy, at: Mon 14 Feb 2022 18:46:42 IST -->
+<!-- Added by: gil_diy, at: Mon 14 Feb 2022 18:47:01 IST -->
 
 <!--te-->
 
@@ -299,8 +299,9 @@ Making sure the distribution of classes is done in the same manner both in the `
 
 then if we split to train and testing set with ratio 0.25, so would shoudl get:
 
-train: class 1 (15), class 2 (30) 
-test: class 1 (5), class 2 (10) 
+* train: class 1 (15), class 2 (30) 
+
+* test: class 1 (5), class 2 (10) 
 
 
 
