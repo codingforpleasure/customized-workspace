@@ -4,9 +4,9 @@
       * [Tokenizing words](#tokenizing-words)
       * [Stop words](#stop-words)
       * [Stemming](#stemming)
-      * [<strong>Tagging</strong>](#tagging)
+      * [Tagging](#tagging)
 
-<!-- Added by: gil_diy, at: Mon 14 Feb 2022 10:59:25 IST -->
+<!-- Added by: gil_diy, at: Mon 14 Feb 2022 10:59:32 IST -->
 
 <!--te-->
 # **nltk**
@@ -73,7 +73,7 @@ for word in example_words:
 ```
 
 
-## **Tagging**
+## Tagging
 ```python
 train_text = state_union.raw("2005-GWBush.txt")
 sample_text = state_union.raw("2006-GWBush.txt")
