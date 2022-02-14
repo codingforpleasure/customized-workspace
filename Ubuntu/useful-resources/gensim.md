@@ -3,8 +3,9 @@
       * [word2vec](#word2vec)
          * [Create word2vec represetnation model](#create-word2vec-represetnation-model)
          * [Get word representation as a vector](#get-word-representation-as-a-vector)
+   * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Mon 14 Feb 2022 09:34:29 IST -->
+<!-- Added by: gil_diy, at: Mon 14 Feb 2022 09:39:27 IST -->
 
 <!--te-->
 
@@ -50,3 +51,8 @@ model = Word2Vec(sent, min_count=1,size= 50,workers=3, window =3, sg = 1)
 ```python
 model['Toyota Camry']
 ```
+
+
+# Reference
+
+[Academic paper](https://arxiv.org/pdf/1301.3781.pdf)
