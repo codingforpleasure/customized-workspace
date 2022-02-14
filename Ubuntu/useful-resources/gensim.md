@@ -1,8 +1,10 @@
 <!--ts-->
    * [Gensim](#gensim)
       * [word2vec](#word2vec)
+         * [Create word2vec represetnation model](#create-word2vec-represetnation-model)
+         * [Get word representation as a vector](#get-word-representation-as-a-vector)
 
-<!-- Added by: gil_diy, at: Mon 14 Feb 2022 09:28:56 IST -->
+<!-- Added by: gil_diy, at: Mon 14 Feb 2022 09:34:29 IST -->
 
 <!--te-->
 
@@ -25,7 +27,7 @@ The major difference between these two methods is that **CBOW** is using context
 
 
 
-
+### Create word2vec represetnation model
 ```python
 model = Word2Vec(sent, min_count=1,size= 50,workers=3, window =3, sg = 1)
 ```
@@ -40,7 +42,10 @@ model = Word2Vec(sent, min_count=1,size= 50,workers=3, window =3, sg = 1)
 
 **sg**: The training algorithm, either CBOW(0) or skip gram(1). The default training algorithm is CBOW.
 
-After training the word2vec model, we can obtain the word embedding directly from the training model as following.
+
+### Get word representation as a vector 
+
+* After training the word2vec model, we can obtain the word embedding directly from the training model as following.
 
 ```python
 model['Toyota Camry']
