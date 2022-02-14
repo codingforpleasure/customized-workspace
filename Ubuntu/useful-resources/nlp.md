@@ -16,8 +16,9 @@
             * [Glove Embedding](#glove-embedding)
             * [FastText Embedding](#fasttext-embedding)
       * [BERT (Bidirectional Encoder Representation from Transformer)](#bert-bidirectional-encoder-representation-from-transformer)
+      * [Cleaning methods](#cleaning-methods)
 
-<!-- Added by: gil_diy, at: Mon 14 Feb 2022 18:54:17 IST -->
+<!-- Added by: gil_diy, at: Mon 14 Feb 2022 18:58:09 IST -->
 
 <!--te-->
 
@@ -162,3 +163,29 @@ sentences, it will give different embeddings for the word 'Python' based on the 
 
 * The encoder of the transformer is bidirectional in nature since it can read a sentence in both directions. 
 
+
+## Cleaning methods
+
+```python
+def text_cleaning(texts):
+    texts_cleaning = []
+    for txt in tqdm(texts):
+        url = re.compile(r'https?://\S+|www\.\S+')
+        html = re.compile(r'<.*?>')
+        emoji_pattern = re.compile("["
+                               u"\U0001F600-\U0001F64F"  # emoticons
+                               u"\U0001F300-\U0001F5FF"  # symbols & pictographs
+                               u"\U0001F680-\U0001F6FF"  # transport & map symbols
+                               u"\U0001F1E0-\U0001F1FF"  # flags (iOS)
+                               u"\U00002702-\U000027B0"
+                               u"\U000024C2-\U0001F251"
+                               "]+", flags=re.UNICODE)
+        txt = emoji_pattern.sub(r'', txt)
+        txt = html.sub(r'',txt)
+        txt = url.sub(r'',txt)
+        txt = re.sub('[^A-Za-z\s]', '', txt)
+        
+        texts_cleaning.append(txt.lower())
+    return texts_cleaning
+text = text_cleaning(train.text.tolist())
+```
