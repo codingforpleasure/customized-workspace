@@ -5,7 +5,7 @@
       * [Get the list of tuples with words and parts of speech tags:](#get-the-list-of-tuples-with-words-and-parts-of-speech-tags)
       * [Getting dependency parse](#getting-dependency-parse)
 
-<!-- Added by: gil_diy, at: Mon 14 Feb 2022 10:20:40 IST -->
+<!-- Added by: gil_diy, at: Mon 14 Feb 2022 10:21:09 IST -->
 
 <!--te-->
 
@@ -50,6 +50,9 @@ import spacy
 sentence = 'I have seldom heard him mention her under any other name.'
 nlp = spacy.load('en_core_web_sm')
 doc = nlp(sentence)
+
+# The dependency information will be contained in the doc object. We can see the
+# dependency tags by looping through the tokens in doc :
 
 for token in doc:
    print(token.text, "\t", token.dep_, "\t", spacy.explain(token.dep_))
