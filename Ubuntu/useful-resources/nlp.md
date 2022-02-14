@@ -11,7 +11,7 @@
          * [Word2Vec](#word2vec)
       * [BERT](#bert)
 
-<!-- Added by: gil_diy, at: Mon 14 Feb 2022 14:12:16 IST -->
+<!-- Added by: gil_diy, at: Mon 14 Feb 2022 14:19:44 IST -->
 
 <!--te-->
 
@@ -94,3 +94,12 @@ The drawbacks of `Word2Vec` which we have mentioned before is:
 
 
 On the otherhand `BERT` generates dynamic embeddings based on the context.
+
+Gor example:
+
+**Sentence A**: He got bit by Python
+
+**Sentence B**: Python is my favorite programming language
+
+By reading the preceding two sentences, we can understand that the meaning of the words `Python`
+is different in both sentences. 
