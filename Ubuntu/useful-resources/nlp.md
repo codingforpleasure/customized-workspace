@@ -12,7 +12,7 @@
             * [Drawbacks](#drawbacks)
       * [BERT (Bidirectional Encoder Representation from Transformer)](#bert-bidirectional-encoder-representation-from-transformer)
 
-<!-- Added by: gil_diy, at: Mon 14 Feb 2022 15:00:54 IST -->
+<!-- Added by: gil_diy, at: Mon 14 Feb 2022 15:01:08 IST -->
 
 <!--te-->
 
@@ -94,7 +94,9 @@ The drawbacks in BOW and TFIDF is:
 
 
 * Word2vec can utilize either of two model architectures to produce a distributed representation of words: 
+
 (1) continuous bag-of-words (CBOW) 
+
 (2)continuous skip-gram
 
 ```python
