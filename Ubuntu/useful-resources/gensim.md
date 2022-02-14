@@ -2,7 +2,7 @@
    * [Gensim](#gensim)
       * [word2vec](#word2vec)
 
-<!-- Added by: gil_diy, at: Mon 14 Feb 2022 09:19:29 IST -->
+<!-- Added by: gil_diy, at: Mon 14 Feb 2022 09:19:32 IST -->
 
 <!--te-->
 
