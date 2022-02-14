@@ -10,7 +10,7 @@
          * [TFIDF](#tfidf)
          * [Word2Vec](#word2vec)
 
-<!-- Added by: gil_diy, at: Sun 13 Feb 2022 15:50:44 IST -->
+<!-- Added by: gil_diy, at: Mon 14 Feb 2022 09:26:56 IST -->
 
 <!--te-->
 
@@ -80,5 +80,7 @@ dictionary.doc2bow(text)
 
 ### Word2Vec
 
-The drawbacks in BOW and TFIDF is semantic information is not stored, 
-which means the context/order of a word appears in a sentence is not taken into account.
+The drawbacks in BOW and TFIDF is:
+* **Semantic information is not stored**, which means the context/order of a word appears in a sentence is not taken into account.
+
+* There is definitely a chance of over fitting
