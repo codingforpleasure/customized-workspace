@@ -10,11 +10,12 @@
             * [Drawbacks](#drawbacks)
          * [TFIDF](#tfidf)
             * [Drawbacks](#drawbacks-1)
-         * [Word2Vec](#word2vec)
+         * [Embedding](#embedding)
+            * [Word2Vec](#word2vec)
             * [Drawbacks](#drawbacks-2)
       * [BERT (Bidirectional Encoder Representation from Transformer)](#bert-bidirectional-encoder-representation-from-transformer)
 
-<!-- Added by: gil_diy, at: Mon 14 Feb 2022 15:03:58 IST -->
+<!-- Added by: gil_diy, at: Mon 14 Feb 2022 18:53:38 IST -->
 
 <!--te-->
 
@@ -95,7 +96,10 @@ dictionary.doc2bow(text)
 
 * There is definitely a chance of over fitting
 
-### Word2Vec
+
+### Embedding 
+
+#### Word2Vec
 
 
 * Word2vec is a group of related models that are used to produce word embeddings
@@ -149,3 +153,4 @@ generate the embedding for the word based on the context. So, for the preceding 
 sentences, it will give different embeddings for the word 'Python' based on the context.
 
 * The encoder of the transformer is bidirectional in nature since it can read a sentence in both directions. 
+
