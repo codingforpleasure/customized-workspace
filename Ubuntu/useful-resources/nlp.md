@@ -11,13 +11,13 @@
          * [TFIDF](#tfidf)
             * [Drawbacks](#drawbacks-1)
          * [Embedding](#embedding)
-            * [Word2Vec](#word2vec)
+            * [Word2Vec Embedding](#word2vec-embedding)
                * [Drawbacks](#drawbacks-2)
             * [Glove Embedding](#glove-embedding)
             * [FastText Embedding](#fasttext-embedding)
       * [BERT (Bidirectional Encoder Representation from Transformer)](#bert-bidirectional-encoder-representation-from-transformer)
 
-<!-- Added by: gil_diy, at: Mon 14 Feb 2022 18:54:14 IST -->
+<!-- Added by: gil_diy, at: Mon 14 Feb 2022 18:54:17 IST -->
 
 <!--te-->
 
@@ -101,7 +101,7 @@ dictionary.doc2bow(text)
 
 ### Embedding 
 
-#### Word2Vec
+#### Word2Vec Embedding
 
 
 * Word2vec is a group of related models that are used to produce word embeddings
