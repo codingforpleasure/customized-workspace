@@ -12,7 +12,7 @@
             * [Drawbacks](#drawbacks)
       * [BERT (Bidirectional Encoder Representation from Transformer)](#bert-bidirectional-encoder-representation-from-transformer)
 
-<!-- Added by: gil_diy, at: Mon 14 Feb 2022 15:01:08 IST -->
+<!-- Added by: gil_diy, at: Mon 14 Feb 2022 15:01:35 IST -->
 
 <!--te-->
 
@@ -100,7 +100,7 @@ The drawbacks in BOW and TFIDF is:
 (2)continuous skip-gram
 
 ```python
-model = Word2Vec(sent, min_count=1,size= 50,workers=3, window =3, sg = 1)
+model = Word2Vec(sent, min_count=1,size= 50,workers=3, window =3, sg = 1) # sg = skip-gram
 ```
 
 
