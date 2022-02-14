@@ -7,12 +7,14 @@
          * [Stemming](#stemming)
          * [Lemmatiziation](#lemmatiziation)
          * [Bag of Words](#bag-of-words)
-         * [TFIDF](#tfidf)
-         * [Word2Vec](#word2vec)
             * [Drawbacks](#drawbacks)
+         * [TFIDF](#tfidf)
+            * [Drawbacks](#drawbacks-1)
+         * [Word2Vec](#word2vec)
+            * [Drawbacks](#drawbacks-2)
       * [BERT (Bidirectional Encoder Representation from Transformer)](#bert-bidirectional-encoder-representation-from-transformer)
 
-<!-- Added by: gil_diy, at: Mon 14 Feb 2022 15:01:35 IST -->
+<!-- Added by: gil_diy, at: Mon 14 Feb 2022 15:02:46 IST -->
 
 <!--te-->
 
@@ -78,15 +80,23 @@ from gensim import corpora
 dictionary = corpora.Dictionary(processed_corpus)
 dictionary.doc2bow(text)
 ```
-### TFIDF
 
-### Word2Vec
-
-The drawbacks in BOW and TFIDF is:
+#### Drawbacks
 
 * **Semantic information is not stored**, which means the context/order of a word appears in a sentence is not taken into account.
 
 * There is definitely a chance of over fitting
+
+### TFIDF
+
+#### Drawbacks
+
+* **Semantic information is not stored**, which means the context/order of a word appears in a sentence is not taken into account.
+
+* There is definitely a chance of over fitting
+
+### Word2Vec
+
 
 * Word2vec is a group of related models that are used to produce word embeddings
 
