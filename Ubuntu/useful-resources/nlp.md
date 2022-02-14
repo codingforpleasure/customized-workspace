@@ -9,9 +9,9 @@
          * [Bag of Words](#bag-of-words)
          * [TFIDF](#tfidf)
          * [Word2Vec](#word2vec)
-      * [BERT](#bert)
+      * [BERT (Bidirectional Encoder Representation from Transformer)](#bert-bidirectional-encoder-representation-from-transformer)
 
-<!-- Added by: gil_diy, at: Mon 14 Feb 2022 14:33:03 IST -->
+<!-- Added by: gil_diy, at: Mon 14 Feb 2022 14:46:38 IST -->
 
 <!--te-->
 
@@ -91,7 +91,7 @@ The drawbacks of `Word2Vec` which we have mentioned before is:
 
 Is context-free model, which generate **static embeddings irrespective of the context**.
 
-## BERT 
+## BERT (Bidirectional Encoder Representation from Transformer)
 
 `BERT` generates **dynamic embeddings** based on the context.
 
