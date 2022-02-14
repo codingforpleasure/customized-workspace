@@ -12,10 +12,12 @@
             * [Drawbacks](#drawbacks-1)
          * [Embedding](#embedding)
             * [Word2Vec](#word2vec)
-            * [Drawbacks](#drawbacks-2)
+               * [Drawbacks](#drawbacks-2)
+            * [Glove Embedding](#glove-embedding)
+            * [FastText Embedding](#fasttext-embedding)
       * [BERT (Bidirectional Encoder Representation from Transformer)](#bert-bidirectional-encoder-representation-from-transformer)
 
-<!-- Added by: gil_diy, at: Mon 14 Feb 2022 18:53:38 IST -->
+<!-- Added by: gil_diy, at: Mon 14 Feb 2022 18:54:14 IST -->
 
 <!--te-->
 
@@ -118,9 +120,15 @@ model = Word2Vec(sent, min_count=1,size= 50,workers=3, window =3, sg = 1) # sg =
 ```
 
 
-#### Drawbacks
+##### Drawbacks
 
 * Is context-free model, which generate **static embeddings irrespective of the context**.
+
+
+#### Glove Embedding
+
+#### FastText Embedding
+
 
 ## BERT (Bidirectional Encoder Representation from Transformer)
 
