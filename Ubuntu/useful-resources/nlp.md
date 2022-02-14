@@ -11,7 +11,7 @@
          * [Word2Vec](#word2vec)
       * [BERT](#bert)
 
-<!-- Added by: gil_diy, at: Mon 14 Feb 2022 14:24:13 IST -->
+<!-- Added by: gil_diy, at: Mon 14 Feb 2022 14:29:12 IST -->
 
 <!--te-->
 
@@ -86,11 +86,14 @@ The drawbacks in BOW and TFIDF is:
 
 * There is definitely a chance of over fitting
 
-## BERT 
 
 The drawbacks of `Word2Vec` which we have mentioned before is:
 
 * Is conetxt-free model, which generate static embeddings irrespective of the context.
+
+## BERT 
+
+
 
 
 On the otherhand `BERT` generates dynamic embeddings based on the context.
@@ -107,3 +110,11 @@ is different in both sentences.
 In sentence A, the word `Python` refers to a snake.
 
 In sentence B, the word `Python` refers to a Programming language.
+
+if we get embeddings for the word `Python` in the preceding two sentences using an
+embedding model such as word2vec, the embedding of the word `Python` would be the
+same in both sentences, and so this renders the meaning of the word `Python` the same in
+both sentences. 
+This is because word2vec is the **context-free** model, so it will ignore the
+context and always give the same embedding for the word `Python` irrespective of the
+context.
