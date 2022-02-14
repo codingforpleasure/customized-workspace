@@ -46,7 +46,7 @@
          * [Latent Dirichlet Allocation](#latent-dirichlet-allocation)
          * [Principal component analysis (PCA)](#principal-component-analysis-pca)
 
-<!-- Added by: gil_diy, at: Mon 14 Feb 2022 18:46:23 IST -->
+<!-- Added by: gil_diy, at: Mon 14 Feb 2022 18:46:39 IST -->
 
 <!--te-->
 
@@ -294,7 +294,7 @@ print("Accuracy: %.2f%% (%.2f%%)" % (results.mean()*100, results.std()*100))
 
 Making sure the distribution of classes is done in the same manner both in the `train set` and the `testing set`. for example:
 
-**Class 1: ** 20 , **Class 2: ** 40
+**Class 1**: 20 , **Class 2**: 40
 
 
 then if we split to train and testing set with ratio 0.25, so would shoudl get:
