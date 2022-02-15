@@ -14,11 +14,11 @@
             * [1. Word2Vec Embedding](#1-word2vec-embedding)
                * [Drawbacks](#drawbacks-2)
             * [2. GloVe Embedding (Global Vector)](#2-glove-embedding-global-vector)
-            * [3. FastText Embedding](#3-fasttext-embedding)
+            * [3. FastText Embedding (Brought by Facebook)](#3-fasttext-embedding-brought-by-facebook)
       * [BERT (Bidirectional Encoder Representation from Transformer)](#bert-bidirectional-encoder-representation-from-transformer)
       * [Cleaning methods](#cleaning-methods)
 
-<!-- Added by: gil_diy, at: Tue 15 Feb 2022 10:52:32 IST -->
+<!-- Added by: gil_diy, at: Tue 15 Feb 2022 10:53:46 IST -->
 
 <!--te-->
 
@@ -141,9 +141,11 @@ model = Word2Vec(sent, min_count=1,size= 50,workers=3, window =3, sg = 1) # sg =
 
 #### 2. GloVe Embedding (Global Vector)
 
-#### 3. FastText Embedding
+#### 3. FastText Embedding (Brought by Facebook)
 
 The main disadvantages of **Word2Vec** and **GloVe** embedding is that they are unable to **encode unknown or out-of-vocabulary words**.
+
+Word2Vec which feeds whole words into the neural network, FastText first breaks the words into several sub-words (or n-grams) and then feed them into the neural network.
 
 
 ## BERT (Bidirectional Encoder Representation from Transformer)
