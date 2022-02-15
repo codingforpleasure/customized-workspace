@@ -23,7 +23,7 @@
          * [Drawbacks](#drawbacks-3)
       * [Cleaning methods](#cleaning-methods)
 
-<!-- Added by: gil_diy, at: Tue 15 Feb 2022 15:00:36 IST -->
+<!-- Added by: gil_diy, at: Tue 15 Feb 2022 15:01:20 IST -->
 
 <!--te-->
 
@@ -69,6 +69,8 @@ Is to discover topics in a collection of documents, and then automatically **cla
 3. Remove html tags
 
 4. Remove emojis
+
+5. Remove stopwords
 
 
 ### Stemming
