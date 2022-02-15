@@ -22,7 +22,7 @@
          * [Drawbacks](#drawbacks-3)
       * [Cleaning methods](#cleaning-methods)
 
-<!-- Added by: gil_diy, at: Tue 15 Feb 2022 13:59:09 IST -->
+<!-- Added by: gil_diy, at: Tue 15 Feb 2022 14:42:50 IST -->
 
 <!--te-->
 
@@ -119,7 +119,10 @@ are closer in the vector space depending on the training data.
 
 * Word2vec is a group of related models that are used to produce word embeddings
 
-* Word2vec takes as its input a large corpus of text and produces a vector space, typically of several hundred dimensions, with each unique word in the corpus being assigned a corresponding vector in the space
+* Word2vec takes as its input a large corpus of text and produces a vector space, typically of several hundred dimensions, with each unique word in the corpus being assigned a corresponding vector in the space.
+
+* When you train such a model over billions of token over a large dataset containing web articles and so forth,
+what you get is a very potent representation of each word in the vocabulary in the form of a vector. These vectors can be 300 dimensions long, i.e. each word is represented by 300 real numbers.
 
 
 * Word2vec can utilize either of two model architectures to produce a distributed representation of words: 
@@ -175,6 +178,9 @@ Like BERT (but unlike the word embeddings produced by "Bag of Words" approaches,
 
 * Transformer replaces the **recurrent layers** in seq2seq with **attention layers**.
 
+<p align="center"> <!-- style="width:400px;" -->
+  <img src="images/" title="tool tip here">
+</p>
 
 
 ## BERT (Bidirectional Encoder Representation from Transformer)
