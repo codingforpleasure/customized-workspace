@@ -6,7 +6,7 @@
          * [Desciminator](#desciminator)
          * [Generator](#generator)
 
-<!-- Added by: gil_diy, at: Tue 15 Feb 2022 12:49:55 IST -->
+<!-- Added by: gil_diy, at: Tue 15 Feb 2022 12:58:27 IST -->
 
 <!--te-->
 
@@ -35,6 +35,12 @@ The **skip connections** in ResNet **solve the problem of vanishing gradient** i
 
 <p align="center" style="width:400px;" >
   <img src="images/cnn/Resnet_architecture.png" title="tool tip here">
+</p>
+
+You can see the boost of performance of the **Skip connection**:
+
+<p align="center" style="width:400px;" >
+  <img src="images/cnn/resnet_performance_plain_vs_skipconnection.png" title="tool tip here">
 </p>
 
 
