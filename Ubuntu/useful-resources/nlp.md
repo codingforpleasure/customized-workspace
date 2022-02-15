@@ -17,11 +17,12 @@
             * [3. FastText Embedding (Brought by Facebook)](#3-fasttext-embedding-brought-by-facebook)
             * [Limitation of word Embeddings until here](#limitation-of-word-embeddings-until-here)
             * [4. ELMo - Embedding from Language Model (Brought by ALLenNLP)](#4-elmo---embedding-from-language-model-brought-by-allennlp)
+      * [Transformer](#transformer)
       * [BERT (Bidirectional Encoder Representation from Transformer)](#bert-bidirectional-encoder-representation-from-transformer)
          * [Drawbacks](#drawbacks-3)
       * [Cleaning methods](#cleaning-methods)
 
-<!-- Added by: gil_diy, at: Tue 15 Feb 2022 13:45:57 IST -->
+<!-- Added by: gil_diy, at: Tue 15 Feb 2022 13:59:09 IST -->
 
 <!--te-->
 
@@ -169,9 +170,17 @@ Like BERT (but unlike the word embeddings produced by "Bag of Words" approaches,
 
 * As the ELMo **uses bidirectional LSTM** it can get understanding of both **next and previous word** in the sentence.
 
+
+## Transformer
+
+* Transformer replaces the **recurrent layers** in seq2seq with **attention layers**.
+
+
+
 ## BERT (Bidirectional Encoder Representation from Transformer)
 
 [Attention is all you need](https://arxiv.org/pdf/1706.03762.pdf)
+
 
 `BERT` generates **dynamic embeddings** based on the context.
 
