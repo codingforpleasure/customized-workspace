@@ -21,7 +21,7 @@
          * [Drawbacks](#drawbacks-3)
       * [Cleaning methods](#cleaning-methods)
 
-<!-- Added by: gil_diy, at: Tue 15 Feb 2022 13:40:42 IST -->
+<!-- Added by: gil_diy, at: Tue 15 Feb 2022 13:45:57 IST -->
 
 <!--te-->
 
@@ -201,6 +201,8 @@ generate the embedding for the word based on the context. So, for the preceding 
 sentences, it will give different embeddings for the word 'Python' based on the context.
 
 * The encoder of the transformer is bidirectional in nature since it can read a sentence in both directions. 
+
+* BERT uses `Positionla Encoding`
 
 * Sentence-BERT is modification of the BERT model which uses **siamese** and **triplet network structures** and adds a pooling operation to the output of BERT to obtain fix-sized semantically meaningful sentence embeddings.
 
