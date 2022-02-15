@@ -6,12 +6,16 @@
          * [Desciminator](#desciminator)
          * [Generator](#generator)
 
-<!-- Added by: gil_diy, at: Thu 10 Feb 2022 12:47:37 IST -->
+<!-- Added by: gil_diy, at: Tue 15 Feb 2022 12:16:12 IST -->
 
 <!--te-->
 
 # Architecture Networks
 
+
+<p align="center"> <!-- style="width:400px;" -->
+  <img src="images/cnn/cnn_timeline.png" title="tool tip here">
+</p>
 
 ## VGG
 
