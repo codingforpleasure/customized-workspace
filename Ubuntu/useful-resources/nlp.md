@@ -11,14 +11,14 @@
          * [TFIDF](#tfidf)
             * [Drawbacks](#drawbacks-1)
          * [Word Embedding](#word-embedding)
-            * [Word2Vec Embedding](#word2vec-embedding)
+            * [1. Word2Vec Embedding](#1-word2vec-embedding)
                * [Drawbacks](#drawbacks-2)
-            * [Glove Embedding](#glove-embedding)
-            * [FastText Embedding](#fasttext-embedding)
+            * [2. Glove Embedding](#2-glove-embedding)
+            * [3. FastText Embedding](#3-fasttext-embedding)
       * [BERT (Bidirectional Encoder Representation from Transformer)](#bert-bidirectional-encoder-representation-from-transformer)
       * [Cleaning methods](#cleaning-methods)
 
-<!-- Added by: gil_diy, at: Tue 15 Feb 2022 10:40:26 IST -->
+<!-- Added by: gil_diy, at: Tue 15 Feb 2022 10:40:50 IST -->
 
 <!--te-->
 
@@ -110,7 +110,7 @@ Word embedding which is n-dimensional vector space representation of words such 
 
 are closer in the vector space depending on the training data.
 
-#### Word2Vec Embedding
+#### 1. Word2Vec Embedding
 
 
 * Word2vec is a group of related models that are used to produce word embeddings
@@ -134,9 +134,9 @@ model = Word2Vec(sent, min_count=1,size= 50,workers=3, window =3, sg = 1) # sg =
 * Is context-free model, which generate **static embeddings irrespective of the context**.
 
 
-#### Glove Embedding
+#### 2. Glove Embedding
 
-#### FastText Embedding
+#### 3. FastText Embedding
 
 
 ## BERT (Bidirectional Encoder Representation from Transformer)
