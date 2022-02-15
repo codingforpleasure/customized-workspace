@@ -18,7 +18,7 @@
       * [BERT (Bidirectional Encoder Representation from Transformer)](#bert-bidirectional-encoder-representation-from-transformer)
       * [Cleaning methods](#cleaning-methods)
 
-<!-- Added by: gil_diy, at: Tue 15 Feb 2022 10:52:11 IST -->
+<!-- Added by: gil_diy, at: Tue 15 Feb 2022 10:52:32 IST -->
 
 <!--te-->
 
@@ -143,7 +143,7 @@ model = Word2Vec(sent, min_count=1,size= 50,workers=3, window =3, sg = 1) # sg =
 
 #### 3. FastText Embedding
 
-The main disadvantages of Word2Vec and GloVe embedding is that they are unable to encode unknown or out-of-vocabulary words
+The main disadvantages of **Word2Vec** and **GloVe** embedding is that they are unable to **encode unknown or out-of-vocabulary words**.
 
 
 ## BERT (Bidirectional Encoder Representation from Transformer)
