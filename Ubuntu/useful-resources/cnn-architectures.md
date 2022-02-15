@@ -6,7 +6,7 @@
          * [Desciminator](#desciminator)
          * [Generator](#generator)
 
-<!-- Added by: gil_diy, at: Tue 15 Feb 2022 12:49:52 IST -->
+<!-- Added by: gil_diy, at: Tue 15 Feb 2022 12:49:55 IST -->
 
 <!--te-->
 
@@ -33,7 +33,9 @@ The **skip connections** in ResNet **solve the problem of vanishing gradient** i
 
 * Using ResNet has significantly enhanced the performance of neural networks with more layers and here is the plot of error% when comparing it with neural networks with plain layers.
 
-
+<p align="center" style="width:400px;" >
+  <img src="images/cnn/Resnet_architecture.png" title="tool tip here">
+</p>
 
 
 [Research paper](https://arxiv.org/pdf/1512.03385.pdf)
