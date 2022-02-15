@@ -6,7 +6,7 @@
          * [Desciminator](#desciminator)
          * [Generator](#generator)
 
-<!-- Added by: gil_diy, at: Tue 15 Feb 2022 12:36:18 IST -->
+<!-- Added by: gil_diy, at: Tue 15 Feb 2022 12:37:24 IST -->
 
 <!--te-->
 
@@ -26,7 +26,9 @@
 </p>
 
 The very first thing we notice to be different is that there is a direct connection which skips some layers(may vary in different models) in between.
-This connection is called **’skip connection’** and is the core of residual blocks
+This connection is called **’skip connection’** and is the core of residual blocks.
+
+The **skip connections** in ResNet **solve the problem of vanishing gradient** in deep neural networks by allowing this alternate shortcut path for the gradient to flow through.
 
 [Research paper](https://arxiv.org/pdf/1512.03385.pdf)
 
