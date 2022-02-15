@@ -18,7 +18,7 @@
       * [BERT (Bidirectional Encoder Representation from Transformer)](#bert-bidirectional-encoder-representation-from-transformer)
       * [Cleaning methods](#cleaning-methods)
 
-<!-- Added by: gil_diy, at: Tue 15 Feb 2022 10:41:20 IST -->
+<!-- Added by: gil_diy, at: Tue 15 Feb 2022 10:42:47 IST -->
 
 <!--te-->
 
@@ -123,6 +123,11 @@ are closer in the vector space depending on the training data.
       **(1)** continuous bag-of-words (CBOW) 
 
       **(2)** continuous skip-gram
+
+
+<p align="center"> <!-- style="width:400px;" -->
+  <img src="images/nlp/word2vec.jpg" title="tool tip here">
+</p>
 
 ```python
 model = Word2Vec(sent, min_count=1,size= 50,workers=3, window =3, sg = 1) # sg = skip-gram
