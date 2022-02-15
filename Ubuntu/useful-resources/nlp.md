@@ -21,7 +21,7 @@
          * [Drawbacks](#drawbacks-3)
       * [Cleaning methods](#cleaning-methods)
 
-<!-- Added by: gil_diy, at: Tue 15 Feb 2022 11:52:50 IST -->
+<!-- Added by: gil_diy, at: Tue 15 Feb 2022 11:55:15 IST -->
 
 <!--te-->
 
@@ -200,13 +200,19 @@ sentences, it will give different embeddings for the word 'Python' based on the 
 
 * The encoder of the transformer is bidirectional in nature since it can read a sentence in both directions. 
 
+* Sentence-BERT is modification of the BERT model which uses **siamese** and **triplet network structures** and adds a pooling operation to the output of BERT to obtain fix-sized semantically meaningful sentence embeddings.
+
+* [Implementation](https://github.com/UKPLab/sentence-transformers)
 
 ### Drawbacks
 
-BERT is state-of-the-art  at the Semantic Textual Similarity tasks but the problem with is it would take very long time for a huge corpus
+* BERT is state-of-the-art  at the Semantic Textual Similarity tasks but the problem with is it would t*ake very long time for a huge corpus
 ( 65 hours!! for 10,000 sentences)
 
+
 ## Cleaning methods
+
+
 
 ```python
 def text_cleaning(texts):
