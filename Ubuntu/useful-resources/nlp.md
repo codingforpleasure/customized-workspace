@@ -21,7 +21,7 @@
          * [Drawbacks](#drawbacks-3)
       * [Cleaning methods](#cleaning-methods)
 
-<!-- Added by: gil_diy, at: Tue 15 Feb 2022 11:57:10 IST -->
+<!-- Added by: gil_diy, at: Tue 15 Feb 2022 13:40:42 IST -->
 
 <!--te-->
 
@@ -170,6 +170,8 @@ Like BERT (but unlike the word embeddings produced by "Bag of Words" approaches,
 * As the ELMo **uses bidirectional LSTM** it can get understanding of both **next and previous word** in the sentence.
 
 ## BERT (Bidirectional Encoder Representation from Transformer)
+
+[Attention is all you need](https://arxiv.org/pdf/1706.03762.pdf)
 
 `BERT` generates **dynamic embeddings** based on the context.
 
