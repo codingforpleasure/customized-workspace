@@ -10,7 +10,7 @@
             * [Drawbacks](#drawbacks)
          * [TFIDF](#tfidf)
             * [Drawbacks](#drawbacks-1)
-         * [Embedding](#embedding)
+         * [Word Embedding](#word-embedding)
             * [Word2Vec Embedding](#word2vec-embedding)
                * [Drawbacks](#drawbacks-2)
             * [Glove Embedding](#glove-embedding)
@@ -18,7 +18,7 @@
       * [BERT (Bidirectional Encoder Representation from Transformer)](#bert-bidirectional-encoder-representation-from-transformer)
       * [Cleaning methods](#cleaning-methods)
 
-<!-- Added by: gil_diy, at: Mon 14 Feb 2022 19:53:08 IST -->
+<!-- Added by: gil_diy, at: Tue 15 Feb 2022 10:39:18 IST -->
 
 <!--te-->
 
@@ -100,7 +100,9 @@ dictionary.doc2bow(text)
 * There is definitely a chance of over fitting
 
 
-### Embedding 
+### Word Embedding 
+
+Word embedding which is n-dimensional vector space representation of words such that semantically similar words (for instance, **“boat” — “ship”**) or semantically related words (for instance, “boat” — “water”) are closer in the vector space depending on the training data.
 
 #### Word2Vec Embedding
 
