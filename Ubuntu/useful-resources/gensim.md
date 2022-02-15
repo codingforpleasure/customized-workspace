@@ -6,7 +6,7 @@
          * [Compute Similarities](#compute-similarities)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Mon 14 Feb 2022 09:47:51 IST -->
+<!-- Added by: gil_diy, at: Tue 15 Feb 2022 14:23:39 IST -->
 
 <!--te-->
 
@@ -44,6 +44,7 @@ model = Word2Vec(sent, min_count=1,size= 50,workers=3, window =3, sg = 1)
 
 **sg**: The training algorithm, either CBOW(0) or skip gram(1). The default training algorithm is CBOW.
 
+**hs**: **Hierarchical Softmax** or **Negative Sampling**. both of them are techniques to greatly reducing the compute cost of training word2vec model.
 
 ### Get word representation as a vector 
 
