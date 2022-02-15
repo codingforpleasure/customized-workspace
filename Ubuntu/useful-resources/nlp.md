@@ -18,9 +18,10 @@
             * [Limitation of word Embeddings until here](#limitation-of-word-embeddings-until-here)
             * [4. ELMo - Embedding from Language Model (Brought by ALLenNLP)](#4-elmo---embedding-from-language-model-brought-by-allennlp)
       * [BERT (Bidirectional Encoder Representation from Transformer)](#bert-bidirectional-encoder-representation-from-transformer)
+         * [Drawbacks](#drawbacks-3)
       * [Cleaning methods](#cleaning-methods)
 
-<!-- Added by: gil_diy, at: Tue 15 Feb 2022 11:15:29 IST -->
+<!-- Added by: gil_diy, at: Tue 15 Feb 2022 11:52:50 IST -->
 
 <!--te-->
 
@@ -199,6 +200,11 @@ sentences, it will give different embeddings for the word 'Python' based on the 
 
 * The encoder of the transformer is bidirectional in nature since it can read a sentence in both directions. 
 
+
+### Drawbacks
+
+BERT is state-of-the-art  at the Semantic Textual Similarity tasks but the problem with is it would take very long time for a huge corpus
+( 65 hours!! for 10,000 sentences)
 
 ## Cleaning methods
 
