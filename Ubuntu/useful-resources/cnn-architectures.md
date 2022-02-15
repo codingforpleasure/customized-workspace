@@ -6,7 +6,7 @@
          * [Desciminator](#desciminator)
          * [Generator](#generator)
 
-<!-- Added by: gil_diy, at: Tue 15 Feb 2022 12:33:56 IST -->
+<!-- Added by: gil_diy, at: Tue 15 Feb 2022 12:34:00 IST -->
 
 <!--te-->
 
@@ -21,7 +21,7 @@
 
 ## ResNet
 
-<p align="center"> <!-- style="width:400px;" -->
+<p align="center" style="width:400px;" >
   <img src="images/cnn/resnet.jpg" title="tool tip here">
 </p>
 
