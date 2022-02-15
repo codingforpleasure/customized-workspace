@@ -6,7 +6,7 @@
          * [Desciminator](#desciminator)
          * [Generator](#generator)
 
-<!-- Added by: gil_diy, at: Tue 15 Feb 2022 13:05:39 IST -->
+<!-- Added by: gil_diy, at: Tue 15 Feb 2022 13:10:48 IST -->
 
 <!--te-->
 
@@ -43,6 +43,8 @@ You can see the boost of performance of the **Skip connection**:
   <img src="images/cnn/resnet_performance_plain_vs_skipconnection.png" title="tool tip here">
 </p>
 
+
+[Pytorch ResNet implementation from Scratch](https://youtu.be/DkNIBBBvcPs)
 
 [Research paper](https://arxiv.org/pdf/1512.03385.pdf)
 
