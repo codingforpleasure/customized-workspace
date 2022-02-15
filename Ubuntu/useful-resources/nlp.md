@@ -20,7 +20,7 @@
       * [BERT (Bidirectional Encoder Representation from Transformer)](#bert-bidirectional-encoder-representation-from-transformer)
       * [Cleaning methods](#cleaning-methods)
 
-<!-- Added by: gil_diy, at: Tue 15 Feb 2022 11:11:54 IST -->
+<!-- Added by: gil_diy, at: Tue 15 Feb 2022 11:15:29 IST -->
 
 <!--te-->
 
@@ -166,6 +166,7 @@ Like BERT (but unlike the word embeddings produced by "Bag of Words" approaches,
 * ELMo produces **different representations for words that share the same spelling** but have different meanings, ie:
   such as "bank" in **"river bank"** and **"bank balance"**
 
+* As the ELMo **uses bidirectional LSTM** it can get understanding of both **next and previous word** in the sentence.
 
 ## BERT (Bidirectional Encoder Representation from Transformer)
 
