@@ -15,11 +15,12 @@
                * [Drawbacks](#drawbacks-2)
             * [2. GloVe Embedding (Global Vector)](#2-glove-embedding-global-vector)
             * [3. FastText Embedding (Brought by Facebook)](#3-fasttext-embedding-brought-by-facebook)
+            * [Limitation of word Embeddings until here](#limitation-of-word-embeddings-until-here)
             * [4. ELMo - Embedding from Language Model (Brought by ALLenNLP)](#4-elmo---embedding-from-language-model-brought-by-allennlp)
       * [BERT (Bidirectional Encoder Representation from Transformer)](#bert-bidirectional-encoder-representation-from-transformer)
       * [Cleaning methods](#cleaning-methods)
 
-<!-- Added by: gil_diy, at: Tue 15 Feb 2022 11:11:33 IST -->
+<!-- Added by: gil_diy, at: Tue 15 Feb 2022 11:11:54 IST -->
 
 <!--te-->
 
@@ -147,6 +148,12 @@ model = Word2Vec(sent, min_count=1,size= 50,workers=3, window =3, sg = 1) # sg =
 The main disadvantages of **Word2Vec** and **GloVe** embedding is that they are unable to **encode unknown or out-of-vocabulary words**.
 
 Word2Vec which feeds whole words into the neural network, FastText first breaks the words into several sub-words (or n-grams) and then feed them into the neural network.
+
+
+#### Limitation of word Embeddings until here
+
+They don’t take into consideration the order of words in which they appear which leads to loss of syntactic and semantic understanding of the sentence.
+
 
 #### 4. ELMo - Embedding from Language Model (Brought by ALLenNLP)
 
