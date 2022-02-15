@@ -20,7 +20,7 @@
       * [BERT (Bidirectional Encoder Representation from Transformer)](#bert-bidirectional-encoder-representation-from-transformer)
       * [Cleaning methods](#cleaning-methods)
 
-<!-- Added by: gil_diy, at: Tue 15 Feb 2022 11:08:41 IST -->
+<!-- Added by: gil_diy, at: Tue 15 Feb 2022 11:11:10 IST -->
 
 <!--te-->
 
@@ -151,13 +151,13 @@ Word2Vec which feeds whole words into the neural network, FastText first breaks 
 
 #### 4. ELMo - Embedding from Language Model (Brought by ALLenNLP)
 
-Character-level tokens are taken as the inputs to a bi-directional LSTM which produces word-level embeddings. 
+Character-level tokens are taken as the inputs to a **bi-directional LSTM which produces word-level embeddings**. 
 Like BERT (but unlike the word embeddings produced by "Bag of Words" approaches, and earlier vector approaches such as Word2Vec and GloVe)
 
 
 * ELMo embeddings are **context-sensitive**
 
-* ELMo produces different representations for words that share the same spelling but have different meanings, ie:
+* ELMo produces **different representations for words that share the same spelling** but have different meanings, ie:
   such as "bank" in **"river bank"** and **"bank balance"**
 
 #### Limitation of word Embeddings
