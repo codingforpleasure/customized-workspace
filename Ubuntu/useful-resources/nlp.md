@@ -15,11 +15,12 @@
                * [Drawbacks](#drawbacks-2)
             * [2. GloVe Embedding (Global Vector)](#2-glove-embedding-global-vector)
             * [3. FastText Embedding (Brought by Facebook)](#3-fasttext-embedding-brought-by-facebook)
+            * [4. ELMo - Embedding from Language Model (Brought by ALLenNLP)](#4-elmo---embedding-from-language-model-brought-by-allennlp)
             * [Limitation of word Embeddings](#limitation-of-word-embeddings)
       * [BERT (Bidirectional Encoder Representation from Transformer)](#bert-bidirectional-encoder-representation-from-transformer)
       * [Cleaning methods](#cleaning-methods)
 
-<!-- Added by: gil_diy, at: Tue 15 Feb 2022 11:01:33 IST -->
+<!-- Added by: gil_diy, at: Tue 15 Feb 2022 11:06:16 IST -->
 
 <!--te-->
 
@@ -148,9 +149,16 @@ The main disadvantages of **Word2Vec** and **GloVe** embedding is that they are 
 
 Word2Vec which feeds whole words into the neural network, FastText first breaks the words into several sub-words (or n-grams) and then feed them into the neural network.
 
+#### 4. ELMo - Embedding from Language Model (Brought by ALLenNLP)
+
+Character-level tokens are taken as the inputs to a bi-directional LSTM which produces word-level embeddings. 
+Like BERT (but unlike the word embeddings produced by "Bag of Words" approaches, and earlier vector approaches such as Word2Vec and GloVe)
+
+
 #### Limitation of word Embeddings
 
 they don’t take into consideration the order of words in which they appear which leads to loss of syntactic and semantic understanding of the sentence.
+
 
 
 ## BERT (Bidirectional Encoder Representation from Transformer)
@@ -175,11 +183,10 @@ embedding model such as **word2vec**, the embedding of the word `Python` would b
 same in both sentences, and so this renders the meaning of the word `Python` the same in
 both sentences. 
 This is because word2vec is the **context-free** model, so it will ignore the
-context and always give the same embedding for the word `Python` irrespective of the
-context.
+context and always give the same embedding for the word `Python` irrespective of the context.
 
 
-BERT, on the other hand, is a context-based model. It will understand the context and then
+**BERT**, on the other hand, is a **context-based model**. It will understand the context and then
 generate the embedding for the word based on the context. So, for the preceding two
 sentences, it will give different embeddings for the word 'Python' based on the context.
 
