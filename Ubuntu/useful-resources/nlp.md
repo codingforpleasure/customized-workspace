@@ -18,7 +18,7 @@
       * [BERT (Bidirectional Encoder Representation from Transformer)](#bert-bidirectional-encoder-representation-from-transformer)
       * [Cleaning methods](#cleaning-methods)
 
-<!-- Added by: gil_diy, at: Tue 15 Feb 2022 10:47:13 IST -->
+<!-- Added by: gil_diy, at: Tue 15 Feb 2022 10:47:57 IST -->
 
 <!--te-->
 
@@ -125,7 +125,7 @@ are closer in the vector space depending on the training data.
       **(2)** continuous skip-gram
 
 
-<p align="center" style="width:500px;" >
+<p align="center"; style="width:500px;" >
   <img src="images/nlp/word2vec.jpg" title="tool tip here">
 </p>
 
