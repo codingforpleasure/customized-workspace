@@ -6,7 +6,7 @@
          * [Desciminator](#desciminator)
          * [Generator](#generator)
 
-<!-- Added by: gil_diy, at: Tue 15 Feb 2022 12:48:57 IST -->
+<!-- Added by: gil_diy, at: Tue 15 Feb 2022 12:49:52 IST -->
 
 <!--te-->
 
@@ -22,8 +22,9 @@
 ## ResNet
 
 <p align="center" style="width:400px;" >
-  <img src="images/cnn/resnet.jpg" title="tool tip here">
+  <img src="images/cnn/resnet_building_block_skip_connection.jpg" title="tool tip here">
 </p>
+
 
 The very first thing we notice to be different is that there is a direct connection which skips some layers(may vary in different models) in between.
 This connection is called **’skip connection’** and is the core of residual blocks.
@@ -33,9 +34,6 @@ The **skip connections** in ResNet **solve the problem of vanishing gradient** i
 * Using ResNet has significantly enhanced the performance of neural networks with more layers and here is the plot of error% when comparing it with neural networks with plain layers.
 
 
-<p align="center" style="width:400px;" >
-  <img src="images/cnn/resnet_building_block_skip_connection.jpg" title="tool tip here">
-</p>
 
 
 [Research paper](https://arxiv.org/pdf/1512.03385.pdf)
