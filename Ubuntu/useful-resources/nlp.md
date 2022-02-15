@@ -4,6 +4,7 @@
       * [Topic Discovery](#topic-discovery)
          * [LDA - Latent Dirichlet Allocation](#lda---latent-dirichlet-allocation)
       * [Preprocessing](#preprocessing)
+         * [Basics](#basics)
          * [Stemming](#stemming)
          * [Lemmatiziation](#lemmatiziation)
          * [Bag of Words](#bag-of-words)
@@ -22,7 +23,7 @@
          * [Drawbacks](#drawbacks-3)
       * [Cleaning methods](#cleaning-methods)
 
-<!-- Added by: gil_diy, at: Tue 15 Feb 2022 14:42:50 IST -->
+<!-- Added by: gil_diy, at: Tue 15 Feb 2022 15:00:36 IST -->
 
 <!--te-->
 
@@ -58,6 +59,17 @@ Is to discover topics in a collection of documents, and then automatically **cla
 
 
 ## Preprocessing
+
+### Basics
+
+1. Lowercase
+
+2. Remove emails
+
+3. Remove html tags
+
+4. Remove emojis
+
 
 ### Stemming
 
