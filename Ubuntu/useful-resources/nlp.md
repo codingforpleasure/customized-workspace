@@ -18,7 +18,7 @@
       * [BERT (Bidirectional Encoder Representation from Transformer)](#bert-bidirectional-encoder-representation-from-transformer)
       * [Cleaning methods](#cleaning-methods)
 
-<!-- Added by: gil_diy, at: Tue 15 Feb 2022 10:39:26 IST -->
+<!-- Added by: gil_diy, at: Tue 15 Feb 2022 10:39:29 IST -->
 
 <!--te-->
 
