@@ -6,7 +6,7 @@
          * [Desciminator](#desciminator)
          * [Generator](#generator)
 
-<!-- Added by: gil_diy, at: Tue 15 Feb 2022 12:58:27 IST -->
+<!-- Added by: gil_diy, at: Tue 15 Feb 2022 13:05:39 IST -->
 
 <!--te-->
 
@@ -45,6 +45,8 @@ You can see the boost of performance of the **Skip connection**:
 
 
 [Research paper](https://arxiv.org/pdf/1512.03385.pdf)
+
+[ResNet and its Variants](https://towardsdatascience.com/an-overview-of-resnet-and-its-variants-5281e2f56035)
 
 ## GAN - Generative Adversial Networks
 
