@@ -6,7 +6,7 @@
          * [Desciminator](#desciminator)
          * [Generator](#generator)
 
-<!-- Added by: gil_diy, at: Tue 15 Feb 2022 12:16:12 IST -->
+<!-- Added by: gil_diy, at: Tue 15 Feb 2022 12:33:54 IST -->
 
 <!--te-->
 
@@ -20,6 +20,12 @@
 ## VGG
 
 ## ResNet
+
+<p align="center"> <!-- style="width:400px;" -->
+  <img src="images/cnn/resnet.jpg" title="tool tip here">
+</p>
+
+[Research paper](https://arxiv.org/pdf/1512.03385.pdf)
 
 ## GAN - Generative Adversial Networks
 
