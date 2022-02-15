@@ -22,8 +22,9 @@
       * [BERT (Bidirectional Encoder Representation from Transformer)](#bert-bidirectional-encoder-representation-from-transformer)
          * [Drawbacks](#drawbacks-3)
       * [Cleaning methods](#cleaning-methods)
+      * [Word Cloud](#word-cloud)
 
-<!-- Added by: gil_diy, at: Tue 15 Feb 2022 15:01:20 IST -->
+<!-- Added by: gil_diy, at: Tue 15 Feb 2022 15:02:23 IST -->
 
 <!--te-->
 
@@ -271,4 +272,19 @@ def text_cleaning(texts):
         texts_cleaning.append(txt.lower())
     return texts_cleaning
 text = text_cleaning(train.text.tolist())
+```
+
+## Word Cloud
+
+```python
+disaster_tweets = train_data[train_data.target == 1]
+disaster_string = []
+for t in disaster_tweets.text:
+    disaster_string.append(t)
+disaster_string = pd.Series(disaster_string).str.cat(sep=' ')
+wordcloud = WordCloud(width=1600, height=800,max_font_size=100, background_color='white').generate(disaster_string)
+plt.figure(figsize=(12,10))
+plt.imshow(wordcloud, interpolation="bilinear")
+plt.axis("off")
+plt.show()
 ```
