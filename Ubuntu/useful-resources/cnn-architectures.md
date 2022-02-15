@@ -6,7 +6,7 @@
          * [Desciminator](#desciminator)
          * [Generator](#generator)
 
-<!-- Added by: gil_diy, at: Tue 15 Feb 2022 12:34:00 IST -->
+<!-- Added by: gil_diy, at: Tue 15 Feb 2022 12:36:15 IST -->
 
 <!--te-->
 
@@ -24,6 +24,9 @@
 <p align="center" style="width:400px;" >
   <img src="images/cnn/resnet.jpg" title="tool tip here">
 </p>
+
+The very first thing we notice to be different is that there is a direct connection which skips some layers(may vary in different models) in between.
+This connection is called **’skip connection’** and is the core of residual blocks
 
 [Research paper](https://arxiv.org/pdf/1512.03385.pdf)
 
