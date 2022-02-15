@@ -18,7 +18,7 @@
       * [BERT (Bidirectional Encoder Representation from Transformer)](#bert-bidirectional-encoder-representation-from-transformer)
       * [Cleaning methods](#cleaning-methods)
 
-<!-- Added by: gil_diy, at: Tue 15 Feb 2022 10:39:21 IST -->
+<!-- Added by: gil_diy, at: Tue 15 Feb 2022 10:39:26 IST -->
 
 <!--te-->
 
@@ -102,7 +102,7 @@ dictionary.doc2bow(text)
 
 ### Word Embedding 
 
-Word embedding which is n-dimensional vector space representation of words such that semantically similar words (for instance, **“boat” — “ship”**) or semantically related words (for instance, “boat” — “water”) are closer in the vector space depending on the training data.
+Word embedding which is n-dimensional vector space representation of words such that semantically similar words (for instance, **“boat” — “ship”**) or semantically related words (for instance, **“boat” — “water”**) are closer in the vector space depending on the training data.
 
 #### Word2Vec Embedding
 
