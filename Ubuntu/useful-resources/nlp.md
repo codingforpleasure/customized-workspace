@@ -16,11 +16,10 @@
             * [2. GloVe Embedding (Global Vector)](#2-glove-embedding-global-vector)
             * [3. FastText Embedding (Brought by Facebook)](#3-fasttext-embedding-brought-by-facebook)
             * [4. ELMo - Embedding from Language Model (Brought by ALLenNLP)](#4-elmo---embedding-from-language-model-brought-by-allennlp)
-            * [Limitation of word Embeddings](#limitation-of-word-embeddings)
       * [BERT (Bidirectional Encoder Representation from Transformer)](#bert-bidirectional-encoder-representation-from-transformer)
       * [Cleaning methods](#cleaning-methods)
 
-<!-- Added by: gil_diy, at: Tue 15 Feb 2022 11:11:10 IST -->
+<!-- Added by: gil_diy, at: Tue 15 Feb 2022 11:11:33 IST -->
 
 <!--te-->
 
@@ -159,11 +158,6 @@ Like BERT (but unlike the word embeddings produced by "Bag of Words" approaches,
 
 * ELMo produces **different representations for words that share the same spelling** but have different meanings, ie:
   such as "bank" in **"river bank"** and **"bank balance"**
-
-#### Limitation of word Embeddings
-
-they don’t take into consideration the order of words in which they appear which leads to loss of syntactic and semantic understanding of the sentence.
-
 
 
 ## BERT (Bidirectional Encoder Representation from Transformer)
