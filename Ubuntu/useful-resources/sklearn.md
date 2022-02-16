@@ -45,8 +45,9 @@
       * [Matrix Decomposition](#matrix-decomposition)
          * [Latent Dirichlet Allocation](#latent-dirichlet-allocation)
          * [Principal component analysis (PCA)](#principal-component-analysis-pca)
+      * [metrics](#metrics)
 
-<!-- Added by: gil_diy, at: Mon 14 Feb 2022 18:47:01 IST -->
+<!-- Added by: gil_diy, at: Wed 16 Feb 2022 10:50:36 IST -->
 
 <!--te-->
 
@@ -277,7 +278,7 @@ from xgboost import XGBClassifier
 from sklearn.model_selection import KFold
 from sklearn.model_selection import cross_val_score
 # load data
-dataset = loadtxt( 'pima-indians-diabetes.csv' , delimiter=",")
+dataset = loadtxt('pima-indians-diabetes.csv' , delimiter=",")
 # split data into X and y
 X = dataset[:,0:8]
 Y = dataset[:,8]
@@ -549,3 +550,8 @@ for thresh in thresholds:
 ### Latent Dirichlet Allocation
 
 ### Principal component analysis (PCA)
+
+
+## metrics
+
+[Link](https://scikit-learn.org/stable/modules/model_evaluation.html)
