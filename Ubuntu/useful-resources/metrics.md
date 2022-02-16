@@ -10,7 +10,7 @@
       * [Precision Recall Curve](#precision-recall-curve)
    * [Link to resource:](#link-to-resource)
 
-<!-- Added by: gil_diy, at: Wed 16 Feb 2022 12:11:25 IST -->
+<!-- Added by: gil_diy, at: Wed 16 Feb 2022 13:36:50 IST -->
 
 <!--te-->
 # Metrics
@@ -94,9 +94,15 @@ for example:
   <img src="images/metrics/roc2.jpg" title="tool tip here">
 </p>
 
+In a **huge imbalanced dataset**, if we have a very high number of true negatives, then our x axis in ROC curve (FPR) which has TN is denomitor, will be a very small number, whihc will push our ROC plot to the left side,
+and shoot up our ROC AUC value to be close to 1, which is misleading.
+Therefore we should not use **ROC curve** in massive imblance in the data.
+
 ## Precision Recall Curve
 
-The ROC curve shows how the recall vs precision relationship changes as we vary the threshold for identifying a positive in our model. 
+
+
+ recall vs precision relationship changes as we vary the threshold for identifying a positive in our model. 
 
 # Link to resource:
 
