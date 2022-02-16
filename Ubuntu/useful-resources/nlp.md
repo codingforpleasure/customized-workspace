@@ -24,8 +24,9 @@
       * [Cleaning methods](#cleaning-methods)
       * [Word Cloud](#word-cloud)
       * [Data Augmentation for NLP](#data-augmentation-for-nlp)
+      * [10 Leading Language Models For NLP In 2021](#10-leading-language-models-for-nlp-in-2021)
 
-<!-- Added by: gil_diy, at: Wed 16 Feb 2022 19:21:38 IST -->
+<!-- Added by: gil_diy, at: Wed 16 Feb 2022 19:22:43 IST -->
 
 <!--te-->
 
@@ -295,3 +296,6 @@ plt.show()
 
 [Link](https://neptune.ai/blog/data-augmentation-nlp)
 
+## 10 Leading Language Models For NLP In 2021
+
+[Link](https://www.topbots.com/leading-nlp-language-models-2020/)
