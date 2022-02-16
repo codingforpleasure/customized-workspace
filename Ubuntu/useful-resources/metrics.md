@@ -10,7 +10,7 @@
       * [Precision Recall Curve](#precision-recall-curve)
    * [Link to resource:](#link-to-resource)
 
-<!-- Added by: gil_diy, at: Wed 16 Feb 2022 13:37:30 IST -->
+<!-- Added by: gil_diy, at: Wed 16 Feb 2022 13:39:15 IST -->
 
 <!--te-->
 # Metrics
@@ -100,11 +100,11 @@ Therefore we should not use **ROC curve** in massive imbalance in the data.
 
 ## Precision Recall Curve
 
-
-
 Recall vs precision relationship changes as we vary the threshold for identifying a positive in our model. 
 
+* PR Curves have precision and recall values, which do not make use of the True Negatives at all.
 
+Hence they become suitable for such analyses where the number of TN is very much huge, or when the existence of True Negatives doesn't play a major role in the buisness problem.
 
 
 # Link to resource:
