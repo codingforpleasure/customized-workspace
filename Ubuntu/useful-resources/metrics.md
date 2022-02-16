@@ -10,7 +10,7 @@
       * [Precision Recall Curve](#precision-recall-curve)
    * [Link to resource:](#link-to-resource)
 
-<!-- Added by: gil_diy, at: Wed 16 Feb 2022 12:11:16 IST -->
+<!-- Added by: gil_diy, at: Wed 16 Feb 2022 12:11:25 IST -->
 
 <!--te-->
 # Metrics
@@ -95,6 +95,8 @@ for example:
 </p>
 
 ## Precision Recall Curve
+
+The ROC curve shows how the recall vs precision relationship changes as we vary the threshold for identifying a positive in our model. 
 
 # Link to resource:
 
