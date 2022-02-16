@@ -10,7 +10,7 @@
       * [Precision Recall Curve](#precision-recall-curve)
    * [Link to resource:](#link-to-resource)
 
-<!-- Added by: gil_diy, at: Wed 16 Feb 2022 13:39:15 IST -->
+<!-- Added by: gil_diy, at: Wed 16 Feb 2022 13:39:23 IST -->
 
 <!--te-->
 # Metrics
@@ -104,7 +104,7 @@ Recall vs precision relationship changes as we vary the threshold for identifyin
 
 * PR Curves have precision and recall values, which do not make use of the True Negatives at all.
 
-Hence they become suitable for such analyses where the number of TN is very much huge, or when the existence of True Negatives doesn't play a major role in the buisness problem.
+Hence they become suitable for such analyses where the number of TN is very much huge, or when the existence of True Negatives doesn't play a major role in the business problem.
 
 
 # Link to resource:
