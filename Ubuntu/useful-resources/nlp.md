@@ -25,7 +25,7 @@
       * [Word Cloud](#word-cloud)
       * [Data Augmentation for NLP](#data-augmentation-for-nlp)
 
-<!-- Added by: gil_diy, at: Wed 16 Feb 2022 10:38:36 IST -->
+<!-- Added by: gil_diy, at: Wed 16 Feb 2022 19:21:38 IST -->
 
 <!--te-->
 
@@ -237,6 +237,7 @@ sentences, it will give different embeddings for the word 'Python' based on the 
 
 * Sentence-BERT is modification of the BERT model which uses **siamese** and **triplet network structures** and adds a pooling operation to the output of BERT to obtain fix-sized semantically meaningful sentence embeddings.
 
+* [Please Read in Depth](https://classic.d2l.ai/chapter_attention-mechanism/transformer.html)
 * [Implementation](https://github.com/UKPLab/sentence-transformers)
 
 * [Research paper](https://arxiv.org/pdf/1908.10084.pdf)
