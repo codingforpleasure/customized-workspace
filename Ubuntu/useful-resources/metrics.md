@@ -9,7 +9,7 @@
       * [6. ROC Curve](#6-roc-curve)
    * [Link to resource:](#link-to-resource)
 
-<!-- Added by: gil_diy, at: Wed 16 Feb 2022 11:52:04 IST -->
+<!-- Added by: gil_diy, at: Wed 16 Feb 2022 11:53:13 IST -->
 
 <!--te-->
 # Metrics
@@ -73,9 +73,9 @@ Shows the actual and predicted labels from a classification problem
 * Instead of being overwhelmed with confusion matrices **Receiver Operator Charatsitic (ROC)** graphs provide a simple way to summarize all of the information.
 
 
-* **y-axis** shows the **True Positive Rate**, which is **Sensitivity**.
+* **y-axis** shows the **True Positive Rate**, which is **Sensitivity (Recall)**.
 
-* **x-axis** shows the **True Positive Rate**, which is **Sensitivity**.
+* **x-axis** shows the **False Positive Rate**, which is **Sensitivity**.
 
 the ROC curve shows how the recall vs precision relationship changes as we vary the threshold for identifying a positive in our model. 
 
