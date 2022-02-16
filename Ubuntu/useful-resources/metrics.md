@@ -7,9 +7,10 @@
       * [4. F1 (F-score / F-measure)](#4-f1-f-score--f-measure)
       * [5. confusion Matrix](#5-confusion-matrix)
       * [6. ROC Curve](#6-roc-curve)
+      * [Precision Recall Curve](#precision-recall-curve)
    * [Link to resource:](#link-to-resource)
 
-<!-- Added by: gil_diy, at: Wed 16 Feb 2022 11:53:39 IST -->
+<!-- Added by: gil_diy, at: Wed 16 Feb 2022 12:11:16 IST -->
 
 <!--te-->
 # Metrics
@@ -77,7 +78,6 @@ Shows the actual and predicted labels from a classification problem
 
 * **x-axis** shows the **False Positive Rate**, which is **(1-Specificity)**.
 
-the ROC curve shows how the recall vs precision relationship changes as we vary the threshold for identifying a positive in our model. 
 
 plots the true positive rate (TPR) versus the false positive rate (FPR) as a function of the model’s threshold for classifying a positive
 
@@ -94,7 +94,7 @@ for example:
   <img src="images/metrics/roc2.jpg" title="tool tip here">
 </p>
 
-
+## Precision Recall Curve
 
 # Link to resource:
 
