@@ -9,7 +9,7 @@
       * [Example #7: Prints the second column when the delimeter is now colon](#example-7-prints-the-second-column-when-the-delimeter-is-now-colon)
       * [Example #8: Prints the second column from line 4 (skips the first 3 lines).](#example-8-prints-the-second-column-from-line-4-skips-the-first-3-lines)
 
-<!-- Added by: gil_diy, at: Wed 16 Feb 2022 19:13:19 IST -->
+<!-- Added by: gil_diy, at: Wed 16 Feb 2022 19:15:14 IST -->
 
 <!--te-->
 
@@ -61,3 +61,5 @@ awk -F: '{ print $2 }' my_data.txt
 ```bash
 awk  'NR>3 { print $2 }' my_data.txt
 ```
+
+Comment: `NR` stands for **Number Row**
