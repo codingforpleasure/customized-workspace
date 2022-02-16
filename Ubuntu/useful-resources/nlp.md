@@ -23,8 +23,9 @@
          * [Drawbacks](#drawbacks-3)
       * [Cleaning methods](#cleaning-methods)
       * [Word Cloud](#word-cloud)
+      * [Data Augmentation for NLP](#data-augmentation-for-nlp)
 
-<!-- Added by: gil_diy, at: Tue 15 Feb 2022 15:02:26 IST -->
+<!-- Added by: gil_diy, at: Wed 16 Feb 2022 10:38:36 IST -->
 
 <!--te-->
 
@@ -288,3 +289,8 @@ plt.imshow(wordcloud, interpolation="bilinear")
 plt.axis("off")
 plt.show()
 ```
+
+## Data Augmentation for NLP
+
+[Link](https://neptune.ai/blog/data-augmentation-nlp)
+
