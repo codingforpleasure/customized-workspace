@@ -10,7 +10,7 @@
       * [Precision Recall Curve](#precision-recall-curve)
    * [Link to resource:](#link-to-resource)
 
-<!-- Added by: gil_diy, at: Wed 16 Feb 2022 14:01:56 IST -->
+<!-- Added by: gil_diy, at: Wed 16 Feb 2022 19:19:37 IST -->
 
 <!--te-->
 # Metrics
@@ -110,5 +110,7 @@ Recall vs precision relationship changes as we vary the threshold for identifyin
 
 
 # Link to resource:
+
+[Write about this](https://ds100.org/sp20/resources/assets/lectures/lec24/LogisticRegressionPart2.html)
 
 [Sensitivity_and_specificity](https://en.wikipedia.org/wiki/Sensitivity_and_specificity)
