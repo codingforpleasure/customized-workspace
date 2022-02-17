@@ -20,6 +20,7 @@
             * [4. ELMo - Embedding from Language Model (Brought by ALLenNLP)](#4-elmo---embedding-from-language-model-brought-by-allennlp)
       * [Transformer](#transformer)
          * [Positional encoding (position embeddings)](#positional-encoding-position-embeddings)
+         * [Position-wise Feed-Forward Network](#position-wise-feed-forward-network)
       * [BERT (Bidirectional Encoder Representation from Transformer)](#bert-bidirectional-encoder-representation-from-transformer)
          * [Drawbacks](#drawbacks-3)
       * [Cleaning methods](#cleaning-methods)
@@ -27,7 +28,7 @@
       * [Data Augmentation for NLP](#data-augmentation-for-nlp)
       * [10 Leading Language Models For NLP In 2021](#10-leading-language-models-for-nlp-in-2021)
 
-<!-- Added by: gil_diy, at: Thu 17 Feb 2022 12:48:06 IST -->
+<!-- Added by: gil_diy, at: Thu 17 Feb 2022 13:23:07 IST -->
 
 <!--te-->
 
@@ -236,6 +237,12 @@ This embedding are then added to the initial vector representation of the input.
 </p>
 
 4) We want to represent **position** in a way that tokens with similar **relative** position have similar **positional encoding**
+
+### Position-wise Feed-Forward Network
+
+Position wise just means each position is multiplied by a matrix. 
+Usually a layer of a neural network is (batch_size, hidden_size)
+which is multiplied by (hidden_size, hidden_size) to get the next layer
 
 ## BERT (Bidirectional Encoder Representation from Transformer)
 
