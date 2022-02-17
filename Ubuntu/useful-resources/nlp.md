@@ -27,7 +27,7 @@
       * [Data Augmentation for NLP](#data-augmentation-for-nlp)
       * [10 Leading Language Models For NLP In 2021](#10-leading-language-models-for-nlp-in-2021)
 
-<!-- Added by: gil_diy, at: Thu 17 Feb 2022 11:15:07 IST -->
+<!-- Added by: gil_diy, at: Thu 17 Feb 2022 11:15:11 IST -->
 
 <!--te-->
 
@@ -211,7 +211,7 @@ What naive self-attention sees is just a bag of words:
 </p>
 
 
-* This is very **different from recurent model** cause recurent models looks on the word one at a time, and remembers which words he saw before and therefore remember thier order.
+* This is very **different from recurent model** cause recurent models looks on the word one at a time, and remembers which words he saw before and therefore remember their order.
 
 ## BERT (Bidirectional Encoder Representation from Transformer)
 
