@@ -47,7 +47,7 @@
          * [Principal component analysis (PCA)](#principal-component-analysis-pca)
       * [metrics](#metrics)
 
-<!-- Added by: gil_diy, at: Wed 16 Feb 2022 18:05:16 IST -->
+<!-- Added by: gil_diy, at: Thu 17 Feb 2022 22:08:00 IST -->
 
 <!--te-->
 
@@ -268,8 +268,6 @@ for train_index, test_index in kf.split(x, y):
 
 
 #### cross_val_score
-
-
 
 ```python
 # k-fold cross validation evaluation of xgboost model
