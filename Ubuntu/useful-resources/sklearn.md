@@ -47,7 +47,7 @@
          * [Principal component analysis (PCA)](#principal-component-analysis-pca)
       * [metrics](#metrics)
 
-<!-- Added by: gil_diy, at: Thu 17 Feb 2022 22:08:00 IST -->
+<!-- Added by: gil_diy, at: Thu 17 Feb 2022 22:09:14 IST -->
 
 <!--te-->
 
@@ -369,6 +369,9 @@ X_train =  [[1 2][3 4]], X_test =  [[5 6]] , y_train = [1 2], y_test =  [3]
 ```
 
 ## Pipeline
+
+[READ!! ](https://rebeccabilbro.github.io/module-main-has-no-attribute/)
+
 
 ```python
 y_train = normalized_df['TenYearCHD']
