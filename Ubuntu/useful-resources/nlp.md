@@ -27,7 +27,7 @@
       * [Data Augmentation for NLP](#data-augmentation-for-nlp)
       * [10 Leading Language Models For NLP In 2021](#10-leading-language-models-for-nlp-in-2021)
 
-<!-- Added by: gil_diy, at: Thu 17 Feb 2022 12:20:48 IST -->
+<!-- Added by: gil_diy, at: Thu 17 Feb 2022 12:48:06 IST -->
 
 <!--te-->
 
@@ -271,7 +271,9 @@ sentences, it will give different embeddings for the word 'Python' based on the 
 
 * The encoder of the transformer is bidirectional in nature since it can read a sentence in both directions. 
 
-* BERT uses `Positionla Encoding`
+* BERT uses `Positional Encoding`
+
+* The embedding dimension is 512
 
 * Sentence-BERT is modification of the BERT model which uses **siamese** and **triplet network structures** and adds a pooling operation to the output of BERT to obtain fix-sized semantically meaningful sentence embeddings.
 
