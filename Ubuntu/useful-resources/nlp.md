@@ -27,7 +27,7 @@
       * [Data Augmentation for NLP](#data-augmentation-for-nlp)
       * [10 Leading Language Models For NLP In 2021](#10-leading-language-models-for-nlp-in-2021)
 
-<!-- Added by: gil_diy, at: Thu 17 Feb 2022 11:33:45 IST -->
+<!-- Added by: gil_diy, at: Thu 17 Feb 2022 12:06:08 IST -->
 
 <!--te-->
 
@@ -228,6 +228,8 @@ so for the self-attention model:
 
 
 3) **idea is** to add some information to the representation at the beginning that indicates **where it is in the sequence** !
+
+This embedding are then added tot the initial vector representation of the input.
 
 <p align="center">
   <img width="150" src="images/transformers/start_function_positional_encoding_and_embedding.jpg" title="Look into the image">
