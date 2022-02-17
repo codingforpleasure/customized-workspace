@@ -19,7 +19,7 @@
             * [Limitation of word Embeddings until here](#limitation-of-word-embeddings-until-here)
             * [4. ELMo - Embedding from Language Model (Brought by ALLenNLP)](#4-elmo---embedding-from-language-model-brought-by-allennlp)
       * [Transformer](#transformer)
-         * [Positional encoding](#positional-encoding)
+         * [Positional encoding (position embeddings)](#positional-encoding-position-embeddings)
       * [BERT (Bidirectional Encoder Representation from Transformer)](#bert-bidirectional-encoder-representation-from-transformer)
          * [Drawbacks](#drawbacks-3)
       * [Cleaning methods](#cleaning-methods)
@@ -27,7 +27,7 @@
       * [Data Augmentation for NLP](#data-augmentation-for-nlp)
       * [10 Leading Language Models For NLP In 2021](#10-leading-language-models-for-nlp-in-2021)
 
-<!-- Added by: gil_diy, at: Thu 17 Feb 2022 10:16:13 IST -->
+<!-- Added by: gil_diy, at: Thu 17 Feb 2022 10:39:24 IST -->
 
 <!--te-->
 
@@ -200,7 +200,7 @@ Like BERT (but unlike the word embeddings produced by "Bag of Words" approaches,
   <img width="400" src="images/transformers/transformer_architecture.jpg" title="tool tip here">
 </p>
 
-### Positional encoding
+### Positional encoding (position embeddings)
 
 
 
