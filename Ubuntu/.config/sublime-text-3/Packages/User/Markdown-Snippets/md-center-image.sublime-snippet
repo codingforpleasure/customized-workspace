@@ -1,8 +1,9 @@
 <snippet>
 	<content><![CDATA[
 <p align="center">
-  <img src="${1:images/labeling_example.png}" title="${2:Look into the image}">
+  <img width="400" src="${1:images/labeling_example.png}" title="${2:Look into the image}">
 </p>
+
 ]]></content>
 	<tabTrigger>img-center</tabTrigger>
 	<scope>text.html.markdown</scope>
