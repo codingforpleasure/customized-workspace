@@ -27,7 +27,7 @@
       * [Data Augmentation for NLP](#data-augmentation-for-nlp)
       * [10 Leading Language Models For NLP In 2021](#10-leading-language-models-for-nlp-in-2021)
 
-<!-- Added by: gil_diy, at: Thu 17 Feb 2022 11:11:20 IST -->
+<!-- Added by: gil_diy, at: Thu 17 Feb 2022 11:11:32 IST -->
 
 <!--te-->
 
@@ -207,7 +207,7 @@ What we see as a sentence is : `"he hit me with a pie"`
 What naive self-attention sees is just a bag of words:
 
 <p align="center">
-  <img width="200" src="images/transformers/bag_of_words_sees_naive_self_attention.jpg" title="Look into the image">
+  <img width="100" src="images/transformers/bag_of_words_sees_naive_self_attention.jpg" title="Look into the image">
 </p>
 
 
