@@ -27,7 +27,7 @@
       * [Data Augmentation for NLP](#data-augmentation-for-nlp)
       * [10 Leading Language Models For NLP In 2021](#10-leading-language-models-for-nlp-in-2021)
 
-<!-- Added by: gil_diy, at: Thu 17 Feb 2022 11:18:30 IST -->
+<!-- Added by: gil_diy, at: Thu 17 Feb 2022 11:21:00 IST -->
 
 <!--te-->
 
@@ -220,9 +220,13 @@ so for the self-attention model:
 `he pie me with a hit`
 
 all permutation of those words look the same.
-most alternative orderings are nonsense, but some change the meaning.
+**most** alternative orderings are nonsense, but some change the meaning.
 
 * This is very **different from recurent model** cause recurent models looks on the word one at a time, and remembers which words he saw before and therefore remember their order.
+
+**in general** the position of words in sentence carries information!
+
+idea: add some information to the representation at the beginning that indicates where it is in the sequence!
 
 
 
