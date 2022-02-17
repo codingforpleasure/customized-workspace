@@ -27,7 +27,7 @@
       * [Data Augmentation for NLP](#data-augmentation-for-nlp)
       * [10 Leading Language Models For NLP In 2021](#10-leading-language-models-for-nlp-in-2021)
 
-<!-- Added by: gil_diy, at: Thu 17 Feb 2022 11:21:21 IST -->
+<!-- Added by: gil_diy, at: Thu 17 Feb 2022 11:21:32 IST -->
 
 <!--te-->
 
@@ -226,7 +226,6 @@ all permutation of those words look the same.
 
 **in general** the position of words in sentence carries information!
 
-**idea:** add some information to the representation at the beginning that indicates where it is in the sequence!
 
 
 
