@@ -5,8 +5,9 @@
          * [Tanh](#tanh)
          * [ReLU (Rectified Linear Unit)](#relu-rectified-linear-unit)
          * [LeakyReLU](#leakyrelu)
+         * [Gelu (Gaussian Error Linear Unit)](#gelu-gaussian-error-linear-unit)
 
-<!-- Added by: gil_diy, at: Thu 10 Feb 2022 11:44:43 IST -->
+<!-- Added by: gil_diy, at: Thu 17 Feb 2022 13:09:23 IST -->
 
 <!--te-->
 
@@ -38,3 +39,7 @@ tinuous function.
 ### ReLU (Rectified Linear Unit)
 
 ### LeakyReLU
+
+### Gelu (Gaussian Error Linear Unit)
+
+[Link](https://medium.com/@shoray.goel/gelu-gaussian-error-linear-unit-4ec59fb2e47c)
