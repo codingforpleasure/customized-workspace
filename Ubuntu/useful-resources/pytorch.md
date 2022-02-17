@@ -94,7 +94,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Mon 17 Jan 2022 10:54:35 IST -->
+<!-- Added by: gil_diy, at: Thu 17 Feb 2022 12:58:23 IST -->
 
 <!--te-->
 
@@ -1653,6 +1653,8 @@ In the second half of the model, the feature map is up-sampled to the input size
 [Link](https://pytorch.org/docs/0.4.0/torchvision/datasets.html)
 
 ## References
+
+[collection of simple PyTorch implementations of neural networks and related algorithms](https://nn.labml.ai/)
 
 [Logo Detection Using PyTorch](https://medium.com/diving-in-deep/logo-detection-using-pytorch-7897d4898211)
 
