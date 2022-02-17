@@ -1,7 +1,7 @@
 <snippet>
 	<content><![CDATA[
-<p align="center"> <!-- style="width:400px;" -->
-  <img src="${1:images/labeling_example.png}" title="${2:tool tip here}">
+<p align="center">
+  <img src="${1:images/labeling_example.png}" title="${2:Look into the image}">
 </p>
 ]]></content>
 	<tabTrigger>img-center</tabTrigger>
