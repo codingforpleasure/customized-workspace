@@ -27,7 +27,7 @@
       * [Data Augmentation for NLP](#data-augmentation-for-nlp)
       * [10 Leading Language Models For NLP In 2021](#10-leading-language-models-for-nlp-in-2021)
 
-<!-- Added by: gil_diy, at: Thu 17 Feb 2022 11:23:26 IST -->
+<!-- Added by: gil_diy, at: Thu 17 Feb 2022 11:28:52 IST -->
 
 <!--te-->
 
@@ -228,6 +228,10 @@ so for the self-attention model:
 
 
 **idea is** to add some information to the representation at the beginning that indicates where it is in the sequence!
+
+<p align="center">
+  <img width="400" src="images/transformers/start_function_positional_encoding_and_embedding.jpg" title="Look into the image">
+</p>
 
 
 ## BERT (Bidirectional Encoder Representation from Transformer)
