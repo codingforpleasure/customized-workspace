@@ -95,7 +95,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Sat 19 Feb 2022 18:07:03 IST -->
+<!-- Added by: gil_diy, at: Sat 19 Feb 2022 18:07:11 IST -->
 
 <!--te-->
 
@@ -1644,7 +1644,7 @@ It's the job of the network's designer to choose those values.
 
 ## Finetuning Torchvision Models
 
-Model | finetune | prerequisizte
+Model | finetune | prerequisite
 ------------|----|-------------
  inception_v3 | `model.AuxLogits.fc = nn.Linear(768, num_classes)`|  requires the input size to be (299,299)
               | `model.fc = nn.Linear(2048, num_classes)`         | 
