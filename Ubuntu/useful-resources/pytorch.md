@@ -90,11 +90,12 @@
       * [Getting deterministic behaviour for debugging](#getting-deterministic-behaviour-for-debugging)
       * [Debug with pycharm in pytorch](#debug-with-pycharm-in-pytorch)
       * [Integrating TensorBoard with pytorch](#integrating-tensorboard-with-pytorch)
+      * [Finetuning Torchvision Models](#finetuning-torchvision-models)
       * [Segmentation with U-net  (Encoder-Decoder)](#segmentation-with-u-net--encoder-decoder)
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Thu 17 Feb 2022 12:58:23 IST -->
+<!-- Added by: gil_diy, at: Sat 19 Feb 2022 18:04:42 IST -->
 
 <!--te-->
 
@@ -1639,6 +1640,16 @@ for example: kernel_size, out_channels, out_features.
 It's the job of the network's designer to choose those values.
 
 [Part2 : Hyperparameter Tuning and Experimenting - Training Deep Neural Networks](https://youtu.be/ycxulUVoNbk?list=PLZbbT5o_s2xrfNyHZsM6ufI0iZENK9xgG)
+
+
+## Finetuning Torchvision Models
+
+Model | finetune | prerequisizte
+------------|----|-------------
+ inception_v3 | |  requires the input size to be (299,299)
+ Resnet | `model.fc = nn.Linear(512, num_classes)`|  requires the input size to be (299,299)
+ inception_v3 | `model.classifier[6] = nn.Linear(4096,num_classes)` |  requires the input size to be (299,299)
+
 
 
 ## Segmentation with U-net  (Encoder-Decoder)
