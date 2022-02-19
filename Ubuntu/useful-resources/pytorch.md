@@ -95,7 +95,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Sat 19 Feb 2022 18:05:56 IST -->
+<!-- Added by: gil_diy, at: Sat 19 Feb 2022 18:06:59 IST -->
 
 <!--te-->
 
@@ -1646,9 +1646,11 @@ It's the job of the network's designer to choose those values.
 
 Model | finetune | prerequisizte
 ------------|----|-------------
- inception_v3 | |  requires the input size to be (299,299)
+ inception_v3 | `model.AuxLogits.fc = nn.Linear(768, num_classes)`|  requires the input size to be (299,299)
+              | `model.fc = nn.Linear(2048, num_classes)`         | 
  Resnet | `model.fc = nn.Linear(512, num_classes)`|  requires the input size to be (299,299)
  Alexnet | `model.classifier[6] = nn.Linear(4096,num_classes)` |  requires the input size to be (299,299)
+ Densenet | `model.classifier = nn.Linear(1024, num_classes)` | 
  Squeezenet |`model.classifier[1] = nn.Conv2d(512, num_classes, kernel_size=(1,1), stride=(1,1))`|  
 
 
