@@ -95,7 +95,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Sat 19 Feb 2022 18:08:23 IST -->
+<!-- Added by: gil_diy, at: Sat 19 Feb 2022 18:09:08 IST -->
 
 <!--te-->
 
@@ -1653,7 +1653,7 @@ Model | finetune | prerequisite
  Densenet | `model.classifier = nn.Linear(1024, num_classes)` | requires the input size to be (224,224)
  Squeezenet |`model.classifier[1] = nn.Conv2d(512, num_classes, kernel_size=(1,1), stride=(1,1))`|  requires the input size to be (224,224)
 
-
+[Reference](https://pytorch.org/tutorials/beginner/finetuning_torchvision_models_tutorial.html)
 
 ## Segmentation with U-net  (Encoder-Decoder)
 
