@@ -95,7 +95,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Sat 19 Feb 2022 18:04:42 IST -->
+<!-- Added by: gil_diy, at: Sat 19 Feb 2022 18:05:52 IST -->
 
 <!--te-->
 
@@ -1648,7 +1648,8 @@ Model | finetune | prerequisizte
 ------------|----|-------------
  inception_v3 | |  requires the input size to be (299,299)
  Resnet | `model.fc = nn.Linear(512, num_classes)`|  requires the input size to be (299,299)
- inception_v3 | `model.classifier[6] = nn.Linear(4096,num_classes)` |  requires the input size to be (299,299)
+ Alexnet | `model.classifier[6] = nn.Linear(4096,num_classes)` |  requires the input size to be (299,299)
+ Squeezenet |`model.classifier[1] = nn.Conv2d(512, num_classes, kernel_size=(1,1), stride=(1,1))`|  
 
 
 
