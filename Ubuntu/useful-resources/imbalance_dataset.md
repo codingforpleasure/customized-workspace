@@ -4,8 +4,9 @@
       * [Under-Sampling](#under-sampling)
       * [Over-Sampling](#over-sampling)
       * [SMOTETomek](#smotetomek)
+      * [Ensemble Techniques](#ensemble-techniques)
 
-<!-- Added by: gil_diy, at: Sun 20 Feb 2022 18:41:50 IST -->
+<!-- Added by: gil_diy, at: Sun 20 Feb 2022 18:42:43 IST -->
 
 <!--te-->
 
@@ -58,4 +59,13 @@ os=SMOTETomek(0.75)
 X_train_ns,y_train_ns=os.fit_sample(X_train,y_train)
 print("The number of classes before fit {}".format(Counter(y_train)))
 print("The number of classes after fit {}".format(Counter(y_train_ns)))
+```
+
+## Ensemble Techniques
+
+```python
+from imblearn.ensemble import EasyEnsembleClassifier
+
+easy=EasyEnsembleClassifier()
+easy.(X_train,y_train)
 ```
