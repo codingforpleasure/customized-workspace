@@ -15,7 +15,6 @@
             * [Pipline Basic Case](#pipline-basic-case)
             * [Pipline with custome Estimators and Transformers](#pipline-with-custome-estimators-and-transformers)
             * [Pipeline for preprocessing with ColumnTransformer](#pipeline-for-preprocessing-with-columntransformer)
-         * [ColumnTransformer (Super nice)](#columntransformer-super-nice)
          * [Dimension Reduction techniques](#dimension-reduction-techniques)
             * [PCA (Principal Component Analysis)](#pca-principal-component-analysis)
       * [Splitting data](#splitting-data)
@@ -50,7 +49,7 @@
          * [Principal component analysis (PCA)](#principal-component-analysis-pca)
       * [metrics](#metrics)
 
-<!-- Added by: gil_diy, at: Sun 20 Feb 2022 12:08:40 IST -->
+<!-- Added by: gil_diy, at: Sun 20 Feb 2022 12:21:00 IST -->
 
 <!--te-->
 
@@ -192,7 +191,6 @@ for classifier in classifiers:
 
 #### Pipline with custome Estimators and Transformers
 
-
 We can use our TextNormalizer in a pipeline! Since we’ll be using our custom text transformer to tokenize and tag our documents:
 
 ```python
@@ -293,15 +291,7 @@ X_train_processed = preprocess_pipeline.fit_transform(X)
 [LeaveOneOut](https://youtu.be/e0JcXMzhtdY?t=824)
 
 
-
-
 [Deep Dive into pipeline](https://www.kaggle.com/baghern/a-deep-dive-into-sklearn-pipelines)
-
-### ColumnTransformer (Super nice)
-
-Explained very well here for creating a concise code neat [Link](https://www.youtube.com/watch?v=OTEokOJ12ao)
-
-[Reference](https://machinelearningmastery.com/columntransformer-for-numerical-and-categorical-data/)
 
 
 ### Dimension Reduction techniques
