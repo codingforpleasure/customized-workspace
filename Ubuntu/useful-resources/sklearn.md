@@ -50,7 +50,7 @@
          * [Principal component analysis (PCA)](#principal-component-analysis-pca)
       * [metrics](#metrics)
 
-<!-- Added by: gil_diy, at: Sun 20 Feb 2022 12:07:47 IST -->
+<!-- Added by: gil_diy, at: Sun 20 Feb 2022 12:08:29 IST -->
 
 <!--te-->
 
@@ -293,9 +293,7 @@ X_train_processed = preprocess_pipeline.fit_transform(X)
 [LeaveOneOut](https://youtu.be/e0JcXMzhtdY?t=824)
 
 
-[Reference1](https://youtu.be/QdBy02ExhGI)
 
-[Reference2](https://www.youtube.com/watch?v=OFyyWcw2cyM)
 
 [Deep Dive into pipeline](https://www.kaggle.com/baghern/a-deep-dive-into-sklearn-pipelines)
 
