@@ -50,7 +50,7 @@
          * [Principal component analysis (PCA)](#principal-component-analysis-pca)
       * [metrics](#metrics)
 
-<!-- Added by: gil_diy, at: Sun 20 Feb 2022 12:07:05 IST -->
+<!-- Added by: gil_diy, at: Sun 20 Feb 2022 12:07:28 IST -->
 
 <!--te-->
 
@@ -224,6 +224,9 @@ class TextNormalizer(BaseEstimator, TransformerMixin):
         for document in documents:
             yield self.normalize(document)
 
+def identity(words):
+    return words
+    
 if __name__ == '__main__':
    
    # we’ll specify that our TfidfVectorizer not do any tokenization,
