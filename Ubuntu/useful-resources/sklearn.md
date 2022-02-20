@@ -50,7 +50,7 @@
          * [Principal component analysis (PCA)](#principal-component-analysis-pca)
       * [metrics](#metrics)
 
-<!-- Added by: gil_diy, at: Sun 20 Feb 2022 11:42:12 IST -->
+<!-- Added by: gil_diy, at: Sun 20 Feb 2022 11:42:45 IST -->
 
 <!--te-->
 
@@ -193,7 +193,25 @@ for classifier in classifiers:
 #### Pipline with custome Estimators and Transformers
 
 ```python
+from sklearn.base import BaseEstimator, TransformerMixin
 
+class TextNormalizer(BaseEstimator, TransformerMixin):
+    """
+    Do a bunch of fancy, specialized text normalization steps,
+    like tokenization, part-of-speech tagging, lemmatization 
+    and stopwords removal.
+    """
+    ...
+
+    def normalize(self, document):
+        # do the special stuff here
+
+    def fit(self, X, y=None):
+        return self
+
+    def transform(self, documents):
+        for document in documents:
+            yield self.normalize(document)
 ```
 
 #### Pipeline for preprocessing with ColumnTransformer
