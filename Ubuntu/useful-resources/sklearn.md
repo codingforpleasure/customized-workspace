@@ -49,7 +49,7 @@
          * [Principal component analysis (PCA)](#principal-component-analysis-pca)
       * [metrics](#metrics)
 
-<!-- Added by: gil_diy, at: Sun 20 Feb 2022 12:29:26 IST -->
+<!-- Added by: gil_diy, at: Sun 20 Feb 2022 12:29:53 IST -->
 
 <!--te-->
 
@@ -148,7 +148,7 @@ X_train[:,[1,2,5]] = imputer_mean.fit_transform(X_train[:,[1,2,5]])
 
 ```
 
-* **Startegy** values can be: `“mean”`, `“median”`, `“most_frequent”`,`“constant”`
+* **Startegy** values can be: `'mean'`, `'median'`, `'most_frequent'`,`'constant'`
 
 **Attention:** In case you would like to modify the type of the imputer just replace **imputer_mean**
 with **imputer_median** as seen below:
