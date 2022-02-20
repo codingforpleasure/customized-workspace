@@ -15,6 +15,7 @@
             * [Pipline Basic Case](#pipline-basic-case)
             * [Pipline with custome Estimators and Transformers](#pipline-with-custome-estimators-and-transformers)
             * [Pipeline for preprocessing with ColumnTransformer](#pipeline-for-preprocessing-with-columntransformer)
+         * [Pipline with FunctionalTransformer](#pipline-with-functionaltransformer)
          * [Dimension Reduction techniques](#dimension-reduction-techniques)
             * [PCA (Principal Component Analysis)](#pca-principal-component-analysis)
       * [Splitting data](#splitting-data)
@@ -51,7 +52,7 @@
       * [GridSearch](#gridsearch)
       * [metrics](#metrics)
 
-<!-- Added by: gil_diy, at: Sun 20 Feb 2022 12:53:46 IST -->
+<!-- Added by: gil_diy, at: Sun 20 Feb 2022 13:09:04 IST -->
 
 <!--te-->
 
@@ -297,7 +298,22 @@ X_train_processed = preprocess_pipeline.fit_transform(X)
 
 [LeaveOneOut](https://youtu.be/e0JcXMzhtdY?t=824)
 
+### Pipline with FunctionalTransformer
 
+
+Applies a function to a column which isn't technically a transformer is common, so Scikit-learn introduced a FunctionTransformer. 
+
+A **FunctionTransformer** takes a function (such as np.log) and makes a transformer that does nothing when fit is called, but calls the function when transform is called.
+
+
+```python
+from sklearn.preprocessing import FunctionTransformer
+
+cnts_pipeline = Pipeline([
+    ('impute', SimpleImputer(strategy='mean')),
+    ('log', FunctionTransformer(np.log1p))
+])
+```
 ### Dimension Reduction techniques
 
 #### PCA (Principal Component Analysis)
