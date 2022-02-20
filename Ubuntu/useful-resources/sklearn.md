@@ -50,7 +50,7 @@
          * [Principal component analysis (PCA)](#principal-component-analysis-pca)
       * [metrics](#metrics)
 
-<!-- Added by: gil_diy, at: Sun 20 Feb 2022 11:42:09 IST -->
+<!-- Added by: gil_diy, at: Sun 20 Feb 2022 11:42:12 IST -->
 
 <!--te-->
 
@@ -192,7 +192,9 @@ for classifier in classifiers:
 
 #### Pipline with custome Estimators and Transformers
 
+```python
 
+```
 
 #### Pipeline for preprocessing with ColumnTransformer
 
