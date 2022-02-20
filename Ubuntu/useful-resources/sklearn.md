@@ -50,7 +50,7 @@
       * [GridSearch](#gridsearch)
       * [metrics](#metrics)
 
-<!-- Added by: gil_diy, at: Sun 20 Feb 2022 12:41:53 IST -->
+<!-- Added by: gil_diy, at: Sun 20 Feb 2022 12:43:06 IST -->
 
 <!--te-->
 
@@ -653,6 +653,8 @@ for thresh in thresholds:
 ## GridSearch
 
 ```python
+from sklearn.model_selection import GridSearchCV
+
 grid_search = GridSearchCV(pipe, parameters, n_jobs=-1, verbose=1)
 
 ```
