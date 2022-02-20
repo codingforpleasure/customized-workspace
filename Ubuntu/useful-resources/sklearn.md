@@ -50,7 +50,7 @@
          * [Principal component analysis (PCA)](#principal-component-analysis-pca)
       * [metrics](#metrics)
 
-<!-- Added by: gil_diy, at: Sun 20 Feb 2022 11:54:10 IST -->
+<!-- Added by: gil_diy, at: Sun 20 Feb 2022 11:54:16 IST -->
 
 <!--te-->
 
@@ -215,7 +215,7 @@ class TextNormalizer(BaseEstimator, TransformerMixin):
 
 if __name__ == '__main__':
    # Create pipeline using TFIDF
-   pipe = Pipeline([("cleaner", predictors()),
+   pipe = Pipeline([("cleaner", TextNormalizer),
                      ('vectorizer', get_tfidf_vector()),
                      ('classifier', classifier)])
 ```
