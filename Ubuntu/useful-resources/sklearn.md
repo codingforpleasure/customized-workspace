@@ -50,7 +50,7 @@
          * [Principal component analysis (PCA)](#principal-component-analysis-pca)
       * [metrics](#metrics)
 
-<!-- Added by: gil_diy, at: Sun 20 Feb 2022 11:56:26 IST -->
+<!-- Added by: gil_diy, at: Sun 20 Feb 2022 11:57:56 IST -->
 
 <!--te-->
 
@@ -194,6 +194,7 @@ for classifier in classifiers:
 
 ```python
 from sklearn.base import BaseEstimator, TransformerMixin
+from sklearn.feature_extraction import TfidfVectorizer
 
 class TextNormalizer(BaseEstimator, TransformerMixin):
     """
@@ -214,15 +215,21 @@ class TextNormalizer(BaseEstimator, TransformerMixin):
             yield self.normalize(document)
 
 if __name__ == '__main__':
+   
    # Create pipeline using TFIDF
-   pipe = Pipeline([("norm", TextNormalizer()),
+   steps = [("norm", TextNormalizer()),
                     ('vect', TfidfVectorizer(
                               tokenizer=identity, 
                               preprocessor=None, 
                               lowercase=False
                               )
                      ),
-                     ('clfr', LogisticRegression())])
+                     ('clfr', LogisticRegression())]
+
+   
+   pipe = Pipeline(steps)
+   pipe.fit(train_docs, train_labels)
+   predicted_labels = pipe.predict(test_docs)
 ```
 
 #### Pipeline for preprocessing with ColumnTransformer
