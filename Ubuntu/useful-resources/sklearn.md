@@ -50,7 +50,7 @@
          * [Principal component analysis (PCA)](#principal-component-analysis-pca)
       * [metrics](#metrics)
 
-<!-- Added by: gil_diy, at: Sun 20 Feb 2022 11:59:16 IST -->
+<!-- Added by: gil_diy, at: Sun 20 Feb 2022 12:02:46 IST -->
 
 <!--te-->
 
@@ -192,9 +192,17 @@ for classifier in classifiers:
 
 #### Pipline with custome Estimators and Transformers
 
+
+We can use our TextNormalizer in a pipeline! Since we’ll be using our custom text transformer to tokenize and tag our documents
 ```python
 from sklearn.base import BaseEstimator, TransformerMixin
 from sklearn.feature_extraction import TfidfVectorizer
+
+# Basic function to clean the text
+def clean_text(text):
+    # Removing spaces and converting text into lowercase
+    return text.strip().lower()
+
 
 class TextNormalizer(BaseEstimator, TransformerMixin):
     """
@@ -206,6 +214,7 @@ class TextNormalizer(BaseEstimator, TransformerMixin):
 
    def normalize(self, document):
         # do the special stuff here
+        return clean_text(text)
 
     def fit(self, X, y=None):
         return self
