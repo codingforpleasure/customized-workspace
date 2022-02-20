@@ -50,7 +50,7 @@
          * [Principal component analysis (PCA)](#principal-component-analysis-pca)
       * [metrics](#metrics)
 
-<!-- Added by: gil_diy, at: Sun 20 Feb 2022 12:04:50 IST -->
+<!-- Added by: gil_diy, at: Sun 20 Feb 2022 12:07:05 IST -->
 
 <!--te-->
 
@@ -226,6 +226,10 @@ class TextNormalizer(BaseEstimator, TransformerMixin):
 
 if __name__ == '__main__':
    
+   # we’ll specify that our TfidfVectorizer not do any tokenization,
+   # preprocessing, or lowercasing on our behalf (to do this we have to specify a
+   # dummy identity function to use as our tokenizer).
+
    steps = [('norm', TextNormalizer()), # <- My custom made Normalizer
             ('vect', TfidfVectorizer(
                         tokenizer=identity, 
