@@ -13,6 +13,7 @@
             * [Missing value for categorical columns](#missing-value-for-categorical-columns)
          * [Pipeline](#pipeline)
             * [Pipline Basic Case](#pipline-basic-case)
+            * [Pipline with custome Estimators and Transformers](#pipline-with-custome-estimators-and-transformers)
             * [Pipeline for preprocessing with ColumnTransformer](#pipeline-for-preprocessing-with-columntransformer)
          * [ColumnTransformer (Super nice)](#columntransformer-super-nice)
          * [Dimension Reduction techniques](#dimension-reduction-techniques)
@@ -49,7 +50,7 @@
          * [Principal component analysis (PCA)](#principal-component-analysis-pca)
       * [metrics](#metrics)
 
-<!-- Added by: gil_diy, at: Sun 20 Feb 2022 09:28:17 IST -->
+<!-- Added by: gil_diy, at: Sun 20 Feb 2022 11:42:06 IST -->
 
 <!--te-->
 
@@ -188,6 +189,8 @@ for classifier in classifiers:
     pipe.fit(X_train, y_train)   
     print("The accuracy score of {0} is: {1:.2f}%".format(classifier,(pipe.score(X_test, y_test)*100)))
 ```
+
+#### Pipline with custome Estimators and Transformers
 
 #### Pipeline for preprocessing with ColumnTransformer
 
