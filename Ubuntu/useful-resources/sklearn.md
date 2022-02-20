@@ -50,7 +50,7 @@
       * [GridSearch](#gridsearch)
       * [metrics](#metrics)
 
-<!-- Added by: gil_diy, at: Sun 20 Feb 2022 12:48:19 IST -->
+<!-- Added by: gil_diy, at: Sun 20 Feb 2022 12:48:26 IST -->
 
 <!--te-->
 
@@ -666,7 +666,6 @@ parameters = {
     "classifier__penalty": ("l2", "elasticnet"),
     # 'classifier__max_iter': (10, 50, 80),
 }
-
 
 pipe = Pipeline([("cleaner", predictors()),
                ('vectorizer', tfidf_vector),
