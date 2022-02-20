@@ -23,6 +23,7 @@
             * [cross_val_score](#cross_val_score)
          * [Stratified Shuffle Split](#stratified-shuffle-split)
          * [StratifiedKFold](#stratifiedkfold)
+         * [RepeatedStratifiedKFold](#repeatedstratifiedkfold)
          * [LeaveOneOut](#leaveoneout)
       * [Feature Selection](#feature-selection)
          * [Approach 1: Drop columns with constant values (Like Person's ID)](#approach-1-drop-columns-with-constant-values-like-persons-id)
@@ -50,7 +51,7 @@
       * [GridSearch](#gridsearch)
       * [metrics](#metrics)
 
-<!-- Added by: gil_diy, at: Sun 20 Feb 2022 12:48:26 IST -->
+<!-- Added by: gil_diy, at: Sun 20 Feb 2022 12:53:46 IST -->
 
 <!--te-->
 
@@ -468,6 +469,10 @@ kfold = StratifiedKFold(n_splits=10, random_state=7)
 results = cross_val_score(model, X, Y, cv=kfold)
 print("Accuracy: %.2f%% (%.2f%%)" % (results.mean()*100, results.std()*100))
 ```
+
+### RepeatedStratifiedKFold
+
+[Link](https://machinelearningmastery.com/imbalanced-classification-with-the-adult-income-dataset/)
 
 ### LeaveOneOut
 
