@@ -50,7 +50,7 @@
          * [Principal component analysis (PCA)](#principal-component-analysis-pca)
       * [metrics](#metrics)
 
-<!-- Added by: gil_diy, at: Sun 20 Feb 2022 11:42:45 IST -->
+<!-- Added by: gil_diy, at: Sun 20 Feb 2022 11:50:59 IST -->
 
 <!--te-->
 
@@ -209,7 +209,7 @@ class TextNormalizer(BaseEstimator, TransformerMixin):
     def fit(self, X, y=None):
         return self
 
-    def transform(self, documents):
+    def transform(self, documents): # Invoked first
         for document in documents:
             yield self.normalize(document)
 ```
