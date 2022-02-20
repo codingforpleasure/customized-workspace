@@ -49,7 +49,7 @@
          * [Principal component analysis (PCA)](#principal-component-analysis-pca)
       * [metrics](#metrics)
 
-<!-- Added by: gil_diy, at: Sun 20 Feb 2022 09:16:35 IST -->
+<!-- Added by: gil_diy, at: Sun 20 Feb 2022 09:17:49 IST -->
 
 <!--te-->
 
@@ -194,29 +194,35 @@ for classifier in classifiers:
 Here we are treating differently two groups of columns `numeric` columns and `categorical` columns:
 
 ```python
-   X, y = fetch_openml("titanic", version=1, as_frame=True, return_X_y=True)
+from sklearn.compose import ColumnTransformer
+from sklearn.datasets import fetch_openml
+from sklearn.pipeline import Pipeline
+from sklearn.impute import SimpleImputer
+from sklearn.preprocessing import StandardScaler, OneHotEncoder
 
-    # Column Tranformation
-    numeric_features = ['age', 'fare']
-    categorical_features = ['embarked', 'sex', 'pclass']
+X, y = fetch_openml("titanic", version=1, as_frame=True, return_X_y=True)
 
-    numeric_pipeline = Pipeline([
-        ('impute', SimpleImputer(strategy='mean')),
-        ('scale', StandardScaler())
-    ])
+ # Column Tranformation
+ numeric_features = ['age', 'fare']
+ categorical_features = ['embarked', 'sex', 'pclass']
 
-   categ_pipeline = Pipeline([
-        ('impute', SimpleImputer(strategy='most_frequent')),
-        ('onehot', OneHotEncoder(handle_unknown='ignore'))
-    ])
+ numeric_pipeline = Pipeline([
+     ('impute', SimpleImputer(strategy='mean')),
+     ('scale', StandardScaler())
+ ])
 
-   # ColumnTransformer [('name', pipeline_name, features)]
-   preprocess_pipeline = ColumnTransformer([
-        ('continuous', numeric_pipeline, numeric_features),
-        ('cat', categ_pipeline, categorical_features)
-   ])
+categ_pipeline = Pipeline([
+     ('impute', SimpleImputer(strategy='most_frequent')),
+     ('onehot', OneHotEncoder(handle_unknown='ignore'))
+ ])
 
-   X_train_processed = preprocess_pipeline.fit_transform(X)
+# ColumnTransformer [('name', pipeline_name, features)]
+preprocess_pipeline = ColumnTransformer([
+     ('continuous', numeric_pipeline, numeric_features),
+     ('cat', categ_pipeline, categorical_features)
+])
+
+X_train_processed = preprocess_pipeline.fit_transform(X)
 
 ```
 
