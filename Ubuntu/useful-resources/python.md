@@ -26,7 +26,7 @@
       * [Counting words with a counter](#counting-words-with-a-counter)
       * [Useful packages](#useful-packages)
 
-<!-- Added by: gil_diy, at: Sat 05 Feb 2022 05:12:25 IST -->
+<!-- Added by: gil_diy, at: Sun 20 Feb 2022 19:34:41 IST -->
 
 <!--te-->
 
@@ -314,12 +314,14 @@ dumped = json.dumps(data, cls=NumpyEncoder)
 ## Counting words with a counter
 
 ```python
-from collection  import Counter
+from collections  import Counter
 
-tokens = tokenize("She likes my cats and my cats like my sofa")
+tokens = "She likes my cats and my cats like my sofa".split()
 counter = Counter(tokens)
 
 print(counter)
+
+# Counter({'my': 3, 'cats': 2, 'She': 1, 'likes': 1, 'and': 1, 'like': 1, 'sofa': 1})
 
 ```
 
