@@ -9,7 +9,7 @@
       * [oversampling](#oversampling)
       * [Deal with imbalanced datasets](#deal-with-imbalanced-datasets)
 
-<!-- Added by: gil_diy, at: Sun 20 Feb 2022 16:23:42 IST -->
+<!-- Added by: gil_diy, at: Sun 20 Feb 2022 16:24:11 IST -->
 
 <!--te-->
 
@@ -51,4 +51,4 @@ systematic_sample = systematic_sampling(df, 3)
 
  ## Deal with imbalanced datasets
 
- 
+ resampling with `sklearn.resample` upsampling the minority class or downsampling the majority class.
