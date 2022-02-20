@@ -3,12 +3,12 @@
       * [Probability sampling](#probability-sampling)
       * [Simple Random Sampling](#simple-random-sampling)
       * [Non-probability sampling](#non-probability-sampling)
-      * [S](#s)
+      * [systematic sampling](#systematic-sampling)
    * [Obtain a systematic sample and save it in a new variable](#obtain-a-systematic-sample-and-save-it-in-a-new-variable)
       * [Negative sampling](#negative-sampling)
       * [oversampling](#oversampling)
 
-<!-- Added by: gil_diy, at: Sun 20 Feb 2022 16:21:31 IST -->
+<!-- Added by: gil_diy, at: Sun 20 Feb 2022 16:22:02 IST -->
 
 <!--te-->
 
@@ -24,8 +24,10 @@ df.sample(n=4).sort_values(by='product_id')
 
 ## Non-probability sampling
 
-## S
 
+## systematic sampling
+
+The systematic sampling method selects units based on a fixed sampling interval (i.e. every nth unit is selected from a given process or population). This sampling method tends to be more effective than the simple random sampling method.
 Define systematic sampling function
 
 ```python
