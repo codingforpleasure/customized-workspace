@@ -12,7 +12,7 @@
             * [Missing value for numeric columns](#missing-value-for-numeric-columns)
             * [Missing value for categorical columns](#missing-value-for-categorical-columns)
          * [Pipeline](#pipeline)
-            * [Pipline](#pipline)
+            * [Pipline Basic Case](#pipline-basic-case)
             * [Pipeline for preprocessing with ColumnTransformer](#pipeline-for-preprocessing-with-columntransformer)
          * [ColumnTransformer (Super nice)](#columntransformer-super-nice)
          * [Dimension Reduction techniques](#dimension-reduction-techniques)
@@ -49,7 +49,7 @@
          * [Principal component analysis (PCA)](#principal-component-analysis-pca)
       * [metrics](#metrics)
 
-<!-- Added by: gil_diy, at: Sun 20 Feb 2022 09:02:42 IST -->
+<!-- Added by: gil_diy, at: Sun 20 Feb 2022 09:03:26 IST -->
 
 <!--te-->
 
@@ -169,7 +169,7 @@ imputer_categorical = SimpleImputer(missing_values=np.nan, strategy='most_freque
 [READ!! ](https://rebeccabilbro.github.io/module-main-has-no-attribute/)
 
 
-#### Pipline
+#### Pipline Basic Case
 
 ```python
 y_train = normalized_df['TenYearCHD']
