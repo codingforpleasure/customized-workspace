@@ -49,7 +49,7 @@
          * [Principal component analysis (PCA)](#principal-component-analysis-pca)
       * [metrics](#metrics)
 
-<!-- Added by: gil_diy, at: Sun 20 Feb 2022 09:00:34 IST -->
+<!-- Added by: gil_diy, at: Sun 20 Feb 2022 09:01:02 IST -->
 
 <!--te-->
 
@@ -184,6 +184,12 @@ Here we are treating differently two groups of columns `numeric` columns and `ca
         ('impute', SimpleImputer(strategy='mean')),
         ('scale', StandardScaler())
     ])
+
+   categ_pipeline = Pipeline([
+        ('impute', SimpleImputer(strategy='most_frequent')),
+        ('onehot', OneHotEncoder(handle_unknown='ignore'))
+    ])
+
 ```
 
 #### Another example
