@@ -3,8 +3,9 @@
       * [Install package](#install-package)
       * [Under-Sampling](#under-sampling)
       * [Over-Sampling](#over-sampling)
+      * [SMOTETomek](#smotetomek)
 
-<!-- Added by: gil_diy, at: Sun 20 Feb 2022 18:41:45 IST -->
+<!-- Added by: gil_diy, at: Sun 20 Feb 2022 18:41:50 IST -->
 
 <!--te-->
 
@@ -48,7 +49,7 @@ print("The number of classes after fit {}".format(Counter(y_train_ns)))
 # The number of classes after fit Counter({0: 199017, 1: 149262})
 ```
 
-## 
+## SMOTETomek
 
 ```python
 from imblearn.combine import SMOTETomek
