@@ -50,7 +50,7 @@
          * [Principal component analysis (PCA)](#principal-component-analysis-pca)
       * [metrics](#metrics)
 
-<!-- Added by: gil_diy, at: Sun 20 Feb 2022 12:08:37 IST -->
+<!-- Added by: gil_diy, at: Sun 20 Feb 2022 12:08:40 IST -->
 
 <!--te-->
 
@@ -332,7 +332,7 @@ Explained very well here for creating a concise code neat [Link](https://www.you
 
 [Reference1 - PCA](https://youtu.be/QdBy02ExhGI)
 
-[Reference2 - PCA ](https://www.youtube.com/watch?v=OFyyWcw2cyM)
+[Reference2 - PCA](https://www.youtube.com/watch?v=OFyyWcw2cyM)
 
 ## Splitting data
 ### Cross-validation  
