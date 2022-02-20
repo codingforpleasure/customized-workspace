@@ -4,7 +4,7 @@
       * [Under-Sampling](#under-sampling)
       * [Over-Sampling](#over-sampling)
 
-<!-- Added by: gil_diy, at: Sun 20 Feb 2022 18:40:29 IST -->
+<!-- Added by: gil_diy, at: Sun 20 Feb 2022 18:40:46 IST -->
 
 <!--te-->
 
@@ -36,8 +36,11 @@ print("The number of classes after fit {}".format(Counter(y_train_ns)))
 
 ## Over-Sampling
 
-```pyhton
+```python
 from imblearn.over_sampling import RandomOverSampler
 
-
+os=RandomOverSampler(0.75)
+X_train_ns,y_train_ns=os.fit_sample(X_train,y_train)
+print("The number of classes before fit {}".format(Counter(y_train)))
+print("The number of classes after fit {}".format(Counter(y_train_ns)))
 ```
