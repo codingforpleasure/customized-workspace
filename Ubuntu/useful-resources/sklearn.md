@@ -49,7 +49,7 @@
          * [Principal component analysis (PCA)](#principal-component-analysis-pca)
       * [metrics](#metrics)
 
-<!-- Added by: gil_diy, at: Sun 20 Feb 2022 09:03:26 IST -->
+<!-- Added by: gil_diy, at: Sun 20 Feb 2022 09:16:32 IST -->
 
 <!--te-->
 
@@ -215,6 +215,8 @@ Here we are treating differently two groups of columns `numeric` columns and `ca
         ('continuous', numeric_pipeline, numeric_features),
         ('cat', categ_pipeline, categorical_features)
    ])
+
+   X_train_processed = preprocess_pipeline.fit_transform(X)
 
 ```
 
