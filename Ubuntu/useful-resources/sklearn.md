@@ -49,7 +49,7 @@
          * [Principal component analysis (PCA)](#principal-component-analysis-pca)
       * [metrics](#metrics)
 
-<!-- Added by: gil_diy, at: Sun 20 Feb 2022 12:30:31 IST -->
+<!-- Added by: gil_diy, at: Sun 20 Feb 2022 12:30:58 IST -->
 
 <!--te-->
 
@@ -174,9 +174,6 @@ imputer_categorical = SimpleImputer(missing_values=np.nan, strategy='most_freque
 ```
 
 ### Pipeline
-
-[READ!! ](https://rebeccabilbro.github.io/module-main-has-no-attribute/)
-
 
 #### Pipline Basic Case
 
