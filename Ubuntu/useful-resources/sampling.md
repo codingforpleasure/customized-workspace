@@ -8,7 +8,7 @@
       * [Negative sampling](#negative-sampling)
       * [oversampling](#oversampling)
 
-<!-- Added by: gil_diy, at: Sun 20 Feb 2022 16:21:27 IST -->
+<!-- Added by: gil_diy, at: Sun 20 Feb 2022 16:21:31 IST -->
 
 <!--te-->
 
@@ -26,7 +26,8 @@ df.sample(n=4).sort_values(by='product_id')
 
 ## S
 
- Define systematic sampling function
+Define systematic sampling function
+
 ```python
 def systematic_sampling(df, step):
    indexes = np.arange(0,len(df),step=step)
