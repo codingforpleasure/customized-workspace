@@ -47,9 +47,10 @@
       * [Matrix Decomposition](#matrix-decomposition)
          * [Latent Dirichlet Allocation](#latent-dirichlet-allocation)
          * [Principal component analysis (PCA)](#principal-component-analysis-pca)
+      * [GridSearch](#gridsearch)
       * [metrics](#metrics)
 
-<!-- Added by: gil_diy, at: Sun 20 Feb 2022 12:33:33 IST -->
+<!-- Added by: gil_diy, at: Sun 20 Feb 2022 12:38:17 IST -->
 
 <!--te-->
 
@@ -647,6 +648,10 @@ for thresh in thresholds:
 ### Latent Dirichlet Allocation
 
 ### Principal component analysis (PCA)
+
+
+## GridSearch
+
 
 
 ## metrics
