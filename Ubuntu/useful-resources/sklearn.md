@@ -12,7 +12,7 @@
             * [Missing value for numeric columns](#missing-value-for-numeric-columns)
             * [Missing value for categorical columns](#missing-value-for-categorical-columns)
          * [Pipeline](#pipeline)
-            * [Pipeline for preprocessing](#pipeline-for-preprocessing)
+            * [Pipeline for preprocessing with ColumnTransformer](#pipeline-for-preprocessing-with-columntransformer)
             * [Another example](#another-example)
          * [ColumnTransformer (Super nice)](#columntransformer-super-nice)
          * [Dimension Reduction techniques](#dimension-reduction-techniques)
@@ -49,7 +49,7 @@
          * [Principal component analysis (PCA)](#principal-component-analysis-pca)
       * [metrics](#metrics)
 
-<!-- Added by: gil_diy, at: Sun 20 Feb 2022 09:01:02 IST -->
+<!-- Added by: gil_diy, at: Sun 20 Feb 2022 09:02:18 IST -->
 
 <!--te-->
 
@@ -169,7 +169,7 @@ imputer_categorical = SimpleImputer(missing_values=np.nan, strategy='most_freque
 [READ!! ](https://rebeccabilbro.github.io/module-main-has-no-attribute/)
 
 
-#### Pipeline for preprocessing 
+#### Pipeline for preprocessing with ColumnTransformer
 
 Here we are treating differently two groups of columns `numeric` columns and `categorical` columns:
 
@@ -189,6 +189,12 @@ Here we are treating differently two groups of columns `numeric` columns and `ca
         ('impute', SimpleImputer(strategy='most_frequent')),
         ('onehot', OneHotEncoder(handle_unknown='ignore'))
     ])
+
+   # ColumnTransformer [('name', pipeline_name, features)]
+   preprocess_pipeline = ColumnTransformer([
+        ('continuous', numeric_pipeline, numeric_features),
+        ('cat', categ_pipeline, categorical_features)
+   ])
 
 ```
 
