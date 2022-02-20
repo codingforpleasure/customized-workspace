@@ -50,7 +50,7 @@
          * [Principal component analysis (PCA)](#principal-component-analysis-pca)
       * [metrics](#metrics)
 
-<!-- Added by: gil_diy, at: Sun 20 Feb 2022 12:07:28 IST -->
+<!-- Added by: gil_diy, at: Sun 20 Feb 2022 12:07:47 IST -->
 
 <!--te-->
 
@@ -247,6 +247,9 @@ if __name__ == '__main__':
    pipe.fit(train_docs, train_labels)
    predicted_labels = pipe.predict(test_docs)
 ```
+
+
+[Reference](https://rebeccabilbro.github.io/module-main-has-no-attribute/)
 
 #### Pipeline for preprocessing with ColumnTransformer
 
