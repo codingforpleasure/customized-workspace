@@ -11,6 +11,9 @@
          * [Imputation of missing values](#imputation-of-missing-values)
             * [Missing value for numeric columns](#missing-value-for-numeric-columns)
             * [Missing value for categorical columns](#missing-value-for-categorical-columns)
+         * [Pipeline](#pipeline)
+            * [Pipeline for preprocessing](#pipeline-for-preprocessing)
+            * [Another example](#another-example)
          * [ColumnTransformer (Super nice)](#columntransformer-super-nice)
          * [Dimension Reduction techniques](#dimension-reduction-techniques)
             * [PCA (Principal Component Analysis)](#pca-principal-component-analysis)
@@ -46,7 +49,7 @@
          * [Principal component analysis (PCA)](#principal-component-analysis-pca)
       * [metrics](#metrics)
 
-<!-- Added by: gil_diy, at: Sun 20 Feb 2022 08:56:18 IST -->
+<!-- Added by: gil_diy, at: Sun 20 Feb 2022 08:58:54 IST -->
 
 <!--te-->
 
@@ -161,6 +164,58 @@ The same way as I have written above, just place the most common value in the em
 imputer_categorical = SimpleImputer(missing_values=np.nan, strategy='most_frequent')
 ```
 
+### Pipeline
+
+[READ!! ](https://rebeccabilbro.github.io/module-main-has-no-attribute/)
+
+
+#### Pipeline for preprocessing 
+
+Here we are treating differently two groups of columns `numeric` columns and `categorical` columns:
+
+```python
+   X, y = fetch_openml("titanic", version=1, as_frame=True, return_X_y=True)
+
+    # Column Tranformation
+    numeric_features = ['age', 'fare']
+    categorical_features = ['embarked', 'sex', 'pclass']
+
+    numeric_pipeline = Pipeline([
+        ('impute', SimpleImputer(strategy='mean')),
+        ('scale', StandardScaler())
+    ])
+
+
+```
+
+#### Another example
+
+```python
+y_train = normalized_df['TenYearCHD']
+X_train = normalized_df.drop('TenYearCHD', axis=1)
+from sklearn.pipeline import Pipeline
+
+classifiers = [
+               LogisticRegression(),
+               SVC(),
+               DecisionTreeClassifier(),
+               KNeighborsClassifier(2)
+               ]
+
+for classifier in classifiers:
+    pipe = Pipeline(steps=[('classifier', classifier)])
+    pipe.fit(X_train, y_train)   
+    print("The accuracy score of {0} is: {1:.2f}%".format(classifier,(pipe.score(X_test, y_test)*100)))
+```
+
+[LeaveOneOut](https://youtu.be/e0JcXMzhtdY?t=824)
+
+
+[Reference1](https://youtu.be/QdBy02ExhGI)
+
+[Reference2](https://www.youtube.com/watch?v=OFyyWcw2cyM)
+
+[Deep Dive into pipeline](https://www.kaggle.com/baghern/a-deep-dive-into-sklearn-pipelines)
 
 ### ColumnTransformer (Super nice)
 
