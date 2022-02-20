@@ -50,7 +50,7 @@
          * [Principal component analysis (PCA)](#principal-component-analysis-pca)
       * [metrics](#metrics)
 
-<!-- Added by: gil_diy, at: Sun 20 Feb 2022 11:51:08 IST -->
+<!-- Added by: gil_diy, at: Sun 20 Feb 2022 11:54:07 IST -->
 
 <!--te-->
 
@@ -203,7 +203,7 @@ class TextNormalizer(BaseEstimator, TransformerMixin):
     """
     ...
 
-    def normalize(self, document):
+   def normalize(self, document):
         # do the special stuff here
 
     def fit(self, X, y=None):
@@ -212,6 +212,12 @@ class TextNormalizer(BaseEstimator, TransformerMixin):
     def transform(self, documents): # Invoked first
         for document in documents:
             yield self.normalize(document)
+
+if __name__ == '__main__':
+   # Create pipeline using TFIDF
+   pipe = Pipeline([("cleaner", predictors()),
+                     ('vectorizer', get_tfidf_vector()),
+                     ('classifier', classifier)])
 ```
 
 #### Pipeline for preprocessing with ColumnTransformer
