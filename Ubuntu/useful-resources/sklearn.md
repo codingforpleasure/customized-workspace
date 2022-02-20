@@ -49,7 +49,7 @@
          * [Principal component analysis (PCA)](#principal-component-analysis-pca)
       * [metrics](#metrics)
 
-<!-- Added by: gil_diy, at: Sun 20 Feb 2022 08:58:54 IST -->
+<!-- Added by: gil_diy, at: Sun 20 Feb 2022 09:00:31 IST -->
 
 <!--te-->
 
@@ -184,8 +184,6 @@ Here we are treating differently two groups of columns `numeric` columns and `ca
         ('impute', SimpleImputer(strategy='mean')),
         ('scale', StandardScaler())
     ])
-
-
 ```
 
 #### Another example
