@@ -49,7 +49,7 @@
          * [Principal component analysis (PCA)](#principal-component-analysis-pca)
       * [metrics](#metrics)
 
-<!-- Added by: gil_diy, at: Sun 20 Feb 2022 12:32:16 IST -->
+<!-- Added by: gil_diy, at: Sun 20 Feb 2022 12:33:33 IST -->
 
 <!--te-->
 
@@ -293,11 +293,7 @@ X_train_processed = preprocess_pipeline.fit_transform(X)
 ```
 
 
-
 [LeaveOneOut](https://youtu.be/e0JcXMzhtdY?t=824)
-
-
-[Deep Dive into pipeline](https://www.kaggle.com/baghern/a-deep-dive-into-sklearn-pipelines)
 
 
 ### Dimension Reduction techniques
