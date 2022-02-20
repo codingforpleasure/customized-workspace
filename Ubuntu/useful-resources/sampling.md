@@ -7,8 +7,9 @@
    * [Obtain a systematic sample and save it in a new variable](#obtain-a-systematic-sample-and-save-it-in-a-new-variable)
       * [Negative sampling](#negative-sampling)
       * [oversampling](#oversampling)
+      * [Deal with imbalanced datasets](#deal-with-imbalanced-datasets)
 
-<!-- Added by: gil_diy, at: Sun 20 Feb 2022 16:22:06 IST -->
+<!-- Added by: gil_diy, at: Sun 20 Feb 2022 16:23:42 IST -->
 
 <!--te-->
 
@@ -46,3 +47,8 @@ systematic_sample = systematic_sampling(df, 3)
 
 ## oversampling 
  https://arxiv.org/abs/1710.05381
+
+
+ ## Deal with imbalanced datasets
+
+ 
