@@ -50,7 +50,7 @@
          * [Principal component analysis (PCA)](#principal-component-analysis-pca)
       * [metrics](#metrics)
 
-<!-- Added by: gil_diy, at: Sun 20 Feb 2022 12:04:09 IST -->
+<!-- Added by: gil_diy, at: Sun 20 Feb 2022 12:04:50 IST -->
 
 <!--te-->
 
@@ -226,8 +226,7 @@ class TextNormalizer(BaseEstimator, TransformerMixin):
 
 if __name__ == '__main__':
    
-   # Create pipeline using TFIDF
-   steps = [('norm', TextNormalizer()),
+   steps = [('norm', TextNormalizer()), # <- My custom made Normalizer
             ('vect', TfidfVectorizer(
                         tokenizer=identity, 
                         preprocessor=None, 
