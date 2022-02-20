@@ -21,7 +21,6 @@
          * [Stratified Shuffle Split](#stratified-shuffle-split)
          * [StratifiedKFold](#stratifiedkfold)
          * [LeaveOneOut](#leaveoneout)
-      * [Pipeline](#pipeline)
       * [Feature Selection](#feature-selection)
          * [Approach 1: Drop columns with constant values (Like Person's ID)](#approach-1-drop-columns-with-constant-values-like-persons-id)
          * [Approach 2: Variance Thresold (Remove all low-variance features)](#approach-2-variance-thresold-remove-all-low-variance-features)
@@ -47,7 +46,7 @@
          * [Principal component analysis (PCA)](#principal-component-analysis-pca)
       * [metrics](#metrics)
 
-<!-- Added by: gil_diy, at: Thu 17 Feb 2022 22:09:18 IST -->
+<!-- Added by: gil_diy, at: Sun 20 Feb 2022 08:56:18 IST -->
 
 <!--te-->
 
@@ -367,39 +366,6 @@ X_train =  [[1 2][5 6]], X_test =  [[3 4]] , y_train = [1 3], y_test =  [2]
 X_train =  [[1 2][3 4]], X_test =  [[5 6]] , y_train = [1 2], y_test =  [3]
 *****************************************************************************
 ```
-
-## Pipeline
-
-[READ!! ](https://rebeccabilbro.github.io/module-main-has-no-attribute/)
-
-
-```python
-y_train = normalized_df['TenYearCHD']
-X_train = normalized_df.drop('TenYearCHD', axis=1)
-
-from sklearn.pipeline import Pipeline
-
-classifiers = [
-               LogisticRegression(),
-               SVC(),
-               DecisionTreeClassifier(),
-               KNeighborsClassifier(2)
-               ]
-
-for classifier in classifiers:
-    pipe = Pipeline(steps=[('classifier', classifier)])
-    pipe.fit(X_train, y_train)   
-    print("The accuracy score of {0} is: {1:.2f}%".format(classifier,(pipe.score(X_test, y_test)*100)))
-```
-
-[LeaveOneOut](https://youtu.be/e0JcXMzhtdY?t=824)
-
-
-[Reference1](https://youtu.be/QdBy02ExhGI)
-
-[Reference2](https://www.youtube.com/watch?v=OFyyWcw2cyM)
-
-[Deep Dive into pipeline](https://www.kaggle.com/baghern/a-deep-dive-into-sklearn-pipelines)
 
 ## Feature Selection
 
