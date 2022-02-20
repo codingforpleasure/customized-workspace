@@ -49,7 +49,7 @@
          * [Principal component analysis (PCA)](#principal-component-analysis-pca)
       * [metrics](#metrics)
 
-<!-- Added by: gil_diy, at: Sun 20 Feb 2022 12:30:58 IST -->
+<!-- Added by: gil_diy, at: Sun 20 Feb 2022 12:32:16 IST -->
 
 <!--te-->
 
@@ -257,7 +257,7 @@ if __name__ == '__main__':
 
 #### Pipeline for preprocessing with ColumnTransformer
 
-Here we are treating differently two groups of columns `numeric` columns and `categorical` columns:
+Here we are treating differently two groups of columns `numeric` columns and `categorical` columns. therefore we need to handle them separately:
 
 ```python
 from sklearn.compose import ColumnTransformer
