@@ -50,7 +50,7 @@
       * [GridSearch](#gridsearch)
       * [metrics](#metrics)
 
-<!-- Added by: gil_diy, at: Sun 20 Feb 2022 12:47:50 IST -->
+<!-- Added by: gil_diy, at: Sun 20 Feb 2022 12:48:19 IST -->
 
 <!--te-->
 
@@ -676,6 +676,9 @@ pipe = Pipeline([("cleaner", predictors()),
 grid_search = GridSearchCV(pipe, parameters, n_jobs=-1, verbose=1)
 grid_search.fit(X_train, y_train)
 
+    best_parameters = grid_search.best_estimator_.get_params()
+    for param_name in sorted(parameters.keys()):
+        print("\t%s: %r" % (param_name, best_parameters[param_name]))
 ```
 
 ## metrics
