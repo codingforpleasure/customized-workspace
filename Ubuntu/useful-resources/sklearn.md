@@ -49,7 +49,7 @@
          * [Principal component analysis (PCA)](#principal-component-analysis-pca)
       * [metrics](#metrics)
 
-<!-- Added by: gil_diy, at: Sun 20 Feb 2022 12:29:56 IST -->
+<!-- Added by: gil_diy, at: Sun 20 Feb 2022 12:30:31 IST -->
 
 <!--te-->
 
@@ -148,13 +148,13 @@ X_train[:,[1,2,5]] = imputer_mean.fit_transform(X_train[:,[1,2,5]])
 
 ```
 
-* **Startegy** values can be: `'mean'`, `'median'`, `'most_frequent'`,`'constant'`
-
 **Attention:** In case you would like to modify the type of the imputer just replace **imputer_mean**
 with **imputer_median** as seen below:
 ```python
 imputer_median = SimpleImputer(missing_values=np.nan, strategy='median')
 ```
+
+* **Startegy** values can be: `'mean'`, `'median'`, `'most_frequent'`,`'constant'`
 
 moreover you can use from the `sklearn.preprocessing`:
 
@@ -162,6 +162,8 @@ moreover you can use from the `sklearn.preprocessing`:
 form sklearn.preprocessing import Imputer
 imp = Imputer(missing_values='NaN', strategy='mean', axis=0, verbose=0, copy=True)
 ```
+
+
 
 #### Missing value for categorical columns
 
