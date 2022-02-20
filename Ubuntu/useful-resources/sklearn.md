@@ -50,7 +50,7 @@
       * [GridSearch](#gridsearch)
       * [metrics](#metrics)
 
-<!-- Added by: gil_diy, at: Sun 20 Feb 2022 12:44:26 IST -->
+<!-- Added by: gil_diy, at: Sun 20 Feb 2022 12:46:49 IST -->
 
 <!--te-->
 
@@ -672,6 +672,7 @@ pipe = Pipeline([("cleaner", predictors()),
                ('vectorizer', tfidf_vector),
                ('classifier', classifier)])
 
+# n_jobs=-1 means using all processors
 grid_search = GridSearchCV(pipe, parameters, n_jobs=-1, verbose=1)
 
 ```
