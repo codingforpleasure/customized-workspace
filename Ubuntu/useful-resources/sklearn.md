@@ -12,8 +12,8 @@
             * [Missing value for numeric columns](#missing-value-for-numeric-columns)
             * [Missing value for categorical columns](#missing-value-for-categorical-columns)
          * [Pipeline](#pipeline)
+            * [Pipline](#pipline)
             * [Pipeline for preprocessing with ColumnTransformer](#pipeline-for-preprocessing-with-columntransformer)
-            * [Another example](#another-example)
          * [ColumnTransformer (Super nice)](#columntransformer-super-nice)
          * [Dimension Reduction techniques](#dimension-reduction-techniques)
             * [PCA (Principal Component Analysis)](#pca-principal-component-analysis)
@@ -49,7 +49,7 @@
          * [Principal component analysis (PCA)](#principal-component-analysis-pca)
       * [metrics](#metrics)
 
-<!-- Added by: gil_diy, at: Sun 20 Feb 2022 09:02:18 IST -->
+<!-- Added by: gil_diy, at: Sun 20 Feb 2022 09:02:42 IST -->
 
 <!--te-->
 
@@ -169,6 +169,26 @@ imputer_categorical = SimpleImputer(missing_values=np.nan, strategy='most_freque
 [READ!! ](https://rebeccabilbro.github.io/module-main-has-no-attribute/)
 
 
+#### Pipline
+
+```python
+y_train = normalized_df['TenYearCHD']
+X_train = normalized_df.drop('TenYearCHD', axis=1)
+from sklearn.pipeline import Pipeline
+
+classifiers = [
+               LogisticRegression(),
+               SVC(),
+               DecisionTreeClassifier(),
+               KNeighborsClassifier(2)
+               ]
+
+for classifier in classifiers:
+    pipe = Pipeline(steps=[('classifier', classifier)])
+    pipe.fit(X_train, y_train)   
+    print("The accuracy score of {0} is: {1:.2f}%".format(classifier,(pipe.score(X_test, y_test)*100)))
+```
+
 #### Pipeline for preprocessing with ColumnTransformer
 
 Here we are treating differently two groups of columns `numeric` columns and `categorical` columns:
@@ -198,25 +218,7 @@ Here we are treating differently two groups of columns `numeric` columns and `ca
 
 ```
 
-#### Another example
 
-```python
-y_train = normalized_df['TenYearCHD']
-X_train = normalized_df.drop('TenYearCHD', axis=1)
-from sklearn.pipeline import Pipeline
-
-classifiers = [
-               LogisticRegression(),
-               SVC(),
-               DecisionTreeClassifier(),
-               KNeighborsClassifier(2)
-               ]
-
-for classifier in classifiers:
-    pipe = Pipeline(steps=[('classifier', classifier)])
-    pipe.fit(X_train, y_train)   
-    print("The accuracy score of {0} is: {1:.2f}%".format(classifier,(pipe.score(X_test, y_test)*100)))
-```
 
 [LeaveOneOut](https://youtu.be/e0JcXMzhtdY?t=824)
 
