@@ -49,7 +49,7 @@
          * [Principal component analysis (PCA)](#principal-component-analysis-pca)
       * [metrics](#metrics)
 
-<!-- Added by: gil_diy, at: Sun 20 Feb 2022 12:21:00 IST -->
+<!-- Added by: gil_diy, at: Sun 20 Feb 2022 12:28:49 IST -->
 
 <!--te-->
 
@@ -130,7 +130,10 @@ df["cylinders"] = ordinal_encoder_for_cylinders.fit_transform(df["cylinders"])
 ### Imputation of missing values
 
 #### Missing value for numeric columns
-For various reasons, **many real world datasets contain missing values**, often encoded as blanks, NaNs or other placeholders. Such datasets however are incompatible with scikit-learn estimators which assume that all values in an array are numerical, and that all have and hold meaning. A basic strategy to use incomplete datasets is to discard entire rows and/or columns containing missing values. However, this comes at the price of losing data which may be valuable (even though incomplete). A better strategy is to impute the missing values
+For various reasons, **many real world datasets contain missing values**, often encoded as blanks, NaNs or other placeholders. Such datasets however are incompatible with scikit-learn estimators which assume that all values in an array are numerical, and that all have and hold meaning. 
+
+* A basic strategy to use incomplete datasets is to discard entire rows and/or columns containing missing values. However, this comes at the price of losing data which may be valuable (even though incomplete). 
+A better strategy is to impute the missing values
 
 
 ```python
@@ -142,6 +145,8 @@ imputer_mean = SimpleImputer(missing_values=np.nan, strategy='mean')
 X_train[:,[1,2,5]] = imputer_mean.fit_transform(X_train[:,[1,2,5]])
 
 ```
+
+* **Startegy** values can be: `“mean”`, `“median”`, `“most_frequent”`,`“constant”`
 
 **Attention:** In case you would like to modify the type of the imputer just replace **imputer_mean**
 with **imputer_median** as seen below:
