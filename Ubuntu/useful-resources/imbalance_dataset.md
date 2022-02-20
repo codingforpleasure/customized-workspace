@@ -1,13 +1,13 @@
 <!--ts-->
-   * [imbalanced-learn samplers](#imbalanced-learn-samplers)
+   * [Imbalanced-learn samplers](#imbalanced-learn-samplers)
       * [Install package](#install-package)
 
-<!-- Added by: gil_diy, at: Sun 20 Feb 2022 18:31:25 IST -->
+<!-- Added by: gil_diy, at: Sun 20 Feb 2022 18:36:59 IST -->
 
 <!--te-->
 
 
-# imbalanced-learn samplers
+# Imbalanced-learn samplers
 
 ## Install package
 
