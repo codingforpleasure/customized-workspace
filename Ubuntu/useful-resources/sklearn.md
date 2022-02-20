@@ -50,7 +50,7 @@
       * [GridSearch](#gridsearch)
       * [metrics](#metrics)
 
-<!-- Added by: gil_diy, at: Sun 20 Feb 2022 12:43:06 IST -->
+<!-- Added by: gil_diy, at: Sun 20 Feb 2022 12:44:26 IST -->
 
 <!--te-->
 
@@ -654,6 +654,23 @@ for thresh in thresholds:
 
 ```python
 from sklearn.model_selection import GridSearchCV
+
+parameters = {
+    "vectorizer__max_df": (0.5, 0.75, 1.0),
+    # 'vectorizer__max_features': (None, 5000, 10000, 50000),
+    "vectorizer__ngram_range": ((1, 1), (1, 2)),  # unigrams or bigrams
+    # 'tfidf__use_idf': (True, False),
+    # 'tfidf__norm': ('l1', 'l2'),
+    "classifier__max_iter": (20,),
+    #"classifier__alpha": (0.00001, 0.000001),
+    "classifier__penalty": ("l2", "elasticnet"),
+    # 'classifier__max_iter': (10, 50, 80),
+}
+
+
+pipe = Pipeline([("cleaner", predictors()),
+               ('vectorizer', tfidf_vector),
+               ('classifier', classifier)])
 
 grid_search = GridSearchCV(pipe, parameters, n_jobs=-1, verbose=1)
 
