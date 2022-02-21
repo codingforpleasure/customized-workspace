@@ -22,13 +22,14 @@
          * [Positional encoding (position embeddings)](#positional-encoding-position-embeddings)
          * [Position-wise Feed-Forward Network](#position-wise-feed-forward-network)
       * [BERT (Bidirectional Encoder Representation from Transformer)](#bert-bidirectional-encoder-representation-from-transformer)
+         * [Bert with pytorch](#bert-with-pytorch)
          * [Drawbacks](#drawbacks-3)
       * [Cleaning methods](#cleaning-methods)
       * [Word Cloud](#word-cloud)
       * [Data Augmentation for NLP](#data-augmentation-for-nlp)
       * [10 Leading Language Models For NLP In 2021](#10-leading-language-models-for-nlp-in-2021)
 
-<!-- Added by: gil_diy, at: Thu 17 Feb 2022 18:19:29 IST -->
+<!-- Added by: gil_diy, at: Mon 21 Feb 2022 14:13:54 IST -->
 
 <!--te-->
 
@@ -296,9 +297,14 @@ sentences, it will give different embeddings for the word 'Python' based on the 
 
 * [Research paper](https://arxiv.org/pdf/1908.10084.pdf)
 
+
+### Bert with pytorch
+
+[Link](https://towardsdatascience.com/text-classification-with-bert-in-pytorch-887965e5820f)
+
 ### Drawbacks
 
-* BERT is state-of-the-art  at the Semantic Textual Similarity tasks but the problem with is it would t*ake very long time for a huge corpus
+* BERT is state-of-the-art  at the Semantic Textual Similarity tasks but the problem with is it would take very long time for a huge corpus
 ( 65 hours!! for 10,000 sentences)
 
 
