@@ -29,7 +29,7 @@
       * [Data Augmentation for NLP](#data-augmentation-for-nlp)
       * [10 Leading Language Models For NLP In 2021](#10-leading-language-models-for-nlp-in-2021)
 
-<!-- Added by: gil_diy, at: Mon 21 Feb 2022 14:13:59 IST -->
+<!-- Added by: gil_diy, at: Mon 21 Feb 2022 14:21:47 IST -->
 
 <!--te-->
 
@@ -301,6 +301,9 @@ sentences, it will give different embeddings for the word 'Python' based on the 
 ### Bert with pytorch
 
 [Link](https://towardsdatascience.com/text-classification-with-bert-in-pytorch-887965e5820f)
+
+
+[Link](https://neptune.ai/blog/how-to-code-bert-using-pytorch-tutorial)
 
 ### Drawbacks
 
