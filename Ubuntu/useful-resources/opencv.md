@@ -69,12 +69,13 @@
          * [BRIEF (Binary robust independent elementary features)](#brief-binary-robust-independent-elementary-features)
          * [Create a transparent image](#create-a-transparent-image)
       * [Image Stiching](#image-stiching)
+         * [Dealing with outliers (RANSAC)](#dealing-with-outliers-ransac)
          * [Homography matrix](#homography-matrix)
       * [Deep learning in OpenCV](#deep-learning-in-opencv)
          * [The function blobFromImage(s)](#the-function-blobfromimages)
             * [1. Mean subtraction](#1-mean-subtraction)
 
-<!-- Added by: gil_diy, at: Tue 22 Feb 2022 15:14:36 IST -->
+<!-- Added by: gil_diy, at: Tue 22 Feb 2022 15:41:44 IST -->
 
 <!--te-->
 
@@ -886,10 +887,14 @@ Besides, we can also use the **Laplacian of Gaussian(LoG)** with different σ to
 Steps:
 
 
-(1) Dealing with outliers: RANSAC 
+(1) 
 (2) 
 (3) Dealing with outliers: RANSAC (Since there are false matches between pair of images)
 (4) Warping and Blending algorithm
+
+### Dealing with outliers (RANSAC)
+
+
 
 ### Homography matrix
 
