@@ -70,7 +70,7 @@
          * [The function blobFromImage(s)](#the-function-blobfromimages)
             * [1. Mean subtraction](#1-mean-subtraction)
 
-<!-- Added by: gil_diy, at: Wed 09 Feb 2022 13:48:49 IST -->
+<!-- Added by: gil_diy, at: Tue 22 Feb 2022 07:23:40 IST -->
 
 <!--te-->
 
@@ -754,6 +754,9 @@ We can use this algorithm to extract keypoints and build the corresponding featu
 [How does the SIFT algorithm work?](https://youtu.be/m_XtEl-HUIg)
 
 [SIFT in short in Hebrew](https://www.lbscience.org/2020/09/10/%d7%9e%d7%99-%d7%a9%d7%9e%d7%91%d7%99%d7%98-%d7%91%d7%99-%d7%9e%d7%94%d7%a6%d7%93-%d7%99%d7%95%d7%93%d7%a2-%d7%9e%d7%99-%d7%90%d7%a0%d7%99/)
+
+
+[Ransac - nike was questioned](http://www.my-website.com)
 
 ### SURF (Speeded-up robust features)
 
