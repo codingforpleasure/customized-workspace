@@ -74,7 +74,7 @@
          * [The function blobFromImage(s)](#the-function-blobfromimages)
             * [1. Mean subtraction](#1-mean-subtraction)
 
-<!-- Added by: gil_diy, at: Tue 22 Feb 2022 13:55:23 IST -->
+<!-- Added by: gil_diy, at: Tue 22 Feb 2022 13:59:24 IST -->
 
 <!--te-->
 
@@ -464,7 +464,8 @@ cv2.warpAffine(img1,T, (columns,rows))
   <img width="400" src="images/open-cv/matrices_transformations.jpg" title="Look into the image">
 </p>
 
-* We can apply those transformations sequentially, 
+* We can apply those transformations sequentially,
+  or we can apply a composition of transform matrices to get the same effect as applying them sequentially.
 
 * What intresting in any transformation we have seen so far, they all belong to the 
 `Affine Transformation` which the transformation matrix holds in the last row: `0 0 1`
