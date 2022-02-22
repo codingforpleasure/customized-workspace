@@ -70,7 +70,7 @@
          * [The function blobFromImage(s)](#the-function-blobfromimages)
             * [1. Mean subtraction](#1-mean-subtraction)
 
-<!-- Added by: gil_diy, at: Tue 22 Feb 2022 07:25:08 IST -->
+<!-- Added by: gil_diy, at: Tue 22 Feb 2022 07:29:39 IST -->
 
 <!--te-->
 
@@ -749,6 +749,10 @@ It takes two numbers as arguments to indicate the thresholds. The second argumen
 We can use this algorithm to extract keypoints and build the corresponding feature descriptors.
 
 We can use this algorithm to extract keypoints and build the corresponding feature descriptors. To identify a potential keypoint, SIFT builds a pyramid by downsampling an image and taking the difference of Gaussian.
+
+**So how does SIFT achieves scale invariance?**
+
+
 
 
 [How does the SIFT algorithm work?](https://youtu.be/m_XtEl-HUIg)
