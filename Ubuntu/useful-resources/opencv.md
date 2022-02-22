@@ -74,7 +74,7 @@
          * [The function blobFromImage(s)](#the-function-blobfromimages)
             * [1. Mean subtraction](#1-mean-subtraction)
 
-<!-- Added by: gil_diy, at: Tue 22 Feb 2022 15:13:06 IST -->
+<!-- Added by: gil_diy, at: Tue 22 Feb 2022 15:14:11 IST -->
 
 <!--te-->
 
@@ -498,6 +498,12 @@ maps one plane to another plane through a point
 
 Same as imaging a plane through a pinhole, **exactly like a camera does**.
 
+
+1) Lines map to lines
+
+2) Parallel lines **do not necessarily remain parallel**
+
+3) Closed under composition
 
 #### Barrel Transformation
 
