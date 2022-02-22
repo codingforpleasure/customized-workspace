@@ -75,7 +75,7 @@
          * [The function blobFromImage(s)](#the-function-blobfromimages)
             * [1. Mean subtraction](#1-mean-subtraction)
 
-<!-- Added by: gil_diy, at: Tue 22 Feb 2022 11:20:13 IST -->
+<!-- Added by: gil_diy, at: Tue 22 Feb 2022 11:20:19 IST -->
 
 <!--te-->
 
@@ -448,6 +448,7 @@ output = cv2.warpAffine(img1, R ,(columns,rows))
 ### 3x3 Tranformation Matrix
 
 #### Shift/Translate an image
+
 Shift/Translate does a set of points a fixed distance in x and y
 
 ```python
