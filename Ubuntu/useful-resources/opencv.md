@@ -70,7 +70,7 @@
          * [The function blobFromImage(s)](#the-function-blobfromimages)
             * [1. Mean subtraction](#1-mean-subtraction)
 
-<!-- Added by: gil_diy, at: Tue 22 Feb 2022 07:45:30 IST -->
+<!-- Added by: gil_diy, at: Tue 22 Feb 2022 07:53:08 IST -->
 
 <!--te-->
 
@@ -839,6 +839,9 @@ Before we even begin training our deep neural network, we first **compute the av
 <p align="center"> <!-- style="width:400px;" -->
   <img src="images/open-cv/mean-substruction.png" title="mean-substruction">
 </p>
+
+
+[ First Principles of Computer Vision ](https://www.youtube.com/channel/UCf0WB91t8Ky6AuYcQV0CcLw/videos)
 
 [Install OpenCV on hard-drive](https://linuxize.com/post/how-to-install-opencv-on-ubuntu-18-04/)
 
