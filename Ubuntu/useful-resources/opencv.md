@@ -74,7 +74,7 @@
          * [The function blobFromImage(s)](#the-function-blobfromimages)
             * [1. Mean subtraction](#1-mean-subtraction)
 
-<!-- Added by: gil_diy, at: Tue 22 Feb 2022 13:34:33 IST -->
+<!-- Added by: gil_diy, at: Tue 22 Feb 2022 13:54:13 IST -->
 
 <!--te-->
 
@@ -460,12 +460,14 @@ cv2.warpAffine(img1,T, (columns,rows))
 ```
 
 
+<p align="center">
+  <img width="400" src="images/open-cv/matrices_transformations.jpg" title="Look into the image">
+</p>
+
 * What intresting in any transformation we have seen so far, they all belong to the 
-`Affine Transformation` which the transformation matrix holds in the last row:
+`Affine Transformation` which the transformation matrix holds in the last row: `0 0 1`
 
-`0 0 1`
-
- $\begin{bmatrix} x_2 \\ y_2 \\ 1 \end{bmatrix}=S^{-1}\begin{bmatrix} x_2 \\ y_2 \end{bmatrix}=\begin{bmatrix} \frac{1}{a} & 0 \\ 0 & \frac{1}{b} \end{bmatrix}\begin{bmatrix} x_2 \\ y_2 \end{bmatrix}$
+ $$\begin{bmatrix} x_2 \\ y_2 \\ 1 \end{bmatrix}=\begin{bmatrix} \tilde{x_2} \\ \tilde{y_2} \\ \tilde{z_2} \end{bmatrix}=\begin{bmatrix} a_{11} & a_{12} & a_{13} \\ a_{21} & a_{22} & a_{23} \\0 & 0 & 1 \end{bmatrix}\begin{bmatrix} \tilde{x_1} \\ \tilde{y_1} \\ \tilde{z_1}\end{bmatrix}$$
 
 
 Shear offsets a set of points a distance proportional to their x and y coordinates.
