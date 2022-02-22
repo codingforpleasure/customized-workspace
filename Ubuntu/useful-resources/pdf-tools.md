@@ -2,7 +2,7 @@
    * [Useful pdf tools for linux on the go](#useful-pdf-tools-for-linux-on-the-go)
       * [PDF concatenate files (Join PDF files)](#pdf-concatenate-files-join-pdf-files)
 
-<!-- Added by: gil_diy, at: 2020-06-21T13:55+03:00 -->
+<!-- Added by: gil_diy, at: Tue 22 Feb 2022 17:34:56 IST -->
 
 <!--te-->
 
@@ -20,6 +20,8 @@ Join together pages from multiple PDF files | pdftk, pdfjoin, pdfunite
 PDF to text converter | pdftotext
 Extract source file or stream from PDF file | pdftosrc
 PDF page extractor | pdftk, pdfseparate
+extract image from pdf | pdftohtml
+
 
 
 Example of extracting group of pages from large pdf:
