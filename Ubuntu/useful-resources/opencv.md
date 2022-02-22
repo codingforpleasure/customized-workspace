@@ -70,13 +70,15 @@
          * [Create a transparent image](#create-a-transparent-image)
       * [Image Stiching](#image-stiching)
          * [Dealing with outliers (RANSAC - RANdom Sample Consensus)](#dealing-with-outliers-ransac---random-sample-consensus)
+            * [The algorithm](#the-algorithm)
+            * [Ransac's Tasks](#ransacs-tasks)
          * [Homography matrix](#homography-matrix)
       * [three essential algorithms used to identify obstacles using Lidar: RANSAC, KD-Tree, and Euclidean clustering](#three-essential-algorithms-used-to-identify-obstacles-using-lidar-ransac-kd-tree-and-euclidean-clustering)
       * [Deep learning in OpenCV](#deep-learning-in-opencv)
          * [The function blobFromImage(s)](#the-function-blobfromimages)
             * [1. Mean subtraction](#1-mean-subtraction)
 
-<!-- Added by: gil_diy, at: Tue 22 Feb 2022 16:23:32 IST -->
+<!-- Added by: gil_diy, at: Tue 22 Feb 2022 16:24:46 IST -->
 
 <!--te-->
 
@@ -899,6 +901,7 @@ Steps:
 
 * if number of **outliers < 50%**, then **RANSAC** to the rescue!!
 
+#### The algorithm
 **3 Steps procedure**
 
 Loop until `n iterations`
@@ -913,6 +916,8 @@ Repeat:
 
 finally, use the solution with the highest score.
 
+
+#### Ransac's Tasks
 
 Ransac is used often in tasks such as:
 
