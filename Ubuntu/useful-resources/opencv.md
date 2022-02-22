@@ -74,7 +74,7 @@
          * [The function blobFromImage(s)](#the-function-blobfromimages)
             * [1. Mean subtraction](#1-mean-subtraction)
 
-<!-- Added by: gil_diy, at: Tue 22 Feb 2022 15:03:21 IST -->
+<!-- Added by: gil_diy, at: Tue 22 Feb 2022 15:04:55 IST -->
 
 <!--te-->
 
@@ -487,6 +487,9 @@ Shear offsets a set of points a distance proportional to their x and y coordinat
 
 Projective matrix, that matrix is called homography:
 
+Mapping of one plane to another through a point
+
+Same as imaging a plane through a pinhole
 
 
 #### Barrel Transformation
