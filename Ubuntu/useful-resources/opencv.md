@@ -30,10 +30,11 @@
             * [medianBlur](#medianblur)
             * [Bilateral Filtering](#bilateral-filtering)
          * [Geometric Transformations](#geometric-transformations)
-            * [Scale an image](#scale-an-image)
-            * [Shift/Translate an image](#shifttranslate-an-image)
-            * [Rotate an image](#rotate-an-image)
-            * [Affine transformation (Shear)](#affine-transformation-shear)
+            * [2x2 Tranformation Matrix](#2x2-tranformation-matrix)
+               * [Scale an image](#scale-an-image)
+               * [Shift/Translate an image](#shifttranslate-an-image)
+               * [Rotate an image](#rotate-an-image)
+               * [Affine transformation (Shear)](#affine-transformation-shear)
             * [Projective Transformation](#projective-transformation)
             * [Barrel Transformation](#barrel-transformation)
          * [Morphological Transformations](#morphological-transformations)
@@ -73,7 +74,7 @@
          * [The function blobFromImage(s)](#the-function-blobfromimages)
             * [1. Mean subtraction](#1-mean-subtraction)
 
-<!-- Added by: gil_diy, at: Tue 22 Feb 2022 08:41:32 IST -->
+<!-- Added by: gil_diy, at: Tue 22 Feb 2022 08:47:21 IST -->
 
 <!--te-->
 
@@ -393,20 +394,22 @@ https://docs.opencv.org/3.0-beta/doc/py_tutorials/py_imgproc/py_geometric_transf
   <img src="images/transformations_example.png" title="Transformations examples:">
 </p>
 
-#### Scale an image
+#### 2x2 Tranformation Matrix
+
+##### Scale an image
 Scale scales a set of points up or down in the x and y directions.
 
 ```python
 cv2.resize(img1, None,...)
 ```
-#### Shift/Translate an image
+##### Shift/Translate an image
 Shift/Translate does a set of points a fixed distance in x and y
 
 ```python
 T = np.float32([[1,0,50],[0,1,-50]])
 cv2.warpAffine(img1,T, (columns,rows))
 ```
-#### Rotate an image
+##### Rotate an image
 
 cv2.getRotationMatrix2D(center, angle, scale)
  - returns a **rotation matrix**.
@@ -421,7 +424,7 @@ R = cv2.getRotationMatrix2D((columns/2, rows/2), 45, 1)
 output = cv2.warpAffine(img1, R ,(columns,rows))
 
 ```
-#### Affine transformation (Shear)
+##### Affine transformation (Shear)
 Shear offsets a set of points a distance proportional to their x and y coordinates.
 
 #### Projective Transformation
