@@ -70,7 +70,7 @@
          * [The function blobFromImage(s)](#the-function-blobfromimages)
             * [1. Mean subtraction](#1-mean-subtraction)
 
-<!-- Added by: gil_diy, at: Tue 22 Feb 2022 07:53:12 IST -->
+<!-- Added by: gil_diy, at: Tue 22 Feb 2022 07:57:12 IST -->
 
 <!--te-->
 
@@ -666,6 +666,8 @@ cv2.CAP_PROP_FRAME_COUNT | Get number of frames per video
 https://homepages.inf.ed.ac.uk/rbf/HIPR2/distance.htm
 
 ## Detecting Edges
+
+[Sequence of Lectures about edge detection](https://www.youtube.com/watch?v=7AlwDYmjrcs&list=PL2zRqk16wsdqXEMpHrc4Qnb5rA1Cylrhx)
 
 ### Sobel
 
