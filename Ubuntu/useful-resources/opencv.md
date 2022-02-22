@@ -78,7 +78,7 @@
          * [The function blobFromImage(s)](#the-function-blobfromimages)
             * [1. Mean subtraction](#1-mean-subtraction)
 
-<!-- Added by: gil_diy, at: Tue 22 Feb 2022 16:31:54 IST -->
+<!-- Added by: gil_diy, at: Tue 22 Feb 2022 16:32:29 IST -->
 
 <!--te-->
 
@@ -912,7 +912,7 @@ Repeat:
 
    2. Compute homography **H** (exact)
 
-   3. Compute inliers where 
+   3. Compute inliers where ||pi; Hpi|| < `epsilon`
 
    3. Scoring the model
 
