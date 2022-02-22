@@ -74,7 +74,7 @@
          * [The function blobFromImage(s)](#the-function-blobfromimages)
             * [1. Mean subtraction](#1-mean-subtraction)
 
-<!-- Added by: gil_diy, at: Tue 22 Feb 2022 15:04:55 IST -->
+<!-- Added by: gil_diy, at: Tue 22 Feb 2022 15:08:48 IST -->
 
 <!--te-->
 
@@ -485,7 +485,11 @@ Shear offsets a set of points a distance proportional to their x and y coordinat
 
 #### Projective Transformation
 
-Projective matrix, that matrix is called homography:
+Projective matrix, that matrix is called **homography**:
+
+<p align="center">
+  <img width="400" src="images/open-cv/projective-transformation.jpg" title="Look into the image">
+</p>
 
 Mapping of one plane to another through a point
 
