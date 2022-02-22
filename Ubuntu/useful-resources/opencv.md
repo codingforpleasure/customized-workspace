@@ -74,7 +74,7 @@
          * [The function blobFromImage(s)](#the-function-blobfromimages)
             * [1. Mean subtraction](#1-mean-subtraction)
 
-<!-- Added by: gil_diy, at: Tue 22 Feb 2022 11:04:22 IST -->
+<!-- Added by: gil_diy, at: Tue 22 Feb 2022 11:07:47 IST -->
 
 <!--te-->
 
@@ -430,7 +430,13 @@ cv2.warpAffine(img1,T, (columns,rows))
 
 ##### Rotate an image
 
+<p align="center">
+  <img width="400" src="images/open-cv/rotate.jpg" title="Look into the image">
+</p>
+
 [Link](https://youtu.be/K2XLXlyPqCA?list=PL2zRqk16wsdp8KbDfHKvPYNGF2L-zQASc&t=258)
+
+
 
 cv2.getRotationMatrix2D(center, angle, scale)
  - returns a **rotation matrix**.
