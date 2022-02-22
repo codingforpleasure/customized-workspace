@@ -78,7 +78,7 @@
          * [The function blobFromImage(s)](#the-function-blobfromimages)
             * [1. Mean subtraction](#1-mean-subtraction)
 
-<!-- Added by: gil_diy, at: Tue 22 Feb 2022 16:31:40 IST -->
+<!-- Added by: gil_diy, at: Tue 22 Feb 2022 16:31:54 IST -->
 
 <!--te-->
 
@@ -921,7 +921,7 @@ Repeat:
 
 * Re-compute least-squares `H` estimate using all of the inliers.
 
-finally, use the solution with the highest score.
+Finally, use the solution with the highest score.
 
 
 #### Ransac's Tasks
