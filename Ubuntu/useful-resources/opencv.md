@@ -74,7 +74,7 @@
          * [The function blobFromImage(s)](#the-function-blobfromimages)
             * [1. Mean subtraction](#1-mean-subtraction)
 
-<!-- Added by: gil_diy, at: Tue 22 Feb 2022 09:45:28 IST -->
+<!-- Added by: gil_diy, at: Tue 22 Feb 2022 10:43:14 IST -->
 
 <!--te-->
 
@@ -402,6 +402,15 @@ Scale scales a set of points up or down in the x and y directions.
 ```python
 cv2.resize(img1, None,...)
 ```
+
+<p align="center">
+  <img width="400" src="images/open-cv/" title="Look into the image">
+</p>
+
+$x_2=ax_1$ , $y_2=by_1$
+
+$\begin{bmatrix} x_2 \\ y_2 \end{bmatrix}$=S$\begin{bmatrix} x_1 \\ y_1 \end{bmatrix}=\begin{bmatrix} a & 0 \\ 0 & b \end{bmatrix}$
+
 ##### Shift/Translate an image
 Shift/Translate does a set of points a fixed distance in x and y
 
@@ -412,9 +421,7 @@ cv2.warpAffine(img1,T, (columns,rows))
 
 ##### Rotate an image
 
-$p_2=Tp_1$
-
-
+$p_2=Tp_1$ , $\begin{bmatrix} x_2 \\ y_2 \end{bmatrix}=T \begin{bmatrix} x_1 \\ y_1 \end{bmatrix}$ , $\begin{bmatrix} x_2 \\ y_2 \end{bmatrix}=\begin{bmatrix} a_{11} & a_{12} \\ a_{21} & a_{22} \end{bmatrix}\begin{bmatrix} x_1 \\ y_1 \end{bmatrix}$
 
 cv2.getRotationMatrix2D(center, angle, scale)
  - returns a **rotation matrix**.
