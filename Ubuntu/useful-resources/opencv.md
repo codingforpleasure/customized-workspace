@@ -75,7 +75,7 @@
          * [The function blobFromImage(s)](#the-function-blobfromimages)
             * [1. Mean subtraction](#1-mean-subtraction)
 
-<!-- Added by: gil_diy, at: Tue 22 Feb 2022 15:45:30 IST -->
+<!-- Added by: gil_diy, at: Tue 22 Feb 2022 15:47:45 IST -->
 
 <!--te-->
 
@@ -896,6 +896,7 @@ Steps:
 
 We need to robustly compute transformation in the presence of wrong matches.
 
+if number of **outliers < 50%**, then **RANSAC** to the rescue!!
 
 
 [Link](https://youtu.be/EkYXjmiolBg?list=PL2zRqk16wsdp8KbDfHKvPYNGF2L-zQASc)
