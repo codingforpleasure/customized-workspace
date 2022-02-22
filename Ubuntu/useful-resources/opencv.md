@@ -70,7 +70,7 @@
          * [The function blobFromImage(s)](#the-function-blobfromimages)
             * [1. Mean subtraction](#1-mean-subtraction)
 
-<!-- Added by: gil_diy, at: Tue 22 Feb 2022 07:25:01 IST -->
+<!-- Added by: gil_diy, at: Tue 22 Feb 2022 07:25:08 IST -->
 
 <!--te-->
 
@@ -755,7 +755,7 @@ We can use this algorithm to extract keypoints and build the corresponding featu
 
 [SIFT in short in Hebrew](https://www.lbscience.org/2020/09/10/%d7%9e%d7%99-%d7%a9%d7%9e%d7%91%d7%99%d7%98-%d7%91%d7%99-%d7%9e%d7%94%d7%a6%d7%93-%d7%99%d7%95%d7%93%d7%a2-%d7%9e%d7%99-%d7%90%d7%a0%d7%99/)
 
-[SIFT works](https://towardsdatascience.com/sift-scale-invariant-feature-transform-c7233dc60f37)
+[SIFT towardsdatascience](https://towardsdatascience.com/sift-scale-invariant-feature-transform-c7233dc60f37)
 
 [Ransac - nike was questioned](http://www.my-website.com)
 
