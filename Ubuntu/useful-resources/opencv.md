@@ -30,11 +30,12 @@
             * [medianBlur](#medianblur)
             * [Bilateral Filtering](#bilateral-filtering)
          * [Geometric Transformations](#geometric-transformations)
-         * [Edge detection](#edge-detection)
             * [Scale an image](#scale-an-image)
             * [Shift/Translate an image](#shifttranslate-an-image)
             * [Rotate an image](#rotate-an-image)
             * [Affine transformation (Shear)](#affine-transformation-shear)
+            * [Projective Transformation](#projective-transformation)
+            * [Barrel Transformation](#barrel-transformation)
          * [Morphological Transformations](#morphological-transformations)
          * [Affine wrap transform](#affine-wrap-transform)
          * [Perspective Transformation](#perspective-transformation)
@@ -72,7 +73,7 @@
          * [The function blobFromImage(s)](#the-function-blobfromimages)
             * [1. Mean subtraction](#1-mean-subtraction)
 
-<!-- Added by: gil_diy, at: Tue 22 Feb 2022 08:35:17 IST -->
+<!-- Added by: gil_diy, at: Tue 22 Feb 2022 08:41:32 IST -->
 
 <!--te-->
 
@@ -387,11 +388,6 @@ blur = cv2.bilateralFilter(img,9,75,75)
 I have noticed a great reference here:
 https://docs.opencv.org/3.0-beta/doc/py_tutorials/py_imgproc/py_geometric_transformations/py_geometric_transformations.html
 
-### Edge detection
-
-```python
-   cv2.imwrite("canny.jpg", cv2.Canny(img, 200, 300))
-```
 
 <p align="center">
   <img src="images/transformations_example.png" title="Transformations examples:">
@@ -427,6 +423,10 @@ output = cv2.warpAffine(img1, R ,(columns,rows))
 ```
 #### Affine transformation (Shear)
 Shear offsets a set of points a distance proportional to their x and y coordinates.
+
+#### Projective Transformation
+
+#### Barrel Transformation
 
 ### Morphological Transformations
 
