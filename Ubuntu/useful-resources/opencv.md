@@ -74,11 +74,12 @@
             * [Ransac's Tasks](#ransacs-tasks)
          * [Homography matrix](#homography-matrix)
       * [three essential algorithms used to identify obstacles using Lidar: RANSAC, KD-Tree, and Euclidean clustering](#three-essential-algorithms-used-to-identify-obstacles-using-lidar-ransac-kd-tree-and-euclidean-clustering)
+            * [Find Homography with Python](#find-homography-with-python)
       * [Deep learning in OpenCV](#deep-learning-in-opencv)
          * [The function blobFromImage(s)](#the-function-blobfromimages)
             * [1. Mean subtraction](#1-mean-subtraction)
 
-<!-- Added by: gil_diy, at: Tue 22 Feb 2022 16:32:29 IST -->
+<!-- Added by: gil_diy, at: Tue 22 Feb 2022 16:38:17 IST -->
 
 <!--te-->
 
@@ -943,6 +944,13 @@ Ransac is used often in tasks such as:
 
 
 ## three essential algorithms used to identify obstacles using Lidar: RANSAC, KD-Tree, and Euclidean clustering
+
+
+#### Find Homography with Python 
+
+```python
+
+```
 
 ## Deep learning in OpenCV
 
