@@ -70,7 +70,7 @@
          * [The function blobFromImage(s)](#the-function-blobfromimages)
             * [1. Mean subtraction](#1-mean-subtraction)
 
-<!-- Added by: gil_diy, at: Tue 22 Feb 2022 07:35:14 IST -->
+<!-- Added by: gil_diy, at: Tue 22 Feb 2022 07:36:03 IST -->
 
 <!--te-->
 
@@ -757,6 +757,9 @@ Using a Pyramid:
 <p align="center">
   <img width="500" src="images/open-cv/Pyramid.jpg" title="Look into the image">
 </p>
+
+We can find the features under various image sizes.
+Besides, we can also use the **Laplacian of Gaussian(LoG)** with different σ to achieve this.
 
 
 
