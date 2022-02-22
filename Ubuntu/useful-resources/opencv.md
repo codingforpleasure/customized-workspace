@@ -78,7 +78,7 @@
          * [The function blobFromImage(s)](#the-function-blobfromimages)
             * [1. Mean subtraction](#1-mean-subtraction)
 
-<!-- Added by: gil_diy, at: Tue 22 Feb 2022 16:31:28 IST -->
+<!-- Added by: gil_diy, at: Tue 22 Feb 2022 16:31:35 IST -->
 
 <!--te-->
 
@@ -919,7 +919,7 @@ Repeat:
 
 * Keep lragest set of inliers
 
-* Re-compute least-sqaures H estimate using all of the inliers.
+* Re-compute least-squares H estimate using all of the inliers.
 
 finally, use the solution with the highest score.
 
