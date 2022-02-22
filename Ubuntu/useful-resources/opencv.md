@@ -32,7 +32,6 @@
       * [Geometric Transformations](#geometric-transformations)
          * [2x2 Tranformation Matrix](#2x2-tranformation-matrix)
             * [Scale an image](#scale-an-image)
-            * [Shift/Translate an image](#shifttranslate-an-image)
             * [Rotate an image](#rotate-an-image)
          * [3x3 Tranformation Matrix](#3x3-tranformation-matrix)
                * [Affine transformation (Shear)](#affine-transformation-shear)
@@ -75,7 +74,7 @@
          * [The function blobFromImage(s)](#the-function-blobfromimages)
             * [1. Mean subtraction](#1-mean-subtraction)
 
-<!-- Added by: gil_diy, at: Tue 22 Feb 2022 11:17:12 IST -->
+<!-- Added by: gil_diy, at: Tue 22 Feb 2022 11:20:05 IST -->
 
 <!--te-->
 
@@ -420,14 +419,6 @@ $x_1=\frac{1}{a}x_2$ , $y_1=\frac{1}{b}y_2$
 
  $\begin{bmatrix} x_1 \\ y_1 \end{bmatrix}=S^{-1}\begin{bmatrix} x_2 \\ y_2 \end{bmatrix}=\begin{bmatrix} \frac{1}{a} & 0 \\ 0 & \frac{1}{b} \end{bmatrix}\begin{bmatrix} x_2 \\ y_2 \end{bmatrix}$
 
-
-#### Shift/Translate an image
-Shift/Translate does a set of points a fixed distance in x and y
-
-```python
-T = np.float32([[1,0,50],[0,1,-50]])
-cv2.warpAffine(img1,T, (columns,rows))
-```
 
 #### Rotate an image
 
