@@ -70,7 +70,7 @@
          * [The function blobFromImage(s)](#the-function-blobfromimages)
             * [1. Mean subtraction](#1-mean-subtraction)
 
-<!-- Added by: gil_diy, at: Tue 22 Feb 2022 07:36:03 IST -->
+<!-- Added by: gil_diy, at: Tue 22 Feb 2022 07:37:47 IST -->
 
 <!--te-->
 
@@ -761,6 +761,7 @@ Using a Pyramid:
 We can find the features under various image sizes.
 Besides, we can also use the **Laplacian of Gaussian(LoG)** with different σ to achieve this.
 
+* The Laplacian of Gaussian(LoG) operation goes like this. You take an image, and blur it a little (using Gaussian kernel). And then, you calculate the sum of second-order derivatives on it (or, the “Laplacian”). This locates edges and corners on the image. These edges and corners are good for finding keypoints (note that we want a keypoint detector, which means we will do some extra operations to suppress the edge). LoG is often used for blob detection (I will explain it later).
 
 
 [How does the SIFT algorithm work?](https://youtu.be/m_XtEl-HUIg)
