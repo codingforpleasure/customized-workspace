@@ -76,7 +76,7 @@
          * [The function blobFromImage(s)](#the-function-blobfromimages)
             * [1. Mean subtraction](#1-mean-subtraction)
 
-<!-- Added by: gil_diy, at: Tue 22 Feb 2022 16:15:35 IST -->
+<!-- Added by: gil_diy, at: Tue 22 Feb 2022 16:16:29 IST -->
 
 <!--te-->
 
@@ -901,11 +901,14 @@ Steps:
 
 **3 Steps procedure**
 
-1. Sample a small subset of data points, treat them as inliers.
+loop until `n iterations`
 
-2. Compute the model parameters or solve the task we want to solve
+Repeat: 
+   1. Sample a small subset of data points, treat them as inliers.
 
-3. Scoring the model
+   2. Compute the model parameters or solve the task we want to solve
+
+   3. Scoring the model
 
 
 
