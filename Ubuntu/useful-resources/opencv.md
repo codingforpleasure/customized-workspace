@@ -76,7 +76,7 @@
          * [The function blobFromImage(s)](#the-function-blobfromimages)
             * [1. Mean subtraction](#1-mean-subtraction)
 
-<!-- Added by: gil_diy, at: Tue 22 Feb 2022 16:16:57 IST -->
+<!-- Added by: gil_diy, at: Tue 22 Feb 2022 16:22:14 IST -->
 
 <!--te-->
 
@@ -911,7 +911,13 @@ Repeat:
    3. Scoring the model
 
 
-Use the solution with the highest score
+finally, use the solution with the highest score
+
+
+Ransac is used often in tasks such as:
+a. Stiching
+b. In robotics and computer vision, visual odometry is the process of determining the position and orientation of a robot by analyzing the associated camera images
+
 
 [Well exaplained](https://youtu.be/EkYXjmiolBg?list=PL2zRqk16wsdp8KbDfHKvPYNGF2L-zQASc)
 
