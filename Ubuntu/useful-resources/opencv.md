@@ -74,7 +74,7 @@
          * [The function blobFromImage(s)](#the-function-blobfromimages)
             * [1. Mean subtraction](#1-mean-subtraction)
 
-<!-- Added by: gil_diy, at: Tue 22 Feb 2022 15:14:11 IST -->
+<!-- Added by: gil_diy, at: Tue 22 Feb 2022 15:14:36 IST -->
 
 <!--te-->
 
@@ -498,6 +498,7 @@ maps one plane to another plane through a point
 
 Same as imaging a plane through a pinhole, **exactly like a camera does**.
 
+0) Origin does not necessarily map to the origin
 
 1) Lines map to lines
 
