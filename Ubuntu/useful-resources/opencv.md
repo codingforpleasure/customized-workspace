@@ -78,7 +78,7 @@
          * [The function blobFromImage(s)](#the-function-blobfromimages)
             * [1. Mean subtraction](#1-mean-subtraction)
 
-<!-- Added by: gil_diy, at: Tue 22 Feb 2022 16:29:35 IST -->
+<!-- Added by: gil_diy, at: Tue 22 Feb 2022 16:31:28 IST -->
 
 <!--te-->
 
@@ -910,10 +910,16 @@ Repeat:
    1. Sample a small subset of data points, treat them as inliers.
       Select four feature pairs (at random)
 
-   2. Compute the model parameters or solve the task we want to solve
+   2. Compute homography **H** (exact)
+
+   3. Compute inliers where 
 
    3. Scoring the model
 
+
+* Keep lragest set of inliers
+
+* Re-compute least-sqaures H estimate using all of the inliers.
 
 finally, use the solution with the highest score.
 
