@@ -74,7 +74,7 @@
          * [The function blobFromImage(s)](#the-function-blobfromimages)
             * [1. Mean subtraction](#1-mean-subtraction)
 
-<!-- Added by: gil_diy, at: Tue 22 Feb 2022 13:59:24 IST -->
+<!-- Added by: gil_diy, at: Tue 22 Feb 2022 14:02:11 IST -->
 
 <!--te-->
 
@@ -473,9 +473,19 @@ cv2.warpAffine(img1,T, (columns,rows))
  $$\begin{bmatrix} x_2 \\ y_2 \\ 1 \end{bmatrix}=\begin{bmatrix} \tilde{x_2} \\ \tilde{y_2} \\ \tilde{z_2} \end{bmatrix}=\begin{bmatrix} a_{11} & a_{12} & a_{13} \\ a_{21} & a_{22} & a_{23} \\0 & 0 & 1 \end{bmatrix}\begin{bmatrix} \tilde{x_1} \\ \tilde{y_1} \\ \tilde{z_1}\end{bmatrix}$$
 
 
+* The features:
+
+1) Lines map to lines
+
+2) Parallel lines remain parallel
+
+3) Closed under composition
+
 Shear offsets a set of points a distance proportional to their x and y coordinates.
 
 #### Projective Transformation
+
+Projective matrix:
 
 #### Barrel Transformation
 
