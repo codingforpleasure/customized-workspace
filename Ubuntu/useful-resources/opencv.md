@@ -75,7 +75,7 @@
          * [The function blobFromImage(s)](#the-function-blobfromimages)
             * [1. Mean subtraction](#1-mean-subtraction)
 
-<!-- Added by: gil_diy, at: Tue 22 Feb 2022 11:23:06 IST -->
+<!-- Added by: gil_diy, at: Tue 22 Feb 2022 11:23:32 IST -->
 
 <!--te-->
 
@@ -450,7 +450,7 @@ output = cv2.warpAffine(img1, R ,(columns,rows))
 #### Shift/Translate an image
 
 <p align="center">
-  <img width="400" src="images/open-cv/labeling_example.png" title="Look into the image">
+  <img width="400" src="images/open-cv/translation.jpg" title="Look into the image">
 </p>
 
 Shift/Translate does a set of points a fixed distance in x and y
