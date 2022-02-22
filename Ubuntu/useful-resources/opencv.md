@@ -78,7 +78,7 @@
          * [The function blobFromImage(s)](#the-function-blobfromimages)
             * [1. Mean subtraction](#1-mean-subtraction)
 
-<!-- Added by: gil_diy, at: Tue 22 Feb 2022 16:26:37 IST -->
+<!-- Added by: gil_diy, at: Tue 22 Feb 2022 16:29:35 IST -->
 
 <!--te-->
 
@@ -908,6 +908,7 @@ Loop until `n iterations`
 
 Repeat: 
    1. Sample a small subset of data points, treat them as inliers.
+      Select four feature pairs (at random)
 
    2. Compute the model parameters or solve the task we want to solve
 
@@ -927,6 +928,8 @@ Ransac is used often in tasks such as:
 
 **visual odometry** is the process of determining the position and orientation of a robot by analyzing the associated camera images.
 [Link](https://youtu.be/9D5rrtCC_E0?t=234)
+
+
 
 [Well exaplained](https://youtu.be/EkYXjmiolBg?list=PL2zRqk16wsdp8KbDfHKvPYNGF2L-zQASc)
 
