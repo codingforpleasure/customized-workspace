@@ -74,7 +74,7 @@
          * [The function blobFromImage(s)](#the-function-blobfromimages)
             * [1. Mean subtraction](#1-mean-subtraction)
 
-<!-- Added by: gil_diy, at: Tue 22 Feb 2022 15:10:49 IST -->
+<!-- Added by: gil_diy, at: Tue 22 Feb 2022 15:11:15 IST -->
 
 <!--te-->
 
@@ -495,9 +495,8 @@ maps one plane to another plane through a point
   <img width="400" src="images/open-cv/projective-transformation.jpg" title="Look into the image">
 </p>
 
-Mapping of one plane to another through a point
 
-Same as imaging a plane through a pinhole
+Same as imaging a plane through a pinhole, exactly like a camera does.
 
 
 #### Barrel Transformation
