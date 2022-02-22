@@ -34,6 +34,7 @@
                * [Scale an image](#scale-an-image)
                * [Shift/Translate an image](#shifttranslate-an-image)
                * [Rotate an image](#rotate-an-image)
+            * [3x3 Tranformation Matrix](#3x3-tranformation-matrix)
                * [Affine transformation (Shear)](#affine-transformation-shear)
             * [Projective Transformation](#projective-transformation)
             * [Barrel Transformation](#barrel-transformation)
@@ -74,7 +75,7 @@
          * [The function blobFromImage(s)](#the-function-blobfromimages)
             * [1. Mean subtraction](#1-mean-subtraction)
 
-<!-- Added by: gil_diy, at: Tue 22 Feb 2022 11:07:47 IST -->
+<!-- Added by: gil_diy, at: Tue 22 Feb 2022 11:15:53 IST -->
 
 <!--te-->
 
@@ -431,7 +432,7 @@ cv2.warpAffine(img1,T, (columns,rows))
 ##### Rotate an image
 
 <p align="center">
-  <img width="400" src="images/open-cv/rotate.jpg" title="Look into the image">
+  <img width="400" src="images/open-cv/rotation.jpg" title="Look into the image">
 </p>
 
 [Link](https://youtu.be/K2XLXlyPqCA?list=PL2zRqk16wsdp8KbDfHKvPYNGF2L-zQASc&t=258)
@@ -451,6 +452,9 @@ R = cv2.getRotationMatrix2D((columns/2, rows/2), 45, 1)
 output = cv2.warpAffine(img1, R ,(columns,rows))
 
 ```
+
+#### 3x3 Tranformation Matrix
+
 ##### Affine transformation (Shear)
 Shear offsets a set of points a distance proportional to their x and y coordinates.
 
