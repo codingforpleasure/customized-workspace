@@ -74,7 +74,7 @@
          * [The function blobFromImage(s)](#the-function-blobfromimages)
             * [1. Mean subtraction](#1-mean-subtraction)
 
-<!-- Added by: gil_diy, at: Tue 22 Feb 2022 10:43:14 IST -->
+<!-- Added by: gil_diy, at: Tue 22 Feb 2022 10:44:19 IST -->
 
 <!--te-->
 
@@ -404,7 +404,7 @@ cv2.resize(img1, None,...)
 ```
 
 <p align="center">
-  <img width="400" src="images/open-cv/" title="Look into the image">
+  <img width="400" src="images/open-cv/scale.jpg" title="Look into the image">
 </p>
 
 $x_2=ax_1$ , $y_2=by_1$
