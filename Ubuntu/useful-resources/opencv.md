@@ -29,12 +29,12 @@
             * [Gaussian Blurring](#gaussian-blurring)
             * [medianBlur](#medianblur)
             * [Bilateral Filtering](#bilateral-filtering)
-         * [Geometric Transformations](#geometric-transformations)
-            * [2x2 Tranformation Matrix](#2x2-tranformation-matrix)
-               * [Scale an image](#scale-an-image)
-               * [Shift/Translate an image](#shifttranslate-an-image)
-               * [Rotate an image](#rotate-an-image)
-            * [3x3 Tranformation Matrix](#3x3-tranformation-matrix)
+      * [Geometric Transformations](#geometric-transformations)
+         * [2x2 Tranformation Matrix](#2x2-tranformation-matrix)
+            * [Scale an image](#scale-an-image)
+            * [Shift/Translate an image](#shifttranslate-an-image)
+            * [Rotate an image](#rotate-an-image)
+         * [3x3 Tranformation Matrix](#3x3-tranformation-matrix)
                * [Affine transformation (Shear)](#affine-transformation-shear)
             * [Projective Transformation](#projective-transformation)
             * [Barrel Transformation](#barrel-transformation)
@@ -75,7 +75,7 @@
          * [The function blobFromImage(s)](#the-function-blobfromimages)
             * [1. Mean subtraction](#1-mean-subtraction)
 
-<!-- Added by: gil_diy, at: Tue 22 Feb 2022 11:16:20 IST -->
+<!-- Added by: gil_diy, at: Tue 22 Feb 2022 11:17:12 IST -->
 
 <!--te-->
 
@@ -385,7 +385,7 @@ blur = cv2.bilateralFilter(img,9,75,75)
 ```
 
 
-### Geometric Transformations
+## Geometric Transformations
 
 I have noticed a great reference here:
 https://docs.opencv.org/3.0-beta/doc/py_tutorials/py_imgproc/py_geometric_transformations/py_geometric_transformations.html
@@ -395,9 +395,9 @@ https://docs.opencv.org/3.0-beta/doc/py_tutorials/py_imgproc/py_geometric_transf
   <img src="images/transformations_example.png" title="Transformations examples:">
 </p>
 
-#### 2x2 Tranformation Matrix
+### 2x2 Tranformation Matrix
 
-##### Scale an image
+#### Scale an image
 Scale scales a set of points up or down in the x and y directions.
 
 ```python
@@ -421,7 +421,7 @@ $x_1=\frac{1}{a}x_2$ , $y_1=\frac{1}{b}y_2$
  $\begin{bmatrix} x_1 \\ y_1 \end{bmatrix}=S^{-1}\begin{bmatrix} x_2 \\ y_2 \end{bmatrix}=\begin{bmatrix} \frac{1}{a} & 0 \\ 0 & \frac{1}{b} \end{bmatrix}\begin{bmatrix} x_2 \\ y_2 \end{bmatrix}$
 
 
-##### Shift/Translate an image
+#### Shift/Translate an image
 Shift/Translate does a set of points a fixed distance in x and y
 
 ```python
@@ -429,7 +429,7 @@ T = np.float32([[1,0,50],[0,1,-50]])
 cv2.warpAffine(img1,T, (columns,rows))
 ```
 
-##### Rotate an image
+#### Rotate an image
 
 <p align="center">
   <img width="400" src="images/open-cv/rotation.jpg" title="Look into the image">
@@ -453,7 +453,7 @@ output = cv2.warpAffine(img1, R ,(columns,rows))
 
 ```
 
-#### 3x3 Tranformation Matrix
+### 3x3 Tranformation Matrix
 
 ##### Affine transformation (Shear)
 Shear offsets a set of points a distance proportional to their x and y coordinates.
