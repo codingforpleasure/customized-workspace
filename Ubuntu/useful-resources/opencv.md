@@ -74,7 +74,7 @@
          * [The function blobFromImage(s)](#the-function-blobfromimages)
             * [1. Mean subtraction](#1-mean-subtraction)
 
-<!-- Added by: gil_diy, at: Tue 22 Feb 2022 08:47:21 IST -->
+<!-- Added by: gil_diy, at: Tue 22 Feb 2022 09:45:28 IST -->
 
 <!--te-->
 
@@ -409,7 +409,12 @@ Shift/Translate does a set of points a fixed distance in x and y
 T = np.float32([[1,0,50],[0,1,-50]])
 cv2.warpAffine(img1,T, (columns,rows))
 ```
+
 ##### Rotate an image
+
+$p_2=Tp_1$
+
+
 
 cv2.getRotationMatrix2D(center, angle, scale)
  - returns a **rotation matrix**.
@@ -676,16 +681,14 @@ https://homepages.inf.ed.ac.uk/rbf/HIPR2/distance.htm
 
 ### Sobel
 
-Simple edge detection filter known as the Sobel filter. Since edges can
-occur in both horizontal and vertical directions, the Sobel filter is composed of the
+Simple edge detection filter known as the Sobel filter. Since edges can occur in both horizontal and vertical directions, the Sobel filter is composed of the
 following two kernels:
 
-<p align="center" style="width:400px;" >
-  <img src="images/open-cv/sobel-kernel.jpg" title="tool tip here">
+<p align="center" >
+  <img width="400px;"  src="images/open-cv/sobel-kernel.jpg" title="tool tip here">
 </p>
 
-The kernel on the left detects horizontal edges and the kernel on the right detects vertical
-edges.
+The kernel on the left detects horizontal edges and the kernel on the right detects vertical edges.
 
 ```python
 import cv2
