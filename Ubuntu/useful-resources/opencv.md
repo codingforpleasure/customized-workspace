@@ -72,7 +72,7 @@
          * [The function blobFromImage(s)](#the-function-blobfromimages)
             * [1. Mean subtraction](#1-mean-subtraction)
 
-<!-- Added by: gil_diy, at: Tue 22 Feb 2022 08:33:34 IST -->
+<!-- Added by: gil_diy, at: Tue 22 Feb 2022 08:34:11 IST -->
 
 <!--te-->
 
@@ -810,7 +810,7 @@ Steps:
 
 (1) Dealing with outliers: RANSAC 
 (2) 
-(3) Dealing with outliers: RANSAC 
+(3) Dealing with outliers: RANSAC (Since there are false matches between pair of images)
 (4) Blending algorithm
 
 ### Homography matrix
