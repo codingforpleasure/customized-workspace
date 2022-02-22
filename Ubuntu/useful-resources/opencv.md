@@ -76,7 +76,7 @@
          * [The function blobFromImage(s)](#the-function-blobfromimages)
             * [1. Mean subtraction](#1-mean-subtraction)
 
-<!-- Added by: gil_diy, at: Tue 22 Feb 2022 16:22:14 IST -->
+<!-- Added by: gil_diy, at: Tue 22 Feb 2022 16:22:18 IST -->
 
 <!--te-->
 
@@ -911,7 +911,7 @@ Repeat:
    3. Scoring the model
 
 
-finally, use the solution with the highest score
+finally, use the solution with the highest score.
 
 
 Ransac is used often in tasks such as:
