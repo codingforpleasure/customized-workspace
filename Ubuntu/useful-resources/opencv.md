@@ -66,11 +66,13 @@
          * [FAST (Features from accelerated segment test)](#fast-features-from-accelerated-segment-test)
          * [BRIEF (Binary robust independent elementary features)](#brief-binary-robust-independent-elementary-features)
          * [Create a transparent image](#create-a-transparent-image)
+      * [Image Stiching](#image-stiching)
+         * [Homography matrix](#homography-matrix)
       * [Deep learning in OpenCV](#deep-learning-in-opencv)
          * [The function blobFromImage(s)](#the-function-blobfromimages)
             * [1. Mean subtraction](#1-mean-subtraction)
 
-<!-- Added by: gil_diy, at: Tue 22 Feb 2022 07:57:12 IST -->
+<!-- Added by: gil_diy, at: Tue 22 Feb 2022 08:31:26 IST -->
 
 <!--te-->
 
@@ -799,6 +801,17 @@ Besides, we can also use the **Laplacian of Gaussian(LoG)** with different σ to
 ```
 
 
+## Image Stiching
+
+[Link](https://www.youtube.com/watch?v=J1DwQzab6Jg&list=PL2zRqk16wsdp8KbDfHKvPYNGF2L-zQASc)
+
+Steps:
+
+
+()
+(4) Blending algorithm
+
+### Homography matrix
 
 ## Deep learning in OpenCV
 
