@@ -72,7 +72,7 @@
          * [The function blobFromImage(s)](#the-function-blobfromimages)
             * [1. Mean subtraction](#1-mean-subtraction)
 
-<!-- Added by: gil_diy, at: Tue 22 Feb 2022 08:31:26 IST -->
+<!-- Added by: gil_diy, at: Tue 22 Feb 2022 08:33:34 IST -->
 
 <!--te-->
 
@@ -808,7 +808,9 @@ Besides, we can also use the **Laplacian of Gaussian(LoG)** with different σ to
 Steps:
 
 
-()
+(1) Dealing with outliers: RANSAC 
+(2) 
+(3) Dealing with outliers: RANSAC 
 (4) Blending algorithm
 
 ### Homography matrix
