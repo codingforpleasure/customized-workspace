@@ -71,11 +71,12 @@
       * [Image Stiching](#image-stiching)
          * [Dealing with outliers (RANSAC - RANdom Sample Consensus)](#dealing-with-outliers-ransac---random-sample-consensus)
          * [Homography matrix](#homography-matrix)
+      * [three essential algorithms used to identify obstacles using Lidar: RANSAC, KD-Tree, and Euclidean clustering](#three-essential-algorithms-used-to-identify-obstacles-using-lidar-ransac-kd-tree-and-euclidean-clustering)
       * [Deep learning in OpenCV](#deep-learning-in-opencv)
          * [The function blobFromImage(s)](#the-function-blobfromimages)
             * [1. Mean subtraction](#1-mean-subtraction)
 
-<!-- Added by: gil_diy, at: Tue 22 Feb 2022 15:48:37 IST -->
+<!-- Added by: gil_diy, at: Tue 22 Feb 2022 16:14:29 IST -->
 
 <!--te-->
 
@@ -898,10 +899,22 @@ Steps:
 
 * if number of **outliers < 50%**, then **RANSAC** to the rescue!!
 
+**3 Steps procedure**
+
+1. Sample a small subset of data points, treat them as inliers.
+
+2. Sample a small subset og data points
+
+3. Sample a small subset og data points
+
+
 
 [Well exaplained](https://youtu.be/EkYXjmiolBg?list=PL2zRqk16wsdp8KbDfHKvPYNGF2L-zQASc)
 
 ### Homography matrix
+
+
+## three essential algorithms used to identify obstacles using Lidar: RANSAC, KD-Tree, and Euclidean clustering
 
 ## Deep learning in OpenCV
 
