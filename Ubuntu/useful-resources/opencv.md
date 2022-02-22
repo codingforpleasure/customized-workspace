@@ -29,13 +29,12 @@
             * [Gaussian Blurring](#gaussian-blurring)
             * [medianBlur](#medianblur)
             * [Bilateral Filtering](#bilateral-filtering)
-      * [Geometric Transformations](#geometric-transformations)
+      * [Geometric Transformations (affine transformation)](#geometric-transformations-affine-transformation)
          * [2x2 Tranformation Matrix](#2x2-tranformation-matrix)
             * [Scale an image](#scale-an-image)
             * [Rotate an image](#rotate-an-image)
          * [3x3 Tranformation Matrix](#3x3-tranformation-matrix)
             * [Shift/Translate an image](#shifttranslate-an-image)
-            * [Affine transformation (Shear)](#affine-transformation-shear)
             * [Projective Transformation](#projective-transformation)
             * [Barrel Transformation](#barrel-transformation)
          * [Morphological Transformations](#morphological-transformations)
@@ -75,7 +74,7 @@
          * [The function blobFromImage(s)](#the-function-blobfromimages)
             * [1. Mean subtraction](#1-mean-subtraction)
 
-<!-- Added by: gil_diy, at: Tue 22 Feb 2022 11:23:39 IST -->
+<!-- Added by: gil_diy, at: Tue 22 Feb 2022 11:42:37 IST -->
 
 <!--te-->
 
@@ -385,7 +384,7 @@ blur = cv2.bilateralFilter(img,9,75,75)
 ```
 
 
-## Geometric Transformations
+## Geometric Transformations (affine transformation)
 
 I have noticed a great reference here:
 https://docs.opencv.org/3.0-beta/doc/py_tutorials/py_imgproc/py_geometric_transformations/py_geometric_transformations.html
@@ -461,7 +460,7 @@ cv2.warpAffine(img1,T, (columns,rows))
 ```
 
 
-#### Affine transformation (Shear)
+
 
 Shear offsets a set of points a distance proportional to their x and y coordinates.
 
