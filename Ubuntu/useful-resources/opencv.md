@@ -79,7 +79,7 @@
          * [The function blobFromImage(s)](#the-function-blobfromimages)
             * [1. Mean subtraction](#1-mean-subtraction)
 
-<!-- Added by: gil_diy, at: Tue 22 Feb 2022 16:38:17 IST -->
+<!-- Added by: gil_diy, at: Tue 22 Feb 2022 18:37:10 IST -->
 
 <!--te-->
 
@@ -887,6 +887,9 @@ Besides, we can also use the **Laplacian of Gaussian(LoG)** with different σ to
 ## Image Stiching
 
 [Link](https://www.youtube.com/watch?v=J1DwQzab6Jg&list=PL2zRqk16wsdp8KbDfHKvPYNGF2L-zQASc)
+
+
+[image stiching code example](https://colab.research.google.com/drive/11Md7HWh2ZV6_g3iCYSUw76VNr4HzxcX5#scrollTo=yMNF_uEKE9gj)
 
 Steps:
 
