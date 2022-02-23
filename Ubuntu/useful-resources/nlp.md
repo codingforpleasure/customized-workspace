@@ -29,7 +29,7 @@
       * [Data Augmentation for NLP](#data-augmentation-for-nlp)
       * [10 Leading Language Models For NLP In 2021](#10-leading-language-models-for-nlp-in-2021)
 
-<!-- Added by: gil_diy, at: Wed 23 Feb 2022 11:16:54 IST -->
+<!-- Added by: gil_diy, at: Wed 23 Feb 2022 11:19:52 IST -->
 
 <!--te-->
 
@@ -293,7 +293,7 @@ context and always give the same embedding for the word `Python` irrespective of
 generate the embedding for the word based on the context. So, for the preceding two
 sentences, it will give different embeddings for the word 'Python' based on the context.
 
-* The encoder of the transformer is bidirectional in nature since it can read a sentence in both directions. 
+* The encoder of the transformer is bidirectional in nature since it can read a sentence in both directions. This means that BERT learns information from a sequence of words not only from left to right, but also from right to left.
 
 * BERT uses `Positional Encoding`
 
