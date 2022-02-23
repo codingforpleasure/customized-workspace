@@ -9,7 +9,7 @@
       * [oversampling](#oversampling)
       * [Deal with imbalanced datasets](#deal-with-imbalanced-datasets)
 
-<!-- Added by: gil_diy, at: Wed 23 Feb 2022 10:05:25 IST -->
+<!-- Added by: gil_diy, at: Wed 23 Feb 2022 10:09:10 IST -->
 
 <!--te-->
 
@@ -41,6 +41,10 @@ def systematic_sampling(df, step):
 systematic_sample = systematic_sampling(df, 3)
 
 ## Negative sampling
+
+<p align="center">
+  <img width="400" src="images/nlp/skipgram.jpg" title="Look into the image">
+</p>
 
 The Skip-gram model for training word vectors and learned about how negative sampling is used for this purpose. In order to **reduce the computational cost of the softmax function which is done over the entire vocabulary**, we can approximate this function by only drawing a few examples from the set of samples that do not appear in the context of the main word.
 
