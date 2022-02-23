@@ -30,7 +30,7 @@
       * [Data Augmentation for NLP](#data-augmentation-for-nlp)
       * [10 Leading Language Models For NLP In 2021](#10-leading-language-models-for-nlp-in-2021)
 
-<!-- Added by: gil_diy, at: Wed 23 Feb 2022 11:43:03 IST -->
+<!-- Added by: gil_diy, at: Wed 23 Feb 2022 11:54:05 IST -->
 
 <!--te-->
 
@@ -325,6 +325,19 @@ sentences, it will give different embeddings for the word 'Python' based on the 
 
 
 ### Bert with pytorch
+
+
+```python
+tokenizer = BertTokenizer.from_pretrained('bert-base-cased')
+
+example_text = 'I will watch Memento tonight'
+
+bert_input = tokenizer(example_text,
+                       padding='max_length',
+                       max_length = 10, 
+                       truncation=True,
+                       return_tensors="pt")
+```
 
 [Link](https://towardsdatascience.com/text-classification-with-bert-in-pytorch-887965e5820f)
 
