@@ -29,7 +29,7 @@
       * [Data Augmentation for NLP](#data-augmentation-for-nlp)
       * [10 Leading Language Models For NLP In 2021](#10-leading-language-models-for-nlp-in-2021)
 
-<!-- Added by: gil_diy, at: Wed 23 Feb 2022 10:51:06 IST -->
+<!-- Added by: gil_diy, at: Wed 23 Feb 2022 11:16:54 IST -->
 
 <!--te-->
 
@@ -268,7 +268,7 @@ which is multiplied by (hidden_size, hidden_size) to get the next layer
 
 `BERT` generates **dynamic embeddings** based on the context.
 
-Gor example:
+For example:
 
 **Sentence A**: He got bit by Python
 
