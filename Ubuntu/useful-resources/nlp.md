@@ -29,7 +29,7 @@
       * [Data Augmentation for NLP](#data-augmentation-for-nlp)
       * [10 Leading Language Models For NLP In 2021](#10-leading-language-models-for-nlp-in-2021)
 
-<!-- Added by: gil_diy, at: Wed 23 Feb 2022 10:49:17 IST -->
+<!-- Added by: gil_diy, at: Wed 23 Feb 2022 10:51:06 IST -->
 
 <!--te-->
 
@@ -167,6 +167,7 @@ what you get is a very potent representation of each word in the vocabulary in t
 model = Word2Vec(sent, min_count=1,size= 50,workers=3, window =3, sg = 1) # sg = skip-gram
 ```
 
+[Word2Vec in Gensim](https://radimrehurek.com/gensim/models/word2vec.html)
 
 ##### Drawbacks
 
