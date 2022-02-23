@@ -9,7 +9,7 @@
       * [oversampling](#oversampling)
       * [Deal with imbalanced datasets](#deal-with-imbalanced-datasets)
 
-<!-- Added by: gil_diy, at: Sun 20 Feb 2022 16:24:37 IST -->
+<!-- Added by: gil_diy, at: Wed 23 Feb 2022 10:04:35 IST -->
 
 <!--te-->
 
@@ -42,7 +42,7 @@ systematic_sample = systematic_sampling(df, 3)
 
 ## Negative sampling
 
-## 
+ The Skip-gram model for training word vectors and learned about how negative sampling is used for this purpose. To put it simply, in order to reduce the computational cost of the softmax function which is done over the entire vocabulary, we can approximate this function by only drawing a few examples from the set of samples that do not appear in the context of the main word.
 
 
 ## oversampling 
