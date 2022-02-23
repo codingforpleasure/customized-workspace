@@ -30,7 +30,7 @@
       * [Data Augmentation for NLP](#data-augmentation-for-nlp)
       * [10 Leading Language Models For NLP In 2021](#10-leading-language-models-for-nlp-in-2021)
 
-<!-- Added by: gil_diy, at: Wed 23 Feb 2022 11:42:44 IST -->
+<!-- Added by: gil_diy, at: Wed 23 Feb 2022 11:43:03 IST -->
 
 <!--te-->
 
@@ -314,7 +314,7 @@ sentences, it will give different embeddings for the word 'Python' based on the 
 
 * The embedding dimension is 512 (**maximum size of tokens that can be fed into BERT model is 512**) - If the tokens in a sequence are less than 512, we can use padding to fill the unused token slots with [PAD] token. If the tokens in a sequence are longer than 512, then we need to do a truncation.
 
-* BERT model then will output an **embedding vector of size 768 (256*3) in each of the tokens** .
+* BERT model then will output an **embedding vector of size 768 (256*3=768) in each of the tokens** .
 
 * Sentence-BERT is modification of the BERT model which uses **siamese** and **triplet network structures** and adds a pooling operation to the output of BERT to obtain fix-sized semantically meaningful sentence embeddings.
 
