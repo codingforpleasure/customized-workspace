@@ -9,7 +9,7 @@
       * [oversampling](#oversampling)
       * [Deal with imbalanced datasets](#deal-with-imbalanced-datasets)
 
-<!-- Added by: gil_diy, at: Wed 23 Feb 2022 10:09:55 IST -->
+<!-- Added by: gil_diy, at: Wed 23 Feb 2022 10:09:57 IST -->
 
 <!--te-->
 
@@ -42,7 +42,7 @@ systematic_sample = systematic_sampling(df, 3)
 
 ## Negative sampling
 
-The Skip-gram model works in a way that, given an input, it predicts the surrounding or context words. Using this method, we can learn a hidden layer that we’ll use to calculate **how probable a word is to occur as the context of the input**:
+The Skip-gram model works in a way that, given an input, it **predicts the surrounding or context words**. Using this method, we can learn a hidden layer that we’ll use to calculate **how probable a word is to occur as the context of the input**:
 
 <p align="center">
   <img width="400" src="images/nlp/skipgram.jpg" title="Look into the image">
