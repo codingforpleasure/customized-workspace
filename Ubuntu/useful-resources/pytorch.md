@@ -95,7 +95,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Sat 19 Feb 2022 18:09:19 IST -->
+<!-- Added by: gil_diy, at: Wed 23 Feb 2022 12:58:08 IST -->
 
 <!--te-->
 
@@ -1240,7 +1240,7 @@ print('target: ', target)
 print('output: ', output)
 ```
 
-
+[Cross-Entropy Loss](https://towardsdatascience.com/cross-entropy-loss-function-f38c4ec8643e)
 
 
 ## Optimizers
