@@ -1,6 +1,7 @@
 <!--ts-->
    * [NLP](#nlp)
       * [Well known libraries in NLP](#well-known-libraries-in-nlp)
+      * [NLP Tasks](#nlp-tasks)
       * [Topic Discovery](#topic-discovery)
          * [LDA - Latent Dirichlet Allocation](#lda---latent-dirichlet-allocation)
       * [Preprocessing](#preprocessing)
@@ -29,7 +30,7 @@
       * [Data Augmentation for NLP](#data-augmentation-for-nlp)
       * [10 Leading Language Models For NLP In 2021](#10-leading-language-models-for-nlp-in-2021)
 
-<!-- Added by: gil_diy, at: Wed 23 Feb 2022 11:19:52 IST -->
+<!-- Added by: gil_diy, at: Wed 23 Feb 2022 11:33:17 IST -->
 
 <!--te-->
 
@@ -43,6 +44,8 @@
 
 
 [look into it](https://youtu.be/m20_dfn6tsU)
+
+## NLP Tasks
 
 
 ## Topic Discovery
@@ -292,6 +295,9 @@ context and always give the same embedding for the word `Python` irrespective of
 **BERT**, on the other hand, is a **context-based model**. It will understand the context and then
 generate the embedding for the word based on the context. So, for the preceding two
 sentences, it will give different embeddings for the word 'Python' based on the context.
+
+
+* It is **pre-trained on unlabeled data** extracted from **BooksCorpus**, which has 800M words, and from Wikipedia, which has 2,500M words.
 
 * The encoder of the transformer is bidirectional in nature since it can read a sentence in both directions. This means that BERT learns information from a sequence of words not only from left to right, but also from right to left.
 
