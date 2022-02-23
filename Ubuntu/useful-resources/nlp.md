@@ -29,7 +29,7 @@
       * [Data Augmentation for NLP](#data-augmentation-for-nlp)
       * [10 Leading Language Models For NLP In 2021](#10-leading-language-models-for-nlp-in-2021)
 
-<!-- Added by: gil_diy, at: Mon 21 Feb 2022 14:21:47 IST -->
+<!-- Added by: gil_diy, at: Wed 23 Feb 2022 10:39:41 IST -->
 
 <!--te-->
 
@@ -148,7 +148,7 @@ are closer in the vector space depending on the training data.
 
 * Word2vec takes as its input a large corpus of text and produces a vector space, typically of several hundred dimensions, with each unique word in the corpus being assigned a corresponding vector in the space.
 
-* When you train such a model over billions of token over a large dataset containing web articles and so forth,
+* When you train such a model over billions of tokens over a large dataset containing web articles and so forth,
 what you get is a very potent representation of each word in the vocabulary in the form of a vector. These vectors can be 300 dimensions long, i.e. each word is represented by 300 real numbers.
 
 
