@@ -8,7 +8,7 @@
       * [Statsmodels](#statsmodels)
       * [Useful packages for time series](#useful-packages-for-time-series)
 
-<!-- Added by: gil_diy, at: Sun 06 Feb 2022 19:10:58 IST -->
+<!-- Added by: gil_diy, at: Wed 23 Feb 2022 13:13:15 IST -->
 
 <!--te-->
 
@@ -121,3 +121,5 @@ for t in range(test_ts.shape[0]):
 ## Useful packages for time series
 
 [Merlion](https://github.com/salesforce/Merlion)
+
+[Pycaret](https://towardsdatascience.com/new-time-series-with-pycaret-4e8ce347556a)
