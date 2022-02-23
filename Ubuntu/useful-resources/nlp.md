@@ -14,7 +14,7 @@
          * [Word Embedding](#word-embedding)
             * [1. Word2Vec Embedding](#1-word2vec-embedding)
                * [Drawbacks](#drawbacks-2)
-            * [2. GloVe Embedding (Global Vector)](#2-glove-embedding-global-vector)
+            * [2. GloVe Embedding (Global Vector for Word Representation)](#2-glove-embedding-global-vector-for-word-representation)
             * [3. FastText Embedding (Brought by Facebook)](#3-fasttext-embedding-brought-by-facebook)
             * [Limitation of word Embeddings until here](#limitation-of-word-embeddings-until-here)
             * [4. ELMo - Embedding from Language Model (Brought by ALLenNLP)](#4-elmo---embedding-from-language-model-brought-by-allennlp)
@@ -29,7 +29,7 @@
       * [Data Augmentation for NLP](#data-augmentation-for-nlp)
       * [10 Leading Language Models For NLP In 2021](#10-leading-language-models-for-nlp-in-2021)
 
-<!-- Added by: gil_diy, at: Wed 23 Feb 2022 10:39:41 IST -->
+<!-- Added by: gil_diy, at: Wed 23 Feb 2022 10:46:52 IST -->
 
 <!--te-->
 
@@ -173,7 +173,11 @@ model = Word2Vec(sent, min_count=1,size= 50,workers=3, window =3, sg = 1) # sg =
 * Is context-free model, which generate **static embeddings irrespective of the context**.
 
 
-#### 2. GloVe Embedding (Global Vector)
+#### 2. GloVe Embedding (Global Vector for Word Representation)
+
+Belongs to Stanford, training is **performed on aggregated global word-word co-occurrence statistics from a corpus**, and the resulting representations showcase interesting linear substructures of the word vector space. 
+
+[Link](https://nlp.stanford.edu/projects/glove/)
 
 #### 3. FastText Embedding (Brought by Facebook)
 
