@@ -30,7 +30,7 @@
       * [Data Augmentation for NLP](#data-augmentation-for-nlp)
       * [10 Leading Language Models For NLP In 2021](#10-leading-language-models-for-nlp-in-2021)
 
-<!-- Added by: gil_diy, at: Wed 23 Feb 2022 11:54:05 IST -->
+<!-- Added by: gil_diy, at: Thu 24 Feb 2022 12:31:08 IST -->
 
 <!--te-->
 
@@ -202,6 +202,11 @@ The main disadvantages of **Word2Vec** and **GloVe** embedding is that they are 
 
 Word2Vec which feeds whole words into the neural network, FastText first breaks the words into several sub-words (or n-grams) and then feed them into the neural network.
 
+* Hierarchial Softmax: Based on Huffman Coding Tree Used to reduce computational complexity O(kh) to O(hlog(k)), where k is the number of classes and h is dimension of text representation.
+
+* Uses a bag of n-grams to maintain efficiency without losing accuracy. No explicit use of word order.
+
+* Uses hashing trick to maintain fast and memory efficient mapping of the n-grams.
 
 #### Limitation of word Embeddings until here
 
