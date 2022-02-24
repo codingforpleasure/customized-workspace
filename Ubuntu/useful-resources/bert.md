@@ -4,7 +4,7 @@
          * [Tokenizer](#tokenizer)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Thu 24 Feb 2022 09:33:11 IST -->
+<!-- Added by: gil_diy, at: Thu 24 Feb 2022 09:33:45 IST -->
 
 <!--te-->
 
@@ -21,16 +21,16 @@
 
     bert_input = tokenizer(example_text,
                            padding='max_length',
-                           max_length=10,  # the maximum length of each sequence. In this example we use 10,
-                           # but for our actual dataset we will use 512,
-                           # which is the maximum length of a sequence allowed for BERT.
+                           max_length=10,  
                            truncation=True,
                            return_tensors="pt")  
 ```
 
-* Since we’re using Pytorch, then we use pt. If you use Tensorflow, then you need to use tf .
+* the maximum length of each sequence. In this example we use 10, but for our actual dataset we will use 512, which is the maximum length of a sequence allowed for BERT.
 
-* 
+* Since we’re using Pytorch, then we use pt. If you use Tensorflow, then you need to use tf.
+
+
 
 
 # Reference	
