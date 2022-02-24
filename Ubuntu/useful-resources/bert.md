@@ -4,7 +4,7 @@
          * [Tokenizer](#tokenizer)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Thu 24 Feb 2022 09:40:58 IST -->
+<!-- Added by: gil_diy, at: Thu 24 Feb 2022 09:48:38 IST -->
 
 <!--te-->
 
@@ -32,9 +32,14 @@
 
 * The output of the bert_input is a dictionary which consists of:
 
-`input_ids` , `token_type_ids`,`attention_mask`
+`input_ids` , `token_type_ids`, `attention_mask`
 
+**input_ids** - mapping the tokens to uninque input IDs (Token IDs)
 
+**token_type_ids** - Add segment IDs which are used to distinguish one sentence
+from the other. All the tokens from the first sentence will be mapped to 0 and all the tokens from the second sentence will be mapped to 1.
+
+**attention_mask** - is used to differentiate the actual tokens and [PAD] tokens. I will map all the actual tokens to 1 and the [PAD] tokens to 0.
 
 # Reference	
 
