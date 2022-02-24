@@ -2,9 +2,10 @@
    * [Bert](#bert)
       * [Preprocessing data](#preprocessing-data)
          * [Tokenizer](#tokenizer)
+      * [Datasets shared in HuggingFace](#datasets-shared-in-huggingface)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Thu 24 Feb 2022 09:48:41 IST -->
+<!-- Added by: gil_diy, at: Thu 24 Feb 2022 10:05:54 IST -->
 
 <!--te-->
 
@@ -41,6 +42,23 @@ from the other. All the tokens from the first sentence will be mapped to 0 and a
 
 **attention_mask** - is used to differentiate the actual tokens and [PAD] tokens. I will map all the actual tokens to 1 and the [PAD] tokens to 0.
 
+
+## Datasets shared in HuggingFace
+
+There are more than 3150 datsets in huggingface
+
+```python
+from datasets import list_datasets, load_dataset, list_metrics, load_metric
+
+# Print all the available datasets
+for idx, datset_name in enumerate(list_datasets()):
+    print(idx, ') ', datset_name)
+```
+
+[github's Repo](https://github.com/huggingface/datasets)
+
 # Reference	
 
 [Bert's Book Github Repo](https://github.com/PacktPublishing/Getting-Started-with-Google-BERT)
+
+
