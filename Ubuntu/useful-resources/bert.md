@@ -4,7 +4,7 @@
          * [Tokenizer](#tokenizer)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Thu 24 Feb 2022 09:35:35 IST -->
+<!-- Added by: gil_diy, at: Thu 24 Feb 2022 09:40:58 IST -->
 
 <!--te-->
 
@@ -30,6 +30,9 @@
 
 * Since we’re using Pytorch, then we use pt. If you use Tensorflow, then you need to use tf.
 
+* The output of the bert_input is a dictionary which consists of:
+
+`input_ids` , `token_type_ids`,`attention_mask`
 
 
 
