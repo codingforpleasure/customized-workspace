@@ -2,10 +2,13 @@
    * [Bert](#bert)
       * [Preprocessing data](#preprocessing-data)
          * [Tokenizer](#tokenizer)
+      * [Tokenizers](#tokenizers)
+         * [BertTokenizer](#berttokenizer)
+         * [BertTokenizerFast](#berttokenizerfast)
       * [Datasets shared in HuggingFace](#datasets-shared-in-huggingface)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Thu 24 Feb 2022 10:05:57 IST -->
+<!-- Added by: gil_diy, at: Thu 24 Feb 2022 10:17:45 IST -->
 
 <!--te-->
 
@@ -13,6 +16,7 @@
 # Bert
 
 ## Preprocessing data
+
 
 ### Tokenizer
 ```python
@@ -42,6 +46,12 @@ from the other. All the tokens from the first sentence will be mapped to 0 and a
 
 **attention_mask** - is used to differentiate the actual tokens and [PAD] tokens. I will map all the actual tokens to 1 and the [PAD] tokens to 0.
 
+
+## Tokenizers 
+
+### BertTokenizer
+
+### BertTokenizerFast
 
 ## Datasets shared in HuggingFace
 
