@@ -4,7 +4,7 @@
          * [Tokenizer](#tokenizer)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Thu 24 Feb 2022 09:34:11 IST -->
+<!-- Added by: gil_diy, at: Thu 24 Feb 2022 09:35:35 IST -->
 
 <!--te-->
 
@@ -26,7 +26,7 @@
                            return_tensors="pt")  
 ```
 
-* the maximum length of each sequence. In this example we use 10, but for our actual dataset we will use 512, which is the maximum length of a sequence allowed for BERT.
+* The maximum length of each sequence. In this example we use 10, but for our actual dataset we will use 512, which is the maximum length of a sequence allowed for BERT.
 
 * Since we’re using Pytorch, then we use pt. If you use Tensorflow, then you need to use tf.
 
