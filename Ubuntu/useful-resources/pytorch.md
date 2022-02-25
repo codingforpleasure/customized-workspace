@@ -95,7 +95,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Wed 23 Feb 2022 12:58:12 IST -->
+<!-- Added by: gil_diy, at: Fri 25 Feb 2022 10:31:41 IST -->
 
 <!--te-->
 
@@ -1684,3 +1684,5 @@ In the second half of the model, the feature map is up-sampled to the input size
 Segmentation based on PyTorch](https://github.com/qubvel/segmentation_models.pytorch#examples)
 
 [GPU in pytorch](https://medium.com/ai%C2%B3-theory-practice-business/use-gpu-in-your-pytorch-code-676a67faed09)
+
+[The Incredible PyTorch: a curated list of tutorials, papers, projects, communities and more relating to PyTorch.](https://www.ritchieng.com/the-incredible-pytorch/)
