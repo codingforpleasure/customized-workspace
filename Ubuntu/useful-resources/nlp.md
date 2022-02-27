@@ -44,7 +44,7 @@
       * [Data Augmentation for NLP](#data-augmentation-for-nlp)
       * [10 Leading Language Models For NLP In 2021](#10-leading-language-models-for-nlp-in-2021)
 
-<!-- Added by: gil_diy, at: Sun 27 Feb 2022 19:05:29 IST -->
+<!-- Added by: gil_diy, at: Sun 27 Feb 2022 19:05:44 IST -->
 
 <!--te-->
 
@@ -441,7 +441,7 @@ We use the Euclidean distance as the distance metric.
 
 
 <p align="center">
-  <img width="400" src="images/transformers/triplet_architecture.jpg" title="Look into the image">
+  <img width="800" src="images/transformers/triplet_architecture.jpg" title="Look into the image">
 </p>
 
 * [Please Read in Depth](https://classic.d2l.ai/chapter_attention-mechanism/transformer.html)
