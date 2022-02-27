@@ -78,7 +78,7 @@
       * [Flip image with numpy](#flip-image-with-numpy)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Sun 27 Feb 2022 13:43:55 IST -->
+<!-- Added by: gil_diy, at: Sun 27 Feb 2022 13:44:15 IST -->
 
 <!--te-->
 
@@ -751,7 +751,7 @@ x = np.arange(8.0)
 np.split(x, [3, 5])
 
 # We will recieve:
-# [array([0., 1., 2.]), array([3., 4.]), array([5.]), array([6., 7.]), array([], dtype=float64)]
+# [array([0., 1., 2.]), array([3., 4.]), array([5., 6., 7.])]
 ```
 
 ## Removing rows/columns
