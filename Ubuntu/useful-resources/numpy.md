@@ -78,7 +78,7 @@
       * [Flip image with numpy](#flip-image-with-numpy)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Sun 27 Feb 2022 13:47:29 IST -->
+<!-- Added by: gil_diy, at: Sun 27 Feb 2022 13:47:44 IST -->
 
 <!--te-->
 
@@ -824,8 +824,8 @@ dot_res = np.dot(mat1,mat2)
 The outer product of two coordinate vectors is a matrix. If the two vectors have dimensions n and m, then their outer product is an **n × m matrix**
 
 
-<p align="center" style="width:900px;" >
-  <img src="images/numpy/outer_product.png" title="tool tip here">
+<p align="center">
+  <img width="400"  src="images/numpy/outer_product.png" title="tool tip here">
 </p>
 
 
