@@ -27,7 +27,9 @@
             * [Text classification](#text-classification)
             * [Natural language inference](#natural-language-inference)
          * [NER (Named Entity Recognition)](#ner-named-entity-recognition)
-         * [Sentence Bert](#sentence-bert)
+      * [BERT Varients](#bert-varients)
+         * [ALBERT](#albert)
+         * [RoBERT](#robert)
          * [Bert with pytorch](#bert-with-pytorch)
          * [Drawbacks](#drawbacks-3)
       * [Cleaning methods](#cleaning-methods)
@@ -35,7 +37,7 @@
       * [Data Augmentation for NLP](#data-augmentation-for-nlp)
       * [10 Leading Language Models For NLP In 2021](#10-leading-language-models-for-nlp-in-2021)
 
-<!-- Added by: gil_diy, at: Sun 27 Feb 2022 16:55:59 IST -->
+<!-- Added by: gil_diy, at: Sun 27 Feb 2022 17:00:09 IST -->
 
 <!--te-->
 
@@ -362,7 +364,13 @@ an enltailment, contradiction, Neutral.
 </p>
 ### Question-answering
 
-### Sentence Bert
+## BERT Varients
+
+### ALBERT
+
+### RoBERT
+
+### 
 
 
 
