@@ -44,7 +44,7 @@
       * [Data Augmentation for NLP](#data-augmentation-for-nlp)
       * [10 Leading Language Models For NLP In 2021](#10-leading-language-models-for-nlp-in-2021)
 
-<!-- Added by: gil_diy, at: Sun 27 Feb 2022 18:23:15 IST -->
+<!-- Added by: gil_diy, at: Sun 27 Feb 2022 19:05:26 IST -->
 
 <!--te-->
 
@@ -425,12 +425,23 @@ sentences` should be high and similarity between the anchor and negative sentenc
 since we have three sentences, in this case Sentence-BERT sues the triplet network architecture.
 
 
+* We tokenize and feed the anchor, positive, and negative sentences to the three pretrained BERT models, and then obtain the representation of each of the sentences through pooling, as shown in the following figure:
+
 <p align="center">
   <img width="600" src="images/transformers/sentence-bert_triplet_network.jpg" title="Look into the image">
 </p>
 
+
+We train the network to maximize the triplet loss function, 
 <p align="center">
   <img width="400" src="images/transformers/triplet_objective_function.jpg" title="Look into the image">
+</p>
+
+We use the Euclidean distance as the distance metric.
+
+
+<p align="center">
+  <img width="400" src="images/transformers/triplet_architecture.jpg" title="Look into the image">
 </p>
 
 * [Please Read in Depth](https://classic.d2l.ai/chapter_attention-mechanism/transformer.html)
