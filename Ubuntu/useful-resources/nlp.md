@@ -41,7 +41,7 @@
       * [Data Augmentation for NLP](#data-augmentation-for-nlp)
       * [10 Leading Language Models For NLP In 2021](#10-leading-language-models-for-nlp-in-2021)
 
-<!-- Added by: gil_diy, at: Sun 27 Feb 2022 17:40:52 IST -->
+<!-- Added by: gil_diy, at: Sun 27 Feb 2022 17:42:53 IST -->
 
 <!--te-->
 
@@ -399,6 +399,9 @@ an enltailment, contradiction, Neutral.
 <p align="center">
   <img width="400" src="images/transformers/sentence-bert_dataset_example.jpg" title="Look into the image">
 </p>
+
+
+We know that the siamese network consists of two identical networks thta share the same eights. So here we use two identical pre-trained BERT models.
 
 * [Please Read in Depth](https://classic.d2l.ai/chapter_attention-mechanism/transformer.html)
 * [Implementation](https://github.com/UKPLab/sentence-transformers)
