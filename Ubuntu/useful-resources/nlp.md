@@ -32,7 +32,7 @@
       * [Data Augmentation for NLP](#data-augmentation-for-nlp)
       * [10 Leading Language Models For NLP In 2021](#10-leading-language-models-for-nlp-in-2021)
 
-<!-- Added by: gil_diy, at: Sun 27 Feb 2022 13:14:21 IST -->
+<!-- Added by: gil_diy, at: Sun 27 Feb 2022 13:17:47 IST -->
 
 <!--te-->
 
@@ -334,7 +334,7 @@ For example sentiment analysis task, our goal is to classify whether a sentence 
 
 During fine-tuning, we feed the embedding of R[cls] (Representation of the sentence) to a classifier and train the classifier to perform classification.
 
-
+During the fine-tuning we update only the weights of the classification layer and not the pre-trained BERT model. When we do this, it becomes the same as using the pre-trained BERT model as a feature extractor.
 
 * Natural language inference
 
