@@ -78,7 +78,7 @@
       * [Flip image with numpy](#flip-image-with-numpy)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Sun 27 Feb 2022 13:46:32 IST -->
+<!-- Added by: gil_diy, at: Sun 27 Feb 2022 13:46:46 IST -->
 
 <!--te-->
 
@@ -502,8 +502,8 @@ if __name__ == '__main__':
 
 For example:
 
-<p align="center" style="width:400px;" >
-  <img src="images/numpy/fruits.png" title="tool tip here">
+<p align="center">
+  <img width="400" src="images/numpy/fruits.png" title="tool tip here">
 </p>
 
 ```python
