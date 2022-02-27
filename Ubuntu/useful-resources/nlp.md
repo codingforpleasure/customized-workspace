@@ -27,7 +27,6 @@
             * [Text classification](#text-classification)
             * [Natural language inference](#natural-language-inference)
          * [NER (Named Entity Recognition)](#ner-named-entity-recognition)
-         * [Question-answering](#question-answering)
          * [Sentence Bert](#sentence-bert)
          * [Bert with pytorch](#bert-with-pytorch)
          * [Drawbacks](#drawbacks-3)
@@ -36,7 +35,7 @@
       * [Data Augmentation for NLP](#data-augmentation-for-nlp)
       * [10 Leading Language Models For NLP In 2021](#10-leading-language-models-for-nlp-in-2021)
 
-<!-- Added by: gil_diy, at: Sun 27 Feb 2022 16:51:06 IST -->
+<!-- Added by: gil_diy, at: Sun 27 Feb 2022 16:52:16 IST -->
 
 <!--te-->
 
@@ -356,6 +355,9 @@ an enltailment, contradiction, Neutral.
 
 ### NER (Named Entity Recognition)
 
+<p align="center">
+  <img width="400" src="images/transformers/" title="Look into the image">
+</p>
 ### Question-answering
 
 ### Sentence Bert
