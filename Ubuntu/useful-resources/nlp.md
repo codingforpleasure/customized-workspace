@@ -23,6 +23,7 @@
          * [Positional encoding (position embeddings)](#positional-encoding-position-embeddings)
          * [Position-wise Feed-Forward Network](#position-wise-feed-forward-network)
       * [BERT (Bidirectional Encoder Representation from Transformer)](#bert-bidirectional-encoder-representation-from-transformer)
+         * [Finetuning BERT to downstream tasks](#finetuning-bert-to-downstream-tasks)
          * [Sentence Bert](#sentence-bert)
          * [Bert with pytorch](#bert-with-pytorch)
          * [Drawbacks](#drawbacks-3)
@@ -31,7 +32,7 @@
       * [Data Augmentation for NLP](#data-augmentation-for-nlp)
       * [10 Leading Language Models For NLP In 2021](#10-leading-language-models-for-nlp-in-2021)
 
-<!-- Added by: gil_diy, at: Sun 27 Feb 2022 13:06:23 IST -->
+<!-- Added by: gil_diy, at: Sun 27 Feb 2022 13:08:30 IST -->
 
 <!--te-->
 
@@ -324,6 +325,16 @@ sentences, it will give different embeddings for the word 'Python' based on the 
 
 * BERT model then will output an **embedding vector of size 768 (256*3=768) in each of the tokens**.
 
+
+### Finetuning BERT to downstream tasks 
+
+* Text classification
+
+* Natural language inference
+
+* NER
+
+* Question-answering
 
 ### Sentence Bert
 
