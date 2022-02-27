@@ -32,7 +32,7 @@
       * [Data Augmentation for NLP](#data-augmentation-for-nlp)
       * [10 Leading Language Models For NLP In 2021](#10-leading-language-models-for-nlp-in-2021)
 
-<!-- Added by: gil_diy, at: Sun 27 Feb 2022 13:08:30 IST -->
+<!-- Added by: gil_diy, at: Sun 27 Feb 2022 13:14:21 IST -->
 
 <!--te-->
 
@@ -329,6 +329,12 @@ sentences, it will give different embeddings for the word 'Python' based on the 
 ### Finetuning BERT to downstream tasks 
 
 * Text classification
+
+For example sentiment analysis task, our goal is to classify whether a sentence is positive or negative,
+
+During fine-tuning, we feed the embedding of R[cls] (Representation of the sentence) to a classifier and train the classifier to perform classification.
+
+
 
 * Natural language inference
 
