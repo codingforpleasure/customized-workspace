@@ -30,6 +30,8 @@
       * [BERT Varients](#bert-varients)
          * [ALBERT](#albert)
          * [RoBERT](#robert)
+         * [ELECTRA](#electra)
+         * [sPANbERT](#spanbert)
          * [Bert with pytorch](#bert-with-pytorch)
          * [Drawbacks](#drawbacks-3)
       * [Cleaning methods](#cleaning-methods)
@@ -37,7 +39,7 @@
       * [Data Augmentation for NLP](#data-augmentation-for-nlp)
       * [10 Leading Language Models For NLP In 2021](#10-leading-language-models-for-nlp-in-2021)
 
-<!-- Added by: gil_diy, at: Sun 27 Feb 2022 17:00:09 IST -->
+<!-- Added by: gil_diy, at: Sun 27 Feb 2022 17:01:03 IST -->
 
 <!--te-->
 
@@ -370,7 +372,9 @@ an enltailment, contradiction, Neutral.
 
 ### RoBERT
 
-### 
+### ELECTRA
+
+### sPANbERT
 
 
 
