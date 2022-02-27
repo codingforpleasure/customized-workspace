@@ -44,7 +44,7 @@
       * [Data Augmentation for NLP](#data-augmentation-for-nlp)
       * [10 Leading Language Models For NLP In 2021](#10-leading-language-models-for-nlp-in-2021)
 
-<!-- Added by: gil_diy, at: Sun 27 Feb 2022 19:05:44 IST -->
+<!-- Added by: gil_diy, at: Sun 27 Feb 2022 20:05:32 IST -->
 
 <!--te-->
 
@@ -366,9 +366,9 @@ an enltailment, contradiction, Neutral.
 
 ### NER (Named Entity Recognition)
 
-<p align="center">
+<!-- <p align="center">
   <img width="400" src="images/transformers/" title="Look into the image">
-</p>
+</p> -->
 
 ### Question-answering
 
