@@ -78,7 +78,7 @@
       * [Flip image with numpy](#flip-image-with-numpy)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Sun 27 Feb 2022 13:45:31 IST -->
+<!-- Added by: gil_diy, at: Sun 27 Feb 2022 13:46:01 IST -->
 
 <!--te-->
 
@@ -1079,8 +1079,12 @@ Has a wide array of applications:
 
 3. denoising data
 
-<p align="center" style="width:400px;" >
-  <img src="images/numpy/svd.png" title="tool tip here">
+<p align="center">
+  <img width="400" src="images/labeling_example.png" title="Look into the image">
+</p>
+
+<p align="center">
+  <img width="400" src="images/numpy/svd.png" title="tool tip here">
 </p>
 
 ```python
