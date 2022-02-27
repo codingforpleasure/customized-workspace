@@ -44,6 +44,8 @@
       * [Flatten](#flatten)
       * [Expand the shape of an array (similar to torch.unsqueeze)](#expand-the-shape-of-an-array-similar-to-torchunsqueeze)
       * [splitting data](#splitting-data)
+         * [np.array_split()](#nparray_split)
+         * [np.split()](#npsplit)
       * [Removing rows/columns](#removing-rowscolumns)
       * [Inserting data](#inserting-data)
       * [Multiplication:](#multiplication)
@@ -76,7 +78,7 @@
       * [Flip image with numpy](#flip-image-with-numpy)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Tue 08 Feb 2022 08:44:58 IST -->
+<!-- Added by: gil_diy, at: Sun 27 Feb 2022 13:43:55 IST -->
 
 <!--te-->
 
@@ -732,12 +734,24 @@ print(x.shape) # Outptut: (2,)
 
 
 ## splitting data
-```python
-  x = np.arange(8.0)
-  np.array_split(x, 3)
 
-  # We will recieve:
-  # `[array([0.,  1.,  2.]), array([3.,  4.,  5.]), array([6.,  7.])]`
+### np.array_split()
+```python
+x = np.arange(8.0)
+np.array_split(x, 3)
+
+# We will recieve:
+# `[array([0.,  1.,  2.]), array([3.,  4.,  5.]), array([6.,  7.])]`
+```
+
+### np.split()
+
+```python
+x = np.arange(8.0)
+np.split(x, [3, 5])
+
+# We will recieve:
+# [array([0., 1., 2.]), array([3., 4.]), array([5.]), array([6., 7.]), array([], dtype=float64)]
 ```
 
 ## Removing rows/columns
