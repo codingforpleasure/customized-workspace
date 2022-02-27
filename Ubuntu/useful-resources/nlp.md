@@ -26,6 +26,8 @@
          * [Finetuning BERT to downstream tasks](#finetuning-bert-to-downstream-tasks)
             * [Text classification](#text-classification)
             * [Natural language inference](#natural-language-inference)
+         * [NER (Named Entity Recognition)](#ner-named-entity-recognition)
+         * [Question-answering](#question-answering)
          * [Sentence Bert](#sentence-bert)
          * [Bert with pytorch](#bert-with-pytorch)
          * [Drawbacks](#drawbacks-3)
@@ -34,7 +36,7 @@
       * [Data Augmentation for NLP](#data-augmentation-for-nlp)
       * [10 Leading Language Models For NLP In 2021](#10-leading-language-models-for-nlp-in-2021)
 
-<!-- Added by: gil_diy, at: Sun 27 Feb 2022 16:50:42 IST -->
+<!-- Added by: gil_diy, at: Sun 27 Feb 2022 16:51:06 IST -->
 
 <!--te-->
 
@@ -352,9 +354,9 @@ an enltailment, contradiction, Neutral.
   <img width="400" src="images/transformers/pre_trained_bert_NLI.jpg" title="Look into the image">
 </p>
 
-* NER
+### NER (Named Entity Recognition)
 
-* Question-answering
+### Question-answering
 
 ### Sentence Bert
 
