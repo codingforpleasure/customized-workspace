@@ -41,7 +41,7 @@
       * [Data Augmentation for NLP](#data-augmentation-for-nlp)
       * [10 Leading Language Models For NLP In 2021](#10-leading-language-models-for-nlp-in-2021)
 
-<!-- Added by: gil_diy, at: Sun 27 Feb 2022 17:42:53 IST -->
+<!-- Added by: gil_diy, at: Sun 27 Feb 2022 17:44:14 IST -->
 
 <!--te-->
 
@@ -401,7 +401,7 @@ an enltailment, contradiction, Neutral.
 </p>
 
 
-We know that the siamese network consists of two identical networks thta share the same eights. So here we use two identical pre-trained BERT models.
+We know that the siamese network consists of two identical networks thta share the same eights. So here we use two identical pre-trained BERT models. We feed the tokens from sentence 1 to one BERT and the tokens from sentence 2 to another BERT and compute the representation of the given two sentences.
 
 * [Please Read in Depth](https://classic.d2l.ai/chapter_attention-mechanism/transformer.html)
 * [Implementation](https://github.com/UKPLab/sentence-transformers)
