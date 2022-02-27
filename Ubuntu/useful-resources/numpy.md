@@ -78,7 +78,7 @@
       * [Flip image with numpy](#flip-image-with-numpy)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Sun 27 Feb 2022 13:46:05 IST -->
+<!-- Added by: gil_diy, at: Sun 27 Feb 2022 13:46:32 IST -->
 
 <!--te-->
 
@@ -462,8 +462,8 @@ max_each_col = np.max(mat,axis=0) # Will give: [11 9]
 A very important property in all those aggregation functions is: `keepdims`.
 let's implement the `softmax` function:
 
-<p align="center"  style="width:300px;"> 
-  <img src="images/numpy/softmax.png" title="Softmax function">
+<p align="center""> 
+  <img width="400" src="images/numpy/softmax.png" title="Softmax function">
 </p>
 
 ```python
