@@ -78,7 +78,7 @@
       * [Flip image with numpy](#flip-image-with-numpy)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Sun 27 Feb 2022 13:44:19 IST -->
+<!-- Added by: gil_diy, at: Sun 27 Feb 2022 13:45:31 IST -->
 
 <!--te-->
 
@@ -949,8 +949,8 @@ eig_vals, eig_vecs = np.linalg.eig(cov_mat)
 
 ## meshgrid
 
-<p align="center" style="width:400px;" >
-  <img src="images/numpy/numpy-meshgrid.png" title="tool tip here">
+<p align="center">
+  <img width = "400" src="images/numpy/numpy-meshgrid.png" title="tool tip here">
 </p>
 
 ```python
