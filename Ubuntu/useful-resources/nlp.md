@@ -41,7 +41,7 @@
       * [Data Augmentation for NLP](#data-augmentation-for-nlp)
       * [10 Leading Language Models For NLP In 2021](#10-leading-language-models-for-nlp-in-2021)
 
-<!-- Added by: gil_diy, at: Sun 27 Feb 2022 17:40:16 IST -->
+<!-- Added by: gil_diy, at: Sun 27 Feb 2022 17:40:23 IST -->
 
 <!--te-->
 
@@ -391,9 +391,9 @@ an enltailment, contradiction, Neutral.
 
 * Sentence BERT uses a Siamese network architecture for tasks that involve a sentence pair as input.
 
-
+(0) - Dissimiliar
 (1) - Similiar
-(2) - dissimiliar
+
 
 <p align="center">
   <img width="400" src="images/transformers/sentence-bert_dataset_example.jpg" title="Look into the image">
