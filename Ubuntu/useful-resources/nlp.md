@@ -34,6 +34,7 @@
          * [ELECTRA](#electra)
          * [SpanBERT](#spanbert)
          * [Sentence-BERT](#sentence-bert)
+            * [Sentence-BERT with a triplet network](#sentence-bert-with-a-triplet-network)
          * [Bert with pytorch](#bert-with-pytorch)
          * [Drawbacks](#drawbacks-3)
       * [Cleaning methods](#cleaning-methods)
@@ -41,7 +42,7 @@
       * [Data Augmentation for NLP](#data-augmentation-for-nlp)
       * [10 Leading Language Models For NLP In 2021](#10-leading-language-models-for-nlp-in-2021)
 
-<!-- Added by: gil_diy, at: Sun 27 Feb 2022 17:44:40 IST -->
+<!-- Added by: gil_diy, at: Sun 27 Feb 2022 17:56:19 IST -->
 
 <!--te-->
 
@@ -402,6 +403,11 @@ an enltailment, contradiction, Neutral.
 
 
 We know that the siamese network consists of two identical networks that share the **same weights** . So here we use two identical pre-trained BERT models. We feed the tokens from sentence 1 to one BERT and the tokens from sentence 2 to another BERT and compute the representation of the given two sentences.
+
+#### Sentence-BERT with a triplet network
+
+
+
 
 * [Please Read in Depth](https://classic.d2l.ai/chapter_attention-mechanism/transformer.html)
 * [Implementation](https://github.com/UKPLab/sentence-transformers)
