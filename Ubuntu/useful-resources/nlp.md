@@ -35,7 +35,7 @@
       * [Data Augmentation for NLP](#data-augmentation-for-nlp)
       * [10 Leading Language Models For NLP In 2021](#10-leading-language-models-for-nlp-in-2021)
 
-<!-- Added by: gil_diy, at: Sun 27 Feb 2022 16:52:16 IST -->
+<!-- Added by: gil_diy, at: Sun 27 Feb 2022 16:55:59 IST -->
 
 <!--te-->
 
@@ -348,6 +348,8 @@ an enltailment, contradiction, Neutral.
 ```python
 
 ```
+
+* We take the representation of the [CLS] token, which is R_[CLS], and feed it to a classifier (feedforward + softmax), which returns the probabilty of the sentence being a contradiction, enltailment, Neutral.
 
 <p align="center">
   <img width="400" src="images/transformers/pre_trained_bert_NLI.jpg" title="Look into the image">
