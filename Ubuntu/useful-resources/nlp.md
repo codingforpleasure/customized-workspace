@@ -24,6 +24,8 @@
          * [Position-wise Feed-Forward Network](#position-wise-feed-forward-network)
       * [BERT (Bidirectional Encoder Representation from Transformer)](#bert-bidirectional-encoder-representation-from-transformer)
          * [Finetuning BERT to downstream tasks](#finetuning-bert-to-downstream-tasks)
+            * [Text classification](#text-classification)
+            * [Natural language inference](#natural-language-inference)
          * [Sentence Bert](#sentence-bert)
          * [Bert with pytorch](#bert-with-pytorch)
          * [Drawbacks](#drawbacks-3)
@@ -32,7 +34,7 @@
       * [Data Augmentation for NLP](#data-augmentation-for-nlp)
       * [10 Leading Language Models For NLP In 2021](#10-leading-language-models-for-nlp-in-2021)
 
-<!-- Added by: gil_diy, at: Sun 27 Feb 2022 13:17:52 IST -->
+<!-- Added by: gil_diy, at: Sun 27 Feb 2022 15:04:01 IST -->
 
 <!--te-->
 
@@ -328,7 +330,7 @@ sentences, it will give different embeddings for the word 'Python' based on the 
 
 ### Finetuning BERT to downstream tasks 
 
-* Text classification
+#### Text classification
 
 For example sentiment analysis task, our goal is to classify whether a sentence is positive or negative,
 
@@ -336,7 +338,12 @@ During fine-tuning, we feed the embedding of R[cls] (Representation of the sente
 
 During the fine-tuning we update only the weights of the classification layer and not the pre-trained BERT model. When we do this, it becomes the same as using the pre-trained BERT model as a feature extractor.
 
-* Natural language inference
+#### Natural language inference
+
+```python
+
+```
+
 
 * NER
 
