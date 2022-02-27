@@ -41,7 +41,7 @@
       * [Data Augmentation for NLP](#data-augmentation-for-nlp)
       * [10 Leading Language Models For NLP In 2021](#10-leading-language-models-for-nlp-in-2021)
 
-<!-- Added by: gil_diy, at: Sun 27 Feb 2022 17:37:54 IST -->
+<!-- Added by: gil_diy, at: Sun 27 Feb 2022 17:38:35 IST -->
 
 <!--te-->
 
@@ -389,7 +389,7 @@ an enltailment, contradiction, Neutral.
 
 * Sentence-BERT is modification of the BERT model which uses **siamese** and **triplet network structures** and adds a pooling operation to the output of BERT to obtain fix-sized semantically meaningful sentence embeddings.
 
-* Sentence BERT uses a Siamese network architecture for tasks thta involve a sentence pair as input.
+* Sentence BERT uses a Siamese network architecture for tasks that involve a sentence pair as input.
 
 
 <p align="center">
