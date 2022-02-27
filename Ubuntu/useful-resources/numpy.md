@@ -78,7 +78,7 @@
       * [Flip image with numpy](#flip-image-with-numpy)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Sun 27 Feb 2022 13:48:50 IST -->
+<!-- Added by: gil_diy, at: Sun 27 Feb 2022 13:49:05 IST -->
 
 <!--te-->
 
@@ -825,7 +825,7 @@ The outer product of two coordinate vectors is a matrix. If the two vectors have
 
 
 <p align="center">
-  <img width="400"  src="images/numpy/outer_product.png" title="tool tip here">
+  <img width="600"  src="images/numpy/outer_product.png" title="tool tip here">
 </p>
 
 
