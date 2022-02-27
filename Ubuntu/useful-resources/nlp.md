@@ -41,7 +41,7 @@
       * [Data Augmentation for NLP](#data-augmentation-for-nlp)
       * [10 Leading Language Models For NLP In 2021](#10-leading-language-models-for-nlp-in-2021)
 
-<!-- Added by: gil_diy, at: Sun 27 Feb 2022 17:17:19 IST -->
+<!-- Added by: gil_diy, at: Sun 27 Feb 2022 17:19:29 IST -->
 
 <!--te-->
 
@@ -383,8 +383,9 @@ an enltailment, contradiction, Neutral.
 
 ### Sentence-BERT
 
+* Sentence-BERT  drastically reduces the inference time of BERT, Sentence-BERT is popularity used in tasks such as:
 
-
+**sentence pair classification**,  **computing similarity between two sentences**
 
 * Sentence-BERT is modification of the BERT model which uses **siamese** and **triplet network structures** and adds a pooling operation to the output of BERT to obtain fix-sized semantically meaningful sentence embeddings.
 
