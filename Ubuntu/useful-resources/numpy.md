@@ -78,7 +78,7 @@
       * [Flip image with numpy](#flip-image-with-numpy)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Sun 27 Feb 2022 13:48:30 IST -->
+<!-- Added by: gil_diy, at: Sun 27 Feb 2022 13:48:36 IST -->
 
 <!--te-->
 
@@ -800,7 +800,7 @@ dot_res = np.dot(x1,x2)
 ```
 
 <p align="center">
-  <img width="600" src="images/numpy/dot_product.png" title="tool tip here">
+  <img width="800" src="images/numpy/dot_product.png" title="tool tip here">
 </p>
 
 
