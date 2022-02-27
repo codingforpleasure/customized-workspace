@@ -27,11 +27,12 @@
             * [Text classification](#text-classification)
             * [Natural language inference](#natural-language-inference)
          * [NER (Named Entity Recognition)](#ner-named-entity-recognition)
+         * [Question-answering](#question-answering)
       * [BERT Varients](#bert-varients)
-         * [ALBERT](#albert)
+         * [ALBERT (A Lite version of BERT)](#albert-a-lite-version-of-bert)
          * [RoBERT](#robert)
          * [ELECTRA](#electra)
-         * [sPANbERT](#spanbert)
+         * [SpanBERT](#spanbert)
          * [Bert with pytorch](#bert-with-pytorch)
          * [Drawbacks](#drawbacks-3)
       * [Cleaning methods](#cleaning-methods)
@@ -39,7 +40,7 @@
       * [Data Augmentation for NLP](#data-augmentation-for-nlp)
       * [10 Leading Language Models For NLP In 2021](#10-leading-language-models-for-nlp-in-2021)
 
-<!-- Added by: gil_diy, at: Sun 27 Feb 2022 17:01:06 IST -->
+<!-- Added by: gil_diy, at: Sun 27 Feb 2022 17:02:31 IST -->
 
 <!--te-->
 
@@ -364,17 +365,20 @@ an enltailment, contradiction, Neutral.
 <p align="center">
   <img width="400" src="images/transformers/" title="Look into the image">
 </p>
+
 ### Question-answering
 
 ## BERT Varients
 
-### ALBERT
+### ALBERT (A Lite version of BERT)
+
+
 
 ### RoBERT
 
 ### ELECTRA
 
-### sPANbERT
+### SpanBERT
 
 
 
