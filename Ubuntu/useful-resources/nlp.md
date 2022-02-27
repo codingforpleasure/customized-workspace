@@ -44,7 +44,7 @@
       * [Data Augmentation for NLP](#data-augmentation-for-nlp)
       * [10 Leading Language Models For NLP In 2021](#10-leading-language-models-for-nlp-in-2021)
 
-<!-- Added by: gil_diy, at: Sun 27 Feb 2022 18:20:08 IST -->
+<!-- Added by: gil_diy, at: Sun 27 Feb 2022 18:20:20 IST -->
 
 <!--te-->
 
@@ -426,7 +426,7 @@ since we have three sentences, in this case Sentence-BERT sues the triplet netwo
 
 
 <p align="center">
-  <img width="400" src="images/transformers/sentence-bert_triplet_network.jpg" title="Look into the image">
+  <img width="600" src="images/transformers/sentence-bert_triplet_network.jpg" title="Look into the image">
 </p>
 
 * [Please Read in Depth](https://classic.d2l.ai/chapter_attention-mechanism/transformer.html)
