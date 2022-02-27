@@ -78,7 +78,7 @@
       * [Flip image with numpy](#flip-image-with-numpy)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Sun 27 Feb 2022 13:46:50 IST -->
+<!-- Added by: gil_diy, at: Sun 27 Feb 2022 13:47:29 IST -->
 
 <!--te-->
 
@@ -799,8 +799,8 @@ dot_res = np.dot(x1,x2)
 # Therefore the result would be: dot_res = 5*0+6*2+7*8+8*2=> 84
 ```
 
-<p align="center" style="width:400px;" >
-  <img src="images/numpy/dot_product.png" title="tool tip here">
+<p align="center">
+  <img width="400" src="images/numpy/dot_product.png" title="tool tip here">
 </p>
 
 
