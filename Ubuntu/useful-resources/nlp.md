@@ -34,7 +34,7 @@
       * [Data Augmentation for NLP](#data-augmentation-for-nlp)
       * [10 Leading Language Models For NLP In 2021](#10-leading-language-models-for-nlp-in-2021)
 
-<!-- Added by: gil_diy, at: Sun 27 Feb 2022 15:04:01 IST -->
+<!-- Added by: gil_diy, at: Sun 27 Feb 2022 16:49:13 IST -->
 
 <!--te-->
 
@@ -340,10 +340,16 @@ During the fine-tuning we update only the weights of the classification layer an
 
 #### Natural language inference
 
+The goal of our model is to determine whether a hypothesis is True of False given a premise
+The goal of our model is to determine whether a sentence pair (premise-hypothesis pair) is an enl
+
 ```python
 
 ```
 
+<p align="center">
+  <img width="400" src="images/transformers/pre_trained_bert_NLI.jpg" title="Look into the image">
+</p>
 
 * NER
 
