@@ -44,7 +44,7 @@
       * [Data Augmentation for NLP](#data-augmentation-for-nlp)
       * [10 Leading Language Models For NLP In 2021](#10-leading-language-models-for-nlp-in-2021)
 
-<!-- Added by: gil_diy, at: Sun 27 Feb 2022 17:57:43 IST -->
+<!-- Added by: gil_diy, at: Sun 27 Feb 2022 17:58:12 IST -->
 
 <!--te-->
 
@@ -411,6 +411,8 @@ We know that the siamese network consists of two identical networks that share t
 #### Sentence-BERT for sentence pair regression task
 
 #### Sentence-BERT with a triplet network
+
+Suppose we have three sentences:
 
 
 
