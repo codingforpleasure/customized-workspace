@@ -44,7 +44,7 @@
       * [Data Augmentation for NLP](#data-augmentation-for-nlp)
       * [10 Leading Language Models For NLP In 2021](#10-leading-language-models-for-nlp-in-2021)
 
-<!-- Added by: gil_diy, at: Sun 27 Feb 2022 17:59:17 IST -->
+<!-- Added by: gil_diy, at: Sun 27 Feb 2022 18:17:27 IST -->
 
 <!--te-->
 
@@ -419,6 +419,12 @@ Suppose we have three sentences:
 * **Positive sentence**: He is playing the game
 
 * **Negative sentence**: Don't play the game
+
+Our task is is to compute a representation such that the similairty between the `anchor` and `positive
+sentences` should be high and similarity between the anchor and negative sentences should be low.
+since we have three sentences, in this case Sentence-BERT sues the triplet network architecture.
+
+
 
 
 * [Please Read in Depth](https://classic.d2l.ai/chapter_attention-mechanism/transformer.html)
