@@ -72,7 +72,7 @@
          * [Join two dataframes one <strong>below</strong> the other.](#join-two-dataframes-one-below-the-other)
          * [Join two dataframes one <strong>besides</strong> the other.](#join-two-dataframes-one-besides-the-other)
          * [Join two dataframes one <strong>besides</strong> the other when share the same key (inner join)](#join-two-dataframes-one-besides-the-other-when-share-the-same-key-inner-join)
-         * [Join two dataframes one <strong>besides</strong> the other when share the same key Left join](#join-two-dataframes-one-besides-the-other-when-share-the-same-key-left-join)
+         * [Join two dataframes one <strong>besides</strong> the other when share the same key (Left join)](#join-two-dataframes-one-besides-the-other-when-share-the-same-key-left-join)
          * [Dataframe Pivot table](#dataframe-pivot-table)
          * [Printing data so all columns will be presented (Display all columns)](#printing-data-so-all-columns-will-be-presented-display-all-columns)
          * [Get data ditribution of the data per column](#get-data-ditribution-of-the-data-per-column)
@@ -83,7 +83,7 @@
          * [Calculate correlation for all numerical columns pairs](#calculate-correlation-for-all-numerical-columns-pairs)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Mon 28 Feb 2022 10:45:12 IST -->
+<!-- Added by: gil_diy, at: Mon 28 Feb 2022 10:45:22 IST -->
 
 <!--te-->
 
@@ -779,7 +779,8 @@ df2.loc['Israel']
 result = ffp_train_df.merge(reviews_train_df, on='ID')
 ```
 
-### Join two dataframes one **besides** the other when share the same key Left join
+### Join two dataframes one **besides** the other when share the same key (Left join)
+
 ```python
 df_features_season = df_features_season.merge(num_win, on=['Season', 'TeamID'], how='left')
 ```
