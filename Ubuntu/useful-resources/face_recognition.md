@@ -7,7 +7,7 @@
    * [Reference](#reference)
    * [Academia papers](#academia-papers)
 
-<!-- Added by: gil_diy, at: Tue 01 Mar 2022 15:30:03 IST -->
+<!-- Added by: gil_diy, at: Tue 01 Mar 2022 15:31:51 IST -->
 
 <!--te-->
 
@@ -18,6 +18,8 @@ We don't train a neural network to classify me, we just use the existing network
 when I try again to unlock the phone does my new image goes to the same place in the space as the last one.
 
 What happens is that you get an architecture capable of doing **one shot learning**.
+
+* Belong to **Few shot Learning**
 
 * The name of the network is [Siamese Networks](https://towardsdatascience.com/a-friendly-introduction-to-siamese-networks-85ab17522942) (sometimes called a twin neural network) 
 
@@ -43,9 +45,12 @@ What happens is that you get an architecture capable of doing **one shot learnin
 
 [Link](https://medium.com/visionwizard/research-for-all-in-defense-of-triplet-loss-for-person-re-identification-9cce5616fb6)
 
-* Belong to **Few shot Learning**
+
 
 [Triplet Loss](https://youtu.be/d2XB5-tuCWU)
+
+[Few-Shot Learning](https://youtu.be/hE7eGew4eeg)
+
 
 # Siamese Networks
 
