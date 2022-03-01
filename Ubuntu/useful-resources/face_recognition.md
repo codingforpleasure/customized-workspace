@@ -7,7 +7,7 @@
    * [Reference](#reference)
    * [Academia papers](#academia-papers)
 
-<!-- Added by: gil_diy, at: Tue 01 Mar 2022 15:31:54 IST -->
+<!-- Added by: gil_diy, at: Tue 01 Mar 2022 15:33:03 IST -->
 
 <!--te-->
 
@@ -22,6 +22,8 @@ What happens is that you get an architecture capable of doing **one shot learnin
 * Belong to **Few shot Learning**
 
 * The name of the network is [Siamese Networks](https://towardsdatascience.com/a-friendly-introduction-to-siamese-networks-85ab17522942) (sometimes called a twin neural network) 
+
+* The set of images which we compare to is called **Support Set** .
 
 * The network uses a special type of loss function called `triplet loss`.
   The name triplet loss since the loss function recieves 3 variables:
