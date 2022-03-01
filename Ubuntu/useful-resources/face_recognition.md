@@ -7,7 +7,7 @@
    * [Reference](#reference)
    * [Academia papers](#academia-papers)
 
-<!-- Added by: gil_diy, at: Tue 01 Mar 2022 15:28:32 IST -->
+<!-- Added by: gil_diy, at: Tue 01 Mar 2022 15:30:03 IST -->
 
 <!--te-->
 
@@ -43,7 +43,7 @@ What happens is that you get an architecture capable of doing **one shot learnin
 
 [Link](https://medium.com/visionwizard/research-for-all-in-defense-of-triplet-loss-for-person-re-identification-9cce5616fb6)
 
-
+* Belong to **Few shot Learning**
 
 [Triplet Loss](https://youtu.be/d2XB5-tuCWU)
 
