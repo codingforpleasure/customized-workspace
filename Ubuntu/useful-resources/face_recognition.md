@@ -7,7 +7,7 @@
    * [Reference](#reference)
    * [Academia papers](#academia-papers)
 
-<!-- Added by: gil_diy, at: Tue 01 Mar 2022 15:44:33 IST -->
+<!-- Added by: gil_diy, at: Tue 01 Mar 2022 15:45:39 IST -->
 
 <!--te-->
 
@@ -69,7 +69,7 @@ Siemense Network are used for
 
 
 
-Example of dataset is **Omniglot**, holds 1000 classes and from each class we have only few images.
+Example of dataset is [**Omniglot**](https://github.com/brendenlake/omniglot), holds 1000 classes and from each class we have only few images.
 
 # Reference
 
