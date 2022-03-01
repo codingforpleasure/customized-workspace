@@ -8,7 +8,7 @@
          * [LeakyReLU](#leakyrelu)
          * [Gelu (Gaussian Error Linear Unit)](#gelu-gaussian-error-linear-unit)
 
-<!-- Added by: gil_diy, at: Tue 01 Mar 2022 10:28:37 IST -->
+<!-- Added by: gil_diy, at: Tue 01 Mar 2022 10:29:34 IST -->
 
 <!--te-->
 
@@ -42,6 +42,8 @@ tinuous function.
 
 
 ### Sigmoid
+
+* 2012 paper on **automatic speech recognition** uses a logistic **sigmoid activation function**.
 
 <p align="center">
   <img width="400" src="images/activation-functions/sigmoid.png" title="Look into the image">
