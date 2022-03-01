@@ -92,10 +92,12 @@
       * [Integrating TensorBoard with pytorch](#integrating-tensorboard-with-pytorch)
       * [Finetuning Torchvision Models](#finetuning-torchvision-models)
       * [Segmentation with U-net  (Encoder-Decoder)](#segmentation-with-u-net--encoder-decoder)
+      * [Pytorch hooks](#pytorch-hooks)
+      * [Customize optimizer in Pytorch](#customize-optimizer-in-pytorch)
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Fri 25 Feb 2022 10:31:41 IST -->
+<!-- Added by: gil_diy, at: Tue 01 Mar 2022 09:14:33 IST -->
 
 <!--te-->
 
@@ -1660,6 +1662,12 @@ Model | Finetune | Prerequisite
 the popular model architecture for segmentation tasks is the so-called **encoder-decoder** model.
 In the first half of the encoder-decoder model, the input image is downsized to a feature map using a few layers of convolution neural network and pooling layers.
 In the second half of the model, the feature map is up-sampled to the input size to produce a binary mask.
+
+
+## Pytorch hooks
+
+## Customize optimizer in Pytorch
+
 
 
 ## Pytorch Built-in Datasets
