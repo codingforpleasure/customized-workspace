@@ -8,7 +8,7 @@
          * [LeakyReLU](#leakyrelu)
          * [Gelu (Gaussian Error Linear Unit)](#gelu-gaussian-error-linear-unit)
 
-<!-- Added by: gil_diy, at: Tue 01 Mar 2022 10:25:06 IST -->
+<!-- Added by: gil_diy, at: Tue 01 Mar 2022 10:25:08 IST -->
 
 <!--te-->
 
