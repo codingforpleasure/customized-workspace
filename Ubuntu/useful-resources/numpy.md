@@ -12,6 +12,7 @@
          * [Random generation](#random-generation)
             * [randn](#randn)
             * [rand](#rand)
+            * [Get random sample from a given 1-D array](#get-random-sample-from-a-given-1-d-array)
          * [Forming](#forming)
             * [Stack 1-D arrays as columns into a 2-D array.](#stack-1-d-arrays-as-columns-into-a-2-d-array)
             * [vstack](#vstack)
@@ -78,7 +79,7 @@
       * [Flip image with numpy](#flip-image-with-numpy)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Sun 27 Feb 2022 13:49:05 IST -->
+<!-- Added by: gil_diy, at: Tue 01 Mar 2022 15:10:48 IST -->
 
 <!--te-->
 
@@ -246,7 +247,18 @@ dataset = np.loadtxt('pima-indians-diabetes.csv' , delimiter=",")
 `numpy.random.rand` generates samples from unifrom (in range [0,1))
 
 
-#### 
+#### Get random sample from a given 1-D array
+
+
+```python
+aa_milne_arr = ['pooh', 'rabbit', 'piglet', 'Christopher']
+
+# pay attention here the data is distributed in non-uniform manner:
+np.random.choice(aa_milne_arr, 5, p=[0.5, 0.1, 0.1, 0.3])
+# Output:
+# array(['pooh', 'pooh', 'pooh', 'Christopher', 'piglet'], 
+#       dtype='<U11')
+```
 
 
 ### Forming
