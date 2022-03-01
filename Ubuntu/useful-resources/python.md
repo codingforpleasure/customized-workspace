@@ -24,10 +24,11 @@
       * [Python Closure](#python-closure)
       * [jsonify with numpy arrays](#jsonify-with-numpy-arrays)
       * [DefaultDict](#defaultdict)
+      * [raise exception](#raise-exception)
       * [Counting words with a counter](#counting-words-with-a-counter)
       * [Useful packages](#useful-packages)
 
-<!-- Added by: gil_diy, at: Tue 01 Mar 2022 09:31:05 IST -->
+<!-- Added by: gil_diy, at: Tue 01 Mar 2022 09:48:35 IST -->
 
 <!--te-->
 
@@ -344,6 +345,11 @@ print(d["c"])
 # Not Present
 ```
 
+## raise exception
+```python
+if not(len(paths) == len(colors) == len(names)):
+    raise ValueError
+```
 
 ## Counting words with a counter
 
