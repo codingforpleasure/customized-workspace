@@ -8,7 +8,7 @@
          * [LeakyReLU](#leakyrelu)
          * [Gelu (Gaussian Error Linear Unit)](#gelu-gaussian-error-linear-unit)
 
-<!-- Added by: gil_diy, at: Tue 01 Mar 2022 10:29:34 IST -->
+<!-- Added by: gil_diy, at: Tue 01 Mar 2022 10:30:25 IST -->
 
 <!--te-->
 
@@ -65,7 +65,7 @@ tinuous function.
 
 ### Gelu (Gaussian Error Linear Unit)
 
-* language processing model **BERT** uses a smooth version of the **ReLU**, the GELU.
+* Language processing model **BERT** uses a smooth version of the ReLU, the **GELU**.
 
 * GELU is a smoother version of the RELU.
 
