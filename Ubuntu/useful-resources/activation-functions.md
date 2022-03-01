@@ -7,7 +7,7 @@
          * [LeakyReLU](#leakyrelu)
          * [Gelu (Gaussian Error Linear Unit)](#gelu-gaussian-error-linear-unit)
 
-<!-- Added by: gil_diy, at: Thu 17 Feb 2022 13:09:23 IST -->
+<!-- Added by: gil_diy, at: Tue 01 Mar 2022 10:19:35 IST -->
 
 <!--te-->
 
@@ -41,5 +41,16 @@ tinuous function.
 ### LeakyReLU
 
 ### Gelu (Gaussian Error Linear Unit)
+
+* Is used in BERT, GELU has several notable differences:
+
+* GELU is a smoother version of the RELU.
+
+* It is Non convex, non-monotonic function is not linear in the positive axis and exhibits curvature at all points.
+
+<p align="center">
+  <img width="400" src="images/activation-functions/GELU.jpg" title="Look into the image">
+</p>
+
 
 [Link](https://medium.com/@shoray.goel/gelu-gaussian-error-linear-unit-4ec59fb2e47c)
