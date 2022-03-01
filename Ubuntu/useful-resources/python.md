@@ -27,7 +27,7 @@
       * [Counting words with a counter](#counting-words-with-a-counter)
       * [Useful packages](#useful-packages)
 
-<!-- Added by: gil_diy, at: Tue 01 Mar 2022 09:27:18 IST -->
+<!-- Added by: gil_diy, at: Tue 01 Mar 2022 09:27:32 IST -->
 
 <!--te-->
 
@@ -314,7 +314,10 @@ dumped = json.dumps(data, cls=NumpyEncoder)
 
 ## DefaultDict
 
-Defaultdict is a sub-class of the dictionary class that returns a dictionary-like object. The functionality of both dictionaries and defaultdict are almost same except for the fact that defaultdict never raises a KeyError. It provides a default value for the key that does not exists.
+Defaultdict is a sub-class of the dictionary class that returns a dictionary-like object. 
+The functionality of both dictionaries and defaultdict are almost same except for the fact that defaultdict never raises a KeyError. 
+
+It provides a default value for the key that does not exists.
 
 
 ```python
