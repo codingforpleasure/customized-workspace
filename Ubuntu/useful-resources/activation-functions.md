@@ -9,7 +9,7 @@
          * [Gelu (Gaussian Error Linear Unit)](#gelu-gaussian-error-linear-unit)
       * [Nicely summary table](#nicely-summary-table)
 
-<!-- Added by: gil_diy, at: Tue 01 Mar 2022 10:31:31 IST -->
+<!-- Added by: gil_diy, at: Tue 01 Mar 2022 10:31:52 IST -->
 
 <!--te-->
 
@@ -81,4 +81,4 @@ tinuous function.
 
 ## Nicely summary table
 
-[Link](https://en.wikipedia.org/wiki/Activation_function#Table_of_activation_functions)
+[Wikipedia Activation functions](https://en.wikipedia.org/wiki/Activation_function#Table_of_activation_functions)
