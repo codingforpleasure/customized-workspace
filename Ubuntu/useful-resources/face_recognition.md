@@ -7,7 +7,7 @@
    * [Reference](#reference)
    * [Academia papers](#academia-papers)
 
-<!-- Added by: gil_diy, at: Tue 01 Mar 2022 15:38:03 IST -->
+<!-- Added by: gil_diy, at: Tue 01 Mar 2022 15:40:40 IST -->
 
 <!--te-->
 
@@ -19,7 +19,7 @@ when I try again to unlock the phone does my new image goes to the same place in
 
 What happens is that you get an architecture capable of doing **one shot learning**,  we have only single image per class.
 
-* We want to check check if the person is familar for us, the photo of the image is called **Query**
+* We want to check check if the person is familar for us, the photo of the person is called **Query**
 
 * The name of the network is [Siamese Networks](https://towardsdatascience.com/a-friendly-introduction-to-siamese-networks-85ab17522942) (sometimes called a twin neural network) 
 
