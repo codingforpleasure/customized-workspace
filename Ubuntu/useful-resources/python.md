@@ -23,10 +23,11 @@
       * [Python Generators](#python-generators)
       * [Python Closure](#python-closure)
       * [jsonify with numpy arrays](#jsonify-with-numpy-arrays)
+      * [DefaultDict](#defaultdict)
       * [Counting words with a counter](#counting-words-with-a-counter)
       * [Useful packages](#useful-packages)
 
-<!-- Added by: gil_diy, at: Sun 20 Feb 2022 19:34:41 IST -->
+<!-- Added by: gil_diy, at: Tue 01 Mar 2022 09:27:18 IST -->
 
 <!--te-->
 
@@ -309,6 +310,30 @@ class NumpyEncoder(json.JSONEncoder):
         return json.JSONEncoder.default(self, obj)
 
 dumped = json.dumps(data, cls=NumpyEncoder)
+```
+
+## DefaultDict
+
+Defaultdict is a sub-class of the dictionary class that returns a dictionary-like object. The functionality of both dictionaries and defaultdict are almost same except for the fact that defaultdict never raises a KeyError. It provides a default value for the key that does not exists.
+
+
+```python
+from collections import defaultdict
+  
+# Function to return a default
+# values for keys that is not
+# present
+def def_value():
+    return "Not Present"
+      
+# Defining the dict
+d = defaultdict(def_value)
+d["a"] = 1
+d["b"] = 2
+  
+print(d["a"])
+print(d["b"])
+print(d["c"])
 ```
 
 ## Counting words with a counter
