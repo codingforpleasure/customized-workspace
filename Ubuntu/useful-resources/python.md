@@ -27,7 +27,7 @@
       * [Counting words with a counter](#counting-words-with-a-counter)
       * [Useful packages](#useful-packages)
 
-<!-- Added by: gil_diy, at: Tue 01 Mar 2022 09:28:08 IST -->
+<!-- Added by: gil_diy, at: Tue 01 Mar 2022 09:28:11 IST -->
 
 <!--te-->
 
@@ -323,8 +323,7 @@ It provides a default value for the key that does not exists.
 ```python
 from collections import defaultdict
   
-# Function to return a default
-# values for keys that is not
+# Function to return a default values for keys that is not
 # present
 def def_value():
     return "Not Present"
