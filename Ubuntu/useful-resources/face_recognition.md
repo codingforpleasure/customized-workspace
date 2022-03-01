@@ -7,7 +7,7 @@
    * [Reference](#reference)
    * [Academia papers](#academia-papers)
 
-<!-- Added by: gil_diy, at: Tue 01 Mar 2022 15:37:24 IST -->
+<!-- Added by: gil_diy, at: Tue 01 Mar 2022 15:38:03 IST -->
 
 <!--te-->
 
@@ -17,7 +17,7 @@ Is not a classification problem because the number of faces in the world is not 
 We don't train a neural network to classify me, we just use the existing network which was already trained on thousands of thousands faces of people to doing this, to put me somwhere in the latent space (aka latent feature space) and I record the location. 
 when I try again to unlock the phone does my new image goes to the same place in the space as the last one.
 
-What happens is that you get an architecture capable of doing **one shot learning**,  we have one image per every person.
+What happens is that you get an architecture capable of doing **one shot learning**,  we have only single image per class.
 
 * We want to check check if the person is familar for us, the photo of the image is called **Query**
 
