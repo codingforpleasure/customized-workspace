@@ -7,7 +7,7 @@
          * [LeakyReLU](#leakyrelu)
          * [Gelu (Gaussian Error Linear Unit)](#gelu-gaussian-error-linear-unit)
 
-<!-- Added by: gil_diy, at: Tue 01 Mar 2022 10:23:35 IST -->
+<!-- Added by: gil_diy, at: Tue 01 Mar 2022 10:24:23 IST -->
 
 <!--te-->
 
@@ -36,7 +36,7 @@ tinuous function.
 ### Tanh (Hyperbolic Tangent)
 
 <p align="center">
-  <img width="400" src="images/activation-functions/Hyperbolic_tangent.jpg" title="Look into the image">
+  <img width="600" src="images/activation-functions/Hyperbolic_tangent.jpg" title="Look into the image">
 </p>
 
 ### ReLU (Rectified Linear Unit)
