@@ -7,7 +7,7 @@
          * [LeakyReLU](#leakyrelu)
          * [Gelu (Gaussian Error Linear Unit)](#gelu-gaussian-error-linear-unit)
 
-<!-- Added by: gil_diy, at: Tue 01 Mar 2022 10:20:05 IST -->
+<!-- Added by: gil_diy, at: Tue 01 Mar 2022 10:22:05 IST -->
 
 <!--te-->
 
@@ -24,10 +24,9 @@ to a single layer, and you can’t solve very complex problems with that. Conver
 large enough DNN with nonlinear activations can theoretically approximate any con‐
 tinuous function.
 
-<p align="center"> <!-- style="width:400px;" -->
-  <img src="images/neural-networks/activation_function_and_their_derivatives.png" title="tool tip here">
+<p align="center">
+  <img width="600" src="images/activation-functions/activation_function_and_their_derivatives.png" title="Look into the image">
 </p>
-
 
 
 [activation functions](https://keras.io/api/layers/activations/)
