@@ -8,7 +8,7 @@
          * [LeakyReLU](#leakyrelu)
          * [Gelu (Gaussian Error Linear Unit)](#gelu-gaussian-error-linear-unit)
 
-<!-- Added by: gil_diy, at: Tue 01 Mar 2022 10:28:26 IST -->
+<!-- Added by: gil_diy, at: Tue 01 Mar 2022 10:28:34 IST -->
 
 <!--te-->
 
@@ -49,7 +49,7 @@ tinuous function.
 
 ### ReLU (Rectified Linear Unit)
 
-* AlexNet computer vision architecture uses the **ReLU** activation function, as the computer vision architecture ResNet.
+* **AlexNet** computer vision architecture uses the **ReLU** activation function, as the computer vision architecture **ResNet**.
 
 <p align="center">
   <img width="400" src="images/activation-functions/Relu.jpg" title="Look into the image">
