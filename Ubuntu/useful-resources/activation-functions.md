@@ -2,12 +2,12 @@
    * [Activation functions](#activation-functions)
       * [Why to use activation functions?](#why-to-use-activation-functions)
       * [Type of Activation Layers](#type-of-activation-layers)
-         * [Tanh](#tanh)
+         * [Tanh (Hyperbolic Tangent)](#tanh-hyperbolic-tangent)
          * [ReLU (Rectified Linear Unit)](#relu-rectified-linear-unit)
          * [LeakyReLU](#leakyrelu)
          * [Gelu (Gaussian Error Linear Unit)](#gelu-gaussian-error-linear-unit)
 
-<!-- Added by: gil_diy, at: Tue 01 Mar 2022 10:23:11 IST -->
+<!-- Added by: gil_diy, at: Tue 01 Mar 2022 10:23:32 IST -->
 
 <!--te-->
 
@@ -33,10 +33,10 @@ tinuous function.
 
 ## Type of Activation Layers
 
-### Tanh
+### Tanh (Hyperbolic Tangent)
 
 <p align="center">
-  <img width="400" src="images/activation-functions/Relu.jpg" title="Look into the image">
+  <img width="400" src="images/activation-functions/Hyperbolic_tangent.jpg" title="Look into the image">
 </p>
 
 ### ReLU (Rectified Linear Unit)
