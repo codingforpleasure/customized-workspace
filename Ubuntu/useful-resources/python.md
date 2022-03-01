@@ -27,7 +27,7 @@
       * [Counting words with a counter](#counting-words-with-a-counter)
       * [Useful packages](#useful-packages)
 
-<!-- Added by: gil_diy, at: Tue 01 Mar 2022 09:27:32 IST -->
+<!-- Added by: gil_diy, at: Tue 01 Mar 2022 09:28:00 IST -->
 
 <!--te-->
 
@@ -337,7 +337,14 @@ d["b"] = 2
 print(d["a"])
 print(d["b"])
 print(d["c"])
+
+
+# Output:
+# 1
+# 2
+# Not Present
 ```
+
 
 ## Counting words with a counter
 
