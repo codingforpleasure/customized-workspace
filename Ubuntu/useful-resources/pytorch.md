@@ -97,7 +97,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Tue 01 Mar 2022 09:14:33 IST -->
+<!-- Added by: gil_diy, at: Tue 01 Mar 2022 09:23:41 IST -->
 
 <!--te-->
 
@@ -1668,6 +1668,7 @@ In the second half of the model, the feature map is up-sampled to the input size
 
 ## Customize optimizer in Pytorch
 
+[pytorch code repo for optimizer](https://github.com/pytorch/pytorch/blob/master/torch/optim/optimizer.py)
 
 
 ## Pytorch Built-in Datasets
