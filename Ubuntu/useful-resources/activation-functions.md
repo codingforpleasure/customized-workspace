@@ -7,8 +7,9 @@
          * [ReLU (Rectified Linear Unit)](#relu-rectified-linear-unit)
          * [LeakyReLU](#leakyrelu)
          * [Gelu (Gaussian Error Linear Unit)](#gelu-gaussian-error-linear-unit)
+      * [Nicely summary table](#nicely-summary-table)
 
-<!-- Added by: gil_diy, at: Tue 01 Mar 2022 10:30:30 IST -->
+<!-- Added by: gil_diy, at: Tue 01 Mar 2022 10:31:31 IST -->
 
 <!--te-->
 
@@ -77,3 +78,7 @@ tinuous function.
 
 
 [Link](https://medium.com/@shoray.goel/gelu-gaussian-error-linear-unit-4ec59fb2e47c)
+
+## Nicely summary table
+
+[Link](https://en.wikipedia.org/wiki/Activation_function#Table_of_activation_functions)
