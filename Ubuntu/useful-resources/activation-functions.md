@@ -3,11 +3,12 @@
       * [Why to use activation functions?](#why-to-use-activation-functions)
       * [Type of Activation Layers](#type-of-activation-layers)
          * [Tanh (Hyperbolic Tangent)](#tanh-hyperbolic-tangent)
+         * [Sigmoid](#sigmoid)
          * [ReLU (Rectified Linear Unit)](#relu-rectified-linear-unit)
          * [LeakyReLU](#leakyrelu)
          * [Gelu (Gaussian Error Linear Unit)](#gelu-gaussian-error-linear-unit)
 
-<!-- Added by: gil_diy, at: Tue 01 Mar 2022 10:24:23 IST -->
+<!-- Added by: gil_diy, at: Tue 01 Mar 2022 10:25:06 IST -->
 
 <!--te-->
 
@@ -37,6 +38,13 @@ tinuous function.
 
 <p align="center">
   <img width="600" src="images/activation-functions/Hyperbolic_tangent.jpg" title="Look into the image">
+</p>
+
+
+### Sigmoid
+
+<p align="center">
+  <img width="400" src="images/activation-functions/sigmoid.png" title="Look into the image">
 </p>
 
 ### ReLU (Rectified Linear Unit)
