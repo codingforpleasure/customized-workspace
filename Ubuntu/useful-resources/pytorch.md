@@ -97,7 +97,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Tue 01 Mar 2022 09:23:41 IST -->
+<!-- Added by: gil_diy, at: Wed 02 Mar 2022 09:52:59 IST -->
 
 <!--te-->
 
@@ -850,6 +850,22 @@ from torchvision.datasets import ImageFolder
         transform=transform_val
     )
 ```
+
+Assuming the data is arranged in the following order:
+
+```
+root/dog/xxx.png
+root/dog/xxy.png
+root/dog/[...]/xxz.png
+
+root/cat/123.png
+root/cat/nsdf3.png
+root/cat/[...]/asd932_.png
+```
+
+The advantage of `ImageFolder` it 
+
+
 
 ## Subsetting Dataset
 
