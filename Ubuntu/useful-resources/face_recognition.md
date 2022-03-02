@@ -7,7 +7,7 @@
    * [Reference](#reference)
    * [Academia papers](#academia-papers)
 
-<!-- Added by: gil_diy, at: Wed 02 Mar 2022 12:22:07 IST -->
+<!-- Added by: gil_diy, at: Wed 02 Mar 2022 12:22:16 IST -->
 
 <!--te-->
 
@@ -51,7 +51,7 @@ well known dataset is the
 
 
 <p align="center">
-  <img width="400" src="images/cnn/loss_contrastive.jpg" title="Look into the image">
+  <img width="600" src="images/cnn/loss_contrastive.jpg" title="Look into the image">
 </p>
 
 [Link](https://medium.com/visionwizard/research-for-all-in-defense-of-triplet-loss-for-person-re-identification-9cce5616fb6)
