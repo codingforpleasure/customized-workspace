@@ -5,7 +5,7 @@
       * [The training process (Road map)](#the-training-process-road-map)
       * [Install](#install)
       * [Checking versions](#checking-versions)
-      * [Show all pretrained models available in pytorch](#show-all-pretrained-models-available-in-pytorch)
+      * [Show all pretrained models available in pytorch vision](#show-all-pretrained-models-available-in-pytorch-vision)
       * [Set printing tensors nicely](#set-printing-tensors-nicely)
       * [Basics - Tensors](#basics---tensors)
          * [Create tensors](#create-tensors)
@@ -98,7 +98,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Wed 02 Mar 2022 13:04:33 IST -->
+<!-- Added by: gil_diy, at: Wed 02 Mar 2022 13:05:49 IST -->
 
 <!--te-->
 
@@ -154,7 +154,7 @@ print("torchvision version = ",torchvision.__version__)
 print("torch.version.cuda = ", torch.version.cuda)
 ```
 
-## Show all pretrained models available in pytorch
+## Show all pretrained models available in pytorch vision
 
 ```python
 from torchvision import models
