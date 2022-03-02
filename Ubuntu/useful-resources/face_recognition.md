@@ -7,7 +7,7 @@
    * [Reference](#reference)
    * [Academia papers](#academia-papers)
 
-<!-- Added by: gil_diy, at: Wed 02 Mar 2022 12:22:42 IST -->
+<!-- Added by: gil_diy, at: Wed 02 Mar 2022 12:33:45 IST -->
 
 <!--te-->
 
@@ -53,6 +53,9 @@ Using `contrastive loss function`
 <p align="center">
   <img width="600" src="images/cnn/loss_contrastive.jpg" title="Look into the image">
 </p>
+
+
+[Excellent talk about ](https://youtu.be/9hLcBgnY7cs)
 
 [Link](https://medium.com/visionwizard/research-for-all-in-defense-of-triplet-loss-for-person-re-identification-9cce5616fb6)
 
