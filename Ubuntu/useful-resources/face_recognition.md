@@ -1,5 +1,6 @@
 <!--ts-->
    * [Face Recognition](#face-recognition)
+      * [Contrastive loss](#contrastive-loss)
    * [Siamese Networks](#siamese-networks)
       * [Usage of this kind of network](#usage-of-this-kind-of-network)
       * [Network topolgy](#network-topolgy)
@@ -7,7 +8,7 @@
    * [Reference](#reference)
    * [Academia papers](#academia-papers)
 
-<!-- Added by: gil_diy, at: Wed 02 Mar 2022 12:34:37 IST -->
+<!-- Added by: gil_diy, at: Wed 02 Mar 2022 14:44:01 IST -->
 
 <!--te-->
 
@@ -49,6 +50,9 @@ What happens is that you get an architecture capable of doing **one shot learnin
 
 well known dataset is the 
 
+## Contrastive loss
+
+https://towardsdatascience.com/contrastive-loss-explaned-159f2d4a87ec
 Using `contrastive loss function`
 <p align="center">
   <img width="600" src="images/cnn/loss_contrastive.jpg" title="Look into the image">
