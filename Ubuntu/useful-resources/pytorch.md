@@ -97,7 +97,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Wed 02 Mar 2022 09:59:57 IST -->
+<!-- Added by: gil_diy, at: Wed 02 Mar 2022 10:00:01 IST -->
 
 <!--te-->
 
@@ -869,10 +869,6 @@ folder_dataset = datasets.ImageFolder(root="./data/faces/training/")
 ```
 
 The function `ImageFolder` will generate a list of tuples (image_name, class_id) in `folder_dataset.imgs`
-
-
-
-
 
 ## Subsetting Dataset
 
