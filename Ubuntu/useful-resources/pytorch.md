@@ -5,6 +5,7 @@
       * [The training process (Road map)](#the-training-process-road-map)
       * [Install](#install)
       * [Checking versions](#checking-versions)
+      * [Show all pretrian models in pytorch](#show-all-pretrian-models-in-pytorch)
       * [Set printing tensors nicely](#set-printing-tensors-nicely)
       * [Basics - Tensors](#basics---tensors)
          * [Create tensors](#create-tensors)
@@ -97,7 +98,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Wed 02 Mar 2022 10:00:01 IST -->
+<!-- Added by: gil_diy, at: Wed 02 Mar 2022 13:04:04 IST -->
 
 <!--te-->
 
@@ -151,6 +152,14 @@ Install `pip install torch torchvision`
 print("torch version = ", torch.__version__)
 print("torchvision version = ",torchvision.__version__)
 print("torch.version.cuda = ", torch.version.cuda)
+```
+
+## Show all pretrian models in pytorch
+
+```python
+from torchvision import models
+
+print("List of available models: ", dir(models))
 ```
 
 ## Set printing tensors nicely
