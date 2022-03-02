@@ -8,7 +8,7 @@
    * [Reference](#reference)
    * [Academia papers](#academia-papers)
 
-<!-- Added by: gil_diy, at: Wed 02 Mar 2022 14:44:03 IST -->
+<!-- Added by: gil_diy, at: Wed 02 Mar 2022 14:44:12 IST -->
 
 <!--te-->
 
@@ -52,7 +52,9 @@ well known dataset is the
 
 ## Contrastive loss
 
-https://towardsdatascience.com/contrastive-loss-explaned-159f2d4a87ec
+[Link](https://towardsdatascience.com/contrastive-loss-explaned-159f2d4a87ec)
+
+
 Using `contrastive loss function`
 <p align="center">
   <img width="600" src="images/cnn/loss_contrastive.jpg" title="Look into the image">
