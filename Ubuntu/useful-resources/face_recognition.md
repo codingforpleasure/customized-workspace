@@ -7,7 +7,7 @@
    * [Reference](#reference)
    * [Academia papers](#academia-papers)
 
-<!-- Added by: gil_diy, at: Tue 01 Mar 2022 15:45:42 IST -->
+<!-- Added by: gil_diy, at: Wed 02 Mar 2022 12:22:04 IST -->
 
 <!--te-->
 
@@ -46,6 +46,13 @@ What happens is that you get an architecture capable of doing **one shot learnin
   <img src="images/cnn/Triplet_loss_function_in_Siamese_Network_img2.jpg" title="tool tip here">
 </p>
 
+
+well known dataset is the 
+
+
+<p align="center">
+  <img width="400" src="images/cnn/loss_contrastive.jpg" title="Look into the image">
+</p>
 
 [Link](https://medium.com/visionwizard/research-for-all-in-defense-of-triplet-loss-for-person-re-identification-9cce5616fb6)
 
