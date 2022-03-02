@@ -7,7 +7,7 @@
    * [Reference](#reference)
    * [Academia papers](#academia-papers)
 
-<!-- Added by: gil_diy, at: Wed 02 Mar 2022 12:34:29 IST -->
+<!-- Added by: gil_diy, at: Wed 02 Mar 2022 12:34:32 IST -->
 
 <!--te-->
 
@@ -55,7 +55,7 @@ Using `contrastive loss function`
 </p>
 
 
-[Excellent implementation of Siamese Network in pytorch well exaplined](https://youtu.be/9hLcBgnY7cs)
+[Excellent implementation of Siamese Network in pytorch well explained](https://youtu.be/9hLcBgnY7cs)
 
 [Link](https://medium.com/visionwizard/research-for-all-in-defense-of-triplet-loss-for-person-re-identification-9cce5616fb6)
 
