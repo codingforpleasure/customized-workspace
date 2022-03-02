@@ -8,7 +8,7 @@
    * [Reference](#reference)
    * [Academia papers](#academia-papers)
 
-<!-- Added by: gil_diy, at: Wed 02 Mar 2022 14:44:18 IST -->
+<!-- Added by: gil_diy, at: Wed 02 Mar 2022 14:52:22 IST -->
 
 <!--te-->
 
@@ -103,3 +103,5 @@ Example of dataset is [**Omniglot**](https://github.com/brendenlake/omniglot), h
 # Academia papers
 
 [FaceNet](https://arxiv.org/pdf/1503.03832.pdf)
+
+[Dlib](http://dlib.net/dnn_face_recognition_ex.cpp.html)
