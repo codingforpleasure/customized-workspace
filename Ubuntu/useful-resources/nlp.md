@@ -12,7 +12,7 @@
             * [Drawbacks](#drawbacks)
          * [TFIDF](#tfidf)
             * [Drawbacks](#drawbacks-1)
-         * [Word Embedding](#word-embedding)
+         * [The use of pretrained Word Embedding](#the-use-of-pretrained-word-embedding)
             * [1. Word2Vec Embedding](#1-word2vec-embedding)
                * [Drawbacks](#drawbacks-2)
             * [2. GloVe Embedding (Global Vector for Word Representation)](#2-glove-embedding-global-vector-for-word-representation)
@@ -44,7 +44,7 @@
       * [Data Augmentation for NLP](#data-augmentation-for-nlp)
       * [10 Leading Language Models For NLP In 2021](#10-leading-language-models-for-nlp-in-2021)
 
-<!-- Added by: gil_diy, at: Sun 27 Feb 2022 20:05:51 IST -->
+<!-- Added by: gil_diy, at: Thu 03 Mar 2022 08:23:29 IST -->
 
 <!--te-->
 
@@ -157,7 +157,7 @@ Is a numerical statistic that is intended to reflect how important a word is to 
 * There is definitely a chance of over fitting
 
 
-### Word Embedding 
+### The use of pretrained Word Embedding 
 
 Word embedding which is n-dimensional vector space representation of words such that semantically similar words:
 
