@@ -44,7 +44,7 @@
       * [Data Augmentation for NLP](#data-augmentation-for-nlp)
       * [10 Leading Language Models For NLP In 2021](#10-leading-language-models-for-nlp-in-2021)
 
-<!-- Added by: gil_diy, at: Thu 03 Mar 2022 08:23:32 IST -->
+<!-- Added by: gil_diy, at: Thu 03 Mar 2022 09:21:21 IST -->
 
 <!--te-->
 
@@ -174,9 +174,9 @@ are closer in the vector space depending on the training data.
 
 * Word2vec takes as its input a large corpus of text and produces a vector space, typically of several hundred dimensions, with each unique word in the corpus being assigned a corresponding vector in the space.
 
-* When you train such a model over billions of tokens over a large dataset containing web articles and so forth,
-what you get is a very potent representation of each word in the vocabulary in the form of a vector. These vectors can be 300 dimensions long, i.e. each word is represented by 300 real numbers.
+* When you train such a model over billions of tokens over a large dataset containing web articles and so forth, what you get is a very potent representation of each word in the vocabulary in the form of a vector. These vectors can be 300 dimensions long, i.e. each word is represented by 300 real numbers.
 
+* Pre-trained word embedding is an example of **Transfer Learning**. The main idea behind it is to **use public embeddings that are already trained on large datasets**. Specifically, instead of initializing our neural network weights randomly, we will set these pre trained embeddings as initialization weights. This trick helps to accelerate training and boost the performance of NLP models.
 
 * Word2vec can utilize either of two model architectures to produce a distributed representation of words: 
 
@@ -204,6 +204,9 @@ model = Word2Vec(sent, min_count=1,size= 50,workers=3, window =3, sg = 1) # sg =
 
 Belongs to Stanford (2016), training is **performed on aggregated global word-word co-occurrence statistics from a corpus**, and the resulting representations showcase interesting linear substructures of **the word vector space**. 
 
+
+
+[Example for creating embedding matrix](https://gist.github.com/Athena75/40c18e9a1c435a08a54880436c9f5ff7#file-embedding_matrix-py)
 
 [Github](https://github.com/stanfordnlp/GloVe)
 
