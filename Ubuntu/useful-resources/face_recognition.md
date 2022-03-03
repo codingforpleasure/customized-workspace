@@ -8,7 +8,7 @@
    * [Reference](#reference)
    * [Academia papers](#academia-papers)
 
-<!-- Added by: gil_diy, at: Wed 02 Mar 2022 14:52:27 IST -->
+<!-- Added by: gil_diy, at: Thu 03 Mar 2022 11:36:39 IST -->
 
 <!--te-->
 
@@ -67,9 +67,8 @@ Using `contrastive loss function`
 [Link](https://medium.com/visionwizard/research-for-all-in-defense-of-triplet-loss-for-person-re-identification-9cce5616fb6)
 
 
-
+[Triplet Loss well exaplained](https://omoindrot.github.io/triplet-loss)
 [Triplet Loss](https://youtu.be/d2XB5-tuCWU)
-
 [Few-Shot Learning](https://youtu.be/hE7eGew4eeg)
 
 
