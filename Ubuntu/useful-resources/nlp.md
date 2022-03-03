@@ -44,7 +44,7 @@
       * [Data Augmentation for NLP](#data-augmentation-for-nlp)
       * [10 Leading Language Models For NLP In 2021](#10-leading-language-models-for-nlp-in-2021)
 
-<!-- Added by: gil_diy, at: Thu 03 Mar 2022 09:21:26 IST -->
+<!-- Added by: gil_diy, at: Thu 03 Mar 2022 17:50:36 IST -->
 
 <!--te-->
 
@@ -374,8 +374,6 @@ an enltailment, contradiction, Neutral.
 ## BERT Varients
 
 ### ALBERT (A Lite version of BERT)
-
-
 
 ### RoBERT
 
