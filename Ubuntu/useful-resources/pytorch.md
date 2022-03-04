@@ -37,6 +37,7 @@
          * [Defining Cuda device](#defining-cuda-device)
          * [Move the tensor onto CUDA device](#move-the-tensor-onto-cuda-device)
          * [Move the tensors to CPU](#move-the-tensors-to-cpu)
+         * [Delete model from GPU](#delete-model-from-gpu)
       * [matrix multiplication](#matrix-multiplication-1)
       * [Basic functions in pytorch](#basic-functions-in-pytorch)
       * [Clipping tensors](#clipping-tensors)
@@ -99,7 +100,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Fri 04 Mar 2022 18:01:45 IST -->
+<!-- Added by: gil_diy, at: Fri 04 Mar 2022 18:20:09 IST -->
 
 <!--te-->
 
@@ -679,6 +680,21 @@ print(x.device)
 
 ```python
 predictions.detach().cpu().numpy()
+```
+### Delete model from GPU
+
+```python
+import gc
+
+example_model = ExampleModel().cuda()
+
+del example_model
+
+gc.collect()
+
+# The model will normally stay on the cache until something takes it's place
+torch.cuda.empty_cache()
+
 ```
 
 ## matrix multiplication 
