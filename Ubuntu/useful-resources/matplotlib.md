@@ -15,6 +15,7 @@
       * [Pie Charts](#pie-charts)
       * [Stack Plots](#stack-plots)
       * [Histograms](#histograms)
+         * [Easily check](#easily-check)
       * [Boxplot](#boxplot)
       * [Scatter Plots](#scatter-plots)
       * [Stem plot](#stem-plot)
@@ -42,7 +43,7 @@
       * [Writing mathematical expression](#writing-mathematical-expression)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Sat 12 Feb 2022 09:58:42 IST -->
+<!-- Added by: gil_diy, at: Fri 04 Mar 2022 17:40:29 IST -->
 
 <!--te-->
 
@@ -437,7 +438,18 @@ def histogram_basic_with_declared_bins():
 plt.hist(arr, bins='auto')
 ```
 
+
+### Easily check 
+
+```python
+housing.hist(bins=50, figsize=(20,15))
+plt.show()
+```
+
+
 [Reference](https://www.youtube.com/watch?v=XDv6T4a0RNc&list=PL-osiE80TeTvipOqomVEeZ1HRrcEvtZB_&index=6)
+
+
 
 ## Boxplot
 ```python
