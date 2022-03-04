@@ -43,7 +43,7 @@
       * [Writing mathematical expression](#writing-mathematical-expression)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Fri 04 Mar 2022 17:40:33 IST -->
+<!-- Added by: gil_diy, at: Fri 04 Mar 2022 17:42:11 IST -->
 
 <!--te-->
 
@@ -446,6 +446,9 @@ housing.hist(bins=50, figsize=(20,15))
 plt.show()
 ```
 
+<p align="center">
+  <img width="400" src="images/matplotlib/" title="Look into the image">
+</p>
 
 [Reference](https://www.youtube.com/watch?v=XDv6T4a0RNc&list=PL-osiE80TeTvipOqomVEeZ1HRrcEvtZB_&index=6)
 
