@@ -9,6 +9,7 @@
       * [Set printing tensors nicely](#set-printing-tensors-nicely)
       * [Basics - Tensors](#basics---tensors)
          * [Create tensors](#create-tensors)
+            * [Create tensor directly on GPU](#create-tensor-directly-on-gpu)
             * [Create a tensor with attributes from another tensor](#create-a-tensor-with-attributes-from-another-tensor)
             * [Create a tensor from numpy array](#create-a-tensor-from-numpy-array)
             * [Create a numpy array from tensor](#create-a-numpy-array-from-tensor)
@@ -98,7 +99,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Wed 02 Mar 2022 13:05:49 IST -->
+<!-- Added by: gil_diy, at: Fri 04 Mar 2022 18:00:52 IST -->
 
 <!--te-->
 
@@ -171,6 +172,12 @@ torch.set_printoptions(precision=10) # print floating point nicely
 ## Basics - Tensors
 
 ### Create tensors
+
+#### Create tensor directly on GPU
+
+```python
+
+```
 
 #### Create a tensor with attributes from another tensor
 
