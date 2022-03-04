@@ -100,7 +100,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Fri 04 Mar 2022 18:29:25 IST -->
+<!-- Added by: gil_diy, at: Fri 04 Mar 2022 18:29:31 IST -->
 
 <!--te-->
 
@@ -1695,7 +1695,9 @@ It's the job of the network's designer to choose those values.
 [Part2 : Hyperparameter Tuning and Experimenting - Training Deep Neural Networks](https://youtu.be/ycxulUVoNbk?list=PLZbbT5o_s2xrfNyHZsM6ufI0iZENK9xgG)
 
 
-[Link](https://youtu.be/RLqsxWaQdHE)
+[Pytorch TensorBoard Tutorial](https://youtu.be/RLqsxWaQdHE)
+
+
 
 ## Finetuning Torchvision Models
 
