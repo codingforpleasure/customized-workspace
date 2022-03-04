@@ -99,7 +99,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Fri 04 Mar 2022 18:00:52 IST -->
+<!-- Added by: gil_diy, at: Fri 04 Mar 2022 18:01:41 IST -->
 
 <!--te-->
 
@@ -176,7 +176,7 @@ torch.set_printoptions(precision=10) # print floating point nicely
 #### Create tensor directly on GPU
 
 ```python
-
+my_tensor = torch.ones((100,64,64), device = 'cuda')
 ```
 
 #### Create a tensor with attributes from another tensor
