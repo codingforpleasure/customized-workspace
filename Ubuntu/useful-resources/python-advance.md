@@ -1,4 +1,13 @@
 <!--ts-->
+   * [What is the meaning of asterisk in python?](#what-is-the-meaning-of-asterisk-in-python)
+      * [Single asterisks for unpacking into function call](#single-asterisks-for-unpacking-into-function-call)
+      * [Single astrisks for tuple unpacking](#single-astrisks-for-tuple-unpacking)
+      * [Double Asterisks usage](#double-asterisks-usage)
+      * [Magic methods (dunder methods)](#magic-methods-dunder-methods)
+      * [Reference](#reference)
+
+<!-- Added by: gil_diy, at: Fri 04 Mar 2022 15:05:44 IST -->
+
 <!--te-->
 
 # What is the meaning of asterisk in python?
@@ -91,10 +100,14 @@ filename = "{year}-{month}-{day}-{artist}-{title}.txt".format(
 2020-01-01-Beethoven-Symphony No 5.txt
 ```
 
+## 
 
-# Magic methods (dunder methods)
+## Magic methods (dunder methods)
 
 different names which start and end with the double underscore. They are called as magic methods
+
+
+
 
 ## Reference
 [Link](https://treyhunner.com/2018/10/asterisks-in-python-what-they-are-and-how-to-use-them/)
