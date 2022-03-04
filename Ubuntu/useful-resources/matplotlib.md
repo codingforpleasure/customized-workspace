@@ -43,7 +43,7 @@
       * [Writing mathematical expression](#writing-mathematical-expression)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Fri 04 Mar 2022 17:42:24 IST -->
+<!-- Added by: gil_diy, at: Fri 04 Mar 2022 17:42:47 IST -->
 
 <!--te-->
 
@@ -447,7 +447,7 @@ plt.show()
 ```
 
 <p align="center">
-  <img width="400" src="images/matplotlib/hists.jpg" title="Look into the image">
+  <img width="600" src="images/matplotlib/hists.jpg" title="Look into the image">
 </p>
 
 [Reference](https://www.youtube.com/watch?v=XDv6T4a0RNc&list=PL-osiE80TeTvipOqomVEeZ1HRrcEvtZB_&index=6)
