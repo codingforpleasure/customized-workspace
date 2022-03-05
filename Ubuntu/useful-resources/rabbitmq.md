@@ -4,7 +4,7 @@
          * [Publishing a message](#publishing-a-message)
          * [Consuming a message](#consuming-a-message)
 
-<!-- Added by: gil_diy, at: Sat 05 Mar 2022 15:42:20 IST -->
+<!-- Added by: gil_diy, at: Sat 05 Mar 2022 15:43:49 IST -->
 
 <!--te-->
 
@@ -32,3 +32,7 @@ The exchange forwards the message to a queue.
 The Consumer picks up a message from a queue and consume it.
 
 An exchange is connected to a queue by a binding key.
+
+# 
+
+[Link](https://youtu.be/deG25y_r6OY)
