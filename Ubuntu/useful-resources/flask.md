@@ -9,7 +9,7 @@
          * [Flask](#flask-1)
          * [How to prepare Flask in production?](#how-to-prepare-flask-in-production)
 
-<!-- Added by: gil_diy, at: Sat 05 Mar 2022 11:01:30 IST -->
+<!-- Added by: gil_diy, at: Sat 05 Mar 2022 11:01:38 IST -->
 
 <!--te-->
 
@@ -122,7 +122,7 @@ Many more examples are shown here: [Link](http://jinja.pocoo.org/docs/2.10/templ
 
 ### Flask 
 
-[Link](https://www.toptal.com/flask/flask-production-recipes)
+[Flask Production Recipes](https://www.toptal.com/flask/flask-production-recipes)
 
 
 ### How to prepare Flask in production?
