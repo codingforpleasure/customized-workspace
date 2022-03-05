@@ -4,7 +4,7 @@
          * [Publishing a message](#publishing-a-message)
          * [Consuming a message](#consuming-a-message)
 
-<!-- Added by: gil_diy, at: Sat 05 Mar 2022 15:46:25 IST -->
+<!-- Added by: gil_diy, at: Sat 05 Mar 2022 15:47:14 IST -->
 
 <!--te-->
 
@@ -24,6 +24,8 @@ The entities in an **Advance Message Queuing Protocol** standardizes messaging u
 * **Consumer** receives messages from **queue**
 
 * **Binding** connects an exchange with queue using **binding key**
+
+* Exchange compares **routing key** with binding key
 
 
 ## RabbitMQ Operations
