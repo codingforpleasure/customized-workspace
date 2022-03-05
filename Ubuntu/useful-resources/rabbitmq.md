@@ -4,7 +4,7 @@
          * [Publishing a message](#publishing-a-message)
          * [Consuming a message](#consuming-a-message)
 
-<!-- Added by: gil_diy, at: Sat 05 Mar 2022 15:45:10 IST -->
+<!-- Added by: gil_diy, at: Sat 05 Mar 2022 15:46:25 IST -->
 
 <!--te-->
 
@@ -19,7 +19,11 @@ The entities in an **Advance Message Queuing Protocol** standardizes messaging u
 
 **Core concepts**
 
+* **Producer** emits messages to **exchange**
 
+* **Consumer** receives messages from **queue**
+
+* **Binding** connects an exchange with queue using **binding key**
 
 
 ## RabbitMQ Operations
