@@ -8,7 +8,7 @@
          * [Flask forms](#flask-forms)
          * [How to prepare Flask in production?](#how-to-prepare-flask-in-production)
 
-<!-- Added by: gil_diy, at: Sat 05 Mar 2022 11:00:26 IST -->
+<!-- Added by: gil_diy, at: Sat 05 Mar 2022 11:00:28 IST -->
 
 <!--te-->
 
