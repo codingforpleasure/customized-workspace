@@ -8,7 +8,7 @@
          * [Flask forms](#flask-forms)
          * [How to prepare Flask in production?](#how-to-prepare-flask-in-production)
 
-<!-- Added by: gil_diy, at: Sat 05 Mar 2022 10:45:00 IST -->
+<!-- Added by: gil_diy, at: Sat 05 Mar 2022 10:59:46 IST -->
 
 <!--te-->
 
@@ -125,3 +125,10 @@ Although Flask has a built-in web server, as we all know, it’s not suitable fo
 A common choice for that is **Gunicorn—a Python WSGI HTTP server**.
 
 The Web Server Gateway Interface (WSGI, pronounced whiskey[1][2] or WIZ-ghee[3]) is a simple calling convention for web servers to forward requests to web applications or frameworks written in the Python programming language.
+
+* Serving static files and proxying request with Nginx. While being an HTTP web server, Gunicorn, in turn, is an application server not suited to face the web.
+That’s why we need Nginx as a reverse proxy and to serve static files. In case we need to scale up our application to multiple servers, Nginx will take care of load balancing as well.
+
+
+
+Flask + Gunicorn + Nginx + Docker
