@@ -17,7 +17,7 @@
       * [Biasand Variance Tradeoff](#biasand-variance-tradeoff)
       * [K Nearest Neighbhors (KNN)](#k-nearest-neighbhors-knn)
 
-<!-- Added by: gil_diy, at: Sat 05 Mar 2022 09:21:58 IST -->
+<!-- Added by: gil_diy, at: Sat 05 Mar 2022 09:23:09 IST -->
 
 <!--te-->
 
@@ -172,6 +172,9 @@ suppose a bank is concern for the potential for loan not be repaid, if previous 
   <img width="400" src="images/machine-learning/high_variance.jpg" title="Look into the image">
 </p>
 
+
+
+* We always aim for low bias and low variance:
 
 <p align="center">
   <img width="400" src="images/machine-learning/low_bias_low_variance.jpg" title="Look into the image">
