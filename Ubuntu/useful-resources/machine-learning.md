@@ -17,7 +17,7 @@
       * [Biasand Variance Tradeoff](#biasand-variance-tradeoff)
       * [K Nearest Neighbhors (KNN)](#k-nearest-neighbhors-knn)
 
-<!-- Added by: gil_diy, at: Sat 05 Mar 2022 09:23:09 IST -->
+<!-- Added by: gil_diy, at: Sat 05 Mar 2022 09:23:11 IST -->
 
 <!--te-->
 
