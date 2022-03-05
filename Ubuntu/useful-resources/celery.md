@@ -2,7 +2,7 @@
    * [Celery](#celery)
       * [What is Celery and why use it with Flask?](#what-is-celery-and-why-use-it-with-flask)
 
-<!-- Added by: gil_diy, at: Sat 05 Mar 2022 11:15:23 IST -->
+<!-- Added by: gil_diy, at: Sat 05 Mar 2022 11:15:26 IST -->
 
 <!--te-->
 
