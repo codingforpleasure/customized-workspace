@@ -14,9 +14,10 @@
       * [<strong>Non linear regression</strong>](#non-linear-regression)
       * [Regression accuracy](#regression-accuracy)
       * [Classification algorithms in machine learning](#classification-algorithms-in-machine-learning)
+      * [Biasand Variance Tradeoff](#biasand-variance-tradeoff)
       * [K Nearest Neighbhors (KNN)](#k-nearest-neighbhors-knn)
 
-<!-- Added by: gil_diy, at: Wed 02 Feb 2022 08:23:45 IST -->
+<!-- Added by: gil_diy, at: Sat 05 Mar 2022 09:01:28 IST -->
 
 <!--te-->
 
@@ -154,6 +155,12 @@ suppose a bank is concern for the potential for loan not be repaid, if previous 
   <img src="images/machine-learning/classifying_example_over_under_fitting.png" title="sigmoid">
 </p>
 
+## Biasand Variance Tradeoff
+
+```python
+
+```
+
 ## K Nearest Neighbhors (KNN)
 
 Imagine that a telecommunications provider has segmented his customer base by service usage patterns, categorizing the customers into four groups.
@@ -235,10 +242,6 @@ In this situation, the average or median target value of
 the nearest neighbors is used to obtain the predicted value for the new case.
 For example, assume that you are predicting the price of a home based on its feature set, such as number of rooms, square footage, the year it was built, and so on.
 You can easily find the three nearest neighbor houses of course not only based on distance but also based on all the attributes and then predict the price of the house as the medium of neighbors.
-
-
-
-
 
 
 
