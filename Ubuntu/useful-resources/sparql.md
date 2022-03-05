@@ -1,5 +1,5 @@
 <!--ts-->
-   * [SPARQL](#sparql)
+   * [SPARQL “SPARQL Protocol and RDF Query Language”](#sparql-sparql-protocol-and-rdf-query-language)
       * [Introduction](#introduction)
          * [Understanding SPO (Subject, Predicate, Object) also known as a Semantic Triple](#understanding-spo-subject-predicate-object-also-known-as-a-semantic-triple)
          * [List of prefixes](#list-of-prefixes)
@@ -13,6 +13,8 @@
          * [Service - label](#service---label)
             * [Alias](#alias)
          * [Modifiers (Group by, Having, Order by, Limit, Offset)](#modifiers-group-by-having-order-by-limit-offset)
+            * [Group by](#group-by)
+            * [Group_concat](#group_concat)
             * [limit](#limit)
             * [offset](#offset)
       * [Aggregate functions](#aggregate-functions)
@@ -25,12 +27,14 @@
          * [Get links to wikipedia](#get-links-to-wikipedia)
       * [Great references](#great-references)
 
-<!-- Added by: gil_diy, at: 2019-07-20T18:11+03:00 -->
+<!-- Added by: gil_diy, at: Sat 05 Mar 2022 09:41:37 IST -->
 
 <!--te-->
 
 
-# SPARQL
+# SPARQL “SPARQL Protocol and RDF Query Language”
+
+Enables users to query information from databases or any data source that can be mapped to RDF.
 
 ## Introduction
 
