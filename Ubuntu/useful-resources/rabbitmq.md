@@ -3,7 +3,7 @@
       * [RabbitMQ Operations](#rabbitmq-operations)
          * [Publishing a message](#publishing-a-message)
 
-<!-- Added by: gil_diy, at: Sat 05 Mar 2022 15:37:05 IST -->
+<!-- Added by: gil_diy, at: Sat 05 Mar 2022 15:37:39 IST -->
 
 <!--te-->
 
@@ -20,4 +20,4 @@ The entities in an **Advance Message Queuing Protocol** standardizes messaging u
 
 ### Publishing a message
 
-**Producer** sends a message, it uses an **exchange**.
+**Producer** sends a message, it uses an **exchange**. The exchange forwards a message to a queue.
