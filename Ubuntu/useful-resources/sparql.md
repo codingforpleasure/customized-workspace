@@ -27,7 +27,7 @@
          * [Get links to wikipedia](#get-links-to-wikipedia)
       * [Great references](#great-references)
 
-<!-- Added by: gil_diy, at: Sat 05 Mar 2022 09:41:40 IST -->
+<!-- Added by: gil_diy, at: Sat 05 Mar 2022 09:43:40 IST -->
 
 <!--te-->
 
@@ -35,6 +35,9 @@
 # SPARQL “SPARQL Protocol and RDF Query Language”
 
 Enables users to query information from databases or any data source that can be mapped to RDF.
+
+An RDF query language is a computer language,
+specifically a query language for databases, able to retrieve and manipulate data stored in Resource Description Framework (RDF) format. 
 
 ## Introduction
 
