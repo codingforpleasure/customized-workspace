@@ -4,7 +4,7 @@
          * [Publishing a message](#publishing-a-message)
          * [Consuming a message](#consuming-a-message)
 
-<!-- Added by: gil_diy, at: Sat 05 Mar 2022 15:47:14 IST -->
+<!-- Added by: gil_diy, at: Sat 05 Mar 2022 15:48:37 IST -->
 
 <!--te-->
 
@@ -27,6 +27,9 @@ The entities in an **Advance Message Queuing Protocol** standardizes messaging u
 
 * Exchange compares **routing key** with binding key
 
+* Messages distribution depends on **exchange type**
+
+* Exchange types: fanouts, direct, topic and headers.
 
 ## RabbitMQ Operations
 
