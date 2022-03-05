@@ -15,8 +15,9 @@
          * [Get which apps are running](#get-which-apps-are-running)
          * [list all services](#list-all-services)
          * [View logs](#view-logs)
+         * [Creating block diagrams from docker-compose.yml](#creating-block-diagrams-from-docker-composeyml)
 
-<!-- Added by: gil_diy, at: 2019-06-11T17:19+03:00 -->
+<!-- Added by: gil_diy, at: Sat 05 Mar 2022 10:32:45 IST -->
 
 <!--te-->
 
@@ -101,3 +102,7 @@ To view logs (from a node app), just run:
 docker-compose logs -f <service-name>
 ```
 
+### Creating block diagrams from docker-compose.yml
+
+[Link](https://medium.com/@krishnakummar/creating-block-diagrams-from-your-docker-compose-yml-da9d5a2450b4)
+[Link](http://www.my-website.com)
