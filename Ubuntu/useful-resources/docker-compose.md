@@ -17,7 +17,7 @@
          * [View logs](#view-logs)
          * [Creating block diagrams from docker-compose.yml](#creating-block-diagrams-from-docker-composeyml)
 
-<!-- Added by: gil_diy, at: Sat 05 Mar 2022 10:32:45 IST -->
+<!-- Added by: gil_diy, at: Sat 05 Mar 2022 10:33:12 IST -->
 
 <!--te-->
 
@@ -105,4 +105,3 @@ docker-compose logs -f <service-name>
 ### Creating block diagrams from docker-compose.yml
 
 [Link](https://medium.com/@krishnakummar/creating-block-diagrams-from-your-docker-compose-yml-da9d5a2450b4)
-[Link](http://www.my-website.com)
