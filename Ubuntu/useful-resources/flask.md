@@ -6,9 +6,10 @@
       * [Template](#template)
          * [Rendering Templates](#rendering-templates)
          * [Flask forms](#flask-forms)
+         * [Flask](#flask-1)
          * [How to prepare Flask in production?](#how-to-prepare-flask-in-production)
 
-<!-- Added by: gil_diy, at: Sat 05 Mar 2022 11:00:28 IST -->
+<!-- Added by: gil_diy, at: Sat 05 Mar 2022 11:01:27 IST -->
 
 <!--te-->
 
@@ -117,6 +118,11 @@ Many more examples are shown here: [Link](http://jinja.pocoo.org/docs/2.10/templ
 
 [Registration Form](https://youtu.be/UIJKdCIEXUQ?t=153)
 [Login Form](https://youtu.be/UIJKdCIEXUQ?t=528)
+
+
+### Flask 
+
+[Link](https://www.toptal.com/flask/flask-production-recipes)
 
 
 ### How to prepare Flask in production?
