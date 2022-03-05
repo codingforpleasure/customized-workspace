@@ -8,7 +8,7 @@
          * [Flask forms](#flask-forms)
          * [How to prepare Flask in production?](#how-to-prepare-flask-in-production)
 
-<!-- Added by: gil_diy, at: Sat 05 Mar 2022 10:44:23 IST -->
+<!-- Added by: gil_diy, at: Sat 05 Mar 2022 10:45:00 IST -->
 
 <!--te-->
 
@@ -121,6 +121,7 @@ Many more examples are shown here: [Link](http://jinja.pocoo.org/docs/2.10/templ
 
 ### How to prepare Flask in production?
 
- Although Flask has a built-in web server, as we all know, it’s not suitable for production and needs to be put behind a real web server able to communicate with Flask through a **WSGI protocol**
+Although Flask has a built-in web server, as we all know, it’s not suitable for production and needs to be put behind a real web server able to communicate with Flask through a **WSGI protocol**
+A common choice for that is **Gunicorn—a Python WSGI HTTP server**.
 
- * The Web Server Gateway Interface (WSGI, pronounced whiskey[1][2] or WIZ-ghee[3]) is a simple calling convention for web servers to forward requests to web applications or frameworks written in the Python programming language.
+The Web Server Gateway Interface (WSGI, pronounced whiskey[1][2] or WIZ-ghee[3]) is a simple calling convention for web servers to forward requests to web applications or frameworks written in the Python programming language.
