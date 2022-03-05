@@ -17,7 +17,7 @@
       * [Biasand Variance Tradeoff](#biasand-variance-tradeoff)
       * [K Nearest Neighbhors (KNN)](#k-nearest-neighbhors-knn)
 
-<!-- Added by: gil_diy, at: Sat 05 Mar 2022 09:01:28 IST -->
+<!-- Added by: gil_diy, at: Sat 05 Mar 2022 09:04:53 IST -->
 
 <!--te-->
 
@@ -157,9 +157,7 @@ suppose a bank is concern for the potential for loan not be repaid, if previous 
 
 ## Biasand Variance Tradeoff
 
-```python
-
-```
+* **Bias** - An error 
 
 ## K Nearest Neighbhors (KNN)
 
