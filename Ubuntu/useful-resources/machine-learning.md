@@ -17,7 +17,7 @@
       * [Biasand Variance Tradeoff](#biasand-variance-tradeoff)
       * [K Nearest Neighbhors (KNN)](#k-nearest-neighbhors-knn)
 
-<!-- Added by: gil_diy, at: Sat 05 Mar 2022 09:13:03 IST -->
+<!-- Added by: gil_diy, at: Sat 05 Mar 2022 09:21:25 IST -->
 
 <!--te-->
 
@@ -162,6 +162,18 @@ suppose a bank is concern for the potential for loan not be repaid, if previous 
 
 * **Variance** - An error . **High variance** can cause an algorithm to model the random noise in the training data, rather than the intended outputs. In other words, model with high variance pays a lot of information to traing data and **does not generlize on the data which it hasn't seen before**.
 
+<p align="center">
+  <img width="400" src="images/machine-learning/high_bias.jpg" title="Look into the image">
+</p>
+
+<p align="center">
+  <img width="400" src="images/machine-learning/high_variance.jpg" title="Look into the image">
+</p>
+
+
+<p align="center">
+  <img width="400" src="images/machine-learning/low_bias_low_variance.jpg" title="Look into the image">
+</p>
 
 
 ## K Nearest Neighbhors (KNN)
