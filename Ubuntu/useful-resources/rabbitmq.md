@@ -4,7 +4,7 @@
          * [Publishing a message](#publishing-a-message)
          * [Consuming a message](#consuming-a-message)
 
-<!-- Added by: gil_diy, at: Sat 05 Mar 2022 15:39:20 IST -->
+<!-- Added by: gil_diy, at: Sat 05 Mar 2022 15:42:02 IST -->
 
 <!--te-->
 
@@ -24,6 +24,12 @@ The entities in an **Advance Message Queuing Protocol** standardizes messaging u
 **Producer** sends a message, it uses an **exchange**.
 The exchange forwards the message to a queue.
 
+* The producer needs to specify a message with a binding key.
+
+
+
 ### Consuming a message
 
 The Consumer picks up a message from a queue and consume it.
+
+An exchange is connected to a queue by a binding key.
