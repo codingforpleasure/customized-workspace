@@ -1,10 +1,14 @@
 <!--ts-->
    * [Flask](#flask)
+      * [A simple Flask application](#a-simple-flask-application)
       * [Running flask](#running-flask)
+      * [Poject structure](#poject-structure)
       * [Template](#template)
          * [Rendering Templates](#rendering-templates)
+         * [Flask forms](#flask-forms)
+         * [Flask in production](#flask-in-production)
 
-<!-- Added by: gil_diy, at: 2019-05-13T10:30+03:00 -->
+<!-- Added by: gil_diy, at: Sat 05 Mar 2022 10:42:31 IST -->
 
 <!--te-->
 
@@ -113,3 +117,7 @@ Many more examples are shown here: [Link](http://jinja.pocoo.org/docs/2.10/templ
 
 [Registration Form](https://youtu.be/UIJKdCIEXUQ?t=153)
 [Login Form](https://youtu.be/UIJKdCIEXUQ?t=528)
+
+
+### Flask in production
+
