@@ -1,8 +1,9 @@
 <!--ts-->
    * [Celery](#celery)
       * [What is Celery and why use it with Flask?](#what-is-celery-and-why-use-it-with-flask)
+      * [Examples](#examples)
 
-<!-- Added by: gil_diy, at: Sat 05 Mar 2022 11:15:26 IST -->
+<!-- Added by: gil_diy, at: Sat 05 Mar 2022 12:59:15 IST -->
 
 <!--te-->
 
@@ -16,3 +17,10 @@ tasks in a convenient and **asynchronous manner**.
 
 Task data is stored in a supported back-end storage engine, like RabbitMQ or Redis.
 
+
+
+## Examples
+
+
+## 
+[Link](https://youtu.be/THxCy-6EnQM?t=61)
