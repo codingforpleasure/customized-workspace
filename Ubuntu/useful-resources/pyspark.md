@@ -14,7 +14,7 @@
          * [See datatypes of columns](#see-datatypes-of-columns)
          * [Get simple statistics for each column](#get-simple-statistics-for-each-column)
 
-<!-- Added by: gil_diy, at: Sun 06 Mar 2022 11:49:02 IST -->
+<!-- Added by: gil_diy, at: Sun 06 Mar 2022 11:49:57 IST -->
 
 <!--te-->
 
@@ -92,6 +92,17 @@ print(df_spark.dtypes)
 ```
 
 ### Get simple statistics for each column
+
+Get the basic statistics such as:
+
+* count
+* mean
+* stddev
+* min
+* max
+
+
+
 
 ```python
 print(df_spark.describe().show())
