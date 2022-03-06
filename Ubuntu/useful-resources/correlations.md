@@ -10,7 +10,7 @@
          * [Correlation ratio](#correlation-ratio)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Sun 06 Mar 2022 18:50:57 IST -->
+<!-- Added by: gil_diy, at: Sun 06 Mar 2022 18:53:48 IST -->
 
 <!--te-->
 
@@ -23,7 +23,7 @@
 
 
 <p align="center">
-  <img width="400" src="images/correlations/" title="Look into the image">
+  <img width="400" src="images/correlations/pearson_correlation.jpg" title="Look into the image">
 </p>
 
 ### Spearman
