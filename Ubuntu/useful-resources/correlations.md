@@ -8,8 +8,9 @@
          * [Theil's U (Uncertainty coefficient)](#theils-u-uncertainty-coefficient)
       * [Association between categorical to numerical](#association-between-categorical-to-numerical)
          * [Correlation ratio](#correlation-ratio)
+   * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Sun 06 Mar 2022 18:24:17 IST -->
+<!-- Added by: gil_diy, at: Sun 06 Mar 2022 18:24:42 IST -->
 
 <!--te-->
 
@@ -97,3 +98,7 @@ def correlation_ratio(categories, measurements):
         eta = np.sqrt(numerator/denominator)
     return eta
 ```
+
+# Reference
+
+[Link](https://towardsdatascience.com/the-search-for-categorical-correlation-a1cf7f1888c9)
