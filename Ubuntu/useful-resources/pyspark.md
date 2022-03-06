@@ -7,8 +7,10 @@
          * [read csv](#read-csv)
          * [read json](#read-json)
          * [show data](#show-data)
+         * [Type of pyspark datframe](#type-of-pyspark-datframe)
+         * [Print data schema (simiilar to my_df.info())](#print-data-schema-simiilar-to-my_dfinfo)
 
-<!-- Added by: gil_diy, at: Sun 06 Mar 2022 11:08:36 IST -->
+<!-- Added by: gil_diy, at: Sun 06 Mar 2022 11:10:52 IST -->
 
 <!--te-->
 
@@ -50,4 +52,16 @@ df_spark = spark.read.option('header', 'true').json('my_json_file.json')
 ```python
 df_spark.show()
 ```
+
+### Type of pyspark datframe
+
+```python
+type(df_spark)
+```
+### Print data schema (simiilar to my_df.info())
+
+```python
+df_spark.printSchema()
+```
+
 
