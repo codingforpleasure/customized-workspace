@@ -24,7 +24,7 @@
             * [Filling missing values (imputation)](#filling-missing-values-imputation)
             * [Imputation with pyspark (Exactly like in sklearn)](#imputation-with-pyspark-exactly-like-in-sklearn)
 
-<!-- Added by: gil_diy, at: Sun 06 Mar 2022 13:09:19 IST -->
+<!-- Added by: gil_diy, at: Sun 06 Mar 2022 13:11:28 IST -->
 
 <!--te-->
 
@@ -199,7 +199,7 @@ print(df_spark.na.fill(value = -5555, subset = ['Age']).show())
 from pyspark.ml.features import Imputer
 
 imputer = Imputer(
-	inputCols = ['age', 'Experience', 'Salary']
-	outputcols = []
-).setStrategy("mean")
+	inputCols = ['age', 'Experience', 'Salary'],
+	outputcols = [f"{c}_imputed" for c in ['age', 'Experience', 'Salary']
+	).setStrategy("mean")
 ```
