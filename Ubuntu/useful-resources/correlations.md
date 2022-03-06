@@ -10,7 +10,7 @@
          * [Correlation ratio](#correlation-ratio)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Sun 06 Mar 2022 18:33:28 IST -->
+<!-- Added by: gil_diy, at: Sun 06 Mar 2022 18:33:31 IST -->
 
 <!--te-->
 
@@ -61,8 +61,6 @@ def cramers_v(x, y):
 * Meaning U(x,y)≠U(y,x) (while V(x,y)=V(y,x), where V is Cramer’s V)
 
 * Exactly like `Cramer’s V`, the output value is on the range of [0,1] too.
-
-
 
 
 
