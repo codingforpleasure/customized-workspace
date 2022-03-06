@@ -5,7 +5,7 @@
          * [PySpark](#pyspark)
          * [Luigi](#luigi)
 
-<!-- Added by: gil_diy, at: Sun 06 Mar 2022 09:09:02 IST -->
+<!-- Added by: gil_diy, at: Sun 06 Mar 2022 09:10:44 IST -->
 
 <!--te-->
 
@@ -15,7 +15,7 @@
 ## ETL process
 
 <p align="center">
-  <img width="400" src="images//" title="Look into the image">
+  <img width="400" src="images/ETL/etl.jpg" title="Look into the image">
 </p>
 
 * Extract
