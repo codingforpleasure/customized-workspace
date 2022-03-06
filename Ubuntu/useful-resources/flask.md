@@ -9,7 +9,7 @@
          * [Flask](#flask-1)
          * [How to prepare Flask in production?](#how-to-prepare-flask-in-production)
 
-<!-- Added by: gil_diy, at: Sun 06 Mar 2022 10:21:53 IST -->
+<!-- Added by: gil_diy, at: Sun 06 Mar 2022 10:25:27 IST -->
 
 <!--te-->
 
@@ -143,6 +143,8 @@ That’s why we need Nginx as a reverse proxy and to serve static files. In case
 
 * **Nginx** is a web server which can also be used as a reverse proxy, load balancer, mail proxy and HTTP cache.
 
+
+[Link](https://medium.com/ymedialabs-innovation/deploy-flask-app-with-nginx-using-gunicorn-and-supervisor-d7a93aa07c18)
 
 [How to deploy ML models using Flask + Gunicorn + Nginx + Docker](https://towardsdatascience.com/how-to-deploy-ml-models-using-flask-gunicorn-nginx-docker-9b32055b3d0)
 
