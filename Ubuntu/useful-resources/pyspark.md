@@ -18,8 +18,9 @@
          * [Renaming columns](#renaming-columns)
          * [Drop rows which consist of null values](#drop-rows-which-consist-of-null-values)
             * [drop with Subset](#drop-with-subset)
+            * [Filling missing values (imputation)](#filling-missing-values-imputation)
 
-<!-- Added by: gil_diy, at: Sun 06 Mar 2022 12:32:04 IST -->
+<!-- Added by: gil_diy, at: Sun 06 Mar 2022 12:45:30 IST -->
 
 <!--te-->
 
@@ -47,7 +48,7 @@ spark = SparkSession.builder.appName("Practice").getOrCreate()
 ### read csv
 
 ```python
-df_spark = spark.read.option('header', 'true').csv('my_csv_file.csv', infer)
+df_spark = spark.read.option('header', 'true').csv('my_csv_file.csv', inferSchema=True)
 ```
 
 ### read json
@@ -165,4 +166,16 @@ Subset means focus on specific columns and check for null values:
 
 ```python
 print(df_spark.na.drop(any=any, subset = ['column-name1']).show())
+```
+
+#### Filling missing values (imputation)
+
+```python
+print(df_spark.na.fill(value = -5555, subset = ['Age']).show())
+```
+
+
+pay attention in case the column is not numeric and you have opened the 
+```python
+print(df_spark.na.fill(value = -5555, subset = ['Age']).show())
 ```
