@@ -2,7 +2,7 @@
    * [Correlation](#correlation)
       * [Measure of association between two categorical features](#measure-of-association-between-two-categorical-features)
 
-<!-- Added by: gil_diy, at: Sun 06 Mar 2022 17:54:18 IST -->
+<!-- Added by: gil_diy, at: Sun 06 Mar 2022 17:55:44 IST -->
 
 <!--te-->
 
@@ -15,6 +15,8 @@ Using `Cramér's phi`, the properties are:
 
 * Cramer’s V is symmetrical — it is insensitive to swapping x and y. which means:
  `cramer_phi(x,y)` is equivalent to: `cramer_phi(y,x)`
+
+ * The value of the `Cramér's phi` is between 0 to 1, unlike perason and spearman correlation between -1 to 1.
 
 
 ```python
