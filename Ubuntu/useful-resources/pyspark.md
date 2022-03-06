@@ -28,7 +28,7 @@
          * [Not operation](#not-operation)
       * [Group by](#group-by)
 
-<!-- Added by: gil_diy, at: Sun 06 Mar 2022 13:45:32 IST -->
+<!-- Added by: gil_diy, at: Sun 06 Mar 2022 13:45:50 IST -->
 
 <!--te-->
 
@@ -230,7 +230,7 @@ print(df_spark.filter(~(df_spark['Salary'] <= 20000)).show())
 ## Group by
 
 
-After `groupby` we should apply aggregate functions such as (sum,max,min ) work together:
+After `groupby` we should apply aggregate functions such as (sum, max, min, mean) work together:
 
 ```python
 print(df_spark.groupBy('Name').sum().show())
