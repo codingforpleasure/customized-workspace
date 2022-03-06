@@ -20,9 +20,11 @@
             * [Drop rows with any](#drop-rows-with-any)
             * [Drop with Subset](#drop-with-subset)
             * [Drop with Subset](#drop-with-subset-1)
+            * [Replacing NA values](#replacing-na-values)
             * [Filling missing values (imputation)](#filling-missing-values-imputation)
+            * [Imputation with pyspark (Exactly like in sklearn)](#imputation-with-pyspark-exactly-like-in-sklearn)
 
-<!-- Added by: gil_diy, at: Sun 06 Mar 2022 12:54:38 IST -->
+<!-- Added by: gil_diy, at: Sun 06 Mar 2022 13:09:16 IST -->
 
 <!--te-->
 
@@ -173,6 +175,8 @@ Subset means focus on specific columns and check for null values:
 print(df_spark.na.drop(any=any, subset = ['column-name1']).show())
 ```
 
+#### Replacing NA values
+
 #### Filling missing values (imputation)
 
 ```python
@@ -187,4 +191,15 @@ You can focus on specific columns using the `subset` column:
 
 ```python
 print(df_spark.na.fill(value = -5555, subset = ['Age']).show())
+```
+
+#### Imputation with pyspark (Exactly like in sklearn)
+
+```python
+from pyspark.ml.features import Imputer
+
+imputer = Imputer(
+	inputCols = ['age', 'Experience', 'Salary']
+	outputcols = []
+).setStrategy("mean")
 ```
