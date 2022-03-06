@@ -5,7 +5,7 @@
          * [PySpark](#pyspark)
          * [Luigi](#luigi)
 
-<!-- Added by: gil_diy, at: Sun 06 Mar 2022 08:59:01 IST -->
+<!-- Added by: gil_diy, at: Sun 06 Mar 2022 09:09:00 IST -->
 
 <!--te-->
 
@@ -17,6 +17,12 @@
 <p align="center">
   <img width="400" src="images//" title="Look into the image">
 </p>
+
+* Extract
+
+* Transform
+
+* Load
 
 
 ## Tools for ETL
