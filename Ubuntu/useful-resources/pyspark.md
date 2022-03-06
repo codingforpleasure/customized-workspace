@@ -29,8 +29,10 @@
       * [Group by](#group-by)
          * [Aggregate function on specific column](#aggregate-function-on-specific-column)
       * [Adding new features](#adding-new-features)
+      * [ml](#ml)
+         * [Linear Regression](#linear-regression)
 
-<!-- Added by: gil_diy, at: Sun 06 Mar 2022 14:03:04 IST -->
+<!-- Added by: gil_diy, at: Sun 06 Mar 2022 14:07:08 IST -->
 
 <!--te-->
 
@@ -251,4 +253,24 @@ from pyspark.ml.feature import VectorAssmbler
 
 featureassembler = VectorAssmbler(inputCols = ["age", "Experience"], 
 								  outputCol = "Independent Features")
+```
+
+## ml 
+
+### Linear Regression
+
+```python
+from pyspark.ml.regression import LinearRegression
+
+##train test split
+train_data,test_data=finalized_data.randomSplit([0.75,0.25])
+regressor=LinearRegression(featuresCol='Independent Features', labelCol='Salary')
+regressor=regressor.fit(train_data)
+
+print(regressor.coefficients)
+# Output: DenseVector([-5000.0, 7000.0])
+
+### Intercepts
+print(regressor.intercept)
+
 ```
