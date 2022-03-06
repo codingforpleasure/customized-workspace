@@ -9,7 +9,7 @@
       * [Association between categorical to numerical](#association-between-categorical-to-numerical)
          * [Correlation ratio](#correlation-ratio)
 
-<!-- Added by: gil_diy, at: Sun 06 Mar 2022 18:12:30 IST -->
+<!-- Added by: gil_diy, at: Sun 06 Mar 2022 18:18:36 IST -->
 
 <!--te-->
 
@@ -30,7 +30,7 @@
 Using `Cramér's phi`, the properties are:
 
 * Cramer’s V is symmetrical — it is insensitive to swapping x and y. which means:
- `cramer_phi(x,y)` is equivalent to: `cramer_phi(y,x)`
+ `cramer_phi(x,y)` is equivalent to: `cramer_phi(y,x)` therefore we are losing valueable information due to the symmetry of it.
 
  * The value of the `Cramér's phi` is between 0 to 1, unlike perason and spearman correlation between -1 to 1.
 
