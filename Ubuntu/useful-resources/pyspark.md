@@ -26,8 +26,9 @@
       * [Filter operations](#filter-operations)
          * [Multiple Conditions](#multiple-conditions)
          * [Not operation](#not-operation)
+      * [Group by](#group-by)
 
-<!-- Added by: gil_diy, at: Sun 06 Mar 2022 13:39:52 IST -->
+<!-- Added by: gil_diy, at: Sun 06 Mar 2022 13:43:09 IST -->
 
 <!--te-->
 
@@ -226,3 +227,11 @@ print(df_spark.filter((df_spark['Salary'] <= 20000) & (df_spark[Salary] >= 15000
 print(df_spark.filter(~(df_spark['Salary'] <= 20000)).show())
 ```
 
+## Group by
+
+
+Groupby and aggregate functions work together:
+
+```python
+df_spark.groupBy('Name').sum()
+```
