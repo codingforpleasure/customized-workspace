@@ -7,10 +7,11 @@
          * [read csv](#read-csv)
          * [read json](#read-json)
          * [show data](#show-data)
+         * [Get Columns](#get-columns)
          * [Type of pyspark datframe](#type-of-pyspark-datframe)
          * [Print data schema (simiilar to my_df.info())](#print-data-schema-simiilar-to-my_dfinfo)
 
-<!-- Added by: gil_diy, at: Sun 06 Mar 2022 11:26:31 IST -->
+<!-- Added by: gil_diy, at: Sun 06 Mar 2022 11:35:26 IST -->
 
 <!--te-->
 
@@ -38,7 +39,7 @@ spark = SparkSession.builder.appName("Practice").getOrCreate()
 ### read csv
 
 ```python
-df_spark = spark.read.option('header', 'true').csv('my_csv_file.csv')
+df_spark = spark.read.option('header', 'true').csv('my_csv_file.csv', infer)
 ```
 
 ### read json
@@ -51,6 +52,13 @@ df_spark = spark.read.option('header', 'true').json('my_json_file.json')
 
 ```python
 df_spark.show()
+```
+
+
+### Get Columns
+
+```python
+df_spark.columns
 ```
 
 ### Type of pyspark datframe
