@@ -10,7 +10,7 @@
          * [Correlation ratio](#correlation-ratio)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Sun 06 Mar 2022 18:50:16 IST -->
+<!-- Added by: gil_diy, at: Sun 06 Mar 2022 18:50:44 IST -->
 
 <!--te-->
 
@@ -42,7 +42,7 @@ Using `Cramér's phi`, the properties are:
 
 
 <p align="center">
-  <img width="600" src="images/correlations/" title="Look into the image">
+  <img width="600" src="images/correlations/cramer_phi.jpg" title="Look into the image">
 </p>
 
 ```python
