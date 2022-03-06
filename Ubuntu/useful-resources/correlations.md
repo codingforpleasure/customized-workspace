@@ -10,7 +10,7 @@
          * [Correlation ratio](#correlation-ratio)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Sun 06 Mar 2022 18:34:27 IST -->
+<!-- Added by: gil_diy, at: Sun 06 Mar 2022 18:36:42 IST -->
 
 <!--te-->
 
@@ -54,6 +54,10 @@ def cramers_v(x, y):
 
 
 ### Theil's U (Uncertainty coefficient)
+
+<p align="center">
+  <img width="400" src="images/correlations/" title="Look into the image">
+</p>
 
 
 * Is asymmetric measure of association between categorical features.
