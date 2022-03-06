@@ -10,7 +10,7 @@
          * [Correlation ratio](#correlation-ratio)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Sun 06 Mar 2022 18:24:47 IST -->
+<!-- Added by: gil_diy, at: Sun 06 Mar 2022 18:33:28 IST -->
 
 <!--te-->
 
@@ -58,13 +58,13 @@ def cramers_v(x, y):
 
 * Is asymmetric measure of association between categorical features.
 
+* Meaning U(x,y)≠U(y,x) (while V(x,y)=V(y,x), where V is Cramer’s V)
+
 * Exactly like `Cramer’s V`, the output value is on the range of [0,1] too.
 
 
 
-```
-Unlike Cramer’s V, it is asymmetric, meaning U(x,y)≠U(y,x) (while V(x,y)=V(y,x), where V is Cramer’s V)
-```
+
 
 * Theil’s U indeed gives us much more information on the true relations between the different features.
 
