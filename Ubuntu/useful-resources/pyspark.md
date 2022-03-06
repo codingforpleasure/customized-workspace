@@ -13,7 +13,7 @@
          * [See a specific column or columns](#see-a-specific-column-or-columns)
          * [See datatypes of columns](#see-datatypes-of-columns)
 
-<!-- Added by: gil_diy, at: Sun 06 Mar 2022 11:47:00 IST -->
+<!-- Added by: gil_diy, at: Sun 06 Mar 2022 11:47:02 IST -->
 
 <!--te-->
 
