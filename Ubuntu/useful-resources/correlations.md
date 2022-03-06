@@ -10,7 +10,7 @@
          * [Correlation ratio](#correlation-ratio)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Sun 06 Mar 2022 18:34:23 IST -->
+<!-- Added by: gil_diy, at: Sun 06 Mar 2022 18:34:27 IST -->
 
 <!--te-->
 
@@ -65,7 +65,7 @@ def cramers_v(x, y):
 * Theil’s U indeed gives us much more information on the true relations between the different features.
 
 
-[Link](https://en.wikipedia.org/wiki/Uncertainty_coefficient)
+[Wikipedia](https://en.wikipedia.org/wiki/Uncertainty_coefficient)
 
 ## Association between categorical to numerical
 
