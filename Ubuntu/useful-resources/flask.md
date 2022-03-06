@@ -9,7 +9,7 @@
          * [Flask](#flask-1)
          * [How to prepare Flask in production?](#how-to-prepare-flask-in-production)
 
-<!-- Added by: gil_diy, at: Sun 06 Mar 2022 10:17:29 IST -->
+<!-- Added by: gil_diy, at: Sun 06 Mar 2022 10:18:12 IST -->
 
 <!--te-->
 
@@ -134,10 +134,6 @@ The Web Server Gateway Interface (WSGI, pronounced whiskeyWIZ-ghee) is a simple 
 
 * Serving static files and proxying request with Nginx. While being an HTTP web server, Gunicorn, in turn, is an application server not suited to face the web.
 That’s why we need Nginx as a reverse proxy and to serve static files. In case we need to scale up our application to multiple servers, Nginx will take care of load balancing as well.
-
-
-
-Flask + Gunicorn + Nginx + Docker
 
 
 <p align="center">
