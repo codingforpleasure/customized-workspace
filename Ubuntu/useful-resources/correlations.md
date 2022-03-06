@@ -6,8 +6,10 @@
       * [Association between two categorical features](#association-between-two-categorical-features)
          * [Cramér's phi ()](#cram\xC3\xA9rs-phi-)
          * [Theil's U (Uncertainty coefficient)](#theils-u-uncertainty-coefficient)
+      * [Association between categorical to numerical](#association-between-categorical-to-numerical)
+         * [Correlation ratio](#correlation-ratio)
 
-<!-- Added by: gil_diy, at: Sun 06 Mar 2022 18:07:39 IST -->
+<!-- Added by: gil_diy, at: Sun 06 Mar 2022 18:12:30 IST -->
 
 <!--te-->
 
@@ -64,3 +66,31 @@ Unlike Cramer’s V, it is asymmetric, meaning U(x,y)≠U(y,x) (while V(x,y)=V(y
 ```
 
 * Theil’s U indeed gives us much more information on the true relations between the different features.
+
+
+## Association between categorical to numerical
+
+### Correlation ratio
+
+```python
+def correlation_ratio(categories, measurements):
+    fcat, _ = pd.factorize(categories)
+    cat_num = np.max(fcat)+1
+    y_avg_array = np.zeros(cat_num)
+    n_array = np.zeros(cat_num)
+    
+    for i in range(0,cat_num):
+        cat_measures = measurements[np.argwhere(fcat == i).flatten()]
+        n_array[i] = len(cat_measures)
+        y_avg_array[i] = np.average(cat_measures)
+
+    y_total_avg = np.sum(np.multiply(y_avg_array,n_array))/np.sum(n_array)
+    numerator = np.sum(np.multiply(n_array,np.power(np.subtract(y_avg_array,y_total_avg),2)))
+    denominator = np.sum(np.power(np.subtract(measurements,y_total_avg),2))
+
+    if numerator == 0:
+        eta = 0.0
+    else:
+        eta = np.sqrt(numerator/denominator)
+    return eta
+```
