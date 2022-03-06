@@ -18,7 +18,7 @@
          * [Renaming columns](#renaming-columns)
          * [Drop rows which consist of null values](#drop-rows-which-consist-of-null-values)
 
-<!-- Added by: gil_diy, at: Sun 06 Mar 2022 12:05:30 IST -->
+<!-- Added by: gil_diy, at: Sun 06 Mar 2022 12:17:44 IST -->
 
 <!--te-->
 
@@ -141,6 +141,10 @@ print(df_spark.withColumnRenamed("Age", "new age").show())
 ```
 
 ### Drop rows which consist of null values
+
+* drop(any=`any`) - If one of the cells in the row is null, than drop the cell
+
+* drop(any=`all`) - 
 
 ```python
 print(df_spark.na.drop().show())
