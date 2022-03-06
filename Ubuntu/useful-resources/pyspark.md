@@ -27,8 +27,9 @@
          * [Multiple Conditions](#multiple-conditions)
          * [Not operation](#not-operation)
       * [Group by](#group-by)
+         * [Aggregate data on specific column](#aggregate-data-on-specific-column)
 
-<!-- Added by: gil_diy, at: Sun 06 Mar 2022 13:45:50 IST -->
+<!-- Added by: gil_diy, at: Sun 06 Mar 2022 13:48:18 IST -->
 
 <!--te-->
 
@@ -234,4 +235,10 @@ After `groupby` we should apply aggregate functions such as (sum, max, min, mean
 
 ```python
 print(df_spark.groupBy('Name').sum().show())
+```
+
+### Aggregate data on specific column
+
+```python
+df_spark.agg({'Salary':'sum'}).show()
 ```
