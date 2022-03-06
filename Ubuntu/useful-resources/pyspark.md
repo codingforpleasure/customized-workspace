@@ -15,7 +15,7 @@
          * [Get simple statistics for each column](#get-simple-statistics-for-each-column)
          * [Adding columns in data frame](#adding-columns-in-data-frame)
 
-<!-- Added by: gil_diy, at: Sun 06 Mar 2022 11:55:36 IST -->
+<!-- Added by: gil_diy, at: Sun 06 Mar 2022 11:55:39 IST -->
 
 <!--te-->
 
