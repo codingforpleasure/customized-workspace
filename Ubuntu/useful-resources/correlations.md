@@ -10,7 +10,7 @@
          * [Correlation ratio](#correlation-ratio)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Sun 06 Mar 2022 18:38:56 IST -->
+<!-- Added by: gil_diy, at: Sun 06 Mar 2022 18:50:13 IST -->
 
 <!--te-->
 
@@ -20,6 +20,11 @@
 ## Corrleation between numerical features
 
 ### Pearson
+
+
+<p align="center">
+  <img width="400" src="images/correlations/" title="Look into the image">
+</p>
 
 ### Spearman
 
@@ -35,6 +40,10 @@ Using `Cramér's phi`, the properties are:
 
  * The value of the `Cramér's phi` is between 0 to 1, unlike perason and spearman correlation between -1 to 1.
 
+
+<p align="center">
+  <img width="600" src="images/correlations/" title="Look into the image">
+</p>
 
 ```python
 def cramers_v(x, y):
