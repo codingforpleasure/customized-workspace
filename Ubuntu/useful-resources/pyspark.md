@@ -20,7 +20,7 @@
             * [drop with Subset](#drop-with-subset)
             * [Filling missing values (imputation)](#filling-missing-values-imputation)
 
-<!-- Added by: gil_diy, at: Sun 06 Mar 2022 12:45:41 IST -->
+<!-- Added by: gil_diy, at: Sun 06 Mar 2022 12:45:43 IST -->
 
 <!--te-->
 
@@ -176,6 +176,7 @@ print(df_spark.na.fill(value = -5555, subset = ['Age']).show())
 
 
 pay attention in case the column is not numeric and you have opened the 
+
 ```python
 print(df_spark.na.fill(value = -5555, subset = ['Age']).show())
 ```
