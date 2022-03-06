@@ -10,7 +10,7 @@
          * [Correlation ratio](#correlation-ratio)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Sun 06 Mar 2022 18:33:31 IST -->
+<!-- Added by: gil_diy, at: Sun 06 Mar 2022 18:34:20 IST -->
 
 <!--te-->
 
@@ -62,10 +62,10 @@ def cramers_v(x, y):
 
 * Exactly like `Cramer’s V`, the output value is on the range of [0,1] too.
 
-
-
 * Theil’s U indeed gives us much more information on the true relations between the different features.
 
+
+[Link](https://en.wikipedia.org/wiki/Uncertainty_coefficient)
 
 ## Association between categorical to numerical
 
