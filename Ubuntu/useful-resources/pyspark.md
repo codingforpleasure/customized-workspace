@@ -32,7 +32,7 @@
       * [ml](#ml)
          * [Linear Regression](#linear-regression)
 
-<!-- Added by: gil_diy, at: Sun 06 Mar 2022 14:07:11 IST -->
+<!-- Added by: gil_diy, at: Sun 06 Mar 2022 14:07:15 IST -->
 
 <!--te-->
 
@@ -270,7 +270,7 @@ regressor=regressor.fit(train_data)
 print(regressor.coefficients)
 # Output: DenseVector([-5000.0, 7000.0])
 
-### Intercepts
+# Intercepts
 print(regressor.intercept)
 
 ```
