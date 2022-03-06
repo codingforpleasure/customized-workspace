@@ -18,7 +18,7 @@
          * [Renaming columns](#renaming-columns)
          * [Drop rows which consist of null values](#drop-rows-which-consist-of-null-values)
 
-<!-- Added by: gil_diy, at: Sun 06 Mar 2022 12:18:29 IST -->
+<!-- Added by: gil_diy, at: Sun 06 Mar 2022 12:18:32 IST -->
 
 <!--te-->
 
