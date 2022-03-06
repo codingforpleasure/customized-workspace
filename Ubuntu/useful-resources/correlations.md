@@ -10,7 +10,7 @@
          * [Correlation ratio](#correlation-ratio)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Sun 06 Mar 2022 18:38:49 IST -->
+<!-- Added by: gil_diy, at: Sun 06 Mar 2022 18:38:56 IST -->
 
 <!--te-->
 
@@ -50,7 +50,7 @@ def cramers_v(x, y):
 ```
 
 
-
+[Wikipedia](https://en.wikipedia.org/wiki/Cram%C3%A9r%27s_V)
 
 
 ### Theil's U (Uncertainty coefficient)
