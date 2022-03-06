@@ -24,8 +24,10 @@
             * [Filling missing values (imputation)](#filling-missing-values-imputation)
             * [Imputation with pyspark (Exactly like in sklearn)](#imputation-with-pyspark-exactly-like-in-sklearn)
       * [Filter operations](#filter-operations)
+         * [Multiple Conditions](#multiple-conditions)
+         * [Not operation](#not-operation)
 
-<!-- Added by: gil_diy, at: Sun 06 Mar 2022 13:39:17 IST -->
+<!-- Added by: gil_diy, at: Sun 06 Mar 2022 13:39:52 IST -->
 
 <!--te-->
 
@@ -212,11 +214,15 @@ imputer = Imputer(
 
 ## Filter operations
 
+### Multiple Conditions
+
 ```python
 print(df_spark.filter((df_spark['Salary'] <= 20000) & (df_spark[Salary] >= 15000)).show())
 ```
 
+### Not operation
 
 ```python
 print(df_spark.filter(~(df_spark['Salary'] <= 20000)).show())
 ```
+
