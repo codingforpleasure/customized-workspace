@@ -11,7 +11,7 @@
          * [Type of pyspark datframe](#type-of-pyspark-datframe)
          * [Print data schema (simiilar to my_df.info())](#print-data-schema-simiilar-to-my_dfinfo)
 
-<!-- Added by: gil_diy, at: Sun 06 Mar 2022 11:35:37 IST -->
+<!-- Added by: gil_diy, at: Sun 06 Mar 2022 11:35:47 IST -->
 
 <!--te-->
 
@@ -69,7 +69,7 @@ type(df_spark)
 ### Print data schema (simiilar to my_df.info())
 
 ```python
-df_spark.printSchema()
+print(df_spark.printSchema())
 ```
 
 <p align="center">
