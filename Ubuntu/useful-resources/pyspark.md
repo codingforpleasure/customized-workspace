@@ -32,7 +32,7 @@
       * [ml](#ml)
          * [Linear Regression](#linear-regression)
 
-<!-- Added by: gil_diy, at: Sun 06 Mar 2022 14:07:18 IST -->
+<!-- Added by: gil_diy, at: Sun 06 Mar 2022 14:08:09 IST -->
 
 <!--te-->
 
@@ -273,4 +273,9 @@ print(regressor.coefficients)
 # Intercepts
 print(regressor.intercept)
 
+### Prediction
+pred_results=regressor.evaluate(test_data)
+
+print(pred_results.meanAbsoluteError)
+print(pred_results.meanSquaredError)
 ```
