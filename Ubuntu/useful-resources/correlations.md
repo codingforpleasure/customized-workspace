@@ -9,7 +9,7 @@
       * [Association between categorical to numerical](#association-between-categorical-to-numerical)
          * [Correlation ratio](#correlation-ratio)
 
-<!-- Added by: gil_diy, at: Sun 06 Mar 2022 18:19:36 IST -->
+<!-- Added by: gil_diy, at: Sun 06 Mar 2022 18:24:17 IST -->
 
 <!--te-->
 
@@ -71,6 +71,9 @@ Unlike Cramer’s V, it is asymmetric, meaning U(x,y)≠U(y,x) (while V(x,y)=V(y
 ## Association between categorical to numerical
 
 ### Correlation ratio
+
+
+* The output is on the range of [0,1].
 
 ```python
 def correlation_ratio(categories, measurements):
