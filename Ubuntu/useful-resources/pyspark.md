@@ -17,12 +17,12 @@
          * [Drop columns in data frame](#drop-columns-in-data-frame)
          * [Renaming columns](#renaming-columns)
          * [Drop rows](#drop-rows)
-            * [Drop rows whith any](#drop-rows-whith-any)
+            * [Drop rows with any](#drop-rows-with-any)
             * [Drop with Subset](#drop-with-subset)
             * [Drop with Subset](#drop-with-subset-1)
             * [Filling missing values (imputation)](#filling-missing-values-imputation)
 
-<!-- Added by: gil_diy, at: Sun 06 Mar 2022 12:54:08 IST -->
+<!-- Added by: gil_diy, at: Sun 06 Mar 2022 12:54:33 IST -->
 
 <!--te-->
 
@@ -146,7 +146,7 @@ print(df_spark.withColumnRenamed("Age", "new age").show())
 
 ### Drop rows
 
-#### Drop rows whith any
+#### Drop rows with any
 
 * drop(any=`any`) - If one or more  cells in the row are null, than drop the row (If at least one of the cells in the row is null, than drop the row)
 
