@@ -17,10 +17,10 @@
          * [Drop columns in data frame](#drop-columns-in-data-frame)
          * [Renaming columns](#renaming-columns)
          * [Drop rows which consist of null values](#drop-rows-which-consist-of-null-values)
-            * [drop with Subset](#drop-with-subset)
+            * [Drop with Subset](#drop-with-subset)
             * [Filling missing values (imputation)](#filling-missing-values-imputation)
 
-<!-- Added by: gil_diy, at: Sun 06 Mar 2022 12:52:03 IST -->
+<!-- Added by: gil_diy, at: Sun 06 Mar 2022 12:53:22 IST -->
 
 <!--te-->
 
@@ -159,7 +159,7 @@ print(df_spark.na.drop().show())
 print(df_spark.na.drop(any=any, thresh=2).show())
 ```
 
-#### drop with Subset
+#### Drop with Subset
 
 
 Subset means focus on specific columns and check for null values:
