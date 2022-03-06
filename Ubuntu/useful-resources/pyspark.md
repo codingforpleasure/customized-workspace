@@ -17,8 +17,9 @@
          * [Drop columns in data frame](#drop-columns-in-data-frame)
          * [Renaming columns](#renaming-columns)
          * [Drop rows which consist of null values](#drop-rows-which-consist-of-null-values)
+         * [Drop rows](#drop-rows)
 
-<!-- Added by: gil_diy, at: Sun 06 Mar 2022 12:18:32 IST -->
+<!-- Added by: gil_diy, at: Sun 06 Mar 2022 12:22:25 IST -->
 
 <!--te-->
 
@@ -142,10 +143,16 @@ print(df_spark.withColumnRenamed("Age", "new age").show())
 
 ### Drop rows which consist of null values
 
-* drop(any=`any`) - If at least one of the cells in the row is null, than drop the row
+* drop(any=`any`) - If one or more  cells in the row are null, than drop the row (If at least one of the cells in the row is null, than drop the row)
 
 * drop(any=`all`) - If all the cells in the row is null, than drop the row
 
 ```python
 print(df_spark.na.drop().show())
+
 ```
+
+
+* drop(any=`all`) - If all the cells in the row is null, than drop the row
+
+### Drop rows 
