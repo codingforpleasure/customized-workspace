@@ -10,7 +10,7 @@
          * [Correlation ratio](#correlation-ratio)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Sun 06 Mar 2022 18:37:47 IST -->
+<!-- Added by: gil_diy, at: Sun 06 Mar 2022 18:38:49 IST -->
 
 <!--te-->
 
@@ -50,7 +50,7 @@ def cramers_v(x, y):
 ```
 
 
-[Link](https://towardsdatascience.com/the-search-for-categorical-correlation-a1cf7f1888c9)
+
 
 
 ### Theil's U (Uncertainty coefficient)
