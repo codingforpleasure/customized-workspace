@@ -12,8 +12,9 @@
          * [Print data schema (simiilar to my_df.info())](#print-data-schema-simiilar-to-my_dfinfo)
          * [See a specific column or columns](#see-a-specific-column-or-columns)
          * [See datatypes of columns](#see-datatypes-of-columns)
+         * [Get simple statistics for each column](#get-simple-statistics-for-each-column)
 
-<!-- Added by: gil_diy, at: Sun 06 Mar 2022 11:47:10 IST -->
+<!-- Added by: gil_diy, at: Sun 06 Mar 2022 11:48:54 IST -->
 
 <!--te-->
 
@@ -88,4 +89,10 @@ print(df_spark.select(['column-name1','column-name2']).show())
 
 ```python
 print(df_spark.dtypes)
+```
+
+### Get simple statistics for each column
+
+```python
+print(df_spark.describe().show())
 ```
