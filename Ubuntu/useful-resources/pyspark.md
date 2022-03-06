@@ -15,7 +15,7 @@
          * [Get simple statistics for each column](#get-simple-statistics-for-each-column)
          * [Adding columns in data frame](#adding-columns-in-data-frame)
 
-<!-- Added by: gil_diy, at: Sun 06 Mar 2022 11:54:57 IST -->
+<!-- Added by: gil_diy, at: Sun 06 Mar 2022 11:55:36 IST -->
 
 <!--te-->
 
@@ -114,7 +114,7 @@ print(df_spark.describe().show())
 ### Adding columns in data frame
 
 ```python
-df_spark.withColumn('')
+df_spark.withColumn(colName='Experience after 2 years', col=df_spark['Experience'] + 2).show()
 ```
 
 
