@@ -10,7 +10,7 @@
          * [Type of pyspark datframe](#type-of-pyspark-datframe)
          * [Print data schema (simiilar to my_df.info())](#print-data-schema-simiilar-to-my_dfinfo)
 
-<!-- Added by: gil_diy, at: Sun 06 Mar 2022 11:26:08 IST -->
+<!-- Added by: gil_diy, at: Sun 06 Mar 2022 11:26:11 IST -->
 
 <!--te-->
 
