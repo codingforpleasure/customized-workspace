@@ -14,8 +14,9 @@
          * [See datatypes of columns](#see-datatypes-of-columns)
          * [Get simple statistics for each column](#get-simple-statistics-for-each-column)
          * [Adding columns in data frame](#adding-columns-in-data-frame)
+         * [Drop columns in data frame](#drop-columns-in-data-frame)
 
-<!-- Added by: gil_diy, at: Sun 06 Mar 2022 11:55:39 IST -->
+<!-- Added by: gil_diy, at: Sun 06 Mar 2022 11:56:41 IST -->
 
 <!--te-->
 
@@ -121,3 +122,10 @@ df_spark.withColumn(colName='Experience after 2 years', col=df_spark['Experience
 <p align="center">
   <img width="400" src="images/spark/add_column.jpg" title="Look into the image">
 </p>
+
+### Drop columns in data frame
+
+
+```python
+
+```
