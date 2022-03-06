@@ -4,7 +4,7 @@
          * [Cramér's phi ()](#cram\xC3\xA9rs-phi-)
          * [Theil's U (Uncertainty coefficient)](#theils-u-uncertainty-coefficient)
 
-<!-- Added by: gil_diy, at: Sun 06 Mar 2022 18:04:52 IST -->
+<!-- Added by: gil_diy, at: Sun 06 Mar 2022 18:04:56 IST -->
 
 <!--te-->
 
@@ -50,5 +50,5 @@ def cramers_v(x, y):
 
 
 ```
-unlike Cramer’s V, it is asymmetric, meaning U(x,y)≠U(y,x) (while V(x,y)=V(y,x), where V is Cramer’s V)
+Unlike Cramer’s V, it is asymmetric, meaning U(x,y)≠U(y,x) (while V(x,y)=V(y,x), where V is Cramer’s V)
 ```
