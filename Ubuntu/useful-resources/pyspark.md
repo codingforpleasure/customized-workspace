@@ -30,7 +30,7 @@
          * [Aggregate function on specific column](#aggregate-function-on-specific-column)
       * [Adding new features](#adding-new-features)
 
-<!-- Added by: gil_diy, at: Sun 06 Mar 2022 14:02:45 IST -->
+<!-- Added by: gil_diy, at: Sun 06 Mar 2022 14:03:04 IST -->
 
 <!--te-->
 
@@ -250,5 +250,5 @@ df_spark.agg({'Salary':'sum'}).show()
 from pyspark.ml.feature import VectorAssmbler
 
 featureassembler = VectorAssmbler(inputCols = ["age", "Experience"], 
-	outputCol = "Independent Features")
+								  outputCol = "Independent Features")
 ```
