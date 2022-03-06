@@ -6,8 +6,9 @@
       * [Read data](#read-data)
          * [read csv](#read-csv)
          * [read json](#read-json)
+         * [show data](#show-data)
 
-<!-- Added by: gil_diy, at: Sun 06 Mar 2022 11:06:24 IST -->
+<!-- Added by: gil_diy, at: Sun 06 Mar 2022 11:07:14 IST -->
 
 <!--te-->
 
@@ -35,11 +36,17 @@ spark = SparkSession.builder.appName("Practice").getOrCreate()
 ### read csv
 
 ```python
-spark.read.csv('my_csv_file.csv')
+df_spark = spark.read.csv('my_csv_file.csv')
 ```
 
 ### read json
 
 ```python
-spark.read.json('my_json_file.json')
+df_spark = spark.read.json('my_json_file.json')
+```
+
+### show data
+
+```python
+df_spark.show()
 ```
