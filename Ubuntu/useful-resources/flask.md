@@ -9,7 +9,7 @@
          * [Flask](#flask-1)
          * [How to prepare Flask in production?](#how-to-prepare-flask-in-production)
 
-<!-- Added by: gil_diy, at: Sat 05 Mar 2022 11:01:41 IST -->
+<!-- Added by: gil_diy, at: Sun 06 Mar 2022 10:12:52 IST -->
 
 <!--te-->
 
@@ -130,7 +130,7 @@ Many more examples are shown here: [Link](http://jinja.pocoo.org/docs/2.10/templ
 Although Flask has a built-in web server, as we all know, it’s not suitable for production and needs to be put behind a real web server able to communicate with Flask through a **WSGI protocol**
 A common choice for that is **Gunicorn—a Python WSGI HTTP server**.
 
-The Web Server Gateway Interface (WSGI, pronounced whiskey[1][2] or WIZ-ghee[3]) is a simple calling convention for web servers to forward requests to web applications or frameworks written in the Python programming language.
+The Web Server Gateway Interface (WSGI, pronounced whiskeyWIZ-ghee) is a simple calling convention for web servers to forward requests to web applications or frameworks written in the Python programming language.
 
 * Serving static files and proxying request with Nginx. While being an HTTP web server, Gunicorn, in turn, is an application server not suited to face the web.
 That’s why we need Nginx as a reverse proxy and to serve static files. In case we need to scale up our application to multiple servers, Nginx will take care of load balancing as well.
