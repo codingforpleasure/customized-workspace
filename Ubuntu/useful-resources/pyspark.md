@@ -25,7 +25,7 @@
             * [Imputation with pyspark (Exactly like in sklearn)](#imputation-with-pyspark-exactly-like-in-sklearn)
       * [Filter operations](#filter-operations)
 
-<!-- Added by: gil_diy, at: Sun 06 Mar 2022 13:37:52 IST -->
+<!-- Added by: gil_diy, at: Sun 06 Mar 2022 13:37:55 IST -->
 
 <!--te-->
 
@@ -213,6 +213,5 @@ imputer = Imputer(
 ## Filter operations
 
 ```python
-
 print(df_spark.filter((df_spark['Salary'] <= 20000) & (df_spark[Salary] >= 150000)).show())
 ```
