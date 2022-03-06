@@ -12,7 +12,7 @@
          * [Print data schema (simiilar to my_df.info())](#print-data-schema-simiilar-to-my_dfinfo)
          * [See a specific column or columns](#see-a-specific-column-or-columns)
 
-<!-- Added by: gil_diy, at: Sun 06 Mar 2022 11:46:21 IST -->
+<!-- Added by: gil_diy, at: Sun 06 Mar 2022 11:46:23 IST -->
 
 <!--te-->
 
