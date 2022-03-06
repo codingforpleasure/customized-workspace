@@ -16,8 +16,9 @@
          * [Adding columns in data frame](#adding-columns-in-data-frame)
          * [Drop columns in data frame](#drop-columns-in-data-frame)
          * [Renaming columns](#renaming-columns)
+         * [drop null values](#drop-null-values)
 
-<!-- Added by: gil_diy, at: Sun 06 Mar 2022 12:03:28 IST -->
+<!-- Added by: gil_diy, at: Sun 06 Mar 2022 12:05:11 IST -->
 
 <!--te-->
 
@@ -139,3 +140,8 @@ Let's rename column `Age` into `new age`:
 print(df_spark.withColumnRenamed("Age", "new age").show())
 ```
 
+### drop null values
+
+```python
+print(df_spark.na.drop().show())
+```
