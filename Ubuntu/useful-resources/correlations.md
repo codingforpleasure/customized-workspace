@@ -4,7 +4,7 @@
          * [Cramér's phi ()](#cram\xC3\xA9rs-phi-)
          * [Theil's U (Uncertainty coefficient)](#theils-u-uncertainty-coefficient)
 
-<!-- Added by: gil_diy, at: Sun 06 Mar 2022 18:04:49 IST -->
+<!-- Added by: gil_diy, at: Sun 06 Mar 2022 18:04:52 IST -->
 
 <!--te-->
 
@@ -45,7 +45,7 @@ def cramers_v(x, y):
 
 * Is asymmetric 
 
-* The Cramer’s V, the output value is on the range of [0,1].
+* The Cramer’s V, the output value is on the range of [0,1]
 
 
 
