@@ -24,7 +24,7 @@
             * [Filling missing values (imputation)](#filling-missing-values-imputation)
             * [Imputation with pyspark (Exactly like in sklearn)](#imputation-with-pyspark-exactly-like-in-sklearn)
 
-<!-- Added by: gil_diy, at: Sun 06 Mar 2022 13:11:30 IST -->
+<!-- Added by: gil_diy, at: Sun 06 Mar 2022 13:12:06 IST -->
 
 <!--te-->
 
@@ -194,6 +194,9 @@ print(df_spark.na.fill(value = -5555, subset = ['Age']).show())
 ```
 
 #### Imputation with pyspark (Exactly like in sklearn)
+
+
+Adding few columns with the corresponding cells are replaced with the `NA` values.
 
 ```python
 from pyspark.ml.features import Imputer
