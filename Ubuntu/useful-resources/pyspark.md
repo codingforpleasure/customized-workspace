@@ -28,8 +28,9 @@
          * [Not operation](#not-operation)
       * [Group by](#group-by)
          * [Aggregate function on specific column](#aggregate-function-on-specific-column)
+      * [Adding new features](#adding-new-features)
 
-<!-- Added by: gil_diy, at: Sun 06 Mar 2022 13:48:43 IST -->
+<!-- Added by: gil_diy, at: Sun 06 Mar 2022 14:02:45 IST -->
 
 <!--te-->
 
@@ -241,4 +242,13 @@ print(df_spark.groupBy('Name').sum().show())
 
 ```python
 df_spark.agg({'Salary':'sum'}).show()
+```
+
+## Adding new features
+
+```python
+from pyspark.ml.feature import VectorAssmbler
+
+featureassembler = VectorAssmbler(inputCols = ["age", "Experience"], 
+	outputCol = "Independent Features")
 ```
