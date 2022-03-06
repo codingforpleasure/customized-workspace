@@ -14,7 +14,7 @@
          * [See datatypes of columns](#see-datatypes-of-columns)
          * [Get simple statistics for each column](#get-simple-statistics-for-each-column)
 
-<!-- Added by: gil_diy, at: Sun 06 Mar 2022 11:48:57 IST -->
+<!-- Added by: gil_diy, at: Sun 06 Mar 2022 11:49:00 IST -->
 
 <!--te-->
 
