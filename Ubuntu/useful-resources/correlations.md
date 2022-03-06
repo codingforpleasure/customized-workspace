@@ -1,16 +1,26 @@
 <!--ts-->
-   * [Correlation](#correlation)
-      * [Measure of association between two categorical features](#measure-of-association-between-two-categorical-features)
+   * [Correlations and Associations](#correlations-and-associations)
+      * [Corrleation between numerical features](#corrleation-between-numerical-features)
+         * [Pearson](#pearson)
+         * [Spearman](#spearman)
+      * [Association between two categorical features](#association-between-two-categorical-features)
          * [Cramér's phi ()](#cram\xC3\xA9rs-phi-)
          * [Theil's U (Uncertainty coefficient)](#theils-u-uncertainty-coefficient)
 
-<!-- Added by: gil_diy, at: Sun 06 Mar 2022 18:04:56 IST -->
+<!-- Added by: gil_diy, at: Sun 06 Mar 2022 18:07:36 IST -->
 
 <!--te-->
 
-# Correlation
+# Correlations and Associations
 
-## Measure of association between two categorical features
+
+## Corrleation between numerical features
+
+### Pearson
+
+### Spearman
+
+## Association between two categorical features
 
 
 ### Cramér's phi ()
@@ -52,3 +62,5 @@ def cramers_v(x, y):
 ```
 Unlike Cramer’s V, it is asymmetric, meaning U(x,y)≠U(y,x) (while V(x,y)=V(y,x), where V is Cramer’s V)
 ```
+
+* Theil’s U indeed gives us much more information on the true relations between the different features.
