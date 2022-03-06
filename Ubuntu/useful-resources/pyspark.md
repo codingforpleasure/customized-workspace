@@ -10,7 +10,7 @@
          * [Type of pyspark datframe](#type-of-pyspark-datframe)
          * [Print data schema (simiilar to my_df.info())](#print-data-schema-simiilar-to-my_dfinfo)
 
-<!-- Added by: gil_diy, at: Sun 06 Mar 2022 11:10:52 IST -->
+<!-- Added by: gil_diy, at: Sun 06 Mar 2022 11:26:08 IST -->
 
 <!--te-->
 
@@ -64,4 +64,8 @@ type(df_spark)
 df_spark.printSchema()
 ```
 
+<p align="center">
+  <img width="400" src="images/spark/schema.jpg" title="Look into the image">
+</p>
 
+### 
