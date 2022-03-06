@@ -1,8 +1,10 @@
 <!--ts-->
    * [Correlation](#correlation)
       * [Measure of association between two categorical features](#measure-of-association-between-two-categorical-features)
+         * [Cramér's phi ()](#cram\xC3\xA9rs-phi-)
+         * [Theil's U (Uncertainty coefficient)](#theils-u-uncertainty-coefficient)
 
-<!-- Added by: gil_diy, at: Sun 06 Mar 2022 17:55:44 IST -->
+<!-- Added by: gil_diy, at: Sun 06 Mar 2022 18:04:47 IST -->
 
 <!--te-->
 
@@ -10,6 +12,8 @@
 
 ## Measure of association between two categorical features
 
+
+### Cramér's phi ()
 
 Using `Cramér's phi`, the properties are:
 
@@ -34,3 +38,17 @@ def cramers_v(x, y):
 
 
 [Link](https://towardsdatascience.com/the-search-for-categorical-correlation-a1cf7f1888c9)
+
+
+### Theil's U (Uncertainty coefficient)
+
+
+* Is asymmetric 
+
+* The Cramer’s V, the output value is on the range of [0,1].
+
+
+
+```
+unlike Cramer’s V, it is asymmetric, meaning U(x,y)≠U(y,x) (while V(x,y)=V(y,x), where V is Cramer’s V)
+```
