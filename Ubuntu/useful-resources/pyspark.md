@@ -11,8 +11,9 @@
          * [Type of pyspark datframe](#type-of-pyspark-datframe)
          * [Print data schema (simiilar to my_df.info())](#print-data-schema-simiilar-to-my_dfinfo)
          * [See a specific column or columns](#see-a-specific-column-or-columns)
+         * [See datatypes of columns](#see-datatypes-of-columns)
 
-<!-- Added by: gil_diy, at: Sun 06 Mar 2022 11:46:23 IST -->
+<!-- Added by: gil_diy, at: Sun 06 Mar 2022 11:46:55 IST -->
 
 <!--te-->
 
@@ -82,3 +83,9 @@ print(df_spark.printSchema())
 ```python
 print(df_spark.select(['column-name1','column-name2']).show())
 ``` 
+
+### See datatypes of columns
+
+```python
+print(df_spark.dtypes)
+```
