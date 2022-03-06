@@ -23,8 +23,9 @@
             * [Replacing NA values](#replacing-na-values)
             * [Filling missing values (imputation)](#filling-missing-values-imputation)
             * [Imputation with pyspark (Exactly like in sklearn)](#imputation-with-pyspark-exactly-like-in-sklearn)
+      * [Filter operations](#filter-operations)
 
-<!-- Added by: gil_diy, at: Sun 06 Mar 2022 13:14:02 IST -->
+<!-- Added by: gil_diy, at: Sun 06 Mar 2022 13:35:31 IST -->
 
 <!--te-->
 
@@ -209,4 +210,9 @@ imputer = Imputer(
 
 * You can set either by setStrategy("mean") or setStrategy("median")
 
-#### 
+## Filter operations
+
+```python
+
+print(df_spark.filter("Salary <=20000").show())
+```
