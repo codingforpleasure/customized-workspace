@@ -20,7 +20,7 @@
             * [drop with Subset](#drop-with-subset)
             * [Filling missing values (imputation)](#filling-missing-values-imputation)
 
-<!-- Added by: gil_diy, at: Sun 06 Mar 2022 12:45:46 IST -->
+<!-- Added by: gil_diy, at: Sun 06 Mar 2022 12:51:57 IST -->
 
 <!--te-->
 
@@ -171,11 +171,14 @@ print(df_spark.na.drop(any=any, subset = ['column-name1']).show())
 #### Filling missing values (imputation)
 
 ```python
-print(df_spark.na.fill(value = -5555, subset = ['Age']).show())
+print(df_spark.na.fill(value = -5555).show())
 ```
 
 
-Pay attention in case the column is not numeric and you have opened the 
+Pay attention in case the column is not numeric and you have used the `inferSchema=True` option while
+editing. then the value `-5555` won't be set into a column of type string.
+
+You can focus on specific columns using the `subset` column:
 
 ```python
 print(df_spark.na.fill(value = -5555, subset = ['Age']).show())
