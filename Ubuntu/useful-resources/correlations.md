@@ -9,7 +9,7 @@
       * [Association between categorical to numerical](#association-between-categorical-to-numerical)
          * [Correlation ratio](#correlation-ratio)
 
-<!-- Added by: gil_diy, at: Sun 06 Mar 2022 18:18:36 IST -->
+<!-- Added by: gil_diy, at: Sun 06 Mar 2022 18:19:13 IST -->
 
 <!--te-->
 
@@ -55,7 +55,7 @@ def cramers_v(x, y):
 ### Theil's U (Uncertainty coefficient)
 
 
-* Is asymmetric 
+* Is asymmetric measure of association between categorical features.
 
 * The Cramer’s V, the output value is on the range of [0,1]
 
