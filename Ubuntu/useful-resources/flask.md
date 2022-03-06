@@ -9,7 +9,7 @@
          * [Flask](#flask-1)
          * [How to prepare Flask in production?](#how-to-prepare-flask-in-production)
 
-<!-- Added by: gil_diy, at: Sun 06 Mar 2022 10:18:12 IST -->
+<!-- Added by: gil_diy, at: Sun 06 Mar 2022 10:21:53 IST -->
 
 <!--te-->
 
@@ -139,6 +139,9 @@ That’s why we need Nginx as a reverse proxy and to serve static files. In case
 <p align="center">
   <img width="400" src="images/flask/ngnix_gunicorn_flask_togther.jpg" title="Look into the image">
 </p>
+
+
+* **Nginx** is a web server which can also be used as a reverse proxy, load balancer, mail proxy and HTTP cache.
 
 
 [How to deploy ML models using Flask + Gunicorn + Nginx + Docker](https://towardsdatascience.com/how-to-deploy-ml-models-using-flask-gunicorn-nginx-docker-9b32055b3d0)
