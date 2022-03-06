@@ -13,8 +13,9 @@
          * [See a specific column or columns](#see-a-specific-column-or-columns)
          * [See datatypes of columns](#see-datatypes-of-columns)
          * [Get simple statistics for each column](#get-simple-statistics-for-each-column)
+         * [Adding columns in data frame](#adding-columns-in-data-frame)
 
-<!-- Added by: gil_diy, at: Sun 06 Mar 2022 11:50:13 IST -->
+<!-- Added by: gil_diy, at: Sun 06 Mar 2022 11:54:55 IST -->
 
 <!--te-->
 
@@ -109,3 +110,14 @@ Get the basic statistics such as:
 ```python
 print(df_spark.describe().show())
 ```
+
+### Adding columns in data frame
+
+```python
+df_spark.withColumn('')
+```
+
+
+<p align="center">
+  <img width="400" src="images/spark/add_column.jpg" title="Look into the image">
+</p>
