@@ -10,8 +10,9 @@
          * [Get Columns](#get-columns)
          * [Type of pyspark datframe](#type-of-pyspark-datframe)
          * [Print data schema (simiilar to my_df.info())](#print-data-schema-simiilar-to-my_dfinfo)
+         * [See a spcefic column](#see-a-spcefic-column)
 
-<!-- Added by: gil_diy, at: Sun 06 Mar 2022 11:35:47 IST -->
+<!-- Added by: gil_diy, at: Sun 06 Mar 2022 11:39:04 IST -->
 
 <!--te-->
 
@@ -76,3 +77,8 @@ print(df_spark.printSchema())
   <img width="400" src="images/spark/schema.jpg" title="Look into the image">
 </p>
 
+### See a spcefic column
+
+```python
+print(df_spark.select('Name'))
+``` 
