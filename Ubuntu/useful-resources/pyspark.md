@@ -16,11 +16,13 @@
          * [Adding columns in data frame](#adding-columns-in-data-frame)
          * [Drop columns in data frame](#drop-columns-in-data-frame)
          * [Renaming columns](#renaming-columns)
-         * [Drop rows which consist of null values](#drop-rows-which-consist-of-null-values)
+         * [Drop rows](#drop-rows)
+            * [Drop rows whith any](#drop-rows-whith-any)
             * [Drop with Subset](#drop-with-subset)
+            * [Drop with Subset](#drop-with-subset-1)
             * [Filling missing values (imputation)](#filling-missing-values-imputation)
 
-<!-- Added by: gil_diy, at: Sun 06 Mar 2022 12:53:22 IST -->
+<!-- Added by: gil_diy, at: Sun 06 Mar 2022 12:54:08 IST -->
 
 <!--te-->
 
@@ -142,7 +144,9 @@ Let's rename column `Age` into `new age`:
 print(df_spark.withColumnRenamed("Age", "new age").show())
 ```
 
-### Drop rows which consist of null values
+### Drop rows
+
+#### Drop rows whith any
 
 * drop(any=`any`) - If one or more  cells in the row are null, than drop the row (If at least one of the cells in the row is null, than drop the row)
 
@@ -152,6 +156,7 @@ print(df_spark.withColumnRenamed("Age", "new age").show())
 print(df_spark.na.drop().show())
 ```
 
+#### Drop with Subset
 
 * drop(any=`any`, thresh=`2`) - If at least `2` cells in the row is null, than drop the row
 
