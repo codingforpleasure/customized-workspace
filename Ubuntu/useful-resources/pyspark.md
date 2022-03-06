@@ -17,7 +17,7 @@
          * [Drop columns in data frame](#drop-columns-in-data-frame)
          * [Renaming columns](#renaming-columns)
 
-<!-- Added by: gil_diy, at: Sun 06 Mar 2022 12:03:00 IST -->
+<!-- Added by: gil_diy, at: Sun 06 Mar 2022 12:03:02 IST -->
 
 <!--te-->
 
