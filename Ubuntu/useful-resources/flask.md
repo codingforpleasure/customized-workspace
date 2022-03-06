@@ -9,7 +9,7 @@
          * [Flask](#flask-1)
          * [How to prepare Flask in production?](#how-to-prepare-flask-in-production)
 
-<!-- Added by: gil_diy, at: Sun 06 Mar 2022 10:25:27 IST -->
+<!-- Added by: gil_diy, at: Sun 06 Mar 2022 10:25:29 IST -->
 
 <!--te-->
 
