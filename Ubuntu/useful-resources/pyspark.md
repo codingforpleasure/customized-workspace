@@ -19,7 +19,7 @@
          * [Drop rows which consist of null values](#drop-rows-which-consist-of-null-values)
             * [drop with Subset](#drop-with-subset)
 
-<!-- Added by: gil_diy, at: Sun 06 Mar 2022 12:31:58 IST -->
+<!-- Added by: gil_diy, at: Sun 06 Mar 2022 12:32:04 IST -->
 
 <!--te-->
 
@@ -161,7 +161,7 @@ print(df_spark.na.drop(any=any, thresh=2).show())
 #### drop with Subset
 
 
-subset means focus on specific columns and check for null values:
+Subset means focus on specific columns and check for null values:
 
 ```python
 print(df_spark.na.drop(any=any, subset = ['column-name1']).show())
