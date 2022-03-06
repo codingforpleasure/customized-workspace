@@ -17,7 +17,7 @@
          * [Drop columns in data frame](#drop-columns-in-data-frame)
          * [Renaming columns](#renaming-columns)
 
-<!-- Added by: gil_diy, at: Sun 06 Mar 2022 12:03:02 IST -->
+<!-- Added by: gil_diy, at: Sun 06 Mar 2022 12:03:28 IST -->
 
 <!--te-->
 
@@ -132,6 +132,8 @@ print(df_spark.drop('Experience after 2 years').show())
 ```
 
 ### Renaming columns
+
+Let's rename column `Age` into `new age`:
 
 ```python
 print(df_spark.withColumnRenamed("Age", "new age").show())
