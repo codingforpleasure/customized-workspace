@@ -32,7 +32,7 @@
       * [ml](#ml)
          * [Linear Regression](#linear-regression)
 
-<!-- Added by: gil_diy, at: Sun 06 Mar 2022 14:08:09 IST -->
+<!-- Added by: gil_diy, at: Sun 06 Mar 2022 14:08:40 IST -->
 
 <!--te-->
 
@@ -276,6 +276,7 @@ print(regressor.intercept)
 ### Prediction
 pred_results=regressor.evaluate(test_data)
 
-print(pred_results.meanAbsoluteError)
-print(pred_results.meanSquaredError)
+print('Mean Absolute Error: ',pred_results.meanAbsoluteError)
+
+print('Mean Square Error: 'pred_results.meanSquaredError)
 ```
