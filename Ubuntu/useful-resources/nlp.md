@@ -14,6 +14,7 @@
             * [Drawbacks](#drawbacks-1)
          * [The use of pretrained Word Embedding](#the-use-of-pretrained-word-embedding)
             * [1. Word2Vec Embedding](#1-word2vec-embedding)
+               * [Applications of word2vec](#applications-of-word2vec)
                * [How the actual embedding works?](#how-the-actual-embedding-works)
                * [Drawbacks](#drawbacks-2)
             * [2. GloVe Embedding (Global Vector for Word Representation)](#2-glove-embedding-global-vector-for-word-representation)
@@ -46,7 +47,7 @@
       * [10 Leading Language Models For NLP In 2021](#10-leading-language-models-for-nlp-in-2021)
       * [Repositories](#repositories)
 
-<!-- Added by: gil_diy, at: Mon 07 Mar 2022 08:25:44 IST -->
+<!-- Added by: gil_diy, at: Mon 07 Mar 2022 08:36:58 IST -->
 
 <!--te-->
 
@@ -187,10 +188,7 @@ While both of them can have the entire information about which words are in a se
 
 * Pre-trained word embedding is an example of **Transfer Learning**. The main idea behind it is to **use public embeddings that are already trained on large datasets**. Specifically, instead of initializing our neural network weights randomly, we will set these pre trained embeddings as initialization weights. This trick helps to accelerate training and boost the performance of NLP models.
 
-
-##### How the actual embedding works?
-
-* **Word2vec is a two-layer neural net** that processes text by “vectorizing” words. Its input is a text corpus and its output is a set of vectors: feature vectors that represent words in that corpus. While Word2vec is not a deep neural network, it turns text into a numerical form that deep neural networks can understand.
+##### Applications of word2vec
 
 * Word2vec’s applications extend beyond parsing sentences in the wild. 
 It can be applied just as well to:
@@ -202,6 +200,14 @@ It can be applied just as well to:
 5) social media graphs and other verbal or symbolic series
 
 in which patterns may be noticed.
+
+##### How the actual embedding works?
+
+* **Word2vec is a two-layer neural net** that processes text by “vectorizing” words. Its input is a text corpus and its output is a set of vectors: feature vectors that represent words in that corpus. While Word2vec is not a deep neural network, it turns text into a numerical form that deep neural networks can understand.
+
+The output of the Word2vec neural net is a vocabulary in which each item has a vector attached to it, which can be fed into a deep-learning net or simply queried to detect relationships between words.
+
+
 
 * Word2vec can utilize either of two model architectures to produce a distributed representation of words: 
 
