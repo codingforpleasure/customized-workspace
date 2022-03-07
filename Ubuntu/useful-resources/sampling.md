@@ -8,9 +8,10 @@
       * [Negative sampling](#negative-sampling)
          * [Example #1: Resolving the downside of softmax is slow to compute for Skip-gram model.](#example-1-resolving-the-downside-of-softmax-is-slow-to-compute-for-skip-gram-model)
       * [oversampling](#oversampling)
+      * [Undersampling](#undersampling)
       * [Deal with imbalanced datasets](#deal-with-imbalanced-datasets)
 
-<!-- Added by: gil_diy, at: Mon 07 Mar 2022 13:33:37 IST -->
+<!-- Added by: gil_diy, at: Mon 07 Mar 2022 13:33:58 IST -->
 
 <!--te-->
 
@@ -75,6 +76,9 @@ Randomly duplicate examples in the minority class
 
  https://arxiv.org/abs/1710.05381
 
+## Undersampling
+
+Randomly delete examples in the majority class
 
  ## Deal with imbalanced datasets
 
