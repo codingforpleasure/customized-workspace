@@ -6,12 +6,12 @@
       * [Systematic sampling](#systematic-sampling)
    * [Obtain a systematic sample and save it in a new variable](#obtain-a-systematic-sample-and-save-it-in-a-new-variable)
       * [Negative sampling](#negative-sampling)
-         * [Example #1: Resolving the downside of softmax conputation for Skip-gram model.](#example-1-resolving-the-downside-of-softmax-conputation-for-skip-gram-model)
+         * [Example #1: Resolving the downside of softmax is slow to compute for Skip-gram model.](#example-1-resolving-the-downside-of-softmax-is-slow-to-compute-for-skip-gram-model)
          * [Example #2: Stochastic Gradient Descent](#example-2-stochastic-gradient-descent)
       * [oversampling](#oversampling)
       * [Deal with imbalanced datasets](#deal-with-imbalanced-datasets)
 
-<!-- Added by: gil_diy, at: Mon 07 Mar 2022 10:22:21 IST -->
+<!-- Added by: gil_diy, at: Mon 07 Mar 2022 10:22:40 IST -->
 
 <!--te-->
 
@@ -44,7 +44,7 @@ systematic_sample = systematic_sampling(df, 3)
 
 ## Negative sampling
 
-### Example #1: Resolving the downside of softmax conputation for Skip-gram model. 
+### Example #1: Resolving the downside of softmax is slow to compute for Skip-gram model. 
 
 The Skip-gram model works in a way that, given an input, it **predicts the surrounding or context words**. Using this method, we can learn a hidden layer that we’ll use to calculate **how probable a word is to occur as the context of the input**:
 
