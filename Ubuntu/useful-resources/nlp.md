@@ -12,15 +12,15 @@
             * [Drawbacks](#drawbacks)
          * [TFIDF](#tfidf)
             * [Drawbacks](#drawbacks-1)
-         * [The use of pretrained Word Embedding](#the-use-of-pretrained-word-embedding)
-            * [1. Word2Vec Embedding](#1-word2vec-embedding)
-               * [Applications of word2vec](#applications-of-word2vec)
-               * [How the actual embedding works?](#how-the-actual-embedding-works)
-               * [Drawbacks](#drawbacks-2)
-            * [2. GloVe Embedding (Global Vector for Word Representation)](#2-glove-embedding-global-vector-for-word-representation)
-            * [3. FastText Embedding (Brought by Facebook)](#3-fasttext-embedding-brought-by-facebook)
+      * [The use of pretrained Word Embedding](#the-use-of-pretrained-word-embedding)
+         * [1. Word2Vec Embedding](#1-word2vec-embedding)
+            * [Applications of word2vec](#applications-of-word2vec)
+            * [How the actual embedding works?](#how-the-actual-embedding-works)
+            * [Drawbacks](#drawbacks-2)
+         * [2. GloVe Embedding (Global Vector for Word Representation)](#2-glove-embedding-global-vector-for-word-representation)
+         * [3. FastText Embedding (Brought by Facebook)](#3-fasttext-embedding-brought-by-facebook)
             * [Limitation of word Embeddings until here](#limitation-of-word-embeddings-until-here)
-            * [4. ELMo - Embedding from Language Model (Brought by ALLenNLP)](#4-elmo---embedding-from-language-model-brought-by-allennlp)
+         * [4. ELMo - Embedding from Language Model (Brought by ALLenNLP)](#4-elmo---embedding-from-language-model-brought-by-allennlp)
       * [Transformer](#transformer)
          * [Positional encoding (position embeddings)](#positional-encoding-position-embeddings)
          * [Position-wise Feed-Forward Network](#position-wise-feed-forward-network)
@@ -47,7 +47,7 @@
       * [10 Leading Language Models For NLP In 2021](#10-leading-language-models-for-nlp-in-2021)
       * [Repositories](#repositories)
 
-<!-- Added by: gil_diy, at: Mon 07 Mar 2022 08:49:16 IST -->
+<!-- Added by: gil_diy, at: Mon 07 Mar 2022 08:50:58 IST -->
 
 <!--te-->
 
@@ -161,7 +161,7 @@ Is a numerical statistic that is intended to reflect how important a word is to 
 * There is definitely a chance of over fitting
 
 
-### The use of pretrained Word Embedding 
+## The use of pretrained Word Embedding 
 
 Word embedding which is n-dimensional vector space representation of words such that semantically similar words:
 
@@ -171,7 +171,7 @@ Word embedding which is n-dimensional vector space representation of words such 
 
 are closer in the vector space depending on the training data.
 
-#### 1. Word2Vec Embedding
+### 1. Word2Vec Embedding
 
 
 * Word2vec is a group of related models that are used to produce word embeddings
@@ -188,7 +188,7 @@ While both of them can have the entire information about which words are in a se
 
 * Pre-trained word embedding is an example of **Transfer Learning**. The main idea behind it is to **use public embeddings that are already trained on large datasets**. Specifically, instead of initializing our neural network weights randomly, we will set these pre trained embeddings as initialization weights. This trick helps to accelerate training and boost the performance of NLP models.
 
-##### Applications of word2vec
+#### Applications of word2vec
 
 * Word2vec’s applications extend beyond parsing sentences in the wild. 
 It can be applied just as well to:
@@ -210,7 +210,7 @@ and map them to another.
   <img width="400" src="images/nlp/word2vec_example.jpg" title="Look into the image">
 </p>
 
-##### How the actual embedding works?
+#### How the actual embedding works?
 
 * **Word2vec is a two-layer neural net** that processes text by “vectorizing” words. Its input is a text corpus and its output is a set of vectors: feature vectors that represent words in that corpus. While Word2vec is not a deep neural network, it turns text into a numerical form that deep neural networks can understand.
 
@@ -238,12 +238,12 @@ model = Word2Vec(sent, min_count=1,size= 50,workers=3, window =3, sg = 1) # sg =
 
 [Word2Vec in Gensim](https://radimrehurek.com/gensim/models/word2vec.html)
 
-##### Drawbacks
+#### Drawbacks
 
 * Is context-free model, which generate **static embeddings irrespective of the context**.
 
 
-#### 2. GloVe Embedding (Global Vector for Word Representation)
+### 2. GloVe Embedding (Global Vector for Word Representation)
 
 Belongs to Stanford (2016), training is **performed on aggregated global word-word co-occurrence statistics from a corpus**, and the resulting representations showcase interesting linear substructures of **the word vector space**. 
 
@@ -256,7 +256,7 @@ Belongs to Stanford (2016), training is **performed on aggregated global word-wo
 
 [Link](https://nlp.stanford.edu/projects/glove/)
 
-#### 3. FastText Embedding (Brought by Facebook)
+### 3. FastText Embedding (Brought by Facebook)
 
 The main disadvantages of **Word2Vec** and **GloVe** embedding is that they are unable to **encode unknown or out-of-vocabulary words**.
 
@@ -275,7 +275,7 @@ Word2Vec which feeds whole words into the neural network, FastText first breaks 
 They don’t take into consideration the order of words in which they appear which leads to loss of syntactic and semantic understanding of the sentence.
 
 
-#### 4. ELMo - Embedding from Language Model (Brought by ALLenNLP)
+### 4. ELMo - Embedding from Language Model (Brought by ALLenNLP)
 
 Character-level tokens are taken as the inputs to a **bi-directional LSTM which produces word-level embeddings**. 
 Like BERT (but unlike the word embeddings produced by "Bag of Words" approaches, and earlier vector approaches such as Word2Vec and GloVe)
