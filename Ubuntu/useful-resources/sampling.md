@@ -10,7 +10,7 @@
       * [oversampling](#oversampling)
       * [Deal with imbalanced datasets](#deal-with-imbalanced-datasets)
 
-<!-- Added by: gil_diy, at: Mon 07 Mar 2022 11:21:26 IST -->
+<!-- Added by: gil_diy, at: Mon 07 Mar 2022 13:33:35 IST -->
 
 <!--te-->
 
@@ -69,6 +69,10 @@ and has to predict the target label.
 
 
 ## oversampling 
+
+Randomly duplicate examples in the minority class
+
+
  https://arxiv.org/abs/1710.05381
 
 
