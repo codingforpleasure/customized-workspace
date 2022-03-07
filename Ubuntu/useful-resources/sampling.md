@@ -11,7 +11,7 @@
       * [oversampling](#oversampling)
       * [Deal with imbalanced datasets](#deal-with-imbalanced-datasets)
 
-<!-- Added by: gil_diy, at: Mon 07 Mar 2022 10:41:01 IST -->
+<!-- Added by: gil_diy, at: Mon 07 Mar 2022 10:41:13 IST -->
 
 <!--te-->
 
@@ -56,7 +56,7 @@ The Skip-gram model for training word vectors and learned about how negative sam
 In order to **reduce the computational cost of the softmax function which is done over the entire vocabulary**, we can approximate this function by only drawing a few examples from the set of samples that do not appear in the context of the main word.
 
 <p align="center">
-  <img width="600" src="images/sampling/negative_sampling.jpg" title="Look into the image">
+  <img width="700" src="images/sampling/negative_sampling.jpg" title="Look into the image">
 </p>
 
 [Great explanation of Negative sampling](https://youtu.be/vYTihV-9XWE)
