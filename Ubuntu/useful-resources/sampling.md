@@ -11,7 +11,7 @@
       * [Undersampling](#undersampling)
       * [Deal with imbalanced datasets](#deal-with-imbalanced-datasets)
 
-<!-- Added by: gil_diy, at: Mon 07 Mar 2022 13:33:58 IST -->
+<!-- Added by: gil_diy, at: Mon 07 Mar 2022 13:34:03 IST -->
 
 <!--te-->
 
@@ -80,6 +80,6 @@ Randomly duplicate examples in the minority class
 
 Randomly delete examples in the majority class
 
- ## Deal with imbalanced datasets
+## Deal with imbalanced datasets
 
- Resampling with `sklearn.resample` upsampling the minority class or downsampling the majority class.
+Resampling with `sklearn.resample` upsampling the minority class or downsampling the majority class.
