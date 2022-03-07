@@ -16,6 +16,7 @@
          * [1. Word2Vec Embedding](#1-word2vec-embedding)
             * [Applications of word2vec](#applications-of-word2vec)
             * [How the actual embedding works?](#how-the-actual-embedding-works)
+            * [word2vec in python](#word2vec-in-python)
             * [Drawbacks](#drawbacks-2)
          * [2. GloVe Embedding (Global Vector for Word Representation)](#2-glove-embedding-global-vector-for-word-representation)
          * [3. FastText Embedding (Brought by Facebook)](#3-fasttext-embedding-brought-by-facebook)
@@ -47,7 +48,7 @@
       * [10 Leading Language Models For NLP In 2021](#10-leading-language-models-for-nlp-in-2021)
       * [Repositories](#repositories)
 
-<!-- Added by: gil_diy, at: Mon 07 Mar 2022 09:02:22 IST -->
+<!-- Added by: gil_diy, at: Mon 07 Mar 2022 09:11:56 IST -->
 
 <!--te-->
 
@@ -240,8 +241,13 @@ We use the latter method because it produces more accurate results on large data
   <img src="images/nlp/word2vec.jpg" title="tool tip here">
 </p>
 
+
+#### word2vec in python
+
 ```python
-model = Word2Vec(sent, min_count=1,size= 50,workers=3, window =3, sg = 1) # sg = skip-gram
+from gensim.models import Word2Vec
+
+model = Word2Vec(sent, min_count=1,size= 50,workers=3, window=3, sg = 1) # sg = skip-gram
 ```
 
 [Word2Vec in Gensim](https://radimrehurek.com/gensim/models/word2vec.html)
