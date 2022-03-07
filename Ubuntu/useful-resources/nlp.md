@@ -48,7 +48,7 @@
       * [10 Leading Language Models For NLP In 2021](#10-leading-language-models-for-nlp-in-2021)
       * [Repositories](#repositories)
 
-<!-- Added by: gil_diy, at: Mon 07 Mar 2022 09:17:59 IST -->
+<!-- Added by: gil_diy, at: Mon 07 Mar 2022 09:18:04 IST -->
 
 <!--te-->
 
@@ -231,7 +231,7 @@ and map them to another.
 * Word2vec can utilize either of two model architectures to produce a distributed representation of words: 
 
 
-   **1.** Context to predict a target word, called **continuous bag-of-words (CBOW) **
+   **1.** Context to predict a target word, called **continuous bag-of-words (CBOW)**
 
    **2.** Using a word to predict a target context, **called continuous skip-gram**
 
