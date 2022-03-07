@@ -47,7 +47,7 @@
       * [10 Leading Language Models For NLP In 2021](#10-leading-language-models-for-nlp-in-2021)
       * [Repositories](#repositories)
 
-<!-- Added by: gil_diy, at: Mon 07 Mar 2022 08:47:15 IST -->
+<!-- Added by: gil_diy, at: Mon 07 Mar 2022 08:49:13 IST -->
 
 <!--te-->
 
@@ -206,7 +206,9 @@ A neat example, is word2vec can gauge relations between words of one language,
 and map them to another.
 
 
-
+<p align="center">
+  <img width="400" src="images/nlp/word2vec_example.jpg" title="Look into the image">
+</p>
 
 ##### How the actual embedding works?
 
