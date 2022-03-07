@@ -47,7 +47,7 @@
       * [10 Leading Language Models For NLP In 2021](#10-leading-language-models-for-nlp-in-2021)
       * [Repositories](#repositories)
 
-<!-- Added by: gil_diy, at: Mon 07 Mar 2022 08:50:58 IST -->
+<!-- Added by: gil_diy, at: Mon 07 Mar 2022 08:51:52 IST -->
 
 <!--te-->
 
@@ -194,9 +194,13 @@ While both of them can have the entire information about which words are in a se
 It can be applied just as well to:
 
 1) genes
+
 2) code
+
 3) likes
+
 4) playlists
+
 5) social media graphs and other verbal or symbolic series
 
 in which patterns may be noticed.
