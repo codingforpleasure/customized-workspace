@@ -48,7 +48,7 @@
       * [10 Leading Language Models For NLP In 2021](#10-leading-language-models-for-nlp-in-2021)
       * [Repositories](#repositories)
 
-<!-- Added by: gil_diy, at: Mon 07 Mar 2022 09:18:16 IST -->
+<!-- Added by: gil_diy, at: Mon 07 Mar 2022 09:30:19 IST -->
 
 <!--te-->
 
@@ -250,8 +250,10 @@ We’re going to train a simple **neural network with a single hidden layer** to
 from gensim.test.utils import common_texts
 from gensim.models import Word2Vec
 
-model = Word2Vec(sentences=common_texts, min_count=1,size= 50,workers=3, window=3, sg = 1) # sg = skip-gram
+model = Word2Vec(sentences=common_texts, min_count=1,size=50,workers=3, window=5, sg = 1) # sg = skip-gram
 ```
+
+* The "window size" parameter to the algorithm. A typical window size might be 5, meaning 5 words behind and 5 words ahead (10 in total).
 
 [Word2Vec in Gensim](https://radimrehurek.com/gensim/models/word2vec.html)
 
