@@ -48,7 +48,7 @@
       * [10 Leading Language Models For NLP In 2021](#10-leading-language-models-for-nlp-in-2021)
       * [Repositories](#repositories)
 
-<!-- Added by: gil_diy, at: Mon 07 Mar 2022 09:11:56 IST -->
+<!-- Added by: gil_diy, at: Mon 07 Mar 2022 09:12:15 IST -->
 
 <!--te-->
 
@@ -245,9 +245,10 @@ We use the latter method because it produces more accurate results on large data
 #### word2vec in python
 
 ```python
+from gensim.test.utils import common_texts
 from gensim.models import Word2Vec
 
-model = Word2Vec(sent, min_count=1,size= 50,workers=3, window=3, sg = 1) # sg = skip-gram
+model = Word2Vec(sentences=common_texts, min_count=1,size= 50,workers=3, window=3, sg = 1) # sg = skip-gram
 ```
 
 [Word2Vec in Gensim](https://radimrehurek.com/gensim/models/word2vec.html)
