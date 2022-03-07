@@ -11,7 +11,7 @@
       * [oversampling](#oversampling)
       * [Deal with imbalanced datasets](#deal-with-imbalanced-datasets)
 
-<!-- Added by: gil_diy, at: Mon 07 Mar 2022 10:47:34 IST -->
+<!-- Added by: gil_diy, at: Mon 07 Mar 2022 10:48:35 IST -->
 
 <!--te-->
 
@@ -66,7 +66,7 @@ so those pair of words are targeted as `0`.
 no we will create a supervised problem with the pairs of words are the input as X, 
 and has to predict the target label.
 
-[Great explanation of Negative sampling](https://youtu.be/vYTihV-9XWE)
+[Great explanation of Negative sampling with givving skip-gram example](https://youtu.be/vYTihV-9XWE)
 
 ### Example #2: Stochastic Gradient Descent
 
