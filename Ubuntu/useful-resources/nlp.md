@@ -48,7 +48,7 @@
       * [10 Leading Language Models For NLP In 2021](#10-leading-language-models-for-nlp-in-2021)
       * [Repositories](#repositories)
 
-<!-- Added by: gil_diy, at: Mon 07 Mar 2022 11:19:35 IST -->
+<!-- Added by: gil_diy, at: Mon 07 Mar 2022 11:19:41 IST -->
 
 <!--te-->
 
@@ -592,4 +592,4 @@ plt.show()
 
 [Link](https://github.com/flairNLP/flair)
 
-[](https://web.stanford.edu/class/cs224n/slides/cs224n-2019-lecture02-wordvecs2.pdf)
+[word2vec](https://web.stanford.edu/class/cs224n/slides/cs224n-2019-lecture02-wordvecs2.pdf)
