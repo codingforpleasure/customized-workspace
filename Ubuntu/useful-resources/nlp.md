@@ -48,7 +48,7 @@
       * [10 Leading Language Models For NLP In 2021](#10-leading-language-models-for-nlp-in-2021)
       * [Repositories](#repositories)
 
-<!-- Added by: gil_diy, at: Mon 07 Mar 2022 09:16:55 IST -->
+<!-- Added by: gil_diy, at: Mon 07 Mar 2022 09:17:31 IST -->
 
 <!--te-->
 
@@ -223,7 +223,7 @@ and map them to another.
 
 * **Word2vec is a two-layer neural net** that processes text by “vectorizing” words. Its input is a text corpus and its output is a set of vectors: feature vectors that represent words in that corpus. While Word2vec is not a deep neural network, it turns text into a numerical form that deep neural networks can understand.
 
-The output of the Word2vec neural net is a vocabulary in which each item has a vector attached to it, which can be fed into a deep-learning net or simply queried to detect relationships between words.
+* The output of the Word2vec neural net is a vocabulary in which each item has a vector attached to it, which can be fed into a deep-learning net or simply queried to detect relationships between words.
 
 
 * word2vec trains words against other words that neighbor them in the input corpus.
