@@ -15,8 +15,9 @@
       * [Isomap embedding](#isomap-embedding)
       * [LLE (Locally linear embedding)](#lle-locally-linear-embedding)
       * [t-SNE (t-Distributed Stochastic Neighbour)](#t-sne-t-distributed-stochastic-neighbour)
+      * [Auto-encoder](#auto-encoder)
 
-<!-- Added by: gil_diy, at: Mon 07 Mar 2022 09:25:47 IST -->
+<!-- Added by: gil_diy, at: Mon 07 Mar 2022 09:28:18 IST -->
 
 <!--te-->
 
@@ -150,6 +151,10 @@ This method is particularly popular because it’s based on simple, interpretabl
 t-SNE outputs provide better results than PCA and other linear dimensionality reduction models. This is because a linear method such as classical scaling is not good at modeling curved manifolds. It focuses on preserving the distances between widely separated data points rather than on preserving the distances between nearby data points.
 
 By embedding, we're talking about projecting the data from high dimensions onto vectors in a smaller space.
+
+## Auto-encoder
+
+Another place you may have seen this trick is in unsupervised feature learning, where you train an auto-encoder to compress an input vector in the hidden layer, and decompress it back to the original in the output layer. After training it, you strip off the output layer (the decompression step) and just use the hidden layer--it's a trick for learning good image features without having labeled training data.
 
 
 [Link](https://blogs.oracle.com/r/using-svd-for-dimensionality-reduction)
