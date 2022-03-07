@@ -45,7 +45,7 @@
       * [10 Leading Language Models For NLP In 2021](#10-leading-language-models-for-nlp-in-2021)
       * [Repositories](#repositories)
 
-<!-- Added by: gil_diy, at: Mon 07 Mar 2022 08:16:51 IST -->
+<!-- Added by: gil_diy, at: Mon 07 Mar 2022 08:17:05 IST -->
 
 <!--te-->
 
@@ -186,9 +186,9 @@ While both of them can have the entire information about which words are in a se
 
 * Word2vec can utilize either of two model architectures to produce a distributed representation of words: 
 
-**(1)** continuous bag-of-words (CBOW) 
+**1.** continuous bag-of-words (CBOW) 
 
-**(2)** continuous skip-gram
+**2.** continuous skip-gram
 
 
 <p style="width:500px; text-align:center " >
