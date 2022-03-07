@@ -45,7 +45,7 @@
       * [10 Leading Language Models For NLP In 2021](#10-leading-language-models-for-nlp-in-2021)
       * [Repositories](#repositories)
 
-<!-- Added by: gil_diy, at: Sat 05 Mar 2022 12:53:54 IST -->
+<!-- Added by: gil_diy, at: Mon 07 Mar 2022 08:09:16 IST -->
 
 <!--te-->
 
@@ -136,6 +136,7 @@ dictionary = corpora.Dictionary(processed_corpus)
 dictionary.doc2bow(text)
 ```
 
+
 #### Drawbacks
 
 * **Semantic information is not stored**, which means the context/order of a word appears in a sentence is not taken into account.
@@ -172,6 +173,10 @@ are closer in the vector space depending on the training data.
 
 
 * Word2vec is a group of related models that are used to produce word embeddings
+
+* Another point to think about is information vs domain knowledge.
+For example, let’s consider word embeddings (word2vec) and bag of words representations.
+While both of them can have the entire information about which words are in a sentence, word embeddings also include **domain knowledge like relationship between words and such**.
 
 * Word2vec takes as its input a large corpus of text and produces a vector space, typically of several hundred dimensions, with each unique word in the corpus being assigned a corresponding vector in the space.
 
