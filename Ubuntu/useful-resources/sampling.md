@@ -11,7 +11,7 @@
       * [oversampling](#oversampling)
       * [Deal with imbalanced datasets](#deal-with-imbalanced-datasets)
 
-<!-- Added by: gil_diy, at: Mon 07 Mar 2022 10:45:31 IST -->
+<!-- Added by: gil_diy, at: Mon 07 Mar 2022 10:47:34 IST -->
 
 <!--te-->
 
@@ -57,11 +57,14 @@ In order to **reduce the computational cost of the softmax function which is don
 
 * Let's take an example, here we have generated `k` Negative examples,
 we have took the word `orange` and placed next to it randomly words
-so those couples words are targeted as `0`.
+so those pair of words are targeted as `0`.
 
 <p align="center">
   <img width="700" src="images/sampling/negative_sampling.jpg" title="Look into the image">
 </p>
+
+no we will create a supervised problem with the pairs of words are the input as X, 
+and has to predict the target label.
 
 [Great explanation of Negative sampling](https://youtu.be/vYTihV-9XWE)
 
