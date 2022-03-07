@@ -6,10 +6,12 @@
       * [Systematic sampling](#systematic-sampling)
    * [Obtain a systematic sample and save it in a new variable](#obtain-a-systematic-sample-and-save-it-in-a-new-variable)
       * [Negative sampling](#negative-sampling)
+         * [Example #1: The Skip-gram model](#example-1-the-skip-gram-model)
+         * [Example #2: Stochastic Gradient Descent](#example-2-stochastic-gradient-descent)
       * [oversampling](#oversampling)
       * [Deal with imbalanced datasets](#deal-with-imbalanced-datasets)
 
-<!-- Added by: gil_diy, at: Wed 23 Feb 2022 10:10:00 IST -->
+<!-- Added by: gil_diy, at: Mon 07 Mar 2022 10:18:18 IST -->
 
 <!--te-->
 
@@ -42,6 +44,8 @@ systematic_sample = systematic_sampling(df, 3)
 
 ## Negative sampling
 
+### Example #1: The Skip-gram model
+
 The Skip-gram model works in a way that, given an input, it **predicts the surrounding or context words**. Using this method, we can learn a hidden layer that we’ll use to calculate **how probable a word is to occur as the context of the input**:
 
 <p align="center">
@@ -50,6 +54,7 @@ The Skip-gram model works in a way that, given an input, it **predicts the surro
 
 The Skip-gram model for training word vectors and learned about how negative sampling is used for this purpose. In order to **reduce the computational cost of the softmax function which is done over the entire vocabulary**, we can approximate this function by only drawing a few examples from the set of samples that do not appear in the context of the main word.
 
+### Example #2: Stochastic Gradient Descent
 
 ## oversampling 
  https://arxiv.org/abs/1710.05381
