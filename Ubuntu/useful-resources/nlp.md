@@ -46,7 +46,7 @@
       * [10 Leading Language Models For NLP In 2021](#10-leading-language-models-for-nlp-in-2021)
       * [Repositories](#repositories)
 
-<!-- Added by: gil_diy, at: Mon 07 Mar 2022 08:23:09 IST -->
+<!-- Added by: gil_diy, at: Mon 07 Mar 2022 08:25:41 IST -->
 
 <!--te-->
 
@@ -180,6 +180,8 @@ For example, let’s consider word embeddings (word2vec) and bag of words repres
 While both of them can have the entire information about which words are in a sentence, word embeddings also include **domain knowledge like relationship between words and such**.
 
 * Word2vec takes as its input a large corpus of text and produces a vector space, typically of several hundred dimensions, with each unique word in the corpus being assigned a corresponding vector in the space.
+
+* The purpose and usefulness of Word2vec is to group the vectors of similar words together in vectorspace. That is, **it detects similarities mathematically**. Word2vec creates vectors that are distributed numerical representations of word features, features such as the context of individual words. It does so **without human intervention**.
 
 * When you train such a model over billions of tokens over a large dataset containing web articles and so forth, what you get is a very potent representation of each word in the vocabulary in the form of a vector. These vectors can be 300 dimensions long, i.e. each word is represented by 300 real numbers.
 
