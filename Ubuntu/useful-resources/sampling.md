@@ -7,11 +7,10 @@
    * [Obtain a systematic sample and save it in a new variable](#obtain-a-systematic-sample-and-save-it-in-a-new-variable)
       * [Negative sampling](#negative-sampling)
          * [Example #1: Resolving the downside of softmax is slow to compute for Skip-gram model.](#example-1-resolving-the-downside-of-softmax-is-slow-to-compute-for-skip-gram-model)
-         * [Example #2: Stochastic Gradient Descent](#example-2-stochastic-gradient-descent)
       * [oversampling](#oversampling)
       * [Deal with imbalanced datasets](#deal-with-imbalanced-datasets)
 
-<!-- Added by: gil_diy, at: Mon 07 Mar 2022 10:48:37 IST -->
+<!-- Added by: gil_diy, at: Mon 07 Mar 2022 10:58:43 IST -->
 
 <!--te-->
 
@@ -67,10 +66,6 @@ no we will create a supervised problem with the pairs of words are the input as 
 and has to predict the target label.
 
 [Great explanation of Negative sampling with givving skip-gram example](https://youtu.be/vYTihV-9XWE)
-
-### Example #2: Stochastic Gradient Descent
-
-
 
 
 ## oversampling 
