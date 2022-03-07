@@ -10,7 +10,7 @@
       * [oversampling](#oversampling)
       * [Deal with imbalanced datasets](#deal-with-imbalanced-datasets)
 
-<!-- Added by: gil_diy, at: Mon 07 Mar 2022 10:58:46 IST -->
+<!-- Added by: gil_diy, at: Mon 07 Mar 2022 11:21:23 IST -->
 
 <!--te-->
 
@@ -62,7 +62,7 @@ so those pair of words are targeted as `0`.
   <img width="700" src="images/sampling/negative_sampling.jpg" title="Look into the image">
 </p>
 
-no we will create a supervised problem with the pairs of words are the input as X, 
+Now we will create a supervised problem with the pairs of words are the input as X, 
 and has to predict the target label.
 
 [Great explanation of Negative sampling with givving skip-gram example](https://youtu.be/vYTihV-9XWE)
