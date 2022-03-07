@@ -48,7 +48,7 @@
       * [10 Leading Language Models For NLP In 2021](#10-leading-language-models-for-nlp-in-2021)
       * [Repositories](#repositories)
 
-<!-- Added by: gil_diy, at: Mon 07 Mar 2022 09:18:07 IST -->
+<!-- Added by: gil_diy, at: Mon 07 Mar 2022 09:18:13 IST -->
 
 <!--te-->
 
@@ -233,7 +233,7 @@ and map them to another.
 
    **1.** Context to predict a target word, called **continuous bag-of-words (CBOW)**
 
-   **2.** Using a word to predict a target context, **called continuous skip-gram**
+   **2.** Using a word to predict a target context, called **continuous skip-gram**
 
 We use the latter method because it produces more accurate results on large datasets.
 
