@@ -14,6 +14,7 @@
             * [Drawbacks](#drawbacks-1)
          * [The use of pretrained Word Embedding](#the-use-of-pretrained-word-embedding)
             * [1. Word2Vec Embedding](#1-word2vec-embedding)
+               * [How the actual embedding works?](#how-the-actual-embedding-works)
                * [Drawbacks](#drawbacks-2)
             * [2. GloVe Embedding (Global Vector for Word Representation)](#2-glove-embedding-global-vector-for-word-representation)
             * [3. FastText Embedding (Brought by Facebook)](#3-fasttext-embedding-brought-by-facebook)
@@ -45,7 +46,7 @@
       * [10 Leading Language Models For NLP In 2021](#10-leading-language-models-for-nlp-in-2021)
       * [Repositories](#repositories)
 
-<!-- Added by: gil_diy, at: Mon 07 Mar 2022 08:18:16 IST -->
+<!-- Added by: gil_diy, at: Mon 07 Mar 2022 08:23:06 IST -->
 
 <!--te-->
 
@@ -183,6 +184,22 @@ While both of them can have the entire information about which words are in a se
 * When you train such a model over billions of tokens over a large dataset containing web articles and so forth, what you get is a very potent representation of each word in the vocabulary in the form of a vector. These vectors can be 300 dimensions long, i.e. each word is represented by 300 real numbers.
 
 * Pre-trained word embedding is an example of **Transfer Learning**. The main idea behind it is to **use public embeddings that are already trained on large datasets**. Specifically, instead of initializing our neural network weights randomly, we will set these pre trained embeddings as initialization weights. This trick helps to accelerate training and boost the performance of NLP models.
+
+
+##### How the actual embedding works?
+
+* **Word2vec is a two-layer neural net** that processes text by “vectorizing” words. Its input is a text corpus and its output is a set of vectors: feature vectors that represent words in that corpus. While Word2vec is not a deep neural network, it turns text into a numerical form that deep neural networks can understand.
+
+* Word2vec’s applications extend beyond parsing sentences in the wild. 
+It can be applied just as well to:
+
+1) genes
+2) code
+3) likes
+4) playlists
+5) social media graphs and other verbal or symbolic series
+
+in which patterns may be noticed.
 
 * Word2vec can utilize either of two model architectures to produce a distributed representation of words: 
 
