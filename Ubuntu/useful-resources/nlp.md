@@ -47,7 +47,7 @@
       * [10 Leading Language Models For NLP In 2021](#10-leading-language-models-for-nlp-in-2021)
       * [Repositories](#repositories)
 
-<!-- Added by: gil_diy, at: Mon 07 Mar 2022 08:43:43 IST -->
+<!-- Added by: gil_diy, at: Mon 07 Mar 2022 08:47:15 IST -->
 
 <!--te-->
 
@@ -200,6 +200,13 @@ It can be applied just as well to:
 5) social media graphs and other verbal or symbolic series
 
 in which patterns may be noticed.
+
+
+A neat example, is word2vec can gauge relations between words of one language,
+and map them to another.
+
+
+
 
 ##### How the actual embedding works?
 
