@@ -11,7 +11,7 @@
       * [oversampling](#oversampling)
       * [Deal with imbalanced datasets](#deal-with-imbalanced-datasets)
 
-<!-- Added by: gil_diy, at: Mon 07 Mar 2022 10:22:40 IST -->
+<!-- Added by: gil_diy, at: Mon 07 Mar 2022 10:39:47 IST -->
 
 <!--te-->
 
@@ -55,7 +55,12 @@ The Skip-gram model works in a way that, given an input, it **predicts the surro
 The Skip-gram model for training word vectors and learned about how negative sampling is used for this purpose. 
 In order to **reduce the computational cost of the softmax function which is done over the entire vocabulary**, we can approximate this function by only drawing a few examples from the set of samples that do not appear in the context of the main word.
 
+[Great explanation of Negative sampling](https://youtu.be/vYTihV-9XWE)
+
 ### Example #2: Stochastic Gradient Descent
+
+
+
 
 ## oversampling 
  https://arxiv.org/abs/1710.05381
