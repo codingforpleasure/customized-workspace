@@ -47,7 +47,7 @@
       * [10 Leading Language Models For NLP In 2021](#10-leading-language-models-for-nlp-in-2021)
       * [Repositories](#repositories)
 
-<!-- Added by: gil_diy, at: Mon 07 Mar 2022 08:36:58 IST -->
+<!-- Added by: gil_diy, at: Mon 07 Mar 2022 08:42:43 IST -->
 
 <!--te-->
 
@@ -208,12 +208,16 @@ in which patterns may be noticed.
 The output of the Word2vec neural net is a vocabulary in which each item has a vector attached to it, which can be fed into a deep-learning net or simply queried to detect relationships between words.
 
 
+* word2vec trains words against other words that neighbor them in the input corpus.
 
 * Word2vec can utilize either of two model architectures to produce a distributed representation of words: 
 
-   **1.** continuous bag-of-words (CBOW) 
 
-   **2.** continuous skip-gram
+context to predict a target word (a method known as continuous bag of words, or CBOW), or using a word to predict a target context, which is called skip-gram. We use the latter method because it produces more accurate results on large datasets.
+
+   **1.** Context to predict a target word, called continuous bag-of-words (CBOW) 
+
+   **2.** Using a word to predict a target context, called continuous skip-gram
 
 
 <p style="width:500px; text-align:center " >
