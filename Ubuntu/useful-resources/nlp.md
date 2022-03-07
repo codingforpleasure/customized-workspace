@@ -47,7 +47,7 @@
       * [10 Leading Language Models For NLP In 2021](#10-leading-language-models-for-nlp-in-2021)
       * [Repositories](#repositories)
 
-<!-- Added by: gil_diy, at: Mon 07 Mar 2022 08:54:20 IST -->
+<!-- Added by: gil_diy, at: Mon 07 Mar 2022 08:54:41 IST -->
 
 <!--te-->
 
@@ -203,7 +203,7 @@ It can be applied just as well to:
 
 5) **social media graphs** [Facebook datset](http://snap.stanford.edu/data/egonets-Facebook.html)
 
-6) **and other verbal or symbolic series**
+6) **Other verbal or symbolic series**
 
 in which patterns may be noticed.
 
