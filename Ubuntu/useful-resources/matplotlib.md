@@ -47,7 +47,7 @@
       * [Writing mathematical expression](#writing-mathematical-expression)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Tue 08 Mar 2022 20:11:45 IST -->
+<!-- Added by: gil_diy, at: Tue 08 Mar 2022 20:15:59 IST -->
 
 <!--te-->
 
@@ -859,6 +859,8 @@ axs[0, 0].plot(x, y)
 axs[0, 1].plot(x, z)
 axs[1, 0].scatter(x, t)
 axs[1, 1].scatter(x, y)
+
+fig.suptitle('Shared title among all subplots')
 
 plt.show()
 ```
