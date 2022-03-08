@@ -16,7 +16,7 @@
       * [Histograms](#histograms)
       * [Density plots (KDE - Kernel density estimate (KDE))](#density-plots-kde---kernel-density-estimate-kde)
 
-<!-- Added by: gil_diy, at: Tue 08 Mar 2022 08:51:45 IST -->
+<!-- Added by: gil_diy, at: Tue 08 Mar 2022 08:52:23 IST -->
 
 <!--te-->
 
@@ -165,6 +165,8 @@ sns.set_style("whitegrid")
 sns.countplot(x='HouseAge',
               data=X_train,
               palette='RdBu_r', ax=ax1).set(title='Histogram of House Age')
+
+# Don't show decimal digits therfore I wrote zero
 ax1.set_xticklabels(['{:.0f}'.format(float(t.get_text())) for t in ax1.get_xticklabels()])
 plt.show()
 ```
