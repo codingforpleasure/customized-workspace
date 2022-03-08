@@ -46,7 +46,7 @@
       * [Writing mathematical expression](#writing-mathematical-expression)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Tue 08 Mar 2022 19:54:23 IST -->
+<!-- Added by: gil_diy, at: Tue 08 Mar 2022 19:54:26 IST -->
 
 <!--te-->
 
@@ -830,7 +830,7 @@ fig, (ax1, ax2) = plt.subplots(nrows = 2 , ncols = 1)
 ```
 
 <p align="center">
-  <img width="400" src="iimages/matplotlib/plots_side_by_side_share_y_axis.png" title="Look into the image">
+  <img width="600" src="iimages/matplotlib/plots_side_by_side_share_y_axis.png" title="Look into the image">
 </p>
 
 ### Simple plot
