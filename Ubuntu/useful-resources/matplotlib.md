@@ -47,7 +47,7 @@
       * [Writing mathematical expression](#writing-mathematical-expression)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Tue 08 Mar 2022 20:02:20 IST -->
+<!-- Added by: gil_diy, at: Tue 08 Mar 2022 20:02:23 IST -->
 
 <!--te-->
 
@@ -845,7 +845,6 @@ plt.show()
 #### Plot 2x2 subplots
 
 ```python
-
 # Let's First create some toy data:
 
 x = np.linspace(0, 2 * np.pi, 400)
