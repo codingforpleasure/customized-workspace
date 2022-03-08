@@ -16,7 +16,7 @@
       * [Histograms](#histograms)
       * [Density plots (KDE - Kernel density estimate (KDE))](#density-plots-kde---kernel-density-estimate-kde)
 
-<!-- Added by: gil_diy, at: Tue 08 Mar 2022 08:51:29 IST -->
+<!-- Added by: gil_diy, at: Tue 08 Mar 2022 08:51:45 IST -->
 
 <!--te-->
 
@@ -171,7 +171,7 @@ plt.show()
 
 
 <p align="center">
-  <img width="400" src="images/sns/countplot_axis_format.jpg" title="Look into the image">
+  <img width="600" src="images/sns/countplot_axis_format.jpg" title="Look into the image">
 </p>
 
 ## Scatter plot
