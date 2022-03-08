@@ -47,7 +47,7 @@
       * [Writing mathematical expression](#writing-mathematical-expression)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Tue 08 Mar 2022 20:11:28 IST -->
+<!-- Added by: gil_diy, at: Tue 08 Mar 2022 20:11:32 IST -->
 
 <!--te-->
 
