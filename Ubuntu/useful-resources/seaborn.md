@@ -9,13 +9,14 @@
       * [Adding legend](#adding-legend)
       * [Bar chart](#bar-chart)
       * [Heatmap](#heatmap)
+      * [Set axis with formatting the decimal places](#set-axis-with-formatting-the-decimal-places)
       * [Scatter plot](#scatter-plot)
       * [Scatter plot with linear regresssion](#scatter-plot-with-linear-regresssion)
       * [Categorical scatter plot to highlight the relationship between](#categorical-scatter-plot-to-highlight-the-relationship-between)
       * [Histograms](#histograms)
       * [Density plots (KDE - Kernel density estimate (KDE))](#density-plots-kde---kernel-density-estimate-kde)
 
-<!-- Added by: gil_diy, at: Wed 02 Feb 2022 10:04:09 IST -->
+<!-- Added by: gil_diy, at: Tue 08 Mar 2022 08:48:47 IST -->
 
 <!--te-->
 
@@ -155,6 +156,19 @@ plt.show()
 <p align="center"> <!-- style="width:400px;" -->
   <img src="images/sns/count_plot_advance.png" title="tool tip here">
 </p>
+
+## Set axis with formatting the decimal places
+
+```python
+fig, ax1 = plt.subplots(figsize=(10, 4))
+sns.set_style("whitegrid")
+sns.countplot(x='HouseAge',
+              data=X_train,
+              palette='RdBu_r', ax=ax1).set(title='Histogram of House Age')
+ax1.set_xticklabels(['{:.0f}'.format(float(t.get_text())) for t in ax1.get_xticklabels()])
+plt.show()
+```
+
 
 ## Scatter plot
 
