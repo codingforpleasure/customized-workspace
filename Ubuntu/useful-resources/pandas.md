@@ -83,7 +83,7 @@
          * [Calculate correlation for all numerical columns pairs](#calculate-correlation-for-all-numerical-columns-pairs)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Tue 08 Mar 2022 11:43:08 IST -->
+<!-- Added by: gil_diy, at: Tue 08 Mar 2022 11:43:12 IST -->
 
 <!--te-->
 
@@ -251,6 +251,7 @@ print(data_df.columns.values)
 ```
 
 if this does not work please check:
+
 ```python
  df.columns.values = ['new-name1', 'new-name1']
 ```
