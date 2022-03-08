@@ -47,7 +47,7 @@
       * [Writing mathematical expression](#writing-mathematical-expression)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Tue 08 Mar 2022 20:03:49 IST -->
+<!-- Added by: gil_diy, at: Tue 08 Mar 2022 20:08:58 IST -->
 
 <!--te-->
 
@@ -860,6 +860,10 @@ axs[1, 1].scatter(x, y)
 
 plt.show()
 ```
+
+<p align="center">
+  <img width="400" src="images/matplotlib/plot_2_on_2.png" title="Look into the image">
+</p>
 
 ### Simple plot
 
