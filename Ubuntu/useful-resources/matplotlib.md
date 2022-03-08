@@ -47,7 +47,7 @@
       * [Writing mathematical expression](#writing-mathematical-expression)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Tue 08 Mar 2022 20:10:10 IST -->
+<!-- Added by: gil_diy, at: Tue 08 Mar 2022 20:11:21 IST -->
 
 <!--te-->
 
@@ -839,7 +839,7 @@ plt.show()
 ```
 
 <p align="center">
-  <img width="600" src="iimages/matplotlib/plots_side_by_side_share_y_axis.png" title="Look into the image">
+  <img width="600" src="images/matplotlib/plots_side_by_side_share_y_axis.png" title="Look into the image">
 </p>
 
 #### Plot 2x2 subplots
