@@ -44,7 +44,7 @@
       * [Writing mathematical expression](#writing-mathematical-expression)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Tue 08 Mar 2022 14:04:02 IST -->
+<!-- Added by: gil_diy, at: Tue 08 Mar 2022 14:05:17 IST -->
 
 <!--te-->
 
@@ -167,7 +167,7 @@ if __name__ == '__main__':
 ```
 
 <p align="center">
-  <img width="400" src="images/" title="Look into the image">
+  <img width="400" src="images/matplotlib/customizing_ticks.png" title="Look into the image">
 </p>
 
 ### Example #4 (line types + colors + symbols):
