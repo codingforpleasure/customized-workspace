@@ -5,7 +5,7 @@
       * [Simple plot](#simple-plot)
          * [Example #1:](#example-1)
          * [Example #2:](#example-2)
-         * [Example $5](#example-5)
+         * [Example $3:](#example-3)
          * [Example #4 (line types + colors + symbols):](#example-4-line-types--colors--symbols)
             * [Color](#color)
             * [Symbol](#symbol)
@@ -44,7 +44,7 @@
       * [Writing mathematical expression](#writing-mathematical-expression)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Tue 08 Mar 2022 14:05:23 IST -->
+<!-- Added by: gil_diy, at: Tue 08 Mar 2022 14:05:33 IST -->
 
 <!--te-->
 
@@ -117,7 +117,7 @@ plt.savefig('sinc.png', transparent = True)
 </p>
 
 
-### Example $5
+### Example $3:
 
 ```python
 import matplotlib.pyplot as plt
