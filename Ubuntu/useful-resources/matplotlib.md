@@ -46,7 +46,7 @@
       * [Writing mathematical expression](#writing-mathematical-expression)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Tue 08 Mar 2022 19:54:43 IST -->
+<!-- Added by: gil_diy, at: Tue 08 Mar 2022 19:55:08 IST -->
 
 <!--te-->
 
@@ -825,8 +825,16 @@ fig, (ax1, ax2) = plt.subplots(nrows = 2 , ncols = 1)
 #### Share y axis between two plots side by side
 
 ```python
+# First create some toy data:
+x = np.linspace(0, 2 * np.pi, 400)
+y = np.sin(x ** 2)
 
-
+# Create two subplots and unpack the output array immediately
+f, (ax1, ax2) = plt.subplots(1, 2, sharey=True)
+ax1.plot(x, y)
+ax1.set_title('Sharing Y axis')
+ax2.scatter(x, y)
+plt.show()
 ```
 
 <p align="center">
