@@ -45,7 +45,7 @@
       * [Writing mathematical expression](#writing-mathematical-expression)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Tue 08 Mar 2022 16:47:11 IST -->
+<!-- Added by: gil_diy, at: Tue 08 Mar 2022 16:49:36 IST -->
 
 <!--te-->
 
@@ -881,8 +881,12 @@ plt.yscale('log')
 
 ```python
 ax = plt.axes()
+
+# Change the resolution of the major axis
 ax.xaxis.set_major_locator(ticker.MultipleLocator(3))
-ax.xaxis.set_minor_locator(ticker.MultipleLocator(0.5))
+
+# Change the resolution of the minor axis
+ax.xaxis.set_minor_locator(ticker.MultipleLocator(1))
 ```
 
 
