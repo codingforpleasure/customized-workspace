@@ -47,7 +47,7 @@
       * [Writing mathematical expression](#writing-mathematical-expression)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Tue 08 Mar 2022 20:09:52 IST -->
+<!-- Added by: gil_diy, at: Tue 08 Mar 2022 20:10:07 IST -->
 
 <!--te-->
 
@@ -843,6 +843,8 @@ plt.show()
 </p>
 
 #### Plot 2x2 subplots
+
+Here we have plotted 2x2 subplots of type polar
 
 ```python
 # Let's First create some toy data:
