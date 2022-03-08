@@ -5,7 +5,8 @@
       * [Simple plot](#simple-plot)
          * [Example #1:](#example-1)
          * [Example #2:](#example-2)
-         * [Example #3 (line types + colors + symbols):](#example-3-line-types--colors--symbols)
+         * [Example $5](#example-5)
+         * [Example #4 (line types + colors + symbols):](#example-4-line-types--colors--symbols)
             * [Color](#color)
             * [Symbol](#symbol)
             * [Line type](#line-type)
@@ -43,7 +44,7 @@
       * [Writing mathematical expression](#writing-mathematical-expression)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Fri 04 Mar 2022 17:42:52 IST -->
+<!-- Added by: gil_diy, at: Tue 08 Mar 2022 14:04:02 IST -->
 
 <!--te-->
 
@@ -116,7 +117,60 @@ plt.savefig('sinc.png', transparent = True)
 </p>
 
 
-### Example #3 (line types + colors + symbols):
+### Example $5
+
+```python
+import matplotlib.pyplot as plt
+import numpy as np
+
+
+def format_func(value, tick_number):
+    # find number of multiples of pi/2
+    N = int(np.round(2 * value / np.pi))
+    if N == 0:
+        return "0"
+    elif N == 1:
+        return r"$\pi/2$"
+    elif N == 2:
+        return r"$\pi$"
+    elif N % 2 > 0:
+        return r"${0}\pi/2$".format(N)
+    else:
+        return r"${0}\pi$".format(N // 2)
+
+
+if __name__ == '__main__':
+    # Plot a sine and cosine curve
+    fig, ax = plt.subplots()
+    x = np.linspace(0, 3 * np.pi, 1000)
+    ax.plot(x, np.sin(x), lw=3, label='Sine')
+    ax.plot(x, np.cos(x), lw=3, label='Cosine')
+
+    # Set up grid, legend, and limits
+    ax.grid(True)
+    ax.legend(frameon=False)
+    ax.axis('equal')
+    ax.set_xlim(0, 3 * np.pi);
+
+    # There are a couple changes we might like to make. First, it's more natural for this data to space the
+    # ticks and grid lines in multiples of π. We can do this by setting a MultipleLocator,
+    # which locates ticks at a multiple of the number you provide. For good measure,
+    # we'll add both major and minor ticks in multiples of π/4:
+    
+    ax.xaxis.set_major_locator(plt.MultipleLocator(np.pi / 2))
+    ax.xaxis.set_minor_locator(plt.MultipleLocator(np.pi / 4))
+
+    # The plt.FuncFormatter() offers extremely fine-grained control over the appearance of your plot ticks,
+    # and comes in very handy when preparing plots for presentation or publication.
+    ax.xaxis.set_major_formatter(plt.FuncFormatter(format_func))
+    plt.show()
+```
+
+<p align="center">
+  <img width="400" src="images/" title="Look into the image">
+</p>
+
+### Example #4 (line types + colors + symbols):
 
 
 ```python
