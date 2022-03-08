@@ -16,7 +16,7 @@
       * [Histograms](#histograms)
       * [Density plots (KDE - Kernel density estimate (KDE))](#density-plots-kde---kernel-density-estimate-kde)
 
-<!-- Added by: gil_diy, at: Tue 08 Mar 2022 08:48:50 IST -->
+<!-- Added by: gil_diy, at: Tue 08 Mar 2022 08:51:27 IST -->
 
 <!--te-->
 
@@ -169,6 +169,10 @@ ax1.set_xticklabels(['{:.0f}'.format(float(t.get_text())) for t in ax1.get_xtick
 plt.show()
 ```
 
+
+<p align="center">
+  <img width="400" src="images/sns/countplot_axis_format.jpg" title="Look into the image">
+</p>
 
 ## Scatter plot
 
