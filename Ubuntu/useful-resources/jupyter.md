@@ -7,13 +7,16 @@
          * [Magic Commands in junyper notebook](#magic-commands-in-junyper-notebook)
       * [Setting up jupyter](#setting-up-jupyter)
       * [Jupyter notebook extensions](#jupyter-notebook-extensions)
-      * [debugging in jupyter notebook](#debugging-in-jupyter-notebook)
       * [Clean all output cells in jupter notebook:](#clean-all-output-cells-in-jupter-notebook)
       * [Convert jupyter notebook to python file](#convert-jupyter-notebook-to-python-file)
       * [Debug jupyter notebook](#debug-jupyter-notebook)
+      * [How to create table of content in Jupyter notebook?](#how-to-create-table-of-content-in-jupyter-notebook)
+      * [Controlling the verbosity of the stack trace during debugging process](#controlling-the-verbosity-of-the-stack-trace-during-debugging-process)
+      * [Timing code](#timing-code)
+      * [Jupyter Lab](#jupyter-lab)
       * [Collection of Tips](#collection-of-tips)
 
-<!-- Added by: gil_diy, at: Thu 25 Nov 2021 13:28:12 IST -->
+<!-- Added by: gil_diy, at: Tue 08 Mar 2022 07:35:19 IST -->
 
 <!--te-->
 
@@ -128,6 +131,10 @@ For more information, use the ``help`` command in the debugger, or take a look a
 [explanantion how to debug in jupyter notebook](https://youtu.be/Z0ssNAbe81M?list=PLfYUBJiXbdtTttBGq-u2zeY1OTjs5e-Ia&t=6190)
 
 
+## How to create table of content in Jupyter notebook?
+
+[Link](https://moonbooks.org/Articles/How-to-create-a-table-of-contents-in-a-jupyter-notebook-/)
+
 ## Controlling the verbosity of the stack trace during debugging process
 
 '%xmode' takes a single argument, the mode, and there are three possibilities:
@@ -144,6 +151,12 @@ To move to a different verbosity mode of the stack trace, just enter:
 ## Timing code
 
 [Link](https://colab.research.google.com/github/jakevdp/PythonDataScienceHandbook/blob/master/notebooks/01.07-Timing-and-Profiling.ipynb#scrollTo=0AGQSHqH5Qr1)
+
+
+## Jupyter Lab
+
+[Link](https://towardsdatascience.com/jupyterlab-2-0-edd4155ab897)
+
 
 ## Collection of Tips
 
