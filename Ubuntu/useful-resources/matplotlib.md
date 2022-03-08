@@ -28,6 +28,7 @@
       * [Visualising correlation using Seaborn library](#visualising-correlation-using-seaborn-library)
       * [Subplots (Object oriented approach)](#subplots-object-oriented-approach)
          * [Multiple plots](#multiple-plots)
+            * [Share y axis between two plots side by side](#share-y-axis-between-two-plots-side-by-side)
          * [Simple plot](#simple-plot-1)
          * [Configuring the axis](#configuring-the-axis)
             * [Plot image without showing axis:](#plot-image-without-showing-axis)
@@ -45,7 +46,7 @@
       * [Writing mathematical expression](#writing-mathematical-expression)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Tue 08 Mar 2022 16:49:56 IST -->
+<!-- Added by: gil_diy, at: Tue 08 Mar 2022 19:54:23 IST -->
 
 <!--te-->
 
@@ -821,6 +822,16 @@ fig, ax = plt.subplots(nrows = 2 , ncols = 1)
 # you can unpack it, more easier:
 fig, (ax1, ax2) = plt.subplots(nrows = 2 , ncols = 1)
 ```
+#### Share y axis between two plots side by side
+
+```python
+
+
+```
+
+<p align="center">
+  <img width="400" src="iimages/matplotlib/plots_side_by_side_share_y_axis.png" title="Look into the image">
+</p>
 
 ### Simple plot
 
