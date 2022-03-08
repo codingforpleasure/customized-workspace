@@ -29,6 +29,7 @@
       * [Subplots (Object oriented approach)](#subplots-object-oriented-approach)
          * [Multiple plots](#multiple-plots)
             * [Share y axis between two plots side by side](#share-y-axis-between-two-plots-side-by-side)
+            * [Plot 2x2 subplots](#plot-2x2-subplots)
          * [Simple plot](#simple-plot-1)
          * [Configuring the axis](#configuring-the-axis)
             * [Plot image without showing axis:](#plot-image-without-showing-axis)
@@ -46,7 +47,7 @@
       * [Writing mathematical expression](#writing-mathematical-expression)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Tue 08 Mar 2022 19:55:18 IST -->
+<!-- Added by: gil_diy, at: Tue 08 Mar 2022 20:02:20 IST -->
 
 <!--te-->
 
@@ -840,6 +841,26 @@ plt.show()
 <p align="center">
   <img width="600" src="iimages/matplotlib/plots_side_by_side_share_y_axis.png" title="Look into the image">
 </p>
+
+#### Plot 2x2 subplots
+
+```python
+
+# Let's First create some toy data:
+
+x = np.linspace(0, 2 * np.pi, 400)
+y = np.sin(x ** 2)
+z = np.sin(x)
+t = np.cos(x ** 2)
+
+fig, axs = plt.subplots(2, 2, subplot_kw=dict(projection="polar"))
+axs[0, 0].plot(x, y)
+axs[0, 1].plot(x, z)
+axs[1, 0].scatter(x, t)
+axs[1, 1].scatter(x, y)
+
+plt.show()
+```
 
 ### Simple plot
 
