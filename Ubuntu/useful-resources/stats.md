@@ -10,8 +10,9 @@
             * [Hypothesis Testing](#hypothesis-testing)
             * [Chi-Square Tests](#chi-square-tests)
             * [ANOVA (Analysis Of Variance)](#anova-analysis-of-variance)
+      * [QQplots (Quantile Quantile plot)](#qqplots-quantile-quantile-plot)
 
-<!-- Added by: gil_diy, at: Thu 10 Mar 2022 10:14:04 IST -->
+<!-- Added by: gil_diy, at: Thu 10 Mar 2022 10:14:34 IST -->
 
 <!--te-->
 
@@ -103,3 +104,5 @@ Name | Description
 ------------|-----
 One-way ANOVA | Is used to determine whether or not there is a statistically significant difference between the means of three or more independent groups. we are analyzing how one predictor variable impacts a response variable. | [Link](https://www.statology.org/one-way-anova-r/)
 A two-way ANOVA | is used to determine whether or not there is a statistically significant difference between the means of three or more independent groups that have been split on two variables (sometimes called “factors”) | [Link](https://www.statology.org/two-way-anova/)
+
+## QQplots (Quantile Quantile plot)
