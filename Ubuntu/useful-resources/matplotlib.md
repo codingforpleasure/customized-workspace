@@ -47,7 +47,7 @@
       * [Writing mathematical expression](#writing-mathematical-expression)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Tue 08 Mar 2022 20:17:36 IST -->
+<!-- Added by: gil_diy, at: Thu 10 Mar 2022 09:54:25 IST -->
 
 <!--te-->
 
@@ -831,7 +831,7 @@ x = np.linspace(0, 2 * np.pi, 400)
 y = np.sin(x ** 2)
 
 # Create two subplots and unpack the output array immediately
-f, (ax1, ax2) = plt.subplots(1, 2, sharey=True)
+f, (ax1, ax2) = plt.subplots(nrows = 1, ncols = 2, sharey=True)
 ax1.plot(x, y)
 ax1.set_title('Sharing Y axis')
 ax2.scatter(x, y)
