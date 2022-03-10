@@ -1,7 +1,17 @@
 <!--ts-->
+   * [Statistics](#statistics)
+      * [Descriptive](#descriptive)
+      * [Inferential](#inferential)
+         * [One Tailed and Two Tailed Tests, Critical Values, &amp; Significance Level](#one-tailed-and-two-tailed-tests-critical-values--significance-level)
+         * [Hypothesis Testing Problems Z Test &amp; T Statistics One &amp; Two Tailed Test](#hypothesis-testing-problems-z-test--t-statistics-one--two-tailed-test)
+         * [P-Value Method For Hypothesis Testing](#p-value-method-for-hypothesis-testing)
+         * [Hypothesis Testing - Solving Problems With Proportions](#hypothesis-testing---solving-problems-with-proportions)
+         * [Summary types of test](#summary-types-of-test)
+            * [Hypothesis Testing](#hypothesis-testing)
+            * [Chi-Square Tests](#chi-square-tests)
+            * [ANOVA (Analysis Of Variance)](#anova-analysis-of-variance)
 
-
-<!-- Added by: gil_diy, at: 2020-09-06T20:45+03:00 -->
+<!-- Added by: gil_diy, at: Thu 10 Mar 2022 10:14:04 IST -->
 
 <!--te-->
 
