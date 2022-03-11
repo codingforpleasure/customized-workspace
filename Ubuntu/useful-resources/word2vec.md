@@ -1,10 +1,10 @@
 <!--ts-->
    * [word2vec](#word2vec)
-      * [Reductions for computing the Softmax](#reductions-for-computing-the-softmax)
+      * [Reductions for computing the Softmax function:](#reductions-for-computing-the-softmax-function)
          * [Hierarchical Softmax](#hierarchical-softmax)
          * [Negative sampling](#negative-sampling)
 
-<!-- Added by: gil_diy, at: Fri 11 Mar 2022 10:21:39 IST -->
+<!-- Added by: gil_diy, at: Fri 11 Mar 2022 10:21:47 IST -->
 
 <!--te-->
 
@@ -13,7 +13,7 @@
 
 
 
-## Reductions for computing the Softmax
+## Reductions for computing the `Softmax` function:
 
 ### Hierarchical Softmax
 
