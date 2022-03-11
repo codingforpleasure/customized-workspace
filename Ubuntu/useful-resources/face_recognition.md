@@ -9,7 +9,7 @@
    * [Reference](#reference)
    * [Academia papers](#academia-papers)
 
-<!-- Added by: gil_diy, at: Fri 11 Mar 2022 10:00:17 IST -->
+<!-- Added by: gil_diy, at: Fri 11 Mar 2022 10:01:06 IST -->
 
 <!--te-->
 
@@ -63,9 +63,10 @@ negative = torch.randn(100, 128, requires_grad=True)
 output = triplet_loss(anchor, positive, negative)
 output.backward()
 ```
-
-Well known dataset can be taken form here `AT&T`: [Link](https://www.kaggle.com/kasikrit/att-database-of-faces)
  
+[Triplet Loss well exaplained](https://omoindrot.github.io/triplet-loss)
+[Triplet Loss](https://youtu.be/d2XB5-tuCWU)
+
 ## Contrastive loss
 
 [Link](https://towardsdatascience.com/contrastive-loss-explaned-159f2d4a87ec)
@@ -83,8 +84,7 @@ Using `contrastive loss function`
 [Link](https://medium.com/visionwizard/research-for-all-in-defense-of-triplet-loss-for-person-re-identification-9cce5616fb6)
 
 
-[Triplet Loss well exaplained](https://omoindrot.github.io/triplet-loss)
-[Triplet Loss](https://youtu.be/d2XB5-tuCWU)
+
 [Few-Shot Learning](https://youtu.be/hE7eGew4eeg)
 
 
