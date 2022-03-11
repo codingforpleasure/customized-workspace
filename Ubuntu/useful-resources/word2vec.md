@@ -4,7 +4,7 @@
          * [Hierarchical Softmax](#hierarchical-softmax)
          * [Negative sampling](#negative-sampling)
 
-<!-- Added by: gil_diy, at: Fri 11 Mar 2022 10:26:43 IST -->
+<!-- Added by: gil_diy, at: Fri 11 Mar 2022 10:26:46 IST -->
 
 <!--te-->
 
