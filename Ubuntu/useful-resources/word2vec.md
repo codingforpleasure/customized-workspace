@@ -4,7 +4,7 @@
          * [Hierarchical Softmax](#hierarchical-softmax)
          * [Negative sampling](#negative-sampling)
 
-<!-- Added by: gil_diy, at: Fri 11 Mar 2022 10:24:31 IST -->
+<!-- Added by: gil_diy, at: Fri 11 Mar 2022 10:24:54 IST -->
 
 <!--te-->
 
@@ -21,6 +21,8 @@ where each of the elements of the activated output vector is the probability of 
 
 The computational complexity of this algorithm computed in a straightforward fashion is the size of our vocabulary, **O(V), which is very costly**.
 
+
+The main motivation behind this methodology is the fact that we’re evaluating about logarithm to base 2 of V instead of V.
 
 
 
