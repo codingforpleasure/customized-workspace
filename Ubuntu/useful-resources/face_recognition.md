@@ -1,5 +1,6 @@
 <!--ts-->
    * [Face Recognition](#face-recognition)
+      * [Loss Function](#loss-function)
       * [Contrastive loss](#contrastive-loss)
    * [Siamese Networks](#siamese-networks)
       * [Usage of this kind of network](#usage-of-this-kind-of-network)
@@ -7,7 +8,7 @@
    * [Reference](#reference)
    * [Academia papers](#academia-papers)
 
-<!-- Added by: gil_diy, at: Fri 11 Mar 2022 09:59:27 IST -->
+<!-- Added by: gil_diy, at: Fri 11 Mar 2022 09:59:46 IST -->
 
 <!--te-->
 
@@ -29,6 +30,8 @@ What happens is that you get an architecture capable of doing **one shot learnin
 
 * The network uses a special type of loss function called `triplet loss`.
   The name triplet loss since the loss function recieves 3 variables:
+
+## Loss Function
 
   <p align="center" style="width:400px;" >
   <img src="images/cnn/Triplet_loss_function_in_Siamese_Network.jpg" title="tool tip here">
