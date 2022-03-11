@@ -4,7 +4,7 @@
          * [Hierarchical Softmax](#hierarchical-softmax)
          * [Negative sampling](#negative-sampling)
 
-<!-- Added by: gil_diy, at: Fri 11 Mar 2022 10:26:46 IST -->
+<!-- Added by: gil_diy, at: Fri 11 Mar 2022 10:26:49 IST -->
 
 <!--te-->
 
@@ -15,7 +15,7 @@
 
 ## Reductions for computing the `Softmax` function:
 
-[Link](https://towardsdatascience.com/hierarchical-softmax-and-negative-sampling-short-notes-worth-telling-2672010dbe08)
+[Reference](https://towardsdatascience.com/hierarchical-softmax-and-negative-sampling-short-notes-worth-telling-2672010dbe08)
 
 ### Hierarchical Softmax
 
