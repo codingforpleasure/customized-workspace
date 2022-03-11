@@ -3,14 +3,11 @@
       * [Loss Function](#loss-function)
          * [Triplet Loss function](#triplet-loss-function)
       * [Contrastive loss](#contrastive-loss)
-   * [Siamese Networks](#siamese-networks)
-      * [Usage of this kind of network](#usage-of-this-kind-of-network)
-      * [Network topolgy](#network-topolgy)
       * [Great datasets for Siements network](#great-datasets-for-siements-network)
    * [Reference](#reference)
    * [Academia papers](#academia-papers)
 
-<!-- Added by: gil_diy, at: Fri 11 Mar 2022 10:02:28 IST -->
+<!-- Added by: gil_diy, at: Fri 11 Mar 2022 10:02:43 IST -->
 
 <!--te-->
 
@@ -87,15 +84,6 @@ Using `contrastive loss function`
 
 
 [Few-Shot Learning](https://youtu.be/hE7eGew4eeg)
-
-
-# Siamese Networks
-
-## Usage of this kind of network
-
-Siemense Network are used for 
-
-## Network topolgy
 
 
 ## Great datasets for Siements network
