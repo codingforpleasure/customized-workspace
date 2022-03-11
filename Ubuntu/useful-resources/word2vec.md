@@ -4,7 +4,7 @@
          * [Hierarchical Softmax](#hierarchical-softmax)
          * [Negative sampling](#negative-sampling)
 
-<!-- Added by: gil_diy, at: Fri 11 Mar 2022 10:25:22 IST -->
+<!-- Added by: gil_diy, at: Fri 11 Mar 2022 10:25:29 IST -->
 
 <!--te-->
 
@@ -24,7 +24,7 @@ The computational complexity of this algorithm computed in a straightforward fas
 
 * The main motivation behind this methodology is the fact that we’re evaluating about logarithm to base 2 of V instead of V.
 
-* Which is a dramatical change in computational complexity and number of operations needed for the algorithm
+* Which is a dramatical change in computational complexity and number of operations needed for the algorithm.
 
 
 
