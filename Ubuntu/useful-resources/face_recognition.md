@@ -8,7 +8,7 @@
    * [Reference](#reference)
    * [Academia papers](#academia-papers)
 
-<!-- Added by: gil_diy, at: Fri 11 Mar 2022 09:46:22 IST -->
+<!-- Added by: gil_diy, at: Fri 11 Mar 2022 09:46:25 IST -->
 
 <!--te-->
 
@@ -48,7 +48,7 @@ What happens is that you get an architecture capable of doing **one shot learnin
 </p>
 
 
-We can the pytorch built-in function `torch.nn.TripletMarginLoss`.
+We can use the pytorch built-in function `torch.nn.TripletMarginLoss`.
 
 well known dataset is the t&t
 
