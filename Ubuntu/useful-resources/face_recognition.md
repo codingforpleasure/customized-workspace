@@ -8,7 +8,7 @@
    * [Reference](#reference)
    * [Academia papers](#academia-papers)
 
-<!-- Added by: gil_diy, at: Fri 11 Mar 2022 09:46:25 IST -->
+<!-- Added by: gil_diy, at: Fri 11 Mar 2022 09:51:36 IST -->
 
 <!--te-->
 
@@ -49,6 +49,15 @@ What happens is that you get an architecture capable of doing **one shot learnin
 
 
 We can use the pytorch built-in function `torch.nn.TripletMarginLoss`.
+
+```python
+triplet_loss = nn.TripletMarginLoss(margin=1.0, p=2)
+anchor = torch.randn(100, 128, requires_grad=True)
+positive = torch.randn(100, 128, requires_grad=True)
+negative = torch.randn(100, 128, requires_grad=True)
+output = triplet_loss(anchor, positive, negative)
+output.backward()
+```
 
 well known dataset is the t&t
 
