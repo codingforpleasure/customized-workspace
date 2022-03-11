@@ -4,11 +4,10 @@
    * [Siamese Networks](#siamese-networks)
       * [Usage of this kind of network](#usage-of-this-kind-of-network)
       * [Network topolgy](#network-topolgy)
-      * [Loss Function](#loss-function)
    * [Reference](#reference)
    * [Academia papers](#academia-papers)
 
-<!-- Added by: gil_diy, at: Fri 11 Mar 2022 09:57:18 IST -->
+<!-- Added by: gil_diy, at: Fri 11 Mar 2022 09:59:27 IST -->
 
 <!--te-->
 
@@ -90,8 +89,6 @@ Using `contrastive loss function`
 Siemense Network are used for 
 
 ## Network topolgy
-
-## Loss Function
 
 
 
