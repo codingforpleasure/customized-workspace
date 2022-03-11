@@ -8,7 +8,7 @@
    * [Reference](#reference)
    * [Academia papers](#academia-papers)
 
-<!-- Added by: gil_diy, at: Fri 11 Mar 2022 09:57:11 IST -->
+<!-- Added by: gil_diy, at: Fri 11 Mar 2022 09:57:13 IST -->
 
 <!--te-->
 
@@ -59,7 +59,7 @@ output = triplet_loss(anchor, positive, negative)
 output.backward()
 ```
 
-well known dataset can be taken form here `AT&T`: [Link](https://www.kaggle.com/kasikrit/att-database-of-faces)
+Well known dataset can be taken form here `AT&T`: [Link](https://www.kaggle.com/kasikrit/att-database-of-faces)
  
 ## Contrastive loss
 
