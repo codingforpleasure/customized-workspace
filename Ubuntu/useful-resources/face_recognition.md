@@ -8,7 +8,7 @@
    * [Reference](#reference)
    * [Academia papers](#academia-papers)
 
-<!-- Added by: gil_diy, at: Fri 11 Mar 2022 09:51:38 IST -->
+<!-- Added by: gil_diy, at: Fri 11 Mar 2022 09:55:15 IST -->
 
 <!--te-->
 
@@ -59,7 +59,7 @@ output = triplet_loss(anchor, positive, negative)
 output.backward()
 ```
 
-well known dataset is the t&t
+well known dataset is the at&t
 
 ## Contrastive loss
 
