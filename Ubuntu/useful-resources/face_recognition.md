@@ -10,7 +10,7 @@
    * [Reference](#reference)
    * [Academia papers](#academia-papers)
 
-<!-- Added by: gil_diy, at: Fri 11 Mar 2022 10:02:22 IST -->
+<!-- Added by: gil_diy, at: Fri 11 Mar 2022 10:02:28 IST -->
 
 <!--te-->
 
@@ -111,11 +111,8 @@ holds 1000 classes and from each class we have only few images.
 
 [How Face ID Works (Face recognition)](https://youtu.be/mwTaISbA87A)
 
-
 [FaceID ](https://towardsdatascience.com/how-i-implemented-iphone-xs-faceid-using-deep-learning-in-python-d5dbaa128e1d)
 
-
-[Link]()
 
 # Academia papers
 
