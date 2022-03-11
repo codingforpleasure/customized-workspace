@@ -8,7 +8,7 @@
    * [Reference](#reference)
    * [Academia papers](#academia-papers)
 
-<!-- Added by: gil_diy, at: Thu 03 Mar 2022 11:36:39 IST -->
+<!-- Added by: gil_diy, at: Fri 11 Mar 2022 09:45:34 IST -->
 
 <!--te-->
 
@@ -48,7 +48,9 @@ What happens is that you get an architecture capable of doing **one shot learnin
 </p>
 
 
-well known dataset is the 
+
+
+well known dataset is the t&nt
 
 ## Contrastive loss
 
