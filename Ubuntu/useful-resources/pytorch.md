@@ -95,12 +95,13 @@
       * [Integrating TensorBoard with pytorch](#integrating-tensorboard-with-pytorch)
       * [Finetuning Torchvision Models](#finetuning-torchvision-models)
       * [Segmentation with U-net  (Encoder-Decoder)](#segmentation-with-u-net--encoder-decoder)
+      * [pytorch usefule functions](#pytorch-usefule-functions)
       * [Pytorch hooks](#pytorch-hooks)
       * [Customize optimizer in Pytorch](#customize-optimizer-in-pytorch)
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Fri 04 Mar 2022 18:29:31 IST -->
+<!-- Added by: gil_diy, at: Fri 11 Mar 2022 10:28:55 IST -->
 
 <!--te-->
 
@@ -1719,6 +1720,10 @@ In the first half of the encoder-decoder model, the input image is downsized to 
 In the second half of the model, the feature map is up-sampled to the input size to produce a binary mask.
 
 
+## pytorch usefule functions
+
+t
+
 ## Pytorch hooks
 
 ## Customize optimizer in Pytorch
@@ -1729,6 +1734,7 @@ In the second half of the model, the feature map is up-sampled to the input size
 ## Pytorch Built-in Datasets
 
 [Link](https://pytorch.org/docs/0.4.0/torchvision/datasets.html)
+
 
 ## References
 
