@@ -10,7 +10,7 @@
    * [Reference](#reference)
    * [Academia papers](#academia-papers)
 
-<!-- Added by: gil_diy, at: Fri 11 Mar 2022 10:02:16 IST -->
+<!-- Added by: gil_diy, at: Fri 11 Mar 2022 10:02:19 IST -->
 
 <!--te-->
 
@@ -100,7 +100,8 @@ Siemense Network are used for
 
 ## Great datasets for Siements network
 
-* Example of dataset is [**Omniglot**](https://github.com/brendenlake/omniglot), holds 1000 classes and from each class we have only few images.
+* Example of dataset is [**Omniglot**](https://github.com/brendenlake/omniglot),
+holds 1000 classes and from each class we have only few images.
 
 * Well known dataset can be taken form here `AT&T`: [Link](https://www.kaggle.com/kasikrit/att-database-of-faces)
 
