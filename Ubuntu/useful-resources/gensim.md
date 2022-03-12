@@ -6,7 +6,7 @@
          * [Compute Similarities](#compute-similarities)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Tue 15 Feb 2022 14:23:39 IST -->
+<!-- Added by: gil_diy, at: Sat 12 Mar 2022 18:27:22 IST -->
 
 <!--te-->
 
@@ -28,9 +28,15 @@ The major difference between these two methods is that **CBOW** is using context
 </p>
 
 
+### 
+
+```python
+gensim.utils.simple_preprocess
+```
 
 ### Create word2vec represetnation model
 ```python
+
 model = Word2Vec(sent, min_count=1,size= 50,workers=3, window =3, sg = 1)
 ```
 
