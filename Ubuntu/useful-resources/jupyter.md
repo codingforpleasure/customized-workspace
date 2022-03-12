@@ -16,7 +16,7 @@
       * [Jupyter Lab](#jupyter-lab)
       * [Collection of Tips](#collection-of-tips)
 
-<!-- Added by: gil_diy, at: Tue 08 Mar 2022 07:35:19 IST -->
+<!-- Added by: gil_diy, at: Sat 12 Mar 2022 18:24:13 IST -->
 
 <!--te-->
 
@@ -47,6 +47,7 @@ Description | command
 Run | **jupyter notebook**
 Shutdown | **jupyter notebook stop**
 Shift+Enter | Runs the code or markdown on a cell
+Shift+tab | Read Documentation
 Up Arrow+Down Arrow |  Toggle across cells
 b | Create new cell
 0+0 | Reset Kernel
