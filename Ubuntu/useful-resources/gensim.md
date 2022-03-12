@@ -1,12 +1,13 @@
 <!--ts-->
    * [Gensim](#gensim)
       * [word2vec](#word2vec)
+         * [Simple Preprocessing &amp; Tokenization](#simple-preprocessing--tokenization)
          * [Create word2vec represetnation model](#create-word2vec-represetnation-model)
          * [Get word representation as a vector](#get-word-representation-as-a-vector)
          * [Compute Similarities](#compute-similarities)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Sat 12 Mar 2022 18:27:22 IST -->
+<!-- Added by: gil_diy, at: Sat 12 Mar 2022 18:27:28 IST -->
 
 <!--te-->
 
@@ -28,7 +29,7 @@ The major difference between these two methods is that **CBOW** is using context
 </p>
 
 
-### 
+### Simple Preprocessing & Tokenization
 
 ```python
 gensim.utils.simple_preprocess
