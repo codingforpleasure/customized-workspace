@@ -51,7 +51,7 @@
       * [10 Leading Language Models For NLP In 2021](#10-leading-language-models-for-nlp-in-2021)
       * [Repositories](#repositories)
 
-<!-- Added by: gil_diy, at: Sun 13 Mar 2022 11:52:28 IST -->
+<!-- Added by: gil_diy, at: Sun 13 Mar 2022 11:56:58 IST -->
 
 <!--te-->
 
@@ -146,6 +146,20 @@ from sklearn.feature_extraction.text import CountVectorizer
 These are the vector representation of words which consist of **real continuous numbers** (not just 0 or 1). In this representation, there is no fixed rule for the length of such vectors. You can pick any length (any number of features) to represent words present in a given dictionary.
 
 I am going to explain this to you by taking an example of words like ‘Batman’, ‘Joker’, ‘Spiderman’ and ‘Thanos’. Interesting selection of example words huh? I have made up 3-dimensional (3 features) continuous vectors of these words to explain to you, what the real numbers in the word vectors might represent.
+
+```
+word_vec(‘Batman’) = [0.9, 0.8, 0.2]
+word_vec(‘Joker’) = [0.8, 0.3, 0.1]
+word_vec(‘Spiderman’) = [0.2, .9, 0.8]
+word_vec(‘Thanos’) = [0.3, 0.1, 0.9]
+```
+
+1. It seems that the 1st feature represents the belongingness to the DC Universe. See that ‘Batman’ and ‘Joker’ have higher values for their 1st feature because they do belong to DC Universe.
+
+2. Maybe the 2nd element in the word2vec representation here captures the hero/villian features. That’s why ‘Batman’ and ‘Spiderman’ have higher values and, ‘Joker’ and ‘Thanos’ have smaller values.
+
+3. One might say that the 3rd component of the word vectors represent the supernatural powers/abilities. We all know that ‘Batman’ and ‘Joker’ have no such superpowers and that’s why their vectors have small numbers at the 3rd position.
+
 
 ## Bag Of Words
 
