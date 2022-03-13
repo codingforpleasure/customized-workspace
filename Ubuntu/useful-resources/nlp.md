@@ -8,6 +8,7 @@
          * [Basics](#basics)
          * [Stemming](#stemming)
          * [Lemmatiziation](#lemmatiziation)
+   * [Bag Of Words](#bag-of-words)
             * [Drawbacks](#drawbacks)
          * [TFIDF](#tfidf)
             * [Drawbacks](#drawbacks-1)
@@ -47,7 +48,7 @@
       * [10 Leading Language Models For NLP In 2021](#10-leading-language-models-for-nlp-in-2021)
       * [Repositories](#repositories)
 
-<!-- Added by: gil_diy, at: Sun 13 Mar 2022 11:45:01 IST -->
+<!-- Added by: gil_diy, at: Sun 13 Mar 2022 11:45:11 IST -->
 
 <!--te-->
 
@@ -130,7 +131,7 @@ from sklearn.feature_extraction.text import CountVectorizer
 
 ```
 
-
+# Bag Of Words
 
 ```python
 from gensim import corpora
