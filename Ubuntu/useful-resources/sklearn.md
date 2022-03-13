@@ -53,7 +53,7 @@
       * [Export image of decision tree](#export-image-of-decision-tree)
       * [metrics](#metrics)
 
-<!-- Added by: gil_diy, at: Sun 13 Mar 2022 19:03:59 IST -->
+<!-- Added by: gil_diy, at: Sun 13 Mar 2022 19:04:11 IST -->
 
 <!--te-->
 
@@ -717,7 +717,7 @@ then in the terminal enter:
 
 `dot -Tpdf my_file -o outfile.pdf`
 
-you will get a `pdf` file after the name: `outfile.pdf`
+you will get a `pdf` file, with the name: `outfile.pdf`
 
 ## metrics
 
