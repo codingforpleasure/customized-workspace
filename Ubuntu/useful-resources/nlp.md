@@ -51,7 +51,7 @@
       * [10 Leading Language Models For NLP In 2021](#10-leading-language-models-for-nlp-in-2021)
       * [Repositories](#repositories)
 
-<!-- Added by: gil_diy, at: Sun 13 Mar 2022 11:57:35 IST -->
+<!-- Added by: gil_diy, at: Sun 13 Mar 2022 11:58:17 IST -->
 
 <!--te-->
 
@@ -160,6 +160,9 @@ word_vec(‘Thanos’) = [0.3, 0.1, 0.9]
 
 3. One might say that the 3rd component of the word vectors represent the **supernatural powers/abilities**. We all know that ‘Batman’ and ‘Joker’ have no such superpowers and that’s why their vectors have small numbers at the 3rd position.
 
+
+
+We see how different dimensions in a continuous word vector might capture different semantic meaning/features of that word, something that One-Hot Encoding fails to capture!
 
 ## Bag Of Words
 
