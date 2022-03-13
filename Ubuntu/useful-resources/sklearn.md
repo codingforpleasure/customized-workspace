@@ -53,7 +53,7 @@
       * [Export image of decision tree](#export-image-of-decision-tree)
       * [metrics](#metrics)
 
-<!-- Added by: gil_diy, at: Sun 13 Mar 2022 19:03:10 IST -->
+<!-- Added by: gil_diy, at: Sun 13 Mar 2022 19:03:18 IST -->
 
 <!--te-->
 
@@ -712,7 +712,7 @@ tree.export_graphviz(clf,
                      filled=True)
 ```
 
-The python file Will generate `tree.dot` file,
+The python file will generate `tree.dot` file,
 then in the terminal enter:
 
 `dot -Tpdf my_file -o outfile.pdf`
