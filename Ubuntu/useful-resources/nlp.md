@@ -8,7 +8,6 @@
          * [Basics](#basics)
          * [Stemming](#stemming)
          * [Lemmatiziation](#lemmatiziation)
-         * [Bag of Words](#bag-of-words)
             * [Drawbacks](#drawbacks)
          * [TFIDF](#tfidf)
             * [Drawbacks](#drawbacks-1)
@@ -48,7 +47,7 @@
       * [10 Leading Language Models For NLP In 2021](#10-leading-language-models-for-nlp-in-2021)
       * [Repositories](#repositories)
 
-<!-- Added by: gil_diy, at: Mon 07 Mar 2022 11:33:50 IST -->
+<!-- Added by: gil_diy, at: Sun 13 Mar 2022 11:44:58 IST -->
 
 <!--te-->
 
@@ -122,15 +121,16 @@ The problem using stemming it produces **intermediate representation of the word
 ### Lemmatiziation
 
 
-### Bag of Words
-
 
 You can use either: 
 ```python
 from sklearn.feature_extraction.text import CountVectorizer
+
+### Bag of Words
+
 ```
 
-or 
+
 
 ```python
 from gensim import corpora
