@@ -53,7 +53,7 @@
       * [Export image of decision tree](#export-image-of-decision-tree)
       * [metrics](#metrics)
 
-<!-- Added by: gil_diy, at: Sun 13 Mar 2022 19:01:20 IST -->
+<!-- Added by: gil_diy, at: Sun 13 Mar 2022 19:02:33 IST -->
 
 <!--te-->
 
@@ -712,7 +712,8 @@ tree.export_graphviz(clf,
                      filled=True)
 ```
 
-Will generate `tree.dot` file,
+Will generate `tree.dot` file, then in the terminal enter:
+`dot -Tpdf my_file -o outfile.pdf`
 
 
 ## metrics
