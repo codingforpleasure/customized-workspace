@@ -53,7 +53,7 @@
       * [Export image of decision tree](#export-image-of-decision-tree)
       * [metrics](#metrics)
 
-<!-- Added by: gil_diy, at: Sun 13 Mar 2022 18:57:02 IST -->
+<!-- Added by: gil_diy, at: Sun 13 Mar 2022 19:01:20 IST -->
 
 <!--te-->
 
@@ -711,6 +711,10 @@ tree.export_graphviz(clf,
                      class_names=le_y.classes_,
                      filled=True)
 ```
+
+Will generate `tree.dot` file,
+
+
 ## metrics
 
 [Link](https://scikit-learn.org/stable/modules/model_evaluation.html)
