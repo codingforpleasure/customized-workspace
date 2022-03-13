@@ -51,7 +51,7 @@
       * [10 Leading Language Models For NLP In 2021](#10-leading-language-models-for-nlp-in-2021)
       * [Repositories](#repositories)
 
-<!-- Added by: gil_diy, at: Sun 13 Mar 2022 12:45:33 IST -->
+<!-- Added by: gil_diy, at: Sun 13 Mar 2022 12:45:45 IST -->
 
 <!--te-->
 
@@ -289,7 +289,7 @@ We use the latter method because it produces more accurate results on large data
   <img width="600" src="images/nlp/skipgram2.jpg" title="Look into the image">
 </p>
 
-* And we keep on making context-target word pairs for all the possible context and target words. What we are essentially doing here is that we are capturing word pairs which can be found next to each other. We are c**apturing the context** and we are going to use this context information to train the word embeddings. This is why I called this a semi-supervised learning algorithm earlier!
+* And we keep on making context-target word pairs for all the possible context and target words. What we are essentially doing here is that we are capturing word pairs which can be found next to each other. We are c**apturing the context** and we are going to use this c**ontext information to train the word embeddings**. This is why I called this a semi-supervised learning algorithm earlier!
 
 * Word2Vec uses a trick you may have seen elsewhere in machine learning. 
 We’re going to train a simple **neural network with a single hidden layer** to perform a certain task, but then we’re not actually going to use that neural network for the task we trained it on! Instead, the goal is actually **just to learn the weights of the hidden layer**–we’ll see that these weights are actually the “word vectors” that we’re trying to learn.
