@@ -52,7 +52,7 @@
       * [GridSearch](#gridsearch)
       * [metrics](#metrics)
 
-<!-- Added by: gil_diy, at: Sun 20 Feb 2022 13:09:33 IST -->
+<!-- Added by: gil_diy, at: Sun 13 Mar 2022 18:56:37 IST -->
 
 <!--te-->
 
@@ -701,6 +701,14 @@ grid_search.fit(X_train, y_train)
         print("\t%s: %r" % (param_name, best_parameters[param_name]))
 ```
 
+## 
+```
+tree.export_graphviz(clf,
+                     out_file="tree.dot",
+                     feature_names=x.columns,
+                     class_names=le_y.classes_,
+                     filled=True)
+```
 ## metrics
 
 [Link](https://scikit-learn.org/stable/modules/model_evaluation.html)
