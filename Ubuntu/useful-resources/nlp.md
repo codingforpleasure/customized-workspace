@@ -51,7 +51,7 @@
       * [10 Leading Language Models For NLP In 2021](#10-leading-language-models-for-nlp-in-2021)
       * [Repositories](#repositories)
 
-<!-- Added by: gil_diy, at: Sun 13 Mar 2022 12:40:19 IST -->
+<!-- Added by: gil_diy, at: Sun 13 Mar 2022 12:41:39 IST -->
 
 <!--te-->
 
@@ -280,6 +280,8 @@ We use the latter method because it produces more accurate results on large data
   <img src="images/nlp/word2vec.jpg" title="tool tip here">
 </p>
 
+
+The sliding window:
 
 <p align="center">
   <img width="600" src="images/nlp/skipgram2.jpg" title="Look into the image">
