@@ -51,7 +51,7 @@
       * [10 Leading Language Models For NLP In 2021](#10-leading-language-models-for-nlp-in-2021)
       * [Repositories](#repositories)
 
-<!-- Added by: gil_diy, at: Sun 13 Mar 2022 12:44:09 IST -->
+<!-- Added by: gil_diy, at: Sun 13 Mar 2022 12:44:16 IST -->
 
 <!--te-->
 
@@ -283,7 +283,7 @@ We use the latter method because it produces more accurate results on large data
 
 This is done by making **context and target word pairs** which further depends on the window size you take.
 
-We use a window_size parameter (window_size is 2 in this case) which looks to the **left and right** of the context word for as many as window_size(=2) words.
+We use a window_size parameter (window_size is 2 in this case) which looks to the **left and right** of the context word for as many as **window_size(=2)** words.
 
 <p align="center">
   <img width="600" src="images/nlp/skipgram2.jpg" title="Look into the image">
