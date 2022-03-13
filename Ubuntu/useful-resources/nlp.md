@@ -50,7 +50,7 @@
       * [10 Leading Language Models For NLP In 2021](#10-leading-language-models-for-nlp-in-2021)
       * [Repositories](#repositories)
 
-<!-- Added by: gil_diy, at: Sun 13 Mar 2022 11:48:50 IST -->
+<!-- Added by: gil_diy, at: Sun 13 Mar 2022 11:48:59 IST -->
 
 <!--te-->
 
@@ -138,7 +138,6 @@ Pick any distance metric, the distance between the One-Hot Encoding of any two w
 You can use either: 
 ```python
 from sklearn.feature_extraction.text import CountVectorizer
-
 ```
 
 ## Bag Of Words
