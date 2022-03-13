@@ -48,7 +48,7 @@
       * [10 Leading Language Models For NLP In 2021](#10-leading-language-models-for-nlp-in-2021)
       * [Repositories](#repositories)
 
-<!-- Added by: gil_diy, at: Sun 13 Mar 2022 11:45:20 IST -->
+<!-- Added by: gil_diy, at: Sun 13 Mar 2022 11:45:27 IST -->
 
 <!--te-->
 
@@ -126,8 +126,6 @@ The problem using stemming it produces **intermediate representation of the word
 You can use either: 
 ```python
 from sklearn.feature_extraction.text import CountVectorizer
-
-### Bag of Words
 
 ```
 
