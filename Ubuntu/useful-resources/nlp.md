@@ -51,7 +51,7 @@
       * [10 Leading Language Models For NLP In 2021](#10-leading-language-models-for-nlp-in-2021)
       * [Repositories](#repositories)
 
-<!-- Added by: gil_diy, at: Sun 13 Mar 2022 12:39:11 IST -->
+<!-- Added by: gil_diy, at: Sun 13 Mar 2022 12:39:14 IST -->
 
 <!--te-->
 
@@ -282,7 +282,7 @@ We use the latter method because it produces more accurate results on large data
 
 
 <p align="center">
-  <img width="400" src="images/nlp/skipgram2.jpg" title="Look into the image">
+  <img width="600" src="images/nlp/skipgram2.jpg" title="Look into the image">
 </p>
 
 * Word2Vec uses a trick you may have seen elsewhere in machine learning. 
