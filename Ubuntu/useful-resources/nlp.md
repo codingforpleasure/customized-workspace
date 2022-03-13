@@ -9,6 +9,7 @@
          * [Stemming](#stemming)
          * [Lemmatiziation](#lemmatiziation)
          * [One hot encoding](#one-hot-encoding)
+            * [Drawbacks of One hot encoding](#drawbacks-of-one-hot-encoding)
       * [Bag Of Words](#bag-of-words)
             * [Drawbacks](#drawbacks)
          * [TFIDF](#tfidf)
@@ -49,7 +50,7 @@
       * [10 Leading Language Models For NLP In 2021](#10-leading-language-models-for-nlp-in-2021)
       * [Repositories](#repositories)
 
-<!-- Added by: gil_diy, at: Sun 13 Mar 2022 11:45:47 IST -->
+<!-- Added by: gil_diy, at: Sun 13 Mar 2022 11:48:45 IST -->
 
 <!--te-->
 
@@ -124,6 +125,16 @@ The problem using stemming it produces **intermediate representation of the word
 
 
 ### One hot encoding
+
+#### Drawbacks of One hot encoding
+But there are a few problems with the One-Hot Encodings:
+
+**1.** The length of the One-Hot Encoding can go up to 1 million (given a dictionary of 1 million words). This is a very sparse vector/encoding and is highly inefficient at storing data.
+
+**2.** Such an encoding doesn’t preserve the semantic meaning of the word. 
+Semantics is the study of the relationship between words and how we draw meaning from those words
+Pick any distance metric, the distance between the One-Hot Encoding of any two words is always the same. Don’t you think it would be better to have encodings which could give us some idea about the semantic meaning of the words?
+
 You can use either: 
 ```python
 from sklearn.feature_extraction.text import CountVectorizer
