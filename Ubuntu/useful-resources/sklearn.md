@@ -53,7 +53,7 @@
       * [Export image of decision tree](#export-image-of-decision-tree)
       * [metrics](#metrics)
 
-<!-- Added by: gil_diy, at: Sun 13 Mar 2022 18:56:56 IST -->
+<!-- Added by: gil_diy, at: Sun 13 Mar 2022 18:57:02 IST -->
 
 <!--te-->
 
@@ -704,7 +704,7 @@ grid_search.fit(X_train, y_train)
 
 ## Export image of decision tree
 
-```
+```python
 tree.export_graphviz(clf,
                      out_file="tree.dot",
                      feature_names=x.columns,
