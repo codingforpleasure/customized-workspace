@@ -51,7 +51,7 @@
       * [10 Leading Language Models For NLP In 2021](#10-leading-language-models-for-nlp-in-2021)
       * [Repositories](#repositories)
 
-<!-- Added by: gil_diy, at: Sun 13 Mar 2022 12:21:55 IST -->
+<!-- Added by: gil_diy, at: Sun 13 Mar 2022 12:22:01 IST -->
 
 <!--te-->
 
@@ -254,6 +254,11 @@ and map them to another.
 </p>
 
 #### How the actual embedding works?
+
+* At the beginning the word vectors/embeddings don’t come with the right numbers making up the vector. The embeddings capture semantic meaning only when they are trained on a huge text corpus, using some word2vec model. Before training, the word embeddings are randomly initialized and they don’t make any sense at all. It’s only when the model is trained, that the word embeddings have captured the semantic meaning of all the words.
+
+
+* The word embeddings can be thought of as a child’s understanding of the words. Initially, the word embeddings are randomly initialized and they don’t make any sense, just like the baby has no understanding of different words. It’s only after the model has started getting trained, the word vectors/embeddings start to capture the meaning of the words, just like the baby hears and learns different words.
 
 * **Word2vec is a two-layer neural net** that processes text by “vectorizing” words. Its input is a text corpus and its output is a set of vectors: feature vectors that represent words in that corpus. While Word2vec is not a deep neural network, it turns text into a numerical form that deep neural networks can understand.
 
