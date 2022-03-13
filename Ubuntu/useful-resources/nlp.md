@@ -51,7 +51,7 @@
       * [10 Leading Language Models For NLP In 2021](#10-leading-language-models-for-nlp-in-2021)
       * [Repositories](#repositories)
 
-<!-- Added by: gil_diy, at: Sun 13 Mar 2022 11:58:34 IST -->
+<!-- Added by: gil_diy, at: Sun 13 Mar 2022 12:20:02 IST -->
 
 <!--te-->
 
@@ -224,6 +224,9 @@ While both of them can have the entire information about which words are in a se
 * Pre-trained word embedding is an example of **Transfer Learning**. The main idea behind it is to **use public embeddings that are already trained on large datasets**. Specifically, instead of initializing our neural network weights randomly, we will set these pre trained embeddings as initialization weights. This trick helps to accelerate training and boost the performance of NLP models.
 
 * Word2vec is an algorithm used to produce distributed representations of words, and by that we mean word types; i.e. any given word in a vocabulary, such as get or grab or go has its own word vector, and those vectors are **effectively stored in a lookup table or dictionary** .
+
+
+* At the beginning the word vectors/embeddings don’t come with the right numbers making up the vector. The embeddings capture semantic meaning only when they are trained on a huge text corpus, using some word2vec model. Before training, the word embeddings are randomly initialized and they don’t make any sense at all. It’s only when the model is trained, that the word embeddings have captured the semantic meaning of all the words.
 
 
 #### Applications of word2vec
