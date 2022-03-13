@@ -10,6 +10,7 @@
          * [Lemmatiziation](#lemmatiziation)
          * [One hot encoding](#one-hot-encoding)
             * [Drawbacks of One hot encoding](#drawbacks-of-one-hot-encoding)
+         * [Continuous Vectors](#continuous-vectors)
       * [Bag Of Words](#bag-of-words)
             * [Drawbacks](#drawbacks)
          * [TFIDF](#tfidf)
@@ -50,7 +51,7 @@
       * [10 Leading Language Models For NLP In 2021](#10-leading-language-models-for-nlp-in-2021)
       * [Repositories](#repositories)
 
-<!-- Added by: gil_diy, at: Sun 13 Mar 2022 11:48:59 IST -->
+<!-- Added by: gil_diy, at: Sun 13 Mar 2022 11:52:25 IST -->
 
 <!--te-->
 
@@ -139,6 +140,12 @@ You can use either:
 ```python
 from sklearn.feature_extraction.text import CountVectorizer
 ```
+
+### Continuous Vectors
+
+These are the vector representation of words which consist of **real continuous numbers** (not just 0 or 1). In this representation, there is no fixed rule for the length of such vectors. You can pick any length (any number of features) to represent words present in a given dictionary.
+
+I am going to explain this to you by taking an example of words like ‘Batman’, ‘Joker’, ‘Spiderman’ and ‘Thanos’. Interesting selection of example words huh? I have made up 3-dimensional (3 features) continuous vectors of these words to explain to you, what the real numbers in the word vectors might represent.
 
 ## Bag Of Words
 
