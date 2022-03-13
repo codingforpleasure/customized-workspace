@@ -51,7 +51,7 @@
       * [10 Leading Language Models For NLP In 2021](#10-leading-language-models-for-nlp-in-2021)
       * [Repositories](#repositories)
 
-<!-- Added by: gil_diy, at: Sun 13 Mar 2022 11:57:21 IST -->
+<!-- Added by: gil_diy, at: Sun 13 Mar 2022 11:57:32 IST -->
 
 <!--te-->
 
@@ -154,7 +154,7 @@ word_vec(‘Spiderman’) = [0.2, .9, 0.8]
 word_vec(‘Thanos’) = [0.3, 0.1, 0.9]
 ```
 
-1. It seems that the 1st feature represents the belongingness to the DC Universe. See that ‘Batman’ and ‘Joker’ have higher values for their 1st feature because they do belong to DC Universe.
+1. It seems that the 1st feature represents the **belongingness to the DC Universe**. See that ‘Batman’ and ‘Joker’ have higher values for their 1st feature because they do belong to DC Universe.
 
 2. Maybe the 2nd element in the word2vec representation here captures the **hero/villian features**. That’s why ‘Batman’ and ‘Spiderman’ have higher values and, ‘Joker’ and ‘Thanos’ have smaller values.
 
