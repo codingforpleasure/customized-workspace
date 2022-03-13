@@ -50,9 +50,10 @@
          * [Latent Dirichlet Allocation](#latent-dirichlet-allocation)
          * [Principal component analysis (PCA)](#principal-component-analysis-pca)
       * [GridSearch](#gridsearch)
+      * [Export image of decision tree](#export-image-of-decision-tree)
       * [metrics](#metrics)
 
-<!-- Added by: gil_diy, at: Sun 13 Mar 2022 18:56:40 IST -->
+<!-- Added by: gil_diy, at: Sun 13 Mar 2022 18:56:56 IST -->
 
 <!--te-->
 
@@ -701,7 +702,8 @@ grid_search.fit(X_train, y_train)
         print("\t%s: %r" % (param_name, best_parameters[param_name]))
 ```
 
-## 
+## Export image of decision tree
+
 ```
 tree.export_graphviz(clf,
                      out_file="tree.dot",
