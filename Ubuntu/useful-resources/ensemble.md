@@ -2,6 +2,7 @@
    * [Ensembles](#ensembles)
       * [Ensemble](#ensemble)
          * [Bagging technique (Bootstrap aggregation)](#bagging-technique-bootstrap-aggregation)
+            * [When should I use booststrap sampling?](#when-should-i-use-booststrap-sampling)
             * [Random Forest](#random-forest)
          * [Boosting techniques](#boosting-techniques)
             * [Adaboost (Adaptive boosting)](#adaboost-adaptive-boosting)
@@ -13,7 +14,7 @@
          * [The difference between Adaboost to Gradient Boost](#the-difference-between-adaboost-to-gradient-boost)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Mon 14 Mar 2022 12:12:45 IST -->
+<!-- Added by: gil_diy, at: Mon 14 Mar 2022 12:39:29 IST -->
 
 <!--te-->
 
@@ -35,6 +36,8 @@ Bagging and boosting are ways to implement ensemble models.
 ### Bagging technique (Bootstrap aggregation)
 
 The step of we are using the row sampling with replacement is called `Boostrap`
+In statistics, **Bootstrap Sampling** is a method that involves **drawing of sample data repeatedly with replacement** from a data source to estimate a population parameter.
+
 
 Allow training instances to be sampled several times across multiple predictors, but only bagging allows training instances to be sampled several times for the same predictor.
 
@@ -45,6 +48,10 @@ aggregation reduces both bias and variance.  Generally, the net result is that t
 * When sampling is performed **without replacement**, it is called **pasting** .
 
 [Youtube explanation](https://youtu.be/KIOeZ5cFZ50)
+
+#### When should I use booststrap sampling?
+
+
 
 #### Random Forest
 
