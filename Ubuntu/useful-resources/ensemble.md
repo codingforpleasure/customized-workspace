@@ -14,7 +14,7 @@
          * [The difference between Adaboost to Gradient Boost](#the-difference-between-adaboost-to-gradient-boost)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Mon 14 Mar 2022 12:47:51 IST -->
+<!-- Added by: gil_diy, at: Mon 14 Mar 2022 12:54:16 IST -->
 
 <!--te-->
 
@@ -35,7 +35,7 @@ Bagging and boosting are ways to implement ensemble models.
 
 ### Bagging technique (Bootstrap aggregation)
 
-The step of we are using the row sampling with replacement is called `Boostrap`
+The step of we are using the **row sampling with replacement** is called `Boostrap`
 In statistics, **Bootstrap Sampling** is a method that involves **drawing of sample data repeatedly with replacement** from a data source to estimate a population parameter.
 
 
