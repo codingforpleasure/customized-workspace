@@ -13,7 +13,7 @@
          * [The difference between Adaboost to Gradient Boost](#the-difference-between-adaboost-to-gradient-boost)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Sat 29 Jan 2022 11:17:46 IST -->
+<!-- Added by: gil_diy, at: Mon 14 Mar 2022 12:10:26 IST -->
 
 <!--te-->
 
@@ -34,15 +34,13 @@ Bagging and boosting are ways to implement ensemble models.
 
 ### Bagging technique (Bootstrap aggregation)
 
-
 Allow training instances to be sampled several times across multiple predictors, but only bagging allows training instances to be sampled several times for the same predictor.
-
-
-* When sampling is performed **without replacement**, it is called **pasting** .
-
 
 Each individual predictor has a higher bias than if it were trained on the original training set, but
 aggregation reduces both bias and variance.  Generally, the net result is that the ensemble has a similar bias but a **lower variance** than a single predictor trained on the original training set.
+
+
+* When sampling is performed **without replacement**, it is called **pasting** .
 
 [Youtube explanation](https://youtu.be/KIOeZ5cFZ50)
 
