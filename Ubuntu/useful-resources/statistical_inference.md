@@ -2,7 +2,7 @@
    * [Statistical Inference](#statistical-inference)
       * [Confidence Intervals](#confidence-intervals)
 
-<!-- Added by: gil_diy, at: Mon 14 Mar 2022 13:26:57 IST -->
+<!-- Added by: gil_diy, at: Mon 14 Mar 2022 13:28:11 IST -->
 
 <!--te-->
 
@@ -18,5 +18,5 @@ most statistics, or model parameters
 
 
 <p align="center">
-  <img width="400" src="images/" title="Look into the image">
+  <img width="400" src="images/machine-learning/confidence_interval.jpg" title="Look into the image">
 </p>
