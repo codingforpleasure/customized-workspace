@@ -39,6 +39,7 @@
          * [Importing only first 1000 rows from a HUGE CSV file](#importing-only-first-1000-rows-from-a-huge-csv-file)
          * [Importing only selected columns from a HUGE CSV file](#importing-only-selected-columns-from-a-huge-csv-file)
          * [Importing data from CSV with NA's](#importing-data-from-csv-with-nas)
+         * [Importing data and squeeze](#importing-data-and-squeeze)
          * [Importing data from CSV with date](#importing-data-from-csv-with-date)
          * [Setting a specific column as an index](#setting-a-specific-column-as-an-index)
          * [Exporting data into CSV](#exporting-data-into-csv)
@@ -83,7 +84,7 @@
          * [Calculate correlation for all numerical columns pairs](#calculate-correlation-for-all-numerical-columns-pairs)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Tue 08 Mar 2022 11:43:20 IST -->
+<!-- Added by: gil_diy, at: Mon 14 Mar 2022 11:34:39 IST -->
 
 <!--te-->
 
@@ -426,6 +427,14 @@ df = pd.read_csv('data/large_dataset.csv',usecolumns = chosen_columns)
 ```
 
 ### Importing data from CSV with NA's
+```python
+rawfile = pd.read_csv(filename, header=None, names=DataLabels, sep=',\s', na_values=["?"])
+```
+
+### Importing data and squeeze
+
+If the parsed data only contains one column then return a Series.
+
 ```python
 rawfile = pd.read_csv(filename, header=None, names=DataLabels, sep=',\s', na_values=["?"])
 ```
