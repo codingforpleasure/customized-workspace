@@ -13,7 +13,7 @@
          * [The difference between Adaboost to Gradient Boost](#the-difference-between-adaboost-to-gradient-boost)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Mon 14 Mar 2022 12:10:26 IST -->
+<!-- Added by: gil_diy, at: Mon 14 Mar 2022 12:10:43 IST -->
 
 <!--te-->
 
@@ -33,6 +33,8 @@ Ensemble methods are the most important and powerful machine learning tool and t
 Bagging and boosting are ways to implement ensemble models. 
 
 ### Bagging technique (Bootstrap aggregation)
+
+Row sampling with replacement.
 
 Allow training instances to be sampled several times across multiple predictors, but only bagging allows training instances to be sampled several times for the same predictor.
 
