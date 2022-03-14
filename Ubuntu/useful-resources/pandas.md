@@ -84,7 +84,7 @@
          * [Calculate correlation for all numerical columns pairs](#calculate-correlation-for-all-numerical-columns-pairs)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Mon 14 Mar 2022 11:34:39 IST -->
+<!-- Added by: gil_diy, at: Mon 14 Mar 2022 11:34:59 IST -->
 
 <!--te-->
 
@@ -436,7 +436,7 @@ rawfile = pd.read_csv(filename, header=None, names=DataLabels, sep=',\s', na_val
 If the parsed data only contains one column then return a Series.
 
 ```python
-rawfile = pd.read_csv(filename, header=None, names=DataLabels, sep=',\s', na_values=["?"])
+loans_income = pd.read_csv('datasets/loans_income.csv', squeeze=True)
 ```
 
 ### Importing data from CSV with date
