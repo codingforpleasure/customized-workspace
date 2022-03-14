@@ -2,7 +2,7 @@
    * [Statistical Inference](#statistical-inference)
       * [Confidence Intervals](#confidence-intervals)
 
-<!-- Added by: gil_diy, at: Mon 14 Mar 2022 13:26:54 IST -->
+<!-- Added by: gil_diy, at: Mon 14 Mar 2022 13:26:57 IST -->
 
 <!--te-->
 
