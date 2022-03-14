@@ -1,10 +1,17 @@
 <!--ts-->
    * [Statistical Inference](#statistical-inference)
+      * [Confidence Intervals](#confidence-intervals)
 
-<!-- Added by: gil_diy, at: Sun 13 Mar 2022 19:35:08 IST -->
+<!-- Added by: gil_diy, at: Mon 14 Mar 2022 13:14:08 IST -->
 
 <!--te-->
 
 # Statistical Inference
 
-## 
+## Confidence Intervals
+
+Frequency tables, histograms, boxplots, and standard errors are all ways to under‐
+stand the potential error in a sample estimate. Confidence intervals are another.
+
+* The bootstrap is a general tool that can be used to generate confidence intervals for
+most statistics, or model parameters
