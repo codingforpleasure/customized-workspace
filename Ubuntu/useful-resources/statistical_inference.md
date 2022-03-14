@@ -2,7 +2,7 @@
    * [Statistical Inference](#statistical-inference)
       * [Confidence Intervals](#confidence-intervals)
 
-<!-- Added by: gil_diy, at: Mon 14 Mar 2022 13:14:08 IST -->
+<!-- Added by: gil_diy, at: Mon 14 Mar 2022 13:26:54 IST -->
 
 <!--te-->
 
@@ -15,3 +15,8 @@ stand the potential error in a sample estimate. Confidence intervals are another
 
 * The bootstrap is a general tool that can be used to generate confidence intervals for
 most statistics, or model parameters
+
+
+<p align="center">
+  <img width="400" src="images/" title="Look into the image">
+</p>
