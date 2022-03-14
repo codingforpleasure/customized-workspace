@@ -14,7 +14,7 @@
          * [The difference between Adaboost to Gradient Boost](#the-difference-between-adaboost-to-gradient-boost)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Mon 14 Mar 2022 12:39:29 IST -->
+<!-- Added by: gil_diy, at: Mon 14 Mar 2022 12:44:23 IST -->
 
 <!--te-->
 
@@ -51,7 +51,15 @@ aggregation reduces both bias and variance.  Generally, the net result is that t
 
 #### When should I use booststrap sampling?
 
+Let’s say we want to find the mean height of all the students in a school (which has a total population of 1,000). So, how can we perform this task?
 
+One approach is to measure the height of all the students and then compute the mean height. I’ve illustrated this process below:
+
+<p align="center">
+  <img width="400" src="images/machine-learning/simple_calc.jpg" title="Look into the image">
+</p>
+
+However, this would be a **tedious task**. Just think about it, we would have to individually measure the heights of 1,000 students and then compute the mean height. It will take days! We need a smarter approach here.
 
 #### Random Forest
 
