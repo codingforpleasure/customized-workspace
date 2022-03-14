@@ -14,7 +14,7 @@
          * [The difference between Adaboost to Gradient Boost](#the-difference-between-adaboost-to-gradient-boost)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Mon 14 Mar 2022 12:46:15 IST -->
+<!-- Added by: gil_diy, at: Mon 14 Mar 2022 12:47:49 IST -->
 
 <!--te-->
 
@@ -66,6 +66,9 @@ This is where **Bootstrap Sampling** comes into play.
 
 Instead of measuring the heights of all the students, we can draw a random sample of 5 students and measure their heights. We would repeat this process 20 times and then average the collected height data of 100 students (5 x 20). This average height would be an estimate of the mean height of all the students of the school.
 
+<p align="center">
+  <img width="400" src="images/machine-learning/bootstrap_sampling.jpg" title="Look into the image">
+</p>
 
 #### Random Forest
 
