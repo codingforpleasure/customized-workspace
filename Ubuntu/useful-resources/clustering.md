@@ -8,9 +8,10 @@
             * [K-Means](#k-means)
             * [How to evaluate k-mean?](#how-to-evaluate-k-mean)
             * [Agglomerative (Hierarchical Clustering method)](#agglomerative-hierarchical-clustering-method)
-            * [<strong>DBSCAN (Density-Based Spatial of application with Noise)</strong>](#dbscan-density-based-spatial-of-application-with-noise)
+            * [DBSCAN (Density-Based Spatial of application with Noise)](#dbscan-density-based-spatial-of-application-with-noise)
+            * [HDBSAN](#hdbsan)
 
-<!-- Added by: gil_diy, at: 2019-09-22T03:28+03:00 -->
+<!-- Added by: gil_diy, at: Tue 15 Mar 2022 11:52:34 IST -->
 
 <!--te-->
 
@@ -170,3 +171,12 @@ Main advantages of DBSCAN:
 1. Arbitrary shaped clusters
 2. Robust to outliers
 3. Does not require specification of the number of clusters
+
+#### HDBSAN
+
+```python
+import hdbscan
+cluster = hdbscan.HDBSCAN(min_cluster_size=15,
+                          metric='euclidean',                      
+                          cluster_selection_method='eom').fit(umap_embeddings)
+```
