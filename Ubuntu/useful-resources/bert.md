@@ -8,7 +8,7 @@
       * [Datasets shared in HuggingFace](#datasets-shared-in-huggingface)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Tue 15 Mar 2022 14:14:12 IST -->
+<!-- Added by: gil_diy, at: Tue 15 Mar 2022 14:14:21 IST -->
 
 <!--te-->
 
@@ -16,7 +16,7 @@
 # Bert
 
 <p align="center">
-  <img width="400" src="images/building_blocks_in_bert.jpg" title="Look into the image">
+  <img width="400" src="images/transformers/building_blocks_in_bert.jpg" title="Look into the image">
 </p>
 
 
