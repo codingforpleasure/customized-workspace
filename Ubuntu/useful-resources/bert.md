@@ -10,7 +10,7 @@
       * [Datasets shared in HuggingFace](#datasets-shared-in-huggingface)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Tue 15 Mar 2022 20:56:14 IST -->
+<!-- Added by: gil_diy, at: Tue 15 Mar 2022 20:56:47 IST -->
 
 <!--te-->
 
@@ -36,8 +36,8 @@ with open("vocabulary_Bio_ClinicalBERT.txt", 'w') as f:
 
 Token | Explanantion
 ------------|-----
-  `CLS` | Classification
-  CLS | Classification
+  `[CLS]` | Classification
+  `[SEP]`  | Differentiate them
 
 
 ## Preprocessing data
