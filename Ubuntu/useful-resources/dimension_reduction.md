@@ -18,7 +18,7 @@
       * [t-SNE (t-Distributed Stochastic Neighbour)](#t-sne-t-distributed-stochastic-neighbour)
       * [Auto-encoder](#auto-encoder)
 
-<!-- Added by: gil_diy, at: Tue 15 Mar 2022 11:38:55 IST -->
+<!-- Added by: gil_diy, at: Tue 15 Mar 2022 11:40:07 IST -->
 
 <!--te-->
 
@@ -91,6 +91,12 @@ where it starts with one feature, progressively adding the next feature with the
 
 Out of the few dimensionality reduction algorithms, UMAP is arguably the best performing as it keeps a significant portion of the high-dimensional local structure in lower dimensionality.
 
+```python
+import umap
+umap_embeddings = umap.UMAP(n_neighbors=15, 
+                            n_components=5, 
+                            metric='cosine').fit_transform(embeddings)
+```
 
 # Linear algebra methods
 
