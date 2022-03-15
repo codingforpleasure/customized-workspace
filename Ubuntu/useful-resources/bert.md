@@ -2,6 +2,7 @@
    * [Bert](#bert)
       * [Getting to know WordPiece Embeddings](#getting-to-know-wordpiece-embeddings)
       * [Special Tokens](#special-tokens)
+      * [Map the token strings to their vocabulary indeces](#map-the-token-strings-to-their-vocabulary-indeces)
       * [Preprocessing data](#preprocessing-data)
          * [Tokenizer](#tokenizer)
       * [Tokenizers](#tokenizers)
@@ -10,7 +11,7 @@
       * [Datasets shared in HuggingFace](#datasets-shared-in-huggingface)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Tue 15 Mar 2022 21:02:28 IST -->
+<!-- Added by: gil_diy, at: Tue 15 Mar 2022 21:07:55 IST -->
 
 <!--te-->
 
@@ -42,8 +43,6 @@ the same vector as the standalone sequence of characters “em” as in “go ge
 Subwords not at the front of a word, which are preceded by ‘##’ to denote this case
 
 
-
-
 ```python
 with open("vocabulary_Bio_ClinicalBERT.txt", 'w') as f:
   # For each token...
@@ -60,8 +59,14 @@ Token | Explanantion
   `[CLS]` | Classification
   `[SEP]`  | Differentiate sentences
   `##` | Two hash signs, preceding some of these subwords are just our tokenizer’s way to denote that this subword or character is part of a larger word and preceded by another subword
-  | 
+  `OOV`| 
+  `UNK`| 
 
+##  Map the token strings to their vocabulary indeces
+
+```python
+indexed_tokens = tokenizer.convert_tokens_to_ids(tokenized_text)
+```
 
 ## Preprocessing data
 
