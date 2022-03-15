@@ -1,5 +1,6 @@
 <!--ts-->
    * [Bert](#bert)
+      * [Getting to know WordPiece Embeddings](#getting-to-know-wordpiece-embeddings)
       * [Preprocessing data](#preprocessing-data)
          * [Tokenizer](#tokenizer)
       * [Tokenizers](#tokenizers)
@@ -8,7 +9,7 @@
       * [Datasets shared in HuggingFace](#datasets-shared-in-huggingface)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Tue 15 Mar 2022 14:14:23 IST -->
+<!-- Added by: gil_diy, at: Tue 15 Mar 2022 14:36:46 IST -->
 
 <!--te-->
 
@@ -18,6 +19,11 @@
 <p align="center">
   <img width="400" src="images/transformers/building_blocks_in_bert.jpg" title="Look into the image">
 </p>
+
+## Getting to know WordPiece Embeddings
+
+
+
 
 
 ## Preprocessing data
