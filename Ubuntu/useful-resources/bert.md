@@ -8,12 +8,16 @@
       * [Datasets shared in HuggingFace](#datasets-shared-in-huggingface)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Thu 24 Feb 2022 10:17:45 IST -->
+<!-- Added by: gil_diy, at: Tue 15 Mar 2022 14:12:20 IST -->
 
 <!--te-->
 
 
 # Bert
+
+<p align="center">
+  <img width="400" src="images/building_blocks_in_bert.jpg" title="Look into the image">
+</p>
 
 ## Preprocessing data
 
