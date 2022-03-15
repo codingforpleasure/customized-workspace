@@ -10,7 +10,7 @@
       * [Datasets shared in HuggingFace](#datasets-shared-in-huggingface)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Tue 15 Mar 2022 20:56:47 IST -->
+<!-- Added by: gil_diy, at: Tue 15 Mar 2022 20:58:37 IST -->
 
 <!--te-->
 
@@ -37,7 +37,9 @@ with open("vocabulary_Bio_ClinicalBERT.txt", 'w') as f:
 Token | Explanantion
 ------------|-----
   `[CLS]` | Classification
-  `[SEP]`  | Differentiate them
+  `[SEP]`  | Differentiate sentences
+  `##` | Two hash signs, preceding some of these subwords are just our tokenizer’s way to denote that this subword or character is part of a larger word and preceded by another subword
+  | 
 
 
 ## Preprocessing data
