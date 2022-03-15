@@ -4,14 +4,14 @@
       * [Special Tokens](#special-tokens)
       * [Map the token strings to their vocabulary indeces](#map-the-token-strings-to-their-vocabulary-indeces)
       * [Preprocessing data](#preprocessing-data)
-         * [Tokenizer](#tokenizer)
       * [Tokenizers](#tokenizers)
-         * [BertTokenizer](#berttokenizer)
+         * [Tokenizer](#tokenizer)
+            * [BertTokenizer](#berttokenizer)
          * [BertTokenizerFast](#berttokenizerfast)
       * [Datasets shared in HuggingFace](#datasets-shared-in-huggingface)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Tue 15 Mar 2022 21:14:38 IST -->
+<!-- Added by: gil_diy, at: Tue 15 Mar 2022 21:15:18 IST -->
 
 <!--te-->
 
@@ -88,7 +88,12 @@ for tup in zip(tokenized_text, indexed_tokens):
 ## Preprocessing data
 
 
+
+## Tokenizers 
+
 ### Tokenizer
+
+#### BertTokenizer
 ```python
     tokenizer = BertTokenizer.from_pretrained('bert-base-cased')
 
@@ -117,9 +122,6 @@ from the other. All the tokens from the first sentence will be mapped to 0 and a
 **attention_mask** - is used to differentiate the actual tokens and [PAD] tokens. I will map all the actual tokens to 1 and the [PAD] tokens to 0.
 
 
-## Tokenizers 
-
-### BertTokenizer
 
 ### BertTokenizerFast
 
