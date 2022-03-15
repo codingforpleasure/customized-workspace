@@ -5,11 +5,15 @@
          * [LDA (Latent Dirichlet Allocation)](#lda-latent-dirichlet-allocation)
          * [BERTopic](#bertopic)
 
-<!-- Added by: gil_diy, at: Sun 13 Mar 2022 19:02:47 IST -->
+<!-- Added by: gil_diy, at: Tue 15 Mar 2022 11:24:16 IST -->
 
 <!--te-->
 
 # Topic modeling
+
+If any categories or labels can be in a document,
+I am forced to look into unsupervised techniques to extract these topics, it's called: `Topic Modeling`.
+
 
 ## Approaches
 ### TF-IDF
