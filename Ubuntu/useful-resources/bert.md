@@ -11,7 +11,7 @@
       * [Datasets shared in HuggingFace](#datasets-shared-in-huggingface)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Tue 15 Mar 2022 21:07:55 IST -->
+<!-- Added by: gil_diy, at: Tue 15 Mar 2022 21:08:21 IST -->
 
 <!--te-->
 
@@ -65,6 +65,10 @@ Token | Explanantion
 ##  Map the token strings to their vocabulary indeces
 
 ```python
+# Split the sentence into tokens.
+tokenized_text = tokenizer.tokenize(marked_text)
+
+# Map the token strings to their vocabulary indeces.
 indexed_tokens = tokenizer.convert_tokens_to_ids(tokenized_text)
 ```
 
