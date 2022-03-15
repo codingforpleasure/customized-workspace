@@ -12,7 +12,7 @@
       * [Datasets shared in HuggingFace](#datasets-shared-in-huggingface)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Tue 15 Mar 2022 21:16:04 IST -->
+<!-- Added by: gil_diy, at: Tue 15 Mar 2022 21:16:54 IST -->
 
 <!--te-->
 
@@ -128,6 +128,17 @@ from the other. All the tokens from the first sentence will be mapped to 0 and a
 ## Other
 
 The BERT model is a deep neural network with 12 layers! Explaining the layers and their functions is outside the scope of this post, and you can skip over this output for now.
+
+
+```python
+# Load pre-trained model (weights)
+model = BertModel.from_pretrained('bert-base-uncased',
+                                  output_hidden_states = True, # Whether the model returns all hidden-states.
+                                  )
+
+# Put the model in "evaluation" mode, meaning feed-forward operation.
+model.eval()
+```
 
 ## Datasets shared in HuggingFace
 
