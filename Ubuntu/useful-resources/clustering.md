@@ -11,7 +11,7 @@
             * [DBSCAN (Density-Based Spatial of application with Noise)](#dbscan-density-based-spatial-of-application-with-noise)
             * [HDBSAN](#hdbsan)
 
-<!-- Added by: gil_diy, at: Tue 15 Mar 2022 11:52:34 IST -->
+<!-- Added by: gil_diy, at: Tue 15 Mar 2022 11:52:48 IST -->
 
 <!--te-->
 
@@ -173,6 +173,8 @@ Main advantages of DBSCAN:
 3. Does not require specification of the number of clusters
 
 #### HDBSAN
+
+HDBSCAN is a density-based algorithm that works quite well with UMAP since UMAP maintains a lot of local structure even in lower-dimensional space. Moreover, HDBSCAN does not force data points to clusters as it considers them outliers.
 
 ```python
 import hdbscan
