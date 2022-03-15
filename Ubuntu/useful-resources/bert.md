@@ -1,6 +1,7 @@
 <!--ts-->
    * [Bert](#bert)
       * [Getting to know WordPiece Embeddings](#getting-to-know-wordpiece-embeddings)
+      * [Special Tokens](#special-tokens)
       * [Preprocessing data](#preprocessing-data)
          * [Tokenizer](#tokenizer)
       * [Tokenizers](#tokenizers)
@@ -9,7 +10,7 @@
       * [Datasets shared in HuggingFace](#datasets-shared-in-huggingface)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Tue 15 Mar 2022 20:54:09 IST -->
+<!-- Added by: gil_diy, at: Tue 15 Mar 2022 20:56:14 IST -->
 
 <!--te-->
 
@@ -29,6 +30,14 @@ with open("vocabulary_Bio_ClinicalBERT.txt", 'w') as f:
       # Write it out and escape any unicode characters.
       f.write(token + '\n')
 ```
+
+
+## Special Tokens
+
+Token | Explanantion
+------------|-----
+  `CLS` | Classification
+  CLS | Classification
 
 
 ## Preprocessing data
