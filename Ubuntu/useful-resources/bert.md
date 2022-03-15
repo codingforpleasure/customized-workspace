@@ -11,7 +11,7 @@
       * [Datasets shared in HuggingFace](#datasets-shared-in-huggingface)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Tue 15 Mar 2022 21:09:26 IST -->
+<!-- Added by: gil_diy, at: Tue 15 Mar 2022 21:09:32 IST -->
 
 <!--te-->
 
@@ -74,6 +74,8 @@ indexed_tokens = tokenizer.convert_tokens_to_ids(tokenized_text)
 # Display the words with their indeces.
 for tup in zip(tokenized_text, indexed_tokens):
     print('{:<12} {:>6,}'.format(tup[0], tup[1]))
+
+# Output:
 
 # [CLS]           101
 # after         2,044
