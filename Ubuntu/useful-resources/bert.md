@@ -11,7 +11,7 @@
       * [Datasets shared in HuggingFace](#datasets-shared-in-huggingface)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Tue 15 Mar 2022 21:09:32 IST -->
+<!-- Added by: gil_diy, at: Tue 15 Mar 2022 21:14:38 IST -->
 
 <!--te-->
 
@@ -94,7 +94,7 @@ for tup in zip(tokenized_text, indexed_tokens):
 
     example_text = 'I will watch Memento tonight'
 
-    bert_input = tokenizer(example_text,
+    bert_tokenizer_output = tokenizer(example_text,
                            padding='max_length',
                            max_length=10,  
                            truncation=True,
@@ -105,7 +105,7 @@ for tup in zip(tokenized_text, indexed_tokens):
 
 * Since we’re using Pytorch, then we use pt. If you use Tensorflow, then you need to use tf.
 
-* The output of the bert_input is a dictionary which consists of:
+* The output of the bert_tokenizer_output is a dictionary which consists of:
 
 `input_ids` , `token_type_ids`, `attention_mask`
 
