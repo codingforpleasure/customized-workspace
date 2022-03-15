@@ -7,6 +7,7 @@
       * [Random forest](#random-forest)
       * [Backwards-feature elimination](#backwards-feature-elimination)
       * [Forward-feature construction](#forward-feature-construction)
+      * [UMAP](#umap)
    * [Linear algebra methods](#linear-algebra-methods)
       * [PCA (Principal Component Analysis)](#pca-principal-component-analysis)
       * [LDA (Linear Discriminatory Analysis)](#lda-linear-discriminatory-analysis)
@@ -17,7 +18,7 @@
       * [t-SNE (t-Distributed Stochastic Neighbour)](#t-sne-t-distributed-stochastic-neighbour)
       * [Auto-encoder](#auto-encoder)
 
-<!-- Added by: gil_diy, at: Mon 07 Mar 2022 09:28:18 IST -->
+<!-- Added by: gil_diy, at: Tue 15 Mar 2022 11:38:52 IST -->
 
 <!--te-->
 
@@ -84,6 +85,11 @@ progressively removes one feature at a time, until the algorithm has reached the
  The forward feature construction, unlike the backwards feature elimination technique, takes a bottom up approach,
 where it starts with one feature, progressively adding the next feature with the highest increase in performance.
 
+
+
+## UMAP
+
+Out of the few dimensionality reduction algorithms, UMAP is arguably the best performing as it keeps a significant portion of the high-dimensional local structure in lower dimensionality.
 
 
 # Linear algebra methods
