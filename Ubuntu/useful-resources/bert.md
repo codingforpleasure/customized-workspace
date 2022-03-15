@@ -8,10 +8,11 @@
          * [Tokenizer](#tokenizer)
             * [BertTokenizer](#berttokenizer)
          * [BertTokenizerFast](#berttokenizerfast)
+      * [Other](#other)
       * [Datasets shared in HuggingFace](#datasets-shared-in-huggingface)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Tue 15 Mar 2022 21:15:25 IST -->
+<!-- Added by: gil_diy, at: Tue 15 Mar 2022 21:15:49 IST -->
 
 <!--te-->
 
@@ -122,6 +123,11 @@ from the other. All the tokens from the first sentence will be mapped to 0 and a
 
 
 ### BertTokenizerFast
+
+
+## Other
+
+The model is a deep neural network with 12 layers! Explaining the layers and their functions is outside the scope of this post, and you can skip over this output for now.
 
 ## Datasets shared in HuggingFace
 
