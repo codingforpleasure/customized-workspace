@@ -9,7 +9,7 @@
       * [Datasets shared in HuggingFace](#datasets-shared-in-huggingface)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Tue 15 Mar 2022 14:36:46 IST -->
+<!-- Added by: gil_diy, at: Tue 15 Mar 2022 20:54:09 IST -->
 
 <!--te-->
 
@@ -22,8 +22,13 @@
 
 ## Getting to know WordPiece Embeddings
 
-
-
+```python
+with open("vocabulary_Bio_ClinicalBERT.txt", 'w') as f:
+  # For each token...
+  for token in tokenizer.vocab.keys():
+      # Write it out and escape any unicode characters.
+      f.write(token + '\n')
+```
 
 
 ## Preprocessing data
