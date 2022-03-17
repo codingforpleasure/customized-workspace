@@ -84,7 +84,7 @@
          * [Calculate correlation for all numerical columns pairs](#calculate-correlation-for-all-numerical-columns-pairs)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Mon 14 Mar 2022 11:35:03 IST -->
+<!-- Added by: gil_diy, at: Thu 17 Mar 2022 09:29:39 IST -->
 
 <!--te-->
 
@@ -423,7 +423,7 @@ relevant_df = pd.read_csv('data/large_dataset.csv', nrows = 1000)
 
 ```python
 chosen_columns = ['id', 'occupation']
-df = pd.read_csv('data/large_dataset.csv',usecolumns = chosen_columns)
+df = pd.read_csv('data/large_dataset.csv',usecols = chosen_columns)
 ```
 
 ### Importing data from CSV with NA's
