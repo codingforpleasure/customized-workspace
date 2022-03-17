@@ -16,7 +16,7 @@
       * [Histograms](#histograms)
       * [Density plots (KDE - Kernel density estimate (KDE))](#density-plots-kde---kernel-density-estimate-kde)
 
-<!-- Added by: gil_diy, at: Tue 08 Mar 2022 08:52:32 IST -->
+<!-- Added by: gil_diy, at: Thu 17 Mar 2022 10:03:07 IST -->
 
 <!--te-->
 
@@ -207,7 +207,7 @@ sns.swarmplot(x=candy_data['chocolate'], y=candy_data['winpercent'])
 ## Histograms
 
 ```python
-sns.distplot(a=iris_data['Petal Length (cm)'], kde=False)
+sns.displot(a=iris_data['Petal Length (cm)'], kde=False)
 ```
 
 ## Density plots (KDE - Kernel density estimate (KDE))
