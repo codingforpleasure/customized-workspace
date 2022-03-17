@@ -11,7 +11,7 @@
          * [Correlation ratio](#correlation-ratio)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Thu 17 Mar 2022 08:00:44 IST -->
+<!-- Added by: gil_diy, at: Thu 17 Mar 2022 08:03:38 IST -->
 
 <!--te-->
 
@@ -31,6 +31,8 @@
 
 
 ### Matthews correlation coefficient - MCC
+
+https://en.wikipedia.org/wiki/Phi_coefficient#Multiclass_case
 
 ## Association between two categorical features
 
