@@ -105,7 +105,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Fri 18 Mar 2022 11:23:55 IST -->
+<!-- Added by: gil_diy, at: Fri 18 Mar 2022 11:24:02 IST -->
 
 <!--te-->
 
@@ -890,7 +890,7 @@ Note that `input_features` and `labels` must match on the length of the **first 
 i.e When building language model with transformer, we pass 3 tensors to the `TensorDataset`:
 
 ```python
-# wrapping it all to Dataset of tensors.
+# Wrapping it all to Dataset of tensors.
 train_data = TensorDataset(train_inputs, train_masks, train_labels) 
 
 train_sampler = RandomSampler(train_data)
