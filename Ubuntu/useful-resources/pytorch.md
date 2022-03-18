@@ -57,7 +57,7 @@
       * [Transpose Convolution, what is it?](#transpose-convolution-what-is-it)
       * [Dataloader](#dataloader)
          * [Utilizing the multiple process capabilities of the PyTorch DataLoader class](#utilizing-the-multiple-process-capabilities-of-the-pytorch-dataloader-class)
-         * [Customise the shuffling](#customise-the-shuffling)
+         * [Customise the shuffling in a dataloader](#customise-the-shuffling-in-a-dataloader)
       * [Dataset &amp;&amp; DataLoader](#dataset--dataloader)
          * [To better understand your data](#to-better-understand-your-data)
          * [<strong>CNN Output Size formula (Square)</strong>](#cnn-output-size-formula-square)
@@ -107,7 +107,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Fri 18 Mar 2022 12:03:57 IST -->
+<!-- Added by: gil_diy, at: Fri 18 Mar 2022 12:04:03 IST -->
 
 <!--te-->
 
@@ -1069,7 +1069,7 @@ train_loader = torch.utils.data.Dataloader(train_set,
 
 **use num_workers=0 to disable multiprocessing**
 
-### Customise the shuffling
+### Customise the shuffling in a dataloader
 
 ## Dataset && DataLoader
 ```python
