@@ -105,7 +105,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Fri 18 Mar 2022 11:25:05 IST -->
+<!-- Added by: gil_diy, at: Fri 18 Mar 2022 11:25:25 IST -->
 
 <!--te-->
 
@@ -885,7 +885,7 @@ Here is a simple example:
 dataset = TensorDataset(input_features, labels)
 ```
 
-Note: that `input_features` and `labels` must match on the length of the **first dimension**.
+Note: In this example  `input_features` and `labels` must match on the length of the **first dimension**.
 
 i.e When building language model with transformer, we pass 3 tensors to the `TensorDataset`:
 
