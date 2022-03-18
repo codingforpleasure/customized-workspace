@@ -111,7 +111,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Fri 18 Mar 2022 12:58:17 IST -->
+<!-- Added by: gil_diy, at: Fri 18 Mar 2022 12:58:22 IST -->
 
 <!--te-->
 
@@ -1674,6 +1674,7 @@ from torchvision import models
 
 print("List of available models: ", dir(models))
 ```
+
 ### Finetuning Torchvision Models
 
 Model | Finetune | Prerequisite
