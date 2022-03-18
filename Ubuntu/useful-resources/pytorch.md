@@ -20,6 +20,7 @@
                * [permute](#permute)
                * [flatten](#flatten)
                * [unsqueeze](#unsqueeze)
+            * [Padding tensors with constant value](#padding-tensors-with-constant-value)
             * [Element-wise operations](#element-wise-operations)
             * [Reduction operations](#reduction-operations)
             * [Access operations](#access-operations)
@@ -101,7 +102,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Fri 11 Mar 2022 10:28:55 IST -->
+<!-- Added by: gil_diy, at: Fri 18 Mar 2022 09:12:43 IST -->
 
 <!--te-->
 
@@ -248,7 +249,6 @@ print(tensor_float.mean(dim=0))
 ### Tensor Operation types
 #### Reshape operations
 
-
 ##### squeeze
 
 Removes all axis which have a length of one
@@ -382,7 +382,11 @@ print(t.reshape(1,12).squeeze().unsqueeze(dim=0))
 print(t.reshape(1,12).squeeze().unsqueeze(dim=0).shape)
 ```
 
+#### Padding tensors with constant value
 
+```python
+
+```
 
 #### Element-wise operations
 
@@ -1722,7 +1726,12 @@ In the second half of the model, the feature map is up-sampled to the input size
 
 ## pytorch usefule functions
 
-t
+Explanation | Fucntion
+------------|-----
+ PairwiseDistance | `nn.PairwiseDistance()`
+ TripletMarginWithDistanceLoss | `nn.TripletMarginWithDistanceLoss`
+
+
 
 ## Pytorch hooks
 
