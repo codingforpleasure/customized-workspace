@@ -3,7 +3,7 @@
       * [Pytorch hierarchy structure](#pytorch-hierarchy-structure)
       * [Road map](#road-map)
       * [The training process (Road map)](#the-training-process-road-map)
-      * [Install](#install)
+      * [Install torch](#install-torch)
       * [Checking versions](#checking-versions)
       * [Set printing tensors nicely](#set-printing-tensors-nicely)
       * [Basics - Tensors](#basics---tensors)
@@ -84,7 +84,7 @@
       * [Inference/Evaluation](#inferenceevaluation)
          * [model.eval()](#modeleval)
       * [torchvision](#torchvision)
-         * [Install](#install-1)
+         * [Install torchvision](#install-torchvision)
          * [Show all pretrained models available in pytorch vision](#show-all-pretrained-models-available-in-pytorch-vision)
          * [Finetuning Torchvision Models](#finetuning-torchvision-models)
          * [Display images as grid](#display-images-as-grid)
@@ -111,7 +111,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Fri 18 Mar 2022 12:59:53 IST -->
+<!-- Added by: gil_diy, at: Fri 18 Mar 2022 13:07:53 IST -->
 
 <!--te-->
 
@@ -156,7 +156,7 @@ for example:
 6. Repeat steps 1-5 until one epoch is completed
 7. Repeat steps 1-6 for as many epochs required to obtain the desired level of accuaracy.
 
-## Install
+## Install torch
 Install `pip install torch`
 
 ## Checking versions
@@ -1662,11 +1662,15 @@ Torchvision is compiled from 4 parts:
 
 * Utils
 
-### Install
+### Install torchvision
 
 Install `pip install torchvision`
 
+```python
+import torchvision
 
+print(torchvision.__version__)
+```
 ### Show all pretrained models available in pytorch vision
 
 ```python
