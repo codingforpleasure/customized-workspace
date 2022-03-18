@@ -21,7 +21,8 @@
                * [flatten](#flatten)
                * [unsqueeze](#unsqueeze)
             * [Padding tensors with constant value](#padding-tensors-with-constant-value)
-            * [Padding tensors with constant in the end](#padding-tensors-with-constant-in-the-end)
+            * [Padding tensors with constant value in the end](#padding-tensors-with-constant-value-in-the-end)
+            * [Padding tensors with constant value in the beginning and in the end](#padding-tensors-with-constant-value-in-the-beginning-and-in-the-end)
             * [Element-wise operations](#element-wise-operations)
             * [Reduction operations](#reduction-operations)
             * [Access operations](#access-operations)
@@ -103,7 +104,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Fri 18 Mar 2022 09:18:42 IST -->
+<!-- Added by: gil_diy, at: Fri 18 Mar 2022 09:22:02 IST -->
 
 <!--te-->
 
@@ -386,11 +387,14 @@ print(t.reshape(1,12).squeeze().unsqueeze(dim=0).shape)
 #### Padding tensors with constant value
 
 
-#### Padding tensors with constant in the end 
+#### Padding tensors with constant value in the end 
+
+Here I'm adding 5 zeros in the end of each numpy array
 
 ```python
 x = torch.ones(2, 3)
 print('x: ', x)
+
 
 padded = nn.ConstantPad1d((0, 5), 0)(x)
 print('x: ', x)
@@ -404,6 +408,24 @@ print('Padded output: ', padded)
 #                  [1., 1., 1., 0., 0., 0., 0., 0.]])
 ```
 
+#### Padding tensors with constant value in the beginning and in the end 
+
+```python
+x = torch.ones(2, 3)
+print('x: ', x)
+
+
+padded = nn.ConstantPad1d((3, 5), 0)(x)
+print('x: ', x)
+print('#######################')
+print('Padded output: ', padded)
+
+# x:  tensor([[1., 1., 1.],
+#             [1., 1., 1.]])
+# ###############################################
+# Padded output:  tensor([[1., 1., 1., 0., 0., 0., 0., 0.],
+#                  [1., 1., 1., 0., 0., 0., 0., 0.]])
+```
 #### Element-wise operations
 
 Tensors must have the same shape for perform the element-wise operations
