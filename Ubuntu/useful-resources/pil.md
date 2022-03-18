@@ -12,7 +12,7 @@
       * [Save image file](#save-image-file)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Fri 18 Mar 2022 13:20:06 IST -->
+<!-- Added by: gil_diy, at: Fri 18 Mar 2022 13:20:11 IST -->
 
 <!--te-->
 
@@ -43,8 +43,8 @@ list(pilImg.getdata())
 rectangle = Image.open("bla.jpg")
 rsize_x, rsize_y = rectangle.size
 ```
-## Exporting numpy array as image
 
+## Exporting numpy array as image
 ```python
 from PIL import Image
 
