@@ -104,7 +104,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Fri 18 Mar 2022 09:22:53 IST -->
+<!-- Added by: gil_diy, at: Fri 18 Mar 2022 09:24:06 IST -->
 
 <!--te-->
 
@@ -423,10 +423,10 @@ print('#######################')
 print('Padded output: ', padded)
 
 # x:  tensor([[1., 1., 1.],
-#             [1., 1., 1.]])
-# ###############################################
-# Padded output:  tensor([[1., 1., 1., 0., 0., 0., 0., 0.],
-#                  [1., 1., 1., 0., 0., 0., 0., 0.]])
+#            [1., 1., 1.]])
+# ########################################
+# Padded output:  tensor([[0., 0., 0., 1., 1., 1., 0., 0.],
+#                         [0., 0., 0., 1., 1., 1., 0., 0.]])
 ```
 #### Element-wise operations
 
