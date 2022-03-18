@@ -110,7 +110,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Fri 18 Mar 2022 12:38:16 IST -->
+<!-- Added by: gil_diy, at: Fri 18 Mar 2022 12:38:58 IST -->
 
 <!--te-->
 
@@ -1054,7 +1054,7 @@ After setting up a Dataset we can wrap that in a `DataLoader` and we can iterate
 The dataloader gives us access to the dataset, and gives us query capabilties,
 we can shuffle and have a batch size.
 
-This example continues from the [Dataset example here](### Create a custom Dataset)
+This example continues from the [Dataset example here](#create-a-custom-dataset)
 
 ```python
 # Wen we create a Dataloader the Default batch size is 1, 
