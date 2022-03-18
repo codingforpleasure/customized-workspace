@@ -102,7 +102,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Fri 18 Mar 2022 09:12:43 IST -->
+<!-- Added by: gil_diy, at: Fri 18 Mar 2022 09:13:58 IST -->
 
 <!--te-->
 
@@ -385,6 +385,7 @@ print(t.reshape(1,12).squeeze().unsqueeze(dim=0).shape)
 #### Padding tensors with constant value
 
 ```python
+x = torch.ones(2, 3)
 
 ```
 
