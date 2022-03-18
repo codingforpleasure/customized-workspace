@@ -48,7 +48,8 @@
       * [Concatenating torches:](#concatenating-torches)
       * [Stacking](#stacking)
       * [Linear Layers in depth](#linear-layers-in-depth)
-      * [Create a dataset out of tensors](#create-a-dataset-out-of-tensors)
+      * [Dataset](#dataset)
+         * [Create a dataset out of tensors](#create-a-dataset-out-of-tensors)
       * [Custom Dataset](#custom-dataset)
       * [Loading images directory into a dataset](#loading-images-directory-into-a-dataset)
       * [Subsetting Dataset](#subsetting-dataset)
@@ -105,7 +106,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Fri 18 Mar 2022 11:25:35 IST -->
+<!-- Added by: gil_diy, at: Fri 18 Mar 2022 11:54:58 IST -->
 
 <!--te-->
 
@@ -873,7 +874,11 @@ print(fc(in_features))
 
 [Link to youtube](https://youtu.be/rcc86nXKwkw?list=PLZbbT5o_s2xrfNyHZsM6ufI0iZENK9xgG)
 
-## Create a dataset out of tensors
+## Dataset
+
+PyTorch Datasets are just things that **have a length** and **are indexable** so that len(dataset) will work and dataset[index] will return a tuple of (x,y).
+
+### Create a dataset out of tensors
 
 The `TensorDataset` is a **ready to use class** to represent your data as list of tensors.
 it's not an **abstract class** like `Dataset` class which is an abstract class.
