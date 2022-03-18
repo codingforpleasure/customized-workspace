@@ -110,7 +110,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Fri 18 Mar 2022 12:55:15 IST -->
+<!-- Added by: gil_diy, at: Fri 18 Mar 2022 12:56:03 IST -->
 
 <!--te-->
 
@@ -156,7 +156,7 @@ for example:
 7. Repeat steps 1-6 for as many epochs required to obtain the desired level of accuaracy.
 
 ## Install
-Install `pip install torch torchvision`
+Install `pip install torch`
 
 ## Checking versions
 
