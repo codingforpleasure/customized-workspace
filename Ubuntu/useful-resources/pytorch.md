@@ -110,7 +110,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Fri 18 Mar 2022 12:43:24 IST -->
+<!-- Added by: gil_diy, at: Fri 18 Mar 2022 12:43:43 IST -->
 
 <!--te-->
 
@@ -1132,6 +1132,18 @@ for i in default_sampler:
     # iterating over the SequentialSampler
     print(i)
 
+
+# Output:
+# 0
+# 1
+# 2
+# 3
+# 4
+# 5
+# 6
+# 7
+# 8
+# 9
 ```
 #### RandomSampler
 
