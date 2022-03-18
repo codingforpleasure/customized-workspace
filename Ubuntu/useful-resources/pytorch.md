@@ -105,7 +105,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Fri 18 Mar 2022 11:12:20 IST -->
+<!-- Added by: gil_diy, at: Fri 18 Mar 2022 11:13:10 IST -->
 
 <!--te-->
 
@@ -876,10 +876,11 @@ print(fc(in_features))
 ## Create a dataset of tensors
 
 The `TensorDataset` is a **ready to use class** to represent your data as list of tensors.
-it's not an **abstract class** like `Dataset` class which is abstract class.
+it's not an **abstract class** like `Dataset` class which is an abstract class.
+
+If you just want to create a dataset that contains tensors for input features and labels, then use the TensorDataset directly.
 
 ```python
-
 train_data = TensorDataset(train_inputs, train_masks, train_labels)
 ```
 
