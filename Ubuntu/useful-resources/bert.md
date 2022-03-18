@@ -12,7 +12,7 @@
       * [Datasets shared in HuggingFace](#datasets-shared-in-huggingface)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Tue 15 Mar 2022 21:16:54 IST -->
+<!-- Added by: gil_diy, at: Fri 18 Mar 2022 08:40:58 IST -->
 
 <!--te-->
 
@@ -129,6 +129,8 @@ from the other. All the tokens from the first sentence will be mapped to 0 and a
 
 The BERT model is a deep neural network with 12 layers! Explaining the layers and their functions is outside the scope of this post, and you can skip over this output for now.
 
+
+model.eval() puts our model in evaluation mode as opposed to training mode. In this case, evaluation mode turns off dropout regularization which is used in training.
 
 ```python
 # Load pre-trained model (weights)
