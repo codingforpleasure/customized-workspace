@@ -105,7 +105,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Fri 18 Mar 2022 11:20:36 IST -->
+<!-- Added by: gil_diy, at: Fri 18 Mar 2022 11:22:06 IST -->
 
 <!--te-->
 
@@ -880,10 +880,12 @@ it's not an **abstract class** like `Dataset` class which is an abstract class.
 
 If you just want to create a dataset that contains tensors for input features and labels, then use the TensorDataset directly.
 
-
+Here is a simple exmaple:
 ```python
-
+dataset = TensorDataset(input_features, labels)
 ```
+
+I.e When building language model with transformer, we pass 3 tensors to the `TensorDataset`:
 
 ```python
 train_data = TensorDataset(train_inputs, train_masks, train_labels) # <--- wrapping it all to Dataset of tensors.
