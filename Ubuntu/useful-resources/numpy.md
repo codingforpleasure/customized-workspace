@@ -20,6 +20,7 @@
             * [Concatenating](#concatenating)
          * [Repeating an array](#repeating-an-array)
          * [Retrieving info about an array](#retrieving-info-about-an-array)
+         * [Check type in numpy array](#check-type-in-numpy-array)
          * [Counts the number of non-zero values in an array given a constraint](#counts-the-number-of-non-zero-values-in-an-array-given-a-constraint)
          * [Transpose a matrix/array](#transpose-a-matrixarray)
          * [Aggregation functions](#aggregation-functions)
@@ -79,7 +80,7 @@
       * [Flip image with numpy](#flip-image-with-numpy)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Tue 01 Mar 2022 15:10:52 IST -->
+<!-- Added by: gil_diy, at: Fri 18 Mar 2022 22:45:48 IST -->
 
 <!--te-->
 
@@ -382,6 +383,20 @@ To find the coordinates (row number, column number) just use `np.where(mat > 0)`
 (array([0, 1, 1, 2]), array([2, 0, 1, 0]))
 ```
 
+### Check type in numpy array
+
+```python
+ints = np.array([1, 2, 3], dtype=np.int32)
+print(np.issubdtype(ints.dtype, np.integer))
+
+# Output:
+# True
+
+np.issubdtype(ints.dtype, np.floating)
+
+# Output:
+# False
+```
 
 ### Counts the number of non-zero values in an array given a constraint
 
