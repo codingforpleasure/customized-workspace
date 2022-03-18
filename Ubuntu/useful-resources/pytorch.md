@@ -51,7 +51,7 @@
       * [Custom Dataset](#custom-dataset)
       * [Loading images directory into a dataset](#loading-images-directory-into-a-dataset)
       * [Subsetting Dataset](#subsetting-dataset)
-      * [TensorDataset](#tensordataset)
+      * [Create a dataset of tensors](#create-a-dataset-of-tensors)
       * [Preprocessing](#preprocessing)
       * [Transpose Convolution, what is it?](#transpose-convolution-what-is-it)
       * [Dataloader](#dataloader)
@@ -105,7 +105,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Fri 18 Mar 2022 11:04:29 IST -->
+<!-- Added by: gil_diy, at: Fri 18 Mar 2022 11:10:22 IST -->
 
 <!--te-->
 
@@ -875,6 +875,8 @@ print(fc(in_features))
 
 ## Custom Dataset
 
+The `Dataset` class is an **abstract class** that is used to define new types of (customs) datasets
+
 ```python
 from torch.utils.data import Dataset
 
@@ -962,7 +964,8 @@ train_dataset = Subset(shape_dataset, train_index)
 test_dataset = Subset(shape_dataset, test_index)
 ```
 
-## TensorDataset
+## Create a dataset of tensors
+
 
 ```python
 
