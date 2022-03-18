@@ -57,7 +57,8 @@
       * [Transpose Convolution, what is it?](#transpose-convolution-what-is-it)
       * [Dataloader](#dataloader)
          * [Utilizing the multiple process capabilities of the PyTorch DataLoader class](#utilizing-the-multiple-process-capabilities-of-the-pytorch-dataloader-class)
-         * [Customise the shuffling in a dataloader](#customise-the-shuffling-in-a-dataloader)
+         * [Samplers - Customise the shuffling in a dataloader](#samplers---customise-the-shuffling-in-a-dataloader)
+      * [SequentialSample](#sequentialsample)
       * [Dataset &amp;&amp; DataLoader](#dataset--dataloader)
          * [To better understand your data](#to-better-understand-your-data)
          * [<strong>CNN Output Size formula (Square)</strong>](#cnn-output-size-formula-square)
@@ -107,7 +108,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Fri 18 Mar 2022 12:04:09 IST -->
+<!-- Added by: gil_diy, at: Fri 18 Mar 2022 12:13:52 IST -->
 
 <!--te-->
 
@@ -1069,9 +1070,15 @@ train_loader = torch.utils.data.Dataloader(train_set,
 
 **use num_workers=0 to disable multiprocessing**
 
-### Customise the shuffling in a dataloader
+### Samplers - Customise the shuffling in a dataloader
 
+Every DataLoader has a sampler internally which is either SequentialSampler or RandomSampler depending on the value of shuffle, and these are iterated over to get the indices of the Dataset to use.
 
+Let's have a look at the internal .sampler property of a few DataLoaders and see how it changes when the DataLoader configurations change:
+
+## SequentialSample
+
+## 
 
 ## Dataset && DataLoader
 ```python
