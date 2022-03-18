@@ -110,7 +110,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Fri 18 Mar 2022 12:52:04 IST -->
+<!-- Added by: gil_diy, at: Fri 18 Mar 2022 12:52:54 IST -->
 
 <!--te-->
 
@@ -1176,6 +1176,8 @@ print("The type of the default sample is: ", type(default_sampler))
 ```
 
 #### Custom Sampler
+
+That's great and all, but what if we want to `customise the order of the data`, other than shuffled or sequential. That's where custom Samplers come in.
 
 ## Preprocessing
 There is a module called `transforms` that helps with a lot of
