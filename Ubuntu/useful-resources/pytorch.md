@@ -106,7 +106,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Fri 18 Mar 2022 11:55:45 IST -->
+<!-- Added by: gil_diy, at: Fri 18 Mar 2022 11:57:50 IST -->
 
 <!--te-->
 
@@ -906,7 +906,9 @@ Note: In this example  `train_inputs` and `train_masks` and `train_labels` must 
 
 ### Create a custom Dataset
 
-The `Dataset` class is an **abstract class** that is used to define new types of (customs) datasets.
+The `Dataset` class is an **abstract class** that is used to define new types of (customs) datasets. 
+
+Therfore it's mandatory to implement the "dunder/magic methods" __getitem__ (for dataset[index] functionality) and __len__ (for len(dataset) functionality)
 
 ```python
 from torch.utils.data import Dataset
