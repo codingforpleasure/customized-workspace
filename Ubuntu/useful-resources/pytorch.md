@@ -111,7 +111,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Fri 18 Mar 2022 13:07:53 IST -->
+<!-- Added by: gil_diy, at: Fri 18 Mar 2022 13:08:32 IST -->
 
 <!--te-->
 
@@ -158,6 +158,12 @@ for example:
 
 ## Install torch
 Install `pip install torch`
+
+```python
+import torch
+
+print(torch.__version__)
+```
 
 ## Checking versions
 
