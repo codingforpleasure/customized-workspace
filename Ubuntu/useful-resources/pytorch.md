@@ -86,6 +86,7 @@
       * [torchvision](#torchvision)
          * [Install](#install-1)
          * [Show all pretrained models available in pytorch vision](#show-all-pretrained-models-available-in-pytorch-vision)
+         * [Finetuning Torchvision Models](#finetuning-torchvision-models)
          * [Display images as grid](#display-images-as-grid)
          * [Augmentations](#augmentations)
       * [Transfer learning](#transfer-learning)
@@ -110,7 +111,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Fri 18 Mar 2022 12:57:25 IST -->
+<!-- Added by: gil_diy, at: Fri 18 Mar 2022 12:58:17 IST -->
 
 <!--te-->
 
@@ -1665,6 +1666,7 @@ Torchvision is compiled from 4 parts:
 
 Install `pip install torchvision`
 
+
 ### Show all pretrained models available in pytorch vision
 
 ```python
@@ -1672,6 +1674,18 @@ from torchvision import models
 
 print("List of available models: ", dir(models))
 ```
+### Finetuning Torchvision Models
+
+Model | Finetune | Prerequisite
+------------|----|-------------
+ inception_v3 | `model.AuxLogits.fc = nn.Linear(768, num_classes)`|  requires the input size to be (299,299)
+              | `model.fc = nn.Linear(2048, num_classes)`         | 
+ Resnet | `model.fc = nn.Linear(512, num_classes)`|  requires the input size to be (224,224)
+ Alexnet | `model.classifier[6] = nn.Linear(4096,num_classes)` |  requires the input size to be (224,224)
+ Densenet | `model.classifier = nn.Linear(1024, num_classes)` | requires the input size to be (224,224)
+ Squeezenet |`model.classifier[1] = nn.Conv2d(512, num_classes, kernel_size=(1,1), stride=(1,1))`|  requires the input size to be (224,224)
+
+[Reference](https://pytorch.org/tutorials/beginner/finetuning_torchvision_models_tutorial.html)
 
 ### Display images as grid
 
