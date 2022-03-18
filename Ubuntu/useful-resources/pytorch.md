@@ -106,7 +106,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Fri 18 Mar 2022 11:57:54 IST -->
+<!-- Added by: gil_diy, at: Fri 18 Mar 2022 12:00:07 IST -->
 
 <!--te-->
 
@@ -1032,6 +1032,8 @@ What is it used for?
 </p>
 
 ## Dataloader
+
+After settin up a Dataser we can wrap that in a `DataLoader` and we can iterate it but now **they're magically tensors** and we can use DataLoaders handy configurations like shuffling, batching, multi-processing, etc.
 
 The dataloader gives us access to the dataset, and gives us query capabilties,
 we can shuffle and have a batch size.
