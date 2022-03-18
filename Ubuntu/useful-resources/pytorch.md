@@ -110,7 +110,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Fri 18 Mar 2022 12:40:19 IST -->
+<!-- Added by: gil_diy, at: Fri 18 Mar 2022 12:43:24 IST -->
 
 <!--te-->
 
@@ -1121,6 +1121,18 @@ Let's have a look at the internal .sampler property of a few DataLoaders and see
 
 #### SequentialSample
 
+When shuffle=False (default value) with batch_size=0, the sampler returns each index in 0,1,2,3,4... as you iterate.
+
+```python
+default_sampler = DataLoader(dataset).sampler
+
+# So when we iterate over the sampler we should get the indices:
+
+for i in default_sampler:
+    # iterating over the SequentialSampler
+    print(i)
+
+```
 #### RandomSampler
 
 #### Custom Sampler
