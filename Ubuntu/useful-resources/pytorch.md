@@ -48,6 +48,7 @@
       * [Concatenating torches:](#concatenating-torches)
       * [Stacking](#stacking)
       * [Linear Layers in depth](#linear-layers-in-depth)
+      * [Create a dataset of tensors](#create-a-dataset-of-tensors)
       * [Custom Dataset](#custom-dataset)
       * [Loading images directory into a dataset](#loading-images-directory-into-a-dataset)
       * [Subsetting Dataset](#subsetting-dataset)
@@ -104,7 +105,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Fri 18 Mar 2022 11:10:37 IST -->
+<!-- Added by: gil_diy, at: Fri 18 Mar 2022 11:11:05 IST -->
 
 <!--te-->
 
@@ -871,6 +872,15 @@ print(fc(in_features))
 ```
 
 [Link to youtube](https://youtu.be/rcc86nXKwkw?list=PLZbbT5o_s2xrfNyHZsM6ufI0iZENK9xgG)
+
+## Create a dataset of tensors
+
+The TensorDataset is a ready to use class to represent your data as list of tensors.
+
+```python
+
+train_data = TensorDataset(train_inputs, train_masks, train_labels)
+```
 
 ## Custom Dataset
 
