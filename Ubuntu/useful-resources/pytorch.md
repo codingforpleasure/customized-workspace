@@ -111,7 +111,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Fri 18 Mar 2022 13:08:32 IST -->
+<!-- Added by: gil_diy, at: Fri 18 Mar 2022 13:08:59 IST -->
 
 <!--te-->
 
@@ -169,7 +169,6 @@ print(torch.__version__)
 
 ```python
 print("torch version = ", torch.__version__)
-print("torchvision version = ",torchvision.__version__)
 print("torch.version.cuda = ", torch.version.cuda)
 ```
 
@@ -1674,8 +1673,7 @@ Install `pip install torchvision`
 
 ```python
 import torchvision
-
-print(torchvision.__version__)
+print("torchvision version = ",torchvision.__version__)
 ```
 ### Show all pretrained models available in pytorch vision
 
