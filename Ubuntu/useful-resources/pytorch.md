@@ -21,6 +21,7 @@
                * [flatten](#flatten)
                * [unsqueeze](#unsqueeze)
             * [Padding tensors with constant value](#padding-tensors-with-constant-value)
+            * [Padding tensors with constant in the end](#padding-tensors-with-constant-in-the-end)
             * [Element-wise operations](#element-wise-operations)
             * [Reduction operations](#reduction-operations)
             * [Access operations](#access-operations)
@@ -102,7 +103,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Fri 18 Mar 2022 09:18:18 IST -->
+<!-- Added by: gil_diy, at: Fri 18 Mar 2022 09:18:42 IST -->
 
 <!--te-->
 
@@ -383,6 +384,9 @@ print(t.reshape(1,12).squeeze().unsqueeze(dim=0).shape)
 ```
 
 #### Padding tensors with constant value
+
+
+#### Padding tensors with constant in the end 
 
 ```python
 x = torch.ones(2, 3)
