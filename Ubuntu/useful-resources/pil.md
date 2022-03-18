@@ -4,6 +4,7 @@
       * [Useful functions in PIL (Python Imaging Library)](#useful-functions-in-pil-python-imaging-library)
       * [Get pixel values](#get-pixel-values)
       * [Get image dimenstions](#get-image-dimenstions)
+      * [Exporting numpy array as image](#exporting-numpy-array-as-image)
       * [Rotate image](#rotate-image)
       * [Draw circle and save](#draw-circle-and-save)
       * [Pasting image on to an image](#pasting-image-on-to-an-image)
@@ -11,7 +12,7 @@
       * [Save image file](#save-image-file)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Mon 17 Jan 2022 15:46:46 IST -->
+<!-- Added by: gil_diy, at: Fri 18 Mar 2022 13:20:03 IST -->
 
 <!--te-->
 
@@ -41,6 +42,15 @@ list(pilImg.getdata())
 ```python
 rectangle = Image.open("bla.jpg")
 rsize_x, rsize_y = rectangle.size
+```
+## Exporting numpy array as image
+
+```python
+from PIL import Image
+
+img_array = np.array(list_values, dtype=np.uint8).reshape(96, 96)
+im = Image.fromarray(img_array)
+im.save(f"face.jpeg")
 ```
 
 ## Rotate image
