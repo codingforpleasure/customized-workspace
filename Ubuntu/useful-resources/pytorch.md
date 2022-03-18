@@ -51,16 +51,16 @@
       * [Dataset](#dataset)
          * [Create a dataset out of tensors](#create-a-dataset-out-of-tensors)
          * [Create a custom Dataset](#create-a-custom-dataset)
-      * [Loading images directory into a dataset](#loading-images-directory-into-a-dataset)
       * [Subsetting Dataset](#subsetting-dataset)
-      * [Preprocessing](#preprocessing)
-      * [Transpose Convolution, what is it?](#transpose-convolution-what-is-it)
+         * [Create a Dataset by loading images directory into it](#create-a-dataset-by-loading-images-directory-into-it)
       * [Dataloader](#dataloader)
          * [Utilizing the multiple process capabilities of the PyTorch DataLoader class](#utilizing-the-multiple-process-capabilities-of-the-pytorch-dataloader-class)
          * [Samplers - Customise the shuffling in a dataloader](#samplers---customise-the-shuffling-in-a-dataloader)
             * [SequentialSample](#sequentialsample)
             * [RandomSampler](#randomsampler)
             * [Custom Sampler](#custom-sampler)
+      * [Preprocessing](#preprocessing)
+      * [Transpose Convolution, what is it?](#transpose-convolution-what-is-it)
       * [Dataset &amp;&amp; DataLoader](#dataset--dataloader)
          * [To better understand your data](#to-better-understand-your-data)
          * [<strong>CNN Output Size formula (Square)</strong>](#cnn-output-size-formula-square)
@@ -110,7 +110,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Fri 18 Mar 2022 12:19:28 IST -->
+<!-- Added by: gil_diy, at: Fri 18 Mar 2022 12:21:22 IST -->
 
 <!--te-->
 
@@ -935,7 +935,23 @@ class My_data_set(Dataset):
 
 ```
 
-## Loading images directory into a dataset
+## Subsetting Dataset
+
+```python
+from sklearn.model_selection import StratifiedShuffleSplit
+from torch.utils.data import Subset
+
+sss = StratifiedShuffleSplit(n_splits=1, test_size=0.2, random_state=42)
+for train_index, test_index in sss.split(shape_dataset, shape_dataset.labels):
+    print(train_index)
+    print("----------")
+    print(test_index)
+
+train_dataset = Subset(shape_dataset, train_index)
+test_dataset = Subset(shape_dataset, test_index)
+```
+
+### Create a Dataset by loading images directory into it
 
 In case the data is **already splitted into two directories**,
 you can easily use the `ImageFolder` function:
@@ -985,22 +1001,54 @@ folder_dataset = datasets.ImageFolder(root="./data/faces/training/")
 
 The function `ImageFolder` will generate a list of tuples (image_name, class_id) in `folder_dataset.imgs`
 
-## Subsetting Dataset
+## Dataloader
+
+After setting up a Dataset we can wrap that in a `DataLoader` and we can iterate it but now **they're magically tensors** and we can use DataLoaders handy configurations like shuffling, batching, multi-processing, etc.
+
+The dataloader gives us access to the dataset, and gives us query capabilties,
+we can shuffle and have a batch size.
 
 ```python
-from sklearn.model_selection import StratifiedShuffleSplit
-from torch.utils.data import Subset
+example_dataset_train = My_data_set()
 
-sss = StratifiedShuffleSplit(n_splits=1, test_size=0.2, random_state=42)
-for train_index, test_index in sss.split(shape_dataset, shape_dataset.labels):
-    print(train_index)
-    print("----------")
-    print(test_index)
 
-train_dataset = Subset(shape_dataset, train_index)
-test_dataset = Subset(shape_dataset, test_index)
+# Wen we create a Dataloader the Default batch size is 1, 
+# A higher batch size means that the model has fewer training steps and learns faster,
+# whereas a high batch size results in high memory requirements.
+
+
+train_loader = torch.utils.data.Dataloader(example_dataset_train) 
 ```
 
+### Utilizing the multiple process capabilities of the PyTorch DataLoader class
+
+The natural question that arises is, how many worker processes should we add? 
+There are a lot of factors that can affect the optimal number here, so the best way to find out is to test. 
+
+```python
+# To speed up the training process, we will make use of the num_workers optional attribute of the DataLoader class.
+# The num_workers attribute tells the data loader instance how many sub-processes to use for data loading. 
+# By default, the num_workers value is set to zero, and a value of zero tells the loader to load the data inside the main process. 
+
+train_loader = torch.utils.data.Dataloader(train_set,
+                                 batch_size = 10,
+                                 num_workers=5,
+                                 shuffle = True)
+```
+
+**use num_workers=0 to disable multiprocessing**
+
+### Samplers - Customise the shuffling in a dataloader
+
+Every DataLoader has a sampler internally which is either `SequentialSampler` or `RandomSampler`  or a `Custom Sampler` depending on the value of shuffle, and these are iterated over to get the indices of the Dataset to use.
+
+Let's have a look at the internal .sampler property of a few DataLoaders and see how it changes when the DataLoader configurations change:
+
+#### SequentialSample
+
+#### RandomSampler
+
+#### Custom Sampler
 
 ## Preprocessing
 There is a module called `transforms` that helps with a lot of
@@ -1035,54 +1083,6 @@ What is it used for?
   <img src="images/pytorch/transpose_convolution.png" title="tool tip here">
 </p>
 
-## Dataloader
-
-After setting up a Dataset we can wrap that in a `DataLoader` and we can iterate it but now **they're magically tensors** and we can use DataLoaders handy configurations like shuffling, batching, multi-processing, etc.
-
-The dataloader gives us access to the dataset, and gives us query capabilties,
-we can shuffle and have a batch size.
-
-```python
-example_dataset_train = My_data_set()
-
-
-# Wen we create a Dataloader the Default batch size is 1, 
-# A higher batch size means that the model has fewer training steps and learns faster,
-# whereas a high batch size results in high memory requirements.
-
-
-train_loader = torch.utils.data.Dataloader(example_dataset_train) 
-```
-
-### Utilizing the multiple process capabilities of the PyTorch DataLoader class
-
-The natural question that arises is, how many worker processes should we add? 
-There are a lot of factors that can affect the optimal number here, so the best way to find out is to test. 
-
-```python
-# To speed up the training process, we will make use of the num_workers optional attribute of the DataLoader class.
-# The num_workers attribute tells the data loader instance how many sub-processes to use for data loading. 
-# By default, the num_workers value is set to zero, and a value of zero tells the loader to load the data inside the main process. 
-
-train_loader = torch.utils.data.Dataloader(train_set,
-										   batch_size = 10,
-										   num_workers=5,
-										   shuffle = True)
-```
-
-**use num_workers=0 to disable multiprocessing**
-
-### Samplers - Customise the shuffling in a dataloader
-
-Every DataLoader has a sampler internally which is either `SequentialSampler` or `RandomSampler`  or a `Custom Sampler` depending on the value of shuffle, and these are iterated over to get the indices of the Dataset to use.
-
-Let's have a look at the internal .sampler property of a few DataLoaders and see how it changes when the DataLoader configurations change:
-
-#### SequentialSample
-
-#### RandomSampler
-
-#### Custom Sampler
 
 
 
