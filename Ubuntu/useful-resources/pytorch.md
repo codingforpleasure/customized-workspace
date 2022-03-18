@@ -110,7 +110,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Fri 18 Mar 2022 12:27:57 IST -->
+<!-- Added by: gil_diy, at: Fri 18 Mar 2022 12:30:39 IST -->
 
 <!--te-->
 
@@ -930,6 +930,28 @@ print("First tuple: ", dataset[0])
 # Output:
 # First tuple: (0, 10)
 ```
+
+Now we will create a custome on `Dataset`
+
+```python
+class MyDataset:
+    def __init__(self, xs, ys):
+        self.xs = xs
+        self.ys = ys
+    
+    def __getitem__(self, i):
+        return self.xs[i], self.ys[i]
+    
+    def __len__(self):
+        return len(self.xs)
+```
+
+```
+dataset = MyDataset(xs, ys)
+print(dataset[2])
+# Returns the tuple (x[2], y[2]) which is: (2, 12)
+```
+
 
 ```python
 from torch.utils.data import Dataset
