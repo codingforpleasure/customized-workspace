@@ -105,7 +105,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Fri 18 Mar 2022 11:23:03 IST -->
+<!-- Added by: gil_diy, at: Fri 18 Mar 2022 11:23:23 IST -->
 
 <!--te-->
 
@@ -895,6 +895,8 @@ train_data = TensorDataset(train_inputs, train_masks, train_labels) # <--- wrapp
 train_sampler = RandomSampler(train_data)
 train_dataloader = DataLoader(train_data, sampler=train_sampler, batch_size=batch_size)
 ```
+
+Note that `train_inputs` and `train_masks` and `train_labels` must match on the length of the **first dimension**.
 
 ## Custom Dataset
 
