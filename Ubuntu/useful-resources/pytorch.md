@@ -110,7 +110,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Fri 18 Mar 2022 12:49:39 IST -->
+<!-- Added by: gil_diy, at: Fri 18 Mar 2022 12:50:33 IST -->
 
 <!--te-->
 
@@ -1148,7 +1148,7 @@ for i in default_sampler:
 print("The type of the default sample is: ", type(default_sampler))
 
 # Output:
-# torch.utils.data.sampler.SequentialSampler
+# The type of the default sample is:  torch.utils.data.sampler.SequentialSampler
 ```
 #### RandomSampler
 
