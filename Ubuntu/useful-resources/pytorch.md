@@ -104,7 +104,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Fri 18 Mar 2022 09:24:23 IST -->
+<!-- Added by: gil_diy, at: Fri 18 Mar 2022 09:24:29 IST -->
 
 <!--te-->
 
@@ -395,7 +395,6 @@ Here I'm adding 5 zeros in the end of each numpy array
 x = torch.ones(2, 3)
 print('x: ', x)
 
-
 padded = nn.ConstantPad1d((0, 5), 0)(x)
 print('x: ', x)
 print('#######################')
@@ -415,7 +414,6 @@ Here I'm adding 3 zeros in the beginning of each numpy array and 2 zeros in the 
 ```python
 x = torch.ones(2, 3)
 print('x: ', x)
-
 
 padded = nn.ConstantPad1d((3, 2), 0)(x)
 print('x: ', x)
