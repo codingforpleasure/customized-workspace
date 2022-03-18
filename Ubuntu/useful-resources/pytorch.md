@@ -51,7 +51,7 @@
       * [Dataset](#dataset)
          * [Create a dataset out of tensors](#create-a-dataset-out-of-tensors)
          * [Create a custom Dataset](#create-a-custom-dataset)
-      * [Subsetting Dataset](#subsetting-dataset)
+         * [Subsetting Dataset](#subsetting-dataset)
          * [Create a Dataset by loading images directory into it](#create-a-dataset-by-loading-images-directory-into-it)
       * [Dataloader](#dataloader)
          * [Utilizing the multiple process capabilities of the PyTorch DataLoader class](#utilizing-the-multiple-process-capabilities-of-the-pytorch-dataloader-class)
@@ -110,7 +110,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Fri 18 Mar 2022 12:21:22 IST -->
+<!-- Added by: gil_diy, at: Fri 18 Mar 2022 12:21:29 IST -->
 
 <!--te-->
 
@@ -935,7 +935,7 @@ class My_data_set(Dataset):
 
 ```
 
-## Subsetting Dataset
+### Subsetting Dataset
 
 ```python
 from sklearn.model_selection import StratifiedShuffleSplit
