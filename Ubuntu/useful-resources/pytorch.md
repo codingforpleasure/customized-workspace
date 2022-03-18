@@ -110,7 +110,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Fri 18 Mar 2022 12:50:33 IST -->
+<!-- Added by: gil_diy, at: Fri 18 Mar 2022 12:51:28 IST -->
 
 <!--te-->
 
@@ -1168,6 +1168,11 @@ for index in random_sampler:
 # 9
 # 8
 # 1
+
+print("The type of the default sample is: ", type(default_sampler))
+
+# Output:
+# The type of the default sample is:  torch.utils.data.sampler.RandomSampler
 ```
 
 #### Custom Sampler
