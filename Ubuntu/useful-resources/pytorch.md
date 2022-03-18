@@ -110,7 +110,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Fri 18 Mar 2022 12:18:33 IST -->
+<!-- Added by: gil_diy, at: Fri 18 Mar 2022 12:19:28 IST -->
 
 <!--te-->
 
@@ -1074,7 +1074,7 @@ train_loader = torch.utils.data.Dataloader(train_set,
 
 ### Samplers - Customise the shuffling in a dataloader
 
-Every DataLoader has a sampler internally which is either `SequentialSampler` or `RandomSampler` depending on the value of shuffle, and these are iterated over to get the indices of the Dataset to use.
+Every DataLoader has a sampler internally which is either `SequentialSampler` or `RandomSampler`  or a `Custom Sampler` depending on the value of shuffle, and these are iterated over to get the indices of the Dataset to use.
 
 Let's have a look at the internal .sampler property of a few DataLoaders and see how it changes when the DataLoader configurations change:
 
