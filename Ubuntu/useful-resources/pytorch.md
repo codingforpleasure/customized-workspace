@@ -51,7 +51,6 @@
       * [Custom Dataset](#custom-dataset)
       * [Loading images directory into a dataset](#loading-images-directory-into-a-dataset)
       * [Subsetting Dataset](#subsetting-dataset)
-      * [Create a dataset of tensors](#create-a-dataset-of-tensors)
       * [Preprocessing](#preprocessing)
       * [Transpose Convolution, what is it?](#transpose-convolution-what-is-it)
       * [Dataloader](#dataloader)
@@ -105,7 +104,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Fri 18 Mar 2022 11:10:30 IST -->
+<!-- Added by: gil_diy, at: Fri 18 Mar 2022 11:10:37 IST -->
 
 <!--te-->
 
@@ -964,13 +963,6 @@ train_dataset = Subset(shape_dataset, train_index)
 test_dataset = Subset(shape_dataset, test_index)
 ```
 
-## Create a dataset of tensors
-
-
-```python
-
-train_data = TensorDataset(train_inputs, train_masks, train_labels)
-```
 
 ## Preprocessing
 There is a module called `transforms` that helps with a lot of
