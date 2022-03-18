@@ -110,7 +110,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Fri 18 Mar 2022 12:30:55 IST -->
+<!-- Added by: gil_diy, at: Fri 18 Mar 2022 12:31:43 IST -->
 
 <!--te-->
 
@@ -950,8 +950,14 @@ class MyDataset:
 dataset = MyDataset(xs, ys)
 print(dataset[2])
 
+# Outputs:
 # Returns the tuple (x[2], y[2]) which is: (2, 12)
+
+print('Length of our dataset is:', len(dataset))
+# Outputs:
+# Length of our dataset is: 10
 ```
+
 
 
 ```python
