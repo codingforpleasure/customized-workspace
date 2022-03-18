@@ -103,7 +103,6 @@
       * [Getting deterministic behaviour for debugging](#getting-deterministic-behaviour-for-debugging)
       * [Debug with pycharm in pytorch](#debug-with-pycharm-in-pytorch)
       * [Integrating TensorBoard with pytorch](#integrating-tensorboard-with-pytorch)
-      * [Finetuning Torchvision Models](#finetuning-torchvision-models)
       * [Segmentation with U-net  (Encoder-Decoder)](#segmentation-with-u-net--encoder-decoder)
       * [pytorch usefule functions](#pytorch-usefule-functions)
       * [Pytorch hooks](#pytorch-hooks)
@@ -111,7 +110,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Fri 18 Mar 2022 12:56:50 IST -->
+<!-- Added by: gil_diy, at: Fri 18 Mar 2022 12:57:25 IST -->
 
 <!--te-->
 
@@ -1935,20 +1934,6 @@ It's the job of the network's designer to choose those values.
 
 [Pytorch TensorBoard Tutorial](https://youtu.be/RLqsxWaQdHE)
 
-
-
-## Finetuning Torchvision Models
-
-Model | Finetune | Prerequisite
-------------|----|-------------
- inception_v3 | `model.AuxLogits.fc = nn.Linear(768, num_classes)`|  requires the input size to be (299,299)
-              | `model.fc = nn.Linear(2048, num_classes)`         | 
- Resnet | `model.fc = nn.Linear(512, num_classes)`|  requires the input size to be (224,224)
- Alexnet | `model.classifier[6] = nn.Linear(4096,num_classes)` |  requires the input size to be (224,224)
- Densenet | `model.classifier = nn.Linear(1024, num_classes)` | requires the input size to be (224,224)
- Squeezenet |`model.classifier[1] = nn.Conv2d(512, num_classes, kernel_size=(1,1), stride=(1,1))`|  requires the input size to be (224,224)
-
-[Reference](https://pytorch.org/tutorials/beginner/finetuning_torchvision_models_tutorial.html)
 
 ## Segmentation with U-net  (Encoder-Decoder)
 
