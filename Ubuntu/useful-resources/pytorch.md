@@ -84,6 +84,7 @@
       * [Inference/Evaluation](#inferenceevaluation)
          * [model.eval()](#modeleval)
       * [torchvision](#torchvision)
+         * [Install](#install-1)
          * [Show all pretrained models available in pytorch vision](#show-all-pretrained-models-available-in-pytorch-vision)
          * [Display images as grid](#display-images-as-grid)
          * [Augmentations](#augmentations)
@@ -110,7 +111,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Fri 18 Mar 2022 12:56:03 IST -->
+<!-- Added by: gil_diy, at: Fri 18 Mar 2022 12:56:50 IST -->
 
 <!--te-->
 
@@ -1661,6 +1662,9 @@ Torchvision is compiled from 4 parts:
 
 * Utils
 
+### Install
+
+Install `pip install torchvision`
 
 ### Show all pretrained models available in pytorch vision
 
