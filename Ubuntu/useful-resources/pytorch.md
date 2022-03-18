@@ -110,7 +110,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Fri 18 Mar 2022 12:31:43 IST -->
+<!-- Added by: gil_diy, at: Fri 18 Mar 2022 12:34:54 IST -->
 
 <!--te-->
 
@@ -1055,15 +1055,41 @@ The dataloader gives us access to the dataset, and gives us query capabilties,
 we can shuffle and have a batch size.
 
 ```python
-example_dataset_train = My_data_set()
-
-
 # Wen we create a Dataloader the Default batch size is 1, 
 # A higher batch size means that the model has fewer training steps and learns faster,
 # whereas a high batch size results in high memory requirements.
 
+from torch.utils.data import DataLoader
 
-train_loader = torch.utils.data.Dataloader(example_dataset_train) 
+train_loader = DataLoader(dataset)
+for x, y in train_loader:
+    print(x,y)
+
+# Output:
+# tensor([0]) tensor([10])
+# tensor([1]) tensor([11])
+# tensor([2]) tensor([12])
+# tensor([3]) tensor([13])
+# tensor([4]) tensor([14])
+# tensor([5]) tensor([15])
+# tensor([6]) tensor([16])
+# tensor([7]) tensor([17])
+# tensor([8]) tensor([18])
+# tensor([9]) tensor([19])
+```
+
+But the real fun is that we can get batches of these by setting batch_size:
+
+```python
+for x, y in DataLoader(dataset, batch_size=2):
+    print(x,y)
+
+# Output:
+# tensor([0, 1]) tensor([10, 11])
+# tensor([2, 3]) tensor([12, 13])
+# tensor([4, 5]) tensor([14, 15])
+# tensor([6, 7]) tensor([16, 17])
+# tensor([8, 9]) tensor([18, 19])
 ```
 
 ### Utilizing the multiple process capabilities of the PyTorch DataLoader class
