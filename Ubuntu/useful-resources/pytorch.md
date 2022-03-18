@@ -5,7 +5,6 @@
       * [The training process (Road map)](#the-training-process-road-map)
       * [Install](#install)
       * [Checking versions](#checking-versions)
-      * [Show all pretrained models available in pytorch vision](#show-all-pretrained-models-available-in-pytorch-vision)
       * [Set printing tensors nicely](#set-printing-tensors-nicely)
       * [Basics - Tensors](#basics---tensors)
          * [Create tensors](#create-tensors)
@@ -110,7 +109,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Fri 18 Mar 2022 12:53:10 IST -->
+<!-- Added by: gil_diy, at: Fri 18 Mar 2022 12:54:27 IST -->
 
 <!--te-->
 
@@ -164,14 +163,6 @@ Install `pip install torch torchvision`
 print("torch version = ", torch.__version__)
 print("torchvision version = ",torchvision.__version__)
 print("torch.version.cuda = ", torch.version.cuda)
-```
-
-## Show all pretrained models available in pytorch vision
-
-```python
-from torchvision import models
-
-print("List of available models: ", dir(models))
 ```
 
 ## Set printing tensors nicely
@@ -1179,7 +1170,7 @@ print("The type of the default sample is: ", type(default_sampler))
 
 That's great and all, but what if we want to `customise the order of the data`, other than shuffled or sequential. That's where custom Samplers come in.
 
-[Link](https://www.scottcondron.com/jupyter/visualisation/audio/2020/12/02/dataloaders-samplers-collate.html#Custom-Sampler)
+[Readhere](https://www.scottcondron.com/jupyter/visualisation/audio/2020/12/02/dataloaders-samplers-collate.html#Custom-Sampler)
 
 ## Preprocessing
 There is a module called `transforms` that helps with a lot of
