@@ -12,7 +12,7 @@
       * [Save image file](#save-image-file)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Fri 18 Mar 2022 13:20:14 IST -->
+<!-- Added by: gil_diy, at: Fri 18 Mar 2022 13:20:22 IST -->
 
 <!--te-->
 
@@ -51,7 +51,7 @@ from PIL import Image
 
 img_array = np.array(list_values, dtype=np.uint8).reshape(96, 96)
 im = Image.fromarray(img_array)
-im.save(f"face.jpeg")
+im.save("face.jpeg")
 ```
 
 ## Rotate image
