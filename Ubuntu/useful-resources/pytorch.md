@@ -105,7 +105,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Fri 18 Mar 2022 11:10:22 IST -->
+<!-- Added by: gil_diy, at: Fri 18 Mar 2022 11:10:26 IST -->
 
 <!--te-->
 
@@ -875,7 +875,7 @@ print(fc(in_features))
 
 ## Custom Dataset
 
-The `Dataset` class is an **abstract class** that is used to define new types of (customs) datasets
+The `Dataset` class is an **abstract class** that is used to define new types of (customs) datasets.
 
 ```python
 from torch.utils.data import Dataset
