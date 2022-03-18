@@ -59,6 +59,7 @@
          * [Utilizing the multiple process capabilities of the PyTorch DataLoader class](#utilizing-the-multiple-process-capabilities-of-the-pytorch-dataloader-class)
          * [Samplers - Customise the shuffling in a dataloader](#samplers---customise-the-shuffling-in-a-dataloader)
       * [SequentialSample](#sequentialsample)
+      * [RandomSampler](#randomsampler)
       * [Dataset &amp;&amp; DataLoader](#dataset--dataloader)
          * [To better understand your data](#to-better-understand-your-data)
          * [<strong>CNN Output Size formula (Square)</strong>](#cnn-output-size-formula-square)
@@ -108,7 +109,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Fri 18 Mar 2022 12:14:04 IST -->
+<!-- Added by: gil_diy, at: Fri 18 Mar 2022 12:14:30 IST -->
 
 <!--te-->
 
@@ -1078,7 +1079,7 @@ Let's have a look at the internal .sampler property of a few DataLoaders and see
 
 ## SequentialSample
 
-## 
+## RandomSampler
 
 ## Dataset && DataLoader
 ```python
