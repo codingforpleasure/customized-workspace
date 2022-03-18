@@ -104,7 +104,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Fri 18 Mar 2022 09:24:10 IST -->
+<!-- Added by: gil_diy, at: Fri 18 Mar 2022 09:24:19 IST -->
 
 <!--te-->
 
@@ -410,7 +410,7 @@ print('Padded output: ', padded)
 
 #### Padding tensors with constant value in the beginning and in the end 
 
-Here I'm adding 3 zeros in the begining of each numpy array and 2 zeros in the end
+Here I'm adding 3 zeros in the beginning of each numpy array and 2 zeros in the end
 
 ```python
 x = torch.ones(2, 3)
