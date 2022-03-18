@@ -84,6 +84,7 @@
       * [Inference/Evaluation](#inferenceevaluation)
          * [model.eval()](#modeleval)
       * [torchvision](#torchvision)
+         * [Show all pretrained models available in pytorch vision](#show-all-pretrained-models-available-in-pytorch-vision)
          * [Display images as grid](#display-images-as-grid)
          * [Augmentations](#augmentations)
       * [Transfer learning](#transfer-learning)
@@ -109,7 +110,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Fri 18 Mar 2022 12:54:27 IST -->
+<!-- Added by: gil_diy, at: Fri 18 Mar 2022 12:55:15 IST -->
 
 <!--te-->
 
@@ -1659,6 +1660,15 @@ Torchvision is compiled from 4 parts:
 * Transforms
 
 * Utils
+
+
+### Show all pretrained models available in pytorch vision
+
+```python
+from torchvision import models
+
+print("List of available models: ", dir(models))
+```
 
 ### Display images as grid
 
