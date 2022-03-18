@@ -105,7 +105,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Fri 18 Mar 2022 11:11:05 IST -->
+<!-- Added by: gil_diy, at: Fri 18 Mar 2022 11:11:21 IST -->
 
 <!--te-->
 
@@ -875,7 +875,7 @@ print(fc(in_features))
 
 ## Create a dataset of tensors
 
-The TensorDataset is a ready to use class to represent your data as list of tensors.
+The `TensorDataset` is a ready to use class to represent your data as list of tensors.
 
 ```python
 
