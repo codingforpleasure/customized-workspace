@@ -105,7 +105,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Fri 18 Mar 2022 11:22:06 IST -->
+<!-- Added by: gil_diy, at: Fri 18 Mar 2022 11:22:10 IST -->
 
 <!--te-->
 
@@ -885,7 +885,7 @@ Here is a simple exmaple:
 dataset = TensorDataset(input_features, labels)
 ```
 
-I.e When building language model with transformer, we pass 3 tensors to the `TensorDataset`:
+i.e When building language model with transformer, we pass 3 tensors to the `TensorDataset`:
 
 ```python
 train_data = TensorDataset(train_inputs, train_masks, train_labels) # <--- wrapping it all to Dataset of tensors.
