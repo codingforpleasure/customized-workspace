@@ -11,7 +11,7 @@
          * [Correlation ratio](#correlation-ratio)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Thu 17 Mar 2022 08:03:50 IST -->
+<!-- Added by: gil_diy, at: Fri 18 Mar 2022 08:40:52 IST -->
 
 <!--te-->
 
@@ -35,6 +35,9 @@
 
 supports multiclass:
 https://en.wikipedia.org/wiki/Phi_coefficient#Multiclass_case
+
+
+When there are more than two labels the MCC will no longer range between −1 and +1. Instead the minimum value will be between −1 and 0 depending on the true distribution. The maximum value is always +1.
 
 ## Association between two categorical features
 
