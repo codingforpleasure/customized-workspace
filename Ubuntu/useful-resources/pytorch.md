@@ -110,7 +110,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Fri 18 Mar 2022 12:27:37 IST -->
+<!-- Added by: gil_diy, at: Fri 18 Mar 2022 12:27:43 IST -->
 
 <!--te-->
 
@@ -925,7 +925,7 @@ print('ys values: ', ys)
 # ys values:  [10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
 
 dataset = list(zip(xs,ys))
-print("First tuple: ", dataset[0])
+print("First tuple: ", dataset[0]) 
 # First tuple: (0, 10)
 ```
 
