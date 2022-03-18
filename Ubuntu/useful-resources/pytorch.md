@@ -56,7 +56,7 @@
       * [Preprocessing](#preprocessing)
       * [Transpose Convolution, what is it?](#transpose-convolution-what-is-it)
       * [Dataloader](#dataloader)
-      * [Utilizing the multiple process capabilities of the PyTorch DataLoader class](#utilizing-the-multiple-process-capabilities-of-the-pytorch-dataloader-class)
+         * [Utilizing the multiple process capabilities of the PyTorch DataLoader class](#utilizing-the-multiple-process-capabilities-of-the-pytorch-dataloader-class)
       * [Dataset &amp;&amp; DataLoader](#dataset--dataloader)
          * [To better understand your data](#to-better-understand-your-data)
          * [<strong>CNN Output Size formula (Square)</strong>](#cnn-output-size-formula-square)
@@ -106,7 +106,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Fri 18 Mar 2022 12:00:07 IST -->
+<!-- Added by: gil_diy, at: Fri 18 Mar 2022 12:03:40 IST -->
 
 <!--te-->
 
@@ -1050,7 +1050,7 @@ example_dataset_train = My_data_set()
 train_loader = torch.utils.data.Dataloader(example_dataset_train) 
 ```
 
-## Utilizing the multiple process capabilities of the PyTorch DataLoader class
+### Utilizing the multiple process capabilities of the PyTorch DataLoader class
 
 The natural question that arises is, how many worker processes should we add? 
 There are a lot of factors that can affect the optimal number here, so the best way to find out is to test. 
@@ -1067,6 +1067,8 @@ train_loader = torch.utils.data.Dataloader(train_set,
 ```
 
 **use num_workers=0 to disable multiprocessing**
+
+
 
 ## Dataset && DataLoader
 ```python
