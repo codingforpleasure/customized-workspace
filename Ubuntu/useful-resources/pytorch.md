@@ -51,6 +51,7 @@
       * [Custom Dataset](#custom-dataset)
       * [Loading images directory into a dataset](#loading-images-directory-into-a-dataset)
       * [Subsetting Dataset](#subsetting-dataset)
+      * [TensorDataset](#tensordataset)
       * [Preprocessing](#preprocessing)
       * [Transpose Convolution, what is it?](#transpose-convolution-what-is-it)
       * [Dataloader](#dataloader)
@@ -104,7 +105,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Fri 18 Mar 2022 09:24:33 IST -->
+<!-- Added by: gil_diy, at: Fri 18 Mar 2022 11:04:29 IST -->
 
 <!--te-->
 
@@ -959,6 +960,13 @@ for train_index, test_index in sss.split(shape_dataset, shape_dataset.labels):
 
 train_dataset = Subset(shape_dataset, train_index)
 test_dataset = Subset(shape_dataset, test_index)
+```
+
+## TensorDataset
+
+```python
+
+train_data = TensorDataset(train_inputs, train_masks, train_labels)
 ```
 
 ## Preprocessing
