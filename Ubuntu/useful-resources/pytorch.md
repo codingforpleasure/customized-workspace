@@ -50,7 +50,7 @@
       * [Linear Layers in depth](#linear-layers-in-depth)
       * [Dataset](#dataset)
          * [Create a dataset out of tensors](#create-a-dataset-out-of-tensors)
-         * [Custom Dataset](#custom-dataset)
+         * [Create a custom Dataset](#create-a-custom-dataset)
       * [Loading images directory into a dataset](#loading-images-directory-into-a-dataset)
       * [Subsetting Dataset](#subsetting-dataset)
       * [Preprocessing](#preprocessing)
@@ -106,7 +106,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Fri 18 Mar 2022 11:55:06 IST -->
+<!-- Added by: gil_diy, at: Fri 18 Mar 2022 11:55:45 IST -->
 
 <!--te-->
 
@@ -904,7 +904,7 @@ train_dataloader = DataLoader(train_data, sampler=train_sampler, batch_size=batc
 
 Note: In this example  `train_inputs` and `train_masks` and `train_labels` must match on the length of the **first dimension**.
 
-### Custom Dataset
+### Create a custom Dataset
 
 The `Dataset` class is an **abstract class** that is used to define new types of (customs) datasets.
 
