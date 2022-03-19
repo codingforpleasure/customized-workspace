@@ -84,7 +84,7 @@
          * [Calculate correlation for all numerical columns pairs](#calculate-correlation-for-all-numerical-columns-pairs)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Thu 17 Mar 2022 09:29:47 IST -->
+<!-- Added by: gil_diy, at: Sat 19 Mar 2022 12:19:36 IST -->
 
 <!--te-->
 
@@ -341,7 +341,7 @@ X = X.astype('float32')
 #### Converting from numpy table to pandas dataframe
 ```python
 my_2darray = np.array([[1, 2, 3], [4, 5, 6]])
-print(pd.dataframe(my_2darray,columns=['a','b','c']))
+print(pd.DataFrame(my_2darray,columns=['a','b','c']))
 ```
 
 #### Converting from pandas dataframe to numpy table
