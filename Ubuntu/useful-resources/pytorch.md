@@ -51,6 +51,7 @@
       * [Dataset](#dataset)
          * [Create a dataset out of tensors](#create-a-dataset-out-of-tensors)
          * [Create a custom Dataset](#create-a-custom-dataset)
+         * [Splitting Dataset](#splitting-dataset)
          * [Subsetting Dataset](#subsetting-dataset)
          * [Create a Dataset by loading images directory into it](#create-a-dataset-by-loading-images-directory-into-it)
       * [Dataloader](#dataloader)
@@ -112,7 +113,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Sun 20 Mar 2022 14:03:56 IST -->
+<!-- Added by: gil_diy, at: Sun 20 Mar 2022 14:17:54 IST -->
 
 <!--te-->
 
@@ -987,6 +988,12 @@ class My_data_set(Dataset):
 
 ```
 
+### Splitting Dataset
+
+```python
+
+```
+
 ### Subsetting Dataset
 
 ```python
@@ -1002,6 +1009,8 @@ for train_index, test_index in sss.split(shape_dataset, shape_dataset.labels):
 train_dataset = Subset(shape_dataset, train_index)
 test_dataset = Subset(shape_dataset, test_index)
 ```
+
+
 
 ### Create a Dataset by loading images directory into it
 
