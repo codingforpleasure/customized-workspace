@@ -12,7 +12,7 @@
       * [Datasets shared in HuggingFace](#datasets-shared-in-huggingface)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Sun 20 Mar 2022 11:59:58 IST -->
+<!-- Added by: gil_diy, at: Sun 20 Mar 2022 12:09:42 IST -->
 
 <!--te-->
 
@@ -22,6 +22,9 @@
 <p align="center">
   <img width="400" src="images/transformers/building_blocks_in_bert.jpg" title="Look into the image">
 </p>
+
+
+The BERTBase model uses **12 layers of transformers block** with a hidden size of 768 and number of self-attention heads as 12 and has around 110M trainable parameters.
 
 ## Getting to know WordPiece Embeddings
 
