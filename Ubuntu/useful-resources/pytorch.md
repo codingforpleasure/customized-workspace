@@ -45,6 +45,7 @@
       * [Clipping tensors](#clipping-tensors)
       * [Converting tensors into numpy arrays](#converting-tensors-into-numpy-arrays)
       * [Concatenating torches:](#concatenating-torches)
+      * [Convert list of tensors into large tensor](#convert-list-of-tensors-into-large-tensor)
       * [Stacking](#stacking)
       * [Linear Layers in depth](#linear-layers-in-depth)
       * [Dataset](#dataset)
@@ -111,7 +112,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Fri 18 Mar 2022 13:08:59 IST -->
+<!-- Added by: gil_diy, at: Sun 20 Mar 2022 14:02:17 IST -->
 
 <!--te-->
 
@@ -829,6 +830,12 @@ print(torch.cat((tensor1,tensor2),1))
 
 `tensor([[ 0,  1,  2, 30, 31, 32],
         [ 3,  4,  5, 33, 34, 35]])`
+
+## Convert list of tensors into large tensor
+
+```python
+
+```
 
 
 ## Stacking 
