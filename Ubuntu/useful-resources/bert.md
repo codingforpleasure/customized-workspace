@@ -14,7 +14,7 @@
       * [Datasets shared in HuggingFace](#datasets-shared-in-huggingface)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Sun 20 Mar 2022 13:11:05 IST -->
+<!-- Added by: gil_diy, at: Sun 20 Mar 2022 13:11:31 IST -->
 
 <!--te-->
 
@@ -167,6 +167,12 @@ from the other. All the tokens from the first sentence will be mapped to 0 and a
 ## Bert tasks
 
 ### Classification
+
+[CLS]
+
+For classification tasks, we must prepend the special `[CLS]` token to the beginning of every sentence.
+
+This token has special significance. BERT consists of 12 Transformer layers. Each transformer takes in a list of token embeddings, and produces the same number of embeddings on the output (but with the feature values changed, of course!).
 
 <p align="center">
   <img width="400" src="images/transformers/bert_classification.png" title="Look into the image">
