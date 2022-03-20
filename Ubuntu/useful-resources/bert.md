@@ -12,7 +12,7 @@
       * [Datasets shared in HuggingFace](#datasets-shared-in-huggingface)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Sun 20 Mar 2022 12:12:24 IST -->
+<!-- Added by: gil_diy, at: Sun 20 Mar 2022 12:15:39 IST -->
 
 <!--te-->
 
@@ -27,6 +27,11 @@
 The BERTBase model uses **12 layers of transformers block** with a hidden size of 768 and number of self-attention heads as 12 and has around 110M trainable parameters.
 
 **Bert shortcomings**
+
+Layer | Weights
+------------|-----
+Embeding layer | ~24M
+Transformers Layer | ~7M x 12 transformers =  ~85M
 
 1. BERT is very large
 
