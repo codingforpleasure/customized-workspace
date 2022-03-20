@@ -1,7 +1,7 @@
 <!--ts-->
    * [Pytorch-Lightining](#pytorch-lightining)
 
-<!-- Added by: gil_diy, at: Sun 20 Mar 2022 10:33:16 IST -->
+<!-- Added by: gil_diy, at: Sun 20 Mar 2022 10:33:19 IST -->
 
 <!--te-->
 
