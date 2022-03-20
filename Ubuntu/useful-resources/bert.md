@@ -12,7 +12,7 @@
       * [Datasets shared in HuggingFace](#datasets-shared-in-huggingface)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Sun 20 Mar 2022 11:52:14 IST -->
+<!-- Added by: gil_diy, at: Sun 20 Mar 2022 11:53:50 IST -->
 
 <!--te-->
 
@@ -67,6 +67,8 @@ Subwords not at the front of a word, which are preceded by `##` to denote this c
 Token | Explanantion
 ------------|-----
   `[CLS]` | Classification
+  `[PAD]` | Padding
+  `[MASK]` | Padding
   `[SEP]`  | Differentiate sentences
   `##` | Two hash signs, preceding some of these subwords are just our tokenizer’s way to denote that this subword or character is part of a larger word and preceded by another subword
   `OOV`| Out of vocabulary
