@@ -12,7 +12,7 @@
       * [Datasets shared in HuggingFace](#datasets-shared-in-huggingface)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Sun 20 Mar 2022 11:53:50 IST -->
+<!-- Added by: gil_diy, at: Sun 20 Mar 2022 11:53:56 IST -->
 
 <!--te-->
 
@@ -72,7 +72,7 @@ Token | Explanantion
   `[SEP]`  | Differentiate sentences
   `##` | Two hash signs, preceding some of these subwords are just our tokenizer’s way to denote that this subword or character is part of a larger word and preceded by another subword
   `OOV`| Out of vocabulary
-  `UNK`| Unknown
+  `UNK`| Unknown Token
 
 ##  Map the token strings to their vocabulary indeces
 
