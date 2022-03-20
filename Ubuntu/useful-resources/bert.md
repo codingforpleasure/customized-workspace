@@ -12,7 +12,7 @@
       * [Datasets shared in HuggingFace](#datasets-shared-in-huggingface)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Sun 20 Mar 2022 12:18:29 IST -->
+<!-- Added by: gil_diy, at: Sun 20 Mar 2022 12:19:13 IST -->
 
 <!--te-->
 
@@ -40,8 +40,8 @@ Transformers Layer | ~7M x 12 transformers =  ~85M
   b. Slow inferencing
 
 Research is been done to address this problem,
-there is a technique "Distillation", you try to remove as many of the weights 
-as possible from the model retaining most of the accuracy.
+there is a technique **"Distillation"**, you try to remove as many of the weights 
+as possible from the model while still retaining most of the accuracy.
 
 ## Getting to know WordPiece Embeddings
 
