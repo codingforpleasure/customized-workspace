@@ -12,7 +12,7 @@
       * [Datasets shared in HuggingFace](#datasets-shared-in-huggingface)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Sun 20 Mar 2022 11:35:30 IST -->
+<!-- Added by: gil_diy, at: Sun 20 Mar 2022 11:36:46 IST -->
 
 <!--te-->
 
@@ -46,7 +46,9 @@ Subwords not at the front of a word, which are preceded by ‘##’ to denote th
 
 Each words has 768 features in it's embedding.
 
-
+<p align="center">
+  <img width="400" src="images/nlp/word_embedding_lookup_table_bert.png" title="Look into the image">
+</p>
 
 ```python
 with open("vocabulary_Bio_ClinicalBERT.txt", 'w') as f:
