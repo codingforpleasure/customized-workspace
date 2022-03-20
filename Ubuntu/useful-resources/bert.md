@@ -7,12 +7,14 @@
       * [Tokenizers](#tokenizers)
          * [Tokenizer](#tokenizer)
             * [BertTokenizer](#berttokenizer)
+      * [Bert tasks](#bert-tasks)
+         * [Classification](#classification)
          * [BertTokenizerFast](#berttokenizerfast)
       * [Other](#other)
       * [Datasets shared in HuggingFace](#datasets-shared-in-huggingface)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Sun 20 Mar 2022 12:26:02 IST -->
+<!-- Added by: gil_diy, at: Sun 20 Mar 2022 13:11:02 IST -->
 
 <!--te-->
 
@@ -90,9 +92,6 @@ the same vector as the standalone sequence of characters “em” as in “go ge
 Subwords not at the front of a word, which are preceded by `##` to denote this case
 
 
-
-
-
 ## Special Tokens
 
 Token | Explanantion
@@ -165,6 +164,13 @@ from the other. All the tokens from the first sentence will be mapped to 0 and a
 **attention_mask** - is used to differentiate the actual tokens and [PAD] tokens. I will map all the actual tokens to 1 and the [PAD] tokens to 0.
 
 
+## Bert tasks
+
+### Classification
+
+<p align="center">
+  <img width="400" src="images/transformers/bert_classification.png" title="Look into the image">
+</p>
 
 ### BertTokenizerFast
 
