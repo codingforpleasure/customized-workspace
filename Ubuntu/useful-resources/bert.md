@@ -12,7 +12,7 @@
       * [Datasets shared in HuggingFace](#datasets-shared-in-huggingface)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Sun 20 Mar 2022 11:45:29 IST -->
+<!-- Added by: gil_diy, at: Sun 20 Mar 2022 11:49:25 IST -->
 
 <!--te-->
 
@@ -56,7 +56,7 @@ This vocabulary contains four things:
 
 * Subwords occuring at the front of a word or in isolation (“em” as in “embeddings” is assigned 
 the same vector as the standalone sequence of characters “em” as in “go get em” )
-Subwords not at the front of a word, which are preceded by ‘##’ to denote this case
+Subwords not at the front of a word, which are preceded by `##` to denote this case
 
 
 
