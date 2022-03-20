@@ -12,7 +12,7 @@
       * [Datasets shared in HuggingFace](#datasets-shared-in-huggingface)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Sun 20 Mar 2022 12:12:14 IST -->
+<!-- Added by: gil_diy, at: Sun 20 Mar 2022 12:12:21 IST -->
 
 <!--te-->
 
@@ -30,9 +30,9 @@ The BERTBase model uses **12 layers of transformers block** with a hidden size o
 
 1. BERT is very large
 
-a. Slow fine-tuning
-
-b. Slow inferencing
+  a. Slow fine-tuning
+  
+  b. Slow inferencing
 
 
 ## Getting to know WordPiece Embeddings
