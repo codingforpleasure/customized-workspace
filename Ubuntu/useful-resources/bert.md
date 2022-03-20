@@ -12,7 +12,7 @@
       * [Datasets shared in HuggingFace](#datasets-shared-in-huggingface)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Sun 20 Mar 2022 12:15:45 IST -->
+<!-- Added by: gil_diy, at: Sun 20 Mar 2022 12:17:14 IST -->
 
 <!--te-->
 
@@ -39,6 +39,8 @@ Transformers Layer | ~7M x 12 transformers =  ~85M
   
   b. Slow inferencing
 
+Research is getting done to address this problem,
+there is a technique "Distillation" 
 
 ## Getting to know WordPiece Embeddings
 
