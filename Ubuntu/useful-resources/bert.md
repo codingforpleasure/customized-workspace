@@ -14,7 +14,7 @@
       * [Datasets shared in HuggingFace](#datasets-shared-in-huggingface)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Sun 20 Mar 2022 13:13:06 IST -->
+<!-- Added by: gil_diy, at: Sun 20 Mar 2022 13:13:13 IST -->
 
 <!--te-->
 
@@ -178,7 +178,8 @@ This token has special significance. BERT consists of 12 Transformer layers. Eac
   <img width="400" src="images/transformers/bert_classification.png" title="Look into the image">
 </p>
 
-On the output of the final (12th) transformer, **only the first embedding** (corresponding to the [CLS] token) is used by the classifier.
+On the output of the final (12th) transformer, **only the first embedding**
+(corresponding to the [CLS] token) is used by the classifier.
 
 ### BertTokenizerFast
 
