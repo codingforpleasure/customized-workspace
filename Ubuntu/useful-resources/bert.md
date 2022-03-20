@@ -14,7 +14,7 @@
       * [Datasets shared in HuggingFace](#datasets-shared-in-huggingface)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Sun 20 Mar 2022 13:13:16 IST -->
+<!-- Added by: gil_diy, at: Sun 20 Mar 2022 13:13:27 IST -->
 
 <!--te-->
 
@@ -167,8 +167,6 @@ from the other. All the tokens from the first sentence will be mapped to 0 and a
 ## Bert tasks
 
 ### Classification
-
-[CLS]
 
 For classification tasks, we must prepend the special `[CLS]` token to the beginning of every sentence.
 
