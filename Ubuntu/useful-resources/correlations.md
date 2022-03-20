@@ -11,7 +11,7 @@
          * [Correlation ratio](#correlation-ratio)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Sun 20 Mar 2022 17:26:32 IST -->
+<!-- Added by: gil_diy, at: Sun 20 Mar 2022 17:26:37 IST -->
 
 <!--te-->
 
@@ -46,7 +46,7 @@ y_true = [+1, +1, +1, -1]
 y_pred = [+1, -1, +1, +1]
 print("Output: ", matthews_corrcoef(y_true, y_pred))
 
-# -0.33
+# Output: -0.33
 ```
 
 ## Association between two categorical features
