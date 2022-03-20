@@ -12,7 +12,7 @@
       * [Datasets shared in HuggingFace](#datasets-shared-in-huggingface)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Sun 20 Mar 2022 11:53:56 IST -->
+<!-- Added by: gil_diy, at: Sun 20 Mar 2022 11:56:09 IST -->
 
 <!--te-->
 
@@ -96,6 +96,8 @@ for tup in zip(tokenized_text, indexed_tokens):
 # from          2,013
 # the           1,996
 ```
+
+[Reference](https://www.youtube.com/watch?v=zJW57aCBCTk&list=PLam9sigHPGwOBuH4_4fr-XvDbe5uneaf6&index=2)  
 
 ## Preprocessing data
 
