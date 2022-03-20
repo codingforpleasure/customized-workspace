@@ -7,6 +7,8 @@
       * [Tokenizers](#tokenizers)
          * [Tokenizer](#tokenizer)
             * [BertTokenizer](#berttokenizer)
+            * [encode](#encode)
+            * [encode](#encode-1)
       * [Bert tasks](#bert-tasks)
          * [Classification](#classification)
          * [BertTokenizerFast](#berttokenizerfast)
@@ -14,7 +16,7 @@
       * [Datasets shared in HuggingFace](#datasets-shared-in-huggingface)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Sun 20 Mar 2022 13:13:31 IST -->
+<!-- Added by: gil_diy, at: Sun 20 Mar 2022 13:23:05 IST -->
 
 <!--te-->
 
@@ -104,6 +106,8 @@ Token | Explanantion
   `OOV`| Out of vocabulary
   `UNK`| Unknown Token
 
+The "Attention Mask" is simply an array of 1s and 0s indicating which tokens are padding and which aren't (seems kind of redundant, doesn't it?!). This mask tells the "Self-Attention" mechanism in BERT not to incorporate these PAD tokens into its interpretation of the sentence.
+
 ##  Map the token strings to their vocabulary indeces
 
 ```python
@@ -135,6 +139,7 @@ for tup in zip(tokenized_text, indexed_tokens):
 
 ### Tokenizer
 
+
 #### BertTokenizer
 ```python
     tokenizer = BertTokenizer.from_pretrained('bert-base-cased')
@@ -162,6 +167,35 @@ for tup in zip(tokenized_text, indexed_tokens):
 from the other. All the tokens from the first sentence will be mapped to 0 and all the tokens from the second sentence will be mapped to 1.
 
 **attention_mask** - is used to differentiate the actual tokens and [PAD] tokens. I will map all the actual tokens to 1 and the [PAD] tokens to 0.
+
+#### encode
+
+1. Split the sentence into tokens.
+2. Add the special [CLS] and [SEP] tokens.
+3. Map the tokens to their IDs.
+4. Pad or truncate all sentences to the same length.
+
+```python
+for sent in sentences:
+
+    # Tokenize the text and add `[CLS]` and `[SEP]` tokens.
+    input_ids = tokenizer.encode(sent, add_special_tokens=True)
+```
+
+#### encode
+
+
+
+
+5. Create the attention masks which explicitly differentiate real tokens from [PAD] tokens.
+
+
+
+
+The first four features are in tokenizer.encode, but I'm using tokenizer.encode_plus to get the fifth item (attention masks). 
+
+The tokenizer.encode_plus function combines multiple steps for us:
+
 
 
 ## Bert tasks
