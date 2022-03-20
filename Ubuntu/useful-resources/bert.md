@@ -12,7 +12,7 @@
       * [Datasets shared in HuggingFace](#datasets-shared-in-huggingface)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Sun 20 Mar 2022 11:49:25 IST -->
+<!-- Added by: gil_diy, at: Sun 20 Mar 2022 11:52:10 IST -->
 
 <!--te-->
 
@@ -69,7 +69,7 @@ Token | Explanantion
   `[CLS]` | Classification
   `[SEP]`  | Differentiate sentences
   `##` | Two hash signs, preceding some of these subwords are just our tokenizer’s way to denote that this subword or character is part of a larger word and preceded by another subword
-  `OOV`| 
+  `OOV`| Out of vocabulary
   `UNK`| 
 
 ##  Map the token strings to their vocabulary indeces
