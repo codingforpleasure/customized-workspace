@@ -1,7 +1,7 @@
 <!--ts-->
    * [Nvidia GPU](#nvidia-gpu)
 
-<!-- Added by: gil_diy, at: Sun Dec  6 14:15:20 IST 2020 -->
+<!-- Added by: gil_diy, at: Sun 20 Mar 2022 14:07:07 IST -->
 
 <!--te-->
 
@@ -10,6 +10,9 @@
 Command | Description
 ------------|-----
 nvidia-smi | Gives a simple spec of the GPU.
+
+
+[Link](https://github.com/XuehaiPan/nvitop)
 
 [Link1](https://medium.com/analytics-vidhya/explained-output-of-nvidia-smi-utility-fc4fbee3b124)
 
