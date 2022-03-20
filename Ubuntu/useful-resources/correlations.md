@@ -11,7 +11,7 @@
          * [Correlation ratio](#correlation-ratio)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Fri 18 Mar 2022 08:40:52 IST -->
+<!-- Added by: gil_diy, at: Sun 20 Mar 2022 17:25:51 IST -->
 
 <!--te-->
 
@@ -38,6 +38,14 @@ https://en.wikipedia.org/wiki/Phi_coefficient#Multiclass_case
 
 
 When there are more than two labels the MCC will no longer range between −1 and +1. Instead the minimum value will be between −1 and 0 depending on the true distribution. The maximum value is always +1.
+
+
+```python
+from sklearn.metrics import matthews_corrcoef
+y_true = [+1, +1, +1, -1]
+y_pred = [+1, -1, +1, +1]
+matthews_corrcoef(y_true, y_pred)
+```
 
 ## Association between two categorical features
 
