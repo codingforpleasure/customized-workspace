@@ -12,7 +12,7 @@
       * [Datasets shared in HuggingFace](#datasets-shared-in-huggingface)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Sun 20 Mar 2022 11:41:45 IST -->
+<!-- Added by: gil_diy, at: Sun 20 Mar 2022 11:45:25 IST -->
 
 <!--te-->
 
@@ -33,17 +33,6 @@ BERT tokenizer was created with a WordPiece model. This model greedily creates a
 Since the vocabulary limit size of our BERT tokenizer model is 30,000, the WordPiece model generated a vocabulary that contains all English characters plus the ~30,000 most common words and subwords found in the English language corpus the model is trained on. 
 
 
-This vocabulary contains four things:
-
-* Whole words
-
-* Individual characters
-
-* Subwords occuring at the front of a word or in isolation (“em” as in “embeddings” is assigned 
-the same vector as the standalone sequence of characters “em” as in “go get em” )
-Subwords not at the front of a word, which are preceded by ‘##’ to denote this case
-
-
 Each words has 768 features in it's embedding.
 
 <p align="center">
@@ -57,6 +46,20 @@ with open("vocabulary_Bio_ClinicalBERT.txt", 'w') as f:
       # Write it out and escape any unicode characters.
       f.write(token + '\n')
 ```
+
+
+This vocabulary contains four things:
+
+* Whole words
+
+* Individual characters
+
+* Subwords occuring at the front of a word or in isolation (“em” as in “embeddings” is assigned 
+the same vector as the standalone sequence of characters “em” as in “go get em” )
+Subwords not at the front of a word, which are preceded by ‘##’ to denote this case
+
+
+
 
 
 ## Special Tokens
