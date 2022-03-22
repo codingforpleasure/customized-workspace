@@ -17,6 +17,7 @@
          * [Forming](#forming)
             * [Stack 1-D arrays as columns into a 2-D array.](#stack-1-d-arrays-as-columns-into-a-2-d-array)
             * [vstack](#vstack)
+            * [dstack](#dstack)
             * [hstack](#hstack)
             * [Concatenating](#concatenating)
          * [Repeating an array](#repeating-an-array)
@@ -81,7 +82,7 @@
       * [Flip image with numpy](#flip-image-with-numpy)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Tue 22 Mar 2022 16:02:21 IST -->
+<!-- Added by: gil_diy, at: Tue 22 Mar 2022 16:37:17 IST -->
 
 <!--te-->
 
@@ -327,6 +328,18 @@ The output would be:
 array([[1, 2, 3],
        [4, 5, 6]])
 ```
+
+#### dstack
+
+
+[Link](https://stackoverflow.com/questions/34357617/append-2d-array-to-3d-array-extending-third-dimension)
+
+```python
+
+```
+
+
+
 #### hstack
 
 ```python
