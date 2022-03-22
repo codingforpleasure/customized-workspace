@@ -10,6 +10,7 @@
          * [Converting from numpy array to simple list](#converting-from-numpy-array-to-simple-list)
             * [Import data from csv](#import-data-from-csv)
          * [Random generation](#random-generation)
+            * [random](#random)
             * [randn](#randn)
             * [rand](#rand)
             * [Get random sample from a given 1-D array](#get-random-sample-from-a-given-1-d-array)
@@ -80,7 +81,7 @@
       * [Flip image with numpy](#flip-image-with-numpy)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Fri 18 Mar 2022 22:46:24 IST -->
+<!-- Added by: gil_diy, at: Tue 22 Mar 2022 16:02:16 IST -->
 
 <!--te-->
 
@@ -239,6 +240,17 @@ dataset = np.loadtxt('pima-indians-diabetes.csv' , delimiter=",")
 ### Random generation
 
 [Great answer](https://stackoverflow.com/questions/47240308/differences-between-numpy-random-rand-vs-numpy-random-randn-in-python)
+
+#### random
+
+Generates decimal numbers:
+
+```python
+ x1 = np.random.random((1, 3, 5))
+ x2 = np.random.random((1, 3, 5))
+
+ container = np.vstack((x1, x2))
+```
 
 #### randn
 `numpy.random.randn` generates samples from the normal distribution
