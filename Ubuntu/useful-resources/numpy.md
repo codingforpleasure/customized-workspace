@@ -9,6 +9,7 @@
             * [Creating evenly spaced numbers over a specified interval.](#creating-evenly-spaced-numbers-over-a-specified-interval)
          * [Converting from numpy array to simple list](#converting-from-numpy-array-to-simple-list)
             * [Import data from csv](#import-data-from-csv)
+         * [move axis](#move-axis)
          * [Random generation](#random-generation)
             * [random](#random)
             * [randn](#randn)
@@ -82,7 +83,7 @@
       * [Flip image with numpy](#flip-image-with-numpy)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Tue 22 Mar 2022 16:37:17 IST -->
+<!-- Added by: gil_diy, at: Tue 22 Mar 2022 16:44:50 IST -->
 
 <!--te-->
 
@@ -237,6 +238,18 @@ import numpy as np
 dataset = np.loadtxt('pima-indians-diabetes.csv' , delimiter=",")
 ```
 
+### move axis
+
+
+```python
+x = np.zeros((3, 4, 5))
+
+np.moveaxis(x, 0, -1).shape
+(4, 5, 3)
+
+np.moveaxis(x, -1, 0).shape
+(5, 3, 4)
+```
 
 ### Random generation
 
