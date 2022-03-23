@@ -11,7 +11,7 @@
          * [Correlation ratio](#correlation-ratio)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Sun 20 Mar 2022 17:26:39 IST -->
+<!-- Added by: gil_diy, at: Wed 23 Mar 2022 21:37:14 IST -->
 
 <!--te-->
 
@@ -42,6 +42,7 @@ When there are more than two labels the MCC will no longer range between −1 an
 
 ```python
 from sklearn.metrics import matthews_corrcoef
+
 y_true = [+1, +1, +1, -1]
 y_pred = [+1, -1, +1, +1]
 print("Output: ", matthews_corrcoef(y_true, y_pred))
