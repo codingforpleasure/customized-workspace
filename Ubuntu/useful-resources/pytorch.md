@@ -113,7 +113,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Sun 20 Mar 2022 14:17:54 IST -->
+<!-- Added by: gil_diy, at: Wed 23 Mar 2022 21:37:19 IST -->
 
 <!--te-->
 
@@ -991,7 +991,23 @@ class My_data_set(Dataset):
 ### Splitting Dataset
 
 ```python
+from torch.utils.data import random_split
 
+# Combine the training inputs into a TensorDataset.
+dataset = TensorDataset(input_ids, attention_masks, labels)
+
+# Create a 90-10 train-validation split.
+
+# Calculate the number of samples to include in each set.
+train_size = int(0.9 * len(dataset))
+val_size = len(dataset) - train_size
+
+
+# Divide the dataset by randomly selecting samples.
+train_dataset, val_dataset = random_split(dataset, [train_size, val_size])
+
+print('{:>5,} training samples'.format(train_size))
+print('{:>5,} validation samples'.format(val_size))
 ```
 
 ### Subsetting Dataset
