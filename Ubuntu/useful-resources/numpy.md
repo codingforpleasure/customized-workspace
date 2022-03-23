@@ -83,7 +83,7 @@
       * [Flip image with numpy](#flip-image-with-numpy)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Tue 22 Mar 2022 16:44:58 IST -->
+<!-- Added by: gil_diy, at: Wed 23 Mar 2022 17:46:53 IST -->
 
 <!--te-->
 
@@ -172,9 +172,6 @@ Remove single-dimensional entries from the shape of an array | x = np.array([[[0
 ==> | np.squeeze(x).shape
 ==> | output: (3,)
 == | ==
-Concatenation, or joining of two arrays |  x = np.array([1, 2, 3])
-==> | y = np.array([3, 2, 1])
-==> | np.concatenate([x, y])
 Extract the lower triangle (below diagonal) | np.tril(A)
 Extract the upper triangle (above diagonal)| np.triu(A)
 
