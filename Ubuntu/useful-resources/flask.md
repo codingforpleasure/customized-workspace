@@ -10,7 +10,7 @@
          * [Flask](#flask-1)
          * [How to prepare Flask in production?](#how-to-prepare-flask-in-production)
 
-<!-- Added by: gil_diy, at: Wed 23 Mar 2022 21:53:18 IST -->
+<!-- Added by: gil_diy, at: Wed 23 Mar 2022 21:57:01 IST -->
 
 <!--te-->
 
@@ -50,7 +50,8 @@ if __name__ == '__main__':
 b) kill the process which is using the port 5000:
 
 ```bash
-sudo lsof -t -i tcp:8000 | xargs kill -9
+sudo lsof -t -i tcp:5000 # you will get the processid
+sudo kill -9 <pid-of-the process>
 ```
 
 
