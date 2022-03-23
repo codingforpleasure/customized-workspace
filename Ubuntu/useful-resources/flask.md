@@ -10,7 +10,7 @@
          * [Flask](#flask-1)
          * [How to prepare Flask in production?](#how-to-prepare-flask-in-production)
 
-<!-- Added by: gil_diy, at: Wed 23 Mar 2022 21:45:38 IST -->
+<!-- Added by: gil_diy, at: Wed 23 Mar 2022 21:50:27 IST -->
 
 <!--te-->
 
@@ -31,12 +31,12 @@ def index():
 
 ## Resolving the issue OSError: [Errno 98] Address already in use
 
-You can easily resolve this by first look into the stack trace,
-you will see there is:
+You can easily resolve this by first look into the stacktrace,
+you will see there is (in file `serving.py`):
 ```python
 s.bind(server_address)
 ```
-you can set there a breakpoint and see the `('127.0.0.1', 5000)`, which means **port 5000**
+you can set a breakpoint and debug and see the port number `('127.0.0.1', 5000)`, which means **port 5000**
 was already got taken by another process on your local workstation.
 
 
