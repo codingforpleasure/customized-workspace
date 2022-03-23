@@ -2,6 +2,7 @@
    * [Flask](#flask)
       * [A simple Flask application](#a-simple-flask-application)
       * [Resolving the issue OSError: [Errno 98] Address already in use](#resolving-the-issue-oserror-errno-98-address-already-in-use)
+      * [Running flask](#running-flask)
       * [Poject structure](#poject-structure)
       * [Template](#template)
          * [Rendering Templates](#rendering-templates)
@@ -9,7 +10,7 @@
          * [Flask](#flask-1)
          * [How to prepare Flask in production?](#how-to-prepare-flask-in-production)
 
-<!-- Added by: gil_diy, at: Wed 23 Mar 2022 21:52:32 IST -->
+<!-- Added by: gil_diy, at: Wed 23 Mar 2022 21:53:13 IST -->
 
 <!--te-->
 
@@ -46,8 +47,11 @@ if __name__ == '__main__':
     app.run(debug=True, port=6000)
 ```
 
-b) kill the process which is using the port 5000
+b) kill the process which is using the port 5000:
+
 ```bash
+sudo lsof -t -i tcp:8000 | xargs kill -9
+```
 
 
 
