@@ -1,6 +1,7 @@
 <!--ts-->
    * [Flask](#flask)
       * [A simple Flask application](#a-simple-flask-application)
+      * [Resolving the issue OSError: [Errno 98] Address already in use](#resolving-the-issue-oserror-errno-98-address-already-in-use)
       * [Running flask](#running-flask)
       * [Poject structure](#poject-structure)
       * [Template](#template)
@@ -9,7 +10,7 @@
          * [Flask](#flask-1)
          * [How to prepare Flask in production?](#how-to-prepare-flask-in-production)
 
-<!-- Added by: gil_diy, at: Sun 06 Mar 2022 10:25:29 IST -->
+<!-- Added by: gil_diy, at: Wed 23 Mar 2022 21:45:38 IST -->
 
 <!--te-->
 
@@ -27,6 +28,21 @@ app = Flask(__name__)
 def index():
 	return '<h1>Hello World!</h1>'
 ```
+
+## Resolving the issue OSError: [Errno 98] Address already in use
+
+You can easily resolve this by first look into the stack trace,
+you will see there is:
+```python
+s.bind(server_address)
+```
+you can set there a breakpoint and see the `('127.0.0.1', 5000)`, which means **port 5000**
+was already got taken by another process on your local workstation.
+
+
+
+
+
 
 ## Running flask
 
