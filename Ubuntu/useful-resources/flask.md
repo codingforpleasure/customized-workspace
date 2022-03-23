@@ -2,7 +2,6 @@
    * [Flask](#flask)
       * [A simple Flask application](#a-simple-flask-application)
       * [Resolving the issue OSError: [Errno 98] Address already in use](#resolving-the-issue-oserror-errno-98-address-already-in-use)
-      * [Running flask](#running-flask)
       * [Poject structure](#poject-structure)
       * [Template](#template)
          * [Rendering Templates](#rendering-templates)
@@ -10,7 +9,7 @@
          * [Flask](#flask-1)
          * [How to prepare Flask in production?](#how-to-prepare-flask-in-production)
 
-<!-- Added by: gil_diy, at: Wed 23 Mar 2022 21:51:52 IST -->
+<!-- Added by: gil_diy, at: Wed 23 Mar 2022 21:52:32 IST -->
 
 <!--te-->
 
@@ -40,13 +39,15 @@ you can set a breakpoint and debug and see the port number `('127.0.0.1', 5000)`
 
 therefore you can do one of the solutions:
 
-a) run the code with specifying the port number:
+a) Run the code with specifying another port number:
 
 ```python
 if __name__ == '__main__':
     app.run(debug=True, port=6000)
 ```
 
+b) kill the process which is using the port 5000
+```bash
 
 
 
