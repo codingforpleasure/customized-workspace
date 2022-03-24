@@ -7,7 +7,7 @@
          * [Desciminator](#desciminator)
          * [Generator](#generator)
 
-<!-- Added by: gil_diy, at: Thu 24 Mar 2022 15:55:01 IST -->
+<!-- Added by: gil_diy, at: Thu 24 Mar 2022 15:55:12 IST -->
 
 <!--te-->
 
@@ -32,7 +32,7 @@ but we can see in the accuracy result the comparison between 20-layer and 56-lay
   <img width="400" src="images/cnn/resnet_accuracy_plot.png" title="Look into the image">
 </p>
 
-In the context of residual neural networks, a non-residual network may be described as a plain network
+In the context of residual neural networks, a `non-residual network` may be described as a `plain network`.
 
 ### Residual block
 
