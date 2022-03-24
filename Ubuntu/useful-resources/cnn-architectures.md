@@ -6,7 +6,7 @@
          * [Desciminator](#desciminator)
          * [Generator](#generator)
 
-<!-- Added by: gil_diy, at: Tue 15 Feb 2022 13:10:48 IST -->
+<!-- Added by: gil_diy, at: Thu 24 Mar 2022 14:46:56 IST -->
 
 <!--te-->
 
@@ -20,6 +20,8 @@
 ## VGG
 
 ## ResNet
+
+* The [Link](well known article) was published in 2015 Dec, 
 
 <p align="center" style="width:400px;" >
   <img src="images/cnn/resnet_building_block_skip_connection.jpg" title="tool tip here">
