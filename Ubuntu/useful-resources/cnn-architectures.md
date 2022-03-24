@@ -7,7 +7,7 @@
          * [Desciminator](#desciminator)
          * [Generator](#generator)
 
-<!-- Added by: gil_diy, at: Thu 24 Mar 2022 15:51:49 IST -->
+<!-- Added by: gil_diy, at: Thu 24 Mar 2022 15:51:51 IST -->
 
 <!--te-->
 
@@ -64,7 +64,7 @@ You can see the boost of performance of the **Skip connection**:
 </p>
 
 
-The formulation of `F(x)+x` can be realized by feedforward neural networks with "shortcut connections", shortcut connections are those skipping one or more layers. the sortcut connections simply perform `identity napping`, and their outputs are added to the outputs of the stacked leyers.
+The formulation of `F(x)+x` can be realized by feedforward neural networks with "shortcut connections", shortcut connections are those skipping one or more layers. the sortcut connections simply perform `identity napping`, and their outputs are added to the outputs of the stacked layers.
 
 
 [Pytorch ResNet implementation from Scratch](https://youtu.be/DkNIBBBvcPs)
