@@ -6,7 +6,7 @@
          * [Desciminator](#desciminator)
          * [Generator](#generator)
 
-<!-- Added by: gil_diy, at: Thu 24 Mar 2022 14:49:43 IST -->
+<!-- Added by: gil_diy, at: Thu 24 Mar 2022 15:01:43 IST -->
 
 <!--te-->
 
@@ -22,6 +22,14 @@
 ## ResNet
 
 * The [well known article](https://arxiv.org/pdf/1512.03385.pdf) was published in 2015 Dec, got more than 20,000 citations.
+
+
+We would assume stacking more layers would make the learning better,
+but we can see in the accuracy result the comparison between 20-layer and 56-layer of "plain" networks.
+
+<p align="center">
+  <img width="400" src="images/cnn/resnet_accuracy_plot.png" title="Look into the image">
+</p>
 
 <p align="center" style="width:400px;" >
   <img src="images/cnn/resnet_building_block_skip_connection.jpg" title="tool tip here">
