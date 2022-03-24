@@ -6,7 +6,7 @@
          * [Desciminator](#desciminator)
          * [Generator](#generator)
 
-<!-- Added by: gil_diy, at: Thu 24 Mar 2022 14:46:58 IST -->
+<!-- Added by: gil_diy, at: Thu 24 Mar 2022 14:47:01 IST -->
 
 <!--te-->
 
@@ -21,7 +21,7 @@
 
 ## ResNet
 
-* The [Link](well known article) was published in 2015 Dec, 
+* The [well known article](http://www.my-website.com) was published in 2015 Dec, 
 
 <p align="center" style="width:400px;" >
   <img src="images/cnn/resnet_building_block_skip_connection.jpg" title="tool tip here">
