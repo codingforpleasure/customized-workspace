@@ -6,7 +6,7 @@
          * [Desciminator](#desciminator)
          * [Generator](#generator)
 
-<!-- Added by: gil_diy, at: Thu 24 Mar 2022 14:47:15 IST -->
+<!-- Added by: gil_diy, at: Thu 24 Mar 2022 14:49:40 IST -->
 
 <!--te-->
 
@@ -21,7 +21,7 @@
 
 ## ResNet
 
-* The [well known article](https://arxiv.org/pdf/1512.03385.pdf) was published in 2015 Dec, 
+* The [well known article](https://arxiv.org/pdf/1512.03385.pdf) was published in 2015 Dec, got more than 20,000 citations.
 
 <p align="center" style="width:400px;" >
   <img src="images/cnn/resnet_building_block_skip_connection.jpg" title="tool tip here">
