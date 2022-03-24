@@ -2,11 +2,12 @@
    * [Architecture Networks](#architecture-networks)
       * [VGG](#vgg)
       * [ResNet](#resnet)
+         * [Residual block](#residual-block)
       * [GAN - Generative Adversial Networks](#gan---generative-adversial-networks)
          * [Desciminator](#desciminator)
          * [Generator](#generator)
 
-<!-- Added by: gil_diy, at: Thu 24 Mar 2022 15:03:47 IST -->
+<!-- Added by: gil_diy, at: Thu 24 Mar 2022 15:04:29 IST -->
 
 <!--te-->
 
@@ -30,6 +31,9 @@ but we can see in the accuracy result the comparison between 20-layer and 56-lay
 <p align="center">
   <img width="400" src="images/cnn/resnet_accuracy_plot.png" title="Look into the image">
 </p>
+
+
+### Residual block
 
 <p align="center" style="width:400px;" >
   <img src="images/cnn/resnet_building_block_skip_connection.jpg" title="tool tip here">
