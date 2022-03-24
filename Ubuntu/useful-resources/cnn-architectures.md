@@ -7,7 +7,7 @@
          * [Desciminator](#desciminator)
          * [Generator](#generator)
 
-<!-- Added by: gil_diy, at: Thu 24 Mar 2022 15:04:29 IST -->
+<!-- Added by: gil_diy, at: Thu 24 Mar 2022 15:05:10 IST -->
 
 <!--te-->
 
@@ -34,6 +34,10 @@ but we can see in the accuracy result the comparison between 20-layer and 56-lay
 
 
 ### Residual block
+
+<p align="center">
+  <img src="images/cnn/labeling_example.jpg" title="tool tip here">
+</p>
 
 <p align="center" style="width:400px;" >
   <img src="images/cnn/resnet_building_block_skip_connection.jpg" title="tool tip here">
