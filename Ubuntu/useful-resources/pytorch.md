@@ -113,7 +113,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Wed 23 Mar 2022 21:37:19 IST -->
+<!-- Added by: gil_diy, at: Sat 26 Mar 2022 19:30:46 IDT -->
 
 <!--te-->
 
@@ -1787,6 +1787,8 @@ my_model = models.resnet50(pretrained=True)
 for param in my_model.parameters():
   param.requires_grad = False
 ```
+
+* Notice that the only difference between loading a randomly-initialized model and a pretrained model is whether you set `pretrained=True` or not. 
 
 ### Modify the model
 
