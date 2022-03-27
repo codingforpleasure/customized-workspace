@@ -51,7 +51,7 @@
       * [10 Leading Language Models For NLP In 2021](#10-leading-language-models-for-nlp-in-2021)
       * [Repositories](#repositories)
 
-<!-- Added by: gil_diy, at: Sun 13 Mar 2022 12:47:23 IST -->
+<!-- Added by: gil_diy, at: Sun 27 Mar 2022 12:43:06 IDT -->
 
 <!--te-->
 
@@ -205,6 +205,12 @@ Word embedding which is n-dimensional vector space representation of words such 
 * Semantically related words (for instance, **“boat” — “water”**) 
 
 are closer in the vector space depending on the training data.
+
+
+<p align="center">
+  <img width="400" src="images/nlp/nlp_architecture.png" title="Look into the image">
+</p>
+
 
 ### 1. Word2Vec Embedding
 
