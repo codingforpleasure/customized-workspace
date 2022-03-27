@@ -2,7 +2,7 @@
    * [AWS](#aws)
       * [Services](#services)
 
-<!-- Added by: gil_diy, at: Sun 27 Mar 2022 11:30:03 IDT -->
+<!-- Added by: gil_diy, at: Sun 27 Mar 2022 11:30:23 IDT -->
 
 <!--te-->
 
@@ -13,7 +13,8 @@
 
 Service name | Description
 ------------|-----
-Redshift | Amazon Data Warehouse
+Redshift | Amazon Redshift is a fully managed data warehouse that allows us to run complex
+analytic queries against petabytes of structured dat
  Amazon Neptune  | Amazon Neptune is a fully managed graph database
  Neptune ML |  Neptune ML implements graph neural networks (GNNs) to make predictions using graph data.
  AWS DeepLens | 
