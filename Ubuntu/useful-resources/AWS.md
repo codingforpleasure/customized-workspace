@@ -2,7 +2,7 @@
    * [AWS](#aws)
       * [Services](#services)
 
-<!-- Added by: gil_diy, at: Sun 27 Mar 2022 11:31:27 IDT -->
+<!-- Added by: gil_diy, at: Sun 27 Mar 2022 11:31:41 IDT -->
 
 <!--te-->
 
@@ -14,8 +14,7 @@
 Service name | Description
 ------------|-----
 Redshift | Amazon Redshift is a fully managed data warehouse that allows us to run complex
-Amazon Comprehend | Amazon Comprehend is a fully managed AI service for natural language processing
-(NLP) 
+Amazon Comprehend | Amazon Comprehend is a fully managed AI service for natural language processing (NLP) 
 analytic queries against petabytes of structured data
  Amazon Neptune  | Amazon Neptune is a fully managed graph database
  Neptune ML |  Neptune ML implements graph neural networks (GNNs) to make predictions using graph data.
