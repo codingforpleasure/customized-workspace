@@ -17,7 +17,7 @@
       * [Datasets shared in HuggingFace](#datasets-shared-in-huggingface)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Sun 27 Mar 2022 12:26:02 IDT -->
+<!-- Added by: gil_diy, at: Sun 27 Mar 2022 12:26:08 IDT -->
 
 <!--te-->
 
@@ -60,9 +60,9 @@ Bert is not capable of:
 * Text generation
 
 ## DistilBERT
+
 Let’s use a variant of BERT called DistilBERT. DistilBERT is a lightweight version of
-BERT that is 60% faster and 40% smaller while preserving 97% of BERT’s language
-understanding capabilitie
+BERT that is 60% faster and 40% smaller while preserving 97% of BERT’s language understanding capabilities.
 
 
 ## Getting to know WordPiece Embeddings
