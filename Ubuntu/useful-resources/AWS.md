@@ -5,7 +5,7 @@
          * [Create a new private S3 bucket](#create-a-new-private-s3-bucket)
          * [Copy the content of the public S3 bucket to our newly created private S3 bucket](#copy-the-content-of-the-public-s3-bucket-to-our-newly-created-private-s3-bucket)
 
-<!-- Added by: gil_diy, at: Sun 27 Mar 2022 11:44:56 IDT -->
+<!-- Added by: gil_diy, at: Sun 27 Mar 2022 11:45:34 IDT -->
 
 <!--te-->
 
@@ -20,7 +20,6 @@ Amazon S3  | Cloud Object Storage
 Redshift | Amazon Redshift is a fully managed data warehouse that allows us to run complex analytic queries against petabytes of structured data
 Amazon Comprehend | Amazon Comprehend is a fully managed AI service for natural language processing (NLP) 
                   | Amazon Comprehend takes text documents as input and recognizes entities, key phrases, language.
-and sentiment
 Amazon Neptune  | Amazon Neptune is a fully managed graph database
 Amazon Athena | Amazon Athena is a serverless, interactive query service to query data and analyze big data in Amazon S3 using standard SQL
 Neptune ML |  Neptune ML implements graph neural networks (GNNs) to make predictions using graph data.
