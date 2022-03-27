@@ -2,7 +2,7 @@
    * [AWS](#aws)
       * [Services](#services)
 
-<!-- Added by: gil_diy, at: Sun 27 Mar 2022 11:32:26 IDT -->
+<!-- Added by: gil_diy, at: Sun 27 Mar 2022 11:32:44 IDT -->
 
 <!--te-->
 
@@ -18,8 +18,7 @@ Amazon Comprehend | Amazon Comprehend is a fully managed AI service for natural 
 Amazon Neptune  | Amazon Neptune is a fully managed graph database
 Neptune ML |  Neptune ML implements graph neural networks (GNNs) to make predictions using graph data.
 AWS DeepLens | 
-AWS DeepRacer | Is a fully autonomous 1/18th-scale race car driven by reinforcement
-learning
+AWS DeepRacer | Is a fully autonomous 1/18th-scale race car driven by reinforcement learning
  
 We configure the SageMaker Autopilot job by providing our raw data in an S3 bucket
 in the form of a tabular CSV file.
