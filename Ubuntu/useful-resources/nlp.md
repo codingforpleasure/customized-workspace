@@ -51,7 +51,7 @@
       * [10 Leading Language Models For NLP In 2021](#10-leading-language-models-for-nlp-in-2021)
       * [Repositories](#repositories)
 
-<!-- Added by: gil_diy, at: Sun 27 Mar 2022 12:43:12 IDT -->
+<!-- Added by: gil_diy, at: Sun 27 Mar 2022 12:43:37 IDT -->
 
 <!--te-->
 
@@ -208,7 +208,7 @@ are closer in the vector space depending on the training data.
 
 
 <p align="center">
-  <img width="400" src="images/nlp/nlp_architecture.png" title="Look into the image">
+  <img width="600" src="images/nlp/nlp_architecture.png" title="Look into the image">
 </p>
 
 
