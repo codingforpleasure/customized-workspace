@@ -4,7 +4,7 @@
          * [Grid search](#grid-search)
          * [Bayesian search](#bayesian-search)
 
-<!-- Added by: gil_diy, at: Sun 27 Mar 2022 11:24:01 IDT -->
+<!-- Added by: gil_diy, at: Sun 27 Mar 2022 11:25:12 IDT -->
 
 <!--te-->
 
@@ -13,4 +13,7 @@
 ## Hyper parameter tuning
 
 ### Grid search
+
 ### Bayesian search
+
+With Bayesian search, SageMaker treats tuning as a regression problem
