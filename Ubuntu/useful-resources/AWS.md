@@ -5,7 +5,7 @@
          * [Create a new private S3 bucket](#create-a-new-private-s3-bucket)
          * [Copy the content of the public S3 bucket to our newly created private S3 bucket](#copy-the-content-of-the-public-s3-bucket-to-our-newly-created-private-s3-bucket)
 
-<!-- Added by: gil_diy, at: Sun 27 Mar 2022 11:43:15 IDT -->
+<!-- Added by: gil_diy, at: Sun 27 Mar 2022 11:43:20 IDT -->
 
 <!--te-->
 
@@ -39,3 +39,7 @@ aws s3 mb s3://data-science-on-aws
 ```
 
 ### Copy the content of the public S3 bucket to our newly created private S3 bucket
+
+```python
+
+```
