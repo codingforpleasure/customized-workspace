@@ -5,7 +5,7 @@
          * [Create a new private S3 bucket](#create-a-new-private-s3-bucket)
          * [Copy the content of the public S3 bucket to our newly created private S3 bucket](#copy-the-content-of-the-public-s3-bucket-to-our-newly-created-private-s3-bucket)
 
-<!-- Added by: gil_diy, at: Sun 27 Mar 2022 11:43:20 IDT -->
+<!-- Added by: gil_diy, at: Sun 27 Mar 2022 11:43:47 IDT -->
 
 <!--te-->
 
@@ -34,12 +34,13 @@ in the form of a tabular CSV file.
 
 ### Create a new private S3 bucket
 
-```python
+```bash
 aws s3 mb s3://data-science-on-aws
 ```
 
 ### Copy the content of the public S3 bucket to our newly created private S3 bucket
 
-```python
-
+```bash
+aws s3 cp --recursive s3://amazon-reviews-pds/tsv/  s3://data-science-on-aws/amazon-reviews-pds/tsv/ \
+--exclude "*" --include "amazon_reviews_us_*"
 ```
