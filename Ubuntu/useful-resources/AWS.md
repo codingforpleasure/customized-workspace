@@ -1,8 +1,10 @@
 <!--ts-->
    * [AWS](#aws)
       * [Services](#services)
+      * [AWS CLI](#aws-cli)
+         * [Create a new private S3 bucket](#create-a-new-private-s3-bucket)
 
-<!-- Added by: gil_diy, at: Sun 27 Mar 2022 11:40:51 IDT -->
+<!-- Added by: gil_diy, at: Sun 27 Mar 2022 11:42:46 IDT -->
 
 <!--te-->
 
@@ -25,3 +27,12 @@ AWS DeepRacer | Is a fully autonomous 1/18th-scale race car driven by reinforcem
  
 We configure the SageMaker Autopilot job by providing our raw data in an S3 bucket
 in the form of a tabular CSV file.
+
+
+## AWS CLI
+
+### Create a new private S3 bucket
+
+```python
+aws s3 mb s3://data-science-on-aws
+```
