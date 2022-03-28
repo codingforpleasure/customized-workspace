@@ -8,8 +8,9 @@
          * [Create a new private S3 bucket](#create-a-new-private-s3-bucket)
          * [Copy the content of the public S3 bucket to our newly created private S3 bucket](#copy-the-content-of-the-public-s3-bucket-to-our-newly-created-private-s3-bucket)
          * [list the S3 folder](#list-the-s3-folder)
+      * [SageMaker Debugger](#sagemaker-debugger)
 
-<!-- Added by: gil_diy, at: Mon 28 Mar 2022 13:25:19 IDT -->
+<!-- Added by: gil_diy, at: Mon 28 Mar 2022 13:28:24 IDT -->
 
 <!--te-->
 
@@ -73,3 +74,12 @@ aws s3 cp --recursive s3://amazon-reviews-pds/tsv/  s3://data-science-on-aws/ama
 ```bash
 aws s3 ls s3://data-science-on-aws/amazon-reviews-pds/parquet-from-redshift/2015
 ```
+
+## SageMaker Debugger
+
+* SageMaker Debugger we get transparency into our model training process.
+
+* Debugger automatically captures real-time metrics during training and provides a visual interface to analyze the debug data.
+
+* Debugger also profiles and monitors system resource utilization and identifies resource bottlenecks
+such as overutilized CPUs or GPUs.
