@@ -85,7 +85,7 @@
       * [Execute sql](#execute-sql)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Mon 28 Mar 2022 16:02:54 IDT -->
+<!-- Added by: gil_diy, at: Mon 28 Mar 2022 16:03:43 IDT -->
 
 <!--te-->
 
@@ -892,6 +892,15 @@ from pyathena import connect
 
 # Set S3 staging directory -- this is a temporary directory used for Athena queries
 s3_staging_dir = "s3://{0}/athena/staging".format(bucket)
+
+statement = """
+SELECT product_category, COUNT(star_rating) AS count_star_rating 
+FROM {}.{}
+GROUP BY product_category 
+ORDER BY count_star_rating DESC
+""".format(
+    database_name, table_name
+)
 
 
 conn = connect(region_name=region, s3_staging_dir=s3_staging_dir)
