@@ -5,8 +5,9 @@
          * [Create a new private S3 bucket](#create-a-new-private-s3-bucket)
          * [Copy the content of the public S3 bucket to our newly created private S3 bucket](#copy-the-content-of-the-public-s3-bucket-to-our-newly-created-private-s3-bucket)
          * [list the S3 folder](#list-the-s3-folder)
+         * [Install  AWS Data Wrangler](#install--aws-data-wrangler)
 
-<!-- Added by: gil_diy, at: Mon 28 Mar 2022 12:41:31 IDT -->
+<!-- Added by: gil_diy, at: Mon 28 Mar 2022 12:42:14 IDT -->
 
 <!--te-->
 
@@ -51,4 +52,9 @@ aws s3 cp --recursive s3://amazon-reviews-pds/tsv/  s3://data-science-on-aws/ama
 
 ```bash
 aws s3 ls s3://data-science-on-aws/amazon-reviews-pds/parquet-from-redshift/2015
+```
+
+### Install  AWS Data Wrangler
+```bash
+pip install awswrangler
 ```
