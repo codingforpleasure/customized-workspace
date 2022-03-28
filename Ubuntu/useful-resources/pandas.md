@@ -85,7 +85,7 @@
       * [Execute sql](#execute-sql)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Mon 28 Mar 2022 15:56:15 IDT -->
+<!-- Added by: gil_diy, at: Mon 28 Mar 2022 16:02:54 IDT -->
 
 <!--te-->
 
@@ -886,7 +886,8 @@ Attention: In case there is a categorical column in the dataframe it will get ig
 ## Execute sql
 
 ```python
-from pyathena import connect
+# Amazon Athena is a serverless, interactive query service to query data and analyze big data in Amazon S3 using standard SQL
+from pyathena import connect 
 
 
 # Set S3 staging directory -- this is a temporary directory used for Athena queries
