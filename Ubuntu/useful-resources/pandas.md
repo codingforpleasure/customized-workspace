@@ -85,7 +85,7 @@
       * [Execute sql](#execute-sql)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Mon 28 Mar 2022 15:56:11 IDT -->
+<!-- Added by: gil_diy, at: Mon 28 Mar 2022 15:56:15 IDT -->
 
 <!--te-->
 
@@ -893,7 +893,7 @@ from pyathena import connect
 s3_staging_dir = "s3://{0}/athena/staging".format(bucket)
 
 
-onn = connect(region_name=region, s3_staging_dir=s3_staging_dir)
+conn = connect(region_name=region, s3_staging_dir=s3_staging_dir)
 
 pd.read_sql(statement, conn)
 ```
