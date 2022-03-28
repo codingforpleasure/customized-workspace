@@ -82,9 +82,10 @@
       * [One hot encoding](#one-hot-encoding)
       * [Mathematical functions](#mathematical-functions)
          * [Calculate correlation for all numerical columns pairs](#calculate-correlation-for-all-numerical-columns-pairs)
+      * [Execute sql](#execute-sql)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Sat 19 Mar 2022 12:20:09 IST -->
+<!-- Added by: gil_diy, at: Mon 28 Mar 2022 15:56:11 IDT -->
 
 <!--te-->
 
@@ -881,6 +882,21 @@ df.corr()
 ```
 
 Attention: In case there is a categorical column in the dataframe it will get ignored it.
+
+## Execute sql
+
+```python
+from pyathena import connect
+
+
+# Set S3 staging directory -- this is a temporary directory used for Athena queries
+s3_staging_dir = "s3://{0}/athena/staging".format(bucket)
+
+
+onn = connect(region_name=region, s3_staging_dir=s3_staging_dir)
+
+pd.read_sql(statement, conn)
+```
 
 
 ## Reference
