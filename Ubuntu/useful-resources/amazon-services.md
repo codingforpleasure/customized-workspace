@@ -1,13 +1,15 @@
 <!--ts-->
    * [AWS](#aws)
       * [Services](#services)
-      * [Install AWS Data Wrangler](#install-aws-data-wrangler)
+      * [AWS Data Wrangler](#aws-data-wrangler)
+         * [Install AWS Data Wrangler](#install-aws-data-wrangler)
+         * [Read dataset directly from S3 into pandas](#read-dataset-directly-from-s3-into-pandas)
       * [AWS CLI](#aws-cli)
          * [Create a new private S3 bucket](#create-a-new-private-s3-bucket)
          * [Copy the content of the public S3 bucket to our newly created private S3 bucket](#copy-the-content-of-the-public-s3-bucket-to-our-newly-created-private-s3-bucket)
          * [list the S3 folder](#list-the-s3-folder)
 
-<!-- Added by: gil_diy, at: Mon 28 Mar 2022 12:42:30 IDT -->
+<!-- Added by: gil_diy, at: Mon 28 Mar 2022 12:43:32 IDT -->
 
 <!--te-->
 
@@ -32,11 +34,21 @@ AWS DeepRacer | Is a fully autonomous 1/18th-scale race car driven by reinforcem
 We configure the SageMaker Autopilot job by providing our raw data in an S3 bucket
 in the form of a tabular CSV file.
 
+## AWS Data Wrangler
 
-## Install AWS Data Wrangler
+### Install AWS Data Wrangler
 
 ```bash
 pip install awswrangler
+```
+
+### Read dataset directly from S3 into pandas
+
+```bash
+import awswrangler as wr
+
+# Retrieve the data directly from Amazon S3
+df = wr.s3.read_parquet("s3://<BUCKET>/<DATASET>/"))
 ```
 
 ## AWS CLI
