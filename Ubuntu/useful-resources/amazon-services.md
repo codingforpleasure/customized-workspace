@@ -9,7 +9,7 @@
          * [Copy the content of the public S3 bucket to our newly created private S3 bucket](#copy-the-content-of-the-public-s3-bucket-to-our-newly-created-private-s3-bucket)
          * [list the S3 folder](#list-the-s3-folder)
 
-<!-- Added by: gil_diy, at: Mon 28 Mar 2022 13:22:52 IDT -->
+<!-- Added by: gil_diy, at: Mon 28 Mar 2022 13:23:18 IDT -->
 
 <!--te-->
 
@@ -26,7 +26,8 @@ Redshift | Amazon Redshift is a fully managed data warehouse that allows us to r
 AWS Deequ | AWS Deequ is an open source library built on top of Apache Spark that lets us **define unit tests for data and measure data quality in large datasets**
 AWS Glue DataBrew | AWS Glue DataBrew is a visual data analysis and preparation tool. With **250 built-in transformations**, **DataBrew can detect anomalies** , converting data between standard formats and fixing invalid or missing values.
 Amazon Comprehend | Amazon Comprehend is a fully managed AI service for natural language processing (NLP) 
-                  | Amazon Comprehend takes text documents as input and recognizes entities, key phrases, language.
+                  | Amazon Comprehend takes text documents as input and recognizes entities, key phrases, language. DataBrew can profile our data, calculate
+summary statistics, and visualize column correlations.
 Amazon Neptune  | Amazon Neptune is a fully managed graph database
 Amazon Athena | Amazon Athena is a serverless, interactive query service to query data and analyze big data in Amazon S3 using standard SQL
 Neptune ML |  Neptune ML implements graph neural networks (GNNs) to make predictions using graph data.
