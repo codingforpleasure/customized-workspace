@@ -6,7 +6,7 @@
          * [Copy the content of the public S3 bucket to our newly created private S3 bucket](#copy-the-content-of-the-public-s3-bucket-to-our-newly-created-private-s3-bucket)
          * [list the S3 folder](#list-the-s3-folder)
 
-<!-- Added by: gil_diy, at: Mon 28 Mar 2022 12:40:58 IDT -->
+<!-- Added by: gil_diy, at: Mon 28 Mar 2022 12:41:07 IDT -->
 
 <!--te-->
 
@@ -17,7 +17,7 @@
 
 Service name | Description
 ------------|-----
-AWS Data Wrangler | extends the power of pandas to AWS. AWS Data Wrangler connects pandas DataFrames with AWS services such as Amazon S3, AWS Glue, Amazon Athena, and Amazon Redshift
+AWS Data Wrangler | extends the power of **pandas** to AWS. AWS Data Wrangler connects pandas DataFrames with AWS services such as Amazon S3, AWS Glue, Amazon Athena, and Amazon Redshift
 Amazon S3  | Cloud Object Storage
 Redshift | Amazon Redshift is a fully managed data warehouse that allows us to run complex analytic queries against petabytes of structured data
 Amazon Comprehend | Amazon Comprehend is a fully managed AI service for natural language processing (NLP) 
