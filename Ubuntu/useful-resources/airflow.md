@@ -5,7 +5,7 @@
          * [Problems](#problems)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Tue 29 Mar 2022 11:19:19 IDT -->
+<!-- Added by: gil_diy, at: Tue 29 Mar 2022 11:19:32 IDT -->
 
 <!--te-->
 
@@ -43,8 +43,8 @@ Example of a naive approach:
 
 * **Monitoring** - Success or failure status, how long does the process runs?
 
-* **Dependencies** - 1) Data dependecies: Upstream data is missing
-
+* **Dependencies** 
+   1) Data dependecies: Upstream data is missing
                      2) Execution dependencies: job 2 tuns after job 1 is finished
 
 * Scalability: there is **no centralized scheduler** betweeen different cron machines.
