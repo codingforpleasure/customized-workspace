@@ -2,9 +2,10 @@
    * [Airflow](#airflow)
       * [What is airflow?](#what-is-airflow)
       * [How things has been done without Airflow?](#how-things-has-been-done-without-airflow)
+         * [Problems](#problems)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Tue 29 Mar 2022 11:12:04 IDT -->
+<!-- Added by: gil_diy, at: Tue 29 Mar 2022 11:15:12 IDT -->
 
 <!--te-->
 
@@ -36,8 +37,14 @@ Example of a naive approach:
 
 * Schedule the script as cronjob
 
+### Problems
 
+* **Failures** - Retry if failure happens (how many times? how often? )
 
+* **Monitoring** - Success or failure status, how long does the process runs?
+
+* **Dependencies** - 1) Data dependecies
+                     2) Execution dependencies
 
 ## Reference
 
