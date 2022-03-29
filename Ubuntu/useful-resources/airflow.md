@@ -5,7 +5,7 @@
          * [Problems](#problems)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Tue 29 Mar 2022 11:19:45 IDT -->
+<!-- Added by: gil_diy, at: Tue 29 Mar 2022 11:19:57 IDT -->
 
 <!--te-->
 
@@ -45,8 +45,8 @@ Example of a naive approach:
 
 * **Dependencies** 
 
-   \t1) Data dependecies: Upstream data is missing
-                     2) Execution dependencies: job 2 tuns after job 1 is finished
+      1) Data dependecies: Upstream data is missing
+      2) Execution dependencies: job 2 tuns after job 1 is finished
 
 * Scalability: there is **no centralized scheduler** betweeen different cron machines.
 
