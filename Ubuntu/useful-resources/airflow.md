@@ -3,9 +3,10 @@
       * [What is airflow?](#what-is-airflow)
       * [How things has been done without Airflow?](#how-things-has-been-done-without-airflow)
          * [Problems](#problems)
+      * [Airflow features](#airflow-features)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Tue 29 Mar 2022 11:20:46 IDT -->
+<!-- Added by: gil_diy, at: Tue 29 Mar 2022 11:23:38 IDT -->
 
 <!--te-->
 
@@ -53,6 +54,15 @@ Example of a naive approach:
 * Deployment: Deploy new changes constantly
 
 * Process historic data: Backfill/Rerun historical data
+
+
+## Airflow features
+
+1. Item
+2. Item
+   * Mixed
+   * Mixed  
+3. Item
 
 ## Reference
 
