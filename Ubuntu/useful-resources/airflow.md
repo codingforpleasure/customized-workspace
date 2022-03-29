@@ -5,7 +5,7 @@
          * [Problems](#problems)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Tue 29 Mar 2022 11:19:32 IDT -->
+<!-- Added by: gil_diy, at: Tue 29 Mar 2022 11:19:36 IDT -->
 
 <!--te-->
 
@@ -44,6 +44,7 @@ Example of a naive approach:
 * **Monitoring** - Success or failure status, how long does the process runs?
 
 * **Dependencies** 
+
    1) Data dependecies: Upstream data is missing
                      2) Execution dependencies: job 2 tuns after job 1 is finished
 
