@@ -5,7 +5,7 @@
          * [Problems](#problems)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Tue 29 Mar 2022 11:20:24 IDT -->
+<!-- Added by: gil_diy, at: Tue 29 Mar 2022 11:20:43 IDT -->
 
 <!--te-->
 
@@ -48,11 +48,11 @@ Example of a naive approach:
       1) Data dependecies: Upstream data is missing
       2) Execution dependencies: job 2 runs after job 1 is finished
 ```
-* Scalability: there is **no centralized scheduler** betweeen different cron machines.
+* Scalability: There is **no centralized scheduler** betweeen different cron machines.
 
-* Deployment: deploy new changes constantly
+* Deployment: Deploy new changes constantly
 
-* Process historic data: backfill/rerun historical data
+* Process historic data: Backfill/Rerun historical data
 ## Reference
 
 [Introduction to Apache Airflow](https://www.youtube.com/watch?v=AHMm1wfGuHE&list=PLYizQ5FvN6pvIOcOd6dFZu3lQqc6zBGp2)
