@@ -3,7 +3,7 @@
       * [What is airflow?](#what-is-airflow)
       * [How things is done without Airflow?](#how-things-is-done-without-airflow)
 
-<!-- Added by: gil_diy, at: Tue 29 Mar 2022 11:10:14 IDT -->
+<!-- Added by: gil_diy, at: Tue 29 Mar 2022 11:11:08 IDT -->
 
 <!--te-->
 
@@ -28,6 +28,12 @@ Use Airflow to author workflows as directed acyclic graphs (DAGs) of tasks. The 
 <p align="center">
   <img width="400" src="images/airflow/traditional_etl.png" title="Look into the image">
 </p>
+
+Example of a naive approach:
+
+* Writing a script to pull data from database and send it to HDFS to process
+
+* Schedule the script as cronjob
 
 
 [Introduction to Apache Airflow](https://www.youtube.com/watch?v=AHMm1wfGuHE&list=PLYizQ5FvN6pvIOcOd6dFZu3lQqc6zBGp2)
