@@ -1,9 +1,9 @@
 <!--ts-->
    * [Airflow](#airflow)
       * [What is airflow?](#what-is-airflow)
-      * [How things is done without Airflow?](#how-things-is-done-without-airflow)
+      * [How things has been done without Airflow?](#how-things-has-been-done-without-airflow)
 
-<!-- Added by: gil_diy, at: Tue 29 Mar 2022 11:11:08 IDT -->
+<!-- Added by: gil_diy, at: Tue 29 Mar 2022 11:11:52 IDT -->
 
 <!--te-->
 
@@ -21,7 +21,7 @@ Use Airflow to author workflows as directed acyclic graphs (DAGs) of tasks. The 
 [Link](https://github.com/apache/airflow)
 
 
-## How things is done without Airflow?
+## How things has been done without Airflow?
 
 **Traditional ETL approach**
 
