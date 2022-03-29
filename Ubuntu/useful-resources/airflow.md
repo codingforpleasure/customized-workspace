@@ -5,7 +5,7 @@
          * [Problems](#problems)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Tue 29 Mar 2022 11:20:43 IDT -->
+<!-- Added by: gil_diy, at: Tue 29 Mar 2022 11:20:46 IDT -->
 
 <!--te-->
 
@@ -53,6 +53,7 @@ Example of a naive approach:
 * Deployment: Deploy new changes constantly
 
 * Process historic data: Backfill/Rerun historical data
+
 ## Reference
 
 [Introduction to Apache Airflow](https://www.youtube.com/watch?v=AHMm1wfGuHE&list=PLYizQ5FvN6pvIOcOd6dFZu3lQqc6zBGp2)
