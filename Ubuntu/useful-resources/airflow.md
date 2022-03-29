@@ -2,7 +2,7 @@
    * [Airflow](#airflow)
       * [What is airflow?](#what-is-airflow)
 
-<!-- Added by: gil_diy, at: Tue 29 Mar 2022 10:07:06 IDT -->
+<!-- Added by: gil_diy, at: Tue 29 Mar 2022 10:09:24 IDT -->
 
 <!--te-->
 
@@ -24,4 +24,4 @@ Use Airflow to author workflows as directed acyclic graphs (DAGs) of tasks. The 
 
 
 
-[Introduction to Apache Airflow](https://www.youtube.com/watch?v=AHMm1wfGuHE)
+[Introduction to Apache Airflow](https://www.youtube.com/watch?v=AHMm1wfGuHE&list=PLYizQ5FvN6pvIOcOd6dFZu3lQqc6zBGp2)
