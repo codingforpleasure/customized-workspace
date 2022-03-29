@@ -10,7 +10,7 @@
          * [Flask](#flask-1)
          * [How to prepare Flask in production?](#how-to-prepare-flask-in-production)
 
-<!-- Added by: gil_diy, at: Wed 23 Mar 2022 21:57:03 IST -->
+<!-- Added by: gil_diy, at: Tue 29 Mar 2022 11:19:03 IDT -->
 
 <!--te-->
 
@@ -160,6 +160,9 @@ Many more examples are shown here: [Link](http://jinja.pocoo.org/docs/2.10/templ
 
 Although Flask has a built-in web server, as we all know, it’s not suitable for production and needs to be put behind a real web server able to communicate with Flask through a **WSGI protocol**
 A common choice for that is **Gunicorn—a Python WSGI HTTP server**.
+
+
+* Gunicorn works by internally handing the calling of your flask code. This is done by having workers ready to handle the requests instead of the sequential one-at-a-time model that the default flask server provides
 
 The Web Server Gateway Interface (WSGI, pronounced whiskeyWIZ-ghee) is a simple calling convention for web servers to forward requests to web applications or frameworks written in the Python programming language.
 
