@@ -6,7 +6,7 @@
       * [Airflow features](#airflow-features)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Tue 29 Mar 2022 11:23:38 IDT -->
+<!-- Added by: gil_diy, at: Tue 29 Mar 2022 11:27:26 IDT -->
 
 <!--te-->
 
@@ -58,11 +58,26 @@ Example of a naive approach:
 
 ## Airflow features
 
-1. Item
-2. Item
-   * Mixed
-   * Mixed  
-3. Item
+* The project joined the Apache Software Foundation's incubation program 2016
+
+*  A workflow (data-pipeline) managment system developed by Airbnb
+
+* The features:
+
+* A framework to define tasks & dependencies by Airbnb
+
+* Executing, schedualing, distributing tasks across worker nodes.
+
+* View of present and past runs, logging feature
+
+* Extensible through plugins
+
+* Nice UI, possibilty to define REST interface
+
+* Interact well with database
+
+
+* A framework to define tasks & dependencies by Airbnb
 
 ## Reference
 
