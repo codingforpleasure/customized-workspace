@@ -5,6 +5,7 @@
       * [Student's t-Distribution](#students-t-distribution)
       * [Binomial Distribution](#binomial-distribution)
       * [Poisson Distribution](#poisson-distribution)
+      * [Exponential Distribution](#exponential-distribution)
       * [Inferential](#inferential)
          * [One Tailed and Two Tailed Tests, Critical Values, &amp; Significance Level](#one-tailed-and-two-tailed-tests-critical-values--significance-level)
          * [Hypothesis Testing Problems Z Test &amp; T Statistics One &amp; Two Tailed Test](#hypothesis-testing-problems-z-test--t-statistics-one--two-tailed-test)
@@ -16,7 +17,7 @@
             * [ANOVA (Analysis Of Variance)](#anova-analysis-of-variance)
       * [QQplots (Quantile Quantile plot)](#qqplots-quantile-quantile-plot)
 
-<!-- Added by: gil_diy, at: Wed 30 Mar 2022 19:43:19 IDT -->
+<!-- Added by: gil_diy, at: Wed 30 Mar 2022 19:44:14 IDT -->
 
 <!--te-->
 
@@ -76,7 +77,19 @@ print(stats.binom.cdf(2, n=5, p=0.1))
 ## Poisson Distribution
 
 ```python
-print(stats.binom.pmf(2, n=5, p=0.1))
+sample = stats.poisson.rvs(2, size=100)
+
+pd.Series(sample).plot.hist()
+plt.show()
+```
+
+## Exponential Distribution
+
+```python
+sample = stats.expon.rvs(scale=5, size=100)
+
+pd.Series(sample).plot.hist()
+plt.show()
 ```
 
 ## Inferential
