@@ -20,6 +20,7 @@
       * [Boxplot](#boxplot)
       * [Scatter Plots](#scatter-plots)
       * [Stem plot](#stem-plot)
+      * [QQplot](#qqplot)
       * [Draw arrows](#draw-arrows)
          * [Draw 3d vectors](#draw-3d-vectors)
          * [Plotting time series](#plotting-time-series)
@@ -47,7 +48,7 @@
       * [Writing mathematical expression](#writing-mathematical-expression)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Thu 10 Mar 2022 09:54:28 IST -->
+<!-- Added by: gil_diy, at: Wed 30 Mar 2022 19:23:52 IDT -->
 
 <!--te-->
 
@@ -600,6 +601,18 @@ plt.show()
   <img src="images/matplotlib/stem_plot.png" title="tool tip here">
 </p>
 
+## QQplot
+
+```python
+from scipy import stats
+
+fig, ax = plt.subplots(figsize=(4, 4))
+norm_sample = stats.norm.rvs(size=100)
+stats.probplot(norm_sample, plot=ax)
+plt.tight_layout()
+plt.show()
+```
+
 ## Draw arrows
 
 ```python
@@ -1001,7 +1014,7 @@ plt.contourf(x1, x2, y_pred, alpha=0.3, cmap=custom_cmap)
 
 [Link](https://matplotlib.org/stable/tutorials/text/mathtext.html?highlight=writing%20mathematical%20expressions)
 
-
+##
 
 # Reference
 
