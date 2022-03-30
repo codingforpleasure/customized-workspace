@@ -16,7 +16,7 @@
             * [ANOVA (Analysis Of Variance)](#anova-analysis-of-variance)
       * [QQplots (Quantile Quantile plot)](#qqplots-quantile-quantile-plot)
 
-<!-- Added by: gil_diy, at: Wed 30 Mar 2022 19:42:36 IDT -->
+<!-- Added by: gil_diy, at: Wed 30 Mar 2022 19:43:19 IDT -->
 
 <!--te-->
 
@@ -63,8 +63,13 @@ The larger the sample, the more normally shaped the t-distribution becomes.
 
 ## Binomial Distribution
 
+pmf = Probability mass function
+
+cdf = Cumulative distribution function
+
 ```python
 print(stats.binom.pmf(2, n=5, p=0.1))
+print(stats.binom.cdf(2, n=5, p=0.1))
 ```
 
 
