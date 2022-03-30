@@ -16,7 +16,7 @@
             * [ANOVA (Analysis Of Variance)](#anova-analysis-of-variance)
       * [QQplots (Quantile Quantile plot)](#qqplots-quantile-quantile-plot)
 
-<!-- Added by: gil_diy, at: Wed 30 Mar 2022 19:42:33 IDT -->
+<!-- Added by: gil_diy, at: Wed 30 Mar 2022 19:42:36 IDT -->
 
 <!--te-->
 
