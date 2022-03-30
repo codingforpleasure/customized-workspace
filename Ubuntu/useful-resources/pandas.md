@@ -86,7 +86,7 @@
       * [Execute sql](#execute-sql)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Wed 30 Mar 2022 18:21:14 IDT -->
+<!-- Added by: gil_diy, at: Wed 30 Mar 2022 18:24:08 IDT -->
 
 <!--te-->
 
@@ -872,6 +872,9 @@ dataset['Gender'] = dataset['Sex'].map({'female': 0, 'male': 1}).astype(int)
 results = pd.Series(results)
 confidence_interval = list(results.quantile([0.05, 0.95]))
 ```
+
+taken from: `lesson3_confidence_interval.py`
+
 
 ## One hot encoding
 
