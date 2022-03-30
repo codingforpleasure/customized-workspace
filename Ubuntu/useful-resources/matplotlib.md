@@ -48,7 +48,7 @@
       * [Writing mathematical expression](#writing-mathematical-expression)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Wed 30 Mar 2022 19:23:52 IDT -->
+<!-- Added by: gil_diy, at: Wed 30 Mar 2022 19:25:08 IDT -->
 
 <!--te-->
 
@@ -607,8 +607,11 @@ plt.show()
 from scipy import stats
 
 fig, ax = plt.subplots(figsize=(4, 4))
-norm_sample = stats.norm.rvs(size=100)
-stats.probplot(norm_sample, plot=ax)
+
+# Checking is it Normal
+
+norm_sample = stats.norm.rvs(size=100) ## QQnorm
+stats.probplot(norm_sample, plot=ax) 
 plt.tight_layout()
 plt.show()
 ```
