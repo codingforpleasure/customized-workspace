@@ -86,7 +86,7 @@
       * [Execute sql](#execute-sql)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Wed 30 Mar 2022 18:24:08 IDT -->
+<!-- Added by: gil_diy, at: Wed 30 Mar 2022 18:24:12 IDT -->
 
 <!--te-->
 
@@ -873,7 +873,7 @@ results = pd.Series(results)
 confidence_interval = list(results.quantile([0.05, 0.95]))
 ```
 
-taken from: `lesson3_confidence_interval.py`
+Taken from: `lesson3_confidence_interval.py`
 
 
 ## One hot encoding
