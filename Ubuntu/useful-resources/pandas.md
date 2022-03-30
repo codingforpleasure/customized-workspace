@@ -85,7 +85,7 @@
       * [Execute sql](#execute-sql)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Mon 28 Mar 2022 16:03:51 IDT -->
+<!-- Added by: gil_diy, at: Wed 30 Mar 2022 18:20:00 IDT -->
 
 <!--te-->
 
@@ -864,6 +864,8 @@ df['eventStrength'] = interactions_df['eventType'].apply(lambda x: event_type_st
 ```python
 dataset['Gender'] = dataset['Sex'].map({'female': 0, 'male': 1}).astype(int)
 ```
+
+## 
 
 ## One hot encoding
 
