@@ -2,7 +2,7 @@
    * [Statistical Inference](#statistical-inference)
       * [Confidence Intervals](#confidence-intervals)
 
-<!-- Added by: gil_diy, at: Wed 30 Mar 2022 18:26:51 IDT -->
+<!-- Added by: gil_diy, at: Wed 30 Mar 2022 18:28:49 IDT -->
 
 <!--te-->
 
@@ -23,3 +23,5 @@ most statistics, or model parameters
 
 The bootstrap is a general tool that can be used to generate confidence intervals for
 most statistics, or model parameters. 
+
+* Well explained in `page 67` from the book 
