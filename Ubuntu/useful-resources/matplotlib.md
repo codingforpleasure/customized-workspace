@@ -48,7 +48,7 @@
       * [Writing mathematical expression](#writing-mathematical-expression)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Wed 30 Mar 2022 19:25:08 IDT -->
+<!-- Added by: gil_diy, at: Wed 30 Mar 2022 19:25:27 IDT -->
 
 <!--te-->
 
@@ -602,6 +602,8 @@ plt.show()
 </p>
 
 ## QQplot
+
+A QQ-Plot is used to visually determine how close a sample is to a specified distribution.
 
 ```python
 from scipy import stats
