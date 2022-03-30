@@ -3,6 +3,8 @@
       * [Descriptive](#descriptive)
       * [Normal Distribution](#normal-distribution)
       * [Student's t-Distribution](#students-t-distribution)
+      * [Binomial Distribution](#binomial-distribution)
+      * [Poisson Distribution](#poisson-distribution)
       * [Inferential](#inferential)
          * [One Tailed and Two Tailed Tests, Critical Values, &amp; Significance Level](#one-tailed-and-two-tailed-tests-critical-values--significance-level)
          * [Hypothesis Testing Problems Z Test &amp; T Statistics One &amp; Two Tailed Test](#hypothesis-testing-problems-z-test--t-statistics-one--two-tailed-test)
@@ -14,7 +16,7 @@
             * [ANOVA (Analysis Of Variance)](#anova-analysis-of-variance)
       * [QQplots (Quantile Quantile plot)](#qqplots-quantile-quantile-plot)
 
-<!-- Added by: gil_diy, at: Wed 30 Mar 2022 19:38:20 IDT -->
+<!-- Added by: gil_diy, at: Wed 30 Mar 2022 19:42:33 IDT -->
 
 <!--te-->
 
@@ -57,6 +59,20 @@ Range, variance & standard deviation
 The t-distribution is a normally shaped distribution, except that it is a bit thicker and longer on the tails. It is used extensively in depicting distributions of sample statistics.
 
 The larger the sample, the more normally shaped the t-distribution becomes.
+
+
+## Binomial Distribution
+
+```python
+print(stats.binom.pmf(2, n=5, p=0.1))
+```
+
+
+## Poisson Distribution
+
+```python
+print(stats.binom.pmf(2, n=5, p=0.1))
+```
 
 ## Inferential
 
