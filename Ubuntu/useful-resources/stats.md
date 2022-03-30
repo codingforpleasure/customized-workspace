@@ -1,6 +1,7 @@
 <!--ts-->
    * [Statistics](#statistics)
       * [Descriptive](#descriptive)
+      * [Normal Distribution](#normal-distribution)
       * [Inferential](#inferential)
          * [One Tailed and Two Tailed Tests, Critical Values, &amp; Significance Level](#one-tailed-and-two-tailed-tests-critical-values--significance-level)
          * [Hypothesis Testing Problems Z Test &amp; T Statistics One &amp; Two Tailed Test](#hypothesis-testing-problems-z-test--t-statistics-one--two-tailed-test)
@@ -12,7 +13,7 @@
             * [ANOVA (Analysis Of Variance)](#anova-analysis-of-variance)
       * [QQplots (Quantile Quantile plot)](#qqplots-quantile-quantile-plot)
 
-<!-- Added by: gil_diy, at: Thu 10 Mar 2022 16:31:33 IST -->
+<!-- Added by: gil_diy, at: Wed 30 Mar 2022 18:45:42 IDT -->
 
 <!--te-->
 
@@ -31,6 +32,18 @@ Mean, Median, & Mode (The number which appear most)
 
 4. Measures of Variablity:
 Range, variance & standard deviation
+
+## Normal Distribution 
+
+* The bell-shaped normal distribution is iconic in traditional statistics
+
+* Standardize - Subtract the mean and divide by the standard deviation.
+
+* Standard normal - A normal distribution with mean = 0 and standard deviation = 1.
+
+* QQ-Plot - A plot to visualize how close a sample distribution is to a specified distribution, e.g., the normal distribution.
+
+
 
 
 ## Inferential
