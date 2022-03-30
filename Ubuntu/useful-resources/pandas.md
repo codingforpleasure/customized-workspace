@@ -79,13 +79,14 @@
          * [Get data ditribution of the data per column](#get-data-ditribution-of-the-data-per-column)
       * [Convert each consecutive pair of columns into a tuple in a single column](#convert-each-consecutive-pair-of-columns-into-a-tuple-in-a-single-column)
       * [Mapping/Applying categorical values to a specified numerical values](#mappingapplying-categorical-values-to-a-specified-numerical-values)
+      * [confidence_interval](#confidence_interval)
       * [One hot encoding](#one-hot-encoding)
       * [Mathematical functions](#mathematical-functions)
          * [Calculate correlation for all numerical columns pairs](#calculate-correlation-for-all-numerical-columns-pairs)
       * [Execute sql](#execute-sql)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Wed 30 Mar 2022 18:20:00 IDT -->
+<!-- Added by: gil_diy, at: Wed 30 Mar 2022 18:21:09 IDT -->
 
 <!--te-->
 
@@ -865,7 +866,12 @@ df['eventStrength'] = interactions_df['eventType'].apply(lambda x: event_type_st
 dataset['Gender'] = dataset['Sex'].map({'female': 0, 'male': 1}).astype(int)
 ```
 
-## 
+## confidence_interval
+
+```python
+results = pd.Series(results)
+confidence_interval = list(results.quantile([0.05, 0.95]))
+```
 
 ## One hot encoding
 
