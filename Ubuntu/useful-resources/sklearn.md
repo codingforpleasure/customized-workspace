@@ -35,6 +35,7 @@
             * [Numerical values](#numerical-values)
          * [Approach 5: features selection using Chi2 Statistical Analysis](#approach-5-features-selection-using-chi2-statistical-analysis)
       * [<a href="https://youtu.be/_AWQ4Myxlcg?list=PLZoTAELRMXVPgjwJ8VyRoqmfNs2CJwhVH" rel="nofollow">Link</a>](#link)
+         * [Be aware of Random Forest feature importances (Danger!)](#be-aware-of-random-forest-feature-importances-danger)
       * [models](#models)
          * [Linear Regression](#linear-regression)
          * [PassiveAggressiveClassifier](#passiveaggressiveclassifier)
@@ -53,7 +54,7 @@
       * [Export image of decision tree](#export-image-of-decision-tree)
       * [metrics](#metrics)
 
-<!-- Added by: gil_diy, at: Sun 13 Mar 2022 19:29:37 IST -->
+<!-- Added by: gil_diy, at: Wed 30 Mar 2022 10:00:23 IDT -->
 
 <!--te-->
 
@@ -573,7 +574,6 @@ print()
 #### Categorical values
 
 
-[Link](http://www.my-website.com)
 
 #### Numerical values
 
@@ -641,6 +641,9 @@ for thresh in thresholds:
 
 ```
 
+### Be aware of Random Forest feature importances (Danger!)
+
+[Link](https://medium.com/@ali.soleymani.co/stop-using-random-forest-feature-importances-take-this-intuitive-approach-instead-4335205b933f)
 
 ## models
 
