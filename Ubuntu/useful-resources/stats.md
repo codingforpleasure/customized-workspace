@@ -6,6 +6,7 @@
       * [Binomial Distribution](#binomial-distribution)
       * [Poisson Distribution](#poisson-distribution)
       * [Exponential Distribution](#exponential-distribution)
+      * [Weibull Distribution](#weibull-distribution)
       * [Inferential](#inferential)
          * [One Tailed and Two Tailed Tests, Critical Values, &amp; Significance Level](#one-tailed-and-two-tailed-tests-critical-values--significance-level)
          * [Hypothesis Testing Problems Z Test &amp; T Statistics One &amp; Two Tailed Test](#hypothesis-testing-problems-z-test--t-statistics-one--two-tailed-test)
@@ -17,7 +18,7 @@
             * [ANOVA (Analysis Of Variance)](#anova-analysis-of-variance)
       * [QQplots (Quantile Quantile plot)](#qqplots-quantile-quantile-plot)
 
-<!-- Added by: gil_diy, at: Wed 30 Mar 2022 19:44:14 IDT -->
+<!-- Added by: gil_diy, at: Wed 30 Mar 2022 19:44:43 IDT -->
 
 <!--te-->
 
@@ -87,6 +88,15 @@ plt.show()
 
 ```python
 sample = stats.expon.rvs(scale=5, size=100)
+
+pd.Series(sample).plot.hist()
+plt.show()
+```
+
+## Weibull Distribution
+
+```python
+sample = stats.weibull_min.rvs(1.5, scale=5000, size=100)
 
 pd.Series(sample).plot.hist()
 plt.show()
