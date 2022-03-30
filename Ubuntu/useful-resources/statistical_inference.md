@@ -1,12 +1,21 @@
 <!--ts-->
    * [Statistical Inference](#statistical-inference)
+      * [Bootstrap](#bootstrap)
       * [Confidence Intervals](#confidence-intervals)
 
-<!-- Added by: gil_diy, at: Wed 30 Mar 2022 18:38:00 IDT -->
+<!-- Added by: gil_diy, at: Wed 30 Mar 2022 18:39:59 IDT -->
 
 <!--te-->
 
 # Statistical Inference
+
+## Bootstrap
+
+One easy and effective way to estimate the sampling distribution of a statistic, or of
+model parameters, is to draw additional samples, with replacement, from the sample
+itself and recalculate the statistic or model for each resample. This procedure is called
+the bootstrap, and it does not necessarily involve any assumptions about the data or
+the sample statistic being normally distributed.
 
 ## Confidence Intervals
 
