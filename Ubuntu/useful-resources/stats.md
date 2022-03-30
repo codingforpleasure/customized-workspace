@@ -17,8 +17,9 @@
             * [Chi-Square Tests](#chi-square-tests)
             * [ANOVA (Analysis Of Variance)](#anova-analysis-of-variance)
       * [QQplots (Quantile Quantile plot)](#qqplots-quantile-quantile-plot)
+      * [Hypothesis Tests](#hypothesis-tests)
 
-<!-- Added by: gil_diy, at: Wed 30 Mar 2022 19:44:43 IDT -->
+<!-- Added by: gil_diy, at: Wed 30 Mar 2022 20:33:59 IDT -->
 
 <!--te-->
 
@@ -177,4 +178,6 @@ A two-way ANOVA | is used to determine whether or not there is a statistically s
 ## QQplots (Quantile Quantile plot)
 
 Give a data of 15 genes we might ask is this data is normally distributed?
+
+## Hypothesis Tests
 
