@@ -2,6 +2,7 @@
    * [Statistics](#statistics)
       * [Descriptive](#descriptive)
       * [Normal Distribution](#normal-distribution)
+      * [Student's t-Distribution](#students-t-distribution)
       * [Inferential](#inferential)
          * [One Tailed and Two Tailed Tests, Critical Values, &amp; Significance Level](#one-tailed-and-two-tailed-tests-critical-values--significance-level)
          * [Hypothesis Testing Problems Z Test &amp; T Statistics One &amp; Two Tailed Test](#hypothesis-testing-problems-z-test--t-statistics-one--two-tailed-test)
@@ -13,7 +14,7 @@
             * [ANOVA (Analysis Of Variance)](#anova-analysis-of-variance)
       * [QQplots (Quantile Quantile plot)](#qqplots-quantile-quantile-plot)
 
-<!-- Added by: gil_diy, at: Wed 30 Mar 2022 19:29:52 IDT -->
+<!-- Added by: gil_diy, at: Wed 30 Mar 2022 19:37:28 IDT -->
 
 <!--te-->
 
@@ -50,6 +51,8 @@ Range, variance & standard deviation
 <p align="center">
   <img width="600" src="images/statistics/normal_bell.png" title="Look into the image">
 </p>
+
+## Student's t-Distribution
 
 
 
