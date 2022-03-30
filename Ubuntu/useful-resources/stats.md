@@ -13,7 +13,7 @@
             * [ANOVA (Analysis Of Variance)](#anova-analysis-of-variance)
       * [QQplots (Quantile Quantile plot)](#qqplots-quantile-quantile-plot)
 
-<!-- Added by: gil_diy, at: Wed 30 Mar 2022 18:49:18 IDT -->
+<!-- Added by: gil_diy, at: Wed 30 Mar 2022 18:49:24 IDT -->
 
 <!--te-->
 
@@ -45,7 +45,7 @@ Range, variance & standard deviation
 
 
 <p align="center">
-  <img width="400" src="images/statistics/normal_bell.png" title="Look into the image">
+  <img width="600" src="images/statistics/normal_bell.png" title="Look into the image">
 </p>
 
 ## Inferential
