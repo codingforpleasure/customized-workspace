@@ -114,7 +114,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Wed 30 Mar 2022 10:10:22 IDT -->
+<!-- Added by: gil_diy, at: Wed 30 Mar 2022 10:14:36 IDT -->
 
 <!--te-->
 
@@ -1734,7 +1734,7 @@ Model | Finetune | Prerequisite
 Here are three examples of using torchsummary to calculate total parameters and memory:
 
 <p align="center">
-  <img width="600" src="images/pytorch/pytorch_summary.png" title="Look into the image">
+  <img width="700" src="images/pytorch/pytorch_summary.png" title="Look into the image">
 </p>
 
 ### Display images as grid
