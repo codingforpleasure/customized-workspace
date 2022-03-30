@@ -13,7 +13,7 @@
             * [ANOVA (Analysis Of Variance)](#anova-analysis-of-variance)
       * [QQplots (Quantile Quantile plot)](#qqplots-quantile-quantile-plot)
 
-<!-- Added by: gil_diy, at: Wed 30 Mar 2022 18:49:24 IDT -->
+<!-- Added by: gil_diy, at: Wed 30 Mar 2022 19:26:49 IDT -->
 
 <!--te-->
 
@@ -43,6 +43,7 @@ Range, variance & standard deviation
 
 * QQ-Plot - A plot to visualize how close a sample distribution is to a specified distribution, e.g., the normal distribution.
 
+* While raw data is typically not normally distributed, errors often are, as are averages and totals in large samples.
 
 <p align="center">
   <img width="600" src="images/statistics/normal_bell.png" title="Look into the image">
