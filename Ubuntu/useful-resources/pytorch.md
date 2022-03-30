@@ -89,6 +89,7 @@
          * [Install torchvision](#install-torchvision)
          * [Show all pretrained models available in pytorch vision](#show-all-pretrained-models-available-in-pytorch-vision)
          * [Finetuning Torchvision Models](#finetuning-torchvision-models)
+         * [torchsummary](#torchsummary)
          * [Display images as grid](#display-images-as-grid)
          * [Augmentations](#augmentations)
       * [Transfer learning](#transfer-learning)
@@ -113,7 +114,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Sat 26 Mar 2022 19:30:55 IDT -->
+<!-- Added by: gil_diy, at: Wed 30 Mar 2022 10:07:46 IDT -->
 
 <!--te-->
 
@@ -1727,6 +1728,14 @@ Model | Finetune | Prerequisite
  Squeezenet |`model.classifier[1] = nn.Conv2d(512, num_classes, kernel_size=(1,1), stride=(1,1))`|  requires the input size to be (224,224)
 
 [Reference](https://pytorch.org/tutorials/beginner/finetuning_torchvision_models_tutorial.html)
+
+### torchsummary
+
+Here are three examples of using torchsummary to calculate total parameters and memory:
+
+<p align="center">
+  <img width="600" src="images/" title="Look into the image">
+</p>
 
 ### Display images as grid
 
