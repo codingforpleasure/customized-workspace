@@ -2,7 +2,7 @@
    * [Statistical Inference](#statistical-inference)
       * [Confidence Intervals](#confidence-intervals)
 
-<!-- Added by: gil_diy, at: Wed 30 Mar 2022 18:28:49 IDT -->
+<!-- Added by: gil_diy, at: Wed 30 Mar 2022 18:29:30 IDT -->
 
 <!--te-->
 
@@ -25,3 +25,6 @@ The bootstrap is a general tool that can be used to generate confidence interval
 most statistics, or model parameters. 
 
 * Well explained in `page 67` from the book 
+
+The probability question associated with a confidence interval starts out with the phrase “Given a sampling procedure and a population, what is the probability that...” To go in the opposite direc‐
+tion, “Given a sample result, what is the probability that (something is true about the population)?” involves more complex calculations and deeper imponderables.
