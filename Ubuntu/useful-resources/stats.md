@@ -14,7 +14,7 @@
             * [ANOVA (Analysis Of Variance)](#anova-analysis-of-variance)
       * [QQplots (Quantile Quantile plot)](#qqplots-quantile-quantile-plot)
 
-<!-- Added by: gil_diy, at: Wed 30 Mar 2022 19:37:28 IDT -->
+<!-- Added by: gil_diy, at: Wed 30 Mar 2022 19:37:44 IDT -->
 
 <!--te-->
 
@@ -54,7 +54,7 @@ Range, variance & standard deviation
 
 ## Student's t-Distribution
 
-
+The t-distribution is a normally shaped distribution, except that it is a bit thicker and longer on the tails. It is used extensively in depicting distributions of sample statistics.
 
 ## Inferential
 
