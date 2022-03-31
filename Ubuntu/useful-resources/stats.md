@@ -19,7 +19,7 @@
       * [QQplots (Quantile Quantile plot)](#qqplots-quantile-quantile-plot)
       * [Hypothesis Tests](#hypothesis-tests)
 
-<!-- Added by: gil_diy, at: Wed 30 Mar 2022 20:33:59 IDT -->
+<!-- Added by: gil_diy, at: Thu 31 Mar 2022 10:16:32 IDT -->
 
 <!--te-->
 
@@ -150,6 +150,12 @@ Reference (https://www.youtube.com/watch?v=76VruarGn2Q)
 ### Summary types of test
 
 #### Hypothesis Testing
+
+t-test assumptions:
+
+* The variable under study should be approximately normally distributed.
+* The variable under study should have no outliers.
+* The observations in the sample should be independent.
 
 Test name | Description | Link
 ------------|-----------|---
