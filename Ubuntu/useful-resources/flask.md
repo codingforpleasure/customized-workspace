@@ -14,7 +14,7 @@
          * [Flask](#flask-1)
          * [How to prepare Flask in production?](#how-to-prepare-flask-in-production)
 
-<!-- Added by: gil_diy, at: Sun 03 Apr 2022 14:37:59 IDT -->
+<!-- Added by: gil_diy, at: Sun 03 Apr 2022 14:38:02 IDT -->
 
 <!--te-->
 
