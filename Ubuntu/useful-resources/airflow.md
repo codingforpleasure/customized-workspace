@@ -6,7 +6,7 @@
       * [Airflow features](#airflow-features)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Tue 29 Mar 2022 11:27:26 IDT -->
+<!-- Added by: gil_diy, at: Sun 03 Apr 2022 17:45:14 IDT -->
 
 <!--te-->
 
@@ -37,6 +37,9 @@ Example of a naive approach:
 * Writing a script to pull data from database and send it to HDFS to process
 
 * Schedule the script as cronjob
+
+
+[Link](https://youtu.be/AHMm1wfGuHE)
 
 ### Problems
 
