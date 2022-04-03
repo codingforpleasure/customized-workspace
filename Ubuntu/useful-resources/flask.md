@@ -14,7 +14,7 @@
          * [Flask](#flask-1)
          * [How to prepare Flask in production?](#how-to-prepare-flask-in-production)
 
-<!-- Added by: gil_diy, at: Sun 03 Apr 2022 14:38:43 IDT -->
+<!-- Added by: gil_diy, at: Sun 03 Apr 2022 14:39:07 IDT -->
 
 <!--te-->
 
@@ -163,6 +163,23 @@ Many more examples are shown here: [Link](http://jinja.pocoo.org/docs/2.10/templ
 
 
 ### Templates inheritance
+
+
+**base:**
+
+```html
+<!doctype html>
+<html>
+<head>
+    <title>{% block title %}{% endblock %}</title>
+</head>
+    <body>
+        <hi>Gil's Website</hi>
+        {% block content %}
+        {% endblock %}
+    </body>
+</html>
+```
 
 ```html
 {% extends "base.html" %}
