@@ -4,14 +4,16 @@
       * [Resolving the issue OSError: [Errno 98] Address already in use](#resolving-the-issue-oserror-errno-98-address-already-in-use)
       * [Running flask](#running-flask)
       * [Poject structure](#poject-structure)
+      * [Checking api with postman](#checking-api-with-postman)
+         * [POST](#post)
+         * [GET](#get)
       * [Template](#template)
          * [Rendering Templates](#rendering-templates)
          * [Flask forms](#flask-forms)
-         * [Checking api with postman](#checking-api-with-postman)
          * [Flask](#flask-1)
          * [How to prepare Flask in production?](#how-to-prepare-flask-in-production)
 
-<!-- Added by: gil_diy, at: Sun 03 Apr 2022 12:31:29 IDT -->
+<!-- Added by: gil_diy, at: Sun 03 Apr 2022 12:32:13 IDT -->
 
 <!--te-->
 
@@ -97,6 +99,18 @@ Moreover there are some essentials files:
 * config.py stores the configuration settings.
 * flasky.py defines the Flask application instance, and also includes a few tasks that help manage the application.
 
+
+## Checking api with postman
+
+### POST
+
+<p align="center">
+  <img width="800" src="images/flask/postman_checking_api.png" title="Look into the image">
+</p>
+
+### GET
+
+
 ## Template
 
 A template is a file that contains the text of a response, with placeholder variables for the dynamic parts that will be known only in the context of a request. The process that replaces the variables with actual values and returns a final response string is called rendering. For the task of rendering templates, Flask uses a powerful template engine called Jinja2.
@@ -151,11 +165,6 @@ Many more examples are shown here: [Link](http://jinja.pocoo.org/docs/2.10/templ
 [Registration Form](https://youtu.be/UIJKdCIEXUQ?t=153)
 [Login Form](https://youtu.be/UIJKdCIEXUQ?t=528)
 
-### Checking api with postman
-
-<p align="center">
-  <img width="800" src="images/flask/postman_checking_api.png" title="Look into the image">
-</p>
 
 
 ### Flask 
