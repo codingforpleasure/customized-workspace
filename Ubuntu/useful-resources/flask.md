@@ -7,10 +7,11 @@
       * [Template](#template)
          * [Rendering Templates](#rendering-templates)
          * [Flask forms](#flask-forms)
+         * [Checking api with postman](#checking-api-with-postman)
          * [Flask](#flask-1)
          * [How to prepare Flask in production?](#how-to-prepare-flask-in-production)
 
-<!-- Added by: gil_diy, at: Tue 29 Mar 2022 11:19:03 IDT -->
+<!-- Added by: gil_diy, at: Sun 03 Apr 2022 12:30:10 IDT -->
 
 <!--te-->
 
@@ -149,6 +150,12 @@ Many more examples are shown here: [Link](http://jinja.pocoo.org/docs/2.10/templ
 
 [Registration Form](https://youtu.be/UIJKdCIEXUQ?t=153)
 [Login Form](https://youtu.be/UIJKdCIEXUQ?t=528)
+
+### Checking api with postman
+
+<p align="center">
+  <img width="400" src="images//" title="Look into the image">
+</p>
 
 
 ### Flask 
