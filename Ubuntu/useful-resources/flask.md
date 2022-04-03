@@ -9,11 +9,12 @@
          * [GET](#get)
       * [Template](#template)
          * [Rendering Templates](#rendering-templates)
+         * [Templates inheritance](#templates-inheritance)
          * [Flask forms](#flask-forms)
          * [Flask](#flask-1)
          * [How to prepare Flask in production?](#how-to-prepare-flask-in-production)
 
-<!-- Added by: gil_diy, at: Sun 03 Apr 2022 12:32:13 IDT -->
+<!-- Added by: gil_diy, at: Sun 03 Apr 2022 14:37:59 IDT -->
 
 <!--te-->
 
@@ -159,6 +160,13 @@ The html template (jinja):
 ```
 
 Many more examples are shown here: [Link](http://jinja.pocoo.org/docs/2.10/templates/)
+
+
+### Templates inheritance
+
+```python
+
+```
 
 ### Flask forms
 
