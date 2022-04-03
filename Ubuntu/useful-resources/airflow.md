@@ -4,9 +4,10 @@
       * [How things has been done without Airflow?](#how-things-has-been-done-without-airflow)
          * [Problems](#problems)
       * [Airflow features](#airflow-features)
+      * [Code examples](#code-examples)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Sun 03 Apr 2022 17:45:22 IDT -->
+<!-- Added by: gil_diy, at: Sun 03 Apr 2022 18:04:29 IDT -->
 
 <!--te-->
 
@@ -81,6 +82,11 @@ Example of a naive approach:
 
 
 * A framework to define tasks & dependencies by Airbnb
+
+
+## Code examples
+
+[Link](https://github.com/apache/airflow/tree/main/airflow/example_dags)
 
 ## Reference
 
