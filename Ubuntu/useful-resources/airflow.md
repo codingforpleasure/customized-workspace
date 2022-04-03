@@ -5,9 +5,10 @@
          * [Problems](#problems)
       * [Airflow features](#airflow-features)
       * [Code examples](#code-examples)
+      * [Setup airflow with python](#setup-airflow-with-python)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Sun 03 Apr 2022 18:04:29 IDT -->
+<!-- Added by: gil_diy, at: Sun 03 Apr 2022 19:07:51 IDT -->
 
 <!--te-->
 
@@ -87,6 +88,11 @@ Example of a naive approach:
 ## Code examples
 
 [Link](https://github.com/apache/airflow/tree/main/airflow/example_dags)
+
+## Setup airflow with python
+
+[Link](https://youtu.be/fRZaJU1HJnk)
+
 
 ## Reference
 
