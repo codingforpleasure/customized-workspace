@@ -6,7 +6,7 @@
       * [Airflow features](#airflow-features)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Sun 03 Apr 2022 17:45:17 IDT -->
+<!-- Added by: gil_diy, at: Sun 03 Apr 2022 17:45:22 IDT -->
 
 <!--te-->
 
@@ -39,7 +39,7 @@ Example of a naive approach:
 * Schedule the script as cronjob
 
 
-[Link](https://youtu.be/AHMm1wfGuHE)
+[Well video](https://youtu.be/AHMm1wfGuHE)
 
 ### Problems
 
