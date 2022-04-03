@@ -14,7 +14,7 @@
          * [Flask](#flask-1)
          * [How to prepare Flask in production?](#how-to-prepare-flask-in-production)
 
-<!-- Added by: gil_diy, at: Sun 03 Apr 2022 14:39:10 IDT -->
+<!-- Added by: gil_diy, at: Sun 03 Apr 2022 14:39:13 IDT -->
 
 <!--te-->
 
@@ -180,6 +180,8 @@ Many more examples are shown here: [Link](http://jinja.pocoo.org/docs/2.10/templ
     </body>
 </html>
 ```
+
+**base:**
 
 ```html
 {% extends "base.html" %}
