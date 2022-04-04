@@ -8,7 +8,7 @@
       * [Setup airflow with python](#setup-airflow-with-python)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Sun 03 Apr 2022 19:07:51 IDT -->
+<!-- Added by: gil_diy, at: Mon 04 Apr 2022 14:39:32 IDT -->
 
 <!--te-->
 
@@ -85,9 +85,19 @@ Example of a naive approach:
 * A framework to define tasks & dependencies by Airbnb
 
 
+## 
+* Python Operators
+* Bash Operators
+* Sensors
+* Tansfers
+
+
 ## Code examples
 
-[Link](https://github.com/apache/airflow/tree/main/airflow/example_dags)
+[DAGs examples](https://github.com/apache/airflow/tree/main/airflow/example_dags)
+
+[](https://github.com/apache/airflow/tree/main/airflow/example_dags)
+
 
 ## Setup airflow with python
 
