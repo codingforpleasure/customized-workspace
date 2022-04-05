@@ -7,7 +7,7 @@
          * [Desciminator](#desciminator)
          * [Generator](#generator)
 
-<!-- Added by: gil_diy, at: Wed 06 Apr 2022 01:14:02 IDT -->
+<!-- Added by: gil_diy, at: Wed 06 Apr 2022 01:14:24 IDT -->
 
 <!--te-->
 
@@ -75,8 +75,6 @@ You can see the boost of performance of the **Skip connection**:
 <p align="center">
   <img width="400" src="images/cnn/resnet_performance_plain_vs_skipconnection.png" title="Look into the image">
 </p>
-
-It is worth mentioning, that for this technique to work the dimension of z[l+2] and a[l] should be similar as they need to be summed up (evident from figure 3). Depending on dimension of z[l+2] and a[l], there are two kinds of residual blocks:
 
 
 [Pytorch ResNet implementation from Scratch](https://youtu.be/DkNIBBBvcPs)
