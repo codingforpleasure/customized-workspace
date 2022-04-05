@@ -7,7 +7,7 @@
          * [Desciminator](#desciminator)
          * [Generator](#generator)
 
-<!-- Added by: gil_diy, at: Wed 06 Apr 2022 01:10:27 IDT -->
+<!-- Added by: gil_diy, at: Wed 06 Apr 2022 01:12:00 IDT -->
 
 <!--te-->
 
@@ -62,6 +62,7 @@ The **skip connections** in ResNet **solve the problem of vanishing gradient** i
 
 * Using ResNet has significantly enhanced the performance of neural networks with more layers and here is the plot of error when comparing it with neural networks with plain layers.
 
+* It is worth mentioning, that for this technique to work the dimension of z[l+2] and a[l] should be similar as they need to be summed up (evident from figure 3). Depending on dimension of z[l+2] and a[l], there are two kinds of residual blocks:
 
 <p align="center">
   <img width="400" src="images/cnn/Resnet_architecture.png" title="Look into the image">
