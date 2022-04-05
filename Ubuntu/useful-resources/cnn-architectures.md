@@ -7,7 +7,7 @@
          * [Desciminator](#desciminator)
          * [Generator](#generator)
 
-<!-- Added by: gil_diy, at: Wed 06 Apr 2022 00:44:21 IDT -->
+<!-- Added by: gil_diy, at: Wed 06 Apr 2022 01:10:22 IDT -->
 
 <!--te-->
 
@@ -60,7 +60,7 @@ This connection is called **’skip connection’** and is the core of residual 
 
 The **skip connections** in ResNet **solve the problem of vanishing gradient** in deep neural networks by allowing this alternate shortcut path for the gradient to flow through.
 
-* Using ResNet has significantly enhanced the performance of neural networks with more layers and here is the plot of error% when comparing it with neural networks with plain layers.
+* Using ResNet has significantly enhanced the performance of neural networks with more layers and here is the plot of error when comparing it with neural networks with plain layers.
 
 
 <p align="center">
