@@ -16,9 +16,10 @@
          * [For CPP language](#for-cpp-language)
             * [Example #1](#example-1-1)
       * [Clion Makefile](#clion-makefile)
+         * [Add libraries](#add-libraries)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Thu 10 Jun 2021 12:55:33 IDT -->
+<!-- Added by: gil_diy, at: Tue 05 Apr 2022 20:45:09 IDT -->
 
 <!--te-->
 
@@ -316,6 +317,22 @@ In order to invoke the CMakeLists.txt you should navigate into the directory whi
 cmake .
 ```
 
+### Add libraries
+
+```bash
+cmake_minimum_required(VERSION 3.21)
+project(my_final_project C)
+
+set(CMAKE_C_STANDARD 11)
+
+add_executable(my_final_project main.c)
+
+target_link_libraries(my_final_project pthread)
+target_link_libraries(my_final_project curl)
+target_link_libraries(my_final_project rt)
+````
+
+Works well!
 
 [cmake well explained thoroughly](https://youtu.be/mKZ-i-UfGgQ)
 
