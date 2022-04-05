@@ -19,7 +19,7 @@
          * [Add libraries](#add-libraries)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Tue 05 Apr 2022 20:46:18 IDT -->
+<!-- Added by: gil_diy, at: Tue 05 Apr 2022 20:46:24 IDT -->
 
 <!--te-->
 
@@ -319,7 +319,8 @@ cmake .
 
 ### Add libraries
 
-for example
+Example here:
+
 ```bash
 cmake_minimum_required(VERSION 3.21)
 project(my_final_project C)
