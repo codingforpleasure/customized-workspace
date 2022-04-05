@@ -7,7 +7,7 @@
          * [Desciminator](#desciminator)
          * [Generator](#generator)
 
-<!-- Added by: gil_diy, at: Wed 06 Apr 2022 00:29:54 IDT -->
+<!-- Added by: gil_diy, at: Wed 06 Apr 2022 00:30:10 IDT -->
 
 <!--te-->
 
@@ -70,6 +70,10 @@ The formulation of `F(x)+x` can be realized by feedforward neural networks with 
 
 <p align="center">
   <img width="400" src="images/cnn/residual_block.png" title="Look into the image">
+</p>
+
+<p align="center">
+  <img width="400" src="images/cnn/residual_block2.png" title="Look into the image">
 </p>
 
 [Pytorch ResNet implementation from Scratch](https://youtu.be/DkNIBBBvcPs)
