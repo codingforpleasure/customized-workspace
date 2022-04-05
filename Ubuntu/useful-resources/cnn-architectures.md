@@ -7,7 +7,7 @@
          * [Desciminator](#desciminator)
          * [Generator](#generator)
 
-<!-- Added by: gil_diy, at: Wed 06 Apr 2022 00:30:10 IDT -->
+<!-- Added by: gil_diy, at: Wed 06 Apr 2022 00:32:44 IDT -->
 
 <!--te-->
 
@@ -75,6 +75,10 @@ The formulation of `F(x)+x` can be realized by feedforward neural networks with 
 <p align="center">
   <img width="400" src="images/cnn/residual_block2.png" title="Look into the image">
 </p>
+
+* This identity mapping created by these residual blocks is the reason why the addition of extra layers does not affect a residual network’s performance. Performance improvement is achieved whenever the extra layers learn some meaningful information from the data. While, the presence of the residual blocks prevents the loss of performance whenever, the activations tend to vanish or explode.
+
+**Reminder:** identity map is a function that always returns the value that was used as its argument, unchanged
 
 [Pytorch ResNet implementation from Scratch](https://youtu.be/DkNIBBBvcPs)
 
