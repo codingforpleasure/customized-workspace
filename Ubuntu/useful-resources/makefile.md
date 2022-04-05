@@ -19,7 +19,7 @@
          * [Add libraries](#add-libraries)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Tue 05 Apr 2022 20:46:24 IDT -->
+<!-- Added by: gil_diy, at: Tue 05 Apr 2022 20:46:29 IDT -->
 
 <!--te-->
 
@@ -335,8 +335,6 @@ target_link_libraries(my_final_project pthread)
 target_link_libraries(my_final_project curl)
 target_link_libraries(my_final_project rt)
 ````
-
-
 
 [cmake well explained thoroughly](https://youtu.be/mKZ-i-UfGgQ)
 
