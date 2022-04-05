@@ -7,7 +7,7 @@
          * [Desciminator](#desciminator)
          * [Generator](#generator)
 
-<!-- Added by: gil_diy, at: Wed 06 Apr 2022 00:32:49 IDT -->
+<!-- Added by: gil_diy, at: Wed 06 Apr 2022 00:44:18 IDT -->
 
 <!--te-->
 
@@ -40,11 +40,20 @@ In the context of residual neural networks, a `non-residual network` may be desc
   <img width="400" src="images/cnn/resnet_building_block_skip_connection.jpg" title="tool tip here">
 </p>
 
+The formulation of `F(x)+x` can be realized by feedforward neural networks with "shortcut connections", shortcut connections are those skipping one or more layers. the sortcut connections simply perform `identity mapping`, and their outputs are added to the outputs of the stacked layers.
 
-<!-- <p align="center" style="width:400px;" >
-  <img src="images/cnn/resnet_building_block_skip_connection.jpg" title="tool tip here">
-</p> -->
 
+<p align="center">
+  <img width="400" src="images/cnn/residual_block.png" title="Look into the image">
+</p>
+
+<p align="center">
+  <img width="400" src="images/cnn/residual_block2.png" title="Look into the image">
+</p>
+
+* This identity mapping created by these residual blocks is the reason why the addition of extra layers does not affect a residual network’s performance. Performance improvement is achieved whenever the extra layers learn some meaningful information from the data. While, the presence of the residual blocks prevents the loss of performance whenever, the activations tend to vanish or explode.
+
+**Reminder:** identity map is a function that always returns the value that was used as its argument, unchanged.
 
 The very first thing we notice to be different is that there is a direct connection which skips some layers(may vary in different models) in between.
 This connection is called **’skip connection’** and is the core of residual blocks.
@@ -65,20 +74,7 @@ You can see the boost of performance of the **Skip connection**:
 </p>
 
 
-The formulation of `F(x)+x` can be realized by feedforward neural networks with "shortcut connections", shortcut connections are those skipping one or more layers. the sortcut connections simply perform `identity mapping`, and their outputs are added to the outputs of the stacked layers.
 
-
-<p align="center">
-  <img width="400" src="images/cnn/residual_block.png" title="Look into the image">
-</p>
-
-<p align="center">
-  <img width="400" src="images/cnn/residual_block2.png" title="Look into the image">
-</p>
-
-* This identity mapping created by these residual blocks is the reason why the addition of extra layers does not affect a residual network’s performance. Performance improvement is achieved whenever the extra layers learn some meaningful information from the data. While, the presence of the residual blocks prevents the loss of performance whenever, the activations tend to vanish or explode.
-
-**Reminder:** identity map is a function that always returns the value that was used as its argument, unchanged.
 
 [Pytorch ResNet implementation from Scratch](https://youtu.be/DkNIBBBvcPs)
 
