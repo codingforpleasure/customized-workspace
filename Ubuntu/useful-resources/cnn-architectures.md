@@ -7,7 +7,7 @@
          * [Desciminator](#desciminator)
          * [Generator](#generator)
 
-<!-- Added by: gil_diy, at: Wed 06 Apr 2022 01:12:54 IDT -->
+<!-- Added by: gil_diy, at: Wed 06 Apr 2022 01:13:22 IDT -->
 
 <!--te-->
 
@@ -40,6 +40,9 @@ In the context of residual neural networks, a `non-residual network` may be desc
   <img width="400" src="images/cnn/resnet_building_block_skip_connection.jpg" title="tool tip here">
 </p>
 
+The very first thing we notice to be different is that there is a direct connection which skips some layers(may vary in different models) in between.
+This connection is called **’skip connection’** and is the core of residual blocks.
+
 The formulation of `F(x)+x` can be realized by feedforward neural networks with "shortcut connections", shortcut connections are those skipping one or more layers. the sortcut connections simply perform `identity mapping`, and their outputs are added to the outputs of the stacked layers.
 
 
@@ -57,8 +60,7 @@ The formulation of `F(x)+x` can be realized by feedforward neural networks with 
 
 ------------------------------------------------------------
 
-The very first thing we notice to be different is that there is a direct connection which skips some layers(may vary in different models) in between.
-This connection is called **’skip connection’** and is the core of residual blocks.
+
 
 The **skip connections** in ResNet **solve the problem of vanishing gradient** in deep neural networks by allowing this alternate shortcut path for the gradient to flow through.
 
