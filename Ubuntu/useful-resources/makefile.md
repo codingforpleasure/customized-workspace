@@ -19,7 +19,7 @@
          * [Add libraries](#add-libraries)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Tue 05 Apr 2022 20:45:11 IDT -->
+<!-- Added by: gil_diy, at: Tue 05 Apr 2022 20:46:06 IDT -->
 
 <!--te-->
 
@@ -319,6 +319,7 @@ cmake .
 
 ### Add libraries
 
+for example
 ```bash
 cmake_minimum_required(VERSION 3.21)
 project(my_final_project C)
@@ -327,12 +328,14 @@ set(CMAKE_C_STANDARD 11)
 
 add_executable(my_final_project main.c)
 
+# target_link_libraries should appear after add_executable
+
 target_link_libraries(my_final_project pthread)
 target_link_libraries(my_final_project curl)
 target_link_libraries(my_final_project rt)
 ````
 
-Works well!
+
 
 [cmake well explained thoroughly](https://youtu.be/mKZ-i-UfGgQ)
 
