@@ -13,7 +13,7 @@
          * [Desciminator](#desciminator)
          * [Generator](#generator)
 
-<!-- Added by: gil_diy, at: Thu 07 Apr 2022 00:34:19 IDT -->
+<!-- Added by: gil_diy, at: Thu 07 Apr 2022 00:34:51 IDT -->
 
 <!--te-->
 
@@ -62,6 +62,8 @@ Taken from Resnet we can see:
 <p align="center">
   <img width="600" src="images/cnn/cnn_conv_1_1_bottle_neck.png" title="Look into the image">
 </p>
+
+3. ** **
 
 
 ## VGG
