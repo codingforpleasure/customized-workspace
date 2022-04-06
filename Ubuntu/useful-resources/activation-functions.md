@@ -7,9 +7,10 @@
          * [ReLU (Rectified Linear Unit)](#relu-rectified-linear-unit)
          * [LeakyReLU](#leakyrelu)
          * [Gelu (Gaussian Error Linear Unit)](#gelu-gaussian-error-linear-unit)
+         * [Application activation functions usage](#application-activation-functions-usage)
       * [Nicely summary table](#nicely-summary-table)
 
-<!-- Added by: gil_diy, at: Wed 06 Apr 2022 12:04:09 IDT -->
+<!-- Added by: gil_diy, at: Wed 06 Apr 2022 12:40:10 IDT -->
 
 <!--te-->
 
@@ -81,6 +82,15 @@ large enough DNN with nonlinear activations can theoretically approximate any co
 
 
 [Link](https://medium.com/@shoray.goel/gelu-gaussian-error-linear-unit-4ec59fb2e47c)
+
+
+### Application activation functions usage
+
+ Activation function | Used in models
+------------|-----
+ ReLU | Used in AlexNet
+ GELU | Used in BERT
+
 
 ## Nicely summary table
 
