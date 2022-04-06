@@ -9,12 +9,13 @@
       * [Inception](#inception)
          * [Inception Block/module](#inception-blockmodule)
       * [Sqeeezenet](#sqeeezenet)
+         * [Fire Block/Module](#fire-blockmodule)
          * [What does 1x1 convolution mean in a neural network?](#what-does-1x1-convolution-mean-in-a-neural-network)
       * [GAN - Generative Adversial Networks](#gan---generative-adversial-networks)
          * [Desciminator](#desciminator)
          * [Generator](#generator)
 
-<!-- Added by: gil_diy, at: Thu 07 Apr 2022 00:49:35 IDT -->
+<!-- Added by: gil_diy, at: Thu 07 Apr 2022 00:55:49 IDT -->
 
 <!--te-->
 
@@ -178,6 +179,8 @@ You can see the boost of performance of the **Skip connection**:
 ## Sqeeezenet
 
 CNN Model called SqueezeNet that retains AlexNet level accuracy while 50X times smaller in terms of parameters.
+
+### Fire Block/Module
 
 [Article](https://openreview.net/pdf?id=S1xh5sYgx)
 
