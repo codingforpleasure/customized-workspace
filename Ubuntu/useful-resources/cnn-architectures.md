@@ -13,7 +13,7 @@
          * [Desciminator](#desciminator)
          * [Generator](#generator)
 
-<!-- Added by: gil_diy, at: Thu 07 Apr 2022 00:34:16 IDT -->
+<!-- Added by: gil_diy, at: Thu 07 Apr 2022 00:34:19 IDT -->
 
 <!--te-->
 
@@ -172,7 +172,7 @@ You can see the boost of performance of the **Skip connection**:
 [Article](https://arxiv.org/pdf/1409.4842.pdf)
 
 
-
+### 
 
 ### What does 1x1 convolution mean in a neural network?
 
