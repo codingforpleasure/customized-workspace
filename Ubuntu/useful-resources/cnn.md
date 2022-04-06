@@ -49,7 +49,7 @@
       * [Well known CNN Architectures](#well-known-cnn-architectures)
       * [Videos of handwritten flowchart](#videos-of-handwritten-flowchart)
 
-<!-- Added by: gil_diy, at: Wed 06 Apr 2022 16:49:11 IDT -->
+<!-- Added by: gil_diy, at: Wed 06 Apr 2022 16:49:14 IDT -->
 
 <!--te-->
 # CNN
@@ -188,7 +188,6 @@ param_number = output_channel_number * (input_channel_number*kernel_height*kerne
 ```python
 param_number = output_channel_number * (input_channel_number + 1)
 ```
-
 
 [Reference](https://towardsdatascience.com/how-to-calculate-the-number-of-parameters-in-keras-models-710683dae0ca)
 
