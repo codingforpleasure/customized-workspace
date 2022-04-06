@@ -11,7 +11,7 @@
          * [Desciminator](#desciminator)
          * [Generator](#generator)
 
-<!-- Added by: gil_diy, at: Wed 06 Apr 2022 23:34:54 IDT -->
+<!-- Added by: gil_diy, at: Wed 06 Apr 2022 23:35:14 IDT -->
 
 <!--te-->
 
@@ -34,7 +34,7 @@
 * Now consider inputs with large number of channels — 192 for example. If we want to reduce the depth and but keep the Height X Width of the feature maps (Receptive field) the same, then we can choose 1X1 filters (remember Number of filters = Output Channels) to achieve this effect. This effect of cross channel down-sampling is called ‘Dimensionality reduction’.
 
 <p align="center">
-  <img width="400" src="images/cnn/cnn_conv_1_1.png" title="Look into the image">
+  <img width="600" src="images/cnn/cnn_conv_1_1.png" title="Look into the image">
 </p>
 
 [Article](https://arxiv.org/pdf/1312.4400.pdf)
