@@ -10,7 +10,7 @@
          * [Desciminator](#desciminator)
          * [Generator](#generator)
 
-<!-- Added by: gil_diy, at: Wed 06 Apr 2022 23:09:06 IDT -->
+<!-- Added by: gil_diy, at: Wed 06 Apr 2022 23:09:09 IDT -->
 
 <!--te-->
 
@@ -124,7 +124,6 @@ You can see the boost of performance of the **Skip connection**:
 [Article](https://arxiv.org/pdf/1409.4842.pdf)
 
 ### What does 1x1 convolution mean in a neural network?
-
 
 
 [Inception Network Motivation](https://youtu.be/C86ZXvgpejM)
