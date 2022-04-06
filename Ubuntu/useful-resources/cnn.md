@@ -49,7 +49,7 @@
       * [Well known CNN Architectures](#well-known-cnn-architectures)
       * [Videos of handwritten flowchart](#videos-of-handwritten-flowchart)
 
-<!-- Added by: gil_diy, at: Wed 06 Apr 2022 16:45:47 IDT -->
+<!-- Added by: gil_diy, at: Wed 06 Apr 2022 16:49:11 IDT -->
 
 <!--te-->
 # CNN
@@ -186,8 +186,11 @@ param_number = output_channel_number * (input_channel_number*kernel_height*kerne
 #### Number of parameters for Dense Layer
 
 ```python
-
+param_number = output_channel_number * (input_channel_number + 1)
 ```
+
+
+[Reference](https://towardsdatascience.com/how-to-calculate-the-number-of-parameters-in-keras-models-710683dae0ca)
 
 ## ReLU the Activation layer of choice for CNNs
 
