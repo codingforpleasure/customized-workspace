@@ -9,7 +9,7 @@
          * [Desciminator](#desciminator)
          * [Generator](#generator)
 
-<!-- Added by: gil_diy, at: Wed 06 Apr 2022 23:04:17 IDT -->
+<!-- Added by: gil_diy, at: Wed 06 Apr 2022 23:04:45 IDT -->
 
 <!--te-->
 
@@ -120,7 +120,7 @@ You can see the boost of performance of the **Skip connection**:
 
 ## Inception Block
 
-
+[Inception Network Motivation](https://youtu.be/C86ZXvgpejM)
 
 
 
