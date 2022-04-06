@@ -5,11 +5,12 @@
          * [Residual block](#residual-block)
       * [Branch pruning - explained](#branch-pruning---explained)
       * [Inception Block](#inception-block)
+         * [What does 1x1 convolution mean in a neural network?](#what-does-1x1-convolution-mean-in-a-neural-network)
       * [GAN - Generative Adversial Networks](#gan---generative-adversial-networks)
          * [Desciminator](#desciminator)
          * [Generator](#generator)
 
-<!-- Added by: gil_diy, at: Wed 06 Apr 2022 23:05:13 IDT -->
+<!-- Added by: gil_diy, at: Wed 06 Apr 2022 23:09:04 IDT -->
 
 <!--te-->
 
@@ -119,6 +120,12 @@ You can see the boost of performance of the **Skip connection**:
 
 
 ## Inception Block
+
+[Article](https://arxiv.org/pdf/1409.4842.pdf)
+
+### What does 1x1 convolution mean in a neural network?
+
+
 
 [Inception Network Motivation](https://youtu.be/C86ZXvgpejM)
 
