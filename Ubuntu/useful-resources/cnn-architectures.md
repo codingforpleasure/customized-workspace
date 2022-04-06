@@ -11,7 +11,7 @@
          * [Desciminator](#desciminator)
          * [Generator](#generator)
 
-<!-- Added by: gil_diy, at: Wed 06 Apr 2022 23:32:10 IDT -->
+<!-- Added by: gil_diy, at: Wed 06 Apr 2022 23:34:46 IDT -->
 
 <!--te-->
 
@@ -32,6 +32,10 @@
 * Staying with our example input of 64X64X3, if we choose a 1X1 filter (which would be 1X1X3), then the output will have the same Height and Weight as input but only one channel — 64X64X1
 
 * Now consider inputs with large number of channels — 192 for example. If we want to reduce the depth and but keep the Height X Width of the feature maps (Receptive field) the same, then we can choose 1X1 filters (remember Number of filters = Output Channels) to achieve this effect. This effect of cross channel down-sampling is called ‘Dimensionality reduction’.
+
+<p align="center">
+  <img width="400" src="images/cnn/cnn_conv_1_1.png" title="Look into the image">
+</p>
 
 [Article](https://arxiv.org/pdf/1312.4400.pdf)
 
