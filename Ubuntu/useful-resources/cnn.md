@@ -48,7 +48,7 @@
       * [Well known CNN Architectures](#well-known-cnn-architectures)
       * [Videos of handwritten flowchart](#videos-of-handwritten-flowchart)
 
-<!-- Added by: gil_diy, at: Wed 06 Apr 2022 16:38:45 IDT -->
+<!-- Added by: gil_diy, at: Wed 06 Apr 2022 16:40:58 IDT -->
 
 <!--te-->
 # CNN
@@ -174,8 +174,11 @@ Here you need padding since your input size is not an integer multiple of your k
 
 #### Number of parameters on each layer
 
+```python
+param_number = output_channel_number * (input_channel_number*kernel_height*kernel_width +1 )
+```
 
-
+* The **number 1** denotes the bias that is associated with each filter that we’re learning
 
 [Link](https://youtu.be/cin4YcGBh3Q?list=PLZbbT5o_s2xrfNyHZsM6ufI0iZENK9xgG)
 
