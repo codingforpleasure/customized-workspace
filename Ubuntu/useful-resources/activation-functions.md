@@ -10,7 +10,7 @@
          * [Application activation functions usage](#application-activation-functions-usage)
       * [Nicely summary table](#nicely-summary-table)
 
-<!-- Added by: gil_diy, at: Wed 06 Apr 2022 12:44:20 IDT -->
+<!-- Added by: gil_diy, at: Wed 06 Apr 2022 12:44:22 IDT -->
 
 <!--te-->
 
