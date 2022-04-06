@@ -4,13 +4,13 @@
       * [ResNet](#resnet)
          * [Residual block](#residual-block)
       * [Branch pruning - explained](#branch-pruning---explained)
-      * [Inception Block](#inception-block)
+      * [Inception Block/module](#inception-blockmodule)
          * [What does 1x1 convolution mean in a neural network?](#what-does-1x1-convolution-mean-in-a-neural-network)
       * [GAN - Generative Adversial Networks](#gan---generative-adversial-networks)
          * [Desciminator](#desciminator)
          * [Generator](#generator)
 
-<!-- Added by: gil_diy, at: Wed 06 Apr 2022 23:09:35 IDT -->
+<!-- Added by: gil_diy, at: Wed 06 Apr 2022 23:15:36 IDT -->
 
 <!--te-->
 
@@ -119,7 +119,7 @@ You can see the boost of performance of the **Skip connection**:
 [Link](https://towardsdatascience.com/pruning-neural-networks-1bb3ab5791f9)
 
 
-## Inception Block
+## Inception Block/module
 
 [Article](https://arxiv.org/pdf/1409.4842.pdf)
 
