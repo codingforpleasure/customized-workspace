@@ -12,7 +12,7 @@
          * [Desciminator](#desciminator)
          * [Generator](#generator)
 
-<!-- Added by: gil_diy, at: Wed 06 Apr 2022 23:59:44 IDT -->
+<!-- Added by: gil_diy, at: Thu 07 Apr 2022 00:01:02 IDT -->
 
 <!--te-->
 
@@ -148,7 +148,7 @@ You can see the boost of performance of the **Skip connection**:
 ## Inception Block/module
 
 <p align="center">
-  <img width="600" src="images/cnn/" title="Look into the image">
+  <img width="600" src="images/cnn/inception_module.png" title="Look into the image">
 </p>
 
 [Article](https://arxiv.org/pdf/1409.4842.pdf)
