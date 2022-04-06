@@ -7,11 +7,12 @@
       * [Branch pruning - explained](#branch-pruning---explained)
       * [Inception Block/module](#inception-blockmodule)
          * [What does 1x1 convolution mean in a neural network?](#what-does-1x1-convolution-mean-in-a-neural-network)
+            * [Usage 1: Dimensionality Reduction/Augmentation](#usage-1-dimensionality-reductionaugmentation)
       * [GAN - Generative Adversial Networks](#gan---generative-adversial-networks)
          * [Desciminator](#desciminator)
          * [Generator](#generator)
 
-<!-- Added by: gil_diy, at: Wed 06 Apr 2022 23:50:37 IDT -->
+<!-- Added by: gil_diy, at: Wed 06 Apr 2022 23:51:03 IDT -->
 
 <!--te-->
 
@@ -145,12 +146,15 @@ You can see the boost of performance of the **Skip connection**:
 
 ### What does 1x1 convolution mean in a neural network?
 
-
 [Inception Network Motivation](https://youtu.be/C86ZXvgpejM)
 
 [Link](https://youtu.be/KfV8CJh7hE0)
 
 [Reference](https://medium.com/analytics-vidhya/talented-mr-1x1-comprehensive-look-at-1x1-convolution-in-deep-learning-f6b355825578)
+
+#### Usage 1: Dimensionality Reduction/Augmentation
+
+#### 
 
 ## GAN - Generative Adversial Networks
 
