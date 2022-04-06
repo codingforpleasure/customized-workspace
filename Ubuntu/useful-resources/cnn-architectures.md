@@ -8,7 +8,7 @@
          * [Desciminator](#desciminator)
          * [Generator](#generator)
 
-<!-- Added by: gil_diy, at: Wed 06 Apr 2022 13:28:59 IDT -->
+<!-- Added by: gil_diy, at: Wed 06 Apr 2022 13:29:20 IDT -->
 
 <!--te-->
 
@@ -71,7 +71,7 @@ The type of residual blocks:
 In an identical residual block, the output of the shortcut path and the main path is of the same dimensions. This is achieved by padding the input to each convolutional layer in the main path in such a way that the output and input dimensions remain the same.
 
 <p align="center">
-  <img width="400" src="images/cnn" title="Look into the image">
+  <img width="400" src="images/cnn/residual_identity_block.png" title="Look into the image">
 </p>
 
 
