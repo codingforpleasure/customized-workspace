@@ -8,10 +8,10 @@
          * [LeakyReLU](#leakyrelu)
          * [Gelu (Gaussian Error Linear Unit)](#gelu-gaussian-error-linear-unit)
          * [Application activation functions usage](#application-activation-functions-usage)
-         * [Properties of activation functions](#properties-of-activation-functions)
+         * [Mathematical properties of activation functions](#mathematical-properties-of-activation-functions)
       * [Nicely summary table](#nicely-summary-table)
 
-<!-- Added by: gil_diy, at: Wed 06 Apr 2022 13:04:17 IDT -->
+<!-- Added by: gil_diy, at: Wed 06 Apr 2022 13:07:47 IDT -->
 
 <!--te-->
 
@@ -94,13 +94,7 @@ large enough DNN with nonlinear activations can theoretically approximate any co
  ReLU | Used in AlexNet
  GELU | Used in BERT
 
-### Properties of activation functions
-
-Mathematical properties | Description
-------------|-----
-**Nonlinear** | When the activation function is non-linear, then a two-layer neural network can be proven to be a universal function approximator
-**Range** | When the range of the activation function is finite, gradient-based training methods tend to be more stable, because pattern presentations significantly affect only limited weights
-Continuously differentiable | element-description
+### Mathematical properties of activation functions
 
 
 * **Nonlinear**
