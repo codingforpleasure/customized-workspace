@@ -64,8 +64,6 @@
       * [Transpose Convolution, what is it?](#transpose-convolution-what-is-it)
       * [Dataset &amp;&amp; DataLoader](#dataset--dataloader)
          * [To better understand your data](#to-better-understand-your-data)
-         * [<strong>CNN Output Size formula (Square)</strong>](#cnn-output-size-formula-square)
-         * [<strong>CNN Output Size formula (Non Square)</strong>](#cnn-output-size-formula-non-square)
       * [Good practice for avoid mistakes](#good-practice-for-avoid-mistakes)
          * [First train on a single batch](#first-train-on-a-single-batch)
       * [Batch normalization](#batch-normalization)
@@ -114,7 +112,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Wed 30 Mar 2022 10:14:45 IDT -->
+<!-- Added by: gil_diy, at: Wed 06 Apr 2022 16:17:47 IDT -->
 
 <!--te-->
 
@@ -1300,25 +1298,6 @@ print('label:',label)
 ```
 
 [Link](https://youtu.be/mUueSPmcOBc?t=665)
-
-
-### **CNN Output Size formula (Square)**
-
-
-<p align="center"> <!-- style="width:400px;" -->
-  <img src="images/pytorch/cnn_output_size_square.png" title="tool tip here">
-</p>
-
-
-### **CNN Output Size formula (Non Square)**
-
-<p align="center"> <!-- style="width:400px;" -->
-  <img src="images/pytorch/cnn_output_size_non_square.png" title="tool tip here">
-</p>
-
-
-[Link](https://youtu.be/cin4YcGBh3Q?list=PLZbbT5o_s2xrfNyHZsM6ufI0iZENK9xgG)
-
 
 
 
