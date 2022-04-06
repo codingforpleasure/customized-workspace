@@ -10,7 +10,7 @@
          * [Application activation functions usage](#application-activation-functions-usage)
       * [Nicely summary table](#nicely-summary-table)
 
-<!-- Added by: gil_diy, at: Wed 06 Apr 2022 12:42:58 IDT -->
+<!-- Added by: gil_diy, at: Wed 06 Apr 2022 12:44:20 IDT -->
 
 <!--te-->
 
@@ -93,6 +93,7 @@ large enough DNN with nonlinear activations can theoretically approximate any co
  ReLU | Used in AlexNet
  GELU | Used in BERT
 
+###
 
 ## Nicely summary table
 
