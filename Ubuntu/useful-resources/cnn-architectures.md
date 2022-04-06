@@ -15,7 +15,7 @@
          * [Desciminator](#desciminator)
          * [Generator](#generator)
 
-<!-- Added by: gil_diy, at: Thu 07 Apr 2022 00:55:51 IDT -->
+<!-- Added by: gil_diy, at: Thu 07 Apr 2022 00:56:34 IDT -->
 
 <!--te-->
 
@@ -182,7 +182,7 @@ CNN Model called SqueezeNet that retains AlexNet level accuracy while 50X times 
 
 ### Fire Block/Module
 
-[Article](https://openreview.net/pdf?id=S1xh5sYgx)
+[Article](https://arxiv.org/pdf/1602.07360.pdf)
 
 
 ### What does 1x1 convolution mean in a neural network?
