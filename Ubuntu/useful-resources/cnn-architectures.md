@@ -12,7 +12,7 @@
          * [Desciminator](#desciminator)
          * [Generator](#generator)
 
-<!-- Added by: gil_diy, at: Thu 07 Apr 2022 00:14:04 IDT -->
+<!-- Added by: gil_diy, at: Thu 07 Apr 2022 00:17:05 IDT -->
 
 <!--te-->
 
@@ -50,6 +50,9 @@
 GoogleNet, used 1X1 convolution layer for **dimension reduction** “to compute reductions before the expensive 3×3 and 5×5 convolutions
 
 2.  **Building DEEPER Network (“Bottle-Neck” Layer)**
+
+ResNet, had least error rate and swept aside the competition by using very deep network using ‘Residual connections’ and **‘Bottle-neck Layer’**.
+using a sequence of 3 convolutional layers with filters the size of 1X1, 3X3, followed by 1X1 respectively to reduce and restore dimension
 
 ## VGG
 
