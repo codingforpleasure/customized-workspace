@@ -49,7 +49,7 @@
       * [Well known CNN Architectures](#well-known-cnn-architectures)
       * [Videos of handwritten flowchart](#videos-of-handwritten-flowchart)
 
-<!-- Added by: gil_diy, at: Wed 06 Apr 2022 16:49:20 IDT -->
+<!-- Added by: gil_diy, at: Wed 06 Apr 2022 17:19:40 IDT -->
 
 <!--te-->
 # CNN
@@ -172,6 +172,7 @@ Here you need padding since your input size is not an integer multiple of your k
   <img src="images/pytorch/cnn_output_size_non_square.png" title="tool tip here">
 </p>
 
+[Link](https://youtu.be/cin4YcGBh3Q?list=PLZbbT5o_s2xrfNyHZsM6ufI0iZENK9xgG)
 
 #### Number of parameters for convolution layer
 
@@ -181,7 +182,6 @@ param_number = output_channel_number * (input_channel_number*kernel_height*kerne
 
 * The **number 1** denotes the bias that is associated with each filter that we’re learning
 
-[Link](https://youtu.be/cin4YcGBh3Q?list=PLZbbT5o_s2xrfNyHZsM6ufI0iZENK9xgG)
 
 #### Number of parameters for Dense Layer
 
