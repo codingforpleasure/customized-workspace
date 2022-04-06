@@ -10,7 +10,7 @@
          * [Calculating our Convolution Output](#calculating-our-convolution-output)
             * [<strong>CNN Output Size formula (Square)</strong>](#cnn-output-size-formula-square)
             * [<strong>CNN Output Size formula (Non Square)</strong>](#cnn-output-size-formula-non-square)
-            * [Number of parameters on each layer](#number-of-parameters-on-each-layer)
+            * [Number of parameters for convolution layer](#number-of-parameters-for-convolution-layer)
       * [ReLU the Activation layer of choice for CNNs](#relu-the-activation-layer-of-choice-for-cnns)
       * [Pooling](#pooling)
       * [Recap](#recap)
@@ -48,7 +48,7 @@
       * [Well known CNN Architectures](#well-known-cnn-architectures)
       * [Videos of handwritten flowchart](#videos-of-handwritten-flowchart)
 
-<!-- Added by: gil_diy, at: Wed 06 Apr 2022 16:41:27 IDT -->
+<!-- Added by: gil_diy, at: Wed 06 Apr 2022 16:45:30 IDT -->
 
 <!--te-->
 # CNN
@@ -172,7 +172,7 @@ Here you need padding since your input size is not an integer multiple of your k
 </p>
 
 
-#### Number of parameters on each layer
+#### Number of parameters for convolution layer
 
 ```python
 param_number = output_channel_number * (input_channel_number*kernel_height*kernel_width + 1 )
