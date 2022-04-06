@@ -4,11 +4,12 @@
       * [ResNet](#resnet)
          * [Residual block](#residual-block)
       * [Branch pruning - explained](#branch-pruning---explained)
+      * [Inception Block](#inception-block)
       * [GAN - Generative Adversial Networks](#gan---generative-adversial-networks)
          * [Desciminator](#desciminator)
          * [Generator](#generator)
 
-<!-- Added by: gil_diy, at: Wed 06 Apr 2022 16:18:23 IDT -->
+<!-- Added by: gil_diy, at: Wed 06 Apr 2022 23:04:17 IDT -->
 
 <!--te-->
 
@@ -116,12 +117,20 @@ You can see the boost of performance of the **Skip connection**:
 
 [Link](https://towardsdatascience.com/pruning-neural-networks-1bb3ab5791f9)
 
+
+## Inception Block
+
+
+
+
+
 ## GAN - Generative Adversial Networks
 
 The Neural Network consist of 'Desciminator' and 'Genearator'
 
 When training the descriminator, hold the generator values constant;
 and when training the generator, hold the discrimiantor constant. Each Should train against a static adversary.
+
 
 
 ### Desciminator 
