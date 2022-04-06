@@ -12,7 +12,7 @@
          * [Desciminator](#desciminator)
          * [Generator](#generator)
 
-<!-- Added by: gil_diy, at: Wed 06 Apr 2022 23:51:03 IDT -->
+<!-- Added by: gil_diy, at: Wed 06 Apr 2022 23:51:06 IDT -->
 
 <!--te-->
 
@@ -153,6 +153,7 @@ You can see the boost of performance of the **Skip connection**:
 [Reference](https://medium.com/analytics-vidhya/talented-mr-1x1-comprehensive-look-at-1x1-convolution-in-deep-learning-f6b355825578)
 
 #### Usage 1: Dimensionality Reduction/Augmentation
+
 
 #### 
 
