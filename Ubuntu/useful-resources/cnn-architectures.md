@@ -12,7 +12,7 @@
          * [Desciminator](#desciminator)
          * [Generator](#generator)
 
-<!-- Added by: gil_diy, at: Thu 07 Apr 2022 00:01:08 IDT -->
+<!-- Added by: gil_diy, at: Thu 07 Apr 2022 00:09:56 IDT -->
 
 <!--te-->
 
@@ -45,7 +45,7 @@
 
 ### Usages
 
-1. GoogleNet, used 1X1 convolution layer for dimension reduction “to compute reductions before the expensive 3×3 and 5×5 convolutions
+1. GoogleNet, used 1X1 convolution layer for **dimension reduction** “to compute reductions before the expensive 3×3 and 5×5 convolutions
 
 ## VGG
 
