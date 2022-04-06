@@ -9,13 +9,14 @@
       * [Inception](#inception)
          * [Inception Block/module](#inception-blockmodule)
       * [Sqeeezenet](#sqeeezenet)
+         * [How is the Compression done?](#how-is-the-compression-done)
          * [Fire Block/Module](#fire-blockmodule)
          * [What does 1x1 convolution mean in a neural network?](#what-does-1x1-convolution-mean-in-a-neural-network)
       * [GAN - Generative Adversial Networks](#gan---generative-adversial-networks)
          * [Desciminator](#desciminator)
          * [Generator](#generator)
 
-<!-- Added by: gil_diy, at: Thu 07 Apr 2022 01:20:11 IDT -->
+<!-- Added by: gil_diy, at: Thu 07 Apr 2022 01:37:54 IDT -->
 
 <!--te-->
 
@@ -187,6 +188,15 @@ smaller CNN architectures offer at least three advantages
 * Smaller CNNs require less bandwidth to export a new model from the cloud to an autonomous car.
 
 * Smaller CNNs are more feasible to deploy on FPGAs and other hardware with limited memory.
+
+
+### How is the Compression done?
+
+uses `Deep Compression` which is combination of:
+
+1. Pruning
+2. Quantization with a code book (6 bit)
+3. Huffman encoding
 
 [SqueezeNet - youtube](https://youtu.be/ge_RT5wvHvY)
 
