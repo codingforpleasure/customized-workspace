@@ -8,7 +8,7 @@
          * [Desciminator](#desciminator)
          * [Generator](#generator)
 
-<!-- Added by: gil_diy, at: Wed 06 Apr 2022 13:18:24 IDT -->
+<!-- Added by: gil_diy, at: Wed 06 Apr 2022 13:19:47 IDT -->
 
 <!--te-->
 
@@ -70,6 +70,8 @@ The type of residual blocks:
 
 2) 
 
+
+[Link](https://towardsdatascience.com/resnets-residual-blocks-deep-residual-learning-a231a0ee73d2)
 
 ------------------------------------------------------------
 
