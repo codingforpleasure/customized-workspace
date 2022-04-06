@@ -49,7 +49,7 @@
       * [Well known CNN Architectures](#well-known-cnn-architectures)
       * [Videos of handwritten flowchart](#videos-of-handwritten-flowchart)
 
-<!-- Added by: gil_diy, at: Wed 06 Apr 2022 17:40:34 IDT -->
+<!-- Added by: gil_diy, at: Wed 06 Apr 2022 17:40:43 IDT -->
 
 <!--te-->
 # CNN
@@ -182,7 +182,7 @@ param_number = output_channel_number * (input_channel_number*kernel_height*kerne
 
 * The **number 1** denotes the bias that is associated with each filter that we’re learning
 
-[Example ](https://youtu.be/bikmA-VmSbY)
+[Well explained](https://youtu.be/bikmA-VmSbY)
 
 #### Number of parameters for Dense Layer
 
