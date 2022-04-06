@@ -9,7 +9,7 @@
          * [Gelu (Gaussian Error Linear Unit)](#gelu-gaussian-error-linear-unit)
       * [Nicely summary table](#nicely-summary-table)
 
-<!-- Added by: gil_diy, at: Wed 06 Apr 2022 12:03:24 IDT -->
+<!-- Added by: gil_diy, at: Wed 06 Apr 2022 12:03:43 IDT -->
 
 <!--te-->
 
@@ -29,7 +29,7 @@ large enough DNN with nonlinear activations can theoretically approximate any co
 
 
 <p align="center">
-  <img width="400" src="images/activation-functions/activation_function_and_their_derivatives.png" title="Look into the image">
+  <img width="600" src="images/activation-functions/activation_function_and_their_derivatives.png" title="Look into the image">
 </p>
 
 
