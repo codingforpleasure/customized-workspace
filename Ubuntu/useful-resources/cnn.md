@@ -11,6 +11,7 @@
             * [<strong>CNN Output Size formula (Square)</strong>](#cnn-output-size-formula-square)
             * [<strong>CNN Output Size formula (Non Square)</strong>](#cnn-output-size-formula-non-square)
             * [Number of parameters for convolution layer](#number-of-parameters-for-convolution-layer)
+            * [Number of parameters for Dense Layer](#number-of-parameters-for-dense-layer)
       * [ReLU the Activation layer of choice for CNNs](#relu-the-activation-layer-of-choice-for-cnns)
       * [Pooling](#pooling)
       * [Recap](#recap)
@@ -48,7 +49,7 @@
       * [Well known CNN Architectures](#well-known-cnn-architectures)
       * [Videos of handwritten flowchart](#videos-of-handwritten-flowchart)
 
-<!-- Added by: gil_diy, at: Wed 06 Apr 2022 16:45:33 IDT -->
+<!-- Added by: gil_diy, at: Wed 06 Apr 2022 16:45:47 IDT -->
 
 <!--te-->
 # CNN
@@ -182,7 +183,11 @@ param_number = output_channel_number * (input_channel_number*kernel_height*kerne
 
 [Link](https://youtu.be/cin4YcGBh3Q?list=PLZbbT5o_s2xrfNyHZsM6ufI0iZENK9xgG)
 
+#### Number of parameters for Dense Layer
 
+```python
+
+```
 
 ## ReLU the Activation layer of choice for CNNs
 
