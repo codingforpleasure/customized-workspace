@@ -11,7 +11,7 @@
          * [Desciminator](#desciminator)
          * [Generator](#generator)
 
-<!-- Added by: gil_diy, at: Wed 06 Apr 2022 23:29:14 IDT -->
+<!-- Added by: gil_diy, at: Wed 06 Apr 2022 23:31:14 IDT -->
 
 <!--te-->
 
@@ -26,6 +26,8 @@
 ## Comprehensive look at 1X1 Convolution in Deep Learning
 
 * 1X1 Conv was used to reduce the number of channels while introducing non-linearity
+
+* In 1X1 Convolution simply means the filter is of size 1X1 (Yes — that means a single number as opposed to matrix like, say 3X3 filter). This 1X1 filter will convolve over the ENTIRE input image pixel by pixel.
 
 [Article](https://arxiv.org/pdf/1312.4400.pdf)
 
