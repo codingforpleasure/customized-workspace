@@ -48,7 +48,7 @@
       * [Well known CNN Architectures](#well-known-cnn-architectures)
       * [Videos of handwritten flowchart](#videos-of-handwritten-flowchart)
 
-<!-- Added by: gil_diy, at: Wed 06 Apr 2022 16:45:30 IDT -->
+<!-- Added by: gil_diy, at: Wed 06 Apr 2022 16:45:33 IDT -->
 
 <!--te-->
 # CNN
