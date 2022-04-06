@@ -46,7 +46,7 @@
       * [Well known CNN Architectures](#well-known-cnn-architectures)
       * [Videos of handwritten flowchart](#videos-of-handwritten-flowchart)
 
-<!-- Added by: gil_diy, at: Wed 06 Apr 2022 16:16:07 IDT -->
+<!-- Added by: gil_diy, at: Wed 06 Apr 2022 16:16:28 IDT -->
 
 <!--te-->
 # CNN
@@ -157,7 +157,9 @@ Here you need padding since your input size is not an integer multiple of your k
 
 ## CNN Output Size formula
 
-
+<p align="center">
+  <img width="400" src="images/cnn/" title="Look into the image">
+</p>
 
 
 ## ReLU the Activation layer of choice for CNNs
