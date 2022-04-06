@@ -3,13 +3,12 @@
       * [VGG](#vgg)
       * [ResNet](#resnet)
          * [Residual block](#residual-block)
-      * [It is worth mentioning, that for this technique to work the dimension of z[l+2] and a[l] should be similar as they need to be summed up (evident from figure 3). Depending on dimension of z[l+2] and a[l], there are two kinds of residual blocks:](#it-is-worth-mentioning-that-for-this-technique-to-work-the-dimension-of-zl2-and-al-should-be-similar-as-they-need-to-be-summed-up-evident-from-figure-3-depending-on-dimension-of-zl2-and-al-there-are-two-kinds-of-residual-blocks)
       * [Branch pruning - explained](#branch-pruning---explained)
       * [GAN - Generative Adversial Networks](#gan---generative-adversial-networks)
          * [Desciminator](#desciminator)
          * [Generator](#generator)
 
-<!-- Added by: gil_diy, at: Wed 06 Apr 2022 13:17:06 IDT -->
+<!-- Added by: gil_diy, at: Wed 06 Apr 2022 13:17:58 IDT -->
 
 <!--te-->
 
@@ -61,7 +60,15 @@ The formulation of `F(x)+x` can be realized by feedforward neural networks with 
 **Reminder:** identity map is a function that always returns the value that was used as its argument, unchanged.
 
 
-It is worth mentioning, that for this technique to work the dimension of z[l+2] and a[l] should be similar as they need to be summed up (evident from figure 3). Depending on dimension of z[l+2] and a[l], there are two kinds of residual blocks: 
+It is worth mentioning, that for this technique to work the dimension of z[l+2] and a[l] should be similar as they need to be summed up. 
+
+Depending on dimension of z[l+2] and a[l], there are two kinds of residual blocks: 
+
+1)
+
+2) 
+
+
 ------------------------------------------------------------
 
 
