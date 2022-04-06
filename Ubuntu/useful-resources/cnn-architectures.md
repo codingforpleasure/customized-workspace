@@ -8,7 +8,7 @@
          * [Desciminator](#desciminator)
          * [Generator](#generator)
 
-<!-- Added by: gil_diy, at: Wed 06 Apr 2022 13:24:50 IDT -->
+<!-- Added by: gil_diy, at: Wed 06 Apr 2022 13:28:59 IDT -->
 
 <!--te-->
 
@@ -67,6 +67,13 @@ Depending on dimension of z[l+2] and a[l], there are two kinds of residual block
 The type of residual blocks:
 
 1) Identical residual block
+
+In an identical residual block, the output of the shortcut path and the main path is of the same dimensions. This is achieved by padding the input to each convolutional layer in the main path in such a way that the output and input dimensions remain the same.
+
+<p align="center">
+  <img width="400" src="images/cnn" title="Look into the image">
+</p>
+
 
 2) Convolutional residual block
 
