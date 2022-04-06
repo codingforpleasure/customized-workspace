@@ -8,7 +8,7 @@
          * [Desciminator](#desciminator)
          * [Generator](#generator)
 
-<!-- Added by: gil_diy, at: Wed 06 Apr 2022 13:17:58 IDT -->
+<!-- Added by: gil_diy, at: Wed 06 Apr 2022 13:18:24 IDT -->
 
 <!--te-->
 
@@ -63,6 +63,8 @@ The formulation of `F(x)+x` can be realized by feedforward neural networks with 
 It is worth mentioning, that for this technique to work the dimension of z[l+2] and a[l] should be similar as they need to be summed up. 
 
 Depending on dimension of z[l+2] and a[l], there are two kinds of residual blocks: 
+
+The type of residual blocks:
 
 1)
 
