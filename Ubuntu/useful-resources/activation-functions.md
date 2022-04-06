@@ -11,7 +11,7 @@
          * [Properties of activation functions](#properties-of-activation-functions)
       * [Nicely summary table](#nicely-summary-table)
 
-<!-- Added by: gil_diy, at: Wed 06 Apr 2022 12:56:39 IDT -->
+<!-- Added by: gil_diy, at: Wed 06 Apr 2022 13:04:17 IDT -->
 
 <!--te-->
 
@@ -110,6 +110,7 @@ When the activation function is non-linear, then a two-layer neural network can 
 
 * **Range**
 
+When the range of the activation function is finite, gradient-based training methods tend to be more stable, because pattern presentations significantly affect only limited weights. When the range is infinite, training is generally more efficient because pattern presentations significantly affect most of the weights. In the latter case, smaller learning rates are typically necessary
 
 
 ## Nicely summary table
