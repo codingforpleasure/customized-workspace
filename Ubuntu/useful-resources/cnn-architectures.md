@@ -15,7 +15,7 @@
          * [Desciminator](#desciminator)
          * [Generator](#generator)
 
-<!-- Added by: gil_diy, at: Thu 07 Apr 2022 00:56:39 IDT -->
+<!-- Added by: gil_diy, at: Thu 07 Apr 2022 01:15:37 IDT -->
 
 <!--te-->
 
@@ -179,6 +179,14 @@ You can see the boost of performance of the **Skip connection**:
 ## Sqeeezenet
 
 CNN Model called SqueezeNet that retains AlexNet level accuracy while 50X times smaller in terms of parameters.
+
+smaller CNN architectures offer at least three advantages
+
+* Smaller Convolutional Neural Networks (CNNs) require less communication across servers during distributed training.
+
+* Smaller CNNs require less bandwidth to export a new model from the cloud to an autonomous car.
+
+* Smaller CNNs are more feasible to deploy on FPGAs and other hardware with limited memory.
 
 ### Fire Block/Module
 
