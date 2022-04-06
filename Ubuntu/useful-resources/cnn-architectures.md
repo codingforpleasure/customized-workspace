@@ -8,12 +8,13 @@
       * [Branch pruning - explained](#branch-pruning---explained)
       * [Inception](#inception)
          * [Inception Block/module](#inception-blockmodule)
+      * [Sqeeezenet](#sqeeezenet)
          * [What does 1x1 convolution mean in a neural network?](#what-does-1x1-convolution-mean-in-a-neural-network)
       * [GAN - Generative Adversial Networks](#gan---generative-adversial-networks)
          * [Desciminator](#desciminator)
          * [Generator](#generator)
 
-<!-- Added by: gil_diy, at: Thu 07 Apr 2022 00:34:59 IDT -->
+<!-- Added by: gil_diy, at: Thu 07 Apr 2022 00:40:07 IDT -->
 
 <!--te-->
 
@@ -174,7 +175,9 @@ You can see the boost of performance of the **Skip connection**:
 [Article](https://arxiv.org/pdf/1409.4842.pdf)
 
 
-### 
+## Sqeeezenet
+
+
 
 ### What does 1x1 convolution mean in a neural network?
 
