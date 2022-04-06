@@ -10,7 +10,7 @@
          * [Application activation functions usage](#application-activation-functions-usage)
       * [Nicely summary table](#nicely-summary-table)
 
-<!-- Added by: gil_diy, at: Wed 06 Apr 2022 12:40:10 IDT -->
+<!-- Added by: gil_diy, at: Wed 06 Apr 2022 12:42:58 IDT -->
 
 <!--te-->
 
@@ -74,6 +74,8 @@ large enough DNN with nonlinear activations can theoretically approximate any co
 
 * GELU is a smoother version of the RELU.
 
+* GELU is a smooth approximation to the rectifier. It has a non-monotonic “bump” when x < 0, and it serves as the default activation for models such as BERT.
+
 * It is Non convex, non-monotonic function is not linear in the positive axis and exhibits curvature at all points.
 
 <p align="center">
@@ -81,7 +83,7 @@ large enough DNN with nonlinear activations can theoretically approximate any co
 </p>
 
 
-[Link](https://medium.com/@shoray.goel/gelu-gaussian-error-linear-unit-4ec59fb2e47c)
+[Link](https://medium.ocwwwm/@shoray.goel/gelu-gaussian-error-linear-unit-4ec59fb2e47c)
 
 
 ### Application activation functions usage
