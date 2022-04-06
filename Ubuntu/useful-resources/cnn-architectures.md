@@ -12,7 +12,7 @@
          * [Desciminator](#desciminator)
          * [Generator](#generator)
 
-<!-- Added by: gil_diy, at: Thu 07 Apr 2022 00:20:21 IDT -->
+<!-- Added by: gil_diy, at: Thu 07 Apr 2022 00:30:06 IDT -->
 
 <!--te-->
 
@@ -55,6 +55,13 @@ ResNet, had least error rate and swept aside the competition by using very deep 
 using a sequence of 3 convolutional layers with filters the size of 1X1, 3X3, followed by 1X1 respectively to **reduce and restore dimension**.
 
 The down-sampling of the input happens in 1X1 layer thus funneling a smaller feature vectors (reduced number of parameters) for the 3X3 conv to work on. Immediately after that 1X1 layer restores the dimensions to match input dimension so identity shortcuts can be directly used.
+
+Taken from Resnet we can see:
+
+<p align="center">
+  <img width="600" src="images/cnn/cnn_conv_1_1_bottle_neck.png" title="Look into the image">
+</p>
+
 
 ## VGG
 
