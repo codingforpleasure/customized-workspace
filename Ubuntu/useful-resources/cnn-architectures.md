@@ -9,7 +9,7 @@
          * [Desciminator](#desciminator)
          * [Generator](#generator)
 
-<!-- Added by: gil_diy, at: Wed 06 Apr 2022 10:10:24 IDT -->
+<!-- Added by: gil_diy, at: Wed 06 Apr 2022 13:17:06 IDT -->
 
 <!--te-->
 
@@ -45,7 +45,7 @@ In the context of residual neural networks, a `non-residual network` may be desc
 The very first thing we notice to be different is that there is a direct connection which skips some layers(may vary in different models) in between.
 This connection is called **’skip connection’** and is the core of residual blocks.
 
-The formulation of `F(x)+x` can be realized by feedforward neural networks with "shortcut connections", shortcut connections are those skipping one or more layers. the sortcut connections simply perform `identity mapping`, and their outputs are added to the outputs of the stacked layers.
+The formulation of `F(x)+x` can be realized by feedforward neural networks with "shortcut connections", shortcut connections are those skipping one or more layers. the shortcut connections simply perform `identity mapping`, and their outputs are added to the outputs of the stacked layers.
 
 
 <p align="center">
