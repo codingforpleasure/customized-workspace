@@ -8,7 +8,8 @@
          * [Stride](#stride)
          * [Zero-Padding](#zero-padding)
          * [Calculating our Convolution Output](#calculating-our-convolution-output)
-      * [CNN Output Size formula](#cnn-output-size-formula)
+            * [<strong>CNN Output Size formula (Square)</strong>](#cnn-output-size-formula-square)
+            * [<strong>CNN Output Size formula (Non Square)</strong>](#cnn-output-size-formula-non-square)
       * [ReLU the Activation layer of choice for CNNs](#relu-the-activation-layer-of-choice-for-cnns)
       * [Pooling](#pooling)
       * [Recap](#recap)
@@ -46,7 +47,7 @@
       * [Well known CNN Architectures](#well-known-cnn-architectures)
       * [Videos of handwritten flowchart](#videos-of-handwritten-flowchart)
 
-<!-- Added by: gil_diy, at: Wed 06 Apr 2022 16:16:28 IDT -->
+<!-- Added by: gil_diy, at: Wed 06 Apr 2022 16:18:20 IDT -->
 
 <!--te-->
 # CNN
@@ -155,11 +156,23 @@ To ensure our filters cover the full input image symetrically, we used the follo
 
 Here you need padding since your input size is not an integer multiple of your kernel size. Therefore, you need to add padding on one side in order make it work. 
 
-## CNN Output Size formula
+#### **CNN Output Size formula (Square)**
 
-<p align="center">
-  <img width="400" src="images/cnn/" title="Look into the image">
+
+<p align="center"> <!-- style="width:400px;" -->
+  <img src="images/pytorch/cnn_output_size_square.png" title="tool tip here">
 </p>
+
+
+#### **CNN Output Size formula (Non Square)**
+
+<p align="center"> <!-- style="width:400px;" -->
+  <img src="images/pytorch/cnn_output_size_non_square.png" title="tool tip here">
+</p>
+
+
+[Link](https://youtu.be/cin4YcGBh3Q?list=PLZbbT5o_s2xrfNyHZsM6ufI0iZENK9xgG)
+
 
 
 ## ReLU the Activation layer of choice for CNNs
