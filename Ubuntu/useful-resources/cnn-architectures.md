@@ -1,5 +1,6 @@
 <!--ts-->
    * [Architecture Networks](#architecture-networks)
+      * [Comprehensive look at 1X1 Convolution in Deep Learning](#comprehensive-look-at-1x1-convolution-in-deep-learning)
       * [VGG](#vgg)
       * [ResNet](#resnet)
          * [Residual block](#residual-block)
@@ -10,7 +11,7 @@
          * [Desciminator](#desciminator)
          * [Generator](#generator)
 
-<!-- Added by: gil_diy, at: Wed 06 Apr 2022 23:15:39 IDT -->
+<!-- Added by: gil_diy, at: Wed 06 Apr 2022 23:16:45 IDT -->
 
 <!--te-->
 
@@ -20,6 +21,11 @@
 <p align="center"> <!-- style="width:400px;" -->
   <img src="images/cnn/cnn_timeline.png" title="tool tip here">
 </p>
+
+
+## Comprehensive look at 1X1 Convolution in Deep Learning
+
+[Link](https://medium.com/analytics-vidhya/talented-mr-1x1-comprehensive-look-at-1x1-convolution-in-deep-learning-f6b355825578)
 
 ## VGG
 
