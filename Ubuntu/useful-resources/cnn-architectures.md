@@ -8,7 +8,7 @@
          * [Desciminator](#desciminator)
          * [Generator](#generator)
 
-<!-- Added by: gil_diy, at: Wed 06 Apr 2022 13:19:58 IDT -->
+<!-- Added by: gil_diy, at: Wed 06 Apr 2022 13:24:43 IDT -->
 
 <!--te-->
 
@@ -66,7 +66,7 @@ Depending on dimension of z[l+2] and a[l], there are two kinds of residual block
 
 The type of residual blocks:
 
-1)
+1) Identical residual block
 
 2) 
 
