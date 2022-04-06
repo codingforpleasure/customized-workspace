@@ -8,7 +8,7 @@
          * [Desciminator](#desciminator)
          * [Generator](#generator)
 
-<!-- Added by: gil_diy, at: Wed 06 Apr 2022 13:30:19 IDT -->
+<!-- Added by: gil_diy, at: Wed 06 Apr 2022 13:31:39 IDT -->
 
 <!--te-->
 
@@ -75,7 +75,9 @@ In an identical residual block, the output of the shortcut path and the main pat
 </p>
 
 
-2) Convolutional residual block
+2) **Convolutional residual block**
+
+
 
 
 [Great reference](https://towardsdatascience.com/resnets-residual-blocks-deep-residual-learning-a231a0ee73d2)
