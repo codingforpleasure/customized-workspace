@@ -11,7 +11,7 @@
          * [Properties of activation functions](#properties-of-activation-functions)
       * [Nicely summary table](#nicely-summary-table)
 
-<!-- Added by: gil_diy, at: Wed 06 Apr 2022 12:48:28 IDT -->
+<!-- Added by: gil_diy, at: Wed 06 Apr 2022 12:51:09 IDT -->
 
 <!--te-->
 
@@ -99,7 +99,7 @@ large enough DNN with nonlinear activations can theoretically approximate any co
 Mathematical properties | Description
 ------------|-----
 **Nonlinear** | When the activation function is non-linear, then a two-layer neural network can be proven to be a universal function approximator
-Range | element-description
+Range | When the range of the activation function is finite, gradient-based training methods tend to be more stable, because pattern presentations significantly affect only limited weights
 Continuously differentiable | element-description
 
 
