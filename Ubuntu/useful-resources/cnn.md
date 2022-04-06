@@ -8,6 +8,7 @@
          * [Stride](#stride)
          * [Zero-Padding](#zero-padding)
          * [Calculating our Convolution Output](#calculating-our-convolution-output)
+      * [CNN Output Size formula](#cnn-output-size-formula)
       * [ReLU the Activation layer of choice for CNNs](#relu-the-activation-layer-of-choice-for-cnns)
       * [Pooling](#pooling)
       * [Recap](#recap)
@@ -45,7 +46,7 @@
       * [Well known CNN Architectures](#well-known-cnn-architectures)
       * [Videos of handwritten flowchart](#videos-of-handwritten-flowchart)
 
-<!-- Added by: gil_diy, at: Mon 26 Jul 2021 19:44:07 IDT -->
+<!-- Added by: gil_diy, at: Wed 06 Apr 2022 16:16:07 IDT -->
 
 <!--te-->
 # CNN
@@ -57,9 +58,9 @@ we produce different maps. Applying our kernel produces scalar ourput as we just
 
 - Concolcing with different kernels produces intresting feature maps that can be used to detect different features.
 
-- Convolution keeps rhe spatial relationships between pixels by learning image features over the small segments we pass ofwe rhe input image
+- Convolution keeps rhe spatial relationships between pixels by learning image features over the small segments we pass of the input image
 
-[Types of kernels](https://en.wikipedia.org/wiki/Kernel_(image_processing))
+[Types of kernels](https://en.wikipedia.org/wiki/Kernel_(image_processing)
 
 
 
@@ -69,6 +70,12 @@ we produce different maps. Applying our kernel produces scalar ourput as we just
 
 * In the first few layers, our neurons activation when edges or other.
  low level features are detected in Deeper layers, our neurons will be able to detect high level or big picture features or patterns such as bicycle, face. cat etc
+
+ * The neurons in the first hidden layer have
+learned simple patterns, while the neurons in the second hidden layer have
+learned to combine the simple patterns of the first hidden layer into more
+complex patterns. In general, the more layers there are, the more complex the
+patterns can be
 
 
  ## Designing feature maps
@@ -135,7 +142,7 @@ To ensure our filters cover the full input image symetrically, we used the follo
 **Example #1:**
 
 <p align="center"> <!-- style="width:400px;" -->
-  <img src="images/padding_1.jpg" title="tool tip here">
+  <img src="images/cnn/padding_1.jpg" title="tool tip here">
 </p>
 
  it perfectly fits and your pooling layer does not require any padding
@@ -143,10 +150,14 @@ To ensure our filters cover the full input image symetrically, we used the follo
 **Example #2:**
 
 <p align="center"> <!-- style="width:400px;" -->
-  <img src="images/padding_2.jpg" title="tool tip here">
+  <img src="images/cnn/padding_2.jpg" title="tool tip here">
 </p>
 
 Here you need padding since your input size is not an integer multiple of your kernel size. Therefore, you need to add padding on one side in order make it work. 
+
+## CNN Output Size formula
+
+
 
 
 ## ReLU the Activation layer of choice for CNNs
@@ -189,7 +200,7 @@ The activation function used to produce these probabilties is the **Soft Max** F
 * The more hidden layers the more features. praticularly high level features a CNN can learn.
 I like to use a minimum of 2. which is shown in the diagram below.
 
-The flow is: input -> Conv -> ReLU -> Pool -> Conv -> ReLI -> Pool -> FC -> Output
+The flow is: input -> Conv -> ReLU -> Pool -> Conv -> ReLU -> Pool -> FC -> Output
 
 <p align="center"> <!-- style="width:400px;" -->
   <img src="images/cnn/cnn_review.jpeg" title="tool tip here">
@@ -218,7 +229,22 @@ Just like NN, training CNNs is essentialy the same once we setup out Network lay
 
 * **Filters (kernels)** are typically small either 3x3 or 5x5.
 
+* As our output spatial volume is decreasing our number of filters learned is increasing, this is a common practice in designing CNN architectures.
+
+* As far as choosing the appropriate number of filters, I nearly always recommend using powers of 2 as the values.
+
+* Tune the exact value depending on (1) the complexity of your dataset and (2) the depth of your neural network, start with filters in the range [32, 64, 128] in the earlier and increasing up to [256, 512, 1024] in the deeper layers.
+
+* **So, how should you choose your filter_size?**
+
+First, examine your input image — is it larger than 128×128?
+If so, consider using a 5×5 or 7×7 kernel to learn larger features and then quickly reduce spatial dimensions — then start working with 3×3 kernels:
+
+If your images are smaller than 128×128 you may want to consider sticking with strictly 1×1 and 3×3 filters.
+
 * **Stride** is typically 1 or 2 if inputs are large.
+
+Typically you’ll see strides of 2×2 as a replacement to max poolin
 
 * **Zero padding** is used typically to allow the output Conv layer to the same size as input.
 
