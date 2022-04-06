@@ -1,6 +1,7 @@
 <!--ts-->
    * [Architecture Networks](#architecture-networks)
       * [Comprehensive look at 1X1 Convolution in Deep Learning](#comprehensive-look-at-1x1-convolution-in-deep-learning)
+         * [Usages](#usages)
       * [VGG](#vgg)
       * [ResNet](#resnet)
          * [Residual block](#residual-block)
@@ -12,7 +13,7 @@
          * [Desciminator](#desciminator)
          * [Generator](#generator)
 
-<!-- Added by: gil_diy, at: Wed 06 Apr 2022 23:51:06 IDT -->
+<!-- Added by: gil_diy, at: Wed 06 Apr 2022 23:52:10 IDT -->
 
 <!--te-->
 
@@ -41,6 +42,11 @@
 [Article](https://arxiv.org/pdf/1312.4400.pdf)
 
 [Link](https://medium.com/analytics-vidhya/talented-mr-1x1-comprehensive-look-at-1x1-convolution-in-deep-learning-f6b355825578)
+
+
+### Usages
+
+1. GoogleNet, used 1X1 convolution layer for dimension reduction “to compute reductions before the expensive 3×3 and 5×5 convolutions
 
 ## VGG
 
