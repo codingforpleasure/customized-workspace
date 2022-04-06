@@ -8,7 +8,7 @@
          * [Desciminator](#desciminator)
          * [Generator](#generator)
 
-<!-- Added by: gil_diy, at: Wed 06 Apr 2022 13:33:34 IDT -->
+<!-- Added by: gil_diy, at: Wed 06 Apr 2022 16:18:23 IDT -->
 
 <!--te-->
 
@@ -81,6 +81,9 @@ In an identical residual block, the output of the shortcut path and the main pat
 <p align="center">
   <img width="600" src="images/cnn/convolution_residual_block.png" title="Look into the image">
 </p>
+
+
+In this type of residual block, the skip-connection consists of a convolutional layer to resize the output of the shortcut path to be of the same dimension as that of the main path. The layer can also make use of different filter sizes, including 1×1, padding, and strides to control the dimension of the output volume.
 
 [Great reference](https://towardsdatascience.com/resnets-residual-blocks-deep-residual-learning-a231a0ee73d2)
 
