@@ -11,7 +11,7 @@
          * [Desciminator](#desciminator)
          * [Generator](#generator)
 
-<!-- Added by: gil_diy, at: Wed 06 Apr 2022 23:16:48 IDT -->
+<!-- Added by: gil_diy, at: Wed 06 Apr 2022 23:28:31 IDT -->
 
 <!--te-->
 
@@ -24,6 +24,8 @@
 
 
 ## Comprehensive look at 1X1 Convolution in Deep Learning
+
+[Article](https://arxiv.org/pdf/1312.4400.pdf)
 
 [Link](https://medium.com/analytics-vidhya/talented-mr-1x1-comprehensive-look-at-1x1-convolution-in-deep-learning-f6b355825578)
 
