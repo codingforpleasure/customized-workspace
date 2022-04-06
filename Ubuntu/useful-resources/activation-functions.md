@@ -8,9 +8,10 @@
          * [LeakyReLU](#leakyrelu)
          * [Gelu (Gaussian Error Linear Unit)](#gelu-gaussian-error-linear-unit)
          * [Application activation functions usage](#application-activation-functions-usage)
+         * [Properties of activation functions](#properties-of-activation-functions)
       * [Nicely summary table](#nicely-summary-table)
 
-<!-- Added by: gil_diy, at: Wed 06 Apr 2022 12:44:22 IDT -->
+<!-- Added by: gil_diy, at: Wed 06 Apr 2022 12:46:47 IDT -->
 
 <!--te-->
 
@@ -93,7 +94,14 @@ large enough DNN with nonlinear activations can theoretically approximate any co
  ReLU | Used in AlexNet
  GELU | Used in BERT
 
-###
+### Properties of activation functions
+
+Mathematical properties | Description
+------------|-----
+Nonlinear | element-description
+Range | element-description
+Continuously differentiable | element-description
+
 
 ## Nicely summary table
 
