@@ -11,7 +11,7 @@
          * [Properties of activation functions](#properties-of-activation-functions)
       * [Nicely summary table](#nicely-summary-table)
 
-<!-- Added by: gil_diy, at: Wed 06 Apr 2022 12:55:32 IDT -->
+<!-- Added by: gil_diy, at: Wed 06 Apr 2022 12:55:35 IDT -->
 
 <!--te-->
 
