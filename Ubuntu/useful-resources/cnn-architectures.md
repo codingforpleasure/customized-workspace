@@ -14,7 +14,7 @@
          * [Desciminator](#desciminator)
          * [Generator](#generator)
 
-<!-- Added by: gil_diy, at: Thu 07 Apr 2022 00:40:10 IDT -->
+<!-- Added by: gil_diy, at: Thu 07 Apr 2022 00:49:35 IDT -->
 
 <!--te-->
 
@@ -177,6 +177,9 @@ You can see the boost of performance of the **Skip connection**:
 
 ## Sqeeezenet
 
+CNN Model called SqueezeNet that retains AlexNet level accuracy while 50X times smaller in terms of parameters.
+
+[Article](https://openreview.net/pdf?id=S1xh5sYgx)
 
 
 ### What does 1x1 convolution mean in a neural network?
