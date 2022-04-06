@@ -11,7 +11,7 @@
          * [Desciminator](#desciminator)
          * [Generator](#generator)
 
-<!-- Added by: gil_diy, at: Wed 06 Apr 2022 23:28:31 IDT -->
+<!-- Added by: gil_diy, at: Wed 06 Apr 2022 23:29:14 IDT -->
 
 <!--te-->
 
@@ -24,6 +24,8 @@
 
 
 ## Comprehensive look at 1X1 Convolution in Deep Learning
+
+* 1X1 Conv was used to reduce the number of channels while introducing non-linearity
 
 [Article](https://arxiv.org/pdf/1312.4400.pdf)
 
