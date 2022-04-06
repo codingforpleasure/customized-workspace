@@ -9,7 +9,7 @@
          * [Desciminator](#desciminator)
          * [Generator](#generator)
 
-<!-- Added by: gil_diy, at: Wed 06 Apr 2022 23:04:45 IDT -->
+<!-- Added by: gil_diy, at: Wed 06 Apr 2022 23:05:13 IDT -->
 
 <!--te-->
 
@@ -122,7 +122,7 @@ You can see the boost of performance of the **Skip connection**:
 
 [Inception Network Motivation](https://youtu.be/C86ZXvgpejM)
 
-
+[Link](https://youtu.be/KfV8CJh7hE0)
 
 ## GAN - Generative Adversial Networks
 
