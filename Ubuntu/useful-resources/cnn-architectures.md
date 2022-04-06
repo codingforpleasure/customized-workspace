@@ -8,7 +8,7 @@
          * [Desciminator](#desciminator)
          * [Generator](#generator)
 
-<!-- Added by: gil_diy, at: Wed 06 Apr 2022 13:33:27 IDT -->
+<!-- Added by: gil_diy, at: Wed 06 Apr 2022 13:33:31 IDT -->
 
 <!--te-->
 
@@ -79,7 +79,7 @@ In an identical residual block, the output of the shortcut path and the main pat
 
 
 <p align="center">
-  <img width="400" src="images/cnn/convolution_residual_block.png" title="Look into the image">
+  <img width="600" src="images/cnn/convolution_residual_block.png" title="Look into the image">
 </p>
 
 [Great reference](https://towardsdatascience.com/resnets-residual-blocks-deep-residual-learning-a231a0ee73d2)
