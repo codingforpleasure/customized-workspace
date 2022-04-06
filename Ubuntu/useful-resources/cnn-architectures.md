@@ -11,7 +11,7 @@
          * [Desciminator](#desciminator)
          * [Generator](#generator)
 
-<!-- Added by: gil_diy, at: Wed 06 Apr 2022 23:35:14 IDT -->
+<!-- Added by: gil_diy, at: Wed 06 Apr 2022 23:50:34 IDT -->
 
 <!--te-->
 
@@ -149,6 +149,8 @@ You can see the boost of performance of the **Skip connection**:
 [Inception Network Motivation](https://youtu.be/C86ZXvgpejM)
 
 [Link](https://youtu.be/KfV8CJh7hE0)
+
+[Reference](https://medium.com/analytics-vidhya/talented-mr-1x1-comprehensive-look-at-1x1-convolution-in-deep-learning-f6b355825578)
 
 ## GAN - Generative Adversial Networks
 
