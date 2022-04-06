@@ -9,7 +9,7 @@
          * [Gelu (Gaussian Error Linear Unit)](#gelu-gaussian-error-linear-unit)
       * [Nicely summary table](#nicely-summary-table)
 
-<!-- Added by: gil_diy, at: Tue 01 Mar 2022 10:31:52 IST -->
+<!-- Added by: gil_diy, at: Wed 06 Apr 2022 12:02:06 IDT -->
 
 <!--te-->
 
@@ -23,8 +23,12 @@ For example, if f(x) = 2x + 3 and g(x) = 5x – 1, then chaining these two linea
 gives you another linear function: f(g(x)) = 2(5x – 1) + 3 = 10x + 1. So if you don’t
 have some nonlinearity between layers, then even a deep stack of layers is equivalent
 to a single layer, and you can’t solve very complex problems with that. Conversely, a
-large enough DNN with nonlinear activations can theoretically approximate any con‐
-tinuous function.
+large enough DNN with nonlinear activations can theoretically approximate any continuous function.
+
+
+<p align="center">
+  <img width="400" src="images/activation-functions/activation_function_and_their_derivatives.png" title="Look into the image">
+</p>
 
 <p align="center">
   <img width="600" src="images/activation-functions/activation_function_and_their_derivatives.png" title="Look into the image">
