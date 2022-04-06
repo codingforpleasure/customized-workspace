@@ -9,7 +9,7 @@
          * [Gelu (Gaussian Error Linear Unit)](#gelu-gaussian-error-linear-unit)
       * [Nicely summary table](#nicely-summary-table)
 
-<!-- Added by: gil_diy, at: Wed 06 Apr 2022 12:03:43 IDT -->
+<!-- Added by: gil_diy, at: Wed 06 Apr 2022 12:03:55 IDT -->
 
 <!--te-->
 
@@ -25,7 +25,7 @@ have some nonlinearity between layers, then even a deep stack of layers is equiv
 to a single layer, and you can’t solve very complex problems with that. Conversely, a
 large enough DNN with nonlinear activations can theoretically approximate any continuous function.
 
-[The need for nonlinear activation functions](https://stats.stackexchange.com/questions/275358/why-is-increasing-the-non-linearity-of-neural-networks-desired)
+[Great explanation: The need for nonlinear activation functions](https://stats.stackexchange.com/questions/275358/why-is-increasing-the-non-linearity-of-neural-networks-desired)
 
 
 <p align="center">
