@@ -8,7 +8,7 @@
          * [Desciminator](#desciminator)
          * [Generator](#generator)
 
-<!-- Added by: gil_diy, at: Wed 06 Apr 2022 13:24:43 IDT -->
+<!-- Added by: gil_diy, at: Wed 06 Apr 2022 13:24:50 IDT -->
 
 <!--te-->
 
@@ -68,7 +68,7 @@ The type of residual blocks:
 
 1) Identical residual block
 
-2) 
+2) Convolutional residual block
 
 
 [Great reference](https://towardsdatascience.com/resnets-residual-blocks-deep-residual-learning-a231a0ee73d2)
