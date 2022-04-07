@@ -8,8 +8,8 @@
          * [Stride](#stride)
          * [Zero-Padding](#zero-padding)
          * [Calculating our Convolution Output](#calculating-our-convolution-output)
-            * [<strong>CNN Output Size formula (Square)</strong>](#cnn-output-size-formula-square)
-            * [<strong>CNN Output Size formula (Non Square)</strong>](#cnn-output-size-formula-non-square)
+            * [<strong>Formula for the size of our feature maps (Square kernel)</strong>](#formula-for-the-size-of-our-feature-maps-square-kernel)
+            * [<strong>Formula for the size of our feature maps (Non Square kernel)</strong>](#formula-for-the-size-of-our-feature-maps-non-square-kernel)
             * [Number of parameters for convolution layer](#number-of-parameters-for-convolution-layer)
             * [Number of parameters for Dense Layer](#number-of-parameters-for-dense-layer)
       * [ReLU the Activation layer of choice for CNNs](#relu-the-activation-layer-of-choice-for-cnns)
@@ -49,7 +49,7 @@
       * [Well known CNN Architectures](#well-known-cnn-architectures)
       * [Videos of handwritten flowchart](#videos-of-handwritten-flowchart)
 
-<!-- Added by: gil_diy, at: Wed 06 Apr 2022 17:40:46 IDT -->
+<!-- Added by: gil_diy, at: Thu 07 Apr 2022 11:20:56 IDT -->
 
 <!--te-->
 # CNN
@@ -158,7 +158,7 @@ To ensure our filters cover the full input image symetrically, we used the follo
 
 Here you need padding since your input size is not an integer multiple of your kernel size. Therefore, you need to add padding on one side in order make it work. 
 
-#### **CNN Output Size formula (Square)**
+#### **Formula for the size of our feature maps (Square kernel)**
 
 
 <p align="center"> <!-- style="width:400px;" -->
@@ -166,7 +166,7 @@ Here you need padding since your input size is not an integer multiple of your k
 </p>
 
 
-#### **CNN Output Size formula (Non Square)**
+#### **Formula for the size of our feature maps (Non Square kernel)**
 
 <p align="center"> <!-- style="width:400px;" -->
   <img src="images/pytorch/cnn_output_size_non_square.png" title="tool tip here">
