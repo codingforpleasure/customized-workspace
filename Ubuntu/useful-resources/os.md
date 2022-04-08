@@ -2,6 +2,7 @@
    * [Processes](#processes)
       * [fork](#fork)
       * [execv](#execv)
+      * [execv](#execv-1)
       * [execvp](#execvp)
       * [pipe](#pipe)
       * [wait](#wait)
@@ -13,7 +14,7 @@
       * [Stderror](#stderror)
       * [Great reference](#great-reference)
 
-<!-- Added by: gil_diy, at: Tue 23 Nov 2021 10:45:59 IST -->
+<!-- Added by: gil_diy, at: Fri 08 Apr 2022 17:17:27 IDT -->
 
 <!--te-->
 # Processes
@@ -44,7 +45,26 @@ similar functions | Title2
  execvp | element-description
  execvpe | element-description
 
+## execv
 
+```c
+#include <sys/types.h>
+#include <unistd.h>
+#include <stdio.h>
+
+main()
+{
+ pid_t pid;
+ char *const parmList[] = {"/bin/ls", "-l", "/u/userid/dirname", NULL};
+
+ if ((pid = fork()) == -1)
+    perror("fork error");
+ else if (pid == 0) {
+    execv("/bin/ls", parmList);
+    printf("Return not expected. Must be an execv error.n");
+ }
+}
+```
 
 ## execvp
 ```c
