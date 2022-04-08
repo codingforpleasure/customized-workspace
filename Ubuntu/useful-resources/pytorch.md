@@ -67,6 +67,7 @@
       * [Good practice for avoid mistakes](#good-practice-for-avoid-mistakes)
          * [First train on a single batch](#first-train-on-a-single-batch)
       * [Batch normalization](#batch-normalization)
+         * [nn.BatchNorm2d](#nnbatchnorm2d)
       * [Inspecting the weight and bias and layers](#inspecting-the-weight-and-bias-and-layers)
       * [Loss function](#loss-function)
          * [Mean Absolute Error (nn.L1Loss)](#mean-absolute-error-nnl1loss)
@@ -112,7 +113,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Wed 06 Apr 2022 16:17:47 IDT -->
+<!-- Added by: gil_diy, at: Fri 08 Apr 2022 11:54:00 IDT -->
 
 <!--te-->
 
@@ -1332,6 +1333,8 @@ norm to a layer the first thing the **batch norm does is normalize the output
 from the activation function**.
 
 * Batch norm can be applied after each layer or your can sprinkled it out over few layers which you pick
+
+### nn.BatchNorm2d
 
 ```python
 network2 = nn.Sequential(
