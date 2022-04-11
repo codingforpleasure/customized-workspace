@@ -113,7 +113,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Fri 08 Apr 2022 11:54:41 IDT -->
+<!-- Added by: gil_diy, at: Tue 12 Apr 2022 00:22:34 IDT -->
 
 <!--te-->
 
@@ -1336,11 +1336,7 @@ from the activation function**.
 
 ### nn.BatchNorm2d
 
- Batch Normalization is done over the C dimension, computing statistics on (N, H, W) slices, it’s common terminology to call this **Spatial Batch Normalization
- **
-
- 
-
+ Batch Normalization is done over the C dimension, computing statistics on (N, H, W) slices, it’s common terminology to call this **Spatial Batch Normalization**
 
 ```python
 network2 = nn.Sequential(
