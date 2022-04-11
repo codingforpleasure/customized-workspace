@@ -54,7 +54,7 @@
       * [Export image of decision tree](#export-image-of-decision-tree)
       * [metrics](#metrics)
 
-<!-- Added by: gil_diy, at: Wed 30 Mar 2022 10:00:26 IDT -->
+<!-- Added by: gil_diy, at: Mon 11 Apr 2022 09:39:44 IDT -->
 
 <!--te-->
 
@@ -665,6 +665,18 @@ for thresh in thresholds:
 ### Random Forest (Bagging techinque)
 
 ### Adaboost (Boosting)
+
+```python
+from sklearn.ensemble import AdaBoostClassifier
+from sklearn.datasets import make_classification
+X, y = make_classification(n_samples=1000, n_features=4,
+                            n_informative=2, n_redundant=0,
+                            random_state=0, shuffle=False)
+clf = AdaBoostClassifier(n_estimators=100, random_state=0)
+clf.fit(X, y)
+AdaBoostClassifier(n_estimators=100, random_state=0)
+clf.predict([[0, 0, 0, 0]])
+```
 
 ### gradboost (Boosting)
 
