@@ -54,7 +54,7 @@
       * [Export image of decision tree](#export-image-of-decision-tree)
       * [metrics](#metrics)
 
-<!-- Added by: gil_diy, at: Mon 11 Apr 2022 09:39:44 IDT -->
+<!-- Added by: gil_diy, at: Mon 11 Apr 2022 09:39:48 IDT -->
 
 <!--te-->
 
