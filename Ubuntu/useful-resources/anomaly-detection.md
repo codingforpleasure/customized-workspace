@@ -18,7 +18,7 @@
       * [One-Class SVM](#one-class-svm)
       * [One-Class SVM (SGD)](#one-class-svm-sgd)
 
-<!-- Added by: gil_diy, at: Wed 13 Apr 2022 12:11:11 IDT -->
+<!-- Added by: gil_diy, at: Wed 13 Apr 2022 12:12:10 IDT -->
 
 <!--te-->
 
@@ -60,7 +60,9 @@ under the hood to detect outliers in the dataset.
 
 The algorithm tries to split or divide the data points such that each observation gets isolated from the others.
 
-
+```python
+from sklearn.ensemble import IsolationForest
+```
 
 ## Local Outlier Factor
 
