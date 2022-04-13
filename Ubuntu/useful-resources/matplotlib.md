@@ -42,13 +42,14 @@
          * [Drawing shapes with Matplotlib (patches)](#drawing-shapes-with-matplotlib-patches)
          * [Configuring plot design](#configuring-plot-design)
             * [Title plot size](#title-plot-size)
+            * [Adding Legend to plot](#adding-legend-to-plot)
             * [Legend text size](#legend-text-size)
             * [Ticks text size](#ticks-text-size)
          * [Draw contour lines and filled contours](#draw-contour-lines-and-filled-contours)
       * [Writing mathematical expression](#writing-mathematical-expression)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Wed 30 Mar 2022 19:25:58 IDT -->
+<!-- Added by: gil_diy, at: Wed 13 Apr 2022 15:13:09 IDT -->
 
 <!--te-->
 
@@ -998,6 +999,26 @@ ax.adedd_patch(wheel)
 ```python
 ax.set_title('My title', fontsize=20)
 ```
+#### Adding Legend to plot
+
+```python
+b1 = plt.scatter(X_train[:, 0], X_train[:, 1], c="white", s=20, edgecolor="k")
+b2 = plt.scatter(X_test[:, 0], X_test[:, 1], c="green", s=20, edgecolor="k")
+c = plt.scatter(X_outliers[:, 0], X_outliers[:, 1], c="red", s=20, edgecolor="k")
+
+plt.axis("tight")
+plt.xlim((-5, 5))
+plt.ylim((-5, 5))
+
+plt.legend(
+    [b1, b2, c],
+    ["training observations", "new regular observations", "new abnormal observations"],
+    loc="upper left",
+)
+
+plt.show()
+```
+
 #### Legend text size
 
 ```python
