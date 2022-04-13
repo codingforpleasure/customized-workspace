@@ -18,7 +18,7 @@
       * [One-Class SVM](#one-class-svm)
       * [One-Class SVM (SGD)](#one-class-svm-sgd)
 
-<!-- Added by: gil_diy, at: Wed 13 Apr 2022 14:50:01 IDT -->
+<!-- Added by: gil_diy, at: Wed 13 Apr 2022 17:28:44 IDT -->
 
 <!--te-->
 
@@ -68,6 +68,8 @@ under the hood to detect outliers in the dataset.
 ```python
 from sklearn.ensemble import IsolationForest
 ```
+
+Returns `-1` for outliers and `1` for inliers.
 
 ## Local Outlier Factor
 
