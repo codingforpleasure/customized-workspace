@@ -18,7 +18,7 @@
       * [One-Class SVM](#one-class-svm)
       * [One-Class SVM (SGD)](#one-class-svm-sgd)
 
-<!-- Added by: gil_diy, at: Wed 13 Apr 2022 12:10:45 IDT -->
+<!-- Added by: gil_diy, at: Wed 13 Apr 2022 12:11:11 IDT -->
 
 <!--te-->
 
@@ -69,7 +69,7 @@ The algorithm tries to split or divide the data points such that each observatio
 ## One-Class SVM
 
 ```python
-IURP VNOHDUQVYPLPSRUW 2QH&ODVV690
+from sklearn.svm import OneClassSVM
 ```
 
 ## One-Class SVM (SGD)
