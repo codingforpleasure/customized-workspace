@@ -20,7 +20,7 @@
       * [One-Class SVM](#one-class-svm)
       * [One-Class SVM (SGD)](#one-class-svm-sgd)
 
-<!-- Added by: gil_diy, at: Wed 13 Apr 2022 17:52:06 IDT -->
+<!-- Added by: gil_diy, at: Wed 13 Apr 2022 17:52:25 IDT -->
 
 <!--te-->
 
@@ -65,6 +65,10 @@ Isolation Forest is an unsupervised anomaly detection algorithm that uses a **ra
 
 * Similarly, the samples which end up in **shorter branches indicate anomalies** as it was easier for the tree to separate them from other observations.
 
+
+<p align="center">
+  <img width="400" src="images/" title="Look into the image">
+</p>
 
 ```python
 from sklearn.ensemble import IsolationForest
