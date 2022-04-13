@@ -1,18 +1,56 @@
 <!--ts-->
    * [Anomaly Detection](#anomaly-detection)
+      * [Methods](#methods)
+         * [Density based](#density-based)
+            * [DBSCAN](#dbscan)
+            * [LOF](#lof)
+         * [Distance based](#distance-based)
+            * [K-NN](#k-nn)
+            * [K-MEANS](#k-means)
+            * [Regression hyperplan distance](#regression-hyperplan-distance)
+         * [Parametric](#parametric)
+            * [GMM](#gmm)
+            * [Single Class SVMs](#single-class-svms)
+            * [Extreme value theory](#extreme-value-theory)
       * [Isolation Forest](#isolation-forest)
       * [Local Outlier Factor](#local-outlier-factor)
       * [Robust Covariance](#robust-covariance)
       * [One-Class SVM](#one-class-svm)
       * [One-Class SVM (SGD)](#one-class-svm-sgd)
 
-<!-- Added by: gil_diy, at: Wed 13 Apr 2022 11:32:46 IDT -->
+<!-- Added by: gil_diy, at: Wed 13 Apr 2022 12:10:45 IDT -->
 
 <!--te-->
 
 # Anomaly Detection
 
 The real challenge in anomaly detection is to construct the right data model to seperate outliers from noise and normal data.
+
+
+## Methods
+
+### Density based
+
+#### DBSCAN
+
+#### LOF
+
+### Distance based
+
+#### K-NN
+
+#### K-MEANS
+
+#### Regression hyperplan distance
+
+### Parametric
+
+#### GMM
+
+#### Single Class SVMs
+
+#### Extreme value theory
+
 
 
 ## Isolation Forest
@@ -29,5 +67,9 @@ The algorithm tries to split or divide the data points such that each observatio
 ## Robust Covariance
 
 ## One-Class SVM
+
+```python
+IURP VNOHDUQVYPLPSRUW 2QH&ODVV690
+```
 
 ## One-Class SVM (SGD)
