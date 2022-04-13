@@ -20,7 +20,7 @@
       * [One-Class SVM](#one-class-svm)
       * [One-Class SVM (SGD)](#one-class-svm-sgd)
 
-<!-- Added by: gil_diy, at: Wed 13 Apr 2022 21:17:51 IDT -->
+<!-- Added by: gil_diy, at: Wed 13 Apr 2022 21:38:17 IDT -->
 
 <!--te-->
 
@@ -102,10 +102,11 @@ Extension to Isolation Forests called **‘Extended Isolation Forests’**. In E
 
 The local outlier factor computes an anomaly score called anomaly score that measures how isolated the point is with **respect to the surrounding neighborhood**.
 
-Distance techniques can't identify Local Outlier, hence we switch to density based techniques
+* Distance techniques can't identify Local Outlier, hence we switch to **density based techniques**
 like the local Outlier factor algorithm.
 
 
+* Basic idea of LOF: comparing the local density of a point with the densities of its neighbors. A has a much lower density than its neighbors.
 
 ## Robust Covariance
 
