@@ -6,11 +6,14 @@
       * [One-Class SVM](#one-class-svm)
       * [One-Class SVM (SGD)](#one-class-svm-sgd)
 
-<!-- Added by: gil_diy, at: Wed 13 Apr 2022 11:19:15 IDT -->
+<!-- Added by: gil_diy, at: Wed 13 Apr 2022 11:32:43 IDT -->
 
 <!--te-->
 
 # Anomaly Detection
+
+The real challenge in anomaly detection is to construct the right data model to seperate outliers from noise and normal data.
+
 
 ## Isolation Forest
 
