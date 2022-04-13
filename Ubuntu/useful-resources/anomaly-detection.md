@@ -18,7 +18,7 @@
       * [One-Class SVM](#one-class-svm)
       * [One-Class SVM (SGD)](#one-class-svm-sgd)
 
-<!-- Added by: gil_diy, at: Wed 13 Apr 2022 17:31:39 IDT -->
+<!-- Added by: gil_diy, at: Wed 13 Apr 2022 17:31:43 IDT -->
 
 <!--te-->
 
@@ -69,7 +69,8 @@ under the hood to detect outliers in the dataset.
 from sklearn.ensemble import IsolationForest
 ```
 
-An anomaly score of `-1` is assigned to anomalies and `1` to normal
+* An anomaly score of `-1` is assigned to anomalies and `1` to normal
+
 
 ## Local Outlier Factor
 
