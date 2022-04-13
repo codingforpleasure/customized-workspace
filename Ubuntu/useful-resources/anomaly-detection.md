@@ -19,7 +19,7 @@
       * [One-Class SVM](#one-class-svm)
       * [One-Class SVM (SGD)](#one-class-svm-sgd)
 
-<!-- Added by: gil_diy, at: Wed 13 Apr 2022 17:35:08 IDT -->
+<!-- Added by: gil_diy, at: Wed 13 Apr 2022 17:35:31 IDT -->
 
 <!--te-->
 
@@ -79,6 +79,8 @@ Isolation Forests are computationally efficient and have been proven to be very 
 ### Drawbacks
 
 * The final anomaly score depends on the **contamination parameter**, provided while training the model. This implies that we **should have an idea of what percentage of the data is anomalous beforehand** to get a better prediction.
+
+* The model suffers from a bias due to the way the branching takes place.
 
 ## Local Outlier Factor
 
