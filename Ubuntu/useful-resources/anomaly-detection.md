@@ -19,7 +19,7 @@
       * [One-Class SVM](#one-class-svm)
       * [One-Class SVM (SGD)](#one-class-svm-sgd)
 
-<!-- Added by: gil_diy, at: Wed 13 Apr 2022 22:14:05 IDT -->
+<!-- Added by: gil_diy, at: Wed 13 Apr 2022 22:15:44 IDT -->
 
 <!--te-->
 
@@ -35,6 +35,10 @@ The real challenge in anomaly detection is to construct the right data model to 
 #### DBSCAN (Density-based spatial clustering)
 
 * Density as a measure of the number of data points in a specified area. 
+
+`eps` - Maximum distance between two samples for one to be considered to be connected to the other.
+And the distance can be defined by any type of distance function, the “Euclidean distance” for example.
+
 
 ```python
 from sklearn.cluster import DBSCAN
