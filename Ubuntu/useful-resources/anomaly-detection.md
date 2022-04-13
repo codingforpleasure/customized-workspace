@@ -18,7 +18,7 @@
       * [One-Class SVM](#one-class-svm)
       * [One-Class SVM (SGD)](#one-class-svm-sgd)
 
-<!-- Added by: gil_diy, at: Wed 13 Apr 2022 12:12:10 IDT -->
+<!-- Added by: gil_diy, at: Wed 13 Apr 2022 14:50:01 IDT -->
 
 <!--te-->
 
@@ -58,7 +58,12 @@ The real challenge in anomaly detection is to construct the right data model to 
 Isolation Forest is an unsupervised anomaly detection algorithm that uses a random forest algorithm (decision trees),
 under the hood to detect outliers in the dataset. 
 
-The algorithm tries to split or divide the data points such that each observation gets isolated from the others.
+* In an Isolation Forest, randomly sub-sampled data is processed in a tree structure based on randomly selected features.
+
+* The samples that travel deeper into the tree are less likely to be anomalies as they required more cuts to isolate them.
+
+* Similarly, the samples which end up in shorter branches indicate anomalies as it was easier for the tree to separate them from other observations.
+
 
 ```python
 from sklearn.ensemble import IsolationForest
