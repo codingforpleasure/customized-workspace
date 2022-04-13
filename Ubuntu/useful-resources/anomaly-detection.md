@@ -2,7 +2,7 @@
    * [Anomaly Detection](#anomaly-detection)
       * [Methods](#methods)
          * [Density based](#density-based)
-            * [DBSCAN](#dbscan)
+            * [DBSCAN (Density-based spatial clustering)](#dbscan-density-based-spatial-clustering)
             * [LOF (Local Outlier Factor)](#lof-local-outlier-factor)
          * [Distance based](#distance-based)
             * [K-NN](#k-nn)
@@ -19,7 +19,7 @@
       * [One-Class SVM](#one-class-svm)
       * [One-Class SVM (SGD)](#one-class-svm-sgd)
 
-<!-- Added by: gil_diy, at: Wed 13 Apr 2022 21:40:45 IDT -->
+<!-- Added by: gil_diy, at: Wed 13 Apr 2022 21:44:29 IDT -->
 
 <!--te-->
 
@@ -32,7 +32,7 @@ The real challenge in anomaly detection is to construct the right data model to 
 
 ### Density based
 
-#### DBSCAN
+#### DBSCAN (Density-based spatial clustering)
 
 #### LOF (Local Outlier Factor)
 
