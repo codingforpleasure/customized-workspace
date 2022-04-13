@@ -19,7 +19,7 @@
       * [One-Class SVM](#one-class-svm)
       * [One-Class SVM (SGD)](#one-class-svm-sgd)
 
-<!-- Added by: gil_diy, at: Wed 13 Apr 2022 21:39:56 IDT -->
+<!-- Added by: gil_diy, at: Wed 13 Apr 2022 21:40:45 IDT -->
 
 <!--te-->
 
@@ -41,8 +41,18 @@ The real challenge in anomaly detection is to construct the right data model to 
 * Distance techniques can't identify Local Outlier, hence we switch to **density based techniques**
 like the local Outlier factor algorithm.
 
-
 * Basic idea of LOF: comparing the local density of a point with the densities of its neighbors. A has a much lower density than its neighbors.
+
+
+```python
+import numpy as np
+from sklearn.neighbors import LocalOutlierFactor
+
+X = [[-1.1], [0.2], [101.1], [0.3]]
+clf = LocalOutlierFactor(n_neighbors=2)
+clf.fit_predict(X)
+array([ 1,  1, -1,  1])
+```
 
 ### Distance based
 
