@@ -3,7 +3,7 @@
       * [Methods](#methods)
          * [Density based](#density-based)
             * [DBSCAN](#dbscan)
-            * [LOF](#lof)
+            * [LOF (Local Outlier Factor)](#lof-local-outlier-factor)
          * [Distance based](#distance-based)
             * [K-NN](#k-nn)
             * [K-MEANS](#k-means)
@@ -15,12 +15,11 @@
       * [Isolation Forest](#isolation-forest)
          * [Drawbacks](#drawbacks)
       * [Extended Isolation Forests](#extended-isolation-forests)
-      * [Local Outlier Factor](#local-outlier-factor)
       * [Robust Covariance](#robust-covariance)
       * [One-Class SVM](#one-class-svm)
       * [One-Class SVM (SGD)](#one-class-svm-sgd)
 
-<!-- Added by: gil_diy, at: Wed 13 Apr 2022 21:38:26 IDT -->
+<!-- Added by: gil_diy, at: Wed 13 Apr 2022 21:39:53 IDT -->
 
 <!--te-->
 
@@ -35,7 +34,15 @@ The real challenge in anomaly detection is to construct the right data model to 
 
 #### DBSCAN
 
-#### LOF
+#### LOF (Local Outlier Factor)
+
+* The local outlier factor computes an anomaly score called anomaly score that measures how isolated the point is with **respect to the surrounding neighborhood**.
+
+* Distance techniques can't identify Local Outlier, hence we switch to **density based techniques**
+like the local Outlier factor algorithm.
+
+
+* Basic idea of LOF: comparing the local density of a point with the densities of its neighbors. A has a much lower density than its neighbors.
 
 ### Distance based
 
@@ -98,15 +105,7 @@ Extension to Isolation Forests called **‘Extended Isolation Forests’**. In E
   <img width="400" src="images/anomaly-detection/extended_Isolation_forests.png" title="Look into the image">
 </p>
 
-## Local Outlier Factor
 
-* The local outlier factor computes an anomaly score called anomaly score that measures how isolated the point is with **respect to the surrounding neighborhood**.
-
-* Distance techniques can't identify Local Outlier, hence we switch to **density based techniques**
-like the local Outlier factor algorithm.
-
-
-* Basic idea of LOF: comparing the local density of a point with the densities of its neighbors. A has a much lower density than its neighbors.
 
 ## Robust Covariance
 
