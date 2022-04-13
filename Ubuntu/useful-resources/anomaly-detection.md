@@ -20,7 +20,7 @@
       * [One-Class SVM](#one-class-svm)
       * [One-Class SVM (SGD)](#one-class-svm-sgd)
 
-<!-- Added by: gil_diy, at: Wed 13 Apr 2022 17:52:00 IDT -->
+<!-- Added by: gil_diy, at: Wed 13 Apr 2022 17:52:06 IDT -->
 
 <!--te-->
 
@@ -63,7 +63,7 @@ Isolation Forest is an unsupervised anomaly detection algorithm that uses a **ra
 
 * The samples that travel deeper into the tree are **less likely to be anomalies as they required more cuts to isolate them**.
 
-* Similarly, the samples which end up in shorter branches indicate anomalies as it was easier for the tree to separate them from other observations.
+* Similarly, the samples which end up in **shorter branches indicate anomalies** as it was easier for the tree to separate them from other observations.
 
 
 ```python
