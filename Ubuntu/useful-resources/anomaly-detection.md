@@ -20,7 +20,7 @@
       * [One-Class SVM](#one-class-svm)
       * [One-Class SVM (SGD)](#one-class-svm-sgd)
 
-<!-- Added by: gil_diy, at: Wed 13 Apr 2022 20:18:36 IDT -->
+<!-- Added by: gil_diy, at: Wed 13 Apr 2022 20:49:07 IDT -->
 
 <!--te-->
 
@@ -98,6 +98,8 @@ Extension to Isolation Forests called **‘Extended Isolation Forests’**. In E
 
 ## Local Outlier Factor
 
+The local outlier factor computes an anomaly score called anomaly score that measures how isolated the point is with **respect to the surrounding neighborhood**.
+
 ## Robust Covariance
 
 ## One-Class SVM
@@ -105,5 +107,7 @@ Extension to Isolation Forests called **‘Extended Isolation Forests’**. In E
 ```python
 from sklearn.svm import OneClassSVM
 ```
+
+
 
 ## One-Class SVM (SGD)
