@@ -20,7 +20,7 @@
       * [One-Class SVM](#one-class-svm)
       * [One-Class SVM (SGD)](#one-class-svm-sgd)
 
-<!-- Added by: gil_diy, at: Wed 13 Apr 2022 17:48:37 IDT -->
+<!-- Added by: gil_diy, at: Wed 13 Apr 2022 17:49:16 IDT -->
 
 <!--te-->
 
@@ -85,7 +85,7 @@ Isolation Forests are computationally efficient and have been proven to be very 
 
 ## Extended Isolation Forests
 
-Extension to Isolation Forests called **‘Extended Isolation Forests’** was introduced by Sahand Hariri. In EIF, horizontal and vertical cuts were replaced with cuts with **random slopes**.
+Extension to Isolation Forests called **‘Extended Isolation Forests’**. In EIF, horizontal and vertical cuts were replaced with cuts with **Random Slopes**.
 
 <p align="center">
   <img width="400" src="images/anomaly-detection/extended_Isolation_forests.png" title="Look into the image">
