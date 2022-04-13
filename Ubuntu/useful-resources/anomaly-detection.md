@@ -13,12 +13,13 @@
             * [Single Class SVMs](#single-class-svms)
             * [Extreme value theory](#extreme-value-theory)
       * [Isolation Forest](#isolation-forest)
+         * [Drawbacks](#drawbacks)
       * [Local Outlier Factor](#local-outlier-factor)
       * [Robust Covariance](#robust-covariance)
       * [One-Class SVM](#one-class-svm)
       * [One-Class SVM (SGD)](#one-class-svm-sgd)
 
-<!-- Added by: gil_diy, at: Wed 13 Apr 2022 17:34:06 IDT -->
+<!-- Added by: gil_diy, at: Wed 13 Apr 2022 17:34:43 IDT -->
 
 <!--te-->
 
@@ -74,6 +75,10 @@ from sklearn.ensemble import IsolationForest
 **Contamination** - percentage of anomalies present in the data
 
 Isolation Forests are computationally efficient and have been proven to be very effective in Anomaly detection.
+
+### Drawbacks
+
+* The final anomaly score depends on the **contamination parameter**, provided while training the model. This implies that we should have an idea of what percentage of the data is anomalous beforehand to get a better prediction.
 
 ## Local Outlier Factor
 
