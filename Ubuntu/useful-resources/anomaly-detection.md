@@ -19,7 +19,7 @@
       * [One-Class SVM](#one-class-svm)
       * [One-Class SVM (SGD)](#one-class-svm-sgd)
 
-<!-- Added by: gil_diy, at: Wed 13 Apr 2022 21:44:29 IDT -->
+<!-- Added by: gil_diy, at: Wed 13 Apr 2022 22:14:05 IDT -->
 
 <!--te-->
 
@@ -34,6 +34,12 @@ The real challenge in anomaly detection is to construct the right data model to 
 
 #### DBSCAN (Density-based spatial clustering)
 
+* Density as a measure of the number of data points in a specified area. 
+
+```python
+from sklearn.cluster import DBSCAN
+
+```
 #### LOF (Local Outlier Factor)
 
 * The local outlier factor computes an anomaly score called anomaly score that measures how isolated the point is with **respect to the surrounding neighborhood**.
