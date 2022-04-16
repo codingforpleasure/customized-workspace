@@ -19,7 +19,7 @@
       * [One-Class SVM](#one-class-svm)
       * [One-Class SVM (SGD)](#one-class-svm-sgd)
 
-<!-- Added by: gil_diy, at: Wed 13 Apr 2022 22:15:44 IDT -->
+<!-- Added by: gil_diy, at: Sat 16 Apr 2022 18:25:44 IDT -->
 
 <!--te-->
 
@@ -38,6 +38,8 @@ The real challenge in anomaly detection is to construct the right data model to 
 
 `eps` - Maximum distance between two samples for one to be considered to be connected to the other.
 And the distance can be defined by any type of distance function, the “Euclidean distance” for example.
+
+core samples, the samples that are in areas of high density
 
 
 ```python
@@ -103,6 +105,12 @@ Isolation Forest is an unsupervised anomaly detection algorithm that uses a **ra
 
 ```python
 from sklearn.ensemble import IsolationForest
+
+
+iso_forest = IsolationForest(contamination=0.1)
+iso_forest.fit(X_train)
+
+anomaly_scores = iso_forest.decision_function(x_validate)
 ```
 
 * An anomaly score of `-1` is assigned to anomalies and `1` to normal points.
