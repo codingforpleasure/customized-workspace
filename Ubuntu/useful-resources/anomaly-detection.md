@@ -19,7 +19,7 @@
       * [One-Class SVM](#one-class-svm)
       * [One-Class SVM (SGD)](#one-class-svm-sgd)
 
-<!-- Added by: gil_diy, at: Sat 16 Apr 2022 18:46:32 IDT -->
+<!-- Added by: gil_diy, at: Sat 16 Apr 2022 18:46:40 IDT -->
 
 <!--te-->
 
@@ -96,7 +96,8 @@ Isolation Forest is an unsupervised anomaly detection algorithm that uses a **ra
 
 * Similarly, the samples which end up in **shorter branches indicate anomalies** as it was easier for the tree to separate them from other observations.
 
-[isolation-forest](https://towardsdatascience.com/isolation-forest-the-anomaly-detection-algorithm-any-data-scientist-should-know-1a99622eec2d)
+[isolation-forest well explained](https://towardsdatascience.com/isolation-forest-the-anomaly-detection-algorithm-any-data-scientist-should-know-1a99622eec2d)
+
 [Reference]([Link](https://youtu.be/qNDcPUeCEPI))
 
 <p align="center">
