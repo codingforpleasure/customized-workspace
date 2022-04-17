@@ -87,7 +87,7 @@
       * [Execute sql](#execute-sql)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Sun 17 Apr 2022 13:29:53 IDT -->
+<!-- Added by: gil_diy, at: Sun 17 Apr 2022 13:29:56 IDT -->
 
 <!--te-->
 
