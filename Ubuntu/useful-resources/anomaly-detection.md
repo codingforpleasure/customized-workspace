@@ -19,7 +19,7 @@
       * [One-Class SVM](#one-class-svm)
       * [One-Class SVM (SGD)](#one-class-svm-sgd)
 
-<!-- Added by: gil_diy, at: Sun 17 Apr 2022 08:44:26 IDT -->
+<!-- Added by: gil_diy, at: Sun 17 Apr 2022 08:44:35 IDT -->
 
 <!--te-->
 
@@ -115,7 +115,7 @@ anomaly_scores = iso_forest.decision_function(x_validate)
 ```
 
 * An anomaly score of `-1` is assigned to anomalies and `1` to normal points.
-* decision_function(X) - **Average anomaly score** of X of the base classifiers.
+* the funciton `decision_function(X)` - **Average anomaly score** of X of the base classifiers.
 
 **Contamination** - percentage of anomalies present in the data
 
