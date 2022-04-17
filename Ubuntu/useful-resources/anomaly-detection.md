@@ -21,7 +21,7 @@
          * [Autoencoder](#autoencoder)
       * [pyod (Useful Package)](#pyod-useful-package)
 
-<!-- Added by: gil_diy, at: Sun 17 Apr 2022 19:34:13 IDT -->
+<!-- Added by: gil_diy, at: Sun 17 Apr 2022 19:34:20 IDT -->
 
 <!--te-->
 
@@ -181,6 +181,6 @@ Why Do We Apply Dimensionality Reduction to Find Outliers?
 
 [Link](http://www.my-website.com)
 
-[Examples](https://github.com/yzhao062/pyod/tree/master/examples)
+[Github - Examples](https://github.com/yzhao062/pyod/tree/master/examples)
 
 * binary labels (0: inliers, 1: outliers)
