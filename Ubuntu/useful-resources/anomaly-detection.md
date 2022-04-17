@@ -17,8 +17,9 @@
       * [Isolation Forest](#isolation-forest)
          * [Drawbacks](#drawbacks)
       * [Extended Isolation Forests](#extended-isolation-forests)
+      * [Deep Learning approaches](#deep-learning-approaches)
 
-<!-- Added by: gil_diy, at: Sun 17 Apr 2022 12:53:46 IDT -->
+<!-- Added by: gil_diy, at: Sun 17 Apr 2022 12:54:00 IDT -->
 
 <!--te-->
 
@@ -151,4 +152,5 @@ Extension to Isolation Forests called **‘Extended Isolation Forests’**. In E
 </p>
 
 
-##
+## Deep Learning approaches
+
