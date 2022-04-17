@@ -1,7 +1,8 @@
 <!--ts-->
    * [Autoencoders](#autoencoders)
+      * [reconstruction loss](#reconstruction-loss)
 
-<!-- Added by: gil_diy, at: Sun 17 Apr 2022 13:18:08 IDT -->
+<!-- Added by: gil_diy, at: Sun 17 Apr 2022 13:18:10 IDT -->
 
 <!--te-->
 
@@ -11,6 +12,7 @@
 <p align="center">
   <img width="400" src="images/Autoencoders/autoencoder_1.png" title="Look into the image">
 </p>
+
 ## reconstruction loss
 
 When training an **Autoencoder**, the objective is to reconstruct the input as best as possible. This is done by minimizing a loss function (just like in supervised learning).
