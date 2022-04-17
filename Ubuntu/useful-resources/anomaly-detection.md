@@ -20,7 +20,7 @@
       * [Deep Learning approaches](#deep-learning-approaches)
          * [Encoder-Decoder](#encoder-decoder)
 
-<!-- Added by: gil_diy, at: Sun 17 Apr 2022 18:00:48 IDT -->
+<!-- Added by: gil_diy, at: Sun 17 Apr 2022 18:01:26 IDT -->
 
 <!--te-->
 
@@ -46,7 +46,6 @@ The real challenge in anomaly detection is to construct the right data model to 
 
 `eps` - Maximum distance between two samples for one to be considered to be connected to the other.
 And the distance can be defined by any type of distance function, the “Euclidean distance” for example.
-
 
 
 ```python
