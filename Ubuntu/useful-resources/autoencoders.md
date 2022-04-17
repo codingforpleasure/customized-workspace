@@ -2,7 +2,7 @@
    * [Autoencoders](#autoencoders)
       * [reconstruction loss](#reconstruction-loss)
 
-<!-- Added by: gil_diy, at: Sun 17 Apr 2022 13:18:15 IDT -->
+<!-- Added by: gil_diy, at: Sun 17 Apr 2022 13:18:23 IDT -->
 
 <!--te-->
 
@@ -10,7 +10,7 @@
 
 
 <p align="center">
-  <img width="400" src="images/Autoencoders/autoencoder_1.png" title="Look into the image">
+  <img width="600" src="images/Autoencoders/autoencoder_1.png" title="Look into the image">
 </p>
 
 ## reconstruction loss
