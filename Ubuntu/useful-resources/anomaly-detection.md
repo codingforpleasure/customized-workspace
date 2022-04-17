@@ -1,6 +1,7 @@
 <!--ts-->
    * [Anomaly Detection](#anomaly-detection)
-      * [Methods](#methods)
+   * [Methods](#methods)
+      * [Classical Approaches](#classical-approaches)
          * [Density based](#density-based)
             * [DBSCAN (Density-based spatial clustering)](#dbscan-density-based-spatial-clustering)
             * [LOF (Local Outlier Factor)](#lof-local-outlier-factor)
@@ -16,9 +17,8 @@
       * [Isolation Forest](#isolation-forest)
          * [Drawbacks](#drawbacks)
       * [Extended Isolation Forests](#extended-isolation-forests)
-      * [Robust Covariance](#robust-covariance)
 
-<!-- Added by: gil_diy, at: Sun 17 Apr 2022 12:50:12 IDT -->
+<!-- Added by: gil_diy, at: Sun 17 Apr 2022 12:53:41 IDT -->
 
 <!--te-->
 
@@ -27,8 +27,9 @@
 The real challenge in anomaly detection is to construct the right data model to seperate outliers from noise and normal data.
 
 
-## Methods
+# Methods
 
+## Classical Approaches
 ### Density based
 
 #### DBSCAN (Density-based spatial clustering)
@@ -150,6 +151,4 @@ Extension to Isolation Forests called **‘Extended Isolation Forests’**. In E
 </p>
 
 
-
-## Robust Covariance
-
+##
