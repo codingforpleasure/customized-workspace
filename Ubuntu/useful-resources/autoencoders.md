@@ -1,0 +1,16 @@
+<!--ts-->
+   * [Autoencoders](#autoencoders)
+      * [reconstruction loss](#reconstruction-loss)
+
+<!-- Added by: gil_diy, at: Sun 17 Apr 2022 13:15:14 IDT -->
+
+<!--te-->
+
+# Autoencoders
+
+
+
+## reconstruction loss
+
+When training an Autoencoder, the objective is to reconstruct the input as best as possible. This is done by minimizing a loss function (just like in supervised learning).
+This function is known as **reconstruction loss**. Cross-entropy loss and Mean squared error are common examples.
