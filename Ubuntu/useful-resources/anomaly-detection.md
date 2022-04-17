@@ -19,8 +19,9 @@
       * [Extended Isolation Forests](#extended-isolation-forests)
       * [Deep Learning approaches](#deep-learning-approaches)
          * [Autoencoder](#autoencoder)
+      * [pyod (Useful Package)](#pyod-useful-package)
 
-<!-- Added by: gil_diy, at: Sun 17 Apr 2022 18:58:07 IDT -->
+<!-- Added by: gil_diy, at: Sun 17 Apr 2022 19:34:13 IDT -->
 
 <!--te-->
 
@@ -173,3 +174,13 @@ Why Do We Apply Dimensionality Reduction to Find Outliers?
 * Recall that in an autoencoder model the number of the neurons of the input and output layers corresponds to the number of variables.
 
 * The number of neurons of the hidden layers is always less than that of the outside layers
+
+
+
+## pyod (Useful Package)
+
+[Link](http://www.my-website.com)
+
+[Examples](https://github.com/yzhao062/pyod/tree/master/examples)
+
+* binary labels (0: inliers, 1: outliers)
