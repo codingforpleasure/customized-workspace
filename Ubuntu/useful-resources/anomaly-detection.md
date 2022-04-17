@@ -20,7 +20,7 @@
       * [Deep Learning approaches](#deep-learning-approaches)
          * [Encoder-Decoder](#encoder-decoder)
 
-<!-- Added by: gil_diy, at: Sun 17 Apr 2022 17:52:53 IDT -->
+<!-- Added by: gil_diy, at: Sun 17 Apr 2022 17:52:55 IDT -->
 
 <!--te-->
 
@@ -36,7 +36,7 @@ The real challenge in anomaly detection is to construct the right data model to 
 
 #### DBSCAN (Density-based spatial clustering)
 
-* DBSCAN is a density-based and unsupervised machine learning algorithm
+* DBSCAN is a density-based and unsupervised machine learning algorithm.
 
 * Density as a measure of the number of data points in a specified area. 
 
