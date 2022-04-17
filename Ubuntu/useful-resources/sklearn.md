@@ -54,7 +54,7 @@
       * [Export image of decision tree](#export-image-of-decision-tree)
       * [metrics](#metrics)
 
-<!-- Added by: gil_diy, at: Mon 11 Apr 2022 09:39:51 IDT -->
+<!-- Added by: gil_diy, at: Sun 17 Apr 2022 09:34:10 IDT -->
 
 <!--te-->
 
@@ -720,11 +720,32 @@ grid_search.fit(X_train, y_train)
 ## Export image of decision tree
 
 ```python
+clf = tree.DecisionTreeClassifier(max_depth=100)
+model = clf.fit(x_train, y_train)
+
+predictions = clf.predict(x_test)
+
+print('predictions: ', predictions)
+accuracy_model = accuracy_score(y_test, predictions)
+print("The accuracy of model Decision tree is: ", accuracy_model)
+
+fig, axes = plt.subplots(nrows=1, ncols=1, figsize=(12, 12), dpi=100)# , dpi=30
+print('le_y.classes_: ', le_y.classes_)
+
+tree.plot_tree(clf,
+               feature_names=x.columns,
+               class_names=le_y.classes_,
+               fontsize=10,
+               filled=True)
+
+fig.savefig('my_tree.png')
+
 tree.export_graphviz(clf,
                      out_file="tree.dot",
                      feature_names=x.columns,
                      class_names=le_y.classes_,
                      filled=True)
+
 ```
 
 The python file will generate `tree.dot` file,
