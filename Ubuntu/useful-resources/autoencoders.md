@@ -4,7 +4,7 @@
       * [Reconstruction loss](#reconstruction-loss)
       * [LSTM Autoencoder](#lstm-autoencoder)
 
-<!-- Added by: gil_diy, at: Sun 17 Apr 2022 18:51:40 IDT -->
+<!-- Added by: gil_diy, at: Sun 17 Apr 2022 18:52:33 IDT -->
 
 <!--te-->
 
@@ -17,6 +17,10 @@
 
 
 ## Why Do We Apply Dimensionality Reduction to Find Outliers?
+
+once the main patterns are identified, the **outliers are revealed**. Many distance-based techniques (e.g. KNNs) suffer the **curse of dimensionality** when they compute distances of every data point in the full feature space. High dimensionality has to be reduced
+
+Interestingly, during the process of dimensionality reduction outliers are identified. We can say outlier detection is a by-product of dimension reduction.
 
 ## Reconstruction loss
 
