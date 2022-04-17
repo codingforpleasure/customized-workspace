@@ -18,8 +18,9 @@
          * [Drawbacks](#drawbacks)
       * [Extended Isolation Forests](#extended-isolation-forests)
       * [Deep Learning approaches](#deep-learning-approaches)
+         * [Encoder-Decoder](#encoder-decoder)
 
-<!-- Added by: gil_diy, at: Sun 17 Apr 2022 12:54:00 IDT -->
+<!-- Added by: gil_diy, at: Sun 17 Apr 2022 17:52:13 IDT -->
 
 <!--te-->
 
@@ -34,6 +35,8 @@ The real challenge in anomaly detection is to construct the right data model to 
 ### Density based
 
 #### DBSCAN (Density-based spatial clustering)
+
+* DBSCAN is a density-based and unsupervised machine learning algorithm
 
 * Density as a measure of the number of data points in a specified area. 
 
@@ -154,3 +157,6 @@ Extension to Isolation Forests called **‘Extended Isolation Forests’**. In E
 
 ## Deep Learning approaches
 
+### Encoder-Decoder
+
+### 
