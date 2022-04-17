@@ -21,7 +21,7 @@
          * [Autoencoder](#autoencoder)
       * [pyod (Useful Package)](#pyod-useful-package)
 
-<!-- Added by: gil_diy, at: Sun 17 Apr 2022 19:35:13 IDT -->
+<!-- Added by: gil_diy, at: Sun 17 Apr 2022 19:48:53 IDT -->
 
 <!--te-->
 
@@ -184,3 +184,18 @@ Why Do We Apply Dimensionality Reduction to Find Outliers?
 [Github - Examples](https://github.com/yzhao062/pyod/tree/master/examples)
 
 * binary labels (0: inliers, 1: outliers)
+
+```python
+
+
+y_train_scores = clf1.decision_scores_  # raw outlier scores
+
+# get the prediction on the test data
+y_test_pred = clf1.predict(X_test_scaled)  # outlier labels (0 or 1)
+# clf.decision_function: Predict raw anomaly score of X using the fitted detector.
+y_test_scores = clf1.decision_function(X_test_scaled)  # outlier scores
+
+y_test_pred = pd.Series(y_test_pred)
+y_test_scores = pd.Series(y_test_scores)
+
+```
