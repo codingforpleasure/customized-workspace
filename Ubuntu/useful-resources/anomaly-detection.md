@@ -20,7 +20,7 @@
       * [Deep Learning approaches](#deep-learning-approaches)
          * [Encoder-Decoder](#encoder-decoder)
 
-<!-- Added by: gil_diy, at: Sun 17 Apr 2022 17:53:14 IDT -->
+<!-- Added by: gil_diy, at: Sun 17 Apr 2022 18:00:32 IDT -->
 
 <!--te-->
 
@@ -52,6 +52,10 @@ core samples, the samples that are in areas of high density
 
 ```python
 from sklearn.cluster import DBSCAN
+
+from sklearn.cluster import DBSCAN
+dbscan=DBSCAN()
+dbscan.fit(df[[“sepal_length”, “sepal_width”]])
 
 ```
 #### LOF (Local Outlier Factor)
