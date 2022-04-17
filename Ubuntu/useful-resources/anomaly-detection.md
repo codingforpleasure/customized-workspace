@@ -19,7 +19,7 @@
       * [One-Class SVM](#one-class-svm)
       * [One-Class SVM (SGD)](#one-class-svm-sgd)
 
-<!-- Added by: gil_diy, at: Sun 17 Apr 2022 10:25:11 IDT -->
+<!-- Added by: gil_diy, at: Sun 17 Apr 2022 10:35:13 IDT -->
 
 <!--te-->
 
@@ -79,6 +79,15 @@ array([ 1,  1, -1,  1])
 #### GMM
 
 #### One Class SVMs
+
+```python
+from sklearn.svm import OneClassSVM
+
+
+
+ocsvm = OneClassSVM(kernel='rbf', gamma=0.00005, random_state = 42, nu=0.1)
+ocsvm.fit(x_train)
+```
 
 #### Extreme value theory
 
