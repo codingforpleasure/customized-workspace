@@ -10,7 +10,7 @@
             * [Regression hyperplan distance](#regression-hyperplan-distance)
          * [Parametric](#parametric)
             * [GMM](#gmm)
-            * [Single Class SVMs](#single-class-svms)
+            * [One Class SVMs](#one-class-svms)
             * [Extreme value theory](#extreme-value-theory)
       * [Isolation Forest](#isolation-forest)
          * [Drawbacks](#drawbacks)
@@ -19,7 +19,7 @@
       * [One-Class SVM](#one-class-svm)
       * [One-Class SVM (SGD)](#one-class-svm-sgd)
 
-<!-- Added by: gil_diy, at: Sun 17 Apr 2022 09:01:36 IDT -->
+<!-- Added by: gil_diy, at: Sun 17 Apr 2022 10:25:11 IDT -->
 
 <!--te-->
 
@@ -78,7 +78,7 @@ array([ 1,  1, -1,  1])
 
 #### GMM
 
-#### Single Class SVMs
+#### One Class SVMs
 
 #### Extreme value theory
 
