@@ -19,7 +19,7 @@
       * [One-Class SVM](#one-class-svm)
       * [One-Class SVM (SGD)](#one-class-svm-sgd)
 
-<!-- Added by: gil_diy, at: Sun 17 Apr 2022 08:44:38 IDT -->
+<!-- Added by: gil_diy, at: Sun 17 Apr 2022 09:01:24 IDT -->
 
 <!--te-->
 
@@ -115,6 +115,9 @@ anomaly_scores = iso_forest.decision_function(x_validate)
 ```
 
 * An anomaly score of `-1` is assigned to anomalies and `1` to normal points.
+
+* The range of output from  IsolationForest `decision_function` is between -0.5 and 0.5, where smaller values mean more anomalous. The predict function then applies a threshold to this function to get either -1 (anomaly) or 1 (not anomaly). 
+The `decision threshold` is stored as model.threshold_ and defaults to `0.0`.
 
 * the funciton `decision_function(X)` - **Average anomaly score** of X of the base classifiers.
 
