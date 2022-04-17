@@ -16,10 +16,9 @@
          * [Drawbacks](#drawbacks)
       * [Extended Isolation Forests](#extended-isolation-forests)
       * [Robust Covariance](#robust-covariance)
-      * [One-Class SVM](#one-class-svm)
       * [One-Class SVM (SGD)](#one-class-svm-sgd)
 
-<!-- Added by: gil_diy, at: Sun 17 Apr 2022 10:35:13 IDT -->
+<!-- Added by: gil_diy, at: Sun 17 Apr 2022 12:49:57 IDT -->
 
 <!--te-->
 
@@ -151,13 +150,6 @@ Extension to Isolation Forests called **‘Extended Isolation Forests’**. In E
 
 
 ## Robust Covariance
-
-## One-Class SVM
-
-```python
-from sklearn.svm import OneClassSVM
-```
-
 
 
 ## One-Class SVM (SGD)
