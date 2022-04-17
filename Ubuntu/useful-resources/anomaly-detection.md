@@ -11,14 +11,14 @@
          * [Parametric](#parametric)
             * [GMM](#gmm)
             * [One Class SVMs](#one-class-svms)
+      * [One-Class SVM (SGD)](#one-class-svm-sgd)
             * [Extreme value theory](#extreme-value-theory)
       * [Isolation Forest](#isolation-forest)
          * [Drawbacks](#drawbacks)
       * [Extended Isolation Forests](#extended-isolation-forests)
       * [Robust Covariance](#robust-covariance)
-      * [One-Class SVM (SGD)](#one-class-svm-sgd)
 
-<!-- Added by: gil_diy, at: Sun 17 Apr 2022 12:49:59 IDT -->
+<!-- Added by: gil_diy, at: Sun 17 Apr 2022 12:50:07 IDT -->
 
 <!--te-->
 
@@ -88,6 +88,8 @@ ocsvm = OneClassSVM(kernel='rbf', gamma=0.00005, random_state = 42, nu=0.1)
 ocsvm.fit(x_train)
 ```
 
+## One-Class SVM (SGD)
+
 #### Extreme value theory
 
 
@@ -151,5 +153,3 @@ Extension to Isolation Forests called **‘Extended Isolation Forests’**. In E
 
 ## Robust Covariance
 
-
-## One-Class SVM (SGD)
