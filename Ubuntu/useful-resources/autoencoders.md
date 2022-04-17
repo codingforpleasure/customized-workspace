@@ -1,7 +1,7 @@
 <!--ts-->
    * [Autoencoders](#autoencoders)
 
-<!-- Added by: gil_diy, at: Sun 17 Apr 2022 13:18:05 IDT -->
+<!-- Added by: gil_diy, at: Sun 17 Apr 2022 13:18:08 IDT -->
 
 <!--te-->
 
