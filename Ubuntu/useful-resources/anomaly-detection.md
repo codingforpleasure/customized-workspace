@@ -20,7 +20,7 @@
       * [Deep Learning approaches](#deep-learning-approaches)
          * [Encoder-Decoder](#encoder-decoder)
 
-<!-- Added by: gil_diy, at: Sun 17 Apr 2022 18:50:02 IDT -->
+<!-- Added by: gil_diy, at: Sun 17 Apr 2022 18:50:05 IDT -->
 
 <!--te-->
 
@@ -81,7 +81,7 @@ array([ 1,  1, -1,  1])
 #### K-NN
 
 
-Many distance-based techniques (e.g. KNNs) suffer the **curse of dimensionality** when they compute distances of every data point in the full feature space
+Many distance-based techniques (e.g. KNNs) suffer the **curse of dimensionality** when they compute distances of every data point in the full feature space.
 
 #### K-MEANS
 
