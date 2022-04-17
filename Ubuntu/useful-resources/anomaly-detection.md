@@ -21,7 +21,7 @@
          * [Autoencoder](#autoencoder)
       * [pyod (Useful Package)](#pyod-useful-package)
 
-<!-- Added by: gil_diy, at: Sun 17 Apr 2022 19:48:55 IDT -->
+<!-- Added by: gil_diy, at: Sun 17 Apr 2022 19:52:14 IDT -->
 
 <!--te-->
 
@@ -183,6 +183,11 @@ Why Do We Apply Dimensionality Reduction to Find Outliers?
 
 [Github - Examples](https://github.com/yzhao062/pyod/tree/master/examples)
 
+
+
+* Unsupervised techniques can detect many outliers. But due to its unspervised nature it is not stable, meaning overfitting to a specific dataset - Achieve Model Stability by Aggregating Multiple Models.
+
+
 * binary labels (0: inliers, 1: outliers)
 
 ```python
@@ -197,3 +202,5 @@ y_test_pred = pd.Series(y_test_pred)
 y_test_scores = pd.Series(y_test_scores)
 
 ```
+
+
