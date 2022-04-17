@@ -3,7 +3,7 @@
       * [Reconstruction loss](#reconstruction-loss)
       * [LSTM Autoencoder](#lstm-autoencoder)
 
-<!-- Added by: gil_diy, at: Sun 17 Apr 2022 13:20:03 IDT -->
+<!-- Added by: gil_diy, at: Sun 17 Apr 2022 13:20:15 IDT -->
 
 <!--te-->
 
@@ -24,4 +24,4 @@ Cross-entropy loss and Mean squared error are common examples.
 
 ## LSTM Autoencoder
 
-* We’ll have a look at how to feed Time Series data to an Autoencoder. We’ll use a couple of LSTM layers (hence the LSTM Autoencoder) to capture the temporal dependencies of the data.
+* We’ll have a look at how to feed Time Series data to an Autoencoder. We’ll use a couple of **LSTM layers** (hence the LSTM Autoencoder) to capture the temporal dependencies of the data.
