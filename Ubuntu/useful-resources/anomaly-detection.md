@@ -21,7 +21,7 @@
          * [Autoencoder](#autoencoder)
       * [pyod (Useful Package)](#pyod-useful-package)
 
-<!-- Added by: gil_diy, at: Sun 17 Apr 2022 19:34:20 IDT -->
+<!-- Added by: gil_diy, at: Sun 17 Apr 2022 19:35:04 IDT -->
 
 <!--te-->
 
@@ -179,7 +179,7 @@ Why Do We Apply Dimensionality Reduction to Find Outliers?
 
 ## pyod (Useful Package)
 
-[Link](http://www.my-website.com)
+[Link](https://github.com/yzhao062/pyod)
 
 [Github - Examples](https://github.com/yzhao062/pyod/tree/master/examples)
 
