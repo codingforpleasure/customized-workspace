@@ -2,7 +2,7 @@
    * [Autoencoders](#autoencoders)
       * [Reconstruction loss](#reconstruction-loss)
 
-<!-- Added by: gil_diy, at: Sun 17 Apr 2022 13:18:33 IDT -->
+<!-- Added by: gil_diy, at: Sun 17 Apr 2022 13:18:35 IDT -->
 
 <!--te-->
 
