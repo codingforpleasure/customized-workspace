@@ -66,6 +66,7 @@
       * [Get the index of the min or the max element](#get-the-index-of-the-min-or-the-max-element)
       * [Get the nsmallest or nlargest element](#get-the-nsmallest-or-nlargest-element)
       * [Segment and sort data values into bins](#segment-and-sort-data-values-into-bins)
+      * [Shuffle rows in Dataframe](#shuffle-rows-in-dataframe)
       * [Group by:](#group-by)
          * [Group with aggregate](#group-with-aggregate)
          * [Group by time slot](#group-by-time-slot)
@@ -86,7 +87,7 @@
       * [Execute sql](#execute-sql)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Wed 30 Mar 2022 18:24:12 IDT -->
+<!-- Added by: gil_diy, at: Sun 17 Apr 2022 13:29:53 IDT -->
 
 <!--te-->
 
@@ -637,9 +638,6 @@ df['workclass'].replace('?', np.NaN)
 df.replace('?', np.NaN)
 ```
 
-### 
-
-
 ### Retrieve NaN values
 ```python
 <columnname>.notnull()
@@ -687,6 +685,11 @@ pd.cut(x = data_to_split , bins = np.arange(0, 46, 5))
 [(0, 5], (15, 20], (0, 5], (5, 10], (30, 35], (40, 45]]
 Categories (9, interval[int64, right]): [(0, 5] < (5, 10] < (10, 15] < (15, 20] ... (25, 30] <
                                          (30, 35] < (35, 40] < (40, 45]]
+```
+## Shuffle rows in Dataframe
+
+```python
+df = df.sample(frac=1.0)
 ```
 
 ## Group by:
