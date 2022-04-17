@@ -16,13 +16,21 @@
       * [Histograms](#histograms)
       * [Density plots (KDE - Kernel density estimate (KDE))](#density-plots-kde---kernel-density-estimate-kde)
 
-<!-- Added by: gil_diy, at: Thu 17 Mar 2022 10:03:10 IST -->
+<!-- Added by: gil_diy, at: Sun 17 Apr 2022 13:32:53 IDT -->
 
 <!--te-->
 
 # seaborn: statistical data visualization
 
 ## color pallete
+
+
+```python
+sns.set(style='whitegrid', palette='muted', font_scale=1.2)
+GIL_COLORS_PALETTE = ["#01BEFE", "#FFDD00", "#FF7D00", "#FF006D", "#ADFF02", "#8F00FF"]
+sns.set_palette(sns.color_palette(GIL_COLORS_PALETTE))
+```
+
 
 Choose the color map available from here:
 
