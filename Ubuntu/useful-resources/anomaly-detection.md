@@ -20,7 +20,7 @@
       * [Deep Learning approaches](#deep-learning-approaches)
          * [Encoder-Decoder](#encoder-decoder)
 
-<!-- Added by: gil_diy, at: Sun 17 Apr 2022 17:52:55 IDT -->
+<!-- Added by: gil_diy, at: Sun 17 Apr 2022 17:52:58 IDT -->
 
 <!--te-->
 
