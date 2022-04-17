@@ -20,7 +20,7 @@
       * [Deep Learning approaches](#deep-learning-approaches)
          * [Autoencoder](#autoencoder)
 
-<!-- Added by: gil_diy, at: Sun 17 Apr 2022 18:57:43 IDT -->
+<!-- Added by: gil_diy, at: Sun 17 Apr 2022 18:58:07 IDT -->
 
 <!--te-->
 
@@ -171,3 +171,5 @@ Extension to Isolation Forests called **‘Extended Isolation Forests’**. In E
 Why Do We Apply Dimensionality Reduction to Find Outliers?
 
 * Recall that in an autoencoder model the number of the neurons of the input and output layers corresponds to the number of variables.
+
+* The number of neurons of the hidden layers is always less than that of the outside layers
