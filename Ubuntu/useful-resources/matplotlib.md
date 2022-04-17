@@ -8,7 +8,7 @@
          * [Example #3: Fancy Tick Formats](#example-3-fancy-tick-formats)
          * [Example #4 (line types + colors + symbols):](#example-4-line-types--colors--symbols)
             * [Color](#color)
-            * [Symbol](#symbol)
+            * [Symbol (marker)](#symbol-marker)
             * [Line type](#line-type)
          * [Bar Charts](#bar-charts)
       * [Create a Bar Chart Race](#create-a-bar-chart-race)
@@ -49,7 +49,7 @@
       * [Writing mathematical expression](#writing-mathematical-expression)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Wed 13 Apr 2022 15:13:09 IDT -->
+<!-- Added by: gil_diy, at: Sun 17 Apr 2022 09:47:05 IDT -->
 
 <!--te-->
 
@@ -209,7 +209,7 @@ white | w
 
 
 
-#### Symbol
+#### Symbol (marker)
 
 Symbol-type | character
 ------------|-----
