@@ -20,7 +20,7 @@
       * [Deep Learning approaches](#deep-learning-approaches)
          * [Encoder-Decoder](#encoder-decoder)
 
-<!-- Added by: gil_diy, at: Sun 17 Apr 2022 17:52:50 IDT -->
+<!-- Added by: gil_diy, at: Sun 17 Apr 2022 17:52:53 IDT -->
 
 <!--te-->
 
@@ -40,7 +40,7 @@ The real challenge in anomaly detection is to construct the right data model to 
 
 * Density as a measure of the number of data points in a specified area. 
 
-* The most exciting feature of DBSCAN clustering is that it is robust to outliers
+* The most exciting feature of DBSCAN clustering is that it is robust to outliers.
 
 `eps` - Maximum distance between two samples for one to be considered to be connected to the other.
 And the distance can be defined by any type of distance function, the “Euclidean distance” for example.
