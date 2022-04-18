@@ -3,7 +3,7 @@
       * [Articles Which I have read](#articles-which-i-have-read)
       * [Articles speak about Neural Style Transfer and Convolution Neural Networks](#articles-speak-about-neural-style-transfer-and-convolution-neural-networks)
 
-<!-- Added by: gil_diy, at: Mon 18 Apr 2022 18:14:14 IDT -->
+<!-- Added by: gil_diy, at: Mon 18 Apr 2022 20:24:11 IDT -->
 
 <!--te-->
 
@@ -13,13 +13,21 @@
 ## Articles Which I have read
 
 ✔ "Deep Residual Learning for Image Recognition"
+
 ✔ "RepVGG: Making VGG-style ConvNets Great Again" (Article from 2021)
+
 ✔ "U-Net: Convolutional Networks for Biomedical Image Segmentation"
+
 ✔ "SqueezeNet: AlexNet-level accuracy with 50x fewer parameters and <0.5MB model size"
+
 ✔ "EfficientNet: Rethinking Model Scaling for Convolutional Neural Networks"
+
 ✔ "Attention Is All You Need"
+
 ✔ "A free lunch from ViT:Adaptive Attention Multi-scale Fusion Transformer for Fine-grained Visual Recognition"
+
 ✔ "Learning Cell Embeddings for Understanding Table Layout"
+
 ✔ "Understanding the Semantic Structures of Tables with a Hybrid Deep Neural Architecture"
 
 ## Articles speak about Neural Style Transfer and Convolution Neural Networks
