@@ -17,7 +17,7 @@
          * [Desciminator](#desciminator)
          * [Generator](#generator)
 
-<!-- Added by: gil_diy, at: Mon 18 Apr 2022 20:37:24 IDT -->
+<!-- Added by: gil_diy, at: Mon 18 Apr 2022 20:37:37 IDT -->
 
 <!--te-->
 
@@ -43,7 +43,7 @@ The Unet passes information from the encoder to the decoder while downsmapling a
   <img width="700" src="images/neural-networks-architectures/unet.png" title="Look into the image">
 </p>
 
-* The horizontal arrows passes information from the encoder to the decoder.
+* The horizontal arrows in the image passes information from the encoder to the decoder.
 
 ## Comprehensive look at 1X1 Convolution in Deep Learning
 
