@@ -4,7 +4,7 @@
       * [Reconstruction loss](#reconstruction-loss)
       * [LSTM Autoencoder](#lstm-autoencoder)
 
-<!-- Added by: gil_diy, at: Mon 18 Apr 2022 13:18:09 IDT -->
+<!-- Added by: gil_diy, at: Mon 18 Apr 2022 15:17:04 IDT -->
 
 <!--te-->
 
@@ -30,6 +30,7 @@ This function is known as **reconstruction loss**.
 
 Cross-entropy loss and Mean squared error are common examples.
 
+[Reconstruction loss explained](https://youtu.be/qN3n0TM4Jno?t=2098)
 
 
 ## LSTM Autoencoder
