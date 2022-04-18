@@ -21,7 +21,7 @@
          * [Autoencoder](#autoencoder)
       * [pyod (Useful Package)](#pyod-useful-package)
 
-<!-- Added by: gil_diy, at: Sun 17 Apr 2022 19:52:17 IDT -->
+<!-- Added by: gil_diy, at: Mon 18 Apr 2022 12:36:43 IDT -->
 
 <!--te-->
 
@@ -96,8 +96,6 @@ Many distance-based techniques (e.g. KNNs) suffer the **curse of dimensionality*
 
 ```python
 from sklearn.svm import OneClassSVM
-
-
 
 ocsvm = OneClassSVM(kernel='rbf', gamma=0.00005, random_state = 42, nu=0.1)
 ocsvm.fit(x_train)
