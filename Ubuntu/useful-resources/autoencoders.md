@@ -4,7 +4,7 @@
       * [Reconstruction loss](#reconstruction-loss)
       * [LSTM Autoencoder](#lstm-autoencoder)
 
-<!-- Added by: gil_diy, at: Mon 18 Apr 2022 18:06:05 IDT -->
+<!-- Added by: gil_diy, at: Mon 18 Apr 2022 18:59:39 IDT -->
 
 <!--te-->
 
@@ -21,6 +21,10 @@
 </p>
 
 * Recall that in an autoencoder model the number of the neurons of the input and output layers corresponds to the number of variables.
+
+
+[Google colab notebook regarding Autoencoders usage](https://colab.research.google.com/github/tensorflow/docs/blob/master/site/en/tutorials/generative/autoencoder.ipynb) 
+
 
 ## Why Do We Apply Dimensionality Reduction to Find Outliers?
 
