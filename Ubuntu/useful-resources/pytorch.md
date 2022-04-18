@@ -113,7 +113,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Tue 12 Apr 2022 00:22:34 IDT -->
+<!-- Added by: gil_diy, at: Mon 18 Apr 2022 12:54:16 IDT -->
 
 <!--te-->
 
@@ -852,6 +852,12 @@ Stacking joins a sequence of tensors along a **new axis**
 ```python
 stacked_tensor = torch.stack(tensor_list)
 ```
+
+```python
+dataset = [torch.tensor(s).unsqueeze(1).float() for s in sequences]
+n_seq, seq_len, n_features = torch.stack(dataset).shape
+```
+
 
 ## Linear Layers in depth
 
