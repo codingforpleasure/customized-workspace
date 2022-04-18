@@ -17,7 +17,7 @@
          * [Desciminator](#desciminator)
          * [Generator](#generator)
 
-<!-- Added by: gil_diy, at: Mon 18 Apr 2022 20:32:04 IDT -->
+<!-- Added by: gil_diy, at: Mon 18 Apr 2022 20:35:46 IDT -->
 
 <!--te-->
 
@@ -37,7 +37,12 @@ semantic segmentation.
 The solution would be adding spatial information (conv outputs) from encoder to decoder layers.
 
 
-The Unet passes information from the  encoder to the decoder while downsmapling and upscaling.
+The Unet passes information from the encoder to the decoder while downsmapling and upscaling.
+
+
+<p align="center">
+  <img width="400" src="images/neural-networks-architectures/unet.png" title="Look into the image">
+</p>
 
 
 ## Comprehensive look at 1X1 Convolution in Deep Learning
