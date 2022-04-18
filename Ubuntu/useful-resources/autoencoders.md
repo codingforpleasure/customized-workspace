@@ -5,7 +5,7 @@
       * [Usage of Autoencoders](#usage-of-autoencoders)
       * [LSTM Autoencoder](#lstm-autoencoder)
 
-<!-- Added by: gil_diy, at: Mon 18 Apr 2022 19:02:12 IDT -->
+<!-- Added by: gil_diy, at: Mon 18 Apr 2022 19:09:10 IDT -->
 
 <!--te-->
 
@@ -23,6 +23,7 @@
 
 * Recall that in an autoencoder model the number of the neurons of the input and output layers corresponds to the number of variables.
 
+* We train the autoencoder using only the normal dataset no the abnormal part.
 
 [Google colab notebook regarding Autoencoders usage](https://colab.research.google.com/github/tensorflow/docs/blob/master/site/en/tutorials/generative/autoencoder.ipynb) 
 
