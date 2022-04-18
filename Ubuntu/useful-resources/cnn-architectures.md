@@ -17,7 +17,7 @@
          * [Desciminator](#desciminator)
          * [Generator](#generator)
 
-<!-- Added by: gil_diy, at: Mon 18 Apr 2022 20:29:31 IDT -->
+<!-- Added by: gil_diy, at: Mon 18 Apr 2022 20:31:15 IDT -->
 
 <!--te-->
 
@@ -32,6 +32,9 @@
 
 Since in an Autoencoder there is a some loss of spatial information, which is very important for 
 semantic segmentation.
+
+Therefore how do we retain the spatial information?
+
 
 The Unet passes information from the  encoder to the decoder while downsmapling and upscaling.
 
