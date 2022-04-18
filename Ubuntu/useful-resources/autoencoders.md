@@ -5,7 +5,7 @@
       * [Usage of Autoencoders](#usage-of-autoencoders)
       * [LSTM Autoencoder](#lstm-autoencoder)
 
-<!-- Added by: gil_diy, at: Mon 18 Apr 2022 19:09:35 IDT -->
+<!-- Added by: gil_diy, at: Mon 18 Apr 2022 20:23:24 IDT -->
 
 <!--te-->
 
@@ -47,6 +47,8 @@ Cross-entropy loss and Mean squared error are common examples.
 ## Usage of Autoencoders
 
 1) Compressing Data
+
+2) Image Colorization using Convolutional Autoencoders
 
 2) Denoising Data
 
