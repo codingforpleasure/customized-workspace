@@ -17,7 +17,7 @@
          * [Desciminator](#desciminator)
          * [Generator](#generator)
 
-<!-- Added by: gil_diy, at: Mon 18 Apr 2022 20:36:36 IDT -->
+<!-- Added by: gil_diy, at: Mon 18 Apr 2022 20:36:39 IDT -->
 
 <!--te-->
 
@@ -30,7 +30,7 @@
 
 ## Unet
 
-Since in an Autoencoder there is a some **loss of spatial information**, which is very important for 
+Since in an **Autoencoder** there is a some **loss of spatial information**, which is very important for 
 semantic segmentation.
 
 **Therefore how do we retain the spatial information?**
