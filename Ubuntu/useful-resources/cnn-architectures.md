@@ -17,7 +17,7 @@
          * [Desciminator](#desciminator)
          * [Generator](#generator)
 
-<!-- Added by: gil_diy, at: Mon 18 Apr 2022 20:36:03 IDT -->
+<!-- Added by: gil_diy, at: Mon 18 Apr 2022 20:36:08 IDT -->
 
 <!--te-->
 
@@ -41,7 +41,7 @@ The Unet passes information from the encoder to the decoder while downsmapling a
 
 
 <p align="center">
-  <img width="600" src="images/neural-networks-architectures/unet.png" title="Look into the image">
+  <img width="700" src="images/neural-networks-architectures/unet.png" title="Look into the image">
 </p>
 
 
