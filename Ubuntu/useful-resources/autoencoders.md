@@ -4,7 +4,7 @@
       * [Reconstruction loss](#reconstruction-loss)
       * [LSTM Autoencoder](#lstm-autoencoder)
 
-<!-- Added by: gil_diy, at: Sun 17 Apr 2022 18:52:47 IDT -->
+<!-- Added by: gil_diy, at: Mon 18 Apr 2022 13:18:09 IDT -->
 
 <!--te-->
 
@@ -15,6 +15,7 @@
   <img width="600" src="images/Autoencoders/autoencoder_1.png" title="Look into the image">
 </p>
 
+* Recall that in an autoencoder model the number of the neurons of the input and output layers corresponds to the number of variables.
 
 ## Why Do We Apply Dimensionality Reduction to Find Outliers?
 
