@@ -4,7 +4,7 @@
       * [Reconstruction loss](#reconstruction-loss)
       * [LSTM Autoencoder](#lstm-autoencoder)
 
-<!-- Added by: gil_diy, at: Mon 18 Apr 2022 18:05:07 IDT -->
+<!-- Added by: gil_diy, at: Mon 18 Apr 2022 18:06:05 IDT -->
 
 <!--te-->
 
@@ -17,7 +17,7 @@
 
 
 <p align="center">
-  <img width="600" src="images/Autoencoders/autoencoder_2.png" title="Look into the image">
+  <img width="700" src="images/Autoencoders/autoencoder_2.png" title="Look into the image">
 </p>
 
 * Recall that in an autoencoder model the number of the neurons of the input and output layers corresponds to the number of variables.
