@@ -22,7 +22,7 @@
             * [LSTM Autoencoder -  to capture the temporal dependencies of the data](#lstm-autoencoder----to-capture-the-temporal-dependencies-of-the-data)
       * [pyod (Useful Package)](#pyod-useful-package)
 
-<!-- Added by: gil_diy, at: Mon 18 Apr 2022 12:37:15 IDT -->
+<!-- Added by: gil_diy, at: Mon 18 Apr 2022 18:33:45 IDT -->
 
 <!--te-->
 
@@ -173,6 +173,10 @@ Why Do We Apply Dimensionality Reduction to Find Outliers?
 * Recall that in an autoencoder model the number of the neurons of the input and output layers corresponds to the number of variables.
 
 * The number of neurons of the hidden layers is always less than that of the outside layers
+
+```python
+thrrshold = np.mean(train_loss) + np.std(train_loss)
+```
 
 #### LSTM Autoencoder -  to capture the temporal dependencies of the data
 
