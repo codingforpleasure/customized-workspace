@@ -19,10 +19,10 @@
       * [Extended Isolation Forests](#extended-isolation-forests)
       * [Deep Learning approaches](#deep-learning-approaches)
          * [Autoencoder](#autoencoder)
-            * [LSTM Autoencoder -  to capture the temporal dependencies of the data.](#lstm-autoencoder----to-capture-the-temporal-dependencies-of-the-data)
+            * [LSTM Autoencoder -  to capture the temporal dependencies of the data](#lstm-autoencoder----to-capture-the-temporal-dependencies-of-the-data)
       * [pyod (Useful Package)](#pyod-useful-package)
 
-<!-- Added by: gil_diy, at: Mon 18 Apr 2022 12:37:12 IDT -->
+<!-- Added by: gil_diy, at: Mon 18 Apr 2022 12:37:15 IDT -->
 
 <!--te-->
 
@@ -174,7 +174,7 @@ Why Do We Apply Dimensionality Reduction to Find Outliers?
 
 * The number of neurons of the hidden layers is always less than that of the outside layers
 
-#### LSTM Autoencoder -  to capture the temporal dependencies of the data.
+#### LSTM Autoencoder -  to capture the temporal dependencies of the data
 
 
 ## pyod (Useful Package)
