@@ -2,9 +2,10 @@
    * [Autoencoders](#autoencoders)
       * [Why Do We Apply Dimensionality Reduction to Find Outliers?](#why-do-we-apply-dimensionality-reduction-to-find-outliers)
       * [Reconstruction loss](#reconstruction-loss)
+      * [Usage of Autoencoders](#usage-of-autoencoders)
       * [LSTM Autoencoder](#lstm-autoencoder)
 
-<!-- Added by: gil_diy, at: Mon 18 Apr 2022 18:59:39 IDT -->
+<!-- Added by: gil_diy, at: Mon 18 Apr 2022 19:02:12 IDT -->
 
 <!--te-->
 
@@ -41,6 +42,14 @@ Cross-entropy loss and Mean squared error are common examples.
 
 [Reconstruction loss explained](https://youtu.be/qN3n0TM4Jno?t=2098)
 
+
+## Usage of Autoencoders
+
+1) Compressing Data
+
+2) Denoising Data
+
+3) Anomaly detection
 
 ## LSTM Autoencoder
 
