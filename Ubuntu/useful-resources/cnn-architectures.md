@@ -17,7 +17,7 @@
          * [Desciminator](#desciminator)
          * [Generator](#generator)
 
-<!-- Added by: gil_diy, at: Mon 18 Apr 2022 19:31:40 IDT -->
+<!-- Added by: gil_diy, at: Mon 18 Apr 2022 20:26:43 IDT -->
 
 <!--te-->
 
@@ -30,6 +30,8 @@
 
 ## Unet
 
+Since in an Autoencoder there is a some loss of spatial information, which is very important for 
+semantic segmentation.
 
 
 ## Comprehensive look at 1X1 Convolution in Deep Learning
