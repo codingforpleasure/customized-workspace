@@ -87,7 +87,7 @@
       * [Execute sql](#execute-sql)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Mon 18 Apr 2022 12:31:00 IDT -->
+<!-- Added by: gil_diy, at: Mon 18 Apr 2022 12:31:04 IDT -->
 
 <!--te-->
 
@@ -326,18 +326,21 @@ df1 = df[['column1','column2']]
 concatentaing rows:
 
 **Approach #1:**
+
 ```python
 # Here i'm concatentaing two first rows with two last rows.
 result = pd.concat([df[0:2], df[-2:]], axis = 0)
 ```
 
 **Approach #2:**
+
 ```python
 # Adding a row to my_df:
 my_df.loc["two"] = [4,5,6]
 ```
 
 **Approach #3:**
+
 ```python
 # Adding a row to my_df:
 my_df.append(df2)
