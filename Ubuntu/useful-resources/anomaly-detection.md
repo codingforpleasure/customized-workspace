@@ -23,7 +23,7 @@
             * [LSTM Autoencoder -  to capture the temporal dependencies of the data](#lstm-autoencoder----to-capture-the-temporal-dependencies-of-the-data)
       * [PyOD (Useful Package)](#pyod-useful-package)
 
-<!-- Added by: gil_diy, at: Tue 19 Apr 2022 16:14:36 IDT -->
+<!-- Added by: gil_diy, at: Tue 19 Apr 2022 16:14:41 IDT -->
 
 <!--te-->
 
@@ -191,7 +191,7 @@ iforest = IsolationForest(n_estimators = 100).fit(df)
 
 * Taking a look at these first 9 trees, we can already see a pattern: G tends to be at a much lower depth (1.44 on average) than any other point. Indeed, the second point is A with an average depth of 2.78.
 
-* Conceptually, this is exactly how the algorithm works: **a lower average depth means a higher likelihood of being an outlier**.
+* Conceptually, this is exactly how the algorithm works: **a lower average depth means a higher likelihood of being an outlier** .
 
 
 ## Extended Isolation Forests
