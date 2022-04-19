@@ -16,13 +16,14 @@
             * [Extreme value theory](#extreme-value-theory)
       * [Isolation Forest](#isolation-forest)
          * [Drawbacks](#drawbacks)
+         * [Example](#example)
       * [Extended Isolation Forests](#extended-isolation-forests)
       * [Deep Learning approaches](#deep-learning-approaches)
          * [Autoencoder](#autoencoder)
             * [LSTM Autoencoder -  to capture the temporal dependencies of the data](#lstm-autoencoder----to-capture-the-temporal-dependencies-of-the-data)
       * [PyOD (Useful Package)](#pyod-useful-package)
 
-<!-- Added by: gil_diy, at: Tue 19 Apr 2022 16:02:14 IDT -->
+<!-- Added by: gil_diy, at: Tue 19 Apr 2022 16:05:36 IDT -->
 
 <!--te-->
 
@@ -149,11 +150,22 @@ The `decision threshold` is stored as model.threshold_ and defaults to `0.0`.
 
 Isolation Forests are computationally efficient and have been proven to be very effective in Anomaly detection.
 
+
 ### Drawbacks
 
 * The final anomaly score depends on the **contamination parameter**, provided while training the model. This implies that we **should have an idea of what percentage of the data is anomalous beforehand** to get a better prediction.
 
 * The model suffers from a bias due to the way the branching takes place.
+
+
+### Example
+
+```python
+import pandas as pddf = pd.DataFrame({
+    'x': [1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 2.0],
+    'y': [2.1, 2.4, 3.0, 2.6, 2.2, 2.8, 3.7]
+}, index = ['A', 'B', 'C', 'D', 'E', 'F', 'G'])
+```
 
 ## Extended Isolation Forests
 
