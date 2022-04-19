@@ -24,7 +24,7 @@
             * [LSTM Autoencoder -  to capture the temporal dependencies of the data](#lstm-autoencoder----to-capture-the-temporal-dependencies-of-the-data)
       * [PyOD (Useful Package)](#pyod-useful-package)
 
-<!-- Added by: gil_diy, at: Tue 19 Apr 2022 17:04:26 IDT -->
+<!-- Added by: gil_diy, at: Tue 19 Apr 2022 17:04:46 IDT -->
 
 <!--te-->
 
@@ -156,6 +156,8 @@ plt.show()
   <img width="400" src="images/anomaly-detection/knn_isolated.png" title="Look into the image">
 </p>
 
+
+[Reference](https://towardsdatascience.com/k-nearest-neighbors-knn-for-anomaly-detection-fdf8ee160d13)
 
 #### K-MEANS
 
