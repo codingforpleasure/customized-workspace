@@ -22,7 +22,7 @@
             * [LSTM Autoencoder -  to capture the temporal dependencies of the data](#lstm-autoencoder----to-capture-the-temporal-dependencies-of-the-data)
       * [PyOD (Useful Package)](#pyod-useful-package)
 
-<!-- Added by: gil_diy, at: Tue 19 Apr 2022 18:36:49 IDT -->
+<!-- Added by: gil_diy, at: Tue 19 Apr 2022 18:37:03 IDT -->
 
 <!--te-->
 
@@ -316,6 +316,8 @@ print('Threshold: ', threshold)
 ```
 
 [Tensorflow autoencoder](https://colab.research.google.com/github/tensorflow/docs/blob/master/site/en/tutorials/generative/autoencoder.ipynb)
+
+[Link](https://youtu.be/2K3ScZp1dXQ)
 
 #### LSTM Autoencoder -  to capture the temporal dependencies of the data
 
