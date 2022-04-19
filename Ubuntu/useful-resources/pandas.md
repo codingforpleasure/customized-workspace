@@ -66,7 +66,6 @@
       * [Get the index of the min or the max element](#get-the-index-of-the-min-or-the-max-element)
       * [Get the nsmallest or nlargest element](#get-the-nsmallest-or-nlargest-element)
       * [Get Skewness of a column](#get-skewness-of-a-column)
-      * [Segment and sort data values into bins](#segment-and-sort-data-values-into-bins)
       * [Shuffle rows in Dataframe](#shuffle-rows-in-dataframe)
       * [Group by:](#group-by)
          * [Group with aggregate](#group-with-aggregate)
@@ -88,7 +87,7 @@
       * [Execute sql](#execute-sql)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Tue 19 Apr 2022 13:22:24 IDT -->
+<!-- Added by: gil_diy, at: Tue 19 Apr 2022 13:31:50 IDT -->
 
 <!--te-->
 
@@ -690,6 +689,9 @@ print('The 2nd smallest element  is:', str(df.msmallest(2,'Points')))
 print("Skewness: %f" % df['Sales'].skew())
 ```
 
+<p align="center">
+  <img width="400" src="images/machine-learning/skewness.png" title="Look into the image">
+</p>
 ## Segment and sort data values into bins
 
 * Use cut when you need to segment and sort data values into bins. 
