@@ -22,7 +22,7 @@
             * [LSTM Autoencoder -  to capture the temporal dependencies of the data](#lstm-autoencoder----to-capture-the-temporal-dependencies-of-the-data)
       * [PyOD (Useful Package)](#pyod-useful-package)
 
-<!-- Added by: gil_diy, at: Tue 19 Apr 2022 17:52:40 IDT -->
+<!-- Added by: gil_diy, at: Tue 19 Apr 2022 18:36:49 IDT -->
 
 <!--te-->
 
@@ -314,6 +314,8 @@ Why Do We Apply Dimensionality Reduction to Find Outliers?
 threshold = np.mean(train_loss) + np.std(train_loss)
 print('Threshold: ', threshold)
 ```
+
+[Tensorflow autoencoder](https://colab.research.google.com/github/tensorflow/docs/blob/master/site/en/tutorials/generative/autoencoder.ipynb)
 
 #### LSTM Autoencoder -  to capture the temporal dependencies of the data
 
