@@ -23,7 +23,7 @@
             * [LSTM Autoencoder -  to capture the temporal dependencies of the data](#lstm-autoencoder----to-capture-the-temporal-dependencies-of-the-data)
       * [PyOD (Useful Package)](#pyod-useful-package)
 
-<!-- Added by: gil_diy, at: Tue 19 Apr 2022 17:00:56 IDT -->
+<!-- Added by: gil_diy, at: Tue 19 Apr 2022 17:00:59 IDT -->
 
 <!--te-->
 
@@ -139,7 +139,7 @@ plt.show()
 </p>
 
 <p align="center">
-  <img width="400" src="images/anomaly-detection/knn_isolated.png" title="Look into the image">
+  <img width="600" src="images/anomaly-detection/knn_isolated.png" title="Look into the image">
 </p>
 
 
