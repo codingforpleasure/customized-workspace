@@ -7,6 +7,7 @@
             * [LOF (Local Outlier Factor)](#lof-local-outlier-factor)
          * [Distance based](#distance-based)
             * [K-NN](#k-nn)
+               * [Example](#example)
             * [K-MEANS](#k-means)
             * [Regression hyperplan distance](#regression-hyperplan-distance)
          * [Parametric](#parametric)
@@ -16,14 +17,14 @@
             * [Extreme value theory](#extreme-value-theory)
       * [Isolation Forest](#isolation-forest)
          * [Drawbacks](#drawbacks)
-         * [Example](#example)
+         * [Example](#example-1)
       * [Extended Isolation Forests](#extended-isolation-forests)
       * [Deep Learning approaches](#deep-learning-approaches)
          * [Autoencoder](#autoencoder)
             * [LSTM Autoencoder -  to capture the temporal dependencies of the data](#lstm-autoencoder----to-capture-the-temporal-dependencies-of-the-data)
       * [PyOD (Useful Package)](#pyod-useful-package)
 
-<!-- Added by: gil_diy, at: Tue 19 Apr 2022 17:01:49 IDT -->
+<!-- Added by: gil_diy, at: Tue 19 Apr 2022 17:02:23 IDT -->
 
 <!--te-->
 
@@ -90,6 +91,8 @@ array([ 1,  1, -1,  1])
 * Data scientists arbitrarily decide the cutoff values beyond which all observations.
 
 Many distance-based techniques (e.g. KNNs) suffer the **curse of dimensionality** when they compute distances of every data point in the full feature space.
+
+##### Example
 
 ```python
 
