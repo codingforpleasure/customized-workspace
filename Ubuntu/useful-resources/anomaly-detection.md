@@ -22,7 +22,7 @@
             * [LSTM Autoencoder -  to capture the temporal dependencies of the data](#lstm-autoencoder----to-capture-the-temporal-dependencies-of-the-data)
       * [PyOD (Useful Package)](#pyod-useful-package)
 
-<!-- Added by: gil_diy, at: Tue 19 Apr 2022 17:45:29 IDT -->
+<!-- Added by: gil_diy, at: Tue 19 Apr 2022 17:52:38 IDT -->
 
 <!--te-->
 
@@ -319,6 +319,8 @@ print('Threshold: ', threshold)
 
 
 ## PyOD (Useful Package)
+
+[Example of Comparing All Implemented Outlier Detection Model](https://github.com/yzhao062/pyod/blob/master/notebooks/Compare%20All%20Models.ipynb)
 
 [pyod Github](https://github.com/yzhao062/pyod)
 
