@@ -23,7 +23,7 @@
             * [LSTM Autoencoder -  to capture the temporal dependencies of the data](#lstm-autoencoder----to-capture-the-temporal-dependencies-of-the-data)
       * [PyOD (Useful Package)](#pyod-useful-package)
 
-<!-- Added by: gil_diy, at: Tue 19 Apr 2022 16:09:16 IDT -->
+<!-- Added by: gil_diy, at: Tue 19 Apr 2022 16:10:31 IDT -->
 
 <!--te-->
 
@@ -183,6 +183,10 @@ iforest = IsolationForest(n_estimators = 100).fit(df)
   <img width="400" src="images/anomaly-detection/example_of_first_tree.png" title="Look into the image">
 </p>
 
+
+<p align="center">
+  <img width="400" src="images/anomaly-detection/9_trees.png" title="Look into the image">
+</p>
 
 
 ## Extended Isolation Forests
