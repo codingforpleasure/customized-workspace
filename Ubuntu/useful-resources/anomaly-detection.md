@@ -24,7 +24,7 @@
             * [LSTM Autoencoder -  to capture the temporal dependencies of the data](#lstm-autoencoder----to-capture-the-temporal-dependencies-of-the-data)
       * [PyOD (Useful Package)](#pyod-useful-package)
 
-<!-- Added by: gil_diy, at: Tue 19 Apr 2022 17:33:51 IDT -->
+<!-- Added by: gil_diy, at: Tue 19 Apr 2022 17:35:10 IDT -->
 
 <!--te-->
 
@@ -192,7 +192,6 @@ plt.scatter(outlier_values["sepal_length"], outlier_values["sepal_width"], c = "
 plt.show()
 ```
 
-[Reference explanation](http://rvlasveld.github.io/blog/2013/07/12/introduction-to-one-class-support-vector-machines/)
 
 #### One-Class SVM (SGD)
 
