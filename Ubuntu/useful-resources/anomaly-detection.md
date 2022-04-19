@@ -8,7 +8,7 @@
       * [Distance based](#distance-based)
          * [K-NN](#k-nn)
          * [Example](#example)
-            * [K-MEANS](#k-means)
+            * [One Class SVMs](#one-class-svms)
             * [Regression hyperplan distance](#regression-hyperplan-distance)
          * [Parametric](#parametric)
             * [GMM](#gmm)
@@ -22,7 +22,7 @@
             * [LSTM Autoencoder -  to capture the temporal dependencies of the data](#lstm-autoencoder----to-capture-the-temporal-dependencies-of-the-data)
       * [PyOD (Useful Package)](#pyod-useful-package)
 
-<!-- Added by: gil_diy, at: Tue 19 Apr 2022 17:45:19 IDT -->
+<!-- Added by: gil_diy, at: Tue 19 Apr 2022 17:45:29 IDT -->
 
 <!--te-->
 
@@ -157,7 +157,33 @@ plt.show()
 
 [Reference](https://towardsdatascience.com/k-nearest-neighbors-knn-for-anomaly-detection-fdf8ee160d13)
 
-#### K-MEANS
+#### One Class SVMs
+
+* When modeling one class, the algorithm captures the density of the majority class and classifies examples on the extremes of the density function as outliers. This modification of SVM is referred to as One-Class SVM.
+
+```python
+from sklearn.svm import OneClassSVM
+
+# import data
+data = pd.read_csv("https://raw.githubusercontent.com/uiuc-cse/data-fa14/gh-pages/data/iris.csv")# input data
+df = data[["sepal_length", "sepal_width"]]
+# model specification
+model = OneClassSVM(kernel = 'rbf', gamma = 0.001, nu = 0.03).fit(df)
+
+# prediction
+y_pred = model.predict(df) # either -1 (Anomaly) or 1
+
+# filter outlier index
+outlier_index = where(y_pred == -1) # filter outlier values
+outlier_values = df.iloc[outlier_index]
+outlier_values
+
+# visualize outputs
+plt.scatter(data["sepal_length"], df["sepal_width"])
+plt.scatter(outlier_values["sepal_length"], outlier_values["sepal_width"], c = "r")
+plt.show()
+```
+
 
 #### Regression hyperplan distance
 
