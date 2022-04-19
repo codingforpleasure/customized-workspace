@@ -23,7 +23,7 @@
             * [LSTM Autoencoder -  to capture the temporal dependencies of the data](#lstm-autoencoder----to-capture-the-temporal-dependencies-of-the-data)
       * [PyOD (Useful Package)](#pyod-useful-package)
 
-<!-- Added by: gil_diy, at: Tue 19 Apr 2022 16:18:47 IDT -->
+<!-- Added by: gil_diy, at: Tue 19 Apr 2022 16:28:16 IDT -->
 
 <!--te-->
 
@@ -83,6 +83,7 @@ array([ 1,  1, -1,  1])
 
 #### K-NN
 
+* Although kNN is a supervised ML algorithm, when it comes to anomaly detection it takes an unsupervised approach
 
 Many distance-based techniques (e.g. KNNs) suffer the **curse of dimensionality** when they compute distances of every data point in the full feature space.
 
