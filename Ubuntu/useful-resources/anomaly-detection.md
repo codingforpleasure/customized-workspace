@@ -20,9 +20,9 @@
       * [Deep Learning approaches](#deep-learning-approaches)
          * [Autoencoder](#autoencoder)
             * [LSTM Autoencoder -  to capture the temporal dependencies of the data](#lstm-autoencoder----to-capture-the-temporal-dependencies-of-the-data)
-      * [pyod (Useful Package)](#pyod-useful-package)
+      * [PyOD (Useful Package)](#pyod-useful-package)
 
-<!-- Added by: gil_diy, at: Mon 18 Apr 2022 18:34:09 IDT -->
+<!-- Added by: gil_diy, at: Tue 19 Apr 2022 12:17:29 IDT -->
 
 <!--te-->
 
@@ -182,12 +182,13 @@ print('Threshold: ', threshold)
 #### LSTM Autoencoder -  to capture the temporal dependencies of the data
 
 
-## pyod (Useful Package)
+## PyOD (Useful Package)
 
 [pyod Github](https://github.com/yzhao062/pyod)
 
 [Github - Examples](https://github.com/yzhao062/pyod/tree/master/examples)
 
+* Pycaret uses under the hood PyOD too.
 
 
 * Unsupervised techniques can detect many outliers. But due to its unspervised nature it is not stable, meaning overfitting to a specific dataset - Achieve Model Stability by Aggregating Multiple Models.
