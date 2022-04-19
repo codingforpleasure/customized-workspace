@@ -65,6 +65,7 @@
          * [Retrieve NaN values](#retrieve-nan-values)
       * [Get the index of the min or the max element](#get-the-index-of-the-min-or-the-max-element)
       * [Get the nsmallest or nlargest element](#get-the-nsmallest-or-nlargest-element)
+      * [Get Skewness of a column](#get-skewness-of-a-column)
       * [Segment and sort data values into bins](#segment-and-sort-data-values-into-bins)
       * [Shuffle rows in Dataframe](#shuffle-rows-in-dataframe)
       * [Group by:](#group-by)
@@ -87,7 +88,7 @@
       * [Execute sql](#execute-sql)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Mon 18 Apr 2022 12:31:04 IDT -->
+<!-- Added by: gil_diy, at: Tue 19 Apr 2022 13:22:24 IDT -->
 
 <!--te-->
 
@@ -681,6 +682,13 @@ print('The fourth element in size is:', str(df.mslargest(4,'Points')))
 print('The 2nd smallest element  is:', str(df.msmallest(2,'Points')))
 ```
 
+## Get Skewness of a column
+
+* returns unbiased skew over requested axis Normalized by N-1. Skewness is a measure of the asymmetry of the probability distribution of a real-valued random variable about its mean
+
+```python
+print("Skewness: %f" % df['Sales'].skew())
+```
 
 ## Segment and sort data values into bins
 
