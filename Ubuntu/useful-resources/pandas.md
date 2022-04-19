@@ -89,7 +89,7 @@
       * [Execute sql](#execute-sql)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Tue 19 Apr 2022 13:37:14 IDT -->
+<!-- Added by: gil_diy, at: Tue 19 Apr 2022 13:37:56 IDT -->
 
 <!--te-->
 
@@ -699,6 +699,9 @@ print("Skewness: %f" % df['Sales'].skew())
 
 * Is a measure of the "tailedness" of the probability distribution of a real-valued random variable.
 
+```python
+print("Kurtosis: %f" % df['Profit'].kurt())
+```
 
 
 ## Segment and sort data values into bins
