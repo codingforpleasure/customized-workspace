@@ -66,6 +66,7 @@
       * [Get the index of the min or the max element](#get-the-index-of-the-min-or-the-max-element)
       * [Get the nsmallest or nlargest element](#get-the-nsmallest-or-nlargest-element)
       * [Get Skewness of a column](#get-skewness-of-a-column)
+      * [Get Kurtosis of a column](#get-kurtosis-of-a-column)
       * [Segment and sort data values into bins](#segment-and-sort-data-values-into-bins)
       * [Shuffle rows in Dataframe](#shuffle-rows-in-dataframe)
       * [Group by:](#group-by)
@@ -88,7 +89,7 @@
       * [Execute sql](#execute-sql)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Tue 19 Apr 2022 13:32:11 IDT -->
+<!-- Added by: gil_diy, at: Tue 19 Apr 2022 13:37:14 IDT -->
 
 <!--te-->
 
@@ -693,6 +694,12 @@ print("Skewness: %f" % df['Sales'].skew())
 <p align="center">
   <img width="600" src="images/machine-learning/skewness.png" title="Look into the image">
 </p>
+
+## Get Kurtosis of a column
+
+* Is a measure of the "tailedness" of the probability distribution of a real-valued random variable.
+
+
 
 ## Segment and sort data values into bins
 
