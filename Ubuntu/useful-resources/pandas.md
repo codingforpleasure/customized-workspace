@@ -87,7 +87,7 @@
       * [Execute sql](#execute-sql)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Tue 19 Apr 2022 13:31:50 IDT -->
+<!-- Added by: gil_diy, at: Tue 19 Apr 2022 13:31:54 IDT -->
 
 <!--te-->
 
@@ -692,6 +692,7 @@ print("Skewness: %f" % df['Sales'].skew())
 <p align="center">
   <img width="400" src="images/machine-learning/skewness.png" title="Look into the image">
 </p>
+
 ## Segment and sort data values into bins
 
 * Use cut when you need to segment and sort data values into bins. 
