@@ -66,6 +66,7 @@
       * [Get the index of the min or the max element](#get-the-index-of-the-min-or-the-max-element)
       * [Get the nsmallest or nlargest element](#get-the-nsmallest-or-nlargest-element)
       * [Get Skewness of a column](#get-skewness-of-a-column)
+      * [Segment and sort data values into bins](#segment-and-sort-data-values-into-bins)
       * [Shuffle rows in Dataframe](#shuffle-rows-in-dataframe)
       * [Group by:](#group-by)
          * [Group with aggregate](#group-with-aggregate)
@@ -87,7 +88,7 @@
       * [Execute sql](#execute-sql)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Tue 19 Apr 2022 13:31:54 IDT -->
+<!-- Added by: gil_diy, at: Tue 19 Apr 2022 13:31:58 IDT -->
 
 <!--te-->
 
