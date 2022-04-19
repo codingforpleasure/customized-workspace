@@ -23,7 +23,7 @@
             * [LSTM Autoencoder -  to capture the temporal dependencies of the data](#lstm-autoencoder----to-capture-the-temporal-dependencies-of-the-data)
       * [PyOD (Useful Package)](#pyod-useful-package)
 
-<!-- Added by: gil_diy, at: Tue 19 Apr 2022 16:12:03 IDT -->
+<!-- Added by: gil_diy, at: Tue 19 Apr 2022 16:12:17 IDT -->
 
 <!--te-->
 
@@ -183,10 +183,10 @@ iforest = IsolationForest(n_estimators = 100).fit(df)
   <img width="400" src="images/anomaly-detection/example_of_first_tree.png" title="Look into the image">
 </p>
 
-Here are the 9 trees out of the 100 trees:
+* Here are the 9 trees out of the 100 trees:
 
 <p align="center">
-  <img width="600" src="images/anomaly-detection/9_trees.png" title="Look into the image">
+  <img width="700" src="images/anomaly-detection/9_trees.png" title="Look into the image">
 </p>
 
 
