@@ -23,7 +23,7 @@
             * [LSTM Autoencoder -  to capture the temporal dependencies of the data](#lstm-autoencoder----to-capture-the-temporal-dependencies-of-the-data)
       * [PyOD (Useful Package)](#pyod-useful-package)
 
-<!-- Added by: gil_diy, at: Tue 19 Apr 2022 16:38:54 IDT -->
+<!-- Added by: gil_diy, at: Tue 19 Apr 2022 16:59:01 IDT -->
 
 <!--te-->
 
@@ -92,45 +92,51 @@ array([ 1,  1, -1,  1])
 Many distance-based techniques (e.g. KNNs) suffer the **curse of dimensionality** when they compute distances of every data point in the full feature space.
 
 ```python
-data = pd.read_csv("https://raw.githubusercontent.com/uiuc-cse/data-fa14/gh-pages/data/iris.csv")  # input data
-    df = data[["sepal_length", "sepal_width"]]
 
-    # scatterplot of inputs data
-    plt.scatter(df["sepal_length"], df["sepal_width"])
-    plt.ylabel('sepal_width')
-    plt.xlabel('sepal_length')
-    plt.show()
+data = pd.read_csv("https://raw.githubusercontent.com/uiuc-cse/data-fa14/gh-pages/data/iris.csv")  
+# input data
+df = data[["sepal_length", "sepal_width"]]
 
-    # create arrays
-    X = df.values
+# scatterplot of inputs data
+plt.scatter(df["sepal_length"], df["sepal_width"])
+plt.ylabel('sepal_width')
+plt.xlabel('sepal_length')
+plt.show()
 
-    # instantiate model
-    nbrs = NearestNeighbors(n_neighbors=3)  # fit model
-    nbrs.fit(X)
+# create arrays
+X = df.values
 
-    # distances and indexes of k-neaighbors from model outputs
-    distances, indexes = nbrs.kneighbors(X)  # plot mean of k-distances of each observation
-    plt.plot(distances.mean(axis=1))
-    plt.show()
+# instantiate model
+nbrs = NearestNeighbors(n_neighbors=3)  # fit model
+nbrs.fit(X)
 
-    # Plot the average distances for each of the observations in the dataset.
-    # As we can see, there are some spikes in distance measures, and these spikes are
-    # potentially anomalies or outliers in the dataset.
+# distances and indexes of k-neaighbors from model outputs
+distances, indexes = nbrs.kneighbors(X)  # plot mean of k-distances of each observation
+plt.plot(distances.mean(axis=1))
+plt.show()
 
-    # visually determine cutoff values > 0.15
-    outlier_index = np.where(distances.mean(axis=1) > 0.15)
+# Plot the average distances for each of the observations in the dataset.
+# As we can see, there are some spikes in distance measures, and these spikes are
+# potentially anomalies or outliers in the dataset.
 
-    # filter outlier values
-    outlier_values = df.iloc[outlier_index]
+# visually determine cutoff values > 0.15
+outlier_index = np.where(distances.mean(axis=1) > 0.15)
 
-    # plot data
-    plt.scatter(df["sepal_length"], df["sepal_width"], color="b", s=65)  # plot outlier values
-    plt.scatter(outlier_values["sepal_length"], outlier_values["sepal_width"], color="r")
-    plt.ylabel('sepal_width')
-    plt.xlabel('sepal_length')
-    plt.show()
+# filter outlier values
+outlier_values = df.iloc[outlier_index]
+
+# plot data
+plt.scatter(df["sepal_length"], df["sepal_width"], color="b", s=65)  # plot outlier values
+plt.scatter(outlier_values["sepal_length"], outlier_values["sepal_width"], color="r")
+plt.ylabel('sepal_width')
+plt.xlabel('sepal_length')
+plt.show()
 
 ```
+
+<p align="center">
+  <img width="400" src="images/anomaly-detection/knn_data_points.png" title="Look into the image">
+</p>
 
 #### K-MEANS
 
