@@ -24,7 +24,7 @@
             * [LSTM Autoencoder -  to capture the temporal dependencies of the data](#lstm-autoencoder----to-capture-the-temporal-dependencies-of-the-data)
       * [PyOD (Useful Package)](#pyod-useful-package)
 
-<!-- Added by: gil_diy, at: Tue 19 Apr 2022 17:02:26 IDT -->
+<!-- Added by: gil_diy, at: Tue 19 Apr 2022 17:02:48 IDT -->
 
 <!--te-->
 
@@ -95,7 +95,6 @@ Many distance-based techniques (e.g. KNNs) suffer the **curse of dimensionality*
 ##### Example
 
 ```python
-
 data = pd.read_csv("https://raw.githubusercontent.com/uiuc-cse/data-fa14/gh-pages/data/iris.csv")  
 # input data
 df = data[["sepal_length", "sepal_width"]]
@@ -106,6 +105,14 @@ plt.ylabel('sepal_width')
 plt.xlabel('sepal_length')
 plt.show()
 
+```
+
+<p align="center">
+  <img width="400" src="images/anomaly-detection/knn_data_points.png" title="Look into the image">
+</p>
+
+
+```python
 # create arrays
 X = df.values
 
@@ -137,9 +144,6 @@ plt.show()
 
 ```
 
-<p align="center">
-  <img width="400" src="images/anomaly-detection/knn_data_points.png" title="Look into the image">
-</p>
 
 
 <p align="center">
