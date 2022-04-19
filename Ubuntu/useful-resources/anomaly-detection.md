@@ -12,8 +12,6 @@
             * [Regression hyperplan distance](#regression-hyperplan-distance)
          * [Parametric](#parametric)
             * [GMM](#gmm)
-            * [One Class SVMs](#one-class-svms)
-            * [One-Class SVM (SGD)](#one-class-svm-sgd)
             * [Extreme value theory](#extreme-value-theory)
       * [Isolation Forest](#isolation-forest)
          * [Drawbacks](#drawbacks)
@@ -24,7 +22,7 @@
             * [LSTM Autoencoder -  to capture the temporal dependencies of the data](#lstm-autoencoder----to-capture-the-temporal-dependencies-of-the-data)
       * [PyOD (Useful Package)](#pyod-useful-package)
 
-<!-- Added by: gil_diy, at: Tue 19 Apr 2022 17:35:10 IDT -->
+<!-- Added by: gil_diy, at: Tue 19 Apr 2022 17:45:19 IDT -->
 
 <!--te-->
 
@@ -167,33 +165,6 @@ plt.show()
 
 #### GMM
 
-#### One Class SVMs
-
-```python
-from sklearn.svm import OneClassSVM
-
-# import data
-data = pd.read_csv("https://raw.githubusercontent.com/uiuc-cse/data-fa14/gh-pages/data/iris.csv")# input data
-df = data[["sepal_length", "sepal_width"]]
-# model specification
-model = OneClassSVM(kernel = 'rbf', gamma = 0.001, nu = 0.03).fit(df)
-
-# prediction
-y_pred = model.predict(df) # either -1 (Anomaly) or 1
-
-# filter outlier index
-outlier_index = where(y_pred == -1) # filter outlier values
-outlier_values = df.iloc[outlier_index]
-outlier_values
-
-# visualize outputs
-plt.scatter(data["sepal_length"], df["sepal_width"])
-plt.scatter(outlier_values["sepal_length"], outlier_values["sepal_width"], c = "r")
-plt.show()
-```
-
-
-#### One-Class SVM (SGD)
 
 #### Extreme value theory
 
