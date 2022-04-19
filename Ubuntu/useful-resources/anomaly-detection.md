@@ -23,7 +23,7 @@
             * [LSTM Autoencoder -  to capture the temporal dependencies of the data](#lstm-autoencoder----to-capture-the-temporal-dependencies-of-the-data)
       * [PyOD (Useful Package)](#pyod-useful-package)
 
-<!-- Added by: gil_diy, at: Tue 19 Apr 2022 16:07:32 IDT -->
+<!-- Added by: gil_diy, at: Tue 19 Apr 2022 16:08:43 IDT -->
 
 <!--te-->
 
@@ -170,6 +170,17 @@ import pandas as pddf = pd.DataFrame({
 <p align="center">
   <img width="400" src="images/anomaly-detection/data_points.png" title="Look into the image">
 </p>
+
+Since Isolation forest, uses number of trees:
+
+
+<p align="center">
+  <img width="400" src="images/anomaly-detection/example_of_first_tree.png" title="Look into the image">
+</p>
+
+```python
+
+```
 
 ## Extended Isolation Forests
 
