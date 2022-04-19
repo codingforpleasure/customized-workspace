@@ -24,7 +24,7 @@
             * [LSTM Autoencoder -  to capture the temporal dependencies of the data](#lstm-autoencoder----to-capture-the-temporal-dependencies-of-the-data)
       * [PyOD (Useful Package)](#pyod-useful-package)
 
-<!-- Added by: gil_diy, at: Tue 19 Apr 2022 17:31:41 IDT -->
+<!-- Added by: gil_diy, at: Tue 19 Apr 2022 17:31:44 IDT -->
 
 <!--te-->
 
@@ -177,6 +177,7 @@ data = pd.read_csv("https://raw.githubusercontent.com/uiuc-cse/data-fa14/gh-page
 df = data[["sepal_length", "sepal_width"]]
 # model specification
 model = OneClassSVM(kernel = 'rbf', gamma = 0.001, nu = 0.03).fit(df)
+
 # prediction
 y_pred = model.predict(df) # either -1 (Anomaly) or 1
 
