@@ -23,7 +23,7 @@
             * [LSTM Autoencoder -  to capture the temporal dependencies of the data](#lstm-autoencoder----to-capture-the-temporal-dependencies-of-the-data)
       * [PyOD (Useful Package)](#pyod-useful-package)
 
-<!-- Added by: gil_diy, at: Tue 19 Apr 2022 16:17:23 IDT -->
+<!-- Added by: gil_diy, at: Tue 19 Apr 2022 16:18:44 IDT -->
 
 <!--te-->
 
@@ -200,7 +200,9 @@ Let’s see the scores estimated for each of our points:
 scores = iforest.score_samples(df)
 ```
 
-
+<p align="center">
+  <img width="400" src="images/anomaly-detection/score_samples_isolation_forests.png" title="Look into the image">
+</p>
 
 ## Extended Isolation Forests
 
