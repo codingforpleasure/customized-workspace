@@ -24,7 +24,7 @@
             * [LSTM Autoencoder -  to capture the temporal dependencies of the data](#lstm-autoencoder----to-capture-the-temporal-dependencies-of-the-data)
       * [PyOD (Useful Package)](#pyod-useful-package)
 
-<!-- Added by: gil_diy, at: Tue 19 Apr 2022 17:02:55 IDT -->
+<!-- Added by: gil_diy, at: Tue 19 Apr 2022 17:03:12 IDT -->
 
 <!--te-->
 
@@ -128,7 +128,14 @@ plt.show()
 # Plot the average distances for each of the observations in the dataset.
 # As we can see, there are some spikes in distance measures, and these spikes are
 # potentially anomalies or outliers in the dataset.
+```
 
+
+<p align="center">
+  <img width="400" src="images/anomaly-detection/knn_avg_distance.png" title="Look into the image">
+</p>
+
+```python
 # visually determine cutoff values > 0.15
 outlier_index = np.where(distances.mean(axis=1) > 0.15)
 
