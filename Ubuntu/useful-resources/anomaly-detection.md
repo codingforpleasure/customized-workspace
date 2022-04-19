@@ -5,9 +5,9 @@
          * [Density based](#density-based)
             * [DBSCAN (Density-based spatial clustering)](#dbscan-density-based-spatial-clustering)
             * [LOF (Local Outlier Factor)](#lof-local-outlier-factor)
-         * [Distance based](#distance-based)
-            * [K-NN](#k-nn)
-            * [Example](#example)
+      * [Distance based](#distance-based)
+         * [K-NN](#k-nn)
+         * [Example](#example)
             * [K-MEANS](#k-means)
             * [Regression hyperplan distance](#regression-hyperplan-distance)
          * [Parametric](#parametric)
@@ -24,7 +24,7 @@
             * [LSTM Autoencoder -  to capture the temporal dependencies of the data](#lstm-autoencoder----to-capture-the-temporal-dependencies-of-the-data)
       * [PyOD (Useful Package)](#pyod-useful-package)
 
-<!-- Added by: gil_diy, at: Tue 19 Apr 2022 17:04:12 IDT -->
+<!-- Added by: gil_diy, at: Tue 19 Apr 2022 17:04:26 IDT -->
 
 <!--te-->
 
@@ -80,9 +80,9 @@ clf.fit_predict(X)
 array([ 1,  1, -1,  1])
 ```
 
-### Distance based
+## Distance based
 
-#### K-NN
+### K-NN
 
 * Although kNN is a supervised ML algorithm, when it comes to anomaly detection it takes an unsupervised approach
 
@@ -92,7 +92,7 @@ array([ 1,  1, -1,  1])
 
 Many distance-based techniques (e.g. KNNs) suffer the **curse of dimensionality** when they compute distances of every data point in the full feature space.
 
-#### Example
+### Example
 
 ```python
 data = pd.read_csv("https://raw.githubusercontent.com/uiuc-cse/data-fa14/gh-pages/data/iris.csv")  
