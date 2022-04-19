@@ -22,7 +22,7 @@
             * [LSTM Autoencoder -  to capture the temporal dependencies of the data](#lstm-autoencoder----to-capture-the-temporal-dependencies-of-the-data)
       * [PyOD (Useful Package)](#pyod-useful-package)
 
-<!-- Added by: gil_diy, at: Tue 19 Apr 2022 16:02:09 IDT -->
+<!-- Added by: gil_diy, at: Tue 19 Apr 2022 16:02:12 IDT -->
 
 <!--te-->
 
@@ -138,7 +138,7 @@ iso_forest.fit(X_train)
 anomaly_scores = iso_forest.decision_function(x_validate)
 ```
 
-* In sklearn An anomaly score of `-1` is assigned to anomalies and `1` to normal points.
+* In sklearn an anomaly score of `-1` is assigned to anomalies and `1` to normal points.
 
 * The range of output from  IsolationForest `decision_function` is between -0.5 and 0.5, where smaller values mean more anomalous. The predict function then applies a threshold to this function to get either -1 (anomaly) or 1 (not anomaly). 
 The `decision threshold` is stored as model.threshold_ and defaults to `0.0`.
