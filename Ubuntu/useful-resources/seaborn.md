@@ -16,7 +16,7 @@
       * [distribution plot (Histograms)](#distribution-plot-histograms)
       * [Density plots (KDE - Kernel density estimate (KDE))](#density-plots-kde---kernel-density-estimate-kde)
 
-<!-- Added by: gil_diy, at: Wed 20 Apr 2022 09:30:15 IDT -->
+<!-- Added by: gil_diy, at: Wed 20 Apr 2022 09:30:34 IDT -->
 
 <!--te-->
 
@@ -217,7 +217,13 @@ sns.swarmplot(x=candy_data['chocolate'], y=candy_data['winpercent'])
 Displays a combination of statistical representations of numerical data, such as histogram, kernel density estimation
 
 ```python
-sns.displot(a=iris_data['Petal Length (cm)'], kde=False)
+import seaborn as sns, numpy as np
+
+np.random.seed(0)
+sns.set_theme() 
+x = np.random.randn(100)
+
+ax = sns.distplot(x)
 ```
 
 <p align="center">
