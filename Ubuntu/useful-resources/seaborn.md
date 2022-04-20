@@ -13,10 +13,10 @@
       * [Scatter plot](#scatter-plot)
       * [Scatter plot with linear regresssion](#scatter-plot-with-linear-regresssion)
       * [Categorical scatter plot to highlight the relationship between](#categorical-scatter-plot-to-highlight-the-relationship-between)
-      * [Histograms](#histograms)
+      * [distribution plot (Histograms)](#distribution-plot-histograms)
       * [Density plots (KDE - Kernel density estimate (KDE))](#density-plots-kde---kernel-density-estimate-kde)
 
-<!-- Added by: gil_diy, at: Sun 17 Apr 2022 13:32:59 IDT -->
+<!-- Added by: gil_diy, at: Wed 20 Apr 2022 09:26:36 IDT -->
 
 <!--te-->
 
@@ -212,7 +212,7 @@ sns.lmplot(x="bmi", y="charges", hue="smoker", data=insurance_data)
 sns.swarmplot(x=candy_data['chocolate'], y=candy_data['winpercent'])
 ```
 
-## Histograms
+## distribution plot (Histograms)
 
 ```python
 sns.displot(a=iris_data['Petal Length (cm)'], kde=False)
