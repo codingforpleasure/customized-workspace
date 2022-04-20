@@ -16,7 +16,7 @@
       * [distribution plot (Histograms)](#distribution-plot-histograms)
       * [Density plots (KDE - Kernel density estimate (KDE))](#density-plots-kde---kernel-density-estimate-kde)
 
-<!-- Added by: gil_diy, at: Wed 20 Apr 2022 09:30:37 IDT -->
+<!-- Added by: gil_diy, at: Wed 20 Apr 2022 09:32:50 IDT -->
 
 <!--te-->
 
@@ -237,6 +237,4 @@ You can think of it as a smoothed histogram
 ```python
 sns.kdeplot(data=iris_data['Petal Length (cm)'], shade=True)
 ```
-
-## 
 
