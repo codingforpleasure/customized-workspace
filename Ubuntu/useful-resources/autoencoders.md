@@ -5,7 +5,7 @@
       * [Usage of Autoencoders](#usage-of-autoencoders)
       * [LSTM Autoencoder](#lstm-autoencoder)
 
-<!-- Added by: gil_diy, at: Mon 18 Apr 2022 20:23:24 IDT -->
+<!-- Added by: gil_diy, at: Wed 20 Apr 2022 09:34:38 IDT -->
 
 <!--te-->
 
@@ -59,3 +59,6 @@ Cross-entropy loss and Mean squared error are common examples.
 * We’ll have a look at how to feed Time Series data to an Autoencoder. We’ll use a couple of **LSTM layers** (hence the LSTM Autoencoder) to capture the **temporal dependencies** of the data.
 
 To classify a sequence as normal or an anomaly, we’ll pick a threshold above which a heartbeat is considered abnormal.
+
+
+[Time Series Anomaly Detection using LSTM Autoencoders with PyTorch](https://colab.research.google.com/drive/1_J2MrBSvsJfOcVmYAN2-WSp36BtsFZCa#scrollTo=3RY_N3gOmfDi)
