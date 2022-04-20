@@ -5,7 +5,7 @@
       * [Usage of Autoencoders](#usage-of-autoencoders)
       * [LSTM Autoencoder](#lstm-autoencoder)
 
-<!-- Added by: gil_diy, at: Wed 20 Apr 2022 09:34:47 IDT -->
+<!-- Added by: gil_diy, at: Wed 20 Apr 2022 09:46:05 IDT -->
 
 <!--te-->
 
@@ -61,4 +61,4 @@ Cross-entropy loss and Mean squared error are common examples.
 To classify a sequence as normal or an anomaly, we’ll pick a threshold above which a heartbeat is considered abnormal.
 
 
-[Notebook Time Series Anomaly Detection using LSTM Autoencoders with PyTorch](https://colab.research.google.com/drive/1_J2MrBSvsJfOcVmYAN2-WSp36BtsFZCa#scrollTo=3RY_N3gOmfDi)
+[time-series-anomaly-detection-ecg.ipynb in Pytorch](https://colab.research.google.com/drive/1_J2MrBSvsJfOcVmYAN2-WSp36BtsFZCa#scrollTo=3RY_N3gOmfDi)
