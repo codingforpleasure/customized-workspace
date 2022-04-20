@@ -89,7 +89,7 @@
       * [Execute sql](#execute-sql)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Tue 19 Apr 2022 13:37:56 IDT -->
+<!-- Added by: gil_diy, at: Wed 20 Apr 2022 10:49:17 IDT -->
 
 <!--te-->
 
@@ -847,16 +847,26 @@ df_features_season = df_features_season.merge(num_win, on=['Season', 'TeamID'], 
 ### Dataframe Pivot table 
 
 ```python
+my_df = pd.DataFrame(data=[[20181013, 'metric_1', 2672516.00],
+                          [20181013, 'metric_6', 44764.54],
+                          [20181106, 'metric_11', 1987129.00],
+                          [20181106, 'metric_10', 28973769.00],
+                          [20181013, 'metric_12', 8720182.00]],
+                    index=range(0, 5),
+                    columns=['load_date', 'metric_name', 'actuals'])
 
-    my_df1 = pd.DataFrame(data=[['omer', 45645, 0], ['Liron', 92314, 3], ['Yuval', 19863, 6], ['Shani', 73198, 9]],
-                          index=range(0, 4),
-                          columns=['name', 'user_id', 'score'])
-
-    # Creating a sparse matrix, by retrieving 3 columns: 
-    # the actual matrix content in the scores, and the column names is 'user_id' and the row names is 'name'.
-    my_pivot = my_df1.pivot_table(values='score', index='name', columns='user_id')
-
+# Creating a sparse matrix, by retrieving 3 columns:
+# the actual matrix content in the scores, and the column names is 'user_id' and the row names is 'name'.
+metrics_df = pd.pivot_table(my_df, values='actuals', index='load_date', columns='metric_name')
+metrics_df.reset_index(inplace=True)
+metrics_df.fillna(0, inplace=True)
 ```
+
+
+<p align="center">
+  <img width="400" src="images/pandas/convert_to_pivot.png" title="Look into the image">
+</p>
+
 [Link](https://www.youtube.com/watch?v=5yFox2cReTw)
 
 ### Printing data so all columns will be presented (Display all columns)
