@@ -16,13 +16,14 @@
       * [Isolation Forest](#isolation-forest)
          * [Drawbacks](#drawbacks)
          * [Example](#example-1)
+         * [Example 2](#example-2)
       * [Extended Isolation Forests](#extended-isolation-forests)
       * [Deep Learning approaches](#deep-learning-approaches)
          * [Autoencoder](#autoencoder)
             * [LSTM Autoencoder -  to capture the temporal dependencies of the data](#lstm-autoencoder----to-capture-the-temporal-dependencies-of-the-data)
       * [PyOD (Useful Package)](#pyod-useful-package)
 
-<!-- Added by: gil_diy, at: Wed 20 Apr 2022 10:57:42 IDT -->
+<!-- Added by: gil_diy, at: Wed 20 Apr 2022 11:26:46 IDT -->
 
 <!--te-->
 
@@ -231,7 +232,7 @@ anomaly_scores = iso_forest.decision_function(x_validate)
 * The range of output from  IsolationForest `decision_function` is between -0.5 and 0.5, where smaller values mean more anomalous. The predict function then applies a threshold to this function to get either -1 (anomaly) or 1 (not anomaly). 
 The `decision threshold` is stored as model.threshold_ and defaults to `0.0`.
 
-* The funciton `decision_function(X)` - **Average anomaly score** of X of the base classifiers.
+* The function `decision_function(X)` - **Average anomaly score** of X of the base classifiers.
 
 **Contamination** - percentage of anomalies/outlier present in the data
 
@@ -290,6 +291,11 @@ scores = iforest.score_samples(df)
 <p align="center">
   <img width="400" src="images/anomaly-detection/score_samples_isolation_forests.png" title="Look into the image">
 </p>
+
+
+### Example 2
+
+[Nice example](https://towardsdatascience.com/anomaly-detection-with-isolation-forest-visualization-23cd75c281e2)
 
 ## Extended Isolation Forests
 
