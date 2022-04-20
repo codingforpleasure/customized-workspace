@@ -16,7 +16,7 @@
       * [distribution plot (Histograms)](#distribution-plot-histograms)
       * [Density plots (KDE - Kernel density estimate (KDE))](#density-plots-kde---kernel-density-estimate-kde)
 
-<!-- Added by: gil_diy, at: Wed 20 Apr 2022 09:29:43 IDT -->
+<!-- Added by: gil_diy, at: Wed 20 Apr 2022 09:30:03 IDT -->
 
 <!--te-->
 
@@ -219,6 +219,10 @@ Displays a combination of statistical representations of numerical data, such as
 ```python
 sns.displot(a=iris_data['Petal Length (cm)'], kde=False)
 ```
+
+<p align="center">
+  <img width="400" src="images/sns/density_plot.png" title="Look into the image">
+</p>
 
 ## Density plots (KDE - Kernel density estimate (KDE))
 
