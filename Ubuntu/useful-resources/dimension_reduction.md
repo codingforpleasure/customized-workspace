@@ -18,7 +18,7 @@
       * [t-SNE (t-Distributed Stochastic Neighbour)](#t-sne-t-distributed-stochastic-neighbour)
       * [Auto-encoder](#auto-encoder)
 
-<!-- Added by: gil_diy, at: Tue 15 Mar 2022 11:40:07 IST -->
+<!-- Added by: gil_diy, at: Wed 20 Apr 2022 11:12:40 IDT -->
 
 <!--te-->
 
@@ -136,7 +136,8 @@ A major problem with, linear dimensionality reduction algorithms is that they co
 
 [Best explanation of PCA on the web - video](https://youtu.be/TJdH6rPA-TI?list=PLzH6n4zXuckpfMu_4Ff8E7Z1behQks5ba)
 
-[Great notebook](https://colab.research.google.com/drive/11Xe5fdTvA4Fg5nFNJhwaf_pHdw7DeMIt)
+[Great notebook](https://colab.research.google.com/github/jakevdp/PythonDataScienceHandbook/blob/master/notebooks/05.09-Principal-Component-Analysis.ipynb)
+
 
 ## LDA (Linear Discriminatory Analysis)
 
