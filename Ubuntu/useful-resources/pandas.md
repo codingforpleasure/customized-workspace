@@ -89,7 +89,7 @@
       * [Execute sql](#execute-sql)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Wed 20 Apr 2022 10:49:47 IDT -->
+<!-- Added by: gil_diy, at: Wed 20 Apr 2022 18:45:34 IDT -->
 
 <!--te-->
 
@@ -855,8 +855,7 @@ my_df = pd.DataFrame(data=[[20181013, 'metric_1', 2672516.00],
                     index=range(0, 5),
                     columns=['load_date', 'metric_name', 'actuals'])
 
-# Creating a sparse matrix, by retrieving 3 columns:
-# the actual matrix content in the scores, and the column names is 'user_id' and the row names is 'name'.
+# Let's 
 metrics_df = pd.pivot_table(my_df, values='actuals', index='load_date', columns='metric_name')
 metrics_df.reset_index(inplace=True)
 metrics_df.fillna(0, inplace=True)
