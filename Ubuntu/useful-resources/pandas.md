@@ -89,7 +89,7 @@
       * [Execute sql](#execute-sql)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Wed 20 Apr 2022 10:49:27 IDT -->
+<!-- Added by: gil_diy, at: Wed 20 Apr 2022 10:49:43 IDT -->
 
 <!--te-->
 
@@ -864,7 +864,7 @@ metrics_df.fillna(0, inplace=True)
 
 
 <p align="center">
-  <img width="400" src="images/pandas/convert_to_pivot.png" title="Look into the image">
+  <img width="600" src="images/pandas/convert_to_pivot.png" title="Look into the image">
 </p>
 
 [Link](https://www.youtube.com/watch?v=5yFox2cReTw)
