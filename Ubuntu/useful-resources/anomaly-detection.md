@@ -22,7 +22,7 @@
             * [LSTM Autoencoder -  to capture the temporal dependencies of the data](#lstm-autoencoder----to-capture-the-temporal-dependencies-of-the-data)
       * [PyOD (Useful Package)](#pyod-useful-package)
 
-<!-- Added by: gil_diy, at: Wed 20 Apr 2022 10:57:38 IDT -->
+<!-- Added by: gil_diy, at: Wed 20 Apr 2022 10:57:42 IDT -->
 
 <!--te-->
 
@@ -234,7 +234,6 @@ The `decision threshold` is stored as model.threshold_ and defaults to `0.0`.
 * The funciton `decision_function(X)` - **Average anomaly score** of X of the base classifiers.
 
 **Contamination** - percentage of anomalies/outlier present in the data
- 
 
 Isolation Forests are computationally efficient and have been proven to be very effective in Anomaly detection.
 
