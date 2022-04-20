@@ -4,12 +4,15 @@
       * [useful commands](#useful-commands)
    * [Virtualenv](#virtualenv)
       * [useful commands](#useful-commands-1)
+      * [Pip commands](#pip-commands)
+         * [Remove all packages installed by pip](#remove-all-packages-installed-by-pip)
       * [Pip vs Anaconda](#pip-vs-anaconda)
       * [Anaconda](#anaconda)
       * [Pip cache folder](#pip-cache-folder)
       * [Pipenv cache folder](#pipenv-cache-folder)
+      * [Libraries on local hard-drive:](#libraries-on-local-hard-drive)
 
-<!-- Added by: gil_diy, at: Tue 06 Jul 2021 20:56:12 IDT -->
+<!-- Added by: gil_diy, at: Tue 02 Nov 2021 18:13:49 IST -->
 
 <!--te-->
 
@@ -100,6 +103,15 @@ Install a package|  **python3 -m pip install -U** matplotlib
 Deactivate | **source my_env/bin/deactivate**
 
 
+## Pip commands 
+
+### Remove all packages installed by pip
+
+```bash
+pip uninstall -y -r <(pip freeze) 
+```
+
+
 ## Pip vs Anaconda
 Description | Command
 ------------|-----
@@ -107,6 +119,7 @@ pip search <package-name> | conda search <package-name>
 pip install <package-name> | conda install <package-name>
 pip search <package-name> -upgrade | conda update python
 pip list -v | conda list
+
 
 
 ## Anaconda
@@ -135,3 +148,12 @@ pip3 install --no-cache-dir <package-name>
 ## Pipenv cache folder
 
 In my workstation it's: `/home/gil_diy/.cache/pipenv`
+
+## Libraries on local hard-drive:
+
+/home/gil_diy/.local/share/virtualenvs
+
+
+
+
+

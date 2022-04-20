@@ -1,8 +1,11 @@
 <!--ts-->
    * [Tips for Ubuntu's Advanced Packaging Tool (APT)](#tips-for-ubuntus-advanced-packaging-tool-apt)
       * [Useful commands:](#useful-commands)
+   * [Snap](#snap)
+      * [Installing:](#installing)
+      * [Removing:](#removing)
 
-<!-- Added by: gil_diy, at: Sat 06 Feb 2021 02:45:23 IST -->
+<!-- Added by: gil_diy, at: Thu 07 Oct 2021 21:58:36 IDT -->
 
 <!--te-->
 
@@ -54,3 +57,17 @@ We all have a habit of installing and uninstalling softwares, therefore the cach
 `apt get autoclean` removes only package files that can no longer be downloaded, and are largely useless.
 
 You can easily check the effect on your system by checking disk space before and after: `du -h /var/cache/apt/` .
+
+
+# Snap
+
+
+## Installing:
+```bash
+sudo snap install pwgen-tyhicks
+```
+
+## Removing:
+```bash
+sudo snap remove pwgen-tyhicks
+```

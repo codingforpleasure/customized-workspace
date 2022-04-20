@@ -8,7 +8,7 @@
          * [Tikz](#tikz-1)
       * [Useful resources](#useful-resources)
 
-<!-- Added by: gil_diy, at: 2020-07-27T02:07+03:00 -->
+<!-- Added by: gil_diy, at: Sat 20 Feb 2021 01:37:12 IST -->
 
 <!--te-->
 
@@ -71,3 +71,5 @@ How to install inkscape extenion:
 [Link](https://github.com/walmes/Tikz)
 
 [Link](https://github.com/hackl/tikz-network)
+
+[pgf-manual](https://ftp.cc.uoc.gr/mirrors/CTAN/graphics/pgf/base/doc/pgfmanual.pdf)

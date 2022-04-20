@@ -43,7 +43,7 @@
       * [Measure time with stopper](#measure-time-with-stopper)
       * [Conventions](#conventions)
 
-<!-- Added by: gil_diy, at: Fri 18 Jun 2021 07:21:12 IDT -->
+<!-- Added by: gil_diy, at: Fri 18 Jun 2021 08:33:36 IDT -->
 
 <!--te-->
 

@@ -9,8 +9,10 @@
       * [Test the new key](#test-the-new-key)
       * [Setting up connecting fast to ssh server](#setting-up-connecting-fast-to-ssh-server)
       * [Fix a brokem pipe on SSH connection](#fix-a-brokem-pipe-on-ssh-connection)
+      * [Fix a brokem pipe on SSH connection (Works!!)](#fix-a-brokem-pipe-on-ssh-connection-works)
+      * [Retrieve the new SSH config file](#retrieve-the-new-ssh-config-file)
 
-<!-- Added by: gil_diy, at: 2020-04-22T11:03+03:00 -->
+<!-- Added by: gil_diy, at: Sat 06 Nov 2021 14:12:25 IST -->
 
 <!--te-->
 
@@ -117,5 +119,24 @@ Host *
 ServerAliveInterval 120
 ```
 
+[Link](https://www.baeldung.com/linux/ssh-keep-alive)
 
+## Fix a brokem pipe on SSH connection (Works!!)
 
+```bash
+ssh -i ~/.ssh/wavitai.pem -o TCPKeepAlive=yes -o ServerAliveCountMax=20 -o ServerAliveInterval=15 ubuntu@ec2-34-212-178-18.us-west-2.compute.amazonaws.com'
+```
+
+To have the client sending “keep-alive” messages every 15 seconds. If the limit of 20 consecutive messages do not get an answer back from the server – which accounts for 20x15 = 5 minutes – then it is understood the connection is broken/dead and the client process ends.
+
+## Retrieve the new SSH config file
+
+```bash
+sudo service sshd restart
+```
+
+Afterwards check the ssh state:
+
+```bash
+service sshd status
+```

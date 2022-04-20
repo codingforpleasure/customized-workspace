@@ -3,8 +3,9 @@
       * [What are the Hyperparameters?](#what-are-the-hyperparameters)
       * [Hyperparameter Evolution](#hyperparameter-evolution)
       * [How to use Optuna with pytorch?](#how-to-use-optuna-with-pytorch)
+      * [Hyperparameter Importances](#hyperparameter-importances)
 
-<!-- Added by: gil_diy, at: Mon 08 Feb 2021 11:28:36 IST -->
+<!-- Added by: gil_diy, at: Mon 08 Feb 2021 11:38:38 IST -->
 
 <!--te-->
 # Optuna	
@@ -50,8 +51,23 @@ Suppression:
  
 
 
- ## How to use Optuna with pytorch?
+## How to use Optuna with pytorch?
 
- ```python
- import optuna
- ```
+[Full Example](https://github.com/optuna/optuna/blob/master/examples/pytorch_simple.py)
+
+```python
+import optuna
+
+
+def objective(trial):
+	############## Your code here ##############
+	n_layers = trails.suggest_int("n_layers",1,3)
+	
+	return evaluation_Score
+
+
+study = optuna.create_study()
+study.optimize(objective, n_trials = 10)
+```
+
+## Hyperparameter Importances

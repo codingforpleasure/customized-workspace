@@ -24,7 +24,7 @@
          * [Find all :](#find-all-)
    * [<a href="https://stackoverflow.com/questions/14132210/use-find-command-but-exclude-files-in-two-directories" rel="nofollow">https://stackoverflow.com/questions/14132210/use-find-command-but-exclude-files-in-two-directories</a>](#httpsstackoverflowcomquestions14132210use-find-command-but-exclude-files-in-two-directories)
 
-<!-- Added by: gil_diy, at: 2020-10-19T17:04+03:00 -->
+<!-- Added by: gil_diy, at: Sun 20 Jun 2021 00:46:48 IDT -->
 
 <!--te-->
 
@@ -52,7 +52,7 @@ find . -type f -perm 0777 -print
 ### find file with permission 777 and change the permission to 755
 Comment: The empty brackets are placeholder for the output of the find: command.
 ```bash
-find  . -type f -perm 0777 -exec chmod 755 {}\;
+find  . -type f -perm 0777 -exec chmod 755 {} \;
 ```
 **Another way:**
 ```bash
@@ -65,7 +65,7 @@ find . -type f -name "abc.txt" -delete
 or
 
 ```bash
-find . -type f -name "abc.txt" -exec rm -f {}\;
+find . -type f -name "abc.txt" -exec rm -f {} \;
 ```
 
 

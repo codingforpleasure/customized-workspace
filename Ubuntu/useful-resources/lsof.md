@@ -1,4 +1,8 @@
 <!--ts-->
+   * [lsof](#lsof)
+
+<!-- Added by: gil_diy, at: Sun 20 Jun 2021 18:28:38 IDT -->
+
 <!--te-->
 
 # lsof
@@ -9,7 +13,7 @@ lsof is a command meaning "list open files", which is used in many Unix-like sys
 
 Description | Command
 ------------|-----
- Find out process has been using this file?  |  lsof \<path-to-file>
+ Find out process has been using this file?  |  lsof <path-to-file>
  Find out the processes which are using  specific so (shared object) file  |  lsof \<path-to-so-file>
  Get all files a specific process has been using |  lsof -p \<pid>
  Get a list of all shared libraries files a specific process has been using | lsof -p <pid>  \|  grep \.so

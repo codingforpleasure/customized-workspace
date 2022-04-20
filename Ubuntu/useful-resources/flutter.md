@@ -52,9 +52,10 @@
       * [Scaffold in details](#scaffold-in-details)
       * [Buttons](#buttons)
       * [Basic commands in flutter cli](#basic-commands-in-flutter-cli)
+      * [Integrate pytorch model with Flutter](#integrate-pytorch-model-with-flutter)
       * [Nice sites:](#nice-sites)
 
-<!-- Added by: gil_diy, at: Thu 03 Jun 2021 09:41:10 IDT -->
+<!-- Added by: gil_diy, at: Tue 15 Jun 2021 14:05:14 IDT -->
 
 <!--te-->
 
@@ -615,6 +616,14 @@ command | Description
 `flutter install` | Install a Flutter app on an attached device.
 `flutter devices` | List all connected devices.
 `flutter clean` | Delete the build/ and .dart_tool/ directories.
+
+
+
+## Integrate pytorch model with Flutter
+
+[Link](https://youtu.be/1Y_F4usnn2M?t=789)
+
+[blog explaines well](https://gilberttanner.com/blog/d2go-use-detectron2-on-mobile-devices)
 
 
 ## Nice sites:

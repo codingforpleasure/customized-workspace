@@ -7,9 +7,8 @@
          * [Dialation](#dialation)
          * [Adaptive threshold](#adaptive-threshold)
          * [All white](#all-white)
-         * [All black](#all-black)
 
-<!-- Added by: gil_diy, at: Tue 01 Jun 2021 09:52:32 IDT -->
+<!-- Added by: gil_diy, at: Wed 16 Jun 2021 11:57:07 IDT -->
 
 <!--te-->
 
@@ -42,6 +41,8 @@ findContours(out, contours, hierarchy, RETR_EXTERNAL, CHAIN_APPROX_NONE);
 
 ```cpp
 mask = Mat::zeros(img_gray.size(), img_gray.type());
+or 
+out1 = cv::Mat::zeros(frame.size(), CV_8U);
 ```
 
 ### Dialation 
@@ -63,9 +64,3 @@ adaptiveThreshold(img_gray, thr_img, 255, ADAPTIVE_THRESH_MEAN_C, THRESH_BINARY_
 
 ```cpp
 Mat all_white(img_gray.size(), CV_8UC1, Scalar(255));
-```
-### All black
-
-```cpp
-out = Mat::zeros(img_gray.size(), img_gray.type());
-```

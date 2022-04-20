@@ -30,8 +30,9 @@
       * [Dimensionality Reduction](#dimensionality-reduction)
          * [PCA](#pca)
             * [Choosing the right number of Dimensions](#choosing-the-right-number-of-dimensions)
+         * [SVD (Singular Value Decompisition)](#svd-singular-value-decompisition)
 
-<!-- Added by: gil_diy, at: Tue Dec  8 18:16:04 IST 2020 -->
+<!-- Added by: gil_diy, at: Sat 13 Mar 2021 00:05:10 IST -->
 
 <!--te-->
 
@@ -324,6 +325,10 @@ log_loss(y_true, y_pred)
 ```
 
 ## Dimensionality Reduction
+
+When it is not good to apply PCA, or SVD?
+If our dataset is FILLED with NANs. This means that SVD and PCA is undefined.
+
 ### PCA
 
 ```python
@@ -362,3 +367,13 @@ number of principal componentes you want to preserve, you can set n_componennts 
 pca = PCA(n_components = 0.95)
 pca.fit(X_train)
 ```
+
+### SVD (Singular Value Decompisition)
+
+Is a matrix factorization technique, than can decompose the training set
+matrix X into the matrix multiplication of three matrices.
+
+The SVD approach get very slow when the number of features grows large (e.g, 100,000). On the positive side, both are linear with regard to the number of instances in the training set, so they can handle large training efficiently, provided they can fit in memory.
+
+
+[Link](https://youtu.be/DG7YTlGnCEo)

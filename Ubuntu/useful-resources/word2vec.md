@@ -19,6 +19,8 @@
 
 ### Hierarchical Softmax
 
+[Link](https://youtu.be/pzyIWCelt_E)
+
 where each of the elements of the activated output vector is the probability of the word to be equal to the j-th word in the vocabulary given our input word I. Also, it’s worth mentioning that the sum of the elements of the output vector is equal to 1 and each of the elements of it is mapped into a range [0,1].
 
 The computational complexity of this algorithm computed in a straightforward fashion is the size of our vocabulary, **O(V), which is very costly**.
