@@ -2,7 +2,7 @@
    * [pmap](#pmap)
       * [pmap (report memory map of a process)](#pmap-report-memory-map-of-a-process)
 
-<!-- Added by: gil_diy, at: Wed 20 Apr 2022 18:53:58 IDT -->
+<!-- Added by: gil_diy, at: Wed 20 Apr 2022 18:54:11 IDT -->
 
 <!--te-->
 
@@ -14,7 +14,7 @@
 pmap -p <pid>
 ```
 
-very similar to 
+Result in the same output as:
 
 ```bash
 cat /proc/<pid>/maps
