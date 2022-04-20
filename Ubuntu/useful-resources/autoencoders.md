@@ -5,7 +5,7 @@
       * [Usage of Autoencoders](#usage-of-autoencoders)
       * [LSTM Autoencoder](#lstm-autoencoder)
 
-<!-- Added by: gil_diy, at: Wed 20 Apr 2022 09:46:05 IDT -->
+<!-- Added by: gil_diy, at: Wed 20 Apr 2022 09:46:07 IDT -->
 
 <!--te-->
 
