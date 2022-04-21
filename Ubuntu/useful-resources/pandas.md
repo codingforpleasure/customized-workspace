@@ -89,7 +89,7 @@
       * [Execute sql](#execute-sql)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Wed 20 Apr 2022 18:45:34 IDT -->
+<!-- Added by: gil_diy, at: Thu 21 Apr 2022 12:45:57 IDT -->
 
 <!--te-->
 
@@ -478,6 +478,9 @@ movies_df.to_csv('./my_folder/movies.csv', index = False)
 ```
 
 ## Excel File
+
+You should install the package `openpyxl`:
+
 ```python
 movies_df = pd.read_excel('data/movies.xlsx')
 ```
