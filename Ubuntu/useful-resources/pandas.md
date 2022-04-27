@@ -89,7 +89,7 @@
       * [Execute sql](#execute-sql)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Wed 27 Apr 2022 22:07:41 IDT -->
+<!-- Added by: gil_diy, at: Wed 27 Apr 2022 22:08:21 IDT -->
 
 <!--te-->
 
@@ -757,7 +757,7 @@ df_new = df.explode('list_of_actors')
 ```
 **Output**
 
-<div align="center">
+<center>
 
 movie_name|movie_length|list_of_actors
 ----------|------------|---------------
@@ -776,7 +776,7 @@ The Fighter|1.56|Mark Wahlberg
 The Fighter|1.56|Christian Bale
 The Fighter|1.56|Amy Adams
 
-</div>
+<center>
 
 ## Group by:
 ```python
