@@ -87,9 +87,10 @@
       * [Mathematical functions](#mathematical-functions)
          * [Calculate correlation for all numerical columns pairs](#calculate-correlation-for-all-numerical-columns-pairs)
       * [Execute sql](#execute-sql)
+      * [Dump dataframe into the clipboard](#dump-dataframe-into-the-clipboard)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Wed 27 Apr 2022 22:10:38 IDT -->
+<!-- Added by: gil_diy, at: Wed 27 Apr 2022 22:18:08 IDT -->
 
 <!--te-->
 
@@ -1021,6 +1022,11 @@ conn = connect(region_name=region, s3_staging_dir=s3_staging_dir)
 pd.read_sql(statement, conn)
 ```
 
+## Dump dataframe into the clipboard 
+
+```python
+df.to_clipboard(sep=',')
+```
 
 ## Reference
 
