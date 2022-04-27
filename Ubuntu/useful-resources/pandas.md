@@ -69,7 +69,7 @@
       * [Segment and sort data values into bins](#segment-and-sort-data-values-into-bins)
       * [Shuffle rows in Dataframe](#shuffle-rows-in-dataframe)
       * [Transform single row into multiple rows](#transform-single-row-into-multiple-rows)
-      * [movie_name|movie_length|actors](#movie_namemovie_lengthactors)
+      * [movie_name | movie_length | actors](#movie_name--movie_length--actors)
       * [Group by:](#group-by)
          * [Group with aggregate](#group-with-aggregate)
          * [Group by time slot](#group-by-time-slot)
@@ -90,7 +90,7 @@
       * [Execute sql](#execute-sql)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Wed 27 Apr 2022 21:55:03 IDT -->
+<!-- Added by: gil_diy, at: Wed 27 Apr 2022 21:55:14 IDT -->
 
 <!--te-->
 
@@ -757,7 +757,7 @@ Title1 | Title2
 ------------|-----
  element | element-description
 
-movie_name|movie_length|actors
+movie_name | movie_length | actors
 --------------------------------
 The Shawshank Redemption|2.22|"Tim Robbins, Morgan Freeman, William Sadler, Bob Gunton"
 Batman Begins|2.2|"Christian Bale| "Michael Caine, Liam Neeson, Gary Oldman"
