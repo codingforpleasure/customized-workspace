@@ -89,7 +89,7 @@
       * [Execute sql](#execute-sql)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Wed 27 Apr 2022 22:07:33 IDT -->
+<!-- Added by: gil_diy, at: Wed 27 Apr 2022 22:07:37 IDT -->
 
 <!--te-->
 
@@ -775,6 +775,7 @@ The Dark Knight Rises|2.44|Gary Oldman
 The Fighter|1.56|Mark Wahlberg
 The Fighter|1.56|Christian Bale
 The Fighter|1.56|Amy Adams
+
 </div>
 
 ## Group by:
