@@ -68,7 +68,8 @@
       * [Get Kurtosis of a column](#get-kurtosis-of-a-column)
       * [Segment and sort data values into bins](#segment-and-sort-data-values-into-bins)
       * [Shuffle rows in Dataframe](#shuffle-rows-in-dataframe)
-      * [Transform one row into multiple rows](#transform-one-row-into-multiple-rows)
+      * [Transform single row into multiple rows](#transform-single-row-into-multiple-rows)
+      * [movie_name|movie_length|actors](#movie_namemovie_lengthactors)
       * [Group by:](#group-by)
          * [Group with aggregate](#group-with-aggregate)
          * [Group by time slot](#group-by-time-slot)
@@ -89,7 +90,7 @@
       * [Execute sql](#execute-sql)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Wed 27 Apr 2022 21:25:13 IDT -->
+<!-- Added by: gil_diy, at: Wed 27 Apr 2022 21:33:06 IDT -->
 
 <!--te-->
 
@@ -729,7 +730,40 @@ Categories (9, interval[int64, right]): [(0, 5] < (5, 10] < (10, 15] < (15, 20] 
 df = df.sample(frac=1.0)
 ```
 
-## Transform one row into multiple rows
+## Transform single row into multiple rows
+
+```python
+df = pd.DataFrame(
+  {'movie_name': ['The Shawshank Redemption', 'Batman Begins', 'The Dark Knight Rises', 'The Fighter'],
+   'movie_length': [2.22, 2.20, 2.44, 1.56],
+   'actors': ['Tim Robbins, Morgan Freeman, William Sadler, Bob Gunton',
+              'Christian Bale, Michael Caine, Liam Neeson, Gary Oldman',
+              'Christian Bale, Anne Hathaway, Gary Oldman',
+              'Mark Wahlberg, Christian Bale, Amy Adams'
+              ]
+   })
+```
+
+
+```python
+df['list_of_actors'] = df['actors'].apply(lambda x: list(map(str.strip, x.split(','))))
+df.drop('actors', axis=1, inplace=True)
+df_new = df.explode('list_of_actors')
+```
+
+**Output**
+
+movie_name|movie_length|actors
+--------------------------------
+The Shawshank Redemption|2.22|["Tim Robbins, Morgan Freeman, William Sadler, Bob Gunton"]
+Batman Begins|2.2|"Christian Bale| ["Michael Caine, Liam Neeson, Gary Oldman"]
+The Dark Knight Rises|2.44| ["Christian Bale, Anne Hathaway, Gary Oldman"]
+The Fighter|1.56|"Mark Wahlberg|["Christian Bale, Amy Adams"]
+
+
+
+
+
 
 ## Group by:
 ```python
