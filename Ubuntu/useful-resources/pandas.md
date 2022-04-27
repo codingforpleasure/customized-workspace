@@ -68,6 +68,7 @@
       * [Get Kurtosis of a column](#get-kurtosis-of-a-column)
       * [Segment and sort data values into bins](#segment-and-sort-data-values-into-bins)
       * [Shuffle rows in Dataframe](#shuffle-rows-in-dataframe)
+      * [Transform one row into multiple rows](#transform-one-row-into-multiple-rows)
       * [Group by:](#group-by)
          * [Group with aggregate](#group-with-aggregate)
          * [Group by time slot](#group-by-time-slot)
@@ -88,7 +89,7 @@
       * [Execute sql](#execute-sql)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Wed 27 Apr 2022 20:22:05 IDT -->
+<!-- Added by: gil_diy, at: Wed 27 Apr 2022 21:25:09 IDT -->
 
 <!--te-->
 
@@ -727,6 +728,8 @@ Categories (9, interval[int64, right]): [(0, 5] < (5, 10] < (10, 15] < (15, 20] 
 ```python
 df = df.sample(frac=1.0)
 ```
+
+## Transform one row into multiple rows
 
 ## Group by:
 ```python
