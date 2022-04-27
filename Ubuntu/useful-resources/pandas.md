@@ -90,7 +90,7 @@
       * [Execute sql](#execute-sql)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Wed 27 Apr 2022 21:33:06 IDT -->
+<!-- Added by: gil_diy, at: Wed 27 Apr 2022 21:53:49 IDT -->
 
 <!--te-->
 
@@ -752,6 +752,10 @@ df_new = df.explode('list_of_actors')
 ```
 
 **Output**
+
+Title1 | Title2
+------------|-----
+ element | element-description
 
 movie_name|movie_length|actors
 --------------------------------
