@@ -89,7 +89,7 @@
       * [Execute sql](#execute-sql)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Wed 27 Apr 2022 22:08:25 IDT -->
+<!-- Added by: gil_diy, at: Wed 27 Apr 2022 22:08:37 IDT -->
 
 <!--te-->
 
@@ -776,7 +776,7 @@ The Fighter|1.56|Mark Wahlberg
 The Fighter|1.56|Christian Bale
 The Fighter|1.56|Amy Adams
 
-<center>
+</center>
 
 ## Group by:
 ```python
