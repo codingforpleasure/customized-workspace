@@ -46,7 +46,6 @@
       * [Excel File](#excel-file)
       * [JSON File](#json-file)
          * [Importing data from json](#importing-data-from-json)
-         * [Importing data from json](#importing-data-from-json-1)
       * [Displaying data cleaner](#displaying-data-cleaner)
       * [Get information of the data types for a given dataframe](#get-information-of-the-data-types-for-a-given-dataframe)
       * [Get information about the memory usage of a dataframe stored in the memory](#get-information-about-the-memory-usage-of-a-dataframe-stored-in-the-memory)
@@ -89,7 +88,7 @@
       * [Execute sql](#execute-sql)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Thu 21 Apr 2022 12:45:57 IDT -->
+<!-- Added by: gil_diy, at: Wed 27 Apr 2022 20:22:05 IDT -->
 
 <!--te-->
 
@@ -486,8 +485,6 @@ movies_df = pd.read_excel('data/movies.xlsx')
 ```
 
 ## JSON File
-
-### Importing data from json
 
 ### Importing data from json
 
