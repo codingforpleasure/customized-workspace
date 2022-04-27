@@ -89,7 +89,7 @@
       * [Execute sql](#execute-sql)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Wed 27 Apr 2022 22:06:31 IDT -->
+<!-- Added by: gil_diy, at: Wed 27 Apr 2022 22:06:36 IDT -->
 
 <!--te-->
 
@@ -756,11 +756,6 @@ df.drop('actors', axis=1, inplace=True)
 df_new = df.explode('list_of_actors')
 ```
 **Output**
-
-
-Title1 | Title2
-------------|-----
- element | element-description
 
 movie_name|movie_length|list_of_actors
 ----------|------------|---------------
