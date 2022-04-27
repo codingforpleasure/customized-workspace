@@ -89,7 +89,7 @@
       * [Execute sql](#execute-sql)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Wed 27 Apr 2022 22:09:04 IDT -->
+<!-- Added by: gil_diy, at: Wed 27 Apr 2022 22:09:13 IDT -->
 
 <!--te-->
 
@@ -759,7 +759,7 @@ df['list_of_actors'] = df['actors'].apply(lambda x: list(map(str.strip, x.split(
 df.drop('actors', axis=1, inplace=True)
 df_new = df.explode('list_of_actors')
 ```
-**Output**
+**Output:**
 
 <center>
 
