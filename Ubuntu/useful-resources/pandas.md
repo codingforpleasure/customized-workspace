@@ -89,7 +89,7 @@
       * [Execute sql](#execute-sql)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Wed 27 Apr 2022 22:06:44 IDT -->
+<!-- Added by: gil_diy, at: Wed 27 Apr 2022 22:07:33 IDT -->
 
 <!--te-->
 
@@ -757,6 +757,8 @@ df_new = df.explode('list_of_actors')
 ```
 **Output**
 
+<div align="center">
+
 movie_name|movie_length|list_of_actors
 ----------|------------|---------------
 The Shawshank Redemption|2.22|Tim Robbins
@@ -773,7 +775,7 @@ The Dark Knight Rises|2.44|Gary Oldman
 The Fighter|1.56|Mark Wahlberg
 The Fighter|1.56|Christian Bale
 The Fighter|1.56|Amy Adams
-
+</div>
 
 ## Group by:
 ```python
