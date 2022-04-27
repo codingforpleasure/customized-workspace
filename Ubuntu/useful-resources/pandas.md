@@ -90,7 +90,7 @@
       * [Execute sql](#execute-sql)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Wed 27 Apr 2022 21:53:59 IDT -->
+<!-- Added by: gil_diy, at: Wed 27 Apr 2022 21:55:03 IDT -->
 
 <!--te-->
 
@@ -759,10 +759,10 @@ Title1 | Title2
 
 movie_name|movie_length|actors
 --------------------------------
-The Shawshank Redemption|2.22|["Tim Robbins, Morgan Freeman, William Sadler, Bob Gunton"]
-Batman Begins|2.2|"Christian Bale| ["Michael Caine, Liam Neeson, Gary Oldman"]
-The Dark Knight Rises|2.44| ["Christian Bale, Anne Hathaway, Gary Oldman"]
-The Fighter|1.56|"Mark Wahlberg|["Christian Bale, Amy Adams"]
+The Shawshank Redemption|2.22|"Tim Robbins, Morgan Freeman, William Sadler, Bob Gunton"
+Batman Begins|2.2|"Christian Bale| "Michael Caine, Liam Neeson, Gary Oldman"
+The Dark Knight Rises|2.44| "Christian Bale, Anne Hathaway, Gary Oldman"
+The Fighter|1.56|"Mark Wahlberg,"Christian Bale, Amy Adams"
 
 
 
