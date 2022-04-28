@@ -90,7 +90,7 @@
       * [Dump dataframe into the clipboard](#dump-dataframe-into-the-clipboard)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Wed 27 Apr 2022 22:18:08 IDT -->
+<!-- Added by: gil_diy, at: Thu 28 Apr 2022 06:00:44 IDT -->
 
 <!--te-->
 
@@ -748,10 +748,10 @@ df = pd.DataFrame(
 
 movie_name | movie_length | actors
 -----------|---------------|------
-The Shawshank Redemption| 2.22 | ["Tim Robbins, Morgan Freeman, William Sadler, Bob Gunton"]
-Batman Begins| 2.2 |["Christian Balem, Michael Caine, Liam Neeson, Gary Oldman"]
-The Dark Knight Rises| 2.44 | ["Christian Bale, Anne Hathaway, Gary Oldman"]
-The Fighter| 1.56 | ["Mark Wahlberg,"Christian Bale, Amy Adams"]
+The Shawshank Redemption| 2.22 | "Tim Robbins, Morgan Freeman, William Sadler, Bob Gunton"
+Batman Begins| 2.2 |"Christian Balem, Michael Caine, Liam Neeson, Gary Oldman"
+The Dark Knight Rises| 2.44 | "Christian Bale, Anne Hathaway, Gary Oldman"
+The Fighter| 1.56 | "Mark Wahlberg,"Christian Bale, Amy Adams"
 
 </center>
 
