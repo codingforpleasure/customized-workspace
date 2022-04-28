@@ -90,7 +90,7 @@
       * [Dump dataframe into the clipboard](#dump-dataframe-into-the-clipboard)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Thu 28 Apr 2022 06:01:08 IDT -->
+<!-- Added by: gil_diy, at: Thu 28 Apr 2022 06:02:54 IDT -->
 
 <!--te-->
 
@@ -528,7 +528,7 @@ Or you can use this:
 ```python
 df1.memory_usage(deep = True) * 1e-3
 ```
-** Comment: ** memory usage in KB
+**Comment:** memory usage in KB
 
 
 ## Get statistics (count, mean, std, min, max))
