@@ -27,9 +27,9 @@
             * [Converting from numpy table to pandas dataframe](#converting-from-numpy-table-to-pandas-dataframe)
             * [Converting from pandas dataframe to numpy table](#converting-from-pandas-dataframe-to-numpy-table)
             * [Converting categorical columns to numbers (4 Methods)](#converting-categorical-columns-to-numbers-4-methods)
+            * [Methods of slicing in pandas](#methods-of-slicing-in-pandas)
             * [Accessing an element in pandas](#accessing-an-element-in-pandas)
             * [Accessing a column in pandas](#accessing-a-column-in-pandas)
-            * [Methods of slicing in pandas](#methods-of-slicing-in-pandas)
             * [Filtering data within a dataframe](#filtering-data-within-a-dataframe)
                * [Method #1 (Similar to R language)](#method-1-similar-to-r-language)
                * [Method #2 (Similar to Filter function in R language)](#method-2-similar-to-filter-function-in-r-language)
@@ -90,7 +90,7 @@
       * [Dump dataframe into the clipboard](#dump-dataframe-into-the-clipboard)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Thu 28 Apr 2022 06:04:40 IDT -->
+<!-- Added by: gil_diy, at: Thu 28 Apr 2022 06:05:30 IDT -->
 
 <!--te-->
 
@@ -380,6 +380,18 @@ Great reference:
 [Link](https://www.datacamp.com/community/tutorials/categorical-data)
 
 
+#### Methods of slicing in pandas
+
+* `loc` get rows/columns with praticular **labels** (label-based indexing).
+
+* `iloc` get rows/columns at praticular **index** (it only takes integers).
+
+* `get_loc()` is and index method meaning "get the position of the label in this index"
+
+```python
+df.iloc[:df.index.get_loc('row_bla') + 1, :4]
+```
+
 #### Accessing an element in pandas
 ```python
 print(my_df.iloc[row_num, col_num] )
@@ -392,18 +404,6 @@ print(my_df.iloc[row_num, col_num] )
 print(my_df.my_column_name)
 # Or 
 print(my_df['my_column_name'])
-```
-
-#### Methods of slicing in pandas
-
-* `loc` get rows/columns with praticular **labels** (label-based indexing).
-
-* `iloc` get rows/columns at praticular **index** (it only takes integers).
-
-* `get_loc()` is and index method meaning "get the position of the label in this index"
-
-```python
-df.iloc[:df.index.get_loc('row_bla') + 1, :4]
 ```
 
 
