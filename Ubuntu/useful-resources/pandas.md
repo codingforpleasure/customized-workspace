@@ -90,7 +90,7 @@
       * [Dump dataframe into the clipboard](#dump-dataframe-into-the-clipboard)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Thu 28 Apr 2022 06:04:32 IDT -->
+<!-- Added by: gil_diy, at: Thu 28 Apr 2022 06:04:40 IDT -->
 
 <!--te-->
 
@@ -389,7 +389,6 @@ print(my_df.iloc[row_num, col_num] )
 
 ```python
 # There are two options:
-
 print(my_df.my_column_name)
 # Or 
 print(my_df['my_column_name'])
