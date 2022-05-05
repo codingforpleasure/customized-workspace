@@ -13,13 +13,14 @@
             * [Example #7:](#example-7)
             * [Example #8:](#example-8)
             * [Example $6:](#example-6-1)
+      * [Common Error](#common-error)
          * [For CPP language](#for-cpp-language)
             * [Example #1](#example-1-1)
       * [Clion Makefile](#clion-makefile)
          * [Add libraries](#add-libraries)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Tue 05 Apr 2022 20:46:29 IDT -->
+<!-- Added by: gil_diy, at: Thu 05 May 2022 22:15:39 IDT -->
 
 <!--te-->
 
@@ -267,6 +268,17 @@ hellomake: $(OBJ)
 clean:
 	rm -f $(ODIR)/*.o *~ core $(INCDIR)/*~
 ```
+
+
+## Common Error
+
+```Makefile:<line number>: *** missing separator.  Stop.```
+
+It means although you are using the key tab still it's get interpreted 
+as spaces. therfore in sublime do the following:
+
+
+
 
 
 ### For CPP language
