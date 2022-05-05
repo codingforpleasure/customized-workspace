@@ -55,10 +55,11 @@ Table of Contents
       * [Working with numbers in bash](#working-with-numbers-in-bash)
          * [square root of a decimal number](#square-root-of-a-decimal-number)
          * [Truncate a decimal number](#truncate-a-decimal-number)
+         * [Dump errors into /dev/null](#dump-errors-into-devnull)
       * [Tricks](#tricks)
       * [<em><strong>Great reference</strong></em>](#great-reference)
 
-<!-- Added by: gil_diy, at: Thu 05 May 2022 12:36:31 IDT -->
+<!-- Added by: gil_diy, at: Thu 05 May 2022 12:40:54 IDT -->
 
 <!--te-->
 
@@ -711,6 +712,15 @@ number=136
 square_root=`echo "scale=$number; sqrt($number)" | bc` # 11.66190379
 
 square_root=`echo ${square_root%.*}` # output would be 11
+```
+
+### Dump errors into /dev/null
+
+Just append to the command this: `2>/dev/null`
+
+i.e:
+```bash
+grep -i 'abc' content 2>/dev/null 
 ```
 
 ## Tricks
