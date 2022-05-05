@@ -20,7 +20,7 @@
          * [Add libraries](#add-libraries)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Thu 05 May 2022 22:15:48 IDT -->
+<!-- Added by: gil_diy, at: Thu 05 May 2022 22:16:48 IDT -->
 
 <!--te-->
 
@@ -276,7 +276,8 @@ clean:
 
 It means although you are using the key tab still it's get interpreted 
 as spaces. therfore in sublime do the following:
-After opening the file
+After opening the file:
+View -> Indentation -> Convert Indentation to Tabs
 
 
 
