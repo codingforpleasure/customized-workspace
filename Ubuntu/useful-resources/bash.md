@@ -1,8 +1,7 @@
-<p align="center"> <!-- style="width:400px;" -->
-  <img src="images/bash_logo.png" title="tool tip here">
+<p align="center">
+  <img width="400" src="images/zsh_logo.png" title="Look into the image">
 </p>
 
-<!-- <img src="images/zsh_logo.png" title="tool tip here"> -->
 Table of Contents
 =================
 
@@ -59,7 +58,7 @@ Table of Contents
       * [Tricks](#tricks)
       * [<em><strong>Great reference</strong></em>](#great-reference)
 
-<!-- Added by: gil_diy, at: Mon 07 Feb 2022 13:26:41 IST -->
+<!-- Added by: gil_diy, at: Thu 05 May 2022 12:36:31 IDT -->
 
 <!--te-->
 
