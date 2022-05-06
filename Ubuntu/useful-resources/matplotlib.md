@@ -37,7 +37,8 @@
             * [Set the current Axes:](#set-the-current-axes)
             * [Linestyles](#linestyles)
          * [Plot with logarithmic scale for y-axis](#plot-with-logarithmic-scale-for-y-axis)
-         * [change the gap between ticks](#change-the-gap-between-ticks)
+         * [Rotate x-ticks](#rotate-x-ticks)
+         * [Change the gap between ticks](#change-the-gap-between-ticks)
          * [Export plot](#export-plot)
          * [Drawing shapes with Matplotlib (patches)](#drawing-shapes-with-matplotlib-patches)
          * [Configuring plot design](#configuring-plot-design)
@@ -49,7 +50,7 @@
       * [Writing mathematical expression](#writing-mathematical-expression)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Sun 17 Apr 2022 09:47:05 IDT -->
+<!-- Added by: gil_diy, at: Fri 06 May 2022 09:32:20 IDT -->
 
 <!--te-->
 
@@ -945,7 +946,13 @@ plt.plot(x,y, ls='--')
 plt.yscale('log')
 ```
 
-### change the gap between ticks
+### Rotate x-ticks
+
+```python
+plt.xticks(rotation = 90) 
+```
+
+### Change the gap between ticks
 
 ```python
 ax = plt.axes()
