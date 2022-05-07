@@ -3,8 +3,9 @@
       * [cProfile](#cprofile)
       * [LineProfiler](#lineprofiler)
       * [visualizing profiling](#visualizing-profiling)
+         * [Installing snakeviz](#installing-snakeviz)
 
-<!-- Added by: gil_diy, at: Sat 07 May 2022 15:20:48 IDT -->
+<!-- Added by: gil_diy, at: Sat 07 May 2022 15:22:59 IDT -->
 
 <!--te-->
 
@@ -44,11 +45,12 @@ print(profile.print_stats())
 
 ## visualizing profiling
 
-[Link](https://jiffyclub.github.io/snakeviz/)
+[Great package](https://jiffyclub.github.io/snakeviz/)
 
+### Installing snakeviz
 
-```python
-
+```bash
+pip install snakeviz
 ```
 
 
