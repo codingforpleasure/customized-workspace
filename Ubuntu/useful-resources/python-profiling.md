@@ -4,8 +4,9 @@
       * [LineProfiler](#lineprofiler)
       * [visualizing profiling](#visualizing-profiling)
          * [Installing snakeviz](#installing-snakeviz)
+         * [View it after generating profiling dump](#view-it-after-generating-profiling-dump)
 
-<!-- Added by: gil_diy, at: Sat 07 May 2022 15:22:59 IDT -->
+<!-- Added by: gil_diy, at: Sat 07 May 2022 15:23:51 IDT -->
 
 <!--te-->
 
@@ -52,6 +53,10 @@ print(profile.print_stats())
 ```bash
 pip install snakeviz
 ```
+### View it after generating profiling dump
 
+```
+snakeviz program.prof
+```
 
 [Reference](https://www.youtube.com/watch?v=MgBgMyYROTE)
