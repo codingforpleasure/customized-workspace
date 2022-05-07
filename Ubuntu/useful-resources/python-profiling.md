@@ -2,8 +2,9 @@
    * [Python profiling](#python-profiling)
       * [cProfile](#cprofile)
       * [LineProfiler](#lineprofiler)
+      * [visualizing profiling](#visualizing-profiling)
 
-<!-- Added by: gil_diy, at: 2020-06-03T21:31+03:00 -->
+<!-- Added by: gil_diy, at: Sat 07 May 2022 15:20:43 IDT -->
 
 <!--te-->
 
@@ -40,5 +41,15 @@ profile = LineProfiler(rock(rk))
 print(profile.print_stats())
 
 ```
+
+## visualizing profiling
+
+[Link](https://jiffyclub.github.io/snakeviz/)
+
+
+```python
+
+```
+
 
 [Reference](https://www.youtube.com/watch?v=MgBgMyYROTE)
