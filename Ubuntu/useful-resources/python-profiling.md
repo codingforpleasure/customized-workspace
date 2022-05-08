@@ -2,11 +2,12 @@
    * [Python profiling](#python-profiling)
       * [cProfile](#cprofile)
       * [LineProfiler](#lineprofiler)
+      * [Generate profiling dump](#generate-profiling-dump)
       * [visualizing profiling](#visualizing-profiling)
          * [Installing snakeviz](#installing-snakeviz)
          * [View it after generating profiling dump](#view-it-after-generating-profiling-dump)
 
-<!-- Added by: gil_diy, at: Sat 07 May 2022 15:24:01 IDT -->
+<!-- Added by: gil_diy, at: Sun 08 May 2022 07:55:50 IDT -->
 
 <!--te-->
 
@@ -42,6 +43,14 @@ bla = "Hello world"
 profile = LineProfiler(rock(rk))
 print(profile.print_stats())
 
+```
+
+## Generate profiling dump
+
+```python
+import cProfile
+
+cProfile.run('re.compile("foo|bar")', 'restats')
 ```
 
 ## visualizing profiling
