@@ -7,7 +7,7 @@
          * [Installing snakeviz](#installing-snakeviz)
          * [View it after generating profiling dump](#view-it-after-generating-profiling-dump)
 
-<!-- Added by: gil_diy, at: Sun 08 May 2022 07:55:50 IDT -->
+<!-- Added by: gil_diy, at: Mon 09 May 2022 19:58:11 IDT -->
 
 <!--te-->
 
@@ -50,7 +50,7 @@ print(profile.print_stats())
 ```python
 import cProfile
 
-cProfile.run('re.compile("foo|bar")', 'restats')
+cProfile.run('re.compile("foo|bar")', 'dump_file.prof')
 ```
 
 ## visualizing profiling
