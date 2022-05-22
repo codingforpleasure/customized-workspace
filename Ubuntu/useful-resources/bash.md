@@ -16,6 +16,7 @@ Table of Contents
          * [Debugging on the entire script](#debugging-on-the-entire-script)
          * [Debugging on part of a shell script](#debugging-on-part-of-a-shell-script)
          * [You need to know how many arguments the script was invoked with.](#you-need-to-know-how-many-arguments-the-script-was-invoked-with)
+      * [Use switch in bash flags (switches)](#use-switch-in-bash-flags-switches)
       * [<em><strong>Array in bash</strong></em>](#array-in-bash)
          * [Delclaring array](#delclaring-array)
          * [Printing an array's contents](#printing-an-arrays-contents)
@@ -59,7 +60,7 @@ Table of Contents
       * [Tricks](#tricks)
       * [<em><strong>Great reference</strong></em>](#great-reference)
 
-<!-- Added by: gil_diy, at: Thu 05 May 2022 12:40:54 IDT -->
+<!-- Added by: gil_diy, at: Sun 22 May 2022 19:44:04 IDT -->
 
 <!--te-->
 
@@ -192,6 +193,26 @@ or this too:
 <br/>
 <br/>
 <br/>
+
+## Use switch in bash flags (switches)
+
+We use flags instead of relying on positional parameters. 
+The getopts function reads the flags in the input, and OPTARG refers to the corresponding values.
+
+```bash
+while getopts u:a:f: flag
+do
+    case "${flag}" in
+        u) username=${OPTARG};;
+        a) age=${OPTARG};;
+        f) fullname=${OPTARG};;
+    esac
+done
+
+echo "Username: $username"
+echo "Age: $age"
+echo "Full Name: $fullname"
+```
 
 ## *__Array in bash__*
 
