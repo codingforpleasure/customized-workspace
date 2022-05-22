@@ -60,7 +60,7 @@ Table of Contents
       * [Tricks](#tricks)
       * [<em><strong>Great reference</strong></em>](#great-reference)
 
-<!-- Added by: gil_diy, at: Sun 22 May 2022 19:44:04 IDT -->
+<!-- Added by: gil_diy, at: Sun 22 May 2022 19:44:31 IDT -->
 
 <!--te-->
 
@@ -212,6 +212,10 @@ done
 echo "Username: $username"
 echo "Age: $age"
 echo "Full Name: $fullname"
+```
+
+```bash
+./my_script.sh -f 'John Smith' -a 25 -u john
 ```
 
 ## *__Array in bash__*
