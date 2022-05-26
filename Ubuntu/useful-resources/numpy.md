@@ -25,6 +25,7 @@
          * [Retrieving info about an array](#retrieving-info-about-an-array)
          * [Check the type in a numpy array](#check-the-type-in-a-numpy-array)
          * [Counts the number of non-zero values in an array given a constraint](#counts-the-number-of-non-zero-values-in-an-array-given-a-constraint)
+         * [Get the top k numbers in numpy array](#get-the-top-k-numbers-in-numpy-array)
          * [Transpose a matrix/array](#transpose-a-matrixarray)
          * [Aggregation functions](#aggregation-functions)
          * [Aggregation function advance](#aggregation-function-advance)
@@ -83,7 +84,7 @@
       * [Flip image with numpy](#flip-image-with-numpy)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Wed 23 Mar 2022 17:46:53 IST -->
+<!-- Added by: gil_diy, at: Thu 26 May 2022 11:32:37 IDT -->
 
 <!--te-->
 
@@ -438,7 +439,14 @@ np.issubdtype(ints.dtype, np.floating)
 ```python
 np.count_nonzero(my_mat!=False)
 ```
+### Get the top k numbers in numpy array
 
+```python
+x = np.array([3, 4, 2, 1, 10, 15, 30, 5, 44])
+print(x[np.argpartition(x, -3)[-3:]])
+
+# Output: [15 30 44]
+```
 
 ### Transpose a matrix/array
 
