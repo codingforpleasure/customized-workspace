@@ -84,7 +84,7 @@
       * [Flip image with numpy](#flip-image-with-numpy)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Thu 26 May 2022 11:32:54 IDT -->
+<!-- Added by: gil_diy, at: Thu 26 May 2022 11:33:03 IDT -->
 
 <!--te-->
 
@@ -442,8 +442,9 @@ np.count_nonzero(my_mat!=False)
 ### Get the top k numbers in numpy array
 
 ```python
+k = 3
 x = np.array([3, 4, 2, 1, 10, 15, 30, 5, 44])
-print(x[np.argpartition(x, -3)[-3:]])
+print(x[np.argpartition(x, -k)[-k:]])
 
 # Output: [15 30 44]
 ```
