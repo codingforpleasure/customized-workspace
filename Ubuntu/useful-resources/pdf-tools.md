@@ -1,8 +1,10 @@
 <!--ts-->
    * [Useful pdf tools for linux on the go](#useful-pdf-tools-for-linux-on-the-go)
+      * [Extracting group of pages from large pdf into pdf:](#extracting-group-of-pages-from-large-pdf-into-pdf)
       * [PDF concatenate files (Join PDF files)](#pdf-concatenate-files-join-pdf-files)
+      * [Extract specific pages from PDF as png](#extract-specific-pages-from-pdf-as-png)
 
-<!-- Added by: gil_diy, at: Tue 22 Feb 2022 17:35:27 IST -->
+<!-- Added by: gil_diy, at: Fri 27 May 2022 18:30:14 IDT -->
 
 <!--te-->
 
@@ -24,7 +26,7 @@ extract image from pdf | pdftohtml
 
 
 
-Example of extracting group of pages from large pdf:
+## Extracting group of pages from large pdf into pdf:
 
 ```bash
 pdftk <input_file> cat <start_page-end_page> output <output_file>
@@ -33,4 +35,10 @@ pdftk <input_file> cat <start_page-end_page> output <output_file>
 ## PDF concatenate files (Join PDF files)
 ```bash
 pdfunite ~/Desktop/file1.pdf ~/Desktop/syllabusfile2.pdf  output.pdf 
+```
+
+## Extract specific pages from PDF as png
+
+```bash
+pdfimages
 ```
