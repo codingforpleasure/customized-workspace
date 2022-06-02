@@ -11,8 +11,9 @@
       * [Pip cache folder](#pip-cache-folder)
       * [Pipenv cache folder](#pipenv-cache-folder)
       * [Libraries on local hard-drive:](#libraries-on-local-hard-drive)
+      * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Tue 02 Nov 2021 18:13:49 IST -->
+<!-- Added by: gil_diy, at: Thu 02 Jun 2022 18:44:06 IDT -->
 
 <!--te-->
 
@@ -151,7 +152,12 @@ In my workstation it's: `/home/gil_diy/.cache/pipenv`
 
 ## Libraries on local hard-drive:
 
-/home/gil_diy/.local/share/virtualenvs
+`/home/gil_diy/.local/share/virtualenvs`
+
+
+## Reference
+
+[Link](https://realpython.com/pipenv-guide/)
 
 
 
