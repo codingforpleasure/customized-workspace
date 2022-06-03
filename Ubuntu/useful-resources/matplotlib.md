@@ -50,7 +50,7 @@
       * [Writing mathematical expression](#writing-mathematical-expression)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Fri 03 Jun 2022 06:59:17 IDT -->
+<!-- Added by: gil_diy, at: Fri 03 Jun 2022 06:59:20 IDT -->
 
 <!--te-->
 
