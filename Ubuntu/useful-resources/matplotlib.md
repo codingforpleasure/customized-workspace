@@ -50,13 +50,16 @@
       * [Writing mathematical expression](#writing-mathematical-expression)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Fri 06 May 2022 09:32:20 IDT -->
+<!-- Added by: gil_diy, at: Fri 03 Jun 2022 06:59:17 IDT -->
 
 <!--te-->
 
 # matplotlib
 
 ## Colors Palette
+
+[Color names for matplotlib](https://matplotlib.org/2.0.2/mpl_examples/color/named_colors.png)
+
 
 Choose the color map available from:
 [See all colors](https://astromsshin.github.io/science/code/matplotlib_cm/index.html)
