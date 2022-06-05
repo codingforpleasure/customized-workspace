@@ -13,7 +13,7 @@
       * [Libraries on local hard-drive:](#libraries-on-local-hard-drive)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Thu 02 Jun 2022 18:44:11 IDT -->
+<!-- Added by: gil_diy, at: Sun 05 Jun 2022 16:23:08 IDT -->
 
 <!--te-->
 
@@ -30,6 +30,7 @@ Description | command
 -------------|-------------
 Install a package|  **pipenv install** &lt;package-name&gt;
 Install a package from a local file|  **pipenv install ./opencv_python-4.5.whl**
+Export requriments file | pipenv run pip freeze > requirements.txt
 Install packages in case you have only `requirements.txt` file available | **pipenv install -r path/to/requirements.txt**
 Uninstall a package|  **pipenv uninstall** &lt;package-name&gt;
 Generate a lockfile | **pipenv lock**
