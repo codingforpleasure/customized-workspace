@@ -3,6 +3,7 @@
       * [how to install?](#how-to-install)
       * [useful commands](#useful-commands)
       * [Create a virtual environment if one doesn’t already exist](#create-a-virtual-environment-if-one-doesnt-already-exist)
+      * [Install package](#install-package)
       * [Install specific package version](#install-specific-package-version)
    * [Virtualenv](#virtualenv)
       * [useful commands](#useful-commands-1)
@@ -15,7 +16,7 @@
       * [Libraries on local hard-drive:](#libraries-on-local-hard-drive)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Thu 09 Jun 2022 11:10:37 IDT -->
+<!-- Added by: gil_diy, at: Thu 09 Jun 2022 11:11:11 IDT -->
 
 <!--te-->
 
@@ -69,6 +70,12 @@ pip install --upgrade pipenv
 
 ```bash
 pipenv run pip freeze > requirements.txt
+```
+
+## Install package
+
+```bash
+pipenv install numpy
 ```
 
 ## Install specific package version
