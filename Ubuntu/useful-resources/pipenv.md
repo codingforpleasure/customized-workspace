@@ -5,6 +5,7 @@
       * [Create a virtual environment if one doesn’t already exist](#create-a-virtual-environment-if-one-doesnt-already-exist)
       * [Install package](#install-package)
       * [Install specific package version](#install-specific-package-version)
+      * [Install something directly from a version control system (VCS)](#install-something-directly-from-a-version-control-system-vcs)
    * [Virtualenv](#virtualenv)
       * [useful commands](#useful-commands-1)
       * [Pip commands](#pip-commands)
@@ -16,7 +17,7 @@
       * [Libraries on local hard-drive:](#libraries-on-local-hard-drive)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Thu 09 Jun 2022 11:11:11 IDT -->
+<!-- Added by: gil_diy, at: Thu 09 Jun 2022 11:12:20 IDT -->
 
 <!--te-->
 
@@ -82,6 +83,12 @@ pipenv install numpy
 
 ```bash
 pipenv install flask==0.12.1
+```
+
+## Install something directly from a version control system (VCS)
+
+```bash
+pipenv install -e git+https://github.com/requests/requests.git#egg=requests
 ```
 
 # Virtualenv
