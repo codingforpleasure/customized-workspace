@@ -2,6 +2,7 @@
    * [pipenv (Package Manager + Environment Manager + Python Version Manager) <g-emoji class="g-emoji" alias="+1" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f44d.png">👍</g-emoji>](#pipenv-package-manager--environment-manager--python-version-manager-thumbsup)
       * [how to install?](#how-to-install)
       * [useful commands](#useful-commands)
+      * [Create a virtual environment if one doesn’t already exist](#create-a-virtual-environment-if-one-doesnt-already-exist)
    * [Virtualenv](#virtualenv)
       * [useful commands](#useful-commands-1)
       * [Pip commands](#pip-commands)
@@ -13,7 +14,7 @@
       * [Libraries on local hard-drive:](#libraries-on-local-hard-drive)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Sun 05 Jun 2022 16:23:08 IDT -->
+<!-- Added by: gil_diy, at: Thu 09 Jun 2022 11:09:28 IDT -->
 
 <!--te-->
 
@@ -63,7 +64,11 @@ It is recommended to update pipenv for once in a while:
 ```bash
 pip install --upgrade pipenv
 ```
+## Create a virtual environment if one doesn’t already exist
 
+```bash
+pipenv run pip freeze > requirements.txt
+```
 # Virtualenv
 
 ```bash
