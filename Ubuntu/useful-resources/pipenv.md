@@ -3,6 +3,7 @@
       * [how to install?](#how-to-install)
       * [useful commands](#useful-commands)
       * [Create a virtual environment if one doesn’t already exist](#create-a-virtual-environment-if-one-doesnt-already-exist)
+      * [Install specific package version](#install-specific-package-version)
    * [Virtualenv](#virtualenv)
       * [useful commands](#useful-commands-1)
       * [Pip commands](#pip-commands)
@@ -14,7 +15,7 @@
       * [Libraries on local hard-drive:](#libraries-on-local-hard-drive)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Thu 09 Jun 2022 11:09:28 IDT -->
+<!-- Added by: gil_diy, at: Thu 09 Jun 2022 11:10:34 IDT -->
 
 <!--te-->
 
@@ -69,6 +70,13 @@ pip install --upgrade pipenv
 ```bash
 pipenv run pip freeze > requirements.txt
 ```
+
+## Install specific package version
+
+```bash
+pipenv install flask==0.12.1
+```
+
 # Virtualenv
 
 ```bash
