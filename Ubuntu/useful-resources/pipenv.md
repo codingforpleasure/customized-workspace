@@ -8,6 +8,7 @@
       * [Install something directly from a version control system (VCS)](#install-something-directly-from-a-version-control-system-vcs)
       * [Create/update your Pipfile.lock](#createupdate-your-pipfilelock)
       * [Completely wipe all the installed packages from your virtual environment](#completely-wipe-all-the-installed-packages-from-your-virtual-environment)
+      * [Where your virtual environment is](#where-your-virtual-environment-is)
    * [Virtualenv](#virtualenv)
       * [useful commands](#useful-commands-1)
       * [Pip commands](#pip-commands)
@@ -19,7 +20,7 @@
       * [Libraries on local hard-drive:](#libraries-on-local-hard-drive)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Thu 09 Jun 2022 11:21:17 IDT -->
+<!-- Added by: gil_diy, at: Thu 09 Jun 2022 11:21:50 IDT -->
 
 <!--te-->
 
@@ -103,6 +104,12 @@ pipenv lock
 
 ```bash
 pipenv uninstall --all
+```
+
+## Where your virtual environment is
+
+```bash
+pipenv --venv
 ```
 
 # Virtualenv
