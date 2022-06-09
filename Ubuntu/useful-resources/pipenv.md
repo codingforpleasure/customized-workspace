@@ -9,6 +9,7 @@
       * [Create/update your Pipfile.lock](#createupdate-your-pipfilelock)
       * [Completely wipe all the installed packages from your virtual environment](#completely-wipe-all-the-installed-packages-from-your-virtual-environment)
       * [Where your virtual environment is](#where-your-virtual-environment-is)
+      * [Find out where your project home is](#find-out-where-your-project-home-is)
    * [Virtualenv](#virtualenv)
       * [useful commands](#useful-commands-1)
       * [Pip commands](#pip-commands)
@@ -20,7 +21,7 @@
       * [Libraries on local hard-drive:](#libraries-on-local-hard-drive)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Thu 09 Jun 2022 11:21:50 IDT -->
+<!-- Added by: gil_diy, at: Thu 09 Jun 2022 11:22:47 IDT -->
 
 <!--te-->
 
@@ -110,6 +111,12 @@ pipenv uninstall --all
 
 ```bash
 pipenv --venv
+```
+
+## Find out where your project home is
+
+```bash
+pipenv --where
 ```
 
 # Virtualenv
