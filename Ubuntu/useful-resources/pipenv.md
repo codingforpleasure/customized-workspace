@@ -6,6 +6,7 @@
       * [Install package](#install-package)
       * [Install specific package version](#install-specific-package-version)
       * [Install something directly from a version control system (VCS)](#install-something-directly-from-a-version-control-system-vcs)
+      * [This will create/update your Pipfile.lock](#this-will-createupdate-your-pipfilelock)
    * [Virtualenv](#virtualenv)
       * [useful commands](#useful-commands-1)
       * [Pip commands](#pip-commands)
@@ -17,7 +18,7 @@
       * [Libraries on local hard-drive:](#libraries-on-local-hard-drive)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Thu 09 Jun 2022 11:12:20 IDT -->
+<!-- Added by: gil_diy, at: Thu 09 Jun 2022 11:13:30 IDT -->
 
 <!--te-->
 
@@ -90,6 +91,13 @@ pipenv install flask==0.12.1
 ```bash
 pipenv install -e git+https://github.com/requests/requests.git#egg=requests
 ```
+
+## This will create/update your Pipfile.lock
+
+```bash
+pipenv lock
+```
+
 
 # Virtualenv
 
