@@ -14,7 +14,7 @@
       * [Generator](#generator)
    * [BCE (Binary Cross Entropy)](#bce-binary-cross-entropy)
 
-<!-- Added by: gil_diy, at: Sat 02 Jul 2022 19:34:28 IDT -->
+<!-- Added by: gil_diy, at: Sat 02 Jul 2022 19:40:10 IDT -->
 
 <!--te-->
 # GAN (Generative Adversial Network)
@@ -102,11 +102,6 @@ given features X
 
 * Appraoches inifinity when the label and the prediction are different.
 
-
-<p align="center"> <!-- style="width:400px;" -->
-  <img src="images/gan_.png" title="tool tip here">
-</p>
-
 * The discriminator looks at real and fake images over time, makes guesses, and gets feedback on whether its guess was right or wrong.
 
 * Over time, it learns to discern real from fake better, but note that since the generator is also learning, the fake images get more realistic and harder to discern. This cat and mouse game enables both models to learn in tandem. 
@@ -123,5 +118,5 @@ How does the **generator** learn over time?
 
 
 <p align="center">
-  <img width="400" src="images/gan/A-Standard-GAN-and-b-conditional-GAN-architecturpn.png" title="Look into the image">
+  <img width="600" src="images/gan/A-Standard-GAN-and-b-conditional-GAN-architecturpn.png" title="Look into the image">
 </p>
