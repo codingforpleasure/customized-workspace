@@ -8,13 +8,13 @@
          * [Generate images (StyleGan2)](#generate-images-stylegan2)
          * [Image translation (CycleGan)](#image-translation-cyclegan)
          * [A rough drawing of a landscape and make it photorealistic (GauGAN).](#a-rough-drawing-of-a-landscape-and-make-it-photorealistic-gaugan)
-         * [Generate 3D objects like chairs and tables (3d-GAN)](#generate-3d-objects-like-chairs-and-tables-3d-gan)
-         * [The Mona Lisa, and animate it using the motion of any real person's face.](#the-mona-lisa-and-animate-it-using-the-motion-of-any-real-persons-face)
+         * [Generate 3D objects like chairs and tables (3d-GAN) - Genarative Design](#generate-3d-objects-like-chairs-and-tables-3d-gan---genarative-design)
+         * [The Mona Lisa, and animate it using the motion of any real person's face. (Few-shot adversarial learning of realistic neural talking head models)](#the-mona-lisa-and-animate-it-using-the-motion-of-any-real-persons-face-few-shot-adversarial-learning-of-realistic-neural-talking-head-models)
       * [Descriminator](#descriminator)
       * [Generator](#generator)
    * [BCE (Binary Cross Entropy)](#bce-binary-cross-entropy)
 
-<!-- Added by: gil_diy, at: Sat 02 Jul 2022 16:47:18 IDT -->
+<!-- Added by: gil_diy, at: Sat 02 Jul 2022 18:32:54 IDT -->
 
 <!--te-->
 # GAN (Generative Adversial Network)
@@ -71,10 +71,13 @@ that style over.
 
 ### A rough drawing of a landscape and make it photorealistic (GauGAN).
 
-### Generate 3D objects like chairs and tables (3d-GAN)
+### Generate 3D objects like chairs and tables (3d-GAN) - Genarative Design
 
-### The Mona Lisa, and animate it using the motion of any real person's face.
+### The Mona Lisa, and animate it using the motion of any real person's face. (Few-shot adversarial learning of realistic neural talking head models)
 
+
+Example: 
+[https://www.thispersondoesnotexist.com/](https://www.thispersondoesnotexist.com/)
 
 ## Descriminator
 
