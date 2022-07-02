@@ -3,9 +3,7 @@
       * [Background](#background)
       * [Discriminative model](#discriminative-model)
       * [Generative model](#generative-model)
-         * [Generative model](#generative-model-1)
-            * [Varitaional Autoencoders](#varitaional-autoencoders)
-            * [GAN](#gan)
+         * [GAN](#gan)
       * [Use cases of GAN](#use-cases-of-gan)
          * [Generate images (StyleGan2)](#generate-images-stylegan2)
          * [Image translation (CycleGan)](#image-translation-cyclegan)
@@ -16,10 +14,16 @@
       * [Generator](#generator)
    * [BCE (Binary Cross Entropy)](#bce-binary-cross-entropy)
 
-<!-- Added by: gil_diy, at: Thu 10 Feb 2022 15:44:16 IST -->
+<!-- Added by: gil_diy, at: Sat 02 Jul 2022 16:47:18 IDT -->
 
 <!--te-->
 # GAN (Generative Adversial Network)
+
+* GAN is unsupervised technique
+
+* A different kind of Generative model is Variational Autoencoder (VAE)
+A good distribution over the latent space is important for VAEs. 
+
 
 ## Background
 There are two models behind a GAN, the generator and the discriminator.
@@ -38,17 +42,11 @@ In other words, they try to model the probability of class Y given a set of feat
 but it doesn't purr, so it's probably a dog.
 
 
-
-
 ## Generative model
 Generative model learn to produce realistic examples
 
-### Generative model
 
-#### Varitaional Autoencoders
-A good distribution over the latent space is important for VAEs. 
-
-#### GAN
+### GAN
 The two models compete with each other and reach a point where realistic examples are produced by the generator. 
 
 * The generator's goal is to fool the descriminator
