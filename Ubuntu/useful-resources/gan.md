@@ -10,11 +10,12 @@
          * [A rough drawing of a landscape and make it photorealistic (GauGAN).](#a-rough-drawing-of-a-landscape-and-make-it-photorealistic-gaugan)
          * [Generate 3D objects like chairs and tables (3d-GAN) - Genarative Design](#generate-3d-objects-like-chairs-and-tables-3d-gan---genarative-design)
          * [The Mona Lisa, and animate it using the motion of any real person's face. (Few-shot adversarial learning of realistic neural talking head models)](#the-mona-lisa-and-animate-it-using-the-motion-of-any-real-persons-face-few-shot-adversarial-learning-of-realistic-neural-talking-head-models)
+         * [GANs to Enhance Old Photographs Deoldify <a href="https://youtu.be/0OTd5GlHRx4" rel="nofollow">Link</a>](#gans-to-enhance-old-photographs-deoldify-link)
       * [Descriminator](#descriminator)
       * [Generator](#generator)
    * [BCE (Binary Cross Entropy)](#bce-binary-cross-entropy)
 
-<!-- Added by: gil_diy, at: Sat 02 Jul 2022 19:40:13 IDT -->
+<!-- Added by: gil_diy, at: Sun 10 Jul 2022 08:19:54 IDT -->
 
 <!--te-->
 # GAN (Generative Adversial Network)
@@ -75,7 +76,7 @@ that style over.
 
 ### The Mona Lisa, and animate it using the motion of any real person's face. (Few-shot adversarial learning of realistic neural talking head models)
 
-
+### GANs to Enhance Old Photographs Deoldify [Link](https://youtu.be/0OTd5GlHRx4)
 Example: 
 [https://www.thispersondoesnotexist.com/](https://www.thispersondoesnotexist.com/)
 
