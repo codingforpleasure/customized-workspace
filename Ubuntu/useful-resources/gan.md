@@ -15,7 +15,7 @@
       * [Generator](#generator)
    * [BCE (Binary Cross Entropy)](#bce-binary-cross-entropy)
 
-<!-- Added by: gil_diy, at: Sun 10 Jul 2022 08:19:57 IDT -->
+<!-- Added by: gil_diy, at: Sun 10 Jul 2022 08:20:00 IDT -->
 
 <!--te-->
 # GAN (Generative Adversial Network)
@@ -77,6 +77,7 @@ that style over.
 ### The Mona Lisa, and animate it using the motion of any real person's face. (Few-shot adversarial learning of realistic neural talking head models)
 
 ### GANs to Enhance Old Photographs Deoldify [Link](https://youtu.be/0OTd5GlHRx4)
+
 Example: 
 [https://www.thispersondoesnotexist.com/](https://www.thispersondoesnotexist.com/)
 
