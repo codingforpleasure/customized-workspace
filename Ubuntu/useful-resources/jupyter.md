@@ -16,7 +16,7 @@
       * [Jupyter Lab](#jupyter-lab)
       * [Collection of Tips](#collection-of-tips)
 
-<!-- Added by: gil_diy, at: Sat 12 Mar 2022 18:24:19 IST -->
+<!-- Added by: gil_diy, at: Fri 29 Jul 2022 12:19:24 IDT -->
 
 <!--te-->
 
@@ -86,7 +86,9 @@ For adding snippets and boilerpoints:
 
 [Link](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/snippets_menu/readme.html)
 
-
+```python
+jupyter labextension install my-extension
+```
 
 
 ## Clean all output cells in jupter notebook:
