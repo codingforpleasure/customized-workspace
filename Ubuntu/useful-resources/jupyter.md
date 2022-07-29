@@ -16,7 +16,7 @@
       * [Jupyter Lab](#jupyter-lab)
       * [Collection of Tips](#collection-of-tips)
 
-<!-- Added by: gil_diy, at: Fri 29 Jul 2022 12:19:24 IDT -->
+<!-- Added by: gil_diy, at: Fri 29 Jul 2022 12:19:28 IDT -->
 
 <!--te-->
 
@@ -87,7 +87,7 @@ For adding snippets and boilerpoints:
 [Link](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/snippets_menu/readme.html)
 
 ```python
-jupyter labextension install my-extension
+jupyter labextension install <my-extension>
 ```
 
 
