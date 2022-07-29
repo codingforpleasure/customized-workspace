@@ -16,7 +16,7 @@
       * [Jupyter Lab](#jupyter-lab)
       * [Collection of Tips](#collection-of-tips)
 
-<!-- Added by: gil_diy, at: Fri 29 Jul 2022 12:19:33 IDT -->
+<!-- Added by: gil_diy, at: Fri 29 Jul 2022 12:19:35 IDT -->
 
 <!--te-->
 
