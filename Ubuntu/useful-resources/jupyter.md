@@ -8,6 +8,7 @@
       * [Setting up jupyter](#setting-up-jupyter)
       * [Jupyter notebook extensions](#jupyter-notebook-extensions)
       * [Install jupyterlab extension:](#install-jupyterlab-extension)
+      * [Install specific version of jupyterlab extension:](#install-specific-version-of-jupyterlab-extension)
       * [Clean all output cells in jupter notebook:](#clean-all-output-cells-in-jupter-notebook)
       * [Convert jupyter notebook to python file](#convert-jupyter-notebook-to-python-file)
       * [Debug jupyter notebook](#debug-jupyter-notebook)
@@ -17,7 +18,7 @@
       * [Jupyter Lab](#jupyter-lab)
       * [Collection of Tips](#collection-of-tips)
 
-<!-- Added by: gil_diy, at: Fri 29 Jul 2022 12:19:52 IDT -->
+<!-- Added by: gil_diy, at: Fri 29 Jul 2022 12:42:39 IDT -->
 
 <!--te-->
 
@@ -88,8 +89,14 @@ For adding snippets and boilerpoints:
 [Link](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/snippets_menu/readme.html)
 
 ## Install jupyterlab extension:
+
 ```python
 jupyter labextension install <my-extension>
+```
+
+## Install specific version of jupyterlab extension:
+```python
+jupyter labextension install my-extension@1.2.3
 ```
 
 
