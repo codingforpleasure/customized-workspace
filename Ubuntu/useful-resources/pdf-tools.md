@@ -6,7 +6,7 @@
       * [For rotating clockwise:](#for-rotating-clockwise)
       * [For rotating anti-clockwise:](#for-rotating-anti-clockwise)
 
-<!-- Added by: gil_diy, at: Fri 05 Aug 2022 11:56:39 IDT -->
+<!-- Added by: gil_diy, at: Fri 05 Aug 2022 11:56:41 IDT -->
 
 <!--te-->
 
@@ -56,4 +56,3 @@ pdftk input.pdf cat 1-endeast output output.pdf
 ```bash
 pdftk input.pdf cat 1-endwest output output.pdf
 ```
-
