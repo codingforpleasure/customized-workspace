@@ -6,7 +6,7 @@
       * [For rotating clockwise:](#for-rotating-clockwise)
       * [For rotating anti-clockwise:](#for-rotating-anti-clockwise)
 
-<!-- Added by: gil_diy, at: Fri 05 Aug 2022 11:56:36 IDT -->
+<!-- Added by: gil_diy, at: Fri 05 Aug 2022 11:56:39 IDT -->
 
 <!--te-->
 
