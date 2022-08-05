@@ -3,8 +3,10 @@
       * [Extracting group of pages from large pdf into pdf:](#extracting-group-of-pages-from-large-pdf-into-pdf)
       * [PDF concatenate files (Join PDF files)](#pdf-concatenate-files-join-pdf-files)
       * [Extract specific pages from PDF as png](#extract-specific-pages-from-pdf-as-png)
+      * [For rotating clockwise:](#for-rotating-clockwise)
+      * [For rotating anti-clockwise:](#for-rotating-anti-clockwise)
 
-<!-- Added by: gil_diy, at: Fri 27 May 2022 18:30:16 IDT -->
+<!-- Added by: gil_diy, at: Fri 05 Aug 2022 11:56:36 IDT -->
 
 <!--te-->
 
@@ -42,3 +44,16 @@ pdfunite ~/Desktop/file1.pdf ~/Desktop/syllabusfile2.pdf  output.pdf
 ```bash
 pdfimages
 ```
+
+## For rotating clockwise:
+
+```bash
+pdftk input.pdf cat 1-endeast output output.pdf
+````
+
+## For rotating anti-clockwise:
+
+```bash
+pdftk input.pdf cat 1-endwest output output.pdf
+```
+
