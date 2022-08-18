@@ -86,7 +86,7 @@
       * [Flip image with numpy](#flip-image-with-numpy)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Thu 18 Aug 2022 17:41:52 IDT -->
+<!-- Added by: gil_diy, at: Thu 18 Aug 2022 17:41:59 IDT -->
 
 <!--te-->
 
@@ -162,7 +162,7 @@ np.arange()
 #### Creating evenly spaced numbers over a specified interval
 
 ```python
-np.arange()
+np.linspace()
 ```
 
 
