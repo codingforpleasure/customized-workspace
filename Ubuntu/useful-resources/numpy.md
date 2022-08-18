@@ -86,7 +86,7 @@
       * [Flip image with numpy](#flip-image-with-numpy)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Thu 18 Aug 2022 17:42:02 IDT -->
+<!-- Added by: gil_diy, at: Thu 18 Aug 2022 17:43:32 IDT -->
 
 <!--te-->
 
@@ -156,7 +156,7 @@ np.set_printoptions(suppress=True)
 #### Creating seqence of numbers
 
 ```python
-np.arange()
+np.arange(start=0, stop=3, step=0.5)
 ```
 
 #### Creating evenly spaced numbers over a specified interval
