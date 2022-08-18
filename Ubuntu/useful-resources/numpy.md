@@ -5,8 +5,10 @@
             * [Key attributes](#key-attributes)
          * [Printing nicely](#printing-nicely)
          * [Creating](#creating)
+            * [Creating seqence of numbers](#creating-seqence-of-numbers)
+            * [Creating evenly spaced numbers over a specified interval](#creating-evenly-spaced-numbers-over-a-specified-interval)
             * [Creating a 3d array](#creating-a-3d-array)
-            * [Creating evenly spaced numbers over a specified interval.](#creating-evenly-spaced-numbers-over-a-specified-interval)
+            * [Creating evenly spaced numbers over a specified interval.](#creating-evenly-spaced-numbers-over-a-specified-interval-1)
          * [Converting from numpy array to simple list](#converting-from-numpy-array-to-simple-list)
             * [Import data from csv](#import-data-from-csv)
          * [move axis](#move-axis)
@@ -84,7 +86,7 @@
       * [Flip image with numpy](#flip-image-with-numpy)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Thu 26 May 2022 11:33:18 IDT -->
+<!-- Added by: gil_diy, at: Thu 18 Aug 2022 17:41:48 IDT -->
 
 <!--te-->
 
@@ -151,6 +153,19 @@ np.set_printoptions(suppress=True)
 
 ### Creating
 
+#### Creating seqence of numbers
+
+```python
+np.arange()
+```
+
+#### Creating evenly spaced numbers over a specified interval
+
+```python
+np.arange()
+```
+
+
 Description | command
 ------------------------------------|-----
 Create Ndarray | np.array([1,3,5])
@@ -192,6 +207,8 @@ assert(a.shape == (5,1))
 data.reshape((-1,data.shape[0])
 
 ```
+###
+
 #### Creating a 3d array
 
 The most efficient way is to initialize the 3d array first and then sequentially write your data into it. 
