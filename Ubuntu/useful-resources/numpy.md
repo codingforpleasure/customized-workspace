@@ -86,7 +86,7 @@
       * [Flip image with numpy](#flip-image-with-numpy)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Thu 18 Aug 2022 17:44:58 IDT -->
+<!-- Added by: gil_diy, at: Thu 18 Aug 2022 17:45:05 IDT -->
 
 <!--te-->
 
@@ -162,7 +162,7 @@ print(my_array)
 
 output:
 ```
-[0. , 0.5 , 1. , 1.5 , 2. , 2.5]
+[0.0 , 0.5 , 1.0 , 1.5 , 2.0 , 2.5]
 ```
 
 #### Creating evenly spaced numbers over a specified interval
