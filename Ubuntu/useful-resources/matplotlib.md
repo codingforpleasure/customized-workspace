@@ -61,6 +61,15 @@
 [Color names for matplotlib](https://matplotlib.org/2.0.2/mpl_examples/color/named_colors.png)
 
 
+### Color maps in matplotlib 
+
+```python
+plt.cm.Dark2(range(6))
+```
+
+[List of Color maps](https://matplotlib.org/stable/gallery/color/colormap_reference.html)
+
+
 Choose the color map available from:
 [See all colors](https://astromsshin.github.io/science/code/matplotlib_cm/index.html)
 
@@ -785,6 +794,9 @@ Animation output:
 [Link1](https://towardsdatascience.com/basics-of-gifs-with-pythons-matplotlib-54dd544b6f30)
 
 [Link2](https://nathankjer.com/animated-3d-plots/)
+
+[Link3](https://medium.com/dunder-data/create-a-bar-chart-race-animation-in-python-with-matplotlib-477ed1590096)
+
 
 ## Visualising correlation using Seaborn library
 
