@@ -113,7 +113,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Thu 25 Aug 2022 11:18:20 IDT -->
+<!-- Added by: gil_diy, at: Thu 25 Aug 2022 11:18:41 IDT -->
 
 <!--te-->
 
@@ -2009,7 +2009,13 @@ Explanation | Fucntion
 
 ## Pytorch hooks
 
+There are two type of hooks:
+
+* Hooks for tensors
+* Hooks for 
 [Link](https://youtu.be/syLFCVYua6Q)
+
+
 
 ## Customize optimizer in Pytorch
 
