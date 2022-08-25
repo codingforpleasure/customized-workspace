@@ -113,7 +113,7 @@
       * [Pytorch Built-in Datasets](#pytorch-built-in-datasets)
       * [References](#references)
 
-<!-- Added by: gil_diy, at: Thu 25 Aug 2022 11:18:44 IDT -->
+<!-- Added by: gil_diy, at: Thu 25 Aug 2022 11:18:49 IDT -->
 
 <!--te-->
 
@@ -2012,7 +2012,8 @@ Explanation | Fucntion
 There are two type of hooks:
 
 * Hooks for tensors
-* Hooks for 
+* Hooks for modules
+
 [Link](https://youtu.be/syLFCVYua6Q)
 
 
