@@ -39,7 +39,7 @@
       * [Jeff Heaton explaines](#jeff-heaton-explaines)
       * [Useful web pages](#useful-web-pages)
 
-<!-- Added by: gil_diy, at: Fri 26 Aug 2022 11:51:35 IDT -->
+<!-- Added by: gil_diy, at: Fri 26 Aug 2022 11:51:46 IDT -->
 
 <!--te-->
 
@@ -297,6 +297,7 @@ exec(compile(open(filename).read(), filename, 'exec'))
     Project: The name of the current project – Project Structure
     Click Add Content Root and add the directory with auto-complete files to list.
 
+    After performing these steps, Blender API autocomplete will work in the PyCharm project.
 
 [Link](https://code.blender.org/2015/10/debugging-python-code-with-pycharm/)
 
