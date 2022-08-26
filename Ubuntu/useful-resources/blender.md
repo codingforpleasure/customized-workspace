@@ -39,7 +39,7 @@
       * [Jeff Heaton explaines](#jeff-heaton-explaines)
       * [Useful web pages](#useful-web-pages)
 
-<!-- Added by: gil_diy, at: Fri 11 Feb 2022 11:52:31 IST -->
+<!-- Added by: gil_diy, at: Fri 26 Aug 2022 11:50:50 IDT -->
 
 <!--te-->
 
@@ -287,6 +287,9 @@ exec(compile(open(filename).read(), filename, 'exec'))
 [Link](https://blender.stackexchange.com/a/34592/140491)
 
 ### Debugging with Pycharm
+
+
+1) Download already build auto-complete files from GitHub: https://github.com/Korchy/blender_autocomplete
 
 [Link](https://code.blender.org/2015/10/debugging-python-code-with-pycharm/)
 
