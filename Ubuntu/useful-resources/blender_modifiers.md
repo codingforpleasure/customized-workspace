@@ -9,7 +9,7 @@
       * [Remesh Modifier](#remesh-modifier)
       * [Wireframe Modifier](#wireframe-modifier)
 
-<!-- Added by: gil_diy, at: Sat 27 Aug 2022 13:38:22 IDT -->
+<!-- Added by: gil_diy, at: Sat 27 Aug 2022 13:49:59 IDT -->
 
 <!--te-->
 
@@ -31,7 +31,9 @@ Bevel Modifier beveles the edges of the mesh it's apply to.
 
 ##  Boolean Modifier
 
-Intersection, Union, Difference, 
+The boolean modifier combines two separate objects using one of three available boolean operations union intersection and difference
+
+[Link](https://www.youtube.com/watch?v=idcFMhoSdIc&t=72s)
 
 ##  Build Modifier
 
