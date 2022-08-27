@@ -8,7 +8,7 @@
       * [Subdivision Modifier](#subdivision-modifier)
       * [Remesh Modifier](#remesh-modifier)
 
-<!-- Added by: gil_diy, at: Sat 27 Aug 2022 13:32:24 IDT -->
+<!-- Added by: gil_diy, at: Sat 27 Aug 2022 13:33:49 IDT -->
 
 <!--te-->
 
@@ -56,3 +56,7 @@ new subdivision levels in sculpt mode
 [Link](https://www.youtube.com/watch?v=idcFMhoSdIc&t=141s)
 
 ## Remesh Modifier
+
+
+The remesh modifier is a tool for generating new mesh topology that contains only quads you 
+can choose the face size as well as four different remesh modes
