@@ -6,8 +6,9 @@
       * [Build Modifier](#build-modifier)
       * [Mirror Modifier](#mirror-modifier)
       * [Subdivision Modifier](#subdivision-modifier)
+      * [Remesh Modifier](#remesh-modifier)
 
-<!-- Added by: gil_diy, at: Sat 27 Aug 2022 13:31:42 IDT -->
+<!-- Added by: gil_diy, at: Sat 27 Aug 2022 13:32:24 IDT -->
 
 <!--te-->
 
@@ -53,3 +54,5 @@ new subdivision levels in sculpt mode
 
 
 [Link](https://www.youtube.com/watch?v=idcFMhoSdIc&t=141s)
+
+## Remesh Modifier
