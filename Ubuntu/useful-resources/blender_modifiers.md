@@ -2,9 +2,10 @@
    * [Modifiers](#modifiers)
       * [Array Modifier](#array-modifier)
       * [Bevel Modifier](#bevel-modifier)
-      * [Modifier](#modifier)
+      * [Boolean Modifier](#boolean-modifier)
+      * [Build Modifier](#build-modifier)
 
-<!-- Added by: gil_diy, at: Sat 27 Aug 2022 13:22:40 IDT -->
+<!-- Added by: gil_diy, at: Sat 27 Aug 2022 13:26:23 IDT -->
 
 <!--te-->
 
@@ -24,4 +25,12 @@ The Array Modifier creates copies of the base object, with each copy being offse
 Bevel Modifier beveles the edges of the mesh it's apply to.
 
 
-##  Modifier
+##  Boolean Modifier
+
+Intersection, Union, Difference, 
+
+##  Build Modifier
+
+Build Modifier causes the faces of the mesh object to appear or disappear one after the other over time the.
+
+[Link](https://www.youtube.com/watch?v=idcFMhoSdIc&t=83s)
