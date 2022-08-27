@@ -4,8 +4,9 @@
       * [Bevel Modifier](#bevel-modifier)
       * [Boolean Modifier](#boolean-modifier)
       * [Build Modifier](#build-modifier)
+      * [Mirror Modifier](#mirror-modifier)
 
-<!-- Added by: gil_diy, at: Sat 27 Aug 2022 13:26:23 IDT -->
+<!-- Added by: gil_diy, at: Sat 27 Aug 2022 13:28:32 IDT -->
 
 <!--te-->
 
@@ -34,3 +35,9 @@ Intersection, Union, Difference,
 Build Modifier causes the faces of the mesh object to appear or disappear one after the other over time the.
 
 [Link](https://www.youtube.com/watch?v=idcFMhoSdIc&t=83s)
+
+## Mirror Modifier
+
+the mirror modifier mirrors the mesh along its local x y or z axis across the object origin the
+
+[Link](https://www.youtube.com/watch?v=idcFMhoSdIc&t=133s)
