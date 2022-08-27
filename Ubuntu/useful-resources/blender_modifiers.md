@@ -7,7 +7,7 @@
       * [Mirror Modifier](#mirror-modifier)
       * [Subdivision Modifier](#subdivision-modifier)
 
-<!-- Added by: gil_diy, at: Sat 27 Aug 2022 13:29:26 IDT -->
+<!-- Added by: gil_diy, at: Sat 27 Aug 2022 13:31:39 IDT -->
 
 <!--te-->
 
@@ -44,5 +44,12 @@ the mirror modifier mirrors the mesh along its local x y or z axis across the ob
 [Link](https://www.youtube.com/watch?v=idcFMhoSdIc&t=133s)
 
 ## Subdivision Modifier
+
+subdivision surface modifier splits the faces of the mesh into smaller faces enabling you to create
+complex smooth surfaces while modeling simple low vertex meshes higher level of subdivision here
+means smoother and more subdivided mesh the multi-resolution modifier gives you the ability to
+subdivide a mesh similarly to the subdivision surface modifier but also allows you to edit the
+new subdivision levels in sculpt mode 
+
 
 [Link](https://www.youtube.com/watch?v=idcFMhoSdIc&t=141s)
