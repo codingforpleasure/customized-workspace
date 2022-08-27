@@ -5,8 +5,9 @@
       * [Boolean Modifier](#boolean-modifier)
       * [Build Modifier](#build-modifier)
       * [Mirror Modifier](#mirror-modifier)
+      * [Subdivision Modifier](#subdivision-modifier)
 
-<!-- Added by: gil_diy, at: Sat 27 Aug 2022 13:28:34 IDT -->
+<!-- Added by: gil_diy, at: Sat 27 Aug 2022 13:29:23 IDT -->
 
 <!--te-->
 
@@ -41,3 +42,7 @@ Build Modifier causes the faces of the mesh object to appear or disappear one af
 the mirror modifier mirrors the mesh along its local x y or z axis across the object origin the
 
 [Link](https://www.youtube.com/watch?v=idcFMhoSdIc&t=133s)
+
+## Subdivision Modifier
+
+[Link](https://www.youtube.com/watch?v=idcFMhoSdIc&t=141s)
