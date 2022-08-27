@@ -7,8 +7,9 @@
       * [Mirror Modifier](#mirror-modifier)
       * [Subdivision Modifier](#subdivision-modifier)
       * [Remesh Modifier](#remesh-modifier)
+      * [Wireframe Modifier](#wireframe-modifier)
 
-<!-- Added by: gil_diy, at: Sat 27 Aug 2022 13:34:08 IDT -->
+<!-- Added by: gil_diy, at: Sat 27 Aug 2022 13:37:25 IDT -->
 
 <!--te-->
 
@@ -61,3 +62,10 @@ The remesh modifier is a tool for generating new mesh topology that contains onl
 can choose the face size as well as four different remesh modes
 
 [Link](https://www.youtube.com/watch?v=idcFMhoSdIc&t=167s)
+
+
+## Wireframe Modifier
+
+
+
+[Link](https://www.youtube.com/watch?v=idcFMhoSdIc&t=245s)
