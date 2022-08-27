@@ -9,7 +9,7 @@
       * [Remesh Modifier](#remesh-modifier)
       * [Wireframe Modifier](#wireframe-modifier)
 
-<!-- Added by: gil_diy, at: Sat 27 Aug 2022 13:37:25 IDT -->
+<!-- Added by: gil_diy, at: Sat 27 Aug 2022 13:38:22 IDT -->
 
 <!--te-->
 
@@ -66,6 +66,8 @@ can choose the face size as well as four different remesh modes
 
 ## Wireframe Modifier
 
+wireframe modifier transforms the mesh into a wireframe by turning edges into four sided
+tubes now let's continue with the four modifiers.
 
 
 [Link](https://www.youtube.com/watch?v=idcFMhoSdIc&t=245s)
