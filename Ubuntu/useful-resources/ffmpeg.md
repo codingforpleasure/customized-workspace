@@ -49,7 +49,7 @@
       * [Editing Gif](#editing-gif)
       * [Documentation](#documentation)
 
-<!-- Added by: gil_diy, at: Tue 30 Aug 2022 22:27:40 IDT -->
+<!-- Added by: gil_diy, at: Tue 30 Aug 2022 22:27:43 IDT -->
 
 <!--te-->
 
