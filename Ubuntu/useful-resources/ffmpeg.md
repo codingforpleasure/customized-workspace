@@ -49,7 +49,7 @@
       * [Editing Gif](#editing-gif)
       * [Documentation](#documentation)
 
-<!-- Added by: gil_diy, at: Sun 28 Nov 2021 13:00:58 IST -->
+<!-- Added by: gil_diy, at: Tue 30 Aug 2022 22:27:40 IDT -->
 
 <!--te-->
 
@@ -464,3 +464,4 @@ https://github.com/lettier/gifcurry
 
 [Impressive examples Python with ffmpeg](https://github.com/kkroening/ffmpeg-python/tree/master/examples)
 
+[Impressive repo for video slideshows from images and videos](https://github.com/tanersener/ffmpeg-video-slideshow-scripts)
