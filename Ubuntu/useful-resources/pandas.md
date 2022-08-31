@@ -13,6 +13,7 @@
             * [Rename indexes (rename row names)](#rename-indexes-rename-row-names)
             * [Rename indexes to default range index](#rename-indexes-to-default-range-index)
             * [Set row names given a list](#set-row-names-given-a-list)
+            * [Get dataframe except specific rows](#get-dataframe-except-specific-rows)
             * [Get dataframe except specific column](#get-dataframe-except-specific-column)
             * [Get row names](#get-row-names)
             * [Get column names](#get-column-names)
@@ -90,7 +91,7 @@
       * [Dump dataframe into the clipboard](#dump-dataframe-into-the-clipboard)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Wed 31 Aug 2022 23:18:43 IDT -->
+<!-- Added by: gil_diy, at: Wed 31 Aug 2022 23:18:47 IDT -->
 
 <!--te-->
 
@@ -225,6 +226,7 @@ my_df.reset_index(inplace=True)
 
 ```python
 my_df.index = ["col1", "col2", "col3", "col4"]
+```
 
 #### Get dataframe except specific rows
 
