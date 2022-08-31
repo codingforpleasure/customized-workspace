@@ -90,7 +90,7 @@
       * [Dump dataframe into the clipboard](#dump-dataframe-into-the-clipboard)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Wed 31 Aug 2022 23:18:34 IDT -->
+<!-- Added by: gil_diy, at: Wed 31 Aug 2022 23:18:41 IDT -->
 
 <!--te-->
 
@@ -222,7 +222,6 @@ my_df.reset_index(inplace=True)
 
 #### Set row names given a list
 
-Set the row names the value of a specific column:
 
 ```python
 my_df.index = ["col1", "col2", "col3", "col4"]
