@@ -12,7 +12,7 @@
             * [Iterate over rows](#iterate-over-rows)
             * [Rename indexes (rename row names)](#rename-indexes-rename-row-names)
             * [Rename indexes to default range index](#rename-indexes-to-default-range-index)
-            * [Get dataframe except specific rows](#get-dataframe-except-specific-rows)
+            * [Set row names given a list](#set-row-names-given-a-list)
             * [Get dataframe except specific column](#get-dataframe-except-specific-column)
             * [Get row names](#get-row-names)
             * [Get column names](#get-column-names)
@@ -90,7 +90,7 @@
       * [Dump dataframe into the clipboard](#dump-dataframe-into-the-clipboard)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Wed 31 Aug 2022 22:05:43 IDT -->
+<!-- Added by: gil_diy, at: Wed 31 Aug 2022 23:17:56 IDT -->
 
 <!--te-->
 
@@ -220,6 +220,12 @@ my_df.set_index("third-column", inplace=True)
 my_df.reset_index(inplace=True)
 ```
 
+#### Set row names given a list
+
+Set the row names the value of a specific column:
+
+```python
+my_df.index = ["col1", "col2", "col3", "col4"]
 
 #### Get dataframe except specific rows
 
