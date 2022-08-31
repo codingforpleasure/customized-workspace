@@ -4,9 +4,10 @@
       * [vfnet](#vfnet)
       * [Retinanet](#retinanet)
       * [DETR (DEtection TRansformer)](#detr-detection-transformer)
-      * [Yolo](#yolo)
+      * [EfficientDet (EfficientDet: Scalable and Efficient Object Detection)](#efficientdet-efficientdet-scalable-and-efficient-object-detection)
+      * [Yolov5 - small](#yolov5---small)
 
-<!-- Added by: gil_diy, at: Thu 01 Sep 2022 01:21:37 IDT -->
+<!-- Added by: gil_diy, at: Thu 01 Sep 2022 01:27:12 IDT -->
 
 <!--te-->
 
@@ -34,9 +35,12 @@ RetinaNet is a one-stage object detection model that utilizes a focal loss funct
 
 [Link](https://arxiv.org/pdf/2005.12872.pdf)
 
-## Yolo
-yolox
-yolof
-DETR - Detection with transformers (https://arxiv.org/pdf/2005.12872.pdf)
-Side-Aware Boundary Localization 
-EfficientDet is a type of object detection model (https://youtu.be/OsA3zH5NKYc)
+
+## EfficientDet (EfficientDet: Scalable and Efficient Object Detection)
+
+https://arxiv.org/pdf/1911.09070.pdf
+
+[Link](https://youtu.be/OsA3zH5NKYc)
+
+## Yolov5 - small
+
