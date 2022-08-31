@@ -5,7 +5,7 @@
       * [Retinanet](#retinanet)
       * [DETR (DEtection TRansformer)](#detr-detection-transformer)
 
-<!-- Added by: gil_diy, at: Thu 01 Sep 2022 01:15:45 IDT -->
+<!-- Added by: gil_diy, at: Thu 01 Sep 2022 01:15:48 IDT -->
 
 <!--te-->
 
