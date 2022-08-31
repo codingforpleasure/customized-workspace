@@ -90,7 +90,7 @@
       * [Dump dataframe into the clipboard](#dump-dataframe-into-the-clipboard)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Thu 28 Apr 2022 06:05:34 IDT -->
+<!-- Added by: gil_diy, at: Wed 31 Aug 2022 22:05:28 IDT -->
 
 <!--te-->
 
@@ -207,6 +207,8 @@ for index, row in df.iterrows():
 ```
 
 #### Rename indexes (rename row names)
+
+Give the row names the value of a specific column:
 
 ```python
 my_df.set_index("third-column", inplace=True)
