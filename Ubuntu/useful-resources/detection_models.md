@@ -6,7 +6,7 @@
       * [DETR (DEtection TRansformer)](#detr-detection-transformer)
       * [Yolo](#yolo)
 
-<!-- Added by: gil_diy, at: Thu 01 Sep 2022 01:20:14 IDT -->
+<!-- Added by: gil_diy, at: Thu 01 Sep 2022 01:21:32 IDT -->
 
 <!--te-->
 
@@ -28,7 +28,7 @@ Neural network approaches:
 
 ## Retinanet
 
-RetinaNet is a one-stage object detection model that utilizes a focal loss function to a**ddress class imbalance during training**.
+RetinaNet is a one-stage object detection model that utilizes a focal loss function to **address class imbalance during training**.
 
 ## DETR (DEtection TRansformer)
 
