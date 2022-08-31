@@ -6,7 +6,7 @@
       * [DETR (DEtection TRansformer)](#detr-detection-transformer)
       * [Yolo](#yolo)
 
-<!-- Added by: gil_diy, at: Thu 01 Sep 2022 01:21:34 IDT -->
+<!-- Added by: gil_diy, at: Thu 01 Sep 2022 01:21:37 IDT -->
 
 <!--te-->
 
