@@ -5,7 +5,7 @@
       * [Retinanet](#retinanet)
       * [DETR (DEtection TRansformer)](#detr-detection-transformer)
 
-<!-- Added by: gil_diy, at: Thu 01 Sep 2022 01:15:28 IDT -->
+<!-- Added by: gil_diy, at: Thu 01 Sep 2022 01:15:45 IDT -->
 
 <!--te-->
 
@@ -22,7 +22,7 @@ RetinaNet is a one-stage object detection model that utilizes a focal loss funct
 
 ## DETR (DEtection TRansformer)
 
-
+[Link](https://arxiv.org/pdf/2005.12872.pdf)
 
 
 yolox
