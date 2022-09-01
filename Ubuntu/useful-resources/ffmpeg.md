@@ -50,7 +50,7 @@
       * [Editing Gif](#editing-gif)
       * [Documentation](#documentation)
 
-<!-- Added by: gil_diy, at: Thu 01 Sep 2022 08:06:00 IDT -->
+<!-- Added by: gil_diy, at: Thu 01 Sep 2022 08:06:02 IDT -->
 
 <!--te-->
 
