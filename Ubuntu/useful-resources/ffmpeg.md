@@ -50,7 +50,7 @@
       * [Editing Gif](#editing-gif)
       * [Documentation](#documentation)
 
-<!-- Added by: gil_diy, at: Thu 01 Sep 2022 08:05:55 IDT -->
+<!-- Added by: gil_diy, at: Thu 01 Sep 2022 08:06:00 IDT -->
 
 <!--te-->
 
@@ -443,7 +443,7 @@ ffmpeg  -i StickAround.mp4 -f gif StickAround.gif
 ## Make gif run once (no loops)
 
 ```bash
-ffmpeg -i input -loop -1 output.gif
+ffmpeg -i input.gif -loop -1 output.gif
 ```
 
 * `-1` no loop (plays once)
