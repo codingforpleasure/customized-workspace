@@ -46,10 +46,11 @@
          * [Extend audio length](#extend-audio-length)
          * [Modify sample rate](#modify-sample-rate)
       * [Convert to gif](#convert-to-gif)
+      * [Make gif run once (no loops)](#make-gif-run-once-no-loops)
       * [Editing Gif](#editing-gif)
       * [Documentation](#documentation)
 
-<!-- Added by: gil_diy, at: Tue 30 Aug 2022 22:27:43 IDT -->
+<!-- Added by: gil_diy, at: Thu 01 Sep 2022 08:05:34 IDT -->
 
 <!--te-->
 
@@ -438,6 +439,18 @@ out, _ = (ffmpeg
 ```bash
 ffmpeg  -i StickAround.mp4 -f gif StickAround.gif
 ```
+
+## Make gif run once (no loops)
+
+```bash
+ffmpeg -i input -loop 2 output.gif
+```
+
+* `-1` no loop (plays once)
+* `0` infinite loop (default)
+* `1` loop once (plays 2 times)
+* `2` loop twice (plays 3 times)
+
 
 ## Editing Gif
 
