@@ -91,7 +91,7 @@
       * [Dump dataframe into the clipboard](#dump-dataframe-into-the-clipboard)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Wed 31 Aug 2022 23:18:50 IDT -->
+<!-- Added by: gil_diy, at: Sat 10 Sep 2022 12:52:59 IDT -->
 
 <!--te-->
 
@@ -1041,6 +1041,8 @@ df.to_clipboard(sep=',')
 ```
 
 ## Reference
+
+[25-advanced-pandas-functions](https://towardsdatascience.com/25-advanced-pandas-functions-people-are-using-without-telling-you-b65fa442f0f4)
 
 [Pandas Cheat Sheet #1](https://www.datacamp.com/community/blog/python-pandas-cheat-sheet#gs.S4P4T=U)
 
