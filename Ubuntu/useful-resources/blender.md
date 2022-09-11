@@ -39,7 +39,7 @@
       * [Jeff Heaton explaines](#jeff-heaton-explaines)
       * [Useful web pages](#useful-web-pages)
 
-<!-- Added by: gil_diy, at: Fri 26 Aug 2022 11:51:46 IDT -->
+<!-- Added by: gil_diy, at: Sun 11 Sep 2022 08:57:50 IDT -->
 
 <!--te-->
 
@@ -288,10 +288,11 @@ exec(compile(open(filename).read(), filename, 'exec'))
 
 ### Debugging with Pycharm
 
+1)
 
-1) Download already build auto-complete files from GitHub: https://github.com/Korchy/blender_autocomplete
+2) Download already build auto-complete files from GitHub: https://github.com/Korchy/blender_autocomplete
 
-2) To connect files only to the current project:
+3) To connect files only to the current project:
 
     In the PyCharm main menu select: File – Settings
     Project: The name of the current project – Project Structure
