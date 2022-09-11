@@ -39,7 +39,7 @@
       * [Jeff Heaton explaines](#jeff-heaton-explaines)
       * [Useful web pages](#useful-web-pages)
 
-<!-- Added by: gil_diy, at: Sun 11 Sep 2022 10:51:49 IDT -->
+<!-- Added by: gil_diy, at: Sun 11 Sep 2022 11:47:39 IDT -->
 
 <!--te-->
 
@@ -400,6 +400,8 @@ bpy.ops.graph.interpolation_type(type = 'BEZIER')
 [Link](https://youtu.be/EaXy-m2I5hs?t=895)
 
 ## Useful web pages
+
+[blenderartists](https://blenderartists.org)
 
 [Blender Documentation](https://docs.blender.org/manual/en/latest/)
 
