@@ -39,7 +39,7 @@
       * [Jeff Heaton explaines](#jeff-heaton-explaines)
       * [Useful web pages](#useful-web-pages)
 
-<!-- Added by: gil_diy, at: Sun 11 Sep 2022 08:57:53 IDT -->
+<!-- Added by: gil_diy, at: Sun 11 Sep 2022 08:58:42 IDT -->
 
 <!--te-->
 
@@ -288,7 +288,7 @@ exec(compile(open(filename).read(), filename, 'exec'))
 
 ### Debugging with Pycharm
 
-1)
+1) Make sure you are using `Pycharm Professional`, since the the remote debugger works only there.
 
 2) Download already build auto-complete files from GitHub: https://github.com/Korchy/blender_autocomplete
 
