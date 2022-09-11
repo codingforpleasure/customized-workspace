@@ -39,7 +39,7 @@
       * [Jeff Heaton explaines](#jeff-heaton-explaines)
       * [Useful web pages](#useful-web-pages)
 
-<!-- Added by: gil_diy, at: Sun 11 Sep 2022 08:58:45 IDT -->
+<!-- Added by: gil_diy, at: Sun 11 Sep 2022 10:51:38 IDT -->
 
 <!--te-->
 
@@ -325,6 +325,8 @@ Run the Debugger Server in pycharm with `Debug icon`
 <p align="center"> <!-- style="width:400px;" -->
   <img src="images/Blender/debug-server.jpg" title="tool tip here">
 </p>
+
+Pay attention: run the `Blender Debug Server`
 
 You should see in the console:
 
