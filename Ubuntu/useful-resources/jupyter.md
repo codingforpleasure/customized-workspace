@@ -19,7 +19,7 @@
       * [Collection of Tips](#collection-of-tips)
       * [Enrich your jupyter layout](#enrich-your-jupyter-layout)
 
-<!-- Added by: gil_diy, at: Tue 13 Sep 2022 19:12:10 IDT -->
+<!-- Added by: gil_diy, at: Tue 13 Sep 2022 19:57:49 IDT -->
 
 <!--te-->
 
