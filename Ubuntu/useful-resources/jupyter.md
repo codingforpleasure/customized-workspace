@@ -17,8 +17,9 @@
       * [Timing code](#timing-code)
       * [Jupyter Lab](#jupyter-lab)
       * [Collection of Tips](#collection-of-tips)
+      * [Enrich your jupyter layout](#enrich-your-jupyter-layout)
 
-<!-- Added by: gil_diy, at: Fri 29 Jul 2022 12:42:42 IDT -->
+<!-- Added by: gil_diy, at: Tue 13 Sep 2022 19:12:07 IDT -->
 
 <!--te-->
 
@@ -173,3 +174,6 @@ To move to a different verbosity mode of the stack trace, just enter:
 ## Collection of Tips
 
 [Link](https://www.dataquest.io/blog/jupyter-notebook-tips-tricks-shortcuts/)
+
+## Enrich your jupyter layout
+https://towardsdatascience.com/enrich-your-jupyter-notebook-with-these-tips-55c8ead25255
