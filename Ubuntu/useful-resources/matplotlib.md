@@ -1,6 +1,7 @@
 <!--ts-->
    * [matplotlib](#matplotlib)
       * [Colors Palette](#colors-palette)
+         * [Color maps in matplotlib](#color-maps-in-matplotlib)
    * [Basics (Stateful appraoch)](#basics-stateful-appraoch)
       * [Simple plot](#simple-plot)
          * [Example #1:](#example-1)
@@ -26,6 +27,9 @@
          * [Plotting time series](#plotting-time-series)
          * [Plotting Live data in real-time](#plotting-live-data-in-real-time)
       * [Animation](#animation)
+      * [3D plots](#3d-plots)
+         * [Barplot-3D](#barplot-3d)
+         * [Scatterplot-3D](#scatterplot-3d)
       * [Visualising correlation using Seaborn library](#visualising-correlation-using-seaborn-library)
       * [Subplots (Object oriented approach)](#subplots-object-oriented-approach)
          * [Multiple plots](#multiple-plots)
@@ -50,7 +54,7 @@
       * [Writing mathematical expression](#writing-mathematical-expression)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Fri 03 Jun 2022 06:59:20 IDT -->
+<!-- Added by: gil_diy, at: Fri 16 Sep 2022 16:48:48 IDT -->
 
 <!--te-->
 
@@ -797,6 +801,54 @@ Animation output:
 
 [Link3](https://medium.com/dunder-data/create-a-bar-chart-race-animation-in-python-with-matplotlib-477ed1590096)
 
+
+## 3D plots
+
+### Barplot-3D
+
+```python
+    df = pd.read_csv("sample_datasets/auto_clean.csv")
+
+    print(np.unique(df['body-style']))
+
+    df['body-style1'] = df['body-style'].replace({'convertible': 1,
+                                                  'hardtop': 2,
+                                                  'hatchback': 3,
+                                                  'sedan': 4,
+                                                  'wagon': 5
+                                                  })
+
+    gr = df.groupby("body-style1")["city-mpg", "price"].agg('median')
+
+    x = gr.index
+    y = gr['city-mpg']
+    z = [0] * 5
+
+    colors = ['skyblue', 'g', 'r', 'pink', 'coral']
+
+    dx = [0.3] * 5
+    dy = [1] * 5
+    dz = gr['price']
+
+    plt.figure(figsize=(0, 12))
+    ax = plt.axes(projection='3d')
+    ax.bar3d(x, y, z, dx, dy, dz, color=colors)
+    ax.set_xticklabels(['convertible', 'hardtop', 'hatchback', 'sedan', 'wagon'])
+    ax.set_xlim(0, 5.5)
+    ax.set_xlabel("Body Style", labelpad=12)
+    ax.set_ylabel("City MPG", labelpad=12)
+    ax.set_zlabel("Price", labelpad=12)
+    ax.set_title("Changes of price and body styles and city-mpg")
+    plt.show()
+```
+
+<p align="center">
+  <img width="400" src="images/matplotlib/3dbars.jpg" title="Look into the image">
+</p>
+
+### Scatterplot-3D
+
+[Link](https://youtu.be/PnwpoCDA5IM)
 
 ## Visualising correlation using Seaborn library
 
