@@ -13,7 +13,7 @@
          * [Restart a container](#restart-a-container)
          * [Connect to a running container](#connect-to-a-running-container)
          * [Running a command in the contianer from outside](#running-a-command-in-the-contianer-from-outside)
-         * [start a container from an image and run a command in it](#start-a-container-from-an-image-and-run-a-command-in-it)
+         * [Start a container from an image and run a command in it](#start-a-container-from-an-image-and-run-a-command-in-it)
             * [Mount a directory in host into a docker container](#mount-a-directory-in-host-into-a-docker-container)
          * [Remove a container](#remove-a-container)
          * [Kill a container](#kill-a-container)
@@ -28,7 +28,7 @@
          * [Mapping ports](#mapping-ports)
          * [Mapping volumes](#mapping-volumes)
 
-<!-- Added by: gil_diy, at: Wed 21 Sep 2022 01:02:34 IDT -->
+<!-- Added by: gil_diy, at: Wed 21 Sep 2022 01:02:39 IDT -->
 
 <!--te-->
 
@@ -160,7 +160,7 @@ docker attach <container-id>
 docker exec jenkins cat /var/jenkins_home/secrets/initialAdminPassword
 ```
 
-### start a container from an image and run a command in it
+### Start a container from an image and run a command in it
 ```bash
 docker run -i -t <docker-image:tag> sh
 ```
