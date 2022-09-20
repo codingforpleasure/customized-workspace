@@ -12,13 +12,13 @@
          * [Stop running containers](#stop-running-containers)
          * [Restart a container](#restart-a-container)
          * [Connect to a running container](#connect-to-a-running-container)
+         * [Running a command in the contianer from outside](#running-a-command-in-the-contianer-from-outside)
          * [start a container from an image and run a command in it](#start-a-container-from-an-image-and-run-a-command-in-it)
             * [Mount a directory in host into a docker container](#mount-a-directory-in-host-into-a-docker-container)
          * [Remove a container](#remove-a-container)
          * [Kill a container](#kill-a-container)
          * [Copying files from container to host and vice versa](#copying-files-from-container-to-host-and-vice-versa)
          * [Connecting to a service](#connecting-to-a-service)
-         * [Running a command in the contianer from outside](#running-a-command-in-the-contianer-from-outside)
       * [Inside a docker image](#inside-a-docker-image)
          * [Inspect the image](#inspect-the-image)
          * [Inspecting a Dockerfile](#inspecting-a-dockerfile)
@@ -28,7 +28,7 @@
          * [Mapping ports](#mapping-ports)
          * [Mapping volumes](#mapping-volumes)
 
-<!-- Added by: gil_diy, at: Wed 21 Sep 2022 01:02:16 IDT -->
+<!-- Added by: gil_diy, at: Wed 21 Sep 2022 01:02:34 IDT -->
 
 <!--te-->
 
@@ -155,6 +155,11 @@ docker restart <container-id>
 docker attach <container-id>
 ```
 
+### Running a command in the contianer from outside
+```bash
+docker exec jenkins cat /var/jenkins_home/secrets/initialAdminPassword
+```
+
 ### start a container from an image and run a command in it
 ```bash
 docker run -i -t <docker-image:tag> sh
@@ -200,10 +205,7 @@ docker cp de1193caf1f0:/var/www/html/my-file.txt ~/desktop
 sudo docker-compose exec <service-name> sh
 ```
 
-### Running a command in the contianer from outside
-```bash
-docker exec jenkins cat /var/jenkins_home/secrets/initialAdminPassword
-```
+
 
 ## Inside a docker image
 A docker image is just a bunch of loosley connected read-only layers.
