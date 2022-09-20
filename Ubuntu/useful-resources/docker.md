@@ -12,7 +12,7 @@
          * [Stop running containers](#stop-running-containers)
          * [Restart a container](#restart-a-container)
          * [Connect to a running container](#connect-to-a-running-container)
-         * [Run a command in a container/ start a container from an image](#run-a-command-in-a-container-start-a-container-from-an-image)
+         * [start a container from an image and run a command in it](#start-a-container-from-an-image-and-run-a-command-in-it)
             * [Mount a directory in host into a docker container](#mount-a-directory-in-host-into-a-docker-container)
          * [Remove a container](#remove-a-container)
          * [Kill a container](#kill-a-container)
@@ -28,7 +28,7 @@
          * [Mapping ports](#mapping-ports)
          * [Mapping volumes](#mapping-volumes)
 
-<!-- Added by: gil_diy, at: Wed 21 Sep 2022 01:00:56 IDT -->
+<!-- Added by: gil_diy, at: Wed 21 Sep 2022 01:01:47 IDT -->
 
 <!--te-->
 
@@ -155,7 +155,7 @@ docker restart <container-id>
 docker attach <container-id>
 ```
 
-### Run a command in a container/ start a container from an image
+### start a container from an image and run a command in it
 ```bash
 docker run -i -t <docker-image:tag> sh
 ```
