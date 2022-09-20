@@ -54,7 +54,7 @@
       * [Writing mathematical expression](#writing-mathematical-expression)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Fri 16 Sep 2022 17:36:46 IDT -->
+<!-- Added by: gil_diy, at: Wed 21 Sep 2022 01:21:12 IDT -->
 
 <!--te-->
 
@@ -847,6 +847,26 @@ Animation output:
 </p>
 
 ### Scatterplot-3D
+
+
+```python
+df = pd.read_csv("sample_datasets/auto_clean.csv")
+plt.figure(figsize=(10, 0))
+ax = plt.axes(projection='3d')
+fg = ax.scatter3D(df['length'],
+                  df['width'],
+                  df['length'],
+                  s=df['price'] / 50,  # size of dot
+                  c=df['width']  # color
+                  )
+ax.set_xlabel("Length")
+ax.set_ylabel("Width")
+ax.set_zlabel("Height")
+
+# Adding color bar:
+# plt.colorbar()
+plt.show()
+```
 
 [Link](https://youtu.be/PnwpoCDA5IM)
 
