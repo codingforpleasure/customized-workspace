@@ -54,7 +54,7 @@
       * [Writing mathematical expression](#writing-mathematical-expression)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Wed 21 Sep 2022 01:21:15 IDT -->
+<!-- Added by: gil_diy, at: Wed 21 Sep 2022 01:23:46 IDT -->
 
 <!--te-->
 
@@ -867,6 +867,10 @@ ax.set_zlabel("Height")
 # plt.colorbar()
 plt.show()
 ```
+
+<p align="center">
+  <img width="400" src="images/matplotlib/3d_scatter_plot.jpg" title="Look into the image">
+</p>
 
 [Link](https://youtu.be/PnwpoCDA5IM)
 
