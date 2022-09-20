@@ -18,7 +18,7 @@
          * [Kill a container](#kill-a-container)
          * [Copying files from container to host and vice versa](#copying-files-from-container-to-host-and-vice-versa)
          * [Connecting to a service](#connecting-to-a-service)
-         * [running a command in the contianer from outside](#running-a-command-in-the-contianer-from-outside)
+         * [Running a command in the contianer from outside](#running-a-command-in-the-contianer-from-outside)
       * [Inside a docker image](#inside-a-docker-image)
          * [Inspect the image](#inspect-the-image)
          * [Inspecting a Dockerfile](#inspecting-a-dockerfile)
@@ -28,7 +28,7 @@
          * [Mapping ports](#mapping-ports)
          * [Mapping volumes](#mapping-volumes)
 
-<!-- Added by: gil_diy, at: Wed 21 Sep 2022 01:01:53 IDT -->
+<!-- Added by: gil_diy, at: Wed 21 Sep 2022 01:02:13 IDT -->
 
 <!--te-->
 
@@ -200,7 +200,7 @@ docker cp de1193caf1f0:/var/www/html/my-file.txt ~/desktop
 sudo docker-compose exec <service-name> sh
 ```
 
-### running a command in the contianer from outside
+### Running a command in the contianer from outside
 ```bash
 docker exec jenkins cat /var/jenkins_home/secrets/initialAdminPassword
 ```
