@@ -28,7 +28,7 @@
          * [Mapping ports](#mapping-ports)
          * [Mapping volumes](#mapping-volumes)
 
-<!-- Added by: gil_diy, at: Wed 21 Sep 2022 01:02:42 IDT -->
+<!-- Added by: gil_diy, at: Wed 21 Sep 2022 01:02:48 IDT -->
 
 <!--te-->
 
@@ -204,8 +204,6 @@ docker cp de1193caf1f0:/var/www/html/my-file.txt ~/desktop
 ```bash
 sudo docker-compose exec <service-name> sh
 ```
-
-
 
 ## Inside a docker image
 A docker image is just a bunch of loosley connected read-only layers.
