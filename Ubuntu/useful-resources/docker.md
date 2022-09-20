@@ -28,7 +28,7 @@
          * [Mapping ports](#mapping-ports)
          * [Mapping volumes](#mapping-volumes)
 
-<!-- Added by: gil_diy, at: 2020-09-26T13:37+03:00 -->
+<!-- Added by: gil_diy, at: Wed 21 Sep 2022 01:00:53 IDT -->
 
 <!--te-->
 
@@ -97,8 +97,10 @@ docker stop <Container-id>
 ### Remove docker image which resides on your harddrive:
 
 ```bash
-docker rmi <IMAGE ID>
+docker rmi -f <IMAGE ID>
 ```
+
+-f = force
 
 ### Removing docker images and make sure all containers are down
 
