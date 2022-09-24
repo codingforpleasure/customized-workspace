@@ -16,8 +16,9 @@
       * [GAN - Generative Adversial Networks](#gan---generative-adversial-networks)
          * [Desciminator](#desciminator)
          * [Generator](#generator)
+   * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Mon 18 Apr 2022 20:37:37 IDT -->
+<!-- Added by: gil_diy, at: Sat 24 Sep 2022 22:18:34 IDT -->
 
 <!--te-->
 
@@ -281,3 +282,8 @@ Reminder: Transpose Convolution are **upscaler**, used for Encoder-Decoder archi
 * Use LeakyReLU activation in the discriminator for all layers
 
 [Link](https://github.com/jantic/DeOldify)
+
+
+# Reference
+
+[PlotNeuralNet with Latex](https://github.com/HarisIqbal88/PlotNeuralNet)
