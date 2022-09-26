@@ -4,7 +4,7 @@
       * [Troubleshooting](#troubleshooting)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Mon 26 Sep 2022 18:43:26 IDT -->
+<!-- Added by: gil_diy, at: Mon 26 Sep 2022 18:43:47 IDT -->
 
 <!--te-->
 
@@ -26,7 +26,7 @@ In case of getting the following Error:
 
 ```bash
 sudo lsof -t -i tcp:4000 | xargs kill -9
-````
+```
 
 
 # Reference
