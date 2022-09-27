@@ -60,7 +60,7 @@
          * [Remove rows with NA's](#remove-rows-with-nas)
          * [Check for NA's in dataframe](#check-for-nas-in-dataframe)
          * [Replace NA's with the median](#replace-nas-with-the-median)
-         * [Replace string with other thing in a column](#replace-string-with-other-thing-in-a-column)
+         * [Replace string with other thing in a specific column](#replace-string-with-other-thing-in-a-specific-column)
          * [Replace string with other thing in a dataframe](#replace-string-with-other-thing-in-a-dataframe)
          * [Retrieve NaN values](#retrieve-nan-values)
       * [Get the index of the min or the max element](#get-the-index-of-the-min-or-the-max-element)
@@ -91,7 +91,7 @@
       * [Dump dataframe into the clipboard](#dump-dataframe-into-the-clipboard)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Sat 10 Sep 2022 12:52:59 IDT -->
+<!-- Added by: gil_diy, at: Tue 27 Sep 2022 12:22:42 IDT -->
 
 <!--te-->
 
@@ -657,9 +657,21 @@ the_median = df['horse_power'].median()
 my_df['horse_power'] = my_df['horse_power'].fillna(med)
 ```
 
-### Replace string with other thing in a column
+### Replace string with other thing in a specific column
+
 ```Python
 df['workclass'].replace('?', np.NaN)
+```
+
+Or a more advance approach:
+
+```python
+df['body-style1'] = df['body-style'].replace({'convertible': 1,
+                                            'hardtop': 2,
+                                            'hatchback': 3,
+                                            'sedan': 4,
+                                            'wagon': 5
+                                            })
 ```
 
 ### Replace string with other thing in a dataframe
@@ -759,7 +771,7 @@ df = pd.DataFrame(
 <center>
 
 movie_name | movie_length | actors
------------|---------------|------
+-----------|--------------|---------
 The Shawshank Redemption| 2.22 | "Tim Robbins, Morgan Freeman, William Sadler, Bob Gunton"
 Batman Begins| 2.2 |"Christian Balem, Michael Caine, Liam Neeson, Gary Oldman"
 The Dark Knight Rises| 2.44 | "Christian Bale, Anne Hathaway, Gary Oldman"
