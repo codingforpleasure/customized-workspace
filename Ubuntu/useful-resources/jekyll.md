@@ -3,11 +3,12 @@
       * [Run Jekyll locally](#run-jekyll-locally)
       * [All posts reside](#all-posts-reside)
       * [Applying the layout design to a post](#applying-the-layout-design-to-a-post)
+      * [Change so-simple-theme's default layout's](#change-so-simple-themes-default-layouts)
       * [Troubleshooting](#troubleshooting)
          * [Address already in use](#address-already-in-use)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Tue 27 Sep 2022 10:24:59 IDT -->
+<!-- Added by: gil_diy, at: Tue 27 Sep 2022 10:26:27 IDT -->
 
 <!--te-->
 
@@ -42,6 +43,16 @@ tags:
   - syntax highlighting
 ---
 ```
+
+## Change so-simple-theme's default layout's
+
+All layout design is located in:
+
+```bash
+/home/gil_diy/github_pages_shay/PlotsForFun.github.io/_layouts
+```
+
+
 
 
 ## Troubleshooting
