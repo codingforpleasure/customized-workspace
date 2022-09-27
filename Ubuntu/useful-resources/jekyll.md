@@ -5,11 +5,12 @@
       * [All posts reside](#all-posts-reside)
       * [Applying the layout design to a post](#applying-the-layout-design-to-a-post)
       * [Change so-simple-theme's default layout's](#change-so-simple-themes-default-layouts)
+      * [Add Authors to your website:](#add-authors-to-your-website)
       * [Troubleshooting](#troubleshooting)
          * [Address already in use](#address-already-in-use)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Tue 27 Sep 2022 14:18:53 IDT -->
+<!-- Added by: gil_diy, at: Tue 27 Sep 2022 21:44:00 IDT -->
 
 <!--te-->
 
@@ -60,6 +61,22 @@ All layout design is located in:
 ```bash
 /home/gil_diy/github_pages_shay/PlotsForFun.github.io/_layouts
 ```
+
+## Add Authors to your website:
+
+```bash
+./example/_data/authors.yml
+```
+
+Shay Cohen:
+  name: "Shay Cohen"
+  picture: "/example/images/michael-rose-photo.jpg"
+  #avatar: "/example/images/michael-rose-photo.jpg"
+  twitter: "corneliusfiddlebone"
+  links:
+  - label: "Made Mistakes"
+    icon: "fas fa-fw fa-link"
+    url: "https://www.nba.com"
 
 
 
