@@ -7,7 +7,7 @@
       * [Magic methods (dunder methods)](#magic-methods-dunder-methods)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Tue 27 Sep 2022 22:42:55 IDT -->
+<!-- Added by: gil_diy, at: Tue 27 Sep 2022 22:42:58 IDT -->
 
 <!--te-->
 
