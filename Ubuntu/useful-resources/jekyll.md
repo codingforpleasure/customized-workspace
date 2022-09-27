@@ -10,7 +10,7 @@
          * [Address already in use](#address-already-in-use)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Tue 27 Sep 2022 21:55:29 IDT -->
+<!-- Added by: gil_diy, at: Tue 27 Sep 2022 21:55:32 IDT -->
 
 <!--te-->
 
@@ -108,7 +108,7 @@ sudo lsof -t -i tcp:4000 | xargs kill -9
 
 [so-simple-theme](https://github.com/mmistakes/so-simple-theme)
 
-[Link](https://github.com/alshedivat/al-folio)
+[al-folio](https://github.com/alshedivat/al-folio)
 
 [minimal-mistakes](https://github.com/mmistakes/minimal-mistakes)
 
