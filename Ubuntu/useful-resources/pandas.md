@@ -92,7 +92,7 @@
       * [Dump dataframe into the clipboard](#dump-dataframe-into-the-clipboard)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Tue 27 Sep 2022 23:38:24 IDT -->
+<!-- Added by: gil_diy, at: Tue 27 Sep 2022 23:38:37 IDT -->
 
 <!--te-->
 
@@ -455,6 +455,8 @@ relevant_df = pd.read_csv('data/large_dataset.csv', nrows = 1000)
 ### Importing only chunksize into memory
 
 ```python
+import gc # Garbage collector
+
 my_chunk_size = 500000
 
 for idx,chunk in enumarate(pd.read_csv('test_data.csv'. chunk_size = my_chunk_size)):
