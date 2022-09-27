@@ -10,7 +10,7 @@
          * [Address already in use](#address-already-in-use)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Tue 27 Sep 2022 21:45:14 IDT -->
+<!-- Added by: gil_diy, at: Tue 27 Sep 2022 21:45:19 IDT -->
 
 <!--te-->
 
@@ -74,7 +74,6 @@ Focus on the following file:
 Shay Cohen:
   name: "Shay Cohen"
   picture: "/example/images/michael-rose-photo.jpg"
-  #avatar: "/example/images/michael-rose-photo.jpg"
   twitter: "corneliusfiddlebone"
   links:
   - label: "Made Mistakes"
