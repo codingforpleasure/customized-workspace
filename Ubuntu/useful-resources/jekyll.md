@@ -8,7 +8,7 @@
          * [Address already in use](#address-already-in-use)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Tue 27 Sep 2022 10:26:30 IDT -->
+<!-- Added by: gil_diy, at: Tue 27 Sep 2022 10:27:23 IDT -->
 
 <!--te-->
 
@@ -28,7 +28,7 @@ bundle exec jekyll serve
 
 ## Applying the layout design to a post
 
-make sure the 
+make sure each post holds the following header format, as seen below:
 
 ```
 ---
