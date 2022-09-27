@@ -92,7 +92,7 @@
       * [Dump dataframe into the clipboard](#dump-dataframe-into-the-clipboard)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Tue 27 Sep 2022 23:38:40 IDT -->
+<!-- Added by: gil_diy, at: Tue 27 Sep 2022 23:38:52 IDT -->
 
 <!--te-->
 
@@ -455,7 +455,7 @@ relevant_df = pd.read_csv('data/large_dataset.csv', nrows = 1000)
 ### Importing only chunksize into memory
 
 ```python
-import gc # Garbage collector
+import gc # Garbage collector - frees up the space from the memory while handling extensive data. It removes unwanted things from memory.
 
 my_chunk_size = 500000
 
