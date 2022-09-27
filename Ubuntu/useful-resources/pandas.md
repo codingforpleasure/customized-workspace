@@ -92,7 +92,7 @@
       * [Dump dataframe into the clipboard](#dump-dataframe-into-the-clipboard)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Tue 27 Sep 2022 23:38:37 IDT -->
+<!-- Added by: gil_diy, at: Tue 27 Sep 2022 23:38:40 IDT -->
 
 <!--te-->
 
