@@ -38,6 +38,7 @@
       * [CSV](#csv)
          * [Importing data from CSV file](#importing-data-from-csv-file)
          * [Importing only first 1000 rows from a HUGE CSV file](#importing-only-first-1000-rows-from-a-huge-csv-file)
+         * [Importing only chunksize into memory](#importing-only-chunksize-into-memory)
          * [Importing only selected columns from a HUGE CSV file](#importing-only-selected-columns-from-a-huge-csv-file)
          * [Importing data from CSV with NA's](#importing-data-from-csv-with-nas)
          * [Importing data and squeeze](#importing-data-and-squeeze)
@@ -91,7 +92,7 @@
       * [Dump dataframe into the clipboard](#dump-dataframe-into-the-clipboard)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Tue 27 Sep 2022 12:26:08 IDT -->
+<!-- Added by: gil_diy, at: Tue 27 Sep 2022 23:38:00 IDT -->
 
 <!--te-->
 
@@ -450,6 +451,19 @@ movies_df.head()
 ```python
 relevant_df = pd.read_csv('data/large_dataset.csv', nrows = 1000)
 ```
+
+### Importing only chunksize into memory
+
+```python
+my_chunk_size = 500000
+
+for idx,chunk in enumarate(pd.read_csv('test_data.csv'. chunk_size = my_chunk_size)):
+   chunk.to_csv('chunk'+str(idx)+'.csv')
+
+```
+
+
+
 
 ### Importing only selected columns from a HUGE CSV file
 
