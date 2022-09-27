@@ -10,7 +10,7 @@
          * [Address already in use](#address-already-in-use)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Tue 27 Sep 2022 21:44:03 IDT -->
+<!-- Added by: gil_diy, at: Tue 27 Sep 2022 21:44:16 IDT -->
 
 <!--te-->
 
@@ -63,6 +63,8 @@ All layout design is located in:
 ```
 
 ## Add Authors to your website:
+
+Focus on the following file:
 
 ```bash
 ./example/_data/authors.yml
