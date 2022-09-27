@@ -3,10 +3,11 @@
       * [Single asterisks for unpacking into function call](#single-asterisks-for-unpacking-into-function-call)
       * [Single astrisks for tuple unpacking](#single-astrisks-for-tuple-unpacking)
       * [Double Asterisks usage](#double-asterisks-usage)
+      * [Adding thousands separators](#adding-thousands-separators)
       * [Magic methods (dunder methods)](#magic-methods-dunder-methods)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Fri 04 Mar 2022 15:05:44 IST -->
+<!-- Added by: gil_diy, at: Tue 27 Sep 2022 22:42:55 IDT -->
 
 <!--te-->
 
@@ -100,7 +101,12 @@ filename = "{year}-{month}-{day}-{artist}-{title}.txt".format(
 2020-01-01-Beethoven-Symphony No 5.txt
 ```
 
-## 
+## Adding thousands separators 
+
+```python
+num = 10000000
+print(f"The number with thousands separators: {num:,}")
+```
 
 ## Magic methods (dunder methods)
 
