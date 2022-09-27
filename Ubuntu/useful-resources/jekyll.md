@@ -10,7 +10,7 @@
          * [Address already in use](#address-already-in-use)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Tue 27 Sep 2022 21:50:08 IDT -->
+<!-- Added by: gil_diy, at: Tue 27 Sep 2022 21:54:15 IDT -->
 
 <!--te-->
 
@@ -21,6 +21,8 @@
 ```bash
 bundle exec jekyll serve --verbose
 ```
+
+All files are generated and getting copied to the directory: `_site`
 
 ## Build Jekyll locally
 
@@ -85,6 +87,8 @@ Shay Cohen:
 
 In case you haven't noticed the image in the layout make sure you have entered 
 the correct path for the `picture` field.
+
+
 
 ## Troubleshooting
 
