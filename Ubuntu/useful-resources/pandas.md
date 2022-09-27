@@ -91,7 +91,7 @@
       * [Dump dataframe into the clipboard](#dump-dataframe-into-the-clipboard)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Tue 27 Sep 2022 12:22:51 IDT -->
+<!-- Added by: gil_diy, at: Tue 27 Sep 2022 12:26:05 IDT -->
 
 <!--te-->
 
@@ -768,7 +768,7 @@ df = pd.DataFrame(
    })
 ```
 
-<center>
+
 
 movie_name | movie_length | actors
 -----------|--------------|---------
@@ -777,7 +777,7 @@ Batman Begins| 2.2 |"Christian Balem, Michael Caine, Liam Neeson, Gary Oldman"
 The Dark Knight Rises| 2.44 | "Christian Bale, Anne Hathaway, Gary Oldman"
 The Fighter| 1.56 | "Mark Wahlberg,"Christian Bale, Amy Adams"
 
-</center>
+
 
 ```python
 df['list_of_actors'] = df['actors'].apply(lambda x: list(map(str.strip, x.split(','))))
