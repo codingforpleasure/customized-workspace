@@ -1,11 +1,12 @@
 <!--ts-->
    * [Jekyll](#jekyll)
       * [Run Jekyll locally](#run-jekyll-locally)
+      * [All posts reside](#all-posts-reside)
       * [Troubleshooting](#troubleshooting)
          * [Address already in use](#address-already-in-use)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Mon 26 Sep 2022 22:33:41 IDT -->
+<!-- Added by: gil_diy, at: Tue 27 Sep 2022 10:23:25 IDT -->
 
 <!--te-->
 
@@ -17,6 +18,11 @@
 bundle exec jekyll serve
 ```
 
+## All posts reside
+
+```bash
+/home/gil_diy/github_pages_shay/PlotsForFun.github.io/example/_posts
+```
 
 ## Troubleshooting
 
