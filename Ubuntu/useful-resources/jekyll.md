@@ -10,7 +10,7 @@
          * [Address already in use](#address-already-in-use)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Tue 27 Sep 2022 21:48:47 IDT -->
+<!-- Added by: gil_diy, at: Tue 27 Sep 2022 21:49:20 IDT -->
 
 <!--te-->
 
@@ -83,7 +83,8 @@ Shay Cohen:
 ```
 
 
-In case you haven't noticed 
+In case you haven't noticed the image in the layout make sure you have entered 
+the correct path.
 
 ## Troubleshooting
 
