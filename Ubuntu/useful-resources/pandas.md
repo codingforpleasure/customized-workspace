@@ -92,7 +92,7 @@
       * [Dump dataframe into the clipboard](#dump-dataframe-into-the-clipboard)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Tue 27 Sep 2022 23:38:15 IDT -->
+<!-- Added by: gil_diy, at: Tue 27 Sep 2022 23:38:21 IDT -->
 
 <!--te-->
 
@@ -459,7 +459,7 @@ my_chunk_size = 500000
 
 for idx,chunk in enumarate(pd.read_csv('test_data.csv'. chunk_size = my_chunk_size)):
    chunk.to_csv('chunk'+str(idx)+'.csv', index = False)
-   
+   gc.collect()
 
 ```
 
