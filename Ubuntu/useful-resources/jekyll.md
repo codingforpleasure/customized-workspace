@@ -1,6 +1,7 @@
 <!--ts-->
    * [Jekyll](#jekyll)
       * [Run Jekyll locally](#run-jekyll-locally)
+      * [Build Jekyll locally](#build-jekyll-locally)
       * [All posts reside](#all-posts-reside)
       * [Applying the layout design to a post](#applying-the-layout-design-to-a-post)
       * [Change so-simple-theme's default layout's](#change-so-simple-themes-default-layouts)
@@ -8,7 +9,7 @@
          * [Address already in use](#address-already-in-use)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Tue 27 Sep 2022 12:38:23 IDT -->
+<!-- Added by: gil_diy, at: Tue 27 Sep 2022 14:18:50 IDT -->
 
 <!--te-->
 
@@ -17,8 +18,16 @@
 ## Run Jekyll locally
 
 ```bash
-bundle exec jekyll serve
+bundle exec jekyll serve --verbose
 ```
+
+## Build Jekyll locally
+
+
+```bash
+bundle exec jekyll build --verbose
+```
+
 
 ## All posts reside
 
@@ -52,20 +61,6 @@ All layout design is located in:
 /home/gil_diy/github_pages_shay/PlotsForFun.github.io/_layouts
 ```
 
-
-##
-
-
-```bash
-bundle exec jekyll build --verbose
-```
-
-
-##
-
-```bash
-bundle exec jekyll build --verbose
-```
 
 
 ## Troubleshooting
