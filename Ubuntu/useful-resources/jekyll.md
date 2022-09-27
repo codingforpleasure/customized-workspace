@@ -10,7 +10,7 @@
          * [Address already in use](#address-already-in-use)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Tue 27 Sep 2022 21:46:53 IDT -->
+<!-- Added by: gil_diy, at: Tue 27 Sep 2022 21:47:25 IDT -->
 
 <!--te-->
 
@@ -46,7 +46,7 @@ title: "Markup: Syntax Highlighting"
 excerpt: "Post displaying the various ways one can highlight code blocks with Jekyll. Some options include standard Markdown, GitHub Flavored Markdown, and Jekyll's `{% highlight %}` tag."
 last_modified_at: 2017-03-09T10:27:01-05:00
 layout: post # <- important line
-author: Shay Cohen
+author: Shay Cohen #I'm assuming you have list the name in the file `authors.yml`
 categories:
   - Tensorflow  
 tags: 
