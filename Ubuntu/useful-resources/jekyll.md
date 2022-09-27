@@ -5,12 +5,12 @@
       * [All posts reside](#all-posts-reside)
       * [Applying the layout design to a post](#applying-the-layout-design-to-a-post)
       * [Change so-simple-theme's default layout's](#change-so-simple-themes-default-layouts)
-      * [Add Authors to your website:](#add-authors-to-your-website)
+      * [Add another Author to your website:](#add-another-author-to-your-website)
       * [Troubleshooting](#troubleshooting)
          * [Address already in use](#address-already-in-use)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Tue 27 Sep 2022 21:44:35 IDT -->
+<!-- Added by: gil_diy, at: Tue 27 Sep 2022 21:45:09 IDT -->
 
 <!--te-->
 
@@ -62,7 +62,7 @@ All layout design is located in:
 /home/gil_diy/github_pages_shay/PlotsForFun.github.io/_layouts
 ```
 
-## Add Authors to your website:
+## Add another Author to your website:
 
 Focus on the following file:
 
