@@ -2,11 +2,12 @@
    * [Jekyll](#jekyll)
       * [Run Jekyll locally](#run-jekyll-locally)
       * [All posts reside](#all-posts-reside)
+      * [Applying the layout design to a post](#applying-the-layout-design-to-a-post)
       * [Troubleshooting](#troubleshooting)
          * [Address already in use](#address-already-in-use)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Tue 27 Sep 2022 10:23:33 IDT -->
+<!-- Added by: gil_diy, at: Tue 27 Sep 2022 10:24:57 IDT -->
 
 <!--te-->
 
@@ -24,7 +25,23 @@ bundle exec jekyll serve
 /home/gil_diy/github_pages_shay/PlotsForFun.github.io/example/_posts
 ```
 
+## Applying the layout design to a post
 
+make sure the 
+
+```
+---
+title: "Markup: Syntax Highlighting"
+excerpt: "Post displaying the various ways one can highlight code blocks with Jekyll. Some options include standard Markdown, GitHub Flavored Markdown, and Jekyll's `{% highlight %}` tag."
+last_modified_at: 2017-03-09T10:27:01-05:00
+layout: post # <- important line
+categories:
+  - Tensorflow  
+tags: 
+  - code
+  - syntax highlighting
+---
+```
 
 
 ## Troubleshooting
