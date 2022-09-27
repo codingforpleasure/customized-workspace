@@ -10,7 +10,7 @@
          * [Address already in use](#address-already-in-use)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Tue 27 Sep 2022 21:44:22 IDT -->
+<!-- Added by: gil_diy, at: Tue 27 Sep 2022 21:44:32 IDT -->
 
 <!--te-->
 
@@ -69,7 +69,8 @@ Focus on the following file:
 ```bash
 ./example/_data/authors.yml
 ```
-
+ and add:
+``` 
 Shay Cohen:
   name: "Shay Cohen"
   picture: "/example/images/michael-rose-photo.jpg"
@@ -79,7 +80,7 @@ Shay Cohen:
   - label: "Made Mistakes"
     icon: "fas fa-fw fa-link"
     url: "https://www.nba.com"
-
+```
 
 
 ## Troubleshooting
