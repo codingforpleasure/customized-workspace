@@ -58,7 +58,7 @@
       * [Writing mathematical expression](#writing-mathematical-expression)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Fri 07 Oct 2022 21:55:06 IDT -->
+<!-- Added by: gil_diy, at: Fri 07 Oct 2022 22:05:53 IDT -->
 
 <!--te-->
 
@@ -73,7 +73,7 @@
 
 #### Avaliable colors pallete
 
-[Dark2 - Pallete](https://matplotlib.org/stable/tutorials/colors/colormaps.html#qualitative)
+[Discrete Pallete](https://matplotlib.org/stable/tutorials/colors/colormaps.html#qualitative)
 
 
 [List of Color maps](https://matplotlib.org/stable/gallery/color/colormap_reference.html)
