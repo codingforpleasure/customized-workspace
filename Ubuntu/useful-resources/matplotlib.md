@@ -57,7 +57,7 @@
       * [Writing mathematical expression](#writing-mathematical-expression)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Fri 07 Oct 2022 21:45:13 IDT -->
+<!-- Added by: gil_diy, at: Fri 07 Oct 2022 21:45:15 IDT -->
 
 <!--te-->
 
@@ -84,7 +84,6 @@ print(f"Number of colors is the pallete is: {plt.cm.Dark2.N}")
 
 Let's take 6 distinct colors from the palette named: `Dark2` 
 [Dark2 - Pallete](https://matplotlib.org/stable/tutorials/colors/colormaps.html#qualitative)
-
 
 ```python
 list_of_6_distict_colors = plt.cm.Dark2(range(6))
