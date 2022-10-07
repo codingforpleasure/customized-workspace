@@ -57,7 +57,7 @@
       * [Writing mathematical expression](#writing-mathematical-expression)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Fri 07 Oct 2022 21:46:33 IDT -->
+<!-- Added by: gil_diy, at: Fri 07 Oct 2022 21:46:52 IDT -->
 
 <!--te-->
 
@@ -89,7 +89,6 @@ Let's take 6 distinct colors from the palette named: `Dark2`
 ```python
 list_of_6_distict_colors = plt.cm.Dark2(range(6))
 ```
-
 
 [List of Color maps](https://matplotlib.org/stable/gallery/color/colormap_reference.html)
 
