@@ -57,7 +57,7 @@
       * [Writing mathematical expression](#writing-mathematical-expression)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Fri 07 Oct 2022 21:46:55 IDT -->
+<!-- Added by: gil_diy, at: Fri 07 Oct 2022 21:47:08 IDT -->
 
 <!--te-->
 
@@ -73,6 +73,15 @@
 #### Avaliable colors pallete
 
 [Dark2 - Pallete](https://matplotlib.org/stable/tutorials/colors/colormaps.html#qualitative)
+
+
+[List of Color maps](https://matplotlib.org/stable/gallery/color/colormap_reference.html)
+
+
+Choose the color map available from:
+[See all colors](https://astromsshin.github.io/science/code/matplotlib_cm/index.html)
+
+
 
 #### Get number of colors is a pallete
 
@@ -90,11 +99,7 @@ Let's take 6 distinct colors from the palette named: `Dark2`
 list_of_6_distict_colors = plt.cm.Dark2(range(6))
 ```
 
-[List of Color maps](https://matplotlib.org/stable/gallery/color/colormap_reference.html)
 
-
-Choose the color map available from:
-[See all colors](https://astromsshin.github.io/science/code/matplotlib_cm/index.html)
 
 i.e:
 ```python
