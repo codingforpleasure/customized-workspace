@@ -55,7 +55,7 @@
       * [Writing mathematical expression](#writing-mathematical-expression)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Fri 07 Oct 2022 21:42:05 IDT -->
+<!-- Added by: gil_diy, at: Fri 07 Oct 2022 21:42:14 IDT -->
 
 <!--te-->
 
@@ -70,7 +70,8 @@
 
 #### Get number of colors is a pallete
 
-```python
+Each palette consists a field `N`, which consist the number of colors in the palette.
+
 ```python
 print(f"Number of colors is the pallete is: {plt.cm.Dark2.N}")
 ```
@@ -78,7 +79,7 @@ print(f"Number of colors is the pallete is: {plt.cm.Dark2.N}")
 Let's take 6 distinct colors from the palette named: `Dark2` 
 [Dark2 - Pallete](https://matplotlib.org/stable/tutorials/colors/colormaps.html#qualitative)
 
-Each palette consists a field `N`, which consist the number of colors in the palette.
+
 
 
 list_of_6_distict_colors = plt.cm.Dark2(range(6))
