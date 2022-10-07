@@ -4,7 +4,7 @@
          * [Color maps in matplotlib](#color-maps-in-matplotlib)
             * [Avaliable colors pallete](#avaliable-colors-pallete)
             * [Get number of colors is a pallete](#get-number-of-colors-is-a-pallete)
-            * [Get number of colors is a pallete](#get-number-of-colors-is-a-pallete-1)
+            * [Get k colors from a specified pallete](#get-k-colors-from-a-specified-pallete)
    * [Basics (Stateful appraoch)](#basics-stateful-appraoch)
       * [Simple plot](#simple-plot)
          * [Example #1:](#example-1)
@@ -57,7 +57,7 @@
       * [Writing mathematical expression](#writing-mathematical-expression)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Fri 07 Oct 2022 21:43:38 IDT -->
+<!-- Added by: gil_diy, at: Fri 07 Oct 2022 21:45:13 IDT -->
 
 <!--te-->
 
@@ -80,7 +80,7 @@ Each palette consists a field `N`, which holds the number of colors in the palet
 print(f"Number of colors is the pallete is: {plt.cm.Dark2.N}")
 ```
 
-#### Get number of colors is a pallete
+#### Get k colors from a specified pallete
 
 Let's take 6 distinct colors from the palette named: `Dark2` 
 [Dark2 - Pallete](https://matplotlib.org/stable/tutorials/colors/colormaps.html#qualitative)
