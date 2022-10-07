@@ -57,7 +57,7 @@
       * [Writing mathematical expression](#writing-mathematical-expression)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Fri 07 Oct 2022 21:43:18 IDT -->
+<!-- Added by: gil_diy, at: Fri 07 Oct 2022 21:43:22 IDT -->
 
 <!--te-->
 
@@ -79,8 +79,6 @@ Each palette consists a field `N`, which consist the number of colors in the pal
 ```python
 print(f"Number of colors is the pallete is: {plt.cm.Dark2.N}")
 ```
-
-
 
 #### Get number of colors is a pallete
 
