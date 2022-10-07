@@ -54,7 +54,7 @@
       * [Writing mathematical expression](#writing-mathematical-expression)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Fri 07 Oct 2022 21:29:47 IDT -->
+<!-- Added by: gil_diy, at: Fri 07 Oct 2022 21:32:31 IDT -->
 
 <!--te-->
 
@@ -68,7 +68,9 @@
 ### Color maps in matplotlib 
 
 
-Take distnict 6 colors from the palette named: `Dark2` [Link](https://matplotlib.org/stable/tutorials/colors/colormaps.html#qualitative)
+Let's take 6 distnict colors from the palette named: `Dark2` 
+
+[Dark2 - Pallete](https://matplotlib.org/stable/tutorials/colors/colormaps.html#qualitative)
 
 ```python
 plt.cm.Dark2(range(6))
