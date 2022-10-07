@@ -5,6 +5,7 @@
             * [Avaliable colors pallete](#avaliable-colors-pallete)
             * [Get number of colors is a pallete](#get-number-of-colors-is-a-pallete)
             * [Get k colors from a specified pallete](#get-k-colors-from-a-specified-pallete)
+            * [Usage of color map in seaborn](#usage-of-color-map-in-seaborn)
    * [Basics (Stateful appraoch)](#basics-stateful-appraoch)
       * [Simple plot](#simple-plot)
          * [Example #1:](#example-1)
@@ -57,7 +58,7 @@
       * [Writing mathematical expression](#writing-mathematical-expression)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Fri 07 Oct 2022 21:47:14 IDT -->
+<!-- Added by: gil_diy, at: Fri 07 Oct 2022 21:55:02 IDT -->
 
 <!--te-->
 
@@ -99,7 +100,7 @@ Let's take 6 distinct colors from the palette named: `Dark2`
 list_of_6_distict_colors = plt.cm.Dark2(range(6))
 ```
 
-
+#### Usage of color map in seaborn
 
 i.e:
 ```python
