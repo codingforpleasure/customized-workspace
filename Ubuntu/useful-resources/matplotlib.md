@@ -54,7 +54,7 @@
       * [Writing mathematical expression](#writing-mathematical-expression)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Fri 07 Oct 2022 21:39:52 IDT -->
+<!-- Added by: gil_diy, at: Fri 07 Oct 2022 21:39:55 IDT -->
 
 <!--te-->
 
@@ -71,7 +71,7 @@
 Let's take 6 distnict colors from the palette named: `Dark2` 
 [Dark2 - Pallete](https://matplotlib.org/stable/tutorials/colors/colormaps.html#qualitative)
 
-Each palette has a field `N`, which consist the number of colors in the palette.
+Each palette consists a field `N`, which consist the number of colors in the palette.
 
 ```python
 print(f"Number of colors is the pallete is: {plt.cm.Dark2.N}")
