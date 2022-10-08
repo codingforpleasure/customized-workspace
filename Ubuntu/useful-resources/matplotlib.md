@@ -3,8 +3,8 @@
       * [Colors Palette](#colors-palette)
          * [Color maps in matplotlib](#color-maps-in-matplotlib)
             * [Avaliable colors pallete](#avaliable-colors-pallete)
-            * [Get number of colors is a pallete](#get-number-of-colors-is-a-pallete)
-            * [Get k colors from a specified pallete](#get-k-colors-from-a-specified-pallete)
+            * [Get number of colors is a palette](#get-number-of-colors-is-a-palette)
+            * [Get k colors from a specified palette](#get-k-colors-from-a-specified-palette)
             * [Usage of color map in seaborn](#usage-of-color-map-in-seaborn)
    * [Basics (Stateful appraoch)](#basics-stateful-appraoch)
       * [Simple plot](#simple-plot)
@@ -58,7 +58,7 @@
       * [Writing mathematical expression](#writing-mathematical-expression)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Sat 08 Oct 2022 10:59:04 IDT -->
+<!-- Added by: gil_diy, at: Sat 08 Oct 2022 11:00:40 IDT -->
 
 <!--te-->
 
@@ -84,7 +84,7 @@ Choose the color map available from:
 
 
 
-#### Get number of colors is a pallete
+#### Get number of colors is a palette
 
 Each palette consists a field `N`, which holds the number of colors in the palette.
 
@@ -92,7 +92,7 @@ Each palette consists a field `N`, which holds the number of colors in the palet
 print(f"Number of colors in the pallete is: {plt.cm.Dark2.N}")
 ```
 
-#### Get k colors from a specified pallete
+#### Get k colors from a specified palette
 
 Let's take 6 distinct colors from the palette named: `Dark2` 
 
