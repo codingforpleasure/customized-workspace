@@ -1,11 +1,11 @@
 <!--ts-->
    * [matplotlib](#matplotlib)
       * [Colors names](#colors-names)
-         * [Color maps in matplotlib](#color-maps-in-matplotlib)
-            * [Avaliable colors pallete](#avaliable-colors-pallete)
-            * [Get number of colors is a palette](#get-number-of-colors-is-a-palette)
-            * [Get k colors from a specified palette](#get-k-colors-from-a-specified-palette)
-            * [Usage of color map in seaborn](#usage-of-color-map-in-seaborn)
+      * [Color maps in matplotlib](#color-maps-in-matplotlib)
+         * [Avaliable colors pallete](#avaliable-colors-pallete)
+         * [Get number of colors is a palette](#get-number-of-colors-is-a-palette)
+         * [Get k colors from a specified palette](#get-k-colors-from-a-specified-palette)
+         * [Usage of color map in seaborn](#usage-of-color-map-in-seaborn)
    * [Basics (Stateful appraoch)](#basics-stateful-appraoch)
       * [Simple plot](#simple-plot)
          * [Example #1:](#example-1)
@@ -58,7 +58,7 @@
       * [Writing mathematical expression](#writing-mathematical-expression)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Sat 08 Oct 2022 11:01:10 IDT -->
+<!-- Added by: gil_diy, at: Sat 08 Oct 2022 11:01:56 IDT -->
 
 <!--te-->
 
@@ -69,9 +69,9 @@
 [Color names for matplotlib](https://matplotlib.org/2.0.2/mpl_examples/color/named_colors.png)
 
 
-### Color maps in matplotlib 
+## Color maps in matplotlib 
 
-#### Avaliable colors pallete
+### Avaliable colors pallete
 
 [Discrete Palletes](https://matplotlib.org/stable/tutorials/colors/colormaps.html#qualitative)
 
@@ -84,7 +84,7 @@ Choose the color map available from:
 
 
 
-#### Get number of colors is a palette
+### Get number of colors is a palette
 
 Each palette consists a field `N`, which holds the number of colors in the palette.
 
@@ -92,7 +92,7 @@ Each palette consists a field `N`, which holds the number of colors in the palet
 print(f"Number of colors in the pallete is: {plt.cm.Dark2.N}")
 ```
 
-#### Get k colors from a specified palette
+### Get k colors from a specified palette
 
 Let's take 6 distinct colors from the palette named: `Dark2` 
 
@@ -100,7 +100,7 @@ Let's take 6 distinct colors from the palette named: `Dark2`
 list_of_6_distict_colors = plt.cm.Dark2(range(6))
 ```
 
-#### Usage of color map in seaborn
+### Usage of color map in seaborn
 
 i.e:
 ```python
