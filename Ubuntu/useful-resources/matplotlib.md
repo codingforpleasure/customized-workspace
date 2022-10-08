@@ -58,7 +58,7 @@
       * [Writing mathematical expression](#writing-mathematical-expression)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Fri 07 Oct 2022 22:05:57 IDT -->
+<!-- Added by: gil_diy, at: Sat 08 Oct 2022 10:55:25 IDT -->
 
 <!--te-->
 
@@ -1170,3 +1170,5 @@ plt.contourf(x1, x2, y_pred, alpha=0.3, cmap=custom_cmap)
 # Reference
 
 [Very nice Resource](https://userdyk-github.github.io/pl03-topic02/PL03-Topic02-Matplotlib.html)
+
+[visualizations-to-show-proportions-or-percentages-instead-of-a-pie-chart](https://towardsdatascience.com/9-visualizations-to-show-proportions-or-percentages-instead-of-a-pie-chart-4e8d81617451)
