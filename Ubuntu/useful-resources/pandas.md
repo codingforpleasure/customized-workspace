@@ -43,7 +43,7 @@
          * [Importing data from CSV with NA's](#importing-data-from-csv-with-nas)
          * [Importing data and squeeze](#importing-data-and-squeeze)
          * [Importing data from CSV with date](#importing-data-from-csv-with-date)
-         * [Setting a specific column as an index](#setting-a-specific-column-as-an-index)
+         * [Importing data from CSV when columns with thousands seperator](#importing-data-from-csv-when-columns-with-thousands-seperator)
          * [Exporting data into CSV](#exporting-data-into-csv)
       * [Excel File](#excel-file)
       * [JSON File](#json-file)
@@ -92,7 +92,7 @@
       * [Dump dataframe into the clipboard](#dump-dataframe-into-the-clipboard)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Tue 27 Sep 2022 23:39:04 IDT -->
+<!-- Added by: gil_diy, at: Sat 08 Oct 2022 11:33:59 IDT -->
 
 <!--te-->
 
@@ -492,6 +492,13 @@ loans_income = pd.read_csv('datasets/loans_income.csv', squeeze=True)
 # fifa_data = pd.read_csv(fifa_filepath, index_col="Date", parse_dates=True)
 rawfile = pd.read_csv(filename, header=None, names=DataLabels, parse_dates=True)
 ```
+
+### Importing data from CSV when columns with thousands seperator 
+
+```python
+df = pd.read_csv('sample.csv',thousands=',')
+```
+```python
 
 ### Setting a specific column as an index
 Labeling the rows while importing data
