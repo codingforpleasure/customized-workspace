@@ -55,6 +55,7 @@
       * [Get statistics (count, mean, std, min, max))](#get-statistics-count-mean-std-min-max)
       * [Get statistics for Categorical columns](#get-statistics-for-categorical-columns)
       * [Get counts for spcific column (Exactly like table function in R)](#get-counts-for-spcific-column-exactly-like-table-function-in-r)
+      * [value_counts() to bin continuous data into discrete intervals](#value_counts-to-bin-continuous-data-into-discrete-intervals)
       * [Get mode - value that appears most often in either column or row](#get-mode---value-that-appears-most-often-in-either-column-or-row)
       * [Datatypes conversions](#datatypes-conversions)
       * [Dealing with NA's](#dealing-with-nas)
@@ -93,7 +94,7 @@
       * [Dump dataframe into the clipboard](#dump-dataframe-into-the-clipboard)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Sat 08 Oct 2022 11:39:06 IDT -->
+<!-- Added by: gil_diy, at: Sat 08 Oct 2022 12:00:44 IDT -->
 
 <!--te-->
 
@@ -627,9 +628,12 @@ data_df['my_column'].value_counts(normalize=True)
 
 # Get the top 5 values
 data_df['my_column'].value_counts(ascending=False).nlargest(5)
-
-
 ```
+
+## value_counts() to bin continuous data into discrete intervals
+
+
+
 ## Get `mode` - value that appears most often in either column or row
 
 Replacing the missing values with the most frequent values present in each column:
