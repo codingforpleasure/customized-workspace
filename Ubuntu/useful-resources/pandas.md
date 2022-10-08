@@ -94,7 +94,7 @@
       * [Dump dataframe into the clipboard](#dump-dataframe-into-the-clipboard)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Sat 08 Oct 2022 12:02:43 IDT -->
+<!-- Added by: gil_diy, at: Sat 08 Oct 2022 12:06:18 IDT -->
 
 <!--te-->
 
@@ -629,6 +629,8 @@ data_df['my_column'].value_counts(normalize=True)
 # Get the top 5 values
 data_df['my_column'].value_counts(ascending=False).nlargest(5)
 ```
+
+[getting-more-value-from-the-pandas-value-counts](https://towardsdatascience.com/getting-more-value-from-the-pandas-value-counts-aa17230907a6)
 
 ## Bin continuous data into discrete intervals
 
