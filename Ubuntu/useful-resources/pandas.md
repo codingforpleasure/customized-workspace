@@ -44,6 +44,7 @@
          * [Importing data and squeeze](#importing-data-and-squeeze)
          * [Importing data from CSV with date](#importing-data-from-csv-with-date)
          * [Importing data from CSV when columns with thousands seperator](#importing-data-from-csv-when-columns-with-thousands-seperator)
+         * [Setting a specific column as an index](#setting-a-specific-column-as-an-index)
          * [Exporting data into CSV](#exporting-data-into-csv)
       * [Excel File](#excel-file)
       * [JSON File](#json-file)
@@ -92,7 +93,7 @@
       * [Dump dataframe into the clipboard](#dump-dataframe-into-the-clipboard)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Sat 08 Oct 2022 11:34:55 IDT -->
+<!-- Added by: gil_diy, at: Sat 08 Oct 2022 11:36:07 IDT -->
 
 <!--te-->
 
@@ -503,7 +504,8 @@ therefore use this:
 ```python
 df = pd.read_csv('sample.csv',thousands=',')
 ```
-```python
+
+Otherwise the column will be recognized as a column of `objects` and not of `int64`
 
 ### Setting a specific column as an index
 Labeling the rows while importing data
