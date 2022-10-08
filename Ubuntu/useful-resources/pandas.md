@@ -94,7 +94,7 @@
       * [Dump dataframe into the clipboard](#dump-dataframe-into-the-clipboard)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Sat 08 Oct 2022 12:06:21 IDT -->
+<!-- Added by: gil_diy, at: Sat 08 Oct 2022 12:06:24 IDT -->
 
 <!--te-->
 
