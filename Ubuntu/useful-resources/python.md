@@ -28,7 +28,7 @@
       * [Counting words with a counter](#counting-words-with-a-counter)
       * [Useful packages](#useful-packages)
 
-<!-- Added by: gil_diy, at: Tue 01 Mar 2022 09:48:35 IST -->
+<!-- Added by: gil_diy, at: Sat 08 Oct 2022 11:42:52 IDT -->
 
 <!--te-->
 
@@ -172,6 +172,8 @@ filename = "{year}-{month}-{day}-{artist}-{title}.txt".format(
 ```python
 f'Hello, {name}!'
 ```
+
+[Five wonderful uses of ‘f- Strings’ in Python](https://towardsdatascience.com/five-wonderful-uses-of-f-strings-in-python-7980cfd31c0d)
 
 ## Type hints
 
