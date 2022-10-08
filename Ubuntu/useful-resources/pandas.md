@@ -93,7 +93,7 @@
       * [Dump dataframe into the clipboard](#dump-dataframe-into-the-clipboard)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Sat 08 Oct 2022 11:36:43 IDT -->
+<!-- Added by: gil_diy, at: Sat 08 Oct 2022 11:39:01 IDT -->
 
 <!--te-->
 
@@ -446,6 +446,8 @@ newdf = df.loc[(df.column_name_1 == "JFK") & (df.colunm_name_2 == "B6")]
 movies_df = pd.read_csv('data/movies.csv')
 movies_df.head()
 ```
+
+[There-is-more-to-pandas-read-csv-than-meets-the-eye-](https://towardsdatascience.com/there-is-more-to-pandas-read-csv-than-meets-the-eye-8654cb2b3a03)
 
 ### Importing only first 1000 rows from a HUGE CSV file
 
