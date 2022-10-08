@@ -58,7 +58,7 @@
       * [Writing mathematical expression](#writing-mathematical-expression)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Sat 08 Oct 2022 10:55:31 IDT -->
+<!-- Added by: gil_diy, at: Sat 08 Oct 2022 10:59:04 IDT -->
 
 <!--te-->
 
@@ -89,7 +89,7 @@ Choose the color map available from:
 Each palette consists a field `N`, which holds the number of colors in the palette.
 
 ```python
-print(f"Number of colors is the pallete is: {plt.cm.Dark2.N}")
+print(f"Number of colors in the pallete is: {plt.cm.Dark2.N}")
 ```
 
 #### Get k colors from a specified pallete
