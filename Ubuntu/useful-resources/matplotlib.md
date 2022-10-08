@@ -1,6 +1,6 @@
 <!--ts-->
    * [matplotlib](#matplotlib)
-      * [Colors Palette](#colors-palette)
+      * [Colors names](#colors-names)
          * [Color maps in matplotlib](#color-maps-in-matplotlib)
             * [Avaliable colors pallete](#avaliable-colors-pallete)
             * [Get number of colors is a palette](#get-number-of-colors-is-a-palette)
@@ -58,13 +58,13 @@
       * [Writing mathematical expression](#writing-mathematical-expression)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Sat 08 Oct 2022 11:00:43 IDT -->
+<!-- Added by: gil_diy, at: Sat 08 Oct 2022 11:01:07 IDT -->
 
 <!--te-->
 
 # matplotlib
 
-## Colors Palette
+## Colors names
 
 [Color names for matplotlib](https://matplotlib.org/2.0.2/mpl_examples/color/named_colors.png)
 
