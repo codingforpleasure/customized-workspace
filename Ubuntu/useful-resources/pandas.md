@@ -43,7 +43,7 @@
          * [Importing data from CSV with NA's](#importing-data-from-csv-with-nas)
          * [Importing data and squeeze](#importing-data-and-squeeze)
          * [Importing data from CSV with date](#importing-data-from-csv-with-date)
-         * [Importing data from CSV when columns with thousands seperator](#importing-data-from-csv-when-columns-with-thousands-seperator)
+         * [Importing data from CSV when numerical columns consist of thousands seperator](#importing-data-from-csv-when-numerical-columns-consist-of-thousands-seperator)
          * [Setting a specific column as an index](#setting-a-specific-column-as-an-index)
          * [Exporting data into CSV](#exporting-data-into-csv)
       * [Excel File](#excel-file)
@@ -93,7 +93,7 @@
       * [Dump dataframe into the clipboard](#dump-dataframe-into-the-clipboard)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Sat 08 Oct 2022 11:36:07 IDT -->
+<!-- Added by: gil_diy, at: Sat 08 Oct 2022 11:36:33 IDT -->
 
 <!--te-->
 
@@ -494,7 +494,7 @@ loans_income = pd.read_csv('datasets/loans_income.csv', squeeze=True)
 rawfile = pd.read_csv(filename, header=None, names=DataLabels, parse_dates=True)
 ```
 
-### Importing data from CSV when columns with thousands seperator 
+### Importing data from CSV when numerical columns consist of thousands seperator 
 
 Whenever a column in the dataset contains a thousand separator,
 `pandas.read_csv()` reads it as a string rather than an integer.
