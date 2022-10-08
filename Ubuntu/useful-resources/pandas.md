@@ -92,7 +92,7 @@
       * [Dump dataframe into the clipboard](#dump-dataframe-into-the-clipboard)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Sat 08 Oct 2022 11:33:59 IDT -->
+<!-- Added by: gil_diy, at: Sat 08 Oct 2022 11:34:34 IDT -->
 
 <!--te-->
 
@@ -495,6 +495,7 @@ rawfile = pd.read_csv(filename, header=None, names=DataLabels, parse_dates=True)
 
 ### Importing data from CSV when columns with thousands seperator 
 
+Whenever a column in the dataset contains a thousand separator, pandas.read_csv() reads it as a string rather than an integer.
 ```python
 df = pd.read_csv('sample.csv',thousands=',')
 ```
