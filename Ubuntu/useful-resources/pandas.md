@@ -94,7 +94,7 @@
       * [Dump dataframe into the clipboard](#dump-dataframe-into-the-clipboard)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Sat 08 Oct 2022 12:02:32 IDT -->
+<!-- Added by: gil_diy, at: Sat 08 Oct 2022 12:02:36 IDT -->
 
 <!--te-->
 
@@ -635,7 +635,6 @@ data_df['my_column'].value_counts(ascending=False).nlargest(5)
 ```python
 train['Fare'].value_counts(bins=7)
 ```
-
 It is similar to: [Get data ditribution of the data per column](#get-data-ditribution-of-the-data-per-column)
 
 ## Get `mode` - value that appears most often in either column or row
