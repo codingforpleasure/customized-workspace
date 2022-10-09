@@ -84,6 +84,7 @@
          * [Dataframe Pivot table](#dataframe-pivot-table)
          * [Printing data so all columns will be presented (Display all columns)](#printing-data-so-all-columns-will-be-presented-display-all-columns)
          * [Get data ditribution of the data per column](#get-data-ditribution-of-the-data-per-column)
+      * [melt](#melt)
       * [Convert each consecutive pair of columns into a tuple in a single column](#convert-each-consecutive-pair-of-columns-into-a-tuple-in-a-single-column)
       * [Mapping/Applying categorical values to a specified numerical values](#mappingapplying-categorical-values-to-a-specified-numerical-values)
       * [confidence_interval](#confidence_interval)
@@ -94,7 +95,7 @@
       * [Dump dataframe into the clipboard](#dump-dataframe-into-the-clipboard)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Sat 08 Oct 2022 12:06:29 IDT -->
+<!-- Added by: gil_diy, at: Sun 09 Oct 2022 17:15:32 IDT -->
 
 <!--te-->
 
@@ -1003,6 +1004,10 @@ my_df.hist(bins=50, figsize=(20,15))
 plt.show()
 ```
 
+
+## melt
+
+[Link](http://www.my-website.com)
 
 ## Convert each consecutive pair of columns into a tuple in a single column
 ```python
