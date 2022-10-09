@@ -95,7 +95,7 @@
       * [Dump dataframe into the clipboard](#dump-dataframe-into-the-clipboard)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Sun 09 Oct 2022 17:15:32 IDT -->
+<!-- Added by: gil_diy, at: Sun 09 Oct 2022 17:15:43 IDT -->
 
 <!--te-->
 
@@ -1007,7 +1007,7 @@ plt.show()
 
 ## melt
 
-[Link](http://www.my-website.com)
+[Link](https://pub.towardsai.net/understanding-pandas-melt-pd-melt-362954f8c125)
 
 ## Convert each consecutive pair of columns into a tuple in a single column
 ```python
