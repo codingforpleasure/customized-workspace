@@ -84,7 +84,7 @@ Choose the color map available from:
 
 
 
-### Get number of colors is a palette
+### Get number of colors in a palette
 
 Each palette consists a field `N`, which holds the number of colors in the palette.
 
@@ -1116,8 +1116,19 @@ ax.adedd_patch(wheel)
 
 ### Configuring plot design
 
+#### All parameters regarding design
 
-#### Title plot size 
+There are `308` parameters which quite overwhelming therefore search with regex:
+
+```python
+import re
+
+r = re.compile(".*font") # Your keyword to search
+long_list_of_plt_parameters = list(plt.rcParams.keys())
+relevant = list(filter(r.match, long_list_of_plt_parameters))
+```
+
+#### Title font size 
 
 ```python
 ax.set_title('My title', fontsize=20)
