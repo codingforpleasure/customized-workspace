@@ -168,7 +168,18 @@ To move to a different verbosity mode of the stack trace, just enter:
 
 ## Jupyter Lab
 
+### Jupyter lab modify font
+
+`home/gil_diy/miniconda3/envs/machine_learning_sklearn_python_3.8/share/jupyter/lab/staging/node_modules/@jupyterlab/theme-light-extension/style/variables.css`
+
+
+`Baskerville BT`
+
 [Link](https://towardsdatascience.com/jupyterlab-2-0-edd4155ab897)
+
+
+
+[](https://stackoverflow.com/a/54520440/1305700)
 
 
 ## Collection of Tips

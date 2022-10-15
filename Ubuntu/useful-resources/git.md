@@ -1,10 +1,11 @@
+
 # Git
 
  Description | Command
 ------------|-----
  List your existing remotes |  `git remote -v`
  Change your remote's URL | git remote set-url origin `git@github.com:USERNAME/REPOSITORY.git`
- shows the tagged versions | gti tag
+ shows the tagged versions | git tag
  checkout the correct version | `git checkout <latest-tag-found>`
 
 ## Get the URL that a local Git repository was originally cloned from
@@ -24,6 +25,9 @@ For newbie install the `.ignore` plugin.
 
 
 ## Git clone specific branch
+
+
+## Git Cherry-pick
 
 ## How to Clone Including Git Submodules
 

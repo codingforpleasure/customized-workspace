@@ -93,7 +93,7 @@ re? | Matches 0 or 1 occurrence of preceding expression
 re{n} | Matches exactly n number of occurrences of preceding expression
 re{n,} | Matches n or more occurrences of preceding expression
 re{n,m} | Matches at least n and at most m occurrences of preceding expression
-a\|b | Matches either a or b
+`a|b` | Matches either a or b
 (re) | Groups regular expressions and remembers matched text
 \w  | Matches word characters.
 \W | Matches non-word characters.

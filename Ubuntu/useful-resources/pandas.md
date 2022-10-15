@@ -385,6 +385,12 @@ When we use the `.values` we get the actual numpy matrix
 x = df.loc[:, features].values
 ```
 
+#### Converting from pandas dataframe to Series
+
+```python
+height_series = df['height'].squeeze() 
+```
+
 #### Converting categorical columns to numbers (4 Methods)
 **Worked well for me!**
 
