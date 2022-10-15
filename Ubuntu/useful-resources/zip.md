@@ -12,12 +12,12 @@
 
 Let's say I have:
 
-train.zip.001
-train.zip.002
-train.zip.003
-train.zip.004
+train.zip.001,
+train.zip.002,
+train.zip.003,
+train.zip.004,
 
-This will concatenate all of your train.zip.001, test.zip.002, etc files into one larger, train.zip file. Once you have that single file, you may run unzip test.zip
+This will concatenate all of your train.zip.001, test.zip.002, etc files into one larger, train.zip file. Once you have that single file, you may run `unzip test.zip`
 
 ```bash
 cat train.zip* > train.zip

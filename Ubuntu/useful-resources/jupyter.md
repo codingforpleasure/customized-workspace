@@ -170,11 +170,6 @@ To move to a different verbosity mode of the stack trace, just enter:
 
 ### Jupyter lab modify font
 
-`home/gil_diy/miniconda3/envs/machine_learning_sklearn_python_3.8/share/jupyter/lab/staging/node_modules/@jupyterlab/theme-light-extension/style/variables.css`
-
-
-`Baskerville BT`
-
 [Link](https://towardsdatascience.com/jupyterlab-2-0-edd4155ab897)
 
 
@@ -188,3 +183,8 @@ To move to a different verbosity mode of the stack trace, just enter:
 
 ## Enrich your jupyter layout
 https://towardsdatascience.com/enrich-your-jupyter-notebook-with-these-tips-55c8ead25255
+
+## How to export the jupyter notebook?
+
+
+[Nicely written here](https://towardsdatascience.com/jupyter-notebook-as-a-product-dc9d1c138e3a)

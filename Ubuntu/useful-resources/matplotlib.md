@@ -1133,6 +1133,33 @@ relevant = list(filter(r.match, long_list_of_plt_parameters))
 ```python
 ax.set_title('My title', fontsize=20)
 ```
+
+
+
+#### Change font
+
+```python
+dir = matplotlib.get_cachedir()
+```
+
+Now you should remove the directory:
+```bash
+sudo apt install msttcorefonts -qq
+rm ~/.cache/matplotlib -rf # Assuming this is the directory you got from the python code
+```
+
+```python
+plt.rcParams['font.family'] = 'sans-serif'
+plt.rcParams['font.sans-serif'] = 'Comic Sans MS'
+```
+
+#### List fonts installed on your machine which Matplotlic can use of them
+
+```python
+import matplotlib.font_manager
+
+matplotlib.font_manager.findSystemFonts(fontpaths=None, fontext='ttf')[:10]
+```
 #### Adding Legend to plot
 
 ```python
@@ -1181,5 +1208,7 @@ plt.contourf(x1, x2, y_pred, alpha=0.3, cmap=custom_cmap)
 # Reference
 
 [Very nice Resource](https://userdyk-github.github.io/pl03-topic02/PL03-Topic02-Matplotlib.html)
+
+[Very nice Resource 2](https://www.southampton.ac.uk/~fangohr/training/python/notebooks/Matplotlib.html)
 
 [visualizations-to-show-proportions-or-percentages-instead-of-a-pie-chart](https://towardsdatascience.com/9-visualizations-to-show-proportions-or-percentages-instead-of-a-pie-chart-4e8d81617451)

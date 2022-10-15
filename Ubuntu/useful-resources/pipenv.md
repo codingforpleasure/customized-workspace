@@ -107,6 +107,12 @@ pipenv lock
 pipenv uninstall --all
 ```
 
+or 
+
+```bash
+pip uninstall -y -r <(pip freeze)
+```
+
 ## Where your virtual environment is
 
 ```bash
