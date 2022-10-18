@@ -84,11 +84,21 @@ Shay Cohen:
     url: "https://www.nba.com"
 ```
 
-
 In case you haven't noticed the image in the layout make sure you have entered 
 the correct path for the `picture` field.
 
 
+## Updating image of the person who wrote the post
+
+```bash
+./example/_data/authors.yml
+```
+
+update the field:
+
+```md
+picture: "/example/images/shay_head.jpeg"
+```
 
 ## Troubleshooting
 

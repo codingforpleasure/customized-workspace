@@ -228,6 +228,21 @@ Constraint type | Specification | Result
 
 **NOTE:** Quotation marks must be used when your specification contains a space or any of these characters: > < |
 
+## Clean the pkgs directory
+
+It might reach 90 GB!!
+
+```
+/home/gil_diy/miniconda3/pkgs
+```
+
+The pkgs directory is conda's package cache. I would strongly recommend not to delete packages there manually. 
+Doing so can break environments that use one of these packages. let conda decide which of the packages are safe to delete.
+
+```bash
+conda clean -p
+````
+
 ## References
 
 [Link](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#deactivating-an-environment)
