@@ -47,7 +47,7 @@
    * [Documentations](#documentations)
    * [Intresting Packages for manim](#intresting-packages-for-manim)
 
-<!-- Added by: gil_diy, at: Wed 19 Oct 2022 16:56:28 IDT -->
+<!-- Added by: gil_diy, at: Wed 19 Oct 2022 16:58:32 IDT -->
 
 <!--te-->
 
@@ -950,6 +950,9 @@ For adding new colors:
 [Link](https://docs.manim.community/en/stable/installation/linux.html)
 
 # Intresting Packages for manim
+
+
+[manim-meshes](https://github.com/bmmtstb/manim-meshes)
 
 [manim-fonts](https://github.com/naveen521kk/manim-fonts)
 
