@@ -47,7 +47,7 @@
    * [Documentations](#documentations)
    * [Intresting Packages for manim](#intresting-packages-for-manim)
 
-<!-- Added by: gil_diy, at: Wed 19 Oct 2022 16:32:32 IDT -->
+<!-- Added by: gil_diy, at: Wed 19 Oct 2022 16:50:00 IDT -->
 
 <!--te-->
 
@@ -958,3 +958,5 @@ For adding new colors:
 [manim for machine learning](https://github.com/manimml/ManimML)
 
 [Manim for physics](https://github.com/Matheart/manim-physics)
+
+[Manim for presentation with javascript](https://github.com/chubbc/manim_slides)
