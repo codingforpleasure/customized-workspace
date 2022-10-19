@@ -44,8 +44,9 @@
          * [Cylindrical coordinate system](#cylindrical-coordinate-system)
          * [Spherical coordinate system](#spherical-coordinate-system)
       * [Shapes should do](#shapes-should-do)
+   * [Documentations](#documentations)
 
-<!-- Added by: gil_diy, at: 2020-05-18T08:52+03:00 -->
+<!-- Added by: gil_diy, at: Wed 19 Oct 2022 11:28:49 IDT -->
 
 <!--te-->
 
@@ -942,3 +943,6 @@ For adding new colors:
 
 [heart](https://mathworld.wolfram.com/HeartCurve.html)
 
+# Documentations
+
+[Link](https://docs.manim.community/en/stable/installation/linux.html)
