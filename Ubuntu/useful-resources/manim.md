@@ -45,8 +45,9 @@
          * [Spherical coordinate system](#spherical-coordinate-system)
       * [Shapes should do](#shapes-should-do)
    * [Documentations](#documentations)
+   * [Intresting Packages for manim](#intresting-packages-for-manim)
 
-<!-- Added by: gil_diy, at: Wed 19 Oct 2022 13:27:20 IDT -->
+<!-- Added by: gil_diy, at: Wed 19 Oct 2022 16:24:18 IDT -->
 
 <!--te-->
 
@@ -947,3 +948,6 @@ For adding new colors:
 # Documentations
 
 [Link](https://docs.manim.community/en/stable/installation/linux.html)
+
+# Intresting Packages for manim
+[Link](https://github.com/naveen521kk/manim-fonts)
