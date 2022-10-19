@@ -87,7 +87,7 @@
       * [Flip image with numpy](#flip-image-with-numpy)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Wed 19 Oct 2022 14:58:35 IDT -->
+<!-- Added by: gil_diy, at: Wed 19 Oct 2022 14:58:38 IDT -->
 
 <!--te-->
 
@@ -824,8 +824,6 @@ vec.flatten()
 ```python
 
 ```
-
-
 
 ## Expand the shape of an array (similar to torch.unsqueeze)
 
