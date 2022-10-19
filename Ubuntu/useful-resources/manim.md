@@ -46,7 +46,7 @@
       * [Shapes should do](#shapes-should-do)
    * [Documentations](#documentations)
 
-<!-- Added by: gil_diy, at: Wed 19 Oct 2022 11:28:55 IDT -->
+<!-- Added by: gil_diy, at: Wed 19 Oct 2022 11:34:13 IDT -->
 
 <!--te-->
 
@@ -70,9 +70,6 @@ shorthand | option | Description
  `-o`| `--file_name` | Specify the name of the output file
  `-r`| `--resolution` | Resolution, passed as \"height,width\"
   ``| `--video_output_dir` | directory to write video
-
-
-
 
 
 
