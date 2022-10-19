@@ -47,7 +47,7 @@
    * [Documentations](#documentations)
    * [Intresting Packages for manim](#intresting-packages-for-manim)
 
-<!-- Added by: gil_diy, at: Wed 19 Oct 2022 16:52:43 IDT -->
+<!-- Added by: gil_diy, at: Wed 19 Oct 2022 16:52:47 IDT -->
 
 <!--te-->
 
