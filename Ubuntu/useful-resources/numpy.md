@@ -50,6 +50,7 @@
       * [Squizzing](#squizzing)
       * [ravel (contiguous flattened array)](#ravel-contiguous-flattened-array)
       * [Flatten](#flatten)
+      * [Roll](#roll)
       * [Expand the shape of an array (similar to torch.unsqueeze)](#expand-the-shape-of-an-array-similar-to-torchunsqueeze)
       * [splitting data](#splitting-data)
          * [np.array_split()](#nparray_split)
@@ -86,7 +87,7 @@
       * [Flip image with numpy](#flip-image-with-numpy)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Wed 19 Oct 2022 14:58:18 IDT -->
+<!-- Added by: gil_diy, at: Wed 19 Oct 2022 14:58:35 IDT -->
 
 <!--te-->
 
@@ -818,7 +819,13 @@ vec = np.array([[1,2,3,56,64,100,-50],
 vec.flatten()
 ```
 
-## 
+## Roll
+
+```python
+
+```
+
+
 
 ## Expand the shape of an array (similar to torch.unsqueeze)
 
