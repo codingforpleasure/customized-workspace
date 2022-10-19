@@ -47,7 +47,7 @@
    * [Documentations](#documentations)
    * [Intresting Packages for manim](#intresting-packages-for-manim)
 
-<!-- Added by: gil_diy, at: Wed 19 Oct 2022 16:29:52 IDT -->
+<!-- Added by: gil_diy, at: Wed 19 Oct 2022 16:32:27 IDT -->
 
 <!--te-->
 
@@ -956,3 +956,5 @@ For adding new colors:
 [manim-fontawesome](https://github.com/naveen521kk/manim-fontawesome)
 
 [manim for machine learning](https://github.com/manimml/ManimML)
+
+[Manim for physics](https://github.com/Matheart/manim-physics)
