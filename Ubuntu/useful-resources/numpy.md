@@ -87,7 +87,7 @@
       * [Flip image with numpy](#flip-image-with-numpy)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Wed 19 Oct 2022 14:59:43 IDT -->
+<!-- Added by: gil_diy, at: Wed 19 Oct 2022 15:00:03 IDT -->
 
 <!--te-->
 
@@ -834,6 +834,10 @@ np.roll(x, 2)
 x = np.arange(10)
 np.roll(x, 2)
 ```
+
+**Output:**
+
+`array([2, 3, 4, 5, 6, 7, 8, 9, 0, 1])`
 
 ## Expand the shape of an array (similar to torch.unsqueeze)
 
