@@ -46,7 +46,7 @@
       * [Shapes should do](#shapes-should-do)
    * [Documentations](#documentations)
 
-<!-- Added by: gil_diy, at: Wed 19 Oct 2022 13:25:43 IDT -->
+<!-- Added by: gil_diy, at: Wed 19 Oct 2022 13:26:13 IDT -->
 
 <!--te-->
 
@@ -64,6 +64,7 @@ shorthand | option | Description
  `-p`|  `--preview` | Automatically open the saved file once its done
  `-w`| `--write_to_movie` | Render the scene as a movie file
  `-ql`| `--low_quality` | Render at a low quality (for faster rendering)
+ `-qh`| `--low_quality` | Render at a low quality (for faster rendering)
  `-i`|`--save_as_gif`| Save the video as gif
  `-g`| `--save_pngs` | Save each frame as a png
  `-t`|`--transparent`| Render to a movie file with an alpha channel
