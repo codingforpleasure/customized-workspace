@@ -87,7 +87,7 @@
       * [Flip image with numpy](#flip-image-with-numpy)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Wed 19 Oct 2022 15:00:03 IDT -->
+<!-- Added by: gil_diy, at: Wed 19 Oct 2022 15:00:07 IDT -->
 
 <!--te-->
 
@@ -827,6 +827,7 @@ np.roll(x, 2)
 ```
 
 **Output:**
+
 `array([8, 9, 0, 1, 2, 3, 4, 5, 6, 7])`
 
 
