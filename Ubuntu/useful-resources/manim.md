@@ -46,7 +46,7 @@
       * [Shapes should do](#shapes-should-do)
    * [Documentations](#documentations)
 
-<!-- Added by: gil_diy, at: Wed 19 Oct 2022 13:24:38 IDT -->
+<!-- Added by: gil_diy, at: Wed 19 Oct 2022 13:25:12 IDT -->
 
 <!--te-->
 
@@ -73,7 +73,7 @@ shorthand | option | Description
 
 
 ```bash
-
+manim -pql <python-file> <function name - the scene>
 ```
 
 ## Operations
