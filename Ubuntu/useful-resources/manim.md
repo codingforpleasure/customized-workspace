@@ -46,7 +46,7 @@
       * [Shapes should do](#shapes-should-do)
    * [Documentations](#documentations)
 
-<!-- Added by: gil_diy, at: Wed 19 Oct 2022 13:25:35 IDT -->
+<!-- Added by: gil_diy, at: Wed 19 Oct 2022 13:25:38 IDT -->
 
 <!--te-->
 
@@ -69,7 +69,7 @@ shorthand | option | Description
  `-t`|`--transparent`| Render to a movie file with an alpha channel
  `-o`| `--file_name` | Specify the name of the output file
  `-r`| `--resolution` | Resolution, passed as \"height,width\"
-``| `--video_output_dir` | directory to write video
+ ``| `--video_output_dir` | directory to write video
 
 
 ```bash
