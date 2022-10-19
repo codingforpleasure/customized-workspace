@@ -27,6 +27,7 @@
             * [Treat pandas strings as numeric value  (casting)](#treat-pandas-strings-as-numeric-value--casting)
             * [Converting from numpy table to pandas dataframe](#converting-from-numpy-table-to-pandas-dataframe)
             * [Converting from pandas dataframe to numpy table](#converting-from-pandas-dataframe-to-numpy-table)
+            * [Converting from pandas dataframe to Series](#converting-from-pandas-dataframe-to-series)
             * [Converting categorical columns to numbers (4 Methods)](#converting-categorical-columns-to-numbers-4-methods)
             * [Methods of slicing in pandas](#methods-of-slicing-in-pandas)
             * [Accessing an element in pandas](#accessing-an-element-in-pandas)
@@ -95,7 +96,7 @@
       * [Dump dataframe into the clipboard](#dump-dataframe-into-the-clipboard)
       * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Sun 09 Oct 2022 17:15:49 IDT -->
+<!-- Added by: gil_diy, at: Wed 19 Oct 2022 15:08:54 IDT -->
 
 <!--te-->
 
@@ -834,7 +835,7 @@ df_new = df.explode('list_of_actors') # <- The magic is done using the function 
 ```
 **Output:**
 
-<center>
+
 
 movie_name|movie_length|list_of_actors
 ----------|------------|---------------
@@ -853,7 +854,6 @@ The Fighter|1.56|Mark Wahlberg
 The Fighter|1.56|Christian Bale
 The Fighter|1.56|Amy Adams
 
-</center>
 
 ## Group by:
 ```python
