@@ -10,7 +10,7 @@
       * [distinct](#distinct)
       * [top](#top)
 
-<!-- Added by: gil_diy, at: Thu 20 Oct 2022 17:27:18 IDT -->
+<!-- Added by: gil_diy, at: Thu 20 Oct 2022 17:27:21 IDT -->
 
 <!--te-->
 
@@ -88,7 +88,7 @@ Perf
 
  ```
  Perf
- | search * endsswith "Bytes"
+ | search * endswith "Bytes"
  ```
  
 
