@@ -10,7 +10,7 @@
       * [distinct](#distinct)
       * [top](#top)
 
-<!-- Added by: gil_diy, at: Thu 20 Oct 2022 17:24:09 IDT -->
+<!-- Added by: gil_diy, at: Thu 20 Oct 2022 17:24:11 IDT -->
 
 <!--te-->
 
@@ -60,7 +60,7 @@ Perf
 ```
 
 
-* Within a table, you can search for the **value anywahere** in the text in the specified column.
+* Within a table, you can search for the **value anywhere** in the text in the specified column.
 
 ```
 Perf
