@@ -10,7 +10,7 @@
       * [distinct](#distinct)
       * [top](#top)
 
-<!-- Added by: gil_diy, at: Thu 20 Oct 2022 17:35:28 IDT -->
+<!-- Added by: gil_diy, at: Thu 20 Oct 2022 17:37:05 IDT -->
 
 <!--te-->
 
@@ -151,6 +151,28 @@ Perf
    		)
 ```
 
+
+```
+Perf
+| where TimeGenerated >= ago(1h) 
+   and (CounterName == "Bytes Received/sec"
+        or
+   		CounterName == "% Processor Time"
+   		)
+   and CounterValue > 0 
+```
+
+same as:
+
+```
+Perf
+| where TimeGenerated >= ago(1h) 
+|  where (CounterName == "Bytes Received/sec"
+        or
+   		CounterName == "% Processor Time"
+   		)
+| where CounterValue > 0 
+```
 ## take
 
 ## count
