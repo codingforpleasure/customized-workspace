@@ -10,7 +10,7 @@
       * [distinct](#distinct)
       * [top](#top)
 
-<!-- Added by: gil_diy, at: Thu 20 Oct 2022 17:27:23 IDT -->
+<!-- Added by: gil_diy, at: Thu 20 Oct 2022 17:27:33 IDT -->
 
 <!--te-->
 
@@ -84,7 +84,7 @@ Perf
  ```
 
 
-* Ends with Bytes then any text after it
+* Ends with Bytes
 
  ```
  Perf
