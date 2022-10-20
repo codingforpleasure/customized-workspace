@@ -10,7 +10,7 @@
       * [distinct](#distinct)
       * [top](#top)
 
-<!-- Added by: gil_diy, at: Thu 20 Oct 2022 17:24:11 IDT -->
+<!-- Added by: gil_diy, at: Thu 20 Oct 2022 17:24:20 IDT -->
 
 <!--te-->
 
@@ -64,7 +64,7 @@ Perf
 
 ```
 Perf
-| search CounterName=="MBytes"
+| search CounterName:"MBytes"
 ```
 
 
