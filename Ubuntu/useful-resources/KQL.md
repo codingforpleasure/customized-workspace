@@ -10,7 +10,7 @@
       * [distinct](#distinct)
       * [top](#top)
 
-<!-- Added by: gil_diy, at: Thu 20 Oct 2022 17:37:05 IDT -->
+<!-- Added by: gil_diy, at: Thu 20 Oct 2022 17:39:24 IDT -->
 
 <!--te-->
 
@@ -173,6 +173,16 @@ Perf
    		)
 | where CounterValue > 0 
 ```
+
+
+
+
+* You can simulate search using where, Here it searches all columns the keyword Bytes
+```
+Perf
+| where * has "Bytes"
+```
+
 ## take
 
 ## count
