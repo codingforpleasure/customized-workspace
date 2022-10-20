@@ -1,13 +1,59 @@
 <!--ts-->
    * [KQL](#kql)
+      * [Search](#search)
+      * [Where](#where)
+      * [take](#take)
+      * [count](#count)
+      * [summarize](#summarize)
+      * [extend](#extend)
+      * [project](#project)
+      * [distinct](#distinct)
+      * [top](#top)
 
-<!-- Added by: gil_diy, at: Thu 20 Oct 2022 16:59:21 IDT -->
+<!-- Added by: gil_diy, at: Thu 20 Oct 2022 17:15:00 IDT -->
 
 <!--te-->
 
 # KQL 
 
 The Kusto Query Language, is used to query Azure's services
+
+
+## Search
+
+
+Will search all columns in the perf table for the value "Memory"
+
+```
+Perf
+| search "Memory"
+```
+
+Search is not case sesintive by default
+
+```
+Perf
+| search "memory"
+```
+
+## Where
+
+## take
+
+## count
+
+## summarize
+
+## extend
+
+## project
+
+## distinct
+
+## top
+
+
+
 
 ## 
 
