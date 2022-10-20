@@ -10,7 +10,7 @@
       * [distinct](#distinct)
       * [top](#top)
 
-<!-- Added by: gil_diy, at: Thu 20 Oct 2022 17:16:09 IDT -->
+<!-- Added by: gil_diy, at: Thu 20 Oct 2022 17:21:38 IDT -->
 
 <!--te-->
 
@@ -43,6 +43,21 @@ Perf
 | search kind=case_sensitive "memory"
 ```
 
+* A better choice is to limit the search to specific tables
+
+search in (Perf, Event, Alert) "Contoso"
+
+
+* The syntax : `Perf | search "Contoso"`
+   Is the same as: `search in (Perf) "Contoso"`
+
+
+* Within a table, you can search a specific column for the exact match
+
+```
+Perf
+| search CounterName: "MBytes"
+```
 
 
 ## Where
