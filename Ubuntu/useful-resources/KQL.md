@@ -10,7 +10,7 @@
       * [distinct](#distinct)
       * [top](#top)
 
-<!-- Added by: gil_diy, at: Thu 20 Oct 2022 17:27:35 IDT -->
+<!-- Added by: gil_diy, at: Thu 20 Oct 2022 17:31:35 IDT -->
 
 <!--te-->
 
@@ -91,6 +91,31 @@ Perf
  | search * endswith "Bytes"
  ```
  
+* Ends with Bytes
+
+ ```
+ Perf
+ | search * endswith "Bytes"
+ ```
+ 
+* Begins with Free, and with Bytes, anything between
+
+```
+Perf
+| search "Free*bytes"
+```
+
+* Search can be combined logically
+```
+Perf
+| search "Free*bytes" and ("C:" or "D:")
+```
+
+* Search also supports regex in specific column name
+```
+Perf
+| search InstanceName matches regex "[A-Z]:"
+```
 
 
 ## Where
