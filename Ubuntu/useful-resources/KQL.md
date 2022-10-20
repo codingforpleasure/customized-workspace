@@ -10,7 +10,7 @@
       * [distinct](#distinct)
       * [top](#top)
 
-<!-- Added by: gil_diy, at: Thu 20 Oct 2022 17:25:51 IDT -->
+<!-- Added by: gil_diy, at: Thu 20 Oct 2022 17:27:18 IDT -->
 
 <!--te-->
 
@@ -76,14 +76,20 @@ Perf
 
 
 
-* Can also search across all columns using wildcards
+* Begins with Bytes then any text after it
 
  ```
  Perf
- | search "*Bytes*"
+ | search * startswith "Bytes"
  ```
 
 
+* Ends with Bytes then any text after it
+
+ ```
+ Perf
+ | search * endsswith "Bytes"
+ ```
  
 
 
