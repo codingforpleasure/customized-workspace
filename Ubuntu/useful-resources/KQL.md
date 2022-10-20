@@ -1,7 +1,7 @@
 <!--ts-->
    * [KQL](#kql)
 
-<!-- Added by: gil_diy, at: Thu 20 Oct 2022 16:29:50 IDT -->
+<!-- Added by: gil_diy, at: Thu 20 Oct 2022 16:29:53 IDT -->
 
 <!--te-->
 
