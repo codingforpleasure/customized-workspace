@@ -10,7 +10,7 @@
       * [distinct](#distinct)
       * [top](#top)
 
-<!-- Added by: gil_diy, at: Thu 20 Oct 2022 17:15:00 IDT -->
+<!-- Added by: gil_diy, at: Thu 20 Oct 2022 17:16:09 IDT -->
 
 <!--te-->
 
@@ -22,19 +22,28 @@ The Kusto Query Language, is used to query Azure's services
 ## Search
 
 
-Will search all columns in the perf table for the value "Memory"
+* Will search all columns in the perf table for the value "Memory"
 
 ```
 Perf
 | search "Memory"
 ```
 
-Search is not case sesintive by default
+* Search is not case sesintive by default
 
 ```
 Perf
 | search "memory"
 ```
+
+* Although you can make it sensitive using a switch
+
+```
+Perf
+| search kind=case_sensitive "memory"
+```
+
+
 
 ## Where
 
