@@ -10,7 +10,7 @@
       * [distinct](#distinct)
       * [top](#top)
 
-<!-- Added by: gil_diy, at: Thu 20 Oct 2022 17:21:41 IDT -->
+<!-- Added by: gil_diy, at: Thu 20 Oct 2022 17:24:09 IDT -->
 
 <!--te-->
 
@@ -52,14 +52,23 @@ search in (Perf, Event, Alert) "Contoso"
    Is the same as: `search in (Perf) "Contoso"`
 
 
-* Within a table, you can search a specific column for the exact match
+* Within a table, you can search a specific column for the **exact match**
 
 ```
 Perf
-| search CounterName: "MBytes"
+| search CounterName=="Available MBytes"
 ```
 
 
+* Within a table, you can search for the **value anywahere** in the text in the specified column.
+
+```
+Perf
+| search CounterName=="MBytes"
+```
+
+
+ 
 ## Where
 
 ## take
