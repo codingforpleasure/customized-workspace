@@ -10,7 +10,7 @@
       * [distinct](#distinct)
       * [top](#top)
 
-<!-- Added by: gil_diy, at: Thu 20 Oct 2022 17:24:23 IDT -->
+<!-- Added by: gil_diy, at: Thu 20 Oct 2022 17:25:49 IDT -->
 
 <!--te-->
 
@@ -64,11 +64,29 @@ Perf
 
 ```
 Perf
-| search CounterName:"MBytes"
+| search CounterName: "MBytes"
 ```
+
+* Can also search across all columns using wildcards
+
+ ```
+ Perf
+ | search "*Bytes*"
+ ```
+
+
+
+* Can also search across all columns using wildcards
+
+ ```
+ Perf
+ | search "*Bytes*"
+ ```
 
 
  
+
+
 ## Where
 
 ## take
