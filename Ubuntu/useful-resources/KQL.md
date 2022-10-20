@@ -10,7 +10,7 @@
       * [distinct](#distinct)
       * [top](#top)
 
-<!-- Added by: gil_diy, at: Thu 20 Oct 2022 17:34:20 IDT -->
+<!-- Added by: gil_diy, at: Thu 20 Oct 2022 17:35:08 IDT -->
 
 <!--te-->
 
@@ -139,6 +139,16 @@ Perf
 | where TimeGenerated >= ago(1h) 
    and CounterName == "Bytes Received/sec"
    and CpunterValue > 0
+```
+
+
+```
+Perf
+| where TimeGenerated >= ago(1h) 
+   and (CounterName == "Bytes Received/sec"
+        or
+   		CounterName == "Bytes Received/sec"
+   		)
 ```
 
 ## take
