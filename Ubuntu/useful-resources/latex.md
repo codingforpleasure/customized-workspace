@@ -25,7 +25,7 @@
       * [LaTex mathematical symbols (nice)](#latex-mathematical-symbols-nice)
       * [Useful](#useful)
 
-<!-- Added by: gil_diy, at: Sat 22 Oct 2022 18:12:36 IDT -->
+<!-- Added by: gil_diy, at: Sat 22 Oct 2022 18:12:39 IDT -->
 
 <!--te-->
 
@@ -246,7 +246,7 @@ You should make include: `\usetikzlibrary{shapes.multipart}`
 [Link](https://latex.wikia.org/wiki/List_of_LaTeX_symbols)
 
 ## Useful
-[Plot Neural Networks with Latex ](https://github.com/HarisIqbal88/PlotNeuralNet)
+[Plot Neural Networks with Latex](https://github.com/HarisIqbal88/PlotNeuralNet)
 
 
 
