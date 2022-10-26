@@ -62,7 +62,7 @@
       * [Writing mathematical expression](#writing-mathematical-expression)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Wed 26 Oct 2022 23:43:11 IDT -->
+<!-- Added by: gil_diy, at: Wed 26 Oct 2022 23:43:15 IDT -->
 
 <!--te-->
 
@@ -762,6 +762,10 @@ if __name__ == '__main__':
     fig.tight_layout(pad=2.0)
     plt.show()
 ```
+
+<p align="center"> <!-- style="width:400px;" -->
+  <img src="images/matplotlib/3d_vectors.png" title="tool tip here">
+</p>
 
 ### Plotting time series
 
