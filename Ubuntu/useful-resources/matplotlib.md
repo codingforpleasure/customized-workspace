@@ -62,7 +62,7 @@
       * [Writing mathematical expression](#writing-mathematical-expression)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Wed 26 Oct 2022 23:41:30 IDT -->
+<!-- Added by: gil_diy, at: Wed 26 Oct 2022 23:41:33 IDT -->
 
 <!--te-->
 
