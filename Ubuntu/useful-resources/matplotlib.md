@@ -62,7 +62,7 @@
       * [Writing mathematical expression](#writing-mathematical-expression)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Wed 26 Oct 2022 23:43:15 IDT -->
+<!-- Added by: gil_diy, at: Wed 26 Oct 2022 23:47:09 IDT -->
 
 <!--te-->
 
@@ -718,6 +718,7 @@ for length, vector in zip(pca.explained_variance_, pca.components_):
     draw_vector(pca.mean_, pca.mean_ + v)
 ```
 
+[Taken from here](https://jakevdp.github.io/PythonDataScienceHandbook/05.09-principal-component-analysis.html)
 
 
 ### Draw 3d vectors 
