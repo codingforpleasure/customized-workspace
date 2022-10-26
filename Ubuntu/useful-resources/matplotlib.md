@@ -62,7 +62,7 @@
       * [Writing mathematical expression](#writing-mathematical-expression)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Wed 26 Oct 2022 23:39:22 IDT -->
+<!-- Added by: gil_diy, at: Wed 26 Oct 2022 23:39:37 IDT -->
 
 <!--te-->
 
@@ -651,6 +651,26 @@ plt.show()
 ## Adding patches
 
 ```python
+import matplotlib.pyplot as plt
+from matplotlib.patches import Rectangle
+import numpy as np
+
+if __name__ == '__main__':
+    np.random.seed(33)
+    X = np.random.normal(0, 3, size=50)
+    Y = X + np.random.normal(0, 3, size=50)
+
+    # Adding rectangle patch
+
+    plt.scatter(X, Y, alpha=0.7)
+    rect = Rectangle(xy=(0, 0),
+                     width=8,
+                     height=12,
+                     fill=False,
+                     angle=0)
+
+    plt.gca().add_patch(rect)
+    plt.show()
 
 ```
 
