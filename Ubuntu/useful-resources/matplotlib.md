@@ -3,7 +3,7 @@
       * [Colors names](#colors-names)
       * [Color maps in matplotlib](#color-maps-in-matplotlib)
          * [Avaliable colors pallete](#avaliable-colors-pallete)
-         * [Get number of colors is a palette](#get-number-of-colors-is-a-palette)
+         * [Get number of colors in a palette](#get-number-of-colors-in-a-palette)
          * [Get k colors from a specified palette](#get-k-colors-from-a-specified-palette)
          * [Usage of color map in seaborn](#usage-of-color-map-in-seaborn)
    * [Basics (Stateful appraoch)](#basics-stateful-appraoch)
@@ -25,6 +25,7 @@
       * [Boxplot](#boxplot)
       * [Scatter Plots](#scatter-plots)
       * [Stem plot](#stem-plot)
+      * [Adding patches](#adding-patches)
       * [QQplot](#qqplot)
       * [Draw arrows](#draw-arrows)
          * [Draw 3d vectors](#draw-3d-vectors)
@@ -50,7 +51,10 @@
          * [Export plot](#export-plot)
          * [Drawing shapes with Matplotlib (patches)](#drawing-shapes-with-matplotlib-patches)
          * [Configuring plot design](#configuring-plot-design)
-            * [Title plot size](#title-plot-size)
+            * [All parameters regarding design](#all-parameters-regarding-design)
+            * [Title font size](#title-font-size)
+            * [Change font](#change-font)
+            * [List fonts installed on your machine which Matplotlic can use of them](#list-fonts-installed-on-your-machine-which-matplotlic-can-use-of-them)
             * [Adding Legend to plot](#adding-legend-to-plot)
             * [Legend text size](#legend-text-size)
             * [Ticks text size](#ticks-text-size)
@@ -58,7 +62,7 @@
       * [Writing mathematical expression](#writing-mathematical-expression)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Sat 08 Oct 2022 11:02:00 IDT -->
+<!-- Added by: gil_diy, at: Wed 26 Oct 2022 23:39:22 IDT -->
 
 <!--te-->
 
@@ -643,6 +647,12 @@ plt.show()
 <p align="center"> 
   <img src="images/matplotlib/stem_plot.png" title="tool tip here">
 </p>
+
+## Adding patches
+
+```python
+
+```
 
 ## QQplot
 
