@@ -62,7 +62,7 @@
       * [Writing mathematical expression](#writing-mathematical-expression)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Wed 26 Oct 2022 23:41:02 IDT -->
+<!-- Added by: gil_diy, at: Wed 26 Oct 2022 23:41:30 IDT -->
 
 <!--te-->
 
@@ -674,7 +674,7 @@ if __name__ == '__main__':
 ```
 
 <p align="center">
-  <img width="400" src="images/matplotlib_patch1.png" title="Look into the image">
+  <img width="400" src="images/matplotlib/matplotlib_patch1.png" title="Look into the image">
 </p>
 
 ## QQplot
