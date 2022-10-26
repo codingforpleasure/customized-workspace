@@ -62,7 +62,7 @@
       * [Writing mathematical expression](#writing-mathematical-expression)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Wed 26 Oct 2022 23:39:45 IDT -->
+<!-- Added by: gil_diy, at: Wed 26 Oct 2022 23:39:56 IDT -->
 
 <!--te-->
 
@@ -672,6 +672,10 @@ if __name__ == '__main__':
     plt.gca().add_patch(rect)
     plt.show()
 ```
+
+<p align="center">
+  <img width="400" src="images/" title="Look into the image">
+</p>
 
 ## QQplot
 
