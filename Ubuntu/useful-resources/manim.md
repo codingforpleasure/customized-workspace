@@ -48,7 +48,7 @@
    * [Documentations](#documentations)
    * [Intresting Packages for manim](#intresting-packages-for-manim)
 
-<!-- Added by: gil_diy, at: Wed 26 Oct 2022 08:08:08 IDT -->
+<!-- Added by: gil_diy, at: Wed 26 Oct 2022 08:09:21 IDT -->
 
 <!--te-->
 
@@ -84,6 +84,66 @@ manim -pql <python-file> <function name - the scene>
 ## Change color of the background
 
 Explained well here: `/home/gil_diy/.local/share/virtualenvs/manim_kickass-h8N38TFI/lib/python3.8/site-packages/manim/_config/utils.py`
+
+```
+    There are many ways of interacting with config options.  Take for example
+    the config option ``background_color``.  There are three ways to change it:
+    via a config file, via CLI flags, or programmatically.
+
+    To set the background color via a config file, save the following
+    ``manim.cfg`` file with the following contents.
+
+    .. code-block::
+
+       [CLI]
+       background_color = WHITE
+
+    In order to have this ``.cfg`` file apply to a manim scene, it needs to be
+    placed in the same directory as the script,
+
+    .. code-block:: bash
+
+          project/
+          ├─scene.py
+          └─manim.cfg
+
+    Now, when the user executes
+
+    .. code-block:: bash
+
+        manim scene.py
+
+    the background of the scene will be set to ``WHITE``.  This applies regardless
+    of where the manim command is invoked from.
+
+    Command line arguments override ``.cfg`` files.  In the previous example,
+    executing
+
+    .. code-block:: bash
+
+        manim scene.py -c BLUE
+
+    will set the background color to BLUE, regardless of the contents of
+    ``manim.cfg``.
+
+    Finally, any programmatic changes made within the scene script itself will
+    override the command line arguments.  For example, if ``scene.py`` contains
+    the following
+
+    .. code-block:: python
+
+        from manim import *
+
+        config.background_color = RED
+
+
+        class MyScene(Scene):
+            ...
+
+    the background color will be set to RED, regardless of the contents of
+    ``manim.cfg`` or the CLI arguments used when invoking manim.
+
+```
 
 ## Operations
 
