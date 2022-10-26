@@ -62,7 +62,7 @@
       * [Writing mathematical expression](#writing-mathematical-expression)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Wed 26 Oct 2022 23:41:36 IDT -->
+<!-- Added by: gil_diy, at: Wed 26 Oct 2022 23:43:11 IDT -->
 
 <!--te-->
 
@@ -721,10 +721,6 @@ for length, vector in zip(pca.explained_variance_, pca.components_):
 
 
 ### Draw 3d vectors 
-
-<p align="center"> <!-- style="width:400px;" -->
-  <img src="images/matplotlib/3d_vectors.png" title="tool tip here">
-</p>
 
 ```python
 import matplotlib.pyplot as plt
