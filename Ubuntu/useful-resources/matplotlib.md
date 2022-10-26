@@ -62,7 +62,7 @@
       * [Writing mathematical expression](#writing-mathematical-expression)
    * [Reference](#reference)
 
-<!-- Added by: gil_diy, at: Wed 26 Oct 2022 23:39:37 IDT -->
+<!-- Added by: gil_diy, at: Wed 26 Oct 2022 23:39:45 IDT -->
 
 <!--te-->
 
@@ -671,7 +671,6 @@ if __name__ == '__main__':
 
     plt.gca().add_patch(rect)
     plt.show()
-
 ```
 
 ## QQplot
