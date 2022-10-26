@@ -1,6 +1,7 @@
 <!--ts-->
    * [Manim](#manim)
       * [Execution options](#execution-options)
+      * [Change color of the background](#change-color-of-the-background)
       * [Operations](#operations)
          * [Add/remove text from the screen without animation](#addremove-text-from-the-screen-without-animation)
          * [Adding text to the screen with animation](#adding-text-to-the-screen-with-animation)
@@ -47,7 +48,7 @@
    * [Documentations](#documentations)
    * [Intresting Packages for manim](#intresting-packages-for-manim)
 
-<!-- Added by: gil_diy, at: Wed 19 Oct 2022 17:02:13 IDT -->
+<!-- Added by: gil_diy, at: Wed 26 Oct 2022 08:08:04 IDT -->
 
 <!--te-->
 
@@ -78,6 +79,11 @@ shorthand | option | Description
 ```bash
 manim -pql <python-file> <function name - the scene>
 ```
+
+
+## Change color of the background
+
+Explained well here: `/home/gil_diy/.local/share/virtualenvs/manim_kickass-h8N38TFI/lib/python3.8/site-packages/manim/_config/utils.py`
 
 ## Operations
 
