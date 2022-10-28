@@ -13,7 +13,7 @@
       * [Extend](#extend)
       * [Project](#project)
 
-<!-- Added by: gil_diy, at: Fri 28 Oct 2022 07:46:47 IDT -->
+<!-- Added by: gil_diy, at: Fri 28 Oct 2022 12:11:48 IDT -->
 
 <!--te-->
 
@@ -111,6 +111,8 @@ Here we have 3 pipes after each pipe there is constraiht,
 usind the **where** command we are focusing on specific columns.
 
 The exact command can be written like this:
+
+
 ```
 Perf
 | where TimeGenerated >= ago(1h) 
@@ -120,6 +122,8 @@ Perf
         )
    and CounterValue > 0
 ```
+
+
 ## Take
 ```
 Perf | take 7 
