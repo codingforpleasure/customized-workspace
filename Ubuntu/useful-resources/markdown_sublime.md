@@ -45,3 +45,13 @@ Snippet description| how to invoke the snippet?
 ## Build systems (Useful stuff)
 
 [Great Reference](https://www.sublimetext.com/docs/3/build_systems.html)
+
+## Designing markdown for github profile
+
+[Collection of markdown badges](https://github.com/Ileriayo/markdown-badges)
+
+[Link](https://github.com/codingforpleasure/SamratSahoo)
+
+[Guidelines](https://www.sitepoint.com/github-profile-readme/)
+
+[Guidelines 2](https://towardsdatascience.com/build-a-stunning-readme-for-your-github-profile-9b80434fe5d7)

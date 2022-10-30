@@ -1237,7 +1237,7 @@ plt.contourf(x1, x2, y_pred, alpha=0.3, cmap=custom_cmap)
 
 [Link](https://matplotlib.org/stable/tutorials/text/mathtext.html?highlight=writing%20mathematical%20expressions)
 
-##
+
 
 # Reference
 
@@ -1245,4 +1245,8 @@ plt.contourf(x1, x2, y_pred, alpha=0.3, cmap=custom_cmap)
 
 [Very nice Resource 2](https://www.southampton.ac.uk/~fangohr/training/python/notebooks/Matplotlib.html)
 
-[visualizations-to-show-proportions-or-percentages-instead-of-a-pie-chart](https://towardsdatascience.com/9-visualizations-to-show-proportions-or-percentages-instead-of-a-pie-chart-4e8d81617451)
+[Visualizations to show proportions or percentages instead of a pie chart](https://towardsdatascience.com/9-visualizations-to-show-proportions-or-percentages-instead-of-a-pie-chart-4e8d81617451)
+
+[A hands on guide to creating animated plots using matplotlib](https://analyticsindiamag.com/a-hands-on-guide-to-creating-animated-plots-using-matplotlib/)
+
+[Create bar chart race](https://github.com/dexplo/bar_chart_race)
