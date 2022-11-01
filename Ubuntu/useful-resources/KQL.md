@@ -31,7 +31,7 @@
          * [starcat](#starcat)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Tue 01 Nov 2022 10:29:39 IST -->
+<!-- Added by: gil_diy, at: Tue 01 Nov 2022 10:31:01 IST -->
 
 <!--te-->
 
@@ -391,7 +391,12 @@ Perf | extend time_diff = now() - TimeGenerated
 
 **Example #2:**
 
-
+```
+Perf |
+extend hour=datetime_part("Hour", TimeGenerated) |
+extend isAfternoon = hour > 7 |
+summarize count() by isAfterNoon
+```
 
 
 ### Timespan Arithmetic
