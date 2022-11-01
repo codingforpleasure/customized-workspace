@@ -15,7 +15,7 @@
    * [Distinct](#distinct)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Tue 01 Nov 2022 09:08:30 IST -->
+<!-- Added by: gil_diy, at: Tue 01 Nov 2022 09:09:38 IST -->
 
 <!--te-->
 
@@ -261,7 +261,9 @@ Perf | where TimeGenerated > ago(1h)
 
 ## Distinct
 
-The command distinct returns a list of values which are not repetitive 
+The command distinct returns a list of values which are not repetitive.
+
+Example: ['Mory', 'Gil', 'Omer', 'Omer', 'Mory'] -> ['Mory', 'Gil', 'Omer'] 
 
 ```
 Perf | distinct InstanceName
