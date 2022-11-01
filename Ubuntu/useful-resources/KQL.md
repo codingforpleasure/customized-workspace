@@ -29,7 +29,7 @@
          * [starcat](#starcat)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Tue 01 Nov 2022 09:25:15 IST -->
+<!-- Added by: gil_diy, at: Tue 01 Nov 2022 09:28:10 IST -->
 
 <!--te-->
 
@@ -286,6 +286,17 @@ Perf | distinct InstanceName
 ## Scalars Operators
 
 ### print
+
+print command is used for printing messages on the screen
+
+```
+print "Mory!!"
+```
+evaluate mathemtical expressions:
+
+```
+print 11*18
+```
 
 ### now
 
