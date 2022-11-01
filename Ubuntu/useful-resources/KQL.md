@@ -19,8 +19,6 @@
       * [ago](#ago)
       * [sort](#sort)
       * [extract](#extract)
-* [Example #1](#example-1)
-* [Example #2](#example-2)
       * [parse](#parse)
       * [datetime](#datetime)
       * [Timespan Arithmetic](#timespan-arithmetic)
@@ -31,7 +29,7 @@
          * [starcat](#starcat)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Tue 01 Nov 2022 10:31:04 IST -->
+<!-- Added by: gil_diy, at: Tue 01 Nov 2022 10:33:47 IST -->
 
 <!--te-->
 
@@ -357,7 +355,7 @@ Perf | sort by Computer
 Using the extract command we can retrieve the relevant characters 
 which satisfy the constraints. 
 
-# Example #1
+**Example #1**
 
 In our case we requested below all characters,
 which are alphabetical (numbers will get discarded).
@@ -366,7 +364,7 @@ which are alphabetical (numbers will get discarded).
 print extract("([a-z]+)", 0, "454846mory455")
 ```
 
-# Example #2
+**Example #2**
 
 ```
 Perf | where ObjectName = "LogicalDisk" and Instancename matches regex "[A-Z]:"
