@@ -29,7 +29,7 @@
          * [starcat](#starcat)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Tue 01 Nov 2022 09:33:14 IST -->
+<!-- Added by: gil_diy, at: Tue 01 Nov 2022 09:34:34 IST -->
 
 <!--te-->
 
@@ -310,6 +310,7 @@ print now()
 
 brings us the datetime according to the value we have passed.
 
+Gives us yesterday:
 ```
 print ago(1d)
 ```
@@ -328,6 +329,12 @@ print ago(1s)
 
 ```
 print ago(1ms)
+```
+
+Gives us tomorrow:
+
+```
+print ago(-1d)
 ```
 
 
