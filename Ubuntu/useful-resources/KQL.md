@@ -31,7 +31,7 @@
          * [starcat](#starcat)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Tue 01 Nov 2022 10:18:09 IST -->
+<!-- Added by: gil_diy, at: Tue 01 Nov 2022 10:18:57 IST -->
 
 <!--te-->
 
@@ -379,6 +379,8 @@ Perf | where ObjectName = "LogicalDisk" and Instancename matches regex "[A-Z]:"
 TODO give a good example!!!!
 
 ### datetime
+
+Here we are adding a new column which holds the amount of time past since Timegenrated to now.
 
 
 ```
