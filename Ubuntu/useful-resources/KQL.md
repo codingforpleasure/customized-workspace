@@ -29,7 +29,7 @@
          * [starcat](#starcat)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Tue 01 Nov 2022 09:30:06 IST -->
+<!-- Added by: gil_diy, at: Tue 01 Nov 2022 09:32:53 IST -->
 
 <!--te-->
 
@@ -307,6 +307,30 @@ print now()
 ```
 
 ### ago
+
+brings us the datetime according to the constraint
+
+```
+print ago(1d)
+```
+
+```
+print ago(1h)
+```
+
+```
+print ago(1m)
+```
+
+```
+print ago(1s)
+```
+
+```
+print ago(1ms)
+```
+
+
 
 ### sort
 
