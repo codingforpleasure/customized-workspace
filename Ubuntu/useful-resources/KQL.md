@@ -13,9 +13,23 @@
    * [Extend](#extend)
    * [Project](#project)
    * [Distinct](#distinct)
+   * [Scalars Operators](#scalars-operators)
+      * [print](#print)
+      * [now](#now)
+      * [ago](#ago)
+      * [sort](#sort)
+      * [extract](#extract)
+      * [parse](#parse)
+      * [datetime](#datetime)
+      * [Timespan Arithmetic](#timespan-arithmetic)
+      * [startof ...](#startof-)
+      * [endof ...](#endof-)
+      * [between](#between)
+      * [String operators](#string-operators)
+         * [starcat](#starcat)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Tue 01 Nov 2022 09:21:12 IST -->
+<!-- Added by: gil_diy, at: Tue 01 Nov 2022 09:25:12 IST -->
 
 <!--te-->
 
@@ -268,4 +282,33 @@ Example: ['Mory', 'Gil', 'Omer', 'Omer', 'Mory'] -> ['Mory', 'Gil', 'Omer']
 ```
 Perf | distinct InstanceName
 ```
+
+## Scalars Operators
+
+### print
+
+### now
+
+### ago
+
+### sort
+
+### extract
+
+### parse
+
+### datetime
+
+### Timespan Arithmetic
+
+### startof ...
+
+### endof ...
+
+### between
+
+
+### String operators
+
+#### starcat
 
