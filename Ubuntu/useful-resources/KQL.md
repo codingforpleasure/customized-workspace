@@ -31,7 +31,7 @@
          * [starcat](#starcat)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Tue 01 Nov 2022 10:11:35 IST -->
+<!-- Added by: gil_diy, at: Tue 01 Nov 2022 10:14:35 IST -->
 
 <!--te-->
 
@@ -375,6 +375,8 @@ Perf | where ObjectName = "LogicalDisk" and Instancename matches regex "[A-Z]:"
 
 
 ### parse
+
+TODO give a good example!!!!
 
 ### datetime
 
