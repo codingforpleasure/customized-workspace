@@ -15,7 +15,7 @@
    * [Distinct](#distinct)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Tue 01 Nov 2022 09:09:38 IST -->
+<!-- Added by: gil_diy, at: Tue 01 Nov 2022 09:21:00 IST -->
 
 <!--te-->
 
@@ -254,7 +254,7 @@ it will discard the columns we have mentioned in the query.
 In the example below we are discarding the following columns:
 TenantId,SourceSystem , CounterPath , CounterValue.
 
-```KQL
+```
 Perf | where TimeGenerated > ago(1h)
      |  project-away TenantId,SourceSystem , CounterPath , MG, CounterValue
  ```
