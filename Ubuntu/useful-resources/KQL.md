@@ -31,7 +31,7 @@
          * [starcat](#starcat)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Tue 01 Nov 2022 10:19:08 IST -->
+<!-- Added by: gil_diy, at: Tue 01 Nov 2022 10:29:33 IST -->
 
 <!--te-->
 
@@ -383,9 +383,14 @@ TODO give a good example!!!!
 Here we are adding a new column which holds the amount of time past since Time-generated to now.
 
 
+**Example #1:**
+
 ```
 Perf | extend time_diff = now() - TimeGenerated
 ```
+
+
+
 
 ### Timespan Arithmetic
 
