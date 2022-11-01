@@ -29,7 +29,7 @@
          * [starcat](#starcat)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Tue 01 Nov 2022 09:36:27 IST -->
+<!-- Added by: gil_diy, at: Tue 01 Nov 2022 09:41:01 IST -->
 
 <!--te-->
 
@@ -341,6 +341,12 @@ print ago(-1d)
 
 
 ### sort
+
+Sort table alphabetically the rows according to a specific column.
+
+```
+Perf | sort by Computer
+```
 
 ### extract
 
