@@ -29,7 +29,7 @@
          * [starcat](#starcat)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Tue 01 Nov 2022 09:29:46 IST -->
+<!-- Added by: gil_diy, at: Tue 01 Nov 2022 09:30:04 IST -->
 
 <!--te-->
 
@@ -305,6 +305,7 @@ returns the current datetime
 ```
 print now()
 ```
+
 
 ### ago
 
