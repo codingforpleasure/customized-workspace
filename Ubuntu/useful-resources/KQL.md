@@ -29,7 +29,7 @@
          * [starcat](#starcat)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Tue 01 Nov 2022 09:32:56 IST -->
+<!-- Added by: gil_diy, at: Tue 01 Nov 2022 09:33:08 IST -->
 
 <!--te-->
 
@@ -308,7 +308,7 @@ print now()
 
 ### ago
 
-brings us the datetime according to the constraint
+brings us the datetime according to the value we have passed.
 
 ```
 print ago(1d)
