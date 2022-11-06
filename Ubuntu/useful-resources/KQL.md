@@ -23,13 +23,17 @@
       * [datetime](#datetime)
       * [Timespan Arithmetic](#timespan-arithmetic)
       * [startof ...](#startof-)
+         * [Start of year](#start-of-year)
+         * [Start of hour](#start-of-hour)
       * [endof ...](#endof-)
+         * [end of year](#end-of-year)
+         * [end of hour](#end-of-hour)
       * [between](#between)
       * [String operators](#string-operators)
          * [starcat](#starcat)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Tue 01 Nov 2022 10:34:52 IST -->
+<!-- Added by: gil_diy, at: Sun 06 Nov 2022 19:10:25 IST -->
 
 <!--te-->
 
@@ -192,7 +196,7 @@ Combining the summarize function with count function outputs the count of each d
 
 ```
 Perf | summarize NumberOfEntries=count()
-               by bin(TimeGenerated,1h)
+               by bin(TimeGenerated,1d)
 ```
 
 Here we are focusing on Perf table, We want to count the number of rows in each day (According to column TimeGenerated), therefore, we use the function bin to generate actuall bins. (each day represents a single bin)
@@ -401,7 +405,32 @@ summarize count() by isAfterNoon
 
 ### startof ...
 
+#### Start of year
+
+```
+Perf | extend beginning_of_year = startofyear(TimeGenerated)
+```
+
+#### Start of hour
+
+```
+Perf | extend beginning_of_hour = startofhour(TimeGenerated)
+```
+
 ### endof ...
+
+#### end of year
+
+```
+Perf | extend end_of_year = endofyear(TimeGenerated)
+```
+
+#### end of hour
+
+```
+Perf | extend end_of_hour = endofhour(TimeGenerated)
+```
+
 
 ### between
 
