@@ -1,34 +1,36 @@
 <!--ts-->
-   * [Python](#python)
-      * [Magic methods (dunder methods)](#magic-methods-dunder-methods)
-      * [What is the meaning of asterisk in python?](#what-is-the-meaning-of-asterisk-in-python)
-         * [Single asterisk usage](#single-asterisk-usage)
-            * [Example #1: Single asterisks for unpacking into function call](#example-1-single-asterisks-for-unpacking-into-function-call)
-            * [Example #2: Using * multiple times:](#example-2-using--multiple-times)
-            * [Example #3: Single astrisks for tuple unpacking](#example-3-single-astrisks-for-tuple-unpacking)
-         * [Double Asterisks usage](#double-asterisks-usage)
-            * [Example #1: unpacking dictionary](#example-1-unpacking-dictionary)
-            * [Example #2: unpacking twice for naming a file](#example-2-unpacking-twice-for-naming-a-file)
-      * [S strings in python](#s-strings-in-python)
-         * [Approach one - “Old Style” String Formatting (% Operator)](#approach-one---old-style-string-formatting--operator)
-         * [f-Strings (Python 3.6+)](#f-strings-python-36)
-      * [Type hints](#type-hints)
-         * [Type aliases](#type-aliases)
-      * [Create gridsearch easily](#create-gridsearch-easily)
-      * [try, Except](#try-except)
-      * [Dectorators](#dectorators)
-         * [Example #1: For Logging a function](#example-1-for-logging-a-function)
-         * [Example #2: profiling function with Timer](#example-2-profiling-function-with-timer)
-      * [Property decorator](#property-decorator)
-      * [Python Generators](#python-generators)
-      * [Python Closure](#python-closure)
-      * [jsonify with numpy arrays](#jsonify-with-numpy-arrays)
-      * [DefaultDict](#defaultdict)
-      * [raise exception](#raise-exception)
-      * [Counting words with a counter](#counting-words-with-a-counter)
-      * [Useful packages](#useful-packages)
+* [Python](#python)
+   * [Magic methods (dunder methods)](#magic-methods-dunder-methods)
+   * [What is the meaning of asterisk in python?](#what-is-the-meaning-of-asterisk-in-python)
+      * [Single asterisk usage](#single-asterisk-usage)
+         * [Example #1: Single asterisks for unpacking into function call](#example-1-single-asterisks-for-unpacking-into-function-call)
+         * [Example #2: Using * multiple times:](#example-2-using--multiple-times)
+         * [Example #3: Single astrisks for tuple unpacking](#example-3-single-astrisks-for-tuple-unpacking)
+      * [Double Asterisks usage](#double-asterisks-usage)
+         * [Example #1: unpacking dictionary](#example-1-unpacking-dictionary)
+         * [Example #2: unpacking twice for naming a file](#example-2-unpacking-twice-for-naming-a-file)
+   * [S strings in python](#s-strings-in-python)
+      * [Approach one - “Old Style” String Formatting (% Operator)](#approach-one---old-style-string-formatting--operator)
+      * [f-Strings (Python 3.6+)](#f-strings-python-36)
+   * [Type hints](#type-hints)
+      * [Type aliases](#type-aliases)
+   * [Create gridsearch easily](#create-gridsearch-easily)
+   * [try, Except](#try-except)
+   * [Dectorators](#dectorators)
+      * [Example #1: For Logging a function](#example-1-for-logging-a-function)
+      * [Example #2: profiling function with Timer](#example-2-profiling-function-with-timer)
+   * [Property decorator](#property-decorator)
+   * [Python Generators](#python-generators)
+   * [Python Closure](#python-closure)
+   * [jsonify with numpy arrays](#jsonify-with-numpy-arrays)
+   * [DefaultDict](#defaultdict)
+   * [raise exception](#raise-exception)
+   * [Counting words with a counter](#counting-words-with-a-counter)
+   * [Make logger colorful](#make-logger-colorful)
+   * [Useful packages](#useful-packages)
 
-<!-- Added by: gil_diy, at: Sat 08 Oct 2022 11:42:55 IDT -->
+<!-- Created by https://github.com/ekalinin/github-markdown-toc -->
+<!-- Added by: gil_diy, at: Fri 11 Nov 2022 18:35:00 IST -->
 
 <!--te-->
 
@@ -365,6 +367,66 @@ print(counter)
 
 # Counter({'my': 3, 'cats': 2, 'She': 1, 'likes': 1, 'and': 1, 'like': 1, 'sofa': 1})
 
+```
+
+
+## Make logger colorful
+
+```python
+# https://alexandra-zaharia.github.io/posts/make-your-own-custom-color-formatter-with-python-logging/
+
+import logging
+from colorama import Fore, Style
+from datetime import datetime
+
+
+class CustomFormatter(logging.Formatter):
+    """Logging colored formatter, adapted from https://stackoverflow.com/a/56944256/3638629"""
+
+    grey = '\x1b[38;21m'
+    blue = Fore.BLUE  # '\x1b[38;5;39m'
+    green = Fore.GREEN  # '\x1b[38;5;226m'
+    red = Fore.RED  # '\x1b[38;5;196m'
+    bold_red = Fore.RED  # '\x1b[31;1m'
+    reset = Fore.RESET  # '\x1b[0m'
+
+    def __init__(self, fmt):
+        super().__init__()
+        self.fmt = fmt
+        self.FORMATS = {
+            logging.DEBUG: self.grey + self.fmt + self.reset,
+            logging.INFO: Fore.GREEN + self.fmt + self.reset,
+            logging.WARNING: Fore.BLACK + self.fmt + self.reset, #Fore.GREEN
+            logging.ERROR: Fore.RED + Style.BRIGHT + self.fmt + self.reset,
+            logging.CRITICAL: self.bold_red + self.fmt + self.reset
+        }
+
+    def format(self, record):
+        log_fmt = self.FORMATS.get(record.levelno)
+        formatter = logging.Formatter(log_fmt)
+        return formatter.format(record)
+
+
+if __name__ == '__main__':
+    # Create custom logger logging all five levels
+    logger = logging.getLogger(__name__)
+    logger.setLevel(logging.DEBUG)
+
+    # Define format for logs
+    fmt = '%(asctime)s | %(levelname)8s | %(message)s'
+
+    # Create stdout handler for logging to the console (logs all five levels)
+    stdout_handler = logging.StreamHandler()
+    stdout_handler.setLevel(logging.DEBUG)
+    stdout_handler.setFormatter(CustomFormatter(fmt))
+
+    # Add both handlers to the logger
+    logger.addHandler(stdout_handler)
+
+    logger.warning('Watch out!')
+    logger.error('Watch out!')
+    logger.info('Watch out!')
+    logger.critical('Watch out!')
 ```
 
 ## Useful packages
