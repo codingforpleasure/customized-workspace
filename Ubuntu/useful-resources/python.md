@@ -30,7 +30,7 @@
    * [Useful packages](#useful-packages)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Fri 11 Nov 2022 18:35:06 IST -->
+<!-- Added by: gil_diy, at: Fri 11 Nov 2022 18:35:11 IST -->
 
 <!--te-->
 
@@ -378,7 +378,6 @@ print(counter)
 import logging
 from colorama import Fore, Style
 from datetime import datetime
-
 
 class CustomFormatter(logging.Formatter):
     """Logging colored formatter, adapted from https://stackoverflow.com/a/56944256/3638629"""
