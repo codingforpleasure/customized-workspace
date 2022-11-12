@@ -26,7 +26,7 @@
       * [Example #16: replace text in multiple files in current directory](#example-16-replace-text-in-multiple-files-in-current-directory)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Sun 13 Nov 2022 00:30:16 IST -->
+<!-- Added by: gil_diy, at: Sun 13 Nov 2022 00:30:18 IST -->
 
 <!--te-->
 
