@@ -23,10 +23,10 @@
       * [Example #13: Remove empty lines in a file](#example-13-remove-empty-lines-in-a-file)
       * [Example #14: Prepend characters to the beginning of a file](#example-14-prepend-characters-to-the-beginning-of-a-file)
       * [Example #15: replace groups with sed](#example-15-replace-groups-with-sed)
-      * [Example #16: replace groups with sed](#example-16-replace-groups-with-sed)
+      * [Example #16: replace text in multiple files in current directory](#example-16-replace-text-in-multiple-files-in-current-directory)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Sun 13 Nov 2022 00:28:09 IST -->
+<!-- Added by: gil_diy, at: Sun 13 Nov 2022 00:30:16 IST -->
 
 <!--te-->
 
@@ -179,7 +179,7 @@ sed -i '1s/^/my new charcters goes here\n/' ./my-file.json
 echo "eat it works" | sed -
 ```
 
-### Example #16: replace groups with sed
+### Example #16: replace text in multiple files in current directory
 
 ```bash
 ind ./ -type f -exec sed -i 's/example/assets/g' {} \;
