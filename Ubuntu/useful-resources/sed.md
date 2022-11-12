@@ -26,7 +26,7 @@
       * [Example #16: replace groups with sed](#example-16-replace-groups-with-sed)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Sun 13 Nov 2022 00:28:06 IST -->
+<!-- Added by: gil_diy, at: Sun 13 Nov 2022 00:28:09 IST -->
 
 <!--te-->
 
