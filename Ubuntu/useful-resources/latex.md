@@ -1,31 +1,32 @@
 
 <!--ts-->
-   * [Latex](#latex)
-      * [Checking code in pdflatex shell (similar to repl)](#checking-code-in-pdflatex-shell-similar-to-repl)
-      * [commenting lines](#commenting-lines)
-      * [Define macros/functions](#define-macrosfunctions)
-         * [Example of one argument](#example-of-one-argument)
-         * [Example of two arguments](#example-of-two-arguments)
-      * [Latex Editor](#latex-editor)
-      * [foreach loop](#foreach-loop)
-      * [Convert math latex into svg](#convert-math-latex-into-svg)
-      * [Cropped file output in LaTeX as an output](#cropped-file-output-in-latex-as-an-output)
-      * [Useful shortcuts in texStudio](#useful-shortcuts-in-texstudio)
-      * [Latex to SVG](#latex-to-svg)
-      * [Adding node](#adding-node)
-      * [Adding an arrow between two nodes](#adding-an-arrow-between-two-nodes)
-      * [Adding text above an arrow between two nodes](#adding-text-above-an-arrow-between-two-nodes)
-      * [Adding arrow between two nodes with veritcal and horizontal orientation](#adding-arrow-between-two-nodes-with-veritcal-and-horizontal-orientation)
-      * [Adding dashed arrow between two nodes](#adding-dashed-arrow-between-two-nodes)
-      * [Geomteric Shapes in Tikz](#geomteric-shapes-in-tikz)
-      * [Shapes with multiple Text Parts in tikz](#shapes-with-multiple-text-parts-in-tikz)
-      * [Latex with svg in inkscape](#latex-with-svg-in-inkscape)
-      * [Latex](#latex-1)
-      * [LaTeX mathematical symbols](#latex-mathematical-symbols)
-      * [LaTex mathematical symbols (nice)](#latex-mathematical-symbols-nice)
-      * [Useful](#useful)
+* [Latex](#latex)
+   * [Checking code in pdflatex shell (similar to repl)](#checking-code-in-pdflatex-shell-similar-to-repl)
+   * [commenting lines](#commenting-lines)
+   * [Define macros/functions](#define-macrosfunctions)
+      * [Example of one argument](#example-of-one-argument)
+      * [Example of two arguments](#example-of-two-arguments)
+   * [Latex Editor](#latex-editor)
+   * [foreach loop](#foreach-loop)
+   * [Convert math latex into svg](#convert-math-latex-into-svg)
+   * [Cropped file output in LaTeX as an output](#cropped-file-output-in-latex-as-an-output)
+   * [Useful shortcuts in texStudio](#useful-shortcuts-in-texstudio)
+   * [Latex to SVG](#latex-to-svg)
+   * [Adding node](#adding-node)
+   * [Adding an arrow between two nodes](#adding-an-arrow-between-two-nodes)
+   * [Adding text above an arrow between two nodes](#adding-text-above-an-arrow-between-two-nodes)
+   * [Adding arrow between two nodes with veritcal and horizontal orientation](#adding-arrow-between-two-nodes-with-veritcal-and-horizontal-orientation)
+   * [Adding dashed arrow between two nodes](#adding-dashed-arrow-between-two-nodes)
+   * [Geomteric Shapes in Tikz](#geomteric-shapes-in-tikz)
+   * [Shapes with multiple Text Parts in tikz](#shapes-with-multiple-text-parts-in-tikz)
+   * [Latex with svg in inkscape](#latex-with-svg-in-inkscape)
+   * [Latex](#latex-1)
+   * [LaTeX mathematical symbols](#latex-mathematical-symbols)
+   * [LaTex mathematical symbols (nice)](#latex-mathematical-symbols-nice)
+   * [Useful](#useful)
 
-<!-- Added by: gil_diy, at: Sat 22 Oct 2022 18:12:39 IDT -->
+<!-- Created by https://github.com/ekalinin/github-markdown-toc -->
+<!-- Added by: gil_diy, at: Wed 16 Nov 2022 19:59:22 IST -->
 
 <!--te-->
 
@@ -250,4 +251,5 @@ You should make include: `\usetikzlibrary{shapes.multipart}`
 
 
 
-[Link](http://www.my-website.com)
+[fragment of Python source code to a latex](https://github.com/google/latexify_py)
+
