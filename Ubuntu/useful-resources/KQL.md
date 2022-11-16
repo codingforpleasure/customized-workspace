@@ -6,6 +6,7 @@
       * [Search partial keyword in a specific column](#search-partial-keyword-in-a-specific-column)
       * [Search word with wild card](#search-word-with-wild-card)
       * [Search word which appears in the end of the string](#search-word-which-appears-in-the-end-of-the-string)
+   * [Logical operators](#logical-operators)
    * [Where](#where)
    * [Take](#take)
    * [Count](#count)
@@ -29,11 +30,29 @@
          * [end of year](#end-of-year)
          * [end of hour](#end-of-hour)
       * [between](#between)
+      * [format_datetime](#format_datetime)
+      * [format_timespan](#format_timespan)
+      * [if Condition](#if-condition)
+      * [Top](#top)
       * [String operators](#string-operators)
-         * [starcat](#starcat)
+         * [strcat](#strcat)
+   * [Advanced Aggregation](#advanced-aggregation)
+      * [arg_max and arg_min](#arg_max-and-arg_min)
+      * [Max](#max)
+      * [Sum](#sum)
+      * [Sumif](#sumif)
+      * [Countif](#countif)
+      * [Pick random row from table](#pick-random-row-from-table)
+      * [Pick random value from specific column](#pick-random-value-from-specific-column)
+      * [Percentiles](#percentiles)
+   * [Working with Datasets](#working-with-datasets)
+      * [let](#let)
+      * [join](#join)
+      * [union](#union)
+      * [datatable](#datatable)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Sun 06 Nov 2022 19:10:25 IST -->
+<!-- Added by: gil_diy, at: Wed 16 Nov 2022 05:43:28 IST -->
 
 <!--te-->
 
@@ -117,6 +136,16 @@ we are looking for in a specific column **InstanceName**,
 We are filtering the rows with regex constraint:
 The constraint is all Letters between A to D and colon after.
 
+## Logical operators
+
+| Meaning      | Symbol | Example | result|
+| ----------- | ----------- |----| -----|
+| Not      | `!` or `not`     | `print not (5>3)` | `false`
+| And   | `and`       | `print (5>3) and (6<7)` | `true`
+| Or    | `or` | `print  ((5>3) or (3>10))` | `true`
+
+
+
 ## Where
 ```
 Perf
@@ -191,8 +220,19 @@ Perf | summarize column_counter=count() by ObjectName, CounterName
 Combining the summarize function with count function outputs the count of each distinct value in the columns both ObjectName and CounterName. finally we rename the **count_** column to **column_counter**
 
 
-
 **Example #3**
+
+Here we are creating histogram by two columns (Computer, KubeEventType) and afterwards we sort by Computer and  KubeEventType by ascending order
+
+```
+KubeEvents
+| project Computer, KubeEventType
+| summarize count() by Computer, KubeEventType
+| sort by Computer asc, KubeEventType asc
+```
+
+
+**Example #4**
 
 ```
 Perf | summarize NumberOfEntries=count()
@@ -314,7 +354,7 @@ print now()
 
 brings us the datetime according to the value we have passed.
 
-Gives us yesterday:
+Gives us yesterday at the hour and minute, which means **exactly 24 hours before**:
 
 ```
 print ago(1d)
@@ -352,6 +392,12 @@ Sort table alphabetically the rows according to a specific column.
 Perf | sort by Computer
 ```
 
+You can use the keyword:
+
+* `asc` - Ascending order
+
+* `desc` - Descending order
+
 ### extract
 
 
@@ -378,7 +424,34 @@ Perf | where ObjectName = "LogicalDisk" and Instancename matches regex "[A-Z]:"
 
 ### parse
 
-TODO give a good example!!!!
+The parse command is very helpful for splitting a string 
+into multiple columns.
+you should pipe the string and then parse it with columns names.
+In our examples the columns' names are: 
+* *age_column* 
+* *weight_column*
+* *name_column*
+
+so all values after the keywords:
+* "Age:"
+* ",weight:"
+* ",name:"
+
+are set into the corresponding columns.
+
+
+```
+print my_value = 'Age:15,weight:35Kg ,name:Roni'
+| parse my_value with  "Age:" age_column 
+                    ",weight:" weight_column
+                    ",name:" name_column
+```
+
+
+<p align="center">
+  <img src="images\parse_example.jpg" width="1000">
+</p>
+
 
 ### datetime
 
@@ -397,7 +470,7 @@ Perf | extend time_diff = now() - TimeGenerated
 Perf |
 extend hour=datetime_part("Hour", TimeGenerated) |
 extend isAfternoon = hour > 7 |
-summarize count() by isAfterNoon
+summarize count() by isAfternoon
 ```
 
 
@@ -413,9 +486,9 @@ Perf | extend beginning_of_year = startofyear(TimeGenerated)
 
 #### Start of hour
 
-```
+````
 Perf | extend beginning_of_hour = startofhour(TimeGenerated)
-```
+````
 
 ### endof ...
 
@@ -431,11 +504,223 @@ Perf | extend end_of_year = endofyear(TimeGenerated)
 Perf | extend end_of_hour = endofhour(TimeGenerated)
 ```
 
-
 ### between
 
+We can use between while using where,
+for retrieving rows which staisfy the between constraint.
+
+```
+Perf 
+| where CounterName == "% Free Space" 
+| where CounterValue between (70.0..100.0)
+```
+
+### format_datetime
+
+```
+Perf 
+| take 100
+| project CounterName,
+          CounterValue,
+          TimeGenerated,
+          format_datetime(TimeGenerated,"y-M-d"),
+          format_datetime(TimeGenerated,"yyyy-MM-dd")
+```
+
+<p align="center">
+  <img src="images\format_date_time_example.jpg" width="1000">
+</p>
+
+### format_timespan
+
+### if Condition
+
+We can easily use an if condition, 
+in the example below we check the value `CounterValue`,
+if it's below 50 then the value would be: **"You might want to look at this"** otherwise the value would be: **You're OK!**
+
+```
+Perf 
+| where CounterName == "% Free Space"
+| extend FreeState = iif(CounterValue <50, 
+                        "You might want to look at this",
+                        "You're OK!")
+| project Computer , CounterName, CounterValue, FreeState 
+```
+
+### Top
+
+In Perf table, we would like to sort in desc order by `CounterValue` and get the top 20 rows.
+which means the 20 largest value of `CounterValue`.
+
+```
+Perf | top 20 by CounterValue
+```
 
 ### String operators
 
-#### starcat
+#### strcat
 
+## Advanced Aggregation
+
+### arg_max and arg_min
+
+**Example #1:**
+In case we would like to retrieve the whole row, which holds the minimum CounterValue. we will write:
+
+```
+Perf | summarize  arg_min(CounterValue,*)
+```
+
+**Reminder:** For getting the whole row of either minimum or maximum value we use `arg_min` or `arg_max`.
+
+**Example #2:**
+
+Here we are focusing on Perf table,
+we would like to group all rows with the same `CounterName`, therefore we have used:
+summarize ____ by CounterName
+from each group we would like to get the row with max **CounterValue** , after we got all maximums of all groups we sort the rows by CounterName.
+
+
+
+```
+Perf 
+| summarize arg_max(CounterValue, *) by CounterName
+| sort by CounterName asc
+```
+
+### Max
+
+Here after applying constraint on column `CounterName`, we would like to get the row which consists the maximum value of
+`CounterValue` .
+
+```
+Perf 
+| where CounterName == "Free Megabytes" 
+| summarize max(CounterValue)
+```
+
+### Sum
+
+
+Here after applying constraint on column `CounterName`, we would like to get the sum of column:
+`CounterValue` 
+
+```
+Perf 
+| where CounterName == "Free Megabytes" 
+| summarize sum(CounterValue)
+```
+
+### Sumif
+
+
+Here we calculate the sum of cells only if the same row satisfies the constriant: `CounterName == "Free Megabytes" `
+```
+Perf
+| summarize sumif(CounterValue, CounterName == "Free Megabytes" )
+```
+
+### Countif
+
+We would like to create an histogram only for the CounterName which contains "Bytes".
+
+```
+Perf
+| summarize RowCount= countif(CounterName  contains "Bytes") by CounterName
+| sort by CounterName asc 
+```
+
+### Pick random row from table
+
+```
+Perf 
+| summarize any(*)
+```
+
+### Pick random value from specific column
+
+Here we would like to pick a random cell from the column
+`Computer`.
+
+```
+Perf | summarize  any(Computer)
+```
+
+Takes a random value from both columns:
+
+```
+Perf | summarize  any(Computer,CounterName)
+```
+
+
+Here we return a random row for each distinct value
+in the clumn adter the by clause
+
+```
+Perf 
+| summarize any(*) by CounterName
+| sort by CounterName asc
+```
+
+### Percentiles
+
+Run this example,
+here we are renaming the generated columns 
+(`percentile_CounterValue_5`, `percentile_CounterValue_30`, `percentile_CounterValue_95` )
+
+```
+Perf
+| where CounterName == "Available MBytes"
+| summarize percentiles(CounterValue, 5,30,95) by Computer
+| project-rename Percent05 = percentile_CounterValue_5
+                 ,Percent30 = percentile_CounterValue_30
+                 ,Percent95 = percentile_CounterValue_95
+```
+
+## Working with Datasets
+
+### let
+
+**Important**: to run the code in `Microsoft Azure` select all the code and then press `Run`.
+
+let means to store a value in a variable
+
+```
+let minCounterValue = 300;
+let countername ="Free Megabytes";
+
+Perf 
+| project Computer,
+         TimeGenerated,
+         CounterName,
+         CounterValue
+| where CounterName  == countername and CounterValue <= minCounterValue
+```
+
+* We can easily write a function using a `let` statement,
+here we write a function named: `dateDiffInDays` 
+The functions recieves two arguments (`date1`, `date2`), and then in the body of the function we calculate the difference between those dates in days.
+
+```
+let dateDiffInDays = (date1: datetime , date2: datetime =datetime(2018-01-01))
+                     { (date1-date2)/1d}
+                     ;
+
+print dateDiffInDays(now(), todatetime("2018-05-01"))
+```
+
+
+### join
+
+```
+```
+
+### union
+
+```
+```
+### datatable
+
+```
+```
