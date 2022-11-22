@@ -24,6 +24,7 @@
          * [hstack](#hstack)
          * [Concatenating](#concatenating)
       * [Padding and array](#padding-and-array)
+         * [Pads both sides](#pads-both-sides)
       * [Repeating an array](#repeating-an-array)
       * [Retrieving info about an array](#retrieving-info-about-an-array)
       * [Check the type in a numpy array](#check-the-type-in-a-numpy-array)
@@ -89,7 +90,7 @@
    * [Reference](#reference)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Tue 22 Nov 2022 08:01:43 IST -->
+<!-- Added by: gil_diy, at: Tue 22 Nov 2022 08:02:42 IST -->
 
 <!--te-->
 
@@ -412,9 +413,15 @@ np.concatenate((a, b), axis=None)
 
 ### Padding and array
 
-```python
+#### Pads both sides
 
+pad three times on the right and three times on the left
+
+```python
+a = np.array([1,2,3])
+np.pad(a, 3)
 ```
+
 
 ### Repeating an array
 
