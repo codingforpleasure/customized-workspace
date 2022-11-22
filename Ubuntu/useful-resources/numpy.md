@@ -90,7 +90,7 @@
    * [Reference](#reference)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Tue 22 Nov 2022 08:02:50 IST -->
+<!-- Added by: gil_diy, at: Tue 22 Nov 2022 08:02:57 IST -->
 
 <!--te-->
 
@@ -420,6 +420,8 @@ pad three times on the right and three times on the left
 ```python
 a = np.array([1,2,3])
 np.pad(a, 3)
+
+# Output: array([0, 0, 0, 1, 2, 3, 0, 0, 0])
 ```
 
 
