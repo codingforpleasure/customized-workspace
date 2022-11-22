@@ -25,6 +25,7 @@
          * [Concatenating](#concatenating)
       * [Padding and array](#padding-and-array)
          * [Pads both sides the same](#pads-both-sides-the-same)
+         * [Pads before and pad after differently](#pads-before-and-pad-after-differently)
       * [Repeating an array](#repeating-an-array)
       * [Retrieving info about an array](#retrieving-info-about-an-array)
       * [Check the type in a numpy array](#check-the-type-in-a-numpy-array)
@@ -90,7 +91,7 @@
    * [Reference](#reference)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Tue 22 Nov 2022 08:03:33 IST -->
+<!-- Added by: gil_diy, at: Tue 22 Nov 2022 08:04:18 IST -->
 
 <!--te-->
 
@@ -424,6 +425,14 @@ np.pad(a, 3)
 # Output: array([0, 0, 0, 1, 2, 3, 0, 0, 0])
 ```
 
+#### Pads before and pad after differently
+
+```python
+a = np.array([1,2,3])
+np.pad(a, (3, 1))
+
+# Output: array([0, 0, 0, 1, 2, 3, 0])
+```
 
 ### Repeating an array
 
