@@ -24,7 +24,7 @@
          * [hstack](#hstack)
          * [Concatenating](#concatenating)
       * [Padding and array](#padding-and-array)
-         * [Pads both sides the same](#pads-both-sides-the-same)
+         * [Pads both sides the same length](#pads-both-sides-the-same-length)
          * [Pads before and pad after differently](#pads-before-and-pad-after-differently)
       * [Repeating an array](#repeating-an-array)
       * [Retrieving info about an array](#retrieving-info-about-an-array)
@@ -91,7 +91,7 @@
    * [Reference](#reference)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Tue 22 Nov 2022 08:05:50 IST -->
+<!-- Added by: gil_diy, at: Tue 22 Nov 2022 08:06:30 IST -->
 
 <!--te-->
 
@@ -417,7 +417,7 @@ np.concatenate((a, b), axis=None)
 If you would like to change the default value of padding which is `0`,
 use the argument `constant_values`, for exmaple: `constant_values=10`
 
-#### Pads both sides the same
+#### Pads both sides the same length
 
 pad three times on the right and three times on the left
 
