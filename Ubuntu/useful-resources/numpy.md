@@ -91,7 +91,7 @@
    * [Reference](#reference)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Tue 22 Nov 2022 08:06:34 IST -->
+<!-- Added by: gil_diy, at: Tue 22 Nov 2022 08:07:22 IST -->
 
 <!--te-->
 
@@ -430,12 +430,17 @@ np.pad(a, 3)
 
 #### Pads before and pad after differently
 
+In the follwoing example,
+tuple (3,1) told numpy to pad 3 times on the starting of the array and 1 time in the end.
+
 ```python
 a = np.array([1,2,3])
 np.pad(a, (3, 1))
 
 # Output: array([0, 0, 0, 1, 2, 3, 0])
 ```
+
+
 
 ### Repeating an array
 
