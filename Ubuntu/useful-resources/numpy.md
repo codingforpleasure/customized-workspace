@@ -91,7 +91,7 @@
    * [Reference](#reference)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Tue 22 Nov 2022 08:04:18 IST -->
+<!-- Added by: gil_diy, at: Tue 22 Nov 2022 08:05:47 IST -->
 
 <!--te-->
 
@@ -413,6 +413,9 @@ np.concatenate((a, b), axis=None)
 ```
 
 ### Padding and array
+
+If you would like to change the default value of padding which is `0`,
+use the argument `constant_values`, for exmaple: `constant_values=10`
 
 #### Pads both sides the same
 
