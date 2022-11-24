@@ -26,6 +26,7 @@
       * [Padding and array](#padding-and-array)
          * [Pads both sides the same length](#pads-both-sides-the-same-length)
          * [Pads before and pad after differently](#pads-before-and-pad-after-differently)
+         * [Padding for a matrix](#padding-for-a-matrix)
       * [Repeating an array](#repeating-an-array)
       * [Retrieving info about an array](#retrieving-info-about-an-array)
       * [Check the type in a numpy array](#check-the-type-in-a-numpy-array)
@@ -91,7 +92,7 @@
    * [Reference](#reference)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Tue 22 Nov 2022 08:07:24 IST -->
+<!-- Added by: gil_diy, at: Thu 24 Nov 2022 18:06:01 IST -->
 
 <!--te-->
 
@@ -439,6 +440,8 @@ np.pad(a, (3, 1))
 
 # Output: array([0, 0, 0, 1, 2, 3, 0])
 ```
+
+#### Padding for a matrix
 
 
 
