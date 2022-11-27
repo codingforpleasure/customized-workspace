@@ -1,5 +1,6 @@
 <!--ts-->
 * [KQL (Kusto Query Lanugage)](#kql-kusto-query-lanugage)
+   * [Add comment in KQL](#add-comment-in-kql)
    * [Search](#search)
       * [Search whole table across all columns](#search-whole-table-across-all-columns)
       * [Search whole table on specific column](#search-whole-table-on-specific-column)
@@ -48,15 +49,33 @@
    * [Working with Datasets](#working-with-datasets)
       * [let](#let)
       * [join](#join)
+         * [Example 1:](#example-1)
+         * [Example 2:](#example-2)
       * [union](#union)
+         * [Example #1:](#example-1-1)
+         * [Example #2:](#example-2-1)
       * [datatable](#datatable)
+      * [Prev/Next](#prevnext)
+         * [Example1](#example1)
+         * [Example2](#example2)
+      * [toscalar](#toscalar)
+      * [row_cumsum](#row_cumsum)
+      * [materialize](#materialize)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Wed 16 Nov 2022 05:43:33 IST -->
+<!-- Added by: gil_diy, at: Sun 27 Nov 2022 16:19:48 IST -->
 
 <!--te-->
 
 # KQL (Kusto Query Lanugage)
+
+## Add comment in KQL
+
+```
+# This is a comment
+```
+
+To comment out or uncomment mulltiple lines, mark them all and press `Ctrl + /`
 
 ## Search
 
@@ -315,7 +334,7 @@ TenantId,SourceSystem , CounterPath , CounterValue.
 ```
 Perf | where TimeGenerated > ago(1h)
      |  project-away TenantId,SourceSystem , CounterPath , MG, CounterValue
- ```
+```
 
 ## Distinct
 
@@ -682,7 +701,7 @@ Perf
 
 ### let
 
-**Important**: to run the code in `Microsoft Azure` select all the code and then press `Run`.
+**Important**: to run the code in `Microsoft Azure` select all the code and then press `Run`.   
 
 let means to store a value in a variable
 
@@ -710,17 +729,154 @@ let dateDiffInDays = (date1: datetime , date2: datetime =datetime(2018-01-01))
 print dateDiffInDays(now(), todatetime("2018-05-01"))
 ```
 
+* We can easily write a function using a let statement, here we write a function named: get_earlier_date The functions recieves two arguments (date1, date2), and then in the body of the function we find which date is earlier and return the date
+
+```
+let get_earlier_date = (date1: datetime , date2: datetime)
+                     {iif(date1>date2,date2,date1)}
+                     ;
+
+print get_earlier_date(todatetime("2017-05-01"), todatetime("2002-01-01"))
+```
 
 ### join
 
+#### Example 1:
+
+Here we are joining the two tables which have common column named `Computer`, 
+
 ```
+Perf 
+| where  TimeGenerated >= ago(30d)
+| take 1000
+| join (VMComputer) on Computer
 ```
+
+#### Example 2:
+
+```
+let startTime= ago(1d);
+let endTime = now();
+let procData= (
+ Perf 
+ | where TimeGenerated between (startTime..endTime)
+ | where CounterName == "% Processor Time"
+ | where ObjectName == "Processor"
+ | where InstanceName =="_Total"
+ | summarize PctCpuTime = avg(CounterValue)
+    by Computer, bin(TimeGenerated, 1h)
+ );
+
+ let MemData=(
+ Perf
+  | where TimeGenerated between (startTime..endTime)
+  | where CounterName == "Available MBytes"
+  | summarize AvailableMB = avg(CounterValue)
+    by Computer, bin(TimeGenerated, 1h)
+);
+
+procData | join kind= inner (MemData) 
+on Computer, TimeGenerated
+| project TimeGenerated, Computer, PctCpuTime , AvailableMB
+| sort by TimeGenerated desc, Computer asc
+```
+
 
 ### union
 
+#### Example #1:
+
+Here we conduct union between two tables:
+`UpdateSummary`, `Update`. the union will output all rows one table below the other. For understanding which row came from which table we have added the `withsource="SourceTable"`
 ```
+UpdateSummary 
+| union withsource="SourceTable" Update
 ```
-### datatable
+
+#### Example #2:
+
+Attention the default value of the union operation is `inner`.
+
+**Union outer**
+
+**Returns all columns from both tables:**
 
 ```
+union kind=outer withsource="SourceTable"
+UpdateSummary,
+Update
 ```
+
+### datatable
+
+Here we are creating a sample table, with 4 columns and the data inside it.
+
+```
+datatable (ID:int , TimeGenerated:datetime , YouTubeName:string, YouTubeURL:string)
+[
+1,datetime(2018-04-01),'Rocket','www.Rocket.com',
+2,datetime(2018-04-01),'Dog','www.Dog.com',
+3,datetime(2018-04-01),'Cat','www.Cat.com'
+]
+```
+
+### Prev/Next
+
+For using the prev or next function we must use the `serialize` function.
+
+#### Example1
+
+```
+let SomeData = datatable (rowNum:int , rowVal:string )
+[
+1,"Value 01",
+2,"Value 02",
+3,"Value 03",
+4,"Value 04",
+5,"Value 05",
+];
+
+SomeData 
+| serialize 
+| extend prVal = strcat("Previous Value was ", prev(rowVal))
+| extend nextVal = strcat("Next Value was ", next(rowVal))
+```
+
+
+#### Example2
+
+Here we are calculating the moving average on `PctCpuTime` for three consecutive rows.
+
+```
+let startTime = ago(1d);
+let endTime = now();
+
+Perf
+| where TimeGenerated between (startTime .. endTime)
+| where Computer == "Contosoweb"
+| where CounterName == "% Processor Time"
+| where ObjectName == "Processor"
+| where InstanceName == " Total"
+| summarize PctCpuTime = avg(CounterValue) by bin(TimeGenerated, 1h)
+| sort by TimeGenerated asc
+| extend movAvg = (PctCpuTime + prev(PctCpuTime,1,0)+ prev(PctCpuTime,2,0))/3.0
+```
+
+
+### toscalar
+
+### row_cumsum
+
+For calculating the Cumulative sum we must use the function `serialize`.
+
+```
+datatable  (a:long)
+[1,2,3,4,5,6,7,8,9,10] | serialize cumulativesum= row_cumsum(a)
+```
+
+### materialize
+
+Captures the value of a tabular expression for the duration of the query execution so that it can be **referenced multiple times by the query without recalculation**.
+
+https://learn.microsoft.com/en-us/azure/data-explorer/kusto/query/materializefunction
+
