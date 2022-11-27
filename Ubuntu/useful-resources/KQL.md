@@ -52,18 +52,18 @@
          * [Example 1: Joining two tables with common column](#example-1-joining-two-tables-with-common-column)
          * [Example 2:](#example-2)
       * [union](#union)
-         * [Example #1:](#example-1)
-         * [Example #2:](#example-2-1)
+         * [Example #1: Inner join](#example-1-inner-join)
+         * [Example #2: Outer join](#example-2-outer-join)
       * [datatable](#datatable)
       * [Prev/Next](#prevnext)
-         * [Example1](#example1)
-         * [Example2](#example2)
+         * [Example1: simple example](#example1-simple-example)
+         * [Example2: Moving average](#example2-moving-average)
       * [toscalar](#toscalar)
       * [row_cumsum](#row_cumsum)
       * [materialize](#materialize)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Sun 27 Nov 2022 16:23:09 IST -->
+<!-- Added by: gil_diy, at: Sun 27 Nov 2022 16:25:52 IST -->
 
 <!--te-->
 
@@ -822,8 +822,7 @@ datatable (ID:int , TimeGenerated:datetime , YouTubeName:string, YouTubeURL:stri
 
 For using the prev or next function we must use the `serialize` function.
 
-#### Example1
-
+#### Example1: simple example
 ```
 let SomeData = datatable (rowNum:int , rowVal:string )
 [
@@ -841,7 +840,7 @@ SomeData
 ```
 
 
-#### Example2
+#### Example2: Moving average
 
 Here we are calculating the moving average on `PctCpuTime` for three consecutive rows.
 
