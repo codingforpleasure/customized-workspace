@@ -49,10 +49,10 @@
    * [Working with Datasets](#working-with-datasets)
       * [let](#let)
       * [join](#join)
-         * [Example 1:](#example-1)
+         * [Example 1: Joining two tables with common column](#example-1-joining-two-tables-with-common-column)
          * [Example 2:](#example-2)
       * [union](#union)
-         * [Example #1:](#example-1-1)
+         * [Example #1:](#example-1)
          * [Example #2:](#example-2-1)
       * [datatable](#datatable)
       * [Prev/Next](#prevnext)
@@ -63,7 +63,7 @@
       * [materialize](#materialize)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Sun 27 Nov 2022 16:19:58 IST -->
+<!-- Added by: gil_diy, at: Sun 27 Nov 2022 16:20:57 IST -->
 
 <!--te-->
 
@@ -741,7 +741,7 @@ print get_earlier_date(todatetime("2017-05-01"), todatetime("2002-01-01"))
 
 ### join
 
-#### Example 1:
+#### Example 1: Joining two tables with common column
 
 Here we are joining the two tables which have common column named `Computer`, 
 
