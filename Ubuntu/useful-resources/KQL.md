@@ -63,7 +63,7 @@
       * [materialize](#materialize)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Sun 27 Nov 2022 16:20:57 IST -->
+<!-- Added by: gil_diy, at: Sun 27 Nov 2022 16:23:09 IST -->
 
 <!--te-->
 
@@ -784,7 +784,9 @@ on Computer, TimeGenerated
 
 ### union
 
-#### Example #1:
+#### Example #1: Inner join
+
+Attention the default value of the union operation is `inner`.
 
 Here we conduct union between two tables:
 `UpdateSummary`, `Update`. the union will output all rows one table below the other. For understanding which row came from which table we have added the `withsource="SourceTable"`
@@ -793,11 +795,7 @@ UpdateSummary
 | union withsource="SourceTable" Update
 ```
 
-#### Example #2:
-
-Attention the default value of the union operation is `inner`.
-
-**Union outer**
+#### Example #2: Outer join
 
 **Returns all columns from both tables:**
 
