@@ -24,13 +24,15 @@
    * [Python Closure](#python-closure)
    * [jsonify with numpy arrays](#jsonify-with-numpy-arrays)
    * [DefaultDict](#defaultdict)
+   * [Try, exception](#try-exception)
+   * [Get traceback of exception](#get-traceback-of-exception)
    * [raise exception](#raise-exception)
    * [Counting words with a counter](#counting-words-with-a-counter)
    * [Make logger colorful](#make-logger-colorful)
    * [Useful packages](#useful-packages)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Tue 29 Nov 2022 11:36:57 IST -->
+<!-- Added by: gil_diy, at: Tue 29 Nov 2022 11:59:26 IST -->
 
 <!--te-->
 
@@ -347,6 +349,24 @@ print(d["c"])
 # 1
 # 2
 # Not Present
+```
+
+## Try, exception
+
+```python
+try:
+    do_complicated_task(....)
+except Exception as e:
+    print(e)
+    raise e
+```
+
+## Get traceback of exception
+
+```python
+import traceback
+
+traceback.print_exc()
 ```
 
 ## raise exception
