@@ -49,7 +49,7 @@
 * [Intresting Packages for manim](#intresting-packages-for-manim)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Thu 01 Dec 2022 08:38:04 IST -->
+<!-- Added by: gil_diy, at: Thu 01 Dec 2022 08:39:24 IST -->
 
 <!--te-->
 
@@ -1017,6 +1017,8 @@ For adding new colors:
 [Link](https://docs.manim.community/en/stable/installation/linux.html)
 
 # Intresting Packages for manim
+
+[manim-data-structures](https://github.com/drageelr/manim-data-structures)
 
 [manim-meshes](https://github.com/bmmtstb/manim-meshes)
 
