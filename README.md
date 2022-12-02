@@ -10,6 +10,8 @@ These instructions will get you a copy of the project up and running on your loc
 
 The things you need to install are:
 
+- Solaar -  Linux manager for many Logitech keyboards, mice, and trackpads that connect wirelessly
+            [Link](https://github.com/pwr-Solaar/Solaar)
 - zsh (I'm using 5.3 from source)
 - tmux (I'm using tmux 2.6)
 - tmuxinator - Create and manage tmux sessions easily (I'm using tmuxinator 0.10.1),
