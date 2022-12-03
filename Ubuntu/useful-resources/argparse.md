@@ -5,9 +5,10 @@
    * [Unpositional Arguments](#unpositional-arguments)
    * [Optional arguments](#optional-arguments)
    * [Multiple arguments](#multiple-arguments)
+* [What if you don’t want just 3 values, but any number of inputs?](#what-if-you-dont-want-just-3-values-but-any-number-of-inputs)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Sat 03 Dec 2022 13:52:01 IST -->
+<!-- Added by: gil_diy, at: Sat 03 Dec 2022 13:52:59 IST -->
 
 <!--te-->
 
@@ -118,4 +119,29 @@ if __name__ == '__main__':
 **Run:**
 ```bash
 python3 example5_multiple_arguments.py --values 100 200 300
+```
+
+## 
+
+# What if you don’t want just 3 values, but any number of inputs?
+
+```python
+import argparse
+
+if __name__ == '__main__':
+    parser = argparse.ArgumentParser()
+    # You can set nargs='+', which will allow the argument to take in any number of values.
+    parser.add_argument('--values', type=int, nargs='+')
+    args = parser.parse_args()
+    sum = sum(args.values)
+    print('Sum:', sum)
+
+```
+
+```bash
+python3 example6_no_limit_on_multiple_arguments.py --values 100 200
+```
+
+```bash
+python3 example6_no_limit_on_multiple_arguments.py --values 100 200 300 400 500
 ```
