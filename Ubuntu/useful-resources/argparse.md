@@ -7,10 +7,10 @@
    * [Multiple arguments](#multiple-arguments)
    * [No limit on the number of arguments](#no-limit-on-the-number-of-arguments)
    * [Mutual exclusive arguments](#mutual-exclusive-arguments)
-   * [Writing subpaerser](#writing-subpaerser)
+   * [Writing subparser](#writing-subparser)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Sat 03 Dec 2022 13:56:42 IST -->
+<!-- Added by: gil_diy, at: Sat 03 Dec 2022 13:56:46 IST -->
 
 <!--te-->
 
@@ -178,5 +178,5 @@ if __name__ == '__main__':
 python3 example7_mutually_exclusive_arguments.py --add 5 7
 ```
 
-## Writing subpaerser
+## Writing subparser
 
