@@ -8,7 +8,7 @@
 * [What if you don’t want just 3 values, but any number of inputs?](#what-if-you-dont-want-just-3-values-but-any-number-of-inputs)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Sat 03 Dec 2022 13:53:53 IST -->
+<!-- Added by: gil_diy, at: Sat 03 Dec 2022 13:54:04 IST -->
 
 <!--te-->
 
@@ -170,4 +170,8 @@ if __name__ == '__main__':
     elif args.subtract:
         difference = args.x - args.y
         print('Difference:', difference)
+```
+
+```bash
+python3 example7_mutually_exclusive_arguments.py --add 5 7
 ```
