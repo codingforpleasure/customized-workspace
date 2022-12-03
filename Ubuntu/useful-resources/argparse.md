@@ -3,7 +3,7 @@
    * [basic example](#basic-example)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Sat 03 Dec 2022 13:47:49 IST -->
+<!-- Added by: gil_diy, at: Sat 03 Dec 2022 13:47:52 IST -->
 
 <!--te-->
 
@@ -47,3 +47,4 @@ if __name__ == '__main__':
 ```
 python3 example2_positional_arguments.py 4 5
 ```
+
