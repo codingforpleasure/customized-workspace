@@ -3,9 +3,10 @@
    * [basic example](#basic-example)
    * [Positional Arguments](#positional-arguments)
    * [Unpositional Arguments](#unpositional-arguments)
+   * [Optional arguments](#optional-arguments)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Sat 03 Dec 2022 13:49:36 IST -->
+<!-- Added by: gil_diy, at: Sat 03 Dec 2022 13:50:14 IST -->
 
 <!--te-->
 
@@ -68,4 +69,28 @@ if __name__ == '__main__':
 **run: **
 ```bash
 python3 example3_unpositional_arguments.py --x 4 --y 5
+```
+
+## Optional arguments
+
+Optional arguments are useful if you want to give the user a choice to enable certain features
+
+
+```python
+import argparse
+
+if __name__ == '__main__':
+    parser = argparse.ArgumentParser()
+
+    parser.add_argument('--name', type=str, required=True)
+
+    # An optional age. (Notice the required=True is missing from the --age argument.)
+    parser.add_argument('--age', type=int)
+    
+    args = parser.parse_args()
+    if args.age:
+        print(args.name, 'is', args.age, 'years old.')
+    else:
+        print('Hello,', args.name + '!')
+
 ```
