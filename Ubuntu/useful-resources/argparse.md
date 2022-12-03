@@ -5,7 +5,7 @@
    * [Unpositional Arguments](#unpositional-arguments)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Sat 03 Dec 2022 13:49:07 IST -->
+<!-- Added by: gil_diy, at: Sat 03 Dec 2022 13:49:33 IST -->
 
 <!--te-->
 
@@ -52,5 +52,20 @@ python3 example2_positional_arguments.py 4 5
 
 ## Unpositional Arguments
 
+```python
+import argparse
 
+if __name__ == '__main__':
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--x', type=int, required=True, help='The first value to multiply')
+    parser.add_argument('--y', type=int, required=True, help='The second value to multiply')
+    args = parser.parse_args()
+    product = args.x * args.y
+    print('Product:', product)
 
+```
+
+**run: **
+```bash
+python3 example3_unpositional_arguments.py --x 4 --y 5
+```
