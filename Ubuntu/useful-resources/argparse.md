@@ -6,7 +6,7 @@
    * [Optional arguments](#optional-arguments)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Sat 03 Dec 2022 13:50:44 IST -->
+<!-- Added by: gil_diy, at: Sat 03 Dec 2022 13:51:20 IST -->
 
 <!--te-->
 
@@ -97,4 +97,19 @@ if __name__ == '__main__':
 
 **Run:**
 ```
+
+```
+
+##
+
+```python
+import argparse
+
+if __name__ == '__main__':
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--values', type=int, nargs=3)
+    args = parser.parse_args()
+    sum = sum(args.values)
+    print('Sum:', sum)
+
 ```
