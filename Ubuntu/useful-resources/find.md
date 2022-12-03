@@ -1,30 +1,32 @@
 <!--ts-->
-   * [find command](#find-command)
-      * [Examples](#examples)
-         * [Find all txt files:](#find-all-txt-files)
-         * [Find all txt files and avoid Permission Denied Messages](#find-all-txt-files-and-avoid-permission-denied-messages)
-         * [Ignoring case sensitive (-iname)](#ignoring-case-sensitive--iname)
-         * [Find files based on their permissions](#find-files-based-on-their-permissions)
-         * [find file with permission 777 and change the permission to 755](#find-file-with-permission-777-and-change-the-permission-to-755)
-         * [find and remove a single file](#find-and-remove-a-single-file)
-         * [find files with either extension c or cpp or h](#find-files-with-either-extension-c-or-cpp-or-h)
-         * [find all hidden files](#find-all-hidden-files)
-         * [find all the files that were MODIFIED 10 days modified back](#find-all-the-files-that-were-modified-10-days-modified-back)
-         * [find all the files that were ACCESSED 10 days modified back](#find-all-the-files-that-were-accessed-10-days-modified-back)
-         * [find all the files modified in the last 1 minute](#find-all-the-files-modified-in-the-last-1-minute)
-         * [Find all the files modified in the last 1 minute and avoid checking /proc directory and /etc](#find-all-the-files-modified-in-the-last-1-minute-and-avoid-checking-proc-directory-and-etc)
-         * [Find files between those boundries 1M &lt; size &lt; 2M](#find-files-between-those-boundries-1m--size--2m)
-         * [Find to limit the depth of subdirectories depth](#find-to-limit-the-depth-of-subdirectories-depth)
-         * [Find all directories within a <strong>specific</strong> depth level](#find-all-directories-within-a-specific-depth-level)
-         * [Find "Gil" text in all the text files](#find-gil-text-in-all-the-text-files)
-         * [Find all files match to a pattern and move them to a destination folder](#find-all-files-match-to-a-pattern-and-move-them-to-a-destination-folder)
-         * [Find all empty files:](#find-all-empty-files)
-         * [Find all only leaf directories:](#find-all-only-leaf-directories)
-         * [Find all files named sample.txt which are larger then 4 Bytes:](#find-all-files-named-sampletxt-which-are-larger-then-4-bytes)
-         * [Find all :](#find-all-)
-   * [<a href="https://stackoverflow.com/questions/14132210/use-find-command-but-exclude-files-in-two-directories" rel="nofollow">https://stackoverflow.com/questions/14132210/use-find-command-but-exclude-files-in-two-directories</a>](#httpsstackoverflowcomquestions14132210use-find-command-but-exclude-files-in-two-directories)
+* [find command](#find-command)
+   * [Examples](#examples)
+      * [Find all txt files:](#find-all-txt-files)
+      * [Find all txt files and avoid Permission Denied Messages](#find-all-txt-files-and-avoid-permission-denied-messages)
+      * [Ignoring case sensitive (-iname)](#ignoring-case-sensitive--iname)
+      * [Find files based on their permissions](#find-files-based-on-their-permissions)
+      * [find file with permission 777 and change the permission to 755](#find-file-with-permission-777-and-change-the-permission-to-755)
+      * [find and remove a single file](#find-and-remove-a-single-file)
+      * [find files with either extension c or cpp or h](#find-files-with-either-extension-c-or-cpp-or-h)
+      * [find all hidden files](#find-all-hidden-files)
+      * [find all the files that were MODIFIED 10 days modified back](#find-all-the-files-that-were-modified-10-days-modified-back)
+      * [find all the files that were ACCESSED 10 days modified back](#find-all-the-files-that-were-accessed-10-days-modified-back)
+      * [find all the files modified in the last 1 minute](#find-all-the-files-modified-in-the-last-1-minute)
+      * [Find all the files modified in the last 1 minute and avoid checking /proc directory and /etc](#find-all-the-files-modified-in-the-last-1-minute-and-avoid-checking-proc-directory-and-etc)
+      * [Find files between those boundries 1M &lt; size &lt; 2M](#find-files-between-those-boundries-1m--size--2m)
+      * [Find to limit the depth of subdirectories depth](#find-to-limit-the-depth-of-subdirectories-depth)
+      * [Find all directories within a <strong>specific</strong> depth level](#find-all-directories-within-a-specific-depth-level)
+      * [Find "Gil" text in all the text files](#find-gil-text-in-all-the-text-files)
+      * [Find all files match to a pattern and move them to a destination folder](#find-all-files-match-to-a-pattern-and-move-them-to-a-destination-folder)
+      * [Find all files match to a pattern and copy them to a destination folder](#find-all-files-match-to-a-pattern-and-copy-them-to-a-destination-folder)
+      * [Find all empty files:](#find-all-empty-files)
+      * [Find all only leaf directories:](#find-all-only-leaf-directories)
+      * [Find all files named sample.txt which are larger then 4 Bytes:](#find-all-files-named-sampletxt-which-are-larger-then-4-bytes)
+      * [Find all :](#find-all-)
+* [<a href="https://stackoverflow.com/questions/14132210/use-find-command-but-exclude-files-in-two-directories" rel="nofollow">https://stackoverflow.com/questions/14132210/use-find-command-but-exclude-files-in-two-directories</a>](#httpsstackoverflowcomquestions14132210use-find-command-but-exclude-files-in-two-directories)
 
-<!-- Added by: gil_diy, at: Sun 20 Jun 2021 00:46:48 IDT -->
+<!-- Created by https://github.com/ekalinin/github-markdown-toc -->
+<!-- Added by: gil_diy, at: Sun 04 Dec 2022 01:53:32 IST -->
 
 <!--te-->
 
@@ -125,6 +127,12 @@ find . -name "*.txt" -print | xargs ag -in "GIL"
 ```bash
 find . -name "*myregex*" -exec mv -t <dst_directory> {} +
 ```
+
+### Find all files match to a pattern and copy them to a destination folder
+
+```
+```
+
 
 Simply specify whether you want the time to be greater, smaller, or equal to the time you want, using, respectively:
 ```bash
