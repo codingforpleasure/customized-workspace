@@ -26,7 +26,7 @@
 * [<a href="https://stackoverflow.com/questions/14132210/use-find-command-but-exclude-files-in-two-directories" rel="nofollow">https://stackoverflow.com/questions/14132210/use-find-command-but-exclude-files-in-two-directories</a>](#httpsstackoverflowcomquestions14132210use-find-command-but-exclude-files-in-two-directories)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Sun 04 Dec 2022 01:54:08 IST -->
+<!-- Added by: gil_diy, at: Sun 04 Dec 2022 01:54:11 IST -->
 
 <!--te-->
 
