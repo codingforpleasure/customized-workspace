@@ -6,9 +6,10 @@
    * [Optional arguments](#optional-arguments)
    * [Multiple arguments](#multiple-arguments)
    * [No limit on the number of arguments](#no-limit-on-the-number-of-arguments)
+   * [Mutual exclusive arguments](#mutual-exclusive-arguments)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Sat 03 Dec 2022 13:55:43 IST -->
+<!-- Added by: gil_diy, at: Sat 03 Dec 2022 13:56:11 IST -->
 
 <!--te-->
 
@@ -146,7 +147,7 @@ python3 example6_no_limit_on_multiple_arguments.py --values 100 200
 python3 example6_no_limit_on_multiple_arguments.py --values 100 200 300 400 500
 ```
 
-##
+## Mutual exclusive arguments
 
 ```python
 import argparse
