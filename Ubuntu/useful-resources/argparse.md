@@ -1,9 +1,11 @@
 <!--ts-->
 * [argparse](#argparse)
    * [basic example](#basic-example)
+   * [Positional Arguments](#positional-arguments)
+   * [Unpositional Arguments](#unpositional-arguments)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Sat 03 Dec 2022 13:48:19 IST -->
+<!-- Added by: gil_diy, at: Sat 03 Dec 2022 13:49:01 IST -->
 
 <!--te-->
 
@@ -27,7 +29,7 @@ if __name__ == '__main__':
 python3 main.py --name gil
 ```
 
-## 
+## Positional Arguments
 
 ```pyhton
 import argparse
@@ -47,4 +49,8 @@ if __name__ == '__main__':
 ```
 python3 example2_positional_arguments.py 4 5
 ```
+
+## Unpositional Arguments
+
+
 
