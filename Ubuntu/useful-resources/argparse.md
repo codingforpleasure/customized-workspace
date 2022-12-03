@@ -8,7 +8,7 @@
 * [What if you don’t want just 3 values, but any number of inputs?](#what-if-you-dont-want-just-3-values-but-any-number-of-inputs)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Sat 03 Dec 2022 13:53:02 IST -->
+<!-- Added by: gil_diy, at: Sat 03 Dec 2022 13:53:45 IST -->
 
 <!--te-->
 
@@ -144,4 +144,31 @@ python3 example6_no_limit_on_multiple_arguments.py --values 100 200
 
 ```bash
 python3 example6_no_limit_on_multiple_arguments.py --values 100 200 300 400 500
+```
+
+##
+
+```python
+import argparse
+
+if __name__ == '__main__':
+    parser = argparse.ArgumentParser()
+    # By creating a group with group = parser.add_mutually_exclusive_group(),
+    # the user is only allowed to select one of the arguments to use.
+    group = parser.add_mutually_exclusive_group()
+    # In the add_argument() method,
+    # there is a new parameter called action. This is simply storing the default method if the argument is blank.
+    group.add_argument('--add', action='store_true')
+    group.add_argument('--subtract', action='store_true')
+    parser.add_argument('x', type=int)
+    parser.add_argument('y', type=int)
+    args = parser.parse_args()
+
+    if args.add:
+        sum = args.x + args.y
+        print('Sum:', sum)
+    elif args.subtract:
+        difference = args.x - args.y
+        print('Difference:', difference)
+
 ```
