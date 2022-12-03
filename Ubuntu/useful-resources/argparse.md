@@ -36,6 +36,9 @@ python3 main.py --name gil
 
 ## Positional Arguments
 
+Sometimes, you don’t want to use the flag’s name in the argument. You can use a positional argument to eliminate the need to specify the --name flag before inputting the actual value.
+
+
 ```pyhton
 import argparse
 
@@ -51,11 +54,11 @@ if __name__ == '__main__':
 
 **Run:**
 
-```
+```bash
 python3 example2_positional_arguments.py 4 5
 ```
 
-## Unpositional Arguments
+## Unpositional Arguments (Prefered way)
 
 ```python
 import argparse
@@ -100,8 +103,14 @@ if __name__ == '__main__':
 ```
 
 **Run:**
-```
 
+```bash
+python3 example4_optional_arguments.py --name Gil
+```
+or
+
+```bash
+python3 example4_optional_arguments.py --name Gil --age 30
 ```
 
 ## Multiple arguments
@@ -140,6 +149,8 @@ if __name__ == '__main__':
 
 ```
 
+**Run:**
+
 ```bash
 python3 example6_no_limit_on_multiple_arguments.py --values 100 200
 ```
@@ -174,9 +185,50 @@ if __name__ == '__main__':
         print('Difference:', difference)
 ```
 
+**Run:**
+
 ```bash
 python3 example7_mutually_exclusive_arguments.py --add 5 7
 ```
 
 ## Writing subparser
 
+Subparsers are powerful in that they allow for different arguments to be permitted based on the command being run.
+For example, when using the git command, some options are git checkout, git commit, and git add.
+Each one of these commands requires a unique set of arguments, and subparsers allow you to distinguish between them.
+
+```python
+import argparse
+
+if __name__ == '__main__':
+    parser = argparse.ArgumentParser()
+    subparser = parser.add_subparsers(dest='command')
+    login = subparser.add_parser('login')
+    register = subparser.add_parser('register')
+    login.add_argument('--username', type=str, required=True)
+    login.add_argument('--password', type=str, required=True)
+    register.add_argument('--firstname', type=str, required=True)
+    register.add_argument('--lastname', type=str, required=True)
+    register.add_argument('--username', type=str, required=True)
+    register.add_argument('--email', type=str, required=True)
+    register.add_argument('--password', type=str, required=True)
+    args = parser.parse_args()
+
+    if args.command == 'login':
+        print('Logging in with username:', args.username, ' and password:', args.password)
+    elif args.command == 'register':
+        print(
+            f'Creating username: {args.username}\nnew member: {args.firstname} {args.lastname}\nemail:{args.email}\npassword: {args.password}')
+```
+
+**Run:**
+
+```bash
+python3 example8_subparser.py login --username gil --password 5751824
+```
+
+or 
+
+```bash
+python3 example8_subparser.py register --firstname gil --lastname cohen --username Nemo --email gil@gmail.com --password  5751824
+```
