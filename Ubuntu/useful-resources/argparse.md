@@ -5,9 +5,10 @@
    * [Unpositional Arguments](#unpositional-arguments)
    * [Optional arguments](#optional-arguments)
    * [Multiple arguments](#multiple-arguments)
+   * [No limit on the number of arguments](#no-limit-on-the-number-of-arguments)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Sat 03 Dec 2022 13:54:19 IST -->
+<!-- Added by: gil_diy, at: Sat 03 Dec 2022 13:55:40 IST -->
 
 <!--te-->
 
@@ -120,7 +121,7 @@ if __name__ == '__main__':
 python3 example5_multiple_arguments.py --values 100 200 300
 ```
 
-## 
+## No limit on the number of arguments
 
 What if you don’t want just 3 values, but any number of inputs?
 
