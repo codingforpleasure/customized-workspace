@@ -3,7 +3,7 @@
    * [basic example](#basic-example)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Sat 03 Dec 2022 13:47:54 IST -->
+<!-- Added by: gil_diy, at: Sat 03 Dec 2022 13:47:57 IST -->
 
 <!--te-->
 
@@ -29,7 +29,7 @@ python3 main.py --name gil
 
 ## 
 
-```
+```pyhton
 import argparse
 
 if __name__ == '__main__':
