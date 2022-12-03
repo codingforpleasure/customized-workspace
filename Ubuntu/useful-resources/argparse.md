@@ -8,7 +8,7 @@
 * [What if you don’t want just 3 values, but any number of inputs?](#what-if-you-dont-want-just-3-values-but-any-number-of-inputs)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Sat 03 Dec 2022 13:53:51 IST -->
+<!-- Added by: gil_diy, at: Sat 03 Dec 2022 13:53:53 IST -->
 
 <!--te-->
 
