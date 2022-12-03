@@ -4,9 +4,10 @@
    * [Positional Arguments](#positional-arguments)
    * [Unpositional Arguments](#unpositional-arguments)
    * [Optional arguments](#optional-arguments)
+   * [Multiple arguemnts](#multiple-arguemnts)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Sat 03 Dec 2022 13:51:46 IST -->
+<!-- Added by: gil_diy, at: Sat 03 Dec 2022 13:51:52 IST -->
 
 <!--te-->
 
@@ -100,7 +101,7 @@ if __name__ == '__main__':
 
 ```
 
-##
+## Multiple arguemnts
 
 ```python
 import argparse
