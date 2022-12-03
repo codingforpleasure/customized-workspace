@@ -26,7 +26,7 @@
 * [<a href="https://stackoverflow.com/questions/14132210/use-find-command-but-exclude-files-in-two-directories" rel="nofollow">https://stackoverflow.com/questions/14132210/use-find-command-but-exclude-files-in-two-directories</a>](#httpsstackoverflowcomquestions14132210use-find-command-but-exclude-files-in-two-directories)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Sun 04 Dec 2022 01:53:35 IST -->
+<!-- Added by: gil_diy, at: Sun 04 Dec 2022 01:54:08 IST -->
 
 <!--te-->
 
@@ -130,7 +130,8 @@ find . -name "*myregex*" -exec mv -t <dst_directory> {} +
 
 ### Find all files match to a pattern and copy them to a destination folder
 
-```
+```bash
+find . -name "*.json" -exec cp {} /home/gil_diy/Downloads/ \;
 ```
 
 
