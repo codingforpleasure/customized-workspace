@@ -5,10 +5,9 @@
    * [Unpositional Arguments](#unpositional-arguments)
    * [Optional arguments](#optional-arguments)
    * [Multiple arguments](#multiple-arguments)
-* [What if you don’t want just 3 values, but any number of inputs?](#what-if-you-dont-want-just-3-values-but-any-number-of-inputs)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Sat 03 Dec 2022 13:54:10 IST -->
+<!-- Added by: gil_diy, at: Sat 03 Dec 2022 13:54:16 IST -->
 
 <!--te-->
 
@@ -123,7 +122,7 @@ python3 example5_multiple_arguments.py --values 100 200 300
 
 ## 
 
-# What if you don’t want just 3 values, but any number of inputs?
+What if you don’t want just 3 values, but any number of inputs?
 
 ```python
 import argparse
