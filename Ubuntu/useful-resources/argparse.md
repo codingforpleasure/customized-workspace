@@ -3,7 +3,7 @@
    * [basic example](#basic-example)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Sat 03 Dec 2022 13:46:43 IST -->
+<!-- Added by: gil_diy, at: Sat 03 Dec 2022 13:46:56 IST -->
 
 <!--te-->
 
@@ -22,6 +22,8 @@ if __name__ == '__main__':
     print('Hello,', args.name)
 ```
 
+**run: **
 ```bash
 python3 main.py --name gil
 ```
+
