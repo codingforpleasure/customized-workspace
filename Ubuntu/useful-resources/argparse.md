@@ -6,7 +6,7 @@
    * [Optional arguments](#optional-arguments)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Sat 03 Dec 2022 13:51:38 IST -->
+<!-- Added by: gil_diy, at: Sat 03 Dec 2022 13:51:40 IST -->
 
 <!--te-->
 
@@ -115,7 +115,6 @@ if __name__ == '__main__':
 ```
 
 **Run:**
-
 ```bash
 python3 example5_multiple_arguments.py --values 100 200 300
 ```
