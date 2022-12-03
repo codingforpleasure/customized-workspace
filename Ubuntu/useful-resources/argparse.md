@@ -3,7 +3,7 @@
    * [basic example](#basic-example)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Sat 03 Dec 2022 13:48:13 IST -->
+<!-- Added by: gil_diy, at: Sat 03 Dec 2022 13:48:17 IST -->
 
 <!--te-->
 
@@ -42,7 +42,7 @@ if __name__ == '__main__':
 
 ```
 
-*Run:*
+**Run:**
 
 ```
 python3 example2_positional_arguments.py 4 5
