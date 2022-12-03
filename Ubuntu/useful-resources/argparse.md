@@ -7,7 +7,7 @@
    * [Multiple arguments](#multiple-arguments)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Sat 03 Dec 2022 13:54:16 IST -->
+<!-- Added by: gil_diy, at: Sat 03 Dec 2022 13:54:19 IST -->
 
 <!--te-->
 
