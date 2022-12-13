@@ -1,22 +1,24 @@
 <!--ts-->
-   * [Tesseract](#tesseract)
-      * [Compiling tesseract from source:](#compiling-tesseract-from-source)
-         * [Additional libraries required](#additional-libraries-required)
-         * [Building source](#building-source)
-      * [Creating training data](#creating-training-data)
-         * [Important libraries](#important-libraries)
-         * [Tesseract configurations](#tesseract-configurations)
-         * [Page segmentation modes](#page-segmentation-modes)
-         * [OCR Engine mode](#ocr-engine-mode)
-            * [Detect orientation and text (script)](#detect-orientation-and-text-script)
-            * [Detect only digits](#detect-only-digits)
-            * [Whitelisting characters](#whitelisting-characters)
-            * [Blacklisting characters](#blacklisting-characters)
-            * [Specify the language](#specify-the-language)
-            * [Some tips with image proceesing (important)](#some-tips-with-image-proceesing-important)
-      * [Installing tesseract NOT from source, from ubuntu repositories:](#installing-tesseract-not-from-source-from-ubuntu-repositories)
+* [Tesseract](#tesseract)
+   * [Compiling tesseract from source:](#compiling-tesseract-from-source)
+      * [Additional libraries required](#additional-libraries-required)
+      * [Building source](#building-source)
+   * [Creating training data](#creating-training-data)
+      * [Important libraries](#important-libraries)
+      * [Tesseract configurations](#tesseract-configurations)
+      * [Page segmentation modes](#page-segmentation-modes)
+      * [OCR Engine mode](#ocr-engine-mode)
+         * [Detect orientation and text (script)](#detect-orientation-and-text-script)
+         * [Detect only digits](#detect-only-digits)
+         * [Whitelisting characters](#whitelisting-characters)
+         * [Blacklisting characters](#blacklisting-characters)
+         * [Specify the language](#specify-the-language)
+         * [Some tips with image proceesing (important)](#some-tips-with-image-proceesing-important)
+   * [Installing tesseract NOT from source, from ubuntu repositories:](#installing-tesseract-not-from-source-from-ubuntu-repositories)
+* [Reference](#reference)
 
-<!-- Added by: gil_diy, at: 2020-09-28T03:19+03:00 -->
+<!-- Created by https://github.com/ekalinin/github-markdown-toc -->
+<!-- Added by: gil_diy, at: Tue 13 Dec 2022 10:15:09 IST -->
 
 <!--te-->
 
@@ -282,3 +284,8 @@ Otherwise it will convert the image to grayscale, and therefore will mess the te
 ```bash
 sudo apt-get install libtesseract4 tesseract-ocr tesseract-ocr-eng tesseract-ocr-osd
 ```
+
+
+# Reference 
+
+[https://www.youtube.com/watch?v=KE4xEzFGSU8](https://www.youtube.com/watch?v=KE4xEzFGSU8)
