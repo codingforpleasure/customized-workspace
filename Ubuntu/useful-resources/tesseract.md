@@ -13,12 +13,12 @@
          * [Whitelisting characters](#whitelisting-characters)
          * [Blacklisting characters](#blacklisting-characters)
          * [Specify the language](#specify-the-language)
-         * [Some tips with image proceesing (important)](#some-tips-with-image-proceesing-important)
+         * [Some tips with image processing (important)](#some-tips-with-image-processing-important)
    * [Installing tesseract NOT from source, from ubuntu repositories:](#installing-tesseract-not-from-source-from-ubuntu-repositories)
 * [Reference](#reference)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Tue 13 Dec 2022 10:16:17 IST -->
+<!-- Added by: gil_diy, at: Wed 14 Dec 2022 06:43:48 IST -->
 
 <!--te-->
 
@@ -269,7 +269,7 @@ custom_config = r'-l heb+eng --psm 6'
 pytesseract.image_to_string(img, config=custom_config)
 ```
 
-#### Some tips with image proceesing (important)
+#### Some tips with image processing (important)
 
 When you open a file with `kolorpaint` which was exported in opencv after applying binary threshold. After you have edited the image you should pay attention:
 **Export...**
