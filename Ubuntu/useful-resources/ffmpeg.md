@@ -52,7 +52,7 @@
    * [Documentation](#documentation)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Thu 15 Dec 2022 10:54:51 IST -->
+<!-- Added by: gil_diy, at: Thu 15 Dec 2022 10:54:58 IST -->
 
 <!--te-->
 
@@ -448,7 +448,7 @@ Resize animated file to 50%.
 
 ```bash
 convert image_animation_1.gif -coalesce coalesce.gif
-convert coalesce.gif -resize 50% image2.gif
+convert coalesce.gif -resize 50% output.gif
 ```
 
 ## Make gif run once (no loops)
