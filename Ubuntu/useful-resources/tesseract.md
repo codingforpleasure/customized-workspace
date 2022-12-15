@@ -18,7 +18,7 @@
 * [Reference](#reference)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Wed 14 Dec 2022 06:43:51 IST -->
+<!-- Added by: gil_diy, at: Thu 15 Dec 2022 03:55:11 IST -->
 
 <!--te-->
 
@@ -289,3 +289,5 @@ sudo apt-get install libtesseract4 tesseract-ocr tesseract-ocr-eng tesseract-ocr
 # Reference 
 
 [Instructions September 2022](https://www.youtube.com/watch?v=KE4xEzFGSU8)
+
+[Comprehensive guide to ocr with tesseract](https://medium.com/nanonets/a-comprehensive-guide-to-ocr-with-tesseract-opencv-and-python-fd42f69e8ca8)
