@@ -9,7 +9,7 @@ These instructions will get you a copy of the project up and running on your loc
 ### Prerequisites
 
 The things you need to install are:
-
+- Adds to Ubuntu a clipboard indicator to the top panel, and caches clipboard history - [Link](https://github.com/Tudmotu/gnome-shell-extension-clipboard-indicator)
 - Solaar -  Linux manager for many Logitech keyboards, mice, and trackpads that connect wirelessly
             [Link](https://github.com/pwr-Solaar/Solaar)
 - zsh (I'm using 5.3 from source)
