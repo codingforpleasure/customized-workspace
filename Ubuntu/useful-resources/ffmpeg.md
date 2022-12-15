@@ -46,13 +46,13 @@
       * [Extend audio length](#extend-audio-length)
       * [Modify sample rate](#modify-sample-rate)
    * [Convert to gif](#convert-to-gif)
-   * [Resizing Gif width/Height](#resizing-gif-widthheight)
+   * [Resizing animated gif's width/Height](#resizing-animated-gifs-widthheight)
    * [Make gif run once (no loops)](#make-gif-run-once-no-loops)
    * [Editing Gif](#editing-gif)
    * [Documentation](#documentation)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Thu 15 Dec 2022 10:54:13 IST -->
+<!-- Added by: gil_diy, at: Thu 15 Dec 2022 10:54:51 IST -->
 
 <!--te-->
 
@@ -442,11 +442,13 @@ out, _ = (ffmpeg
 ffmpeg  -i StickAround.mp4 -f gif StickAround.gif
 ```
 
-## Resizing Gif width/Height
+## Resizing animated gif's width/Height
+
+Resize animated file to 50%.
 
 ```bash
 convert image_animation_1.gif -coalesce coalesce.gif
-convert coalesce.gif -resize x200 image2.gif
+convert coalesce.gif -resize 50% image2.gif
 ```
 
 ## Make gif run once (no loops)
