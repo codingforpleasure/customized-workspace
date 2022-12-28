@@ -19,7 +19,7 @@
 * [Reference](#reference)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Wed 28 Dec 2022 12:18:20 IST -->
+<!-- Added by: gil_diy, at: Wed 28 Dec 2022 12:18:54 IST -->
 
 <!--te-->
 
@@ -296,6 +296,8 @@ For training a model use the following scripts:
    `bla_0.tif`, `bla_0.gt.txt`, `bla_0.box`
    `bla_1.tif`, `bla_1.gt.txt`, `bla_1.box`
    etc
+
+   the file with the suffice `.gt.txt` is the **Ground Truth**
 
 
 
