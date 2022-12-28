@@ -15,10 +15,11 @@
          * [Specify the language](#specify-the-language)
          * [Some tips with image processing (important)](#some-tips-with-image-processing-important)
    * [Installing tesseract NOT from source, from ubuntu repositories:](#installing-tesseract-not-from-source-from-ubuntu-repositories)
+   * [Tesseract Dec-2022](#tesseract-dec-2022)
 * [Reference](#reference)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Thu 15 Dec 2022 03:55:17 IST -->
+<!-- Added by: gil_diy, at: Wed 28 Dec 2022 12:14:22 IST -->
 
 <!--te-->
 
@@ -284,6 +285,16 @@ Otherwise it will convert the image to grayscale, and therefore will mess the te
 ```bash
 sudo apt-get install libtesseract4 tesseract-ocr tesseract-ocr-eng tesseract-ocr-osd
 ```
+
+
+## Tesseract Dec-2022 
+
+For training a model use the following scripts:
+
+1. `generate_image.sh` will generate all syntetic data, the folder should be name by this convention: `<bla>-ground-truth`
+2. 
+
+
 
 
 # Reference 
