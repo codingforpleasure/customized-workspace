@@ -19,7 +19,7 @@
 * [Reference](#reference)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Wed 28 Dec 2022 12:14:25 IST -->
+<!-- Added by: gil_diy, at: Wed 28 Dec 2022 12:18:16 IST -->
 
 <!--te-->
 
@@ -292,7 +292,10 @@ sudo apt-get install libtesseract4 tesseract-ocr tesseract-ocr-eng tesseract-ocr
 For training a model use the following scripts:
 
 1. `generate_image.sh` will generate all syntetic data, the folder should be name by this convention: `<bla>-ground-truth`
-2. 
+   The script will generate triple files, ie: 
+   `bla_0.tif`, `bla_0.gt.txt`, `bla_0.box`
+   `bla_1.tif`, `bla_1.gt.txt`, `bla_1.box`
+   etc
 
 
 
