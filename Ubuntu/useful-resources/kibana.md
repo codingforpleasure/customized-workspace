@@ -6,7 +6,7 @@
    * [See all indices Elasticsearch:](#see-all-indices-elasticsearch)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Thu 29 Dec 2022 15:17:33 IST -->
+<!-- Added by: gil_diy, at: Thu 29 Dec 2022 15:17:43 IST -->
 
 <!--te-->
 
@@ -47,12 +47,14 @@ localhost:5601/api/status
 ```
 
 ## See all indices Elasticsearch:
+
 http://localhost:5601/app/management/data/index_management/indices
 
 
 ##
 
 In Kibana:
+
 ```bash
 GET _search
 {
