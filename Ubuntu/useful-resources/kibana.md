@@ -1,4 +1,5 @@
 <!--ts-->
+* [Kibana](#kibana)
    * [Stop Kibana service](#stop-kibana-service)
    * [Run Kibana Service](#run-kibana-service)
    * [Kibana Status](#kibana-status)
@@ -6,14 +7,12 @@
    * [See all indices Elasticsearch:](#see-all-indices-elasticsearch)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Thu 29 Dec 2022 15:18:01 IST -->
+<!-- Added by: gil_diy, at: Thu 29 Dec 2022 15:18:04 IST -->
 
 <!--te-->
 
 
-```bash
-```
-
+# Kibana
 
 ## Stop Kibana service
 
