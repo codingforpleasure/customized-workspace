@@ -1,9 +1,10 @@
 <!--ts-->
    * [Run Kibana service](#run-kibana-service)
+   * [Run Kibana Service](#run-kibana-service-1)
    * [Kibana Status](#kibana-status)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Thu 29 Dec 2022 13:41:30 IST -->
+<!-- Added by: gil_diy, at: Thu 29 Dec 2022 13:41:59 IST -->
 
 <!--te-->
 
@@ -16,6 +17,12 @@
 
 ```bash
 sudo systemctl start kibana.service
+```
+
+## Run Kibana Service
+
+```bash
+sudo systemctl stop kibana.service
 ```
 
 ## Kibana Status
