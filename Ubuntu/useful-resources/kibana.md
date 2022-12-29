@@ -2,10 +2,11 @@
    * [Run Kibana service](#run-kibana-service)
    * [Run Kibana Service](#run-kibana-service-1)
    * [Kibana Status](#kibana-status)
+   * [Acces kibana](#acces-kibana)
    * [See all indices Elasticsearch:](#see-all-indices-elasticsearch)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Thu 29 Dec 2022 15:17:12 IST -->
+<!-- Added by: gil_diy, at: Thu 29 Dec 2022 15:17:27 IST -->
 
 <!--te-->
 
@@ -33,7 +34,12 @@ sudo systemctl status kibana.service
 ```
 
 
-##
+## Acces kibana
+
+
+```bash
+localhost:5601
+```
 
 Server status details:
 ```bash
