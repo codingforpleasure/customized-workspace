@@ -1,14 +1,21 @@
 <!--ts-->
-
+   * [Kibana Status](#kibana-status)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Sun 25 Dec 2022 02:25:29 IST -->
+<!-- Added by: gil_diy, at: Thu 29 Dec 2022 13:41:00 IST -->
 
 <!--te-->
 
 
 ```bash
 ```
+
+## Kibana Status
+
+```bash
+sudo systemctl status kibana.service
+```
+
 
 Accessing Kibana:
 ```bash
