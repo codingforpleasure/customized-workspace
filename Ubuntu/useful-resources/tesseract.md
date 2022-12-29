@@ -19,7 +19,7 @@
 * [Reference](#reference)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Wed 28 Dec 2022 12:20:53 IST -->
+<!-- Added by: gil_diy, at: Thu 29 Dec 2022 15:17:46 IST -->
 
 <!--te-->
 
@@ -299,8 +299,7 @@ For training a model use the following scripts:
    etc
 
 
-
-   the file with the suffice `.gt.txt` is the **Ground Truth**.
+   the file with the suffice `.gt.txt` means it's the **Ground Truth**.
 
 
 
