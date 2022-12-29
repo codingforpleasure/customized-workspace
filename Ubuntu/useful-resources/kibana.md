@@ -2,11 +2,10 @@
    * [Run Kibana service](#run-kibana-service)
    * [Run Kibana Service](#run-kibana-service-1)
    * [Kibana Status](#kibana-status)
-   * [Accessing Kibana:](#accessing-kibana)
    * [See all indices Elasticsearch:](#see-all-indices-elasticsearch)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Thu 29 Dec 2022 15:17:03 IST -->
+<!-- Added by: gil_diy, at: Thu 29 Dec 2022 15:17:09 IST -->
 
 <!--te-->
 
@@ -33,11 +32,6 @@ sudo systemctl stop kibana.service
 sudo systemctl status kibana.service
 ```
 
-
-## Accessing Kibana:
-```bash
-localhost:5601
-```
 
 ##
 
