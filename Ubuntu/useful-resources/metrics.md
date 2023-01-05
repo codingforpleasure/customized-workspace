@@ -12,7 +12,7 @@
 * [Link to resource:](#link-to-resource)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Thu 05 Jan 2023 12:49:27 IST -->
+<!-- Added by: gil_diy, at: Thu 05 Jan 2023 12:55:11 IST -->
 
 <!--te-->
 # Metrics
@@ -144,6 +144,10 @@ The mAP is calculated by finding Average Precision(AP) for each class and then a
 <p align="center">
   <img width="400" src="images/metrics/mean_average_precision.jpg" title="Look into the image">
 </p>
+
+
+[Link](https://blog.paperspace.com/mean-average-precision/)
+
 
 # Link to resource:
 
