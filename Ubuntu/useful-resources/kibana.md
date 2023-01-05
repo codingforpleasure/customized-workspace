@@ -33,7 +33,7 @@ sudo systemctl status kibana.service
 ```
 
 
-## Acces kibana
+## Access kibana
 
 
 ```bash

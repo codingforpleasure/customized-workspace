@@ -10,3 +10,15 @@ real_script = 'main_script.py'
 
 bootstrap.run(real_script, f'run.py {real_script}', [], {})
 ```
+
+
+## Debug Streamlit with pycharm
+
+```python
+from streamlit.web import bootstrap
+
+real_script = 'app.py'
+bootstrap.run(real_script, f'run.py {real_script}', [], {})
+```
+
+was checked and works on `Streamlit 1.16.0`

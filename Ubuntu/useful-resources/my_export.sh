@@ -3,8 +3,6 @@
 
 MD_DIRECTORY="/home/gil_diy/customized-workspace/Ubuntu/useful-resources"
 
-
-
 if [[ $# -eq 0 ]]; then
 	
 	# In case of all markdowns in the current directory
@@ -12,6 +10,7 @@ if [[ $# -eq 0 ]]; then
 	for MARKDOWN_FILENAME_PATH in ${MD_DIRECTORY}/*.md
 	do	
 		DIR_COMMAND_NAME=${MARKDOWN_FILENAME_PATH:0:-3}
+
 		generate-md --layout github \
 					--input ${MARKDOWN_FILENAME_PATH}  \
 					--output ${DIR_COMMAND_NAME}
@@ -35,8 +34,9 @@ if [[ $# -eq 0 ]]; then
 else #In case of a single file, must hold extension
 
 	INPUT_FILE=$1 
-
+	# INPUT_FILE=`echo $INPUT_FILE | tr [:upper:] [:upper:]`
 	OUTPUT_DIR=${INPUT_FILE:0:-3}
+
 	generate-md --layout github \
 				--input ${INPUT_FILE}  \
 				--output ${OUTPUT_DIR}
