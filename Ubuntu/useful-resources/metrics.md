@@ -12,7 +12,7 @@
 * [Link to resource:](#link-to-resource)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Thu 05 Jan 2023 13:05:20 IST -->
+<!-- Added by: gil_diy, at: Thu 05 Jan 2023 13:10:12 IST -->
 
 <!--te-->
 # Metrics
@@ -145,6 +145,8 @@ The mAP is calculated by finding Average Precision(AP) for each class and then a
   <img width="400" src="images/metrics/mean_average_precision.jpg" title="Look into the image">
 </p>
 
+
+[Mean Average Precision (mAP) Using the COCO Evaluator](https://pyimagesearch.com/2022/05/02/mean-average-precision-map-using-the-coco-evaluator/)
 
 [Link](https://blog.paperspace.com/mean-average-precision/)
 
