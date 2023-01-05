@@ -8,11 +8,11 @@
    * [5. confusion Matrix](#5-confusion-matrix)
    * [6. ROC Curve](#6-roc-curve)
    * [Precision Recall Curve](#precision-recall-curve)
-   * [Evaluating models for Detection](#evaluating-models-for-detection)
+   * [Evaluating models for Detection - <strong>mAP</strong>](#evaluating-models-for-detection---map)
 * [Link to resource:](#link-to-resource)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Thu 05 Jan 2023 12:36:45 IST -->
+<!-- Added by: gil_diy, at: Thu 05 Jan 2023 12:38:52 IST -->
 
 <!--te-->
 # Metrics
@@ -111,7 +111,7 @@ Recall vs precision relationship changes as we vary the threshold for identifyin
 * Precision-Recall is a useful measure of success of prediction **when the classes are very imbalanced**
 
 
-## Evaluating models for Detection  
+## Evaluating models for Detection - **mAP** 
 
 IoU
 
@@ -120,7 +120,13 @@ IoU
 </p>
 
 
+Mean Average Precision(mAP) is a metric used to evaluate object detection models such as Fast R-CNN, YOLO, Mask R-CNN, etc. The mean of average precision(AP) values are calculated over recall values from 0 to 1.
 
+**mAP** formula is based on the following sub metrics:
+  * Confusion Matrix
+  * Intersection over Union(IoU)
+  * Recall
+  * Precision
 
 # Link to resource:
 
