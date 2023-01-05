@@ -12,7 +12,7 @@
 * [Link to resource:](#link-to-resource)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Thu 05 Jan 2023 12:39:05 IST -->
+<!-- Added by: gil_diy, at: Thu 05 Jan 2023 12:39:19 IST -->
 
 <!--te-->
 # Metrics
@@ -123,6 +123,7 @@ IoU
 Mean Average Precision(mAP) is a metric used to evaluate object detection models such as Fast R-CNN, YOLO, Mask R-CNN, etc. The mean of average precision(AP) values are calculated over recall values from 0 to 1.
 
 **mAP** formula is based on the following sub metrics:
+
   * Confusion Matrix
   * Intersection over Union(IoU)
   * Recall
