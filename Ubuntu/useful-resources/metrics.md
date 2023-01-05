@@ -12,7 +12,7 @@
 * [Link to resource:](#link-to-resource)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Thu 05 Jan 2023 12:39:19 IST -->
+<!-- Added by: gil_diy, at: Thu 05 Jan 2023 12:46:27 IST -->
 
 <!--te-->
 # Metrics
@@ -128,6 +128,22 @@ Mean Average Precision(mAP) is a metric used to evaluate object detection models
   * Intersection over Union(IoU)
   * Recall
   * Precision
+
+
+Here is a summary of the steps to calculate the AP:
+
+* Generate the prediction scores using the model.
+* Convert the prediction scores to class labels.
+* Calculate the confusion matrix—TP, FP, TN, FN.
+* Calculate the precision and recall metrics.
+* Calculate the area under the precision-recall curve.
+* Measure the average precision.
+
+The mAP is calculated by finding Average Precision(AP) for each class and then average over a number of classes.
+
+<p align="center">
+  <img width="400" src="images/metrics/mean_average_precision.jpg" title="Look into the image">
+</p>
 
 # Link to resource:
 
