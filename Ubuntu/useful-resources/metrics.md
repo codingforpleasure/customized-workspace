@@ -12,7 +12,7 @@
 * [Link to resource:](#link-to-resource)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Thu 05 Jan 2023 12:55:14 IST -->
+<!-- Added by: gil_diy, at: Thu 05 Jan 2023 13:05:09 IST -->
 
 <!--te-->
 # Metrics
@@ -148,6 +148,8 @@ The mAP is calculated by finding Average Precision(AP) for each class and then a
 
 [Link](https://blog.paperspace.com/mean-average-precision/)
 
+
+source written to use is here: [Link](https://github.com/rafaelpadilla/review_object_detection_metrics/blob/main/src/evaluators/coco_evaluator.py)
 
 # Link to resource:
 
