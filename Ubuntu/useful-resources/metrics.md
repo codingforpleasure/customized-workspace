@@ -8,11 +8,11 @@
    * [5. confusion Matrix](#5-confusion-matrix)
    * [6. ROC Curve](#6-roc-curve)
    * [Precision Recall Curve](#precision-recall-curve)
-   * [Evaluating models for Detection - <strong>mAP</strong>](#evaluating-models-for-detection---map)
+   * [Evaluating models for Detection - mAP](#evaluating-models-for-detection---map)
 * [Link to resource:](#link-to-resource)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Thu 05 Jan 2023 12:38:58 IST -->
+<!-- Added by: gil_diy, at: Thu 05 Jan 2023 12:39:05 IST -->
 
 <!--te-->
 # Metrics
@@ -111,7 +111,7 @@ Recall vs precision relationship changes as we vary the threshold for identifyin
 * Precision-Recall is a useful measure of success of prediction **when the classes are very imbalanced**
 
 
-## Evaluating models for Detection - **mAP** 
+## Evaluating models for Detection - mAP
 
 IoU
 
