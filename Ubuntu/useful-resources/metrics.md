@@ -1,16 +1,18 @@
 
 <!--ts-->
-   * [Metrics](#metrics)
-      * [1. Accuracy](#1-accuracy)
-      * [2. Recall](#2-recall)
-      * [3. precision](#3-precision)
-      * [4. F1 (F-score / F-measure)](#4-f1-f-score--f-measure)
-      * [5. confusion Matrix](#5-confusion-matrix)
-      * [6. ROC Curve](#6-roc-curve)
-      * [Precision Recall Curve](#precision-recall-curve)
-   * [Link to resource:](#link-to-resource)
+* [Metrics](#metrics)
+   * [1. Accuracy](#1-accuracy)
+   * [2. Recall](#2-recall)
+   * [3. precision](#3-precision)
+   * [4. F1 (F-score / F-measure)](#4-f1-f-score--f-measure)
+   * [5. confusion Matrix](#5-confusion-matrix)
+   * [6. ROC Curve](#6-roc-curve)
+   * [Precision Recall Curve](#precision-recall-curve)
+   * [Evaluating models for Detection](#evaluating-models-for-detection)
+* [Link to resource:](#link-to-resource)
 
-<!-- Added by: gil_diy, at: Wed 16 Feb 2022 19:19:37 IST -->
+<!-- Created by https://github.com/ekalinin/github-markdown-toc -->
+<!-- Added by: gil_diy, at: Thu 05 Jan 2023 12:36:45 IST -->
 
 <!--te-->
 # Metrics
@@ -109,8 +111,20 @@ Recall vs precision relationship changes as we vary the threshold for identifyin
 * Precision-Recall is a useful measure of success of prediction **when the classes are very imbalanced**
 
 
+## Evaluating models for Detection  
+
+IoU
+
+<p align="center">
+  <img width="400" src="images/metrics/Iou.jpg" title="Look into the image">
+</p>
+
+
+
+
 # Link to resource:
 
 [Write about this](https://ds100.org/sp20/resources/assets/lectures/lec24/LogisticRegressionPart2.html)
 
 [Sensitivity_and_specificity](https://en.wikipedia.org/wiki/Sensitivity_and_specificity)
+
