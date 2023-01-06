@@ -15,7 +15,7 @@
       * [Random generation](#random-generation)
          * [random](#random)
          * [Generate random array](#generate-random-array)
-         * [randn](#randn)
+         * [Generates samples from the normal distribution](#generates-samples-from-the-normal-distribution)
          * [rand](#rand)
          * [Get random sample from a given 1-D array](#get-random-sample-from-a-given-1-d-array)
       * [Forming](#forming)
@@ -93,7 +93,7 @@
    * [Reference](#reference)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Fri 06 Jan 2023 17:33:45 IST -->
+<!-- Added by: gil_diy, at: Fri 06 Jan 2023 17:34:17 IST -->
 
 <!--te-->
 
@@ -304,8 +304,7 @@ np.random.randint(5, size=(2, 4))
 # array([[4, 0, 2, 1],[3, 2, 2, 0]])
 ```
 
-#### randn
-`numpy.random.randn` generates samples from the normal distribution
+#### Generates samples from the normal distribution
 
 ```python
 np.random.randn(2, 3)
