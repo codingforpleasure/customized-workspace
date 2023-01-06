@@ -14,6 +14,7 @@
       * [move axis](#move-axis)
       * [Random generation](#random-generation)
          * [random](#random)
+         * [Generate random](#generate-random)
          * [randn](#randn)
          * [rand](#rand)
          * [Get random sample from a given 1-D array](#get-random-sample-from-a-given-1-d-array)
@@ -92,7 +93,7 @@
    * [Reference](#reference)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Thu 24 Nov 2022 18:06:07 IST -->
+<!-- Added by: gil_diy, at: Fri 06 Jan 2023 17:26:57 IST -->
 
 <!--te-->
 
@@ -291,6 +292,16 @@ Generates decimal numbers:
  x2 = np.random.random((1, 3, 5))
 
  container = np.vstack((x1, x2))
+```
+
+#### Generate random 
+
+Random integers from the “discrete uniform” distribution.
+Generate a 2 x 4 array of ints between 0 and 4, inclusive:
+
+```python
+np.random.randint(5, size=(2, 4)) 
+# array([[4, 0, 2, 1],[3, 2, 2, 0]])
 ```
 
 #### randn
