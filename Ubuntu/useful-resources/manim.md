@@ -45,11 +45,12 @@
       * [Cylindrical coordinate system](#cylindrical-coordinate-system)
       * [Spherical coordinate system](#spherical-coordinate-system)
    * [Shapes should do](#shapes-should-do)
+   * [Debug in manimgl](#debug-in-manimgl)
 * [Documentations](#documentations)
 * [Intresting Packages for manim](#intresting-packages-for-manim)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Thu 01 Dec 2022 09:13:05 IST -->
+<!-- Added by: gil_diy, at: Sun 08 Jan 2023 04:35:34 PM IST -->
 
 <!--te-->
 
@@ -1011,6 +1012,13 @@ For adding new colors:
 [Lemniscate](https://he.wikipedia.org/wiki/%D7%9C%D7%9E%D7%A0%D7%99%D7%A1%D7%A7%D7%98%D7%94)
 
 [heart](https://mathworld.wolfram.com/HeartCurve.html)
+
+
+## Debug in manimgl
+
+<p align="center">
+  <img width="400" src="/home/gil_diy/customized-workspace/Ubuntu/useful-resources/images/manimgl/debugger.jpg" title="Look into the image">
+</p>
 
 # Documentations
 
