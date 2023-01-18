@@ -2,17 +2,23 @@
 
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Wed 18 Jan 2023 08:34:26 PM IST -->
+<!-- Added by: gil_diy, at: Wed 18 Jan 2023 08:35:13 PM IST -->
 
 <!--te-->
 
+<style>
+table {
+    border-collapse: collapse;
+}
+table, th, td {
+   border: 1px solid black;
+}
+blockquote {
+    border-left: solid blue;
+    padding-left: 10px;
+}
+</style>
 
-<p align="center" style="width:600px;"> <!--  -->
-
-Title1 | Title2
----------|-----
-element | element-description
-element | element-description
-element | element-description
-
-</p>
+| Column One    | Column Two    |                                                                                                                                                   
+| ---           | ---           |                                                                                                                                                   
+| data cell one | data cell two |  
