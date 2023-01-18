@@ -2,7 +2,7 @@
 
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Wed 18 Jan 2023 08:35:49 PM IST -->
+<!-- Added by: gil_diy, at: Wed 18 Jan 2023 08:36:20 PM IST -->
 
 <!--te-->
 
@@ -12,6 +12,17 @@ td, th {
 }
 </style>
 
+
+
+<div align="center">
+
+| Tables   |      Are      |  Cool |
+|----------|:-------------:|------:|
+| col 1 is |  left-aligned | $1600 |
+| col 2 is |    centered   |   $12 |
+| col 3 is | right-aligned |    $1 |
+
+</div>
 
 | Time         | Length        | Speed              | Mass         |
 | ------------ | ------------- | ------------------ | ------------ |
