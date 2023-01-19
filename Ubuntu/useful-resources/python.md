@@ -33,7 +33,7 @@
    * [Useful packages](#useful-packages)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Thu 19 Jan 2023 04:19:28 PM IST -->
+<!-- Added by: gil_diy, at: Thu 19 Jan 2023 04:20:05 PM IST -->
 
 <!--te-->
 
@@ -457,4 +457,4 @@ if __name__ == '__main__':
 
 [Generate fake data easily](https://github.com/joke2k/faker)
 
-[Generate Synthetic Dataset] (https://towardsdatascience.com/simple-ways-to-create-synthetic-dataset-in-python-76a8e9a2f35c)
+[Generate Synthetic Dataset](https://towardsdatascience.com/simple-ways-to-create-synthetic-dataset-in-python-76a8e9a2f35c)
