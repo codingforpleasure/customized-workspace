@@ -29,10 +29,11 @@
    * [raise exception](#raise-exception)
    * [Counting words with a counter](#counting-words-with-a-counter)
    * [Make logger colorful](#make-logger-colorful)
+   * [The use of an <strong>init</strong>.py in a directory](#the-use-of-an-initpy-in-a-directory)
    * [Useful packages](#useful-packages)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Mon 16 Jan 2023 08:20:17 AM IST -->
+<!-- Added by: gil_diy, at: Thu 19 Jan 2023 04:19:22 PM IST -->
 
 <!--te-->
 
@@ -447,6 +448,10 @@ if __name__ == '__main__':
     logger.info('Watch out!')
     logger.critical('Watch out!')
 ```
+
+## The use of an __init__.py in a directory
+
+[Link](https://www.youtube.com/watch?v=cONc0NcKE7s)
 
 ## Useful packages
 
