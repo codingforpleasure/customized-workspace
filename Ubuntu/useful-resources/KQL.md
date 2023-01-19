@@ -1,73 +1,95 @@
 <!--ts-->
-* [KQL (Kusto Query Lanugage)](#kql-kusto-query-lanugage)
-   * [Add comment in KQL](#add-comment-in-kql)
-   * [Search](#search)
-      * [Search whole table across all columns](#search-whole-table-across-all-columns)
-      * [Search whole table on specific column](#search-whole-table-on-specific-column)
-      * [Search partial keyword in a specific column](#search-partial-keyword-in-a-specific-column)
-      * [Search word with wild card](#search-word-with-wild-card)
-      * [Search word which appears in the end of the string](#search-word-which-appears-in-the-end-of-the-string)
-   * [Logical operators](#logical-operators)
-   * [Where](#where)
-   * [Take](#take)
-   * [Count](#count)
-   * [Summarize](#summarize)
-   * [Extend](#extend)
-   * [Project](#project)
-   * [Distinct](#distinct)
-   * [Scalars Operators](#scalars-operators)
-      * [print](#print)
-      * [now](#now)
-      * [ago](#ago)
-      * [sort](#sort)
-      * [extract](#extract)
-      * [parse](#parse)
-      * [datetime](#datetime)
-      * [Timespan Arithmetic](#timespan-arithmetic)
-      * [startof ...](#startof-)
-         * [Start of year](#start-of-year)
-         * [Start of hour](#start-of-hour)
-      * [endof ...](#endof-)
-         * [end of year](#end-of-year)
-         * [end of hour](#end-of-hour)
-      * [between](#between)
-      * [format_datetime](#format_datetime)
-      * [format_timespan](#format_timespan)
-      * [if Condition](#if-condition)
-      * [Top](#top)
-      * [String operators](#string-operators)
-         * [strcat](#strcat)
-   * [Advanced Aggregation](#advanced-aggregation)
-      * [arg_max and arg_min](#arg_max-and-arg_min)
-      * [Max](#max)
-      * [Sum](#sum)
-      * [Sumif](#sumif)
-      * [Countif](#countif)
-      * [Pick random row from table](#pick-random-row-from-table)
-      * [Pick random value from specific column](#pick-random-value-from-specific-column)
-      * [Percentiles](#percentiles)
-   * [Working with Datasets](#working-with-datasets)
-      * [let](#let)
-      * [join](#join)
-         * [Example 1: Joining two tables with common column](#example-1-joining-two-tables-with-common-column)
-         * [Example 2:](#example-2)
-      * [union](#union)
-         * [Example #1: Inner join](#example-1-inner-join)
-         * [Example #2: Outer join](#example-2-outer-join)
-      * [datatable](#datatable)
-      * [Prev/Next](#prevnext)
-         * [Example1: simple example](#example1-simple-example)
-         * [Example2: Moving average](#example2-moving-average)
-      * [toscalar](#toscalar)
-      * [row_cumsum](#row_cumsum)
-      * [materialize](#materialize)
+- [KQL (Kusto Query Lanugage)](#kql-kusto-query-lanugage)
+  - [Hot keys](#hot-keys)
+  - [Add comment in KQL](#add-comment-in-kql)
+  - [Search](#search)
+    - [Search whole table across all columns](#search-whole-table-across-all-columns)
+    - [Search whole table on specific column](#search-whole-table-on-specific-column)
+    - [Search partial keyword in a specific column](#search-partial-keyword-in-a-specific-column)
+    - [Search word with wild card](#search-word-with-wild-card)
+    - [Search word which appears in the end of the string](#search-word-which-appears-in-the-end-of-the-string)
+  - [Logical operators](#logical-operators)
+  - [Where](#where)
+  - [Take](#take)
+  - [Count](#count)
+  - [Summarize](#summarize)
+  - [dcount](#dcount)
+  - [Extend](#extend)
+  - [Project](#project)
+  - [Distinct](#distinct)
+  - [Scalars Operators](#scalars-operators)
+    - [print](#print)
+    - [now](#now)
+    - [ago](#ago)
+    - [sort](#sort)
+    - [extract](#extract)
+    - [parse](#parse)
+    - [datetime](#datetime)
+    - [Timespan Arithmetic](#timespan-arithmetic)
+    - [startof ...](#startof-)
+      - [Start of year](#start-of-year)
+      - [Start of hour](#start-of-hour)
+    - [endof ...](#endof-)
+      - [end of year](#end-of-year)
+      - [end of hour](#end-of-hour)
+    - [between](#between)
+      - [Example #1](#example-1)
+      - [Example #2](#example-2)
+    - [format\_datetime](#format_datetime)
+    - [format\_timespan](#format_timespan)
+    - [if Condition](#if-condition)
+    - [Top](#top)
+    - [String operators](#string-operators)
+      - [strcat](#strcat)
+    - [mv-expand](#mv-expand)
+    - [Pack array](#pack-array)
+  - [Advanced Aggregation](#advanced-aggregation)
+    - [arg\_max and arg\_min](#arg_max-and-arg_min)
+    - [Max](#max)
+    - [Sum](#sum)
+    - [Sumif](#sumif)
+    - [Countif](#countif)
+    - [Pick random row from table](#pick-random-row-from-table)
+    - [Pick random value from specific column](#pick-random-value-from-specific-column)
+    - [Percentiles](#percentiles)
+  - [Working with Datasets](#working-with-datasets)
+    - [let](#let)
+    - [join](#join)
+      - [Example 1:](#example-1-1)
+      - [Example 2:](#example-2-1)
+    - [union](#union)
+      - [Example #1:](#example-1-2)
+      - [Example #2:](#example-2-2)
+    - [datatable](#datatable)
+    - [getschema (Type of each column)](#getschema-type-of-each-column)
+    - [Prev/Next](#prevnext)
+      - [Example1](#example1)
+      - [Example2](#example2)
+    - [toscalar](#toscalar)
+    - [row\_cumsum](#row_cumsum)
+    - [materialize](#materialize)
+  - [Time Series](#time-series)
+    - [The range Command](#the-range-command)
+      - [Example](#example)
+    - [The make-series Command](#the-make-series-command)
+      - [Example1](#example1-1)
+      - [Example2](#example2-1)
+      - [Example3](#example3)
+    - [series\_fit\_line](#series_fit_line)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Sun 27 Nov 2022 16:25:58 IST -->
+<!-- Added by: gil_diy, at: Tue 01 Nov 2022 10:34:52 IST -->
 
 <!--te-->
 
 # KQL (Kusto Query Lanugage)
+
+## Hot keys
+
+Hot Key | Description|
+---|---|
+`Ctrl+Space` | Show all columns and functions
+
 
 ## Add comment in KQL
 
@@ -272,6 +294,19 @@ Perf | where CounterName =="% Free Space"
 Here we are focusing on table **Perf**, now we apply a filter
 on all rows with constraint the value of CounterName should be "% Free Space", afterwards we split the rows into buckets (bins), each bucket of size 10. Eventually, we get a histogram where all bins appear.
 
+
+## dcount
+
+Usually dcount is used with summarized 
+(for estimating the cardinality of huge sets) 
+It trades accuracy for performance
+```
+SecurityEvent
+| where TimeGenerated >= ago(90d)
+| summarize dcount(EventID) by Computer
+| sort by Computer asc
+```
+
 ## Extend
 
 
@@ -347,6 +382,9 @@ Perf | distinct InstanceName
 ```
 
 ## Scalars Operators
+
+[scalar-data-types - very informative](https://github.com/microsoft/Kusto-Query-Language/tree/master/doc/scalar-data-types)
+
 
 ### print
 
@@ -528,10 +566,20 @@ Perf | extend end_of_hour = endofhour(TimeGenerated)
 We can use between while using where,
 for retrieving rows which staisfy the between constraint.
 
+#### Example #1
+
 ```
 Perf 
 | where CounterName == "% Free Space" 
 | where CounterValue between (70.0..100.0)
+```
+
+#### Example #2
+```
+let min_peak_t=datetime(2016-08-23 15:00);
+let max_peak_t=datetime(2016-08-23 15:02);
+demo_clustering1
+  | where PreciseTimeStamp between(min_peak_t..max_peak_t)
 ```
 
 ### format_datetime
@@ -579,6 +627,53 @@ Perf | top 20 by CounterValue
 ### String operators
 
 #### strcat
+
+strcat("My age is: ", my_age)
+
+
+
+### mv-expand
+
+Expands multi-value dynamic arrays or property bags into multiple records (rows).
+
+For example,
+A simple expansion of a single column:
+
+```
+datatable (a:int, b:dynamic)
+[1,dynamic({"prop1":"a1", "prop2":"b1"}),
+ 2,dynamic({"prop1":"a2", "prop2":"b2"})]
+| mv-expand b
+```
+
+<p align="center">
+  <img src="images\mv_expand.jpg" width="1500">
+</p>
+
+
+### Pack array
+
+```KQL
+range x from 1 to 3 step 1
+| extend y = x * 2
+| extend z = y * 2
+```
+
+<p align="center">
+  <img src="images\simple_table.jpg" width="200">
+</p>
+
+```KQL
+range x from 1 to 3 step 1
+| extend y = x * 2
+| extend z = y * 2
+| project s1 = pack_array(x,y,z), s2 = pack_array(z, y, x)
+```
+
+<p align="center">
+  <img src="images\pack_array.jpg" width="200">
+</p>
+
 
 ## Advanced Aggregation
 
@@ -741,9 +836,9 @@ print get_earlier_date(todatetime("2017-05-01"), todatetime("2002-01-01"))
 
 ### join
 
-#### Example 1: Joining two tables with common column
+#### Example 1:
 
-Here we are joining the two tables which have common column named `Computer`, 
+Here we are joining the two tables (`Perf`, `VMComputer`) which have common column named `Computer`, 
 
 ```
 Perf 
@@ -784,9 +879,7 @@ on Computer, TimeGenerated
 
 ### union
 
-#### Example #1: Inner join
-
-Attention the default value of the union operation is `inner`.
+#### Example #1:
 
 Here we conduct union between two tables:
 `UpdateSummary`, `Update`. the union will output all rows one table below the other. For understanding which row came from which table we have added the `withsource="SourceTable"`
@@ -795,7 +888,11 @@ UpdateSummary
 | union withsource="SourceTable" Update
 ```
 
-#### Example #2: Outer join
+#### Example #2:
+
+Attention the default value of the union operation is `inner`.
+
+**Union outer**
 
 **Returns all columns from both tables:**
 
@@ -818,11 +915,22 @@ datatable (ID:int , TimeGenerated:datetime , YouTubeName:string, YouTubeURL:stri
 ]
 ```
 
+
+### getschema (Type of each column)
+
+Show for each column in a specific table the
+columns types
+
+```
+Perf | getschema 
+```
+
 ### Prev/Next
 
 For using the prev or next function we must use the `serialize` function.
 
-#### Example1: simple example
+#### Example1
+
 ```
 let SomeData = datatable (rowNum:int , rowVal:string )
 [
@@ -840,7 +948,7 @@ SomeData
 ```
 
 
-#### Example2: Moving average
+#### Example2
 
 Here we are calculating the moving average on `PctCpuTime` for three consecutive rows.
 
@@ -877,3 +985,104 @@ Captures the value of a tabular expression for the duration of the query executi
 
 https://learn.microsoft.com/en-us/azure/data-explorer/kusto/query/materializefunction
 
+## Time Series
+
+### The range Command
+
+Here, we'll creat a table for a range, one for each then, for the start of the day. then we'll join that a query getting the number of events bucketed by date. We'll then add a column that nicely formats the date. It then sorts the results and displays them.
+
+#### Example
+
+```
+range  LastWeek from ago(7d) to now() step 1d
+| project TimeGenerated= startofday(LastWeek)
+| join  kind=fullouter (Event
+                        |where  TimeGenerated > ago(7d)
+                        | summarize Count= count()
+                        by bin(TimeGenerated,1d)
+) on  TimeGenerated 
+| extend TimeDisplay= format_datetime(TimeGenerated,"yyyy-mm-dd")
+|sort by TimeGenerated desc 
+|project  TimeDisplay, Count  
+          
+```
+
+### The make-series Command
+
+We can use make series to generate an array of averages and times, then use mvexpand to pivot them back to rows.
+
+
+#### Example1
+
+```KQL
+let data=datatable(timestamp:datetime, metric: real)
+[
+  datetime(2017-01-01), 4,
+  datetime(2017-01-01), 8,
+  datetime(2017-01-02), 15,
+  datetime(2017-01-04), 7,
+  datetime(2017-01-04T13:40), 13,
+];
+let interval = 1d;
+let stime = datetime(2017-01-01);
+let etime = datetime(2017-01-5);
+data
+| make-series avg(metric) on timestamp from stime to etime step interval 
+```
+We got a series of 4 elements,
+each element holds the average of the metric in those corresponding days.
+
+<p align="center">
+  <img src="images\make_series.jpg" width="1500">
+</p>
+
+#### Example2
+
+```
+let startTime=ago(2h);
+let endTime=now();
+Perf
+| where TimeGenerated between (startTime..endTime)
+| where CounterName == " % Processor Time"
+    and  Computer == " ContosoWeb1.ContosoRetail.com"
+    and ObjectName == "process"
+    and InstanceName !in ("_Total", "Idle")
+| make-series avg(CounterValue) default=0
+           on TimeGenerated in range (startTime,endTime,10m)   
+           by InstanceName
+| mv-expand TimeGenerated to typeof(datetime)
+           , avg_CounterValue to typeof(double)
+             limit 100000 
+| render  timechart  
+```
+
+
+#### Example3
+
+```
+StorageBlobLogs
+| where TimeGenerated > ago(1d) and OperationName has "PutBlob" and StatusText contains "success"
+| summarize dcount(Uri) by bin(TimeGenerated, 1h)
+| render timechart
+```
+
+<p align="center">
+  <img src="images\render_time_chart.jpg" width="1500">
+</p>
+
+
+
+### series_fit_line
+
+Finding a linear line for given dots (x,y)
+
+Slope (https://en.wikipedia.org/wiki/Slope)
+
+```
+range x from 1 to 1 step 1
+| project x=range(bin(now(),1h)-11h, bin(now(), 1h) ,1h)
+        , y = dynamic([2,5,6,8,11,15,17,18,25,26,30,30])
+| extend (RSquare, Slope, Variance, Rvariance, Interception, LineFit) = series_fit_line(y)
+```
+
+(url)[https://github.com/ManagedSentinel/AzureSentinelKQLScripts/blob/master/SeriesFitLineEstimateUsage.kql]
