@@ -30,10 +30,11 @@
    * [Counting words with a counter](#counting-words-with-a-counter)
    * [Make logger colorful](#make-logger-colorful)
    * [The use of an <strong>init</strong>.py in a directory](#the-use-of-an-initpy-in-a-directory)
+   * [Check python libraries for license constraints?](#check-python-libraries-for-license-constraints)
    * [Useful packages](#useful-packages)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Thu 19 Jan 2023 04:20:15 PM IST -->
+<!-- Added by: gil_diy, at: Thu 19 Jan 2023 04:23:54 PM IST -->
 
 <!--te-->
 
@@ -452,6 +453,11 @@ if __name__ == '__main__':
 ## The use of an __init__.py in a directory
 
 [Link](https://www.youtube.com/watch?v=cONc0NcKE7s)
+
+
+## Check python libraries for license constraints?
+
+[useful-package](https://github.com/dhatim/python-license-check)
 
 ## Useful packages
 
