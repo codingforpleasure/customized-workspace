@@ -8,6 +8,7 @@
    * [Determining your current environment](#determining-your-current-environment)
    * [Viewing a list of your environments](#viewing-a-list-of-your-environments)
    * [Viewing a list of the packages in an environment](#viewing-a-list-of-the-packages-in-an-environment)
+   * [Export your active environment to a new file](#export-your-active-environment-to-a-new-file)
    * [Installing packages in the active environment](#installing-packages-in-the-active-environment)
    * [Installing list of packages for the active environemnt:](#installing-list-of-packages-for-the-active-environemnt)
    * [Create environment from requirements.yml](#create-environment-from-requirementsyml)
@@ -28,7 +29,7 @@
    * [References](#references)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Sun 22 Jan 2023 10:59:50 AM IST -->
+<!-- Added by: gil_diy, at: Sun 22 Jan 2023 11:13:38 AM IST -->
 
 <!--te-->
 # Anaconda
@@ -93,6 +94,12 @@ Assuming the environment is activated:
 
 ```bash
 conda list
+```
+
+## Export your active environment to a new file
+
+```bash
+conda env export > environment.yml
 ```
 
 ## Installing packages in the active environment
