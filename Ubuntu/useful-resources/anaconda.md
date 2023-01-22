@@ -1,31 +1,34 @@
 <!--ts-->
-   * [Anaconda](#anaconda)
-      * [Creating environment](#creating-environment)
-      * [Creating environment with specific python version](#creating-environment-with-specific-python-version)
-      * [Removing environment](#removing-environment)
-      * [Activating an environment](#activating-an-environment)
-      * [Deactivating an environment](#deactivating-an-environment)
-      * [Determining your current environment](#determining-your-current-environment)
-      * [Viewing a list of your environments](#viewing-a-list-of-your-environments)
-      * [Viewing a list of the packages in an environment](#viewing-a-list-of-the-packages-in-an-environment)
-      * [Installing packages in the active environment](#installing-packages-in-the-active-environment)
-      * [Installing list of packages for the active environemnt:](#installing-list-of-packages-for-the-active-environemnt)
-      * [Saving environment to a text file](#saving-environment-to-a-text-file)
-      * [Create environment from a text file](#create-environment-from-a-text-file)
-      * [Removing packages in the active environment](#removing-packages-in-the-active-environment)
-      * [Get all information about an active environemnt](#get-all-information-about-an-active-environemnt)
-      * [Get the location of all enviroments](#get-the-location-of-all-enviroments)
-      * [Search for package](#search-for-package)
-      * [Search for package in specific channel](#search-for-package-in-specific-channel)
-      * [Add extentions to your jupyter notebook](#add-extentions-to-your-jupyter-notebook)
-      * [Add Jupyter support to your new environment](#add-jupyter-support-to-your-new-environment)
-      * [Registering new kernel into the environemnt](#registering-new-kernel-into-the-environemnt)
-      * [View available kernels in environment](#view-available-kernels-in-environment)
-      * [Removing kernel from the environment](#removing-kernel-from-the-environment)
-      * [Specifying version numbers](#specifying-version-numbers)
-      * [References](#references)
+* [Anaconda](#anaconda)
+   * [Creating environment](#creating-environment)
+   * [Creating environment with specific python version](#creating-environment-with-specific-python-version)
+   * [Removing environment](#removing-environment)
+   * [Activating an environment](#activating-an-environment)
+   * [Deactivating an environment](#deactivating-an-environment)
+   * [Determining your current environment](#determining-your-current-environment)
+   * [Viewing a list of your environments](#viewing-a-list-of-your-environments)
+   * [Viewing a list of the packages in an environment](#viewing-a-list-of-the-packages-in-an-environment)
+   * [Installing packages in the active environment](#installing-packages-in-the-active-environment)
+   * [Installing list of packages for the active environemnt:](#installing-list-of-packages-for-the-active-environemnt)
+   * [Create environment from requirements.yml](#create-environment-from-requirementsyml)
+   * [Saving environment to a text file](#saving-environment-to-a-text-file)
+   * [Create environment from a text file](#create-environment-from-a-text-file)
+   * [Removing packages in the active environment](#removing-packages-in-the-active-environment)
+   * [Get all information about an active environemnt](#get-all-information-about-an-active-environemnt)
+   * [Get the location of all enviroments](#get-the-location-of-all-enviroments)
+   * [Search for package](#search-for-package)
+   * [Search for package in specific channel](#search-for-package-in-specific-channel)
+   * [Add extentions to your jupyter notebook](#add-extentions-to-your-jupyter-notebook)
+   * [Add Jupyter support to your new environment](#add-jupyter-support-to-your-new-environment)
+   * [Registering new kernel into the environemnt](#registering-new-kernel-into-the-environemnt)
+   * [View available kernels in environment](#view-available-kernels-in-environment)
+   * [Removing kernel from the environment](#removing-kernel-from-the-environment)
+   * [Specifying version numbers](#specifying-version-numbers)
+   * [Clean the pkgs directory](#clean-the-pkgs-directory)
+   * [References](#references)
 
-<!-- Added by: gil_diy, at: Wed 05 Jan 2022 18:51:58 IST -->
+<!-- Created by https://github.com/ekalinin/github-markdown-toc -->
+<!-- Added by: gil_diy, at: Sun 22 Jan 2023 10:54:11 AM IST -->
 
 <!--te-->
 # Anaconda
@@ -132,6 +135,13 @@ dependencies:
         - gym
         - kaggle
 ```
+
+## Create environment from requirements.yml
+
+```bash
+conda env create -f my_project/environment.yml
+```
+
 
 ## Saving environment to a text file
 
