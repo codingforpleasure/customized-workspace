@@ -28,7 +28,7 @@
    * [References](#references)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Sun 22 Jan 2023 10:54:14 AM IST -->
+<!-- Added by: gil_diy, at: Sun 22 Jan 2023 10:54:16 AM IST -->
 
 <!--te-->
 # Anaconda
@@ -141,7 +141,6 @@ dependencies:
 ```bash
 conda env create -f my_project/environment.yml
 ```
-
 
 ## Saving environment to a text file
 
