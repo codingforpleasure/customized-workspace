@@ -29,7 +29,7 @@
    * [References](#references)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Sun 22 Jan 2023 11:13:41 AM IST -->
+<!-- Added by: gil_diy, at: Sun 22 Jan 2023 11:14:15 AM IST -->
 
 <!--te-->
 # Anaconda
@@ -98,6 +98,7 @@ conda list
 
 ## Export your active environment to a new file
 
+First activate the environment to export: `conda activate <myenv>`
 ```bash
 conda env export > environment.yml
 ```
