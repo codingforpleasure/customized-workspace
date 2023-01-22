@@ -28,7 +28,7 @@
    * [References](#references)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Sun 22 Jan 2023 10:54:19 AM IST -->
+<!-- Added by: gil_diy, at: Sun 22 Jan 2023 10:59:47 AM IST -->
 
 <!--te-->
 # Anaconda
@@ -139,7 +139,7 @@ dependencies:
 ## Create environment from requirements.yml
 
 ```bash
-conda env create -f my_project/environment.yml
+conda env create -n review_object_detection_metrics --file environment.yml
 ```
 
 ## Saving environment to a text file
