@@ -778,11 +778,20 @@ my_tensor.numel() | number of elements in a tensor
 torch.ones_like(my_tensor) | Create a new tensor that matches `my_tensor` attributes (shape and datatype) with all ones.
 torch.flatten(torch.arange(18).view(2,-1)) | Flattening a torch to 1 dimentional
 
-## torch
+## torch 
 
 ```python
 g = torch.Generator().manual_seed(123456)
 p = torch.rand(3, generator=g)
+```
+
+## torch multinomial
+
+```
+g = torch.Generator().manual_seed(123456)
+p = torch.rand(3, generator=g)
+
+torch.multinomial(p, num_samples=10, replacement = True, generator = g)
 ```
 
 

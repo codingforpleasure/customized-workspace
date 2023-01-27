@@ -173,11 +173,21 @@ filename = "{year}-{month}-{day}-{artist}-{title}.txt".format(
 'Hello, %s' % name
 ```
 
-### f-Strings (Python 3.6+)
+### Approach Two 
+
+```python
+
+'{} {}'.format(private_name, family_name)
+
+```
+
+### Approach Three: f-Strings (Python 3.6+)
 
 ```python
 f'Hello, {name}!'
 ```
+
+
 
 [Five wonderful uses of ‘f- Strings’ in Python](https://towardsdatascience.com/five-wonderful-uses-of-f-strings-in-python-7980cfd31c0d)
 
