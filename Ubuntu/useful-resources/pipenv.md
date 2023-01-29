@@ -36,6 +36,8 @@ $ sudo pip install pipenv
 
 Description | command
 -------------|-------------
+Create a new virtual environment and generate a Pipfile|  **pipenv install**
+Activate the virtual environment|   **pipenv shell**
 Install a package|  **pipenv install** &lt;package-name&gt;
 Install a package from a local file|  **pipenv install ./opencv_python-4.5.whl**
 Export requriments file | pipenv run pip freeze > requirements.txt
@@ -44,7 +46,6 @@ Uninstall a package|  **pipenv uninstall** &lt;package-name&gt;
 Generate a lockfile | **pipenv lock**
 If stuck on `Locking packages dependecies` |**pipenv lock --clear --verbose**
 Run a given command from the virtualenv, with any arguments forwarded|   **pipenv run python** manage.py runserver
-Spawn a shell with the virtualenv activated|   **pipenv shell**
 Locate the project| **pipenv `--`where**
 Locate the virtualenv| **pipenv `--`venv**
 Locate the Python interpreter | **pipenv `--`py**
