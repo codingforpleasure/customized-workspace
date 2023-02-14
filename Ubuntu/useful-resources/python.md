@@ -25,11 +25,12 @@
   - [Python Generators](#python-generators)
   - [Python Closure](#python-closure)
   - [jsonify with numpy arrays](#jsonify-with-numpy-arrays)
-  - [DefaultDict](#defaultdict)
+  - [Advance and easy to use Collections](#advance-and-easy-to-use-collections)
+    - [DefaultDict](#defaultdict)
+    - [Counter](#counter)
   - [Try, exception](#try-exception)
   - [Get traceback of exception](#get-traceback-of-exception)
   - [raise exception](#raise-exception)
-  - [Counting words with a counter](#counting-words-with-a-counter)
   - [Make logger colorful](#make-logger-colorful)
   - [The use of an __init__.py in a directory](#the-use-of-an-initpy-in-a-directory)
   - [Check python libraries for license constraints?](#check-python-libraries-for-license-constraints)
@@ -335,7 +336,9 @@ class NumpyEncoder(json.JSONEncoder):
 dumped = json.dumps(data, cls=NumpyEncoder)
 ```
 
-## DefaultDict
+## Advance and easy to use Collections
+
+### DefaultDict
 
 Defaultdict is a sub-class of the dictionary class that returns a dictionary-like object. 
 The functionality of both dictionaries and defaultdict are almost same except for the fact that defaultdict never raises a KeyError. 
@@ -367,6 +370,20 @@ print(d["c"])
 # Not Present
 ```
 
+### Counter
+
+```python
+from collections  import Counter
+
+tokens = "She likes my cats and my cats like my sofa".split()
+counter = Counter(tokens)
+
+print(counter)
+
+# Counter({'my': 3, 'cats': 2, 'She': 1, 'likes': 1, 'and': 1, 'like': 1, 'sofa': 1})
+
+```
+
 ## Try, exception
 
 ```python
@@ -389,20 +406,6 @@ traceback.print_exc()
 ```python
 if not(len(paths) == len(colors) == len(names)):
     raise ValueError
-```
-
-## Counting words with a counter
-
-```python
-from collections  import Counter
-
-tokens = "She likes my cats and my cats like my sofa".split()
-counter = Counter(tokens)
-
-print(counter)
-
-# Counter({'my': 3, 'cats': 2, 'She': 1, 'likes': 1, 'and': 1, 'like': 1, 'sofa': 1})
-
 ```
 
 
