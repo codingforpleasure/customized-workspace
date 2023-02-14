@@ -575,3 +575,5 @@ if __name__ == '__main__':
 ## Useful Articles
 
 [5-python-tricks-that-distinguish-senior-developers-from-juniors](https://medium.com/towards-data-science/5-python-tricks-that-distinguish-senior-developers-from-juniors-826d57ab3940)
+
+[5-signs-youve-become-an-advanced-pythonista-without-even-realizing-it](https://towardsdatascience.com/5-signs-youve-become-an-advanced-pythonista-without-even-realizing-it-2b1dd7ef57f3)
