@@ -4,7 +4,7 @@
    * [Writing plugins for sublime (Using python)](#writing-plugins-for-sublime-using-python)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Tue 14 Feb 2023 10:18:55 AM IST -->
+<!-- Added by: gil_diy, at: Tue 14 Feb 2023 10:18:58 AM IST -->
 
 <!--te-->
 
