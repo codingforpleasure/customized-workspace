@@ -12,6 +12,7 @@ if __name__ == '__main__':
         filename = topic_name + ".html"
         print('filename: '+filename)
         if filename in all_filenames:
+            print(path + filename)
             webbrowser.open(path + filename, new=2)
         else:
             print("ATTENTION: Command was not found in the collection, make sure you have exported to html.")
