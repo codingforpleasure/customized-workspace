@@ -1,8 +1,10 @@
 <!--ts-->
-   * [Tips for Sublime](#tips-for-sublime)
-      * [Setting up working environment](#setting-up-working-environment)
+* [Tips for Sublime](#tips-for-sublime)
+   * [Setting up working environment](#setting-up-working-environment)
+   * [Writing plugins for sublime (Using python)](#writing-plugins-for-sublime-using-python)
 
-<!-- Added by: gil_diy, at: 2020-02-08T00:58+02:00 -->
+<!-- Created by https://github.com/ekalinin/github-markdown-toc -->
+<!-- Added by: gil_diy, at: Tue 14 Feb 2023 10:18:38 AM IST -->
 
 <!--te-->
 
@@ -26,7 +28,7 @@ Purpose | command example
 ------------ | -------------
 Multiediting | Ctrl + click on specific places with the mouse
 Get markdown options | Ctrl+shift+p
-Show console | ctrl+`
+Show console | `ctrl+\``
 for Uppercase | Ctrl+k+u
 for Lowercase | Ctrl+k+l
 
