@@ -37,6 +37,7 @@
   - [The use of an __init__.py in a directory](#the-use-of-an-initpy-in-a-directory)
   - [Check python libraries for license constraints?](#check-python-libraries-for-license-constraints)
   - [Useful packages](#useful-packages)
+  - [Useful Articles](#useful-articles)
 
 # Python
 
@@ -569,3 +570,8 @@ if __name__ == '__main__':
 [Generate fake data easily](https://github.com/joke2k/faker)
 
 [Generate Synthetic Dataset](https://towardsdatascience.com/simple-ways-to-create-synthetic-dataset-in-python-76a8e9a2f35c)
+
+
+## Useful Articles
+
+[5-python-tricks-that-distinguish-senior-developers-from-juniors](https://medium.com/towards-data-science/5-python-tricks-that-distinguish-senior-developers-from-juniors-826d57ab3940)
