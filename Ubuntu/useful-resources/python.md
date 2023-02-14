@@ -1,45 +1,49 @@
-<!--ts-->
-* [Python](#python)
-   * [Magic methods (dunder methods)](#magic-methods-dunder-methods)
-   * [What is the meaning of asterisk in python?](#what-is-the-meaning-of-asterisk-in-python)
-      * [Single asterisk usage](#single-asterisk-usage)
-         * [Example #1: Single asterisks for unpacking into function call](#example-1-single-asterisks-for-unpacking-into-function-call)
-         * [Example #2: Using * multiple times:](#example-2-using--multiple-times)
-         * [Example #3: Single astrisks for tuple unpacking](#example-3-single-astrisks-for-tuple-unpacking)
-      * [Double Asterisks usage](#double-asterisks-usage)
-         * [Example #1: unpacking dictionary](#example-1-unpacking-dictionary)
-         * [Example #2: unpacking twice for naming a file](#example-2-unpacking-twice-for-naming-a-file)
-   * [S strings in python](#s-strings-in-python)
-      * [Approach one - “Old Style” String Formatting (% Operator)](#approach-one---old-style-string-formatting--operator)
-      * [f-Strings (Python 3.6+)](#f-strings-python-36)
-   * [Type hints](#type-hints)
-      * [Type aliases](#type-aliases)
-   * [Create gridsearch easily](#create-gridsearch-easily)
-   * [try, Except](#try-except)
-   * [Dectorators](#dectorators)
-      * [Example #1: For Logging a function](#example-1-for-logging-a-function)
-      * [Example #2: profiling function with Timer](#example-2-profiling-function-with-timer)
-   * [Property decorator](#property-decorator)
-   * [Python Generators](#python-generators)
-   * [Python Closure](#python-closure)
-   * [jsonify with numpy arrays](#jsonify-with-numpy-arrays)
-   * [DefaultDict](#defaultdict)
-   * [Try, exception](#try-exception)
-   * [Get traceback of exception](#get-traceback-of-exception)
-   * [raise exception](#raise-exception)
-   * [Counting words with a counter](#counting-words-with-a-counter)
-   * [Make logger colorful](#make-logger-colorful)
-   * [The use of an <strong>init</strong>.py in a directory](#the-use-of-an-initpy-in-a-directory)
-   * [Check python libraries for license constraints?](#check-python-libraries-for-license-constraints)
-   * [Useful packages](#useful-packages)
 
-<!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Thu 19 Jan 2023 04:23:54 PM IST -->
-
-<!--te-->
-
+- [Python](#python)
+  - [Adding thousands separators](#adding-thousands-separators)
+  - [Magic methods (dunder methods)](#magic-methods-dunder-methods)
+  - [What is the meaning of asterisk in python?](#what-is-the-meaning-of-asterisk-in-python)
+    - [Single asterisk usage](#single-asterisk-usage)
+      - [Example #1: Single asterisks for unpacking into function call](#example-1-single-asterisks-for-unpacking-into-function-call)
+      - [Example #2: Using \* multiple times:](#example-2-using--multiple-times)
+      - [Example #3: Single astrisks for tuple unpacking](#example-3-single-astrisks-for-tuple-unpacking)
+    - [Double Asterisks usage](#double-asterisks-usage)
+      - [Example #1: unpacking dictionary](#example-1-unpacking-dictionary)
+      - [Example #2: unpacking twice for naming a file](#example-2-unpacking-twice-for-naming-a-file)
+  - [S strings in python](#s-strings-in-python)
+    - [Approach one - “Old Style” String Formatting (% Operator)](#approach-one---old-style-string-formatting--operator)
+    - [Approach Two](#approach-two)
+    - [Approach Three: f-Strings (Python 3.6+)](#approach-three-f-strings-python-36)
+  - [Type hints](#type-hints)
+    - [Type aliases](#type-aliases)
+  - [Create gridsearch easily](#create-gridsearch-easily)
+  - [try, Except](#try-except)
+  - [Dectorators](#dectorators)
+    - [Example #1: For Logging a function](#example-1-for-logging-a-function)
+    - [Example #2: profiling function with Timer](#example-2-profiling-function-with-timer)
+  - [Property decorator](#property-decorator)
+  - [Python Generators](#python-generators)
+  - [Python Closure](#python-closure)
+  - [jsonify with numpy arrays](#jsonify-with-numpy-arrays)
+  - [DefaultDict](#defaultdict)
+  - [Try, exception](#try-exception)
+  - [Get traceback of exception](#get-traceback-of-exception)
+  - [raise exception](#raise-exception)
+  - [Counting words with a counter](#counting-words-with-a-counter)
+  - [Make logger colorful](#make-logger-colorful)
+  - [The use of an __init__.py in a directory](#the-use-of-an-initpy-in-a-directory)
+  - [Check python libraries for license constraints?](#check-python-libraries-for-license-constraints)
+  - [Useful packages](#useful-packages)
 
 # Python
+
+## Adding thousands separators 
+
+```python
+num = 10000000
+print(f"The number with thousands separators: {num:,}")
+```
+
 
 ## Magic methods (dunder methods)
 
