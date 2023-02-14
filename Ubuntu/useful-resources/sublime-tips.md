@@ -4,7 +4,7 @@
    * [Writing plugins for sublime (Using python)](#writing-plugins-for-sublime-using-python)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Tue 14 Feb 2023 10:18:41 AM IST -->
+<!-- Added by: gil_diy, at: Tue 14 Feb 2023 10:18:55 AM IST -->
 
 <!--te-->
 
@@ -28,7 +28,7 @@ Purpose | command example
 ------------ | -------------
 Multiediting | Ctrl + click on specific places with the mouse
 Get markdown options | Ctrl+shift+p
-Show console | `ctrl+\``
+Show console | ctrl+\`
 for Uppercase | Ctrl+k+u
 for Lowercase | Ctrl+k+l
 
