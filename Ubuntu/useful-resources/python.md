@@ -23,9 +23,11 @@
     - [Example #2: profiling function with Timer](#example-2-profiling-function-with-timer)
   - [Property decorator](#property-decorator)
   - [Python Generators](#python-generators)
+    - [**Reasons to use:**](#reasons-to-use)
+      - [**Improved Performance**](#improved-performance)
   - [Python Closure](#python-closure)
   - [jsonify with numpy arrays](#jsonify-with-numpy-arrays)
-  - [Advance and easy to use Collections](#advance-and-easy-to-use-collections)
+  - [Easy to use advanced collections (Datastructures)](#easy-to-use-advanced-collections-datastructures)
     - [DefaultDict](#defaultdict)
     - [Counter](#counter)
   - [Try, exception](#try-exception)
@@ -310,6 +312,92 @@ if __name__ == '__main__':
 
 ## Python Generators
 
+```python
+def first_n(n):
+    '''Build and return a list'''
+    num, nums = 0, []
+    
+    while num < n:
+        nums.append(num)
+        num += 1
+    
+    return nums
+
+sum_of_first_n = sum(first_n(1000000))
+
+```
+The code is quite simple and straightforward, but it builds the **full list in memory**.
+
+This is clearly not acceptable in our case, because we **cannot afford to keep all n "10 megabyte" integers in memory**. 
+
+
+**The following implements generator as an iterable object:**
+
+```python
+# Using the generator pattern (an iterable)
+class first_n(object):
+
+    def __init__(self, n):
+        self.n = n
+        self.num = 0
+
+    def __iter__(self):
+        return self
+  
+    # Python compatibility
+    def __next__(self):
+         return self.next()
+ 
+ 
+    def next(self):
+        if self.num < self.n:
+            cur, self.num = self.num, self.num+1
+            return cur
+        raise StopIteration()
+ 
+ 
+sum_of_first_n = sum(first_n(1000000))
+```
+
+This will perform as we expect, but we have the following issues:
+* there is a lot of boilerplate
+* the logic has to be expressed in a somewhat convoluted way 
+
+Furthermore, this is a **pattern that we will use over and over for many similar constructs**. Imagine writing all that just to get an iterator.
+
+Python provides generator functions as a convenient shortcut to building iterators
+
+```python
+# A generator that yields items instead of returning a list
+def firstn(n):
+  num = 0
+  while num < n:
+      yield num
+      num += 1
+
+sum_of_first_n = sum(firstn(1000000))
+```
+
+### **Reasons to use:**
+
+#### **Improved Performance**
+
+The performance improvement from the use of generators is the result of the lazy (on demand) generation of values, which translates to lower memory usage. Furthermore, we do not need to wait until all the elements have been generated before we start to use them. This is similar to the benefits provided by iterators, but the generator makes building iterators easy.
+
+This can be illustrated by comparing the range and xrange built-ins of Python 2.x.
+
+Both range and xrange represent a range of numbers, and have the same function signature, but **range returns a list while xrange returns a generator** (at least in concept; the implementation may differ).
+
+Say, we had to compute the sum of the first n, say 1,000,000, non-negative numbers. 
+
+```python
+  # Note: Pythonx only
+  # using a non-generator
+  sum_of_first_n = sum(range(1000000))
+  
+  # using a generator
+  sum_of_first_n = sum(xrange(1000000))
+```
 [Reference](https://www.programiz.com/python-programming/decorator)
 
 ## Python Closure
@@ -336,7 +424,7 @@ class NumpyEncoder(json.JSONEncoder):
 dumped = json.dumps(data, cls=NumpyEncoder)
 ```
 
-## Advance and easy to use Collections
+## Easy to use advanced collections (Datastructures)
 
 ### DefaultDict
 
