@@ -272,6 +272,17 @@ img4 = cv2.bitwise_and(img1, img2)
 img5 = cv2.bitwise_or(img1, img2)
 img6 = cv2.bitwise_xor(img1, img2)
 ```
+
+### Overlay two images one above the other
+
+Assuming both images of the same size:
+
+```python
+img = cv2.bitwise_and(img1, img2)
+```
+
+
+
 ## Thresholding Types
 
 ### Threshold Global
@@ -588,6 +599,8 @@ CHAIN_APPROX_TC89_KCOS |
 CHAIN_APPROX_TC89_L1 |
 
 
+
+
 ### Bounding Shapes
 
 #### Bounding rectangle
@@ -616,6 +629,36 @@ center = (int(x),int(y))
 radius = int(radius)
 cv2.circle(img,center,radius,(0,255,0),2)
 ```
+
+
+
+#### Enclosing Triangle
+
+```python
+points = np.array([[50, 50], [20, 150], [130, 60], [170, 90]], np.float32)
+triangle = cv2.minEnclosingTriangle(points)
+
+# Create blank black image
+img = np.zeros((500, 500, 3), dtype = np.uint8)  # it's important to write: dtype = np.uint8
+
+
+# Show all points on black image
+    for point in points:
+        cv2.circle(img, center=(int(point[0]), int(point[1])), color=(0, 0, 255), radius=10, thickness=-1)
+
+# Draw the actual triangle:
+cv2.polylines(img=img, pts=[np.int32(triangle[1])], isClosed=True, color=(0, 0, 0), thickness=2,
+            lineType=cv2.LINE_AA)
+
+cv2.imshow("Triangle", img)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+```
+
+<p align="center">
+  <img width="400" src="images/open-cv/min_enclosing_triangle.jpg" title="Look into the image">
+</p>
+
 #### Fitting an Ellipse
 
 fitEllipse returns a tuple of three elements:
@@ -818,6 +861,24 @@ canny = cv2.Canny(img, threshold1 = 50, , threshold2 = 240)
 ```
 
 It takes two numbers as arguments to indicate the thresholds. The second argument is called the low threshold value, and the third argument is called the high threshold value.
+
+
+
+## Drawing functions
+
+Reference: [Link](https://docs.opencv.org/4.x/dc/da5/tutorial_py_drawing_functions.html)
+
+### Drawing Line
+
+### Drawing Rectangle
+
+### Drawing Circle
+
+### Drawing Ellipse
+
+### Drawing Polygon
+
+### Adding Text to Images
 
 
 
