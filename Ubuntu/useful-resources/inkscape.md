@@ -15,7 +15,7 @@
    * [Reference](#reference-1)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Sun 26 Feb 2023 01:32:38 AM IST -->
+<!-- Added by: gil_diy, at: Sun 26 Feb 2023 01:40:02 AM IST -->
 
 <!--te-->
 
@@ -93,6 +93,9 @@ inkscape --actions="select-by-element:ellipse;transform-rotate:30" --export-over
 inkscape <input-svg-file> --actions="select-all;transform-scale:2;page-fit-to-selection" --export-filename=<output-svg-file>
 ```
 
+
+
+table
 
 #### Reference
 
