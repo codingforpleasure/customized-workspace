@@ -12,7 +12,7 @@
    * [Reference](#reference)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Sun 26 Feb 2023 01:10:44 AM IST -->
+<!-- Added by: gil_diy, at: Sun 26 Feb 2023 01:10:52 AM IST -->
 
 <!--te-->
 
@@ -58,7 +58,7 @@ Since Inkscape version 0.92.5 (Released on 2020-04-09)
 
 ### Export an SVG file into PNG with the default resolution of 96 dpi
 
-```
+```bash
 inkscape --export-filename=filename.png filename.svg
 ```
 
