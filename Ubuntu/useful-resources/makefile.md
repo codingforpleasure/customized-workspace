@@ -23,7 +23,7 @@
    * [References](#references)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Sat 25 Feb 2023 12:51:26 PM IST -->
+<!-- Added by: gil_diy, at: Sat 25 Feb 2023 02:36:14 PM IST -->
 
 <!--te-->
 
@@ -53,6 +53,22 @@ To print ouside of a directive, write:
 ```
 $(info ============= Gil =================)
 ```
+
+###
+
+Invoke with:
+```
+Makefile debug=True
+```
+
+```
+ifeq ($(debug), true)
+CFLAGS = -DXV6_WAIT_FOR_DEBUGGER=1 -fno-pic -static -fno-builtin -fno-strict-aliasing -Og -Wall -MD -ggdb -m32 -Werror -fno-omit-frame-pointer -std=gnu99 -mno-sse -DXV6_TSC_FREQUENCY=$(HOST_CPU_TSC_FREQ)
+else
+CFLAGS = -DXV6_WAIT_FOR_DEBUGGER=0 -fno-pic -static -fno-builtin -fno-strict-aliasing -O2 -Wall -MD -m32 -Werror -fno-omit-frame-pointer -std=gnu99 -mno-sse -DXV6_TSC_FREQUENCY=$(HOST_CPU_TSC_FREQ)
+endif
+```
+
 
 ## Automatic variables:
 
