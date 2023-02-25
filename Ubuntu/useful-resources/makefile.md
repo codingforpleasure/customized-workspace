@@ -23,7 +23,7 @@
    * [References](#references)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Sat 25 Feb 2023 12:50:10 PM IST -->
+<!-- Added by: gil_diy, at: Sat 25 Feb 2023 12:51:15 PM IST -->
 
 <!--te-->
 
@@ -44,13 +44,15 @@ target: prerequisites
 
 Your directive can't be outside any rule.
 You have to create one:
+```
 mydebug:
         @echo "============= $(TOOLPREFIX) ================="
-
+```
 
 to print ouside of a directive, write:
+```
 $(info ============= Gil =================)
-
+```
 
 ## Automatic variables:
 
