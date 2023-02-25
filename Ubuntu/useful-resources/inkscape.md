@@ -14,7 +14,7 @@
    * [Reference](#reference-1)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Sun 26 Feb 2023 01:13:14 AM IST -->
+<!-- Added by: gil_diy, at: Sun 26 Feb 2023 01:13:24 AM IST -->
 
 <!--te-->
 
@@ -92,6 +92,7 @@ See all in the following path:
 ```bash
 inkscape/src/actions
 ```
+
 ## Reference
 
-[Link](https://inkscape.org/doc/inkscape-man.html)
+[inkscape manual](https://inkscape.org/doc/inkscape-man.html)
