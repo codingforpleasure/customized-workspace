@@ -1,5 +1,6 @@
 <!--ts-->
 * [Makefile](#makefile)
+   * [Debug](#debug)
    * [Automatic variables:](#automatic-variables)
    * [Few Useful flags:](#few-useful-flags)
    * [few examples of makefiles:](#few-examples-of-makefiles)
@@ -22,7 +23,7 @@
    * [References](#references)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Sat 25 Feb 2023 12:31:54 PM IST -->
+<!-- Added by: gil_diy, at: Sat 25 Feb 2023 12:50:03 PM IST -->
 
 <!--te-->
 
@@ -36,6 +37,20 @@ Basic form of a rule is:
 target: prerequisites
 	recipe
 ```
+
+## Debug
+
+
+
+Your directive can't be outside any rule.
+You have to create one:
+mydebug:
+        @echo "============= $(TOOLPREFIX) ================="
+
+
+to print ouside of a directive, write:
+$(info ============= Gil =================)
+
 
 ## Automatic variables:
 
