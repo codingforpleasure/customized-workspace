@@ -10,7 +10,7 @@
       * [Export an SVG file into PNG with the default resolution of 96 dpi](#export-an-svg-file-into-png-with-the-default-resolution-of-96-dpi)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Sun 26 Feb 2023 01:09:06 AM IST -->
+<!-- Added by: gil_diy, at: Sun 26 Feb 2023 01:09:09 AM IST -->
 
 <!--te-->
 
