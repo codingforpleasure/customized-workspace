@@ -8,9 +8,10 @@
       * [Setting up the relevant python interpreter for inkscape](#setting-up-the-relevant-python-interpreter-for-inkscape)
    * [SVG processing on the command line](#svg-processing-on-the-command-line)
       * [Export an SVG file into PNG with the default resolution of 96 dpi](#export-an-svg-file-into-png-with-the-default-resolution-of-96-dpi)
+      * [Select all objects with ellipse tag, rotate them 30 degrees, save the file, and quit.](#select-all-objects-with-ellipse-tag-rotate-them-30-degrees-save-the-file-and-quit)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Sun 26 Feb 2023 01:09:09 AM IST -->
+<!-- Added by: gil_diy, at: Sun 26 Feb 2023 01:10:03 AM IST -->
 
 <!--te-->
 
@@ -63,13 +64,19 @@ inkscape --export-filename=filename.png filename.svg
 
 Same, but force the PNG file to be **600x400 pixels**:
 
-```
+```bash
 inkscape --export-filename=filename.png -w 600 -h 400 filename.svg
 ```
 
 
 export the drawing (bounding box of all objects), not the page:
 
-```
+```bash
 inkscape --export-filename=filename.png --export-area-drawing filename.svg
+```
+
+### Select all objects with ellipse tag, rotate them 30 degrees, save the file, and quit.
+
+```bash
+inkscape --actions="select-by-element:ellipse;transform-rotate:30" --export-overwrite filename.svg
 ```
