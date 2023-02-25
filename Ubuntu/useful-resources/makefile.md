@@ -23,7 +23,7 @@
    * [References](#references)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Sat 25 Feb 2023 02:36:27 PM IST -->
+<!-- Added by: gil_diy, at: Sat 25 Feb 2023 02:36:30 PM IST -->
 
 <!--te-->
 
@@ -57,11 +57,11 @@ $(info ============= Gil =================)
 ###
 
 Invoke with:
-```
+```bash
 Makefile debug=true
 ```
 
-```
+```bash
 ifeq ($(debug), true)
 CFLAGS = -DXV6_WAIT_FOR_DEBUGGER=1 -fno-pic -static -fno-builtin -fno-strict-aliasing -Og -Wall -MD -ggdb -m32 -Werror -fno-omit-frame-pointer -std=gnu99 -mno-sse -DXV6_TSC_FREQUENCY=$(HOST_CPU_TSC_FREQ)
 else
