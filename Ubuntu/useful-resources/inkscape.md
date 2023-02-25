@@ -1,13 +1,15 @@
 # Inkscape
 
 <!--ts-->
-   * [Inkscape](#inkscape)
-      * [Useful Hotkeys](#useful-hotkeys)
-         * [Operations on objects](#operations-on-objects)
-         * [Operations on path](#operations-on-path)
-         * [Setting up the relevant python interpreter for inkscape](#setting-up-the-relevant-python-interpreter-for-inkscape)
+* [Inkscape](#inkscape)
+   * [Useful Hotkeys](#useful-hotkeys)
+      * [Operations on objects](#operations-on-objects)
+      * [Operations on path](#operations-on-path)
+      * [Setting up the relevant python interpreter for inkscape](#setting-up-the-relevant-python-interpreter-for-inkscape)
+   * [SVG processing on the command line](#svg-processing-on-the-command-line)
 
-<!-- Added by: gil_diy, at: 2020-07-28T13:16+03:00 -->
+<!-- Created by https://github.com/ekalinin/github-markdown-toc -->
+<!-- Added by: gil_diy, at: Sun 26 Feb 2023 01:06:56 AM IST -->
 
 <!--te-->
 
@@ -47,3 +49,7 @@ Important message:
 
 Since Inkscape version 0.92.5 (Released on 2020-04-09) 
 **Python extensions will now run with Python 3**
+
+
+## SVG processing on the command line
+
