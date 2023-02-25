@@ -15,7 +15,7 @@
    * [Reference](#reference-1)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Sun 26 Feb 2023 01:14:38 AM IST -->
+<!-- Added by: gil_diy, at: Sun 26 Feb 2023 01:15:53 AM IST -->
 
 <!--te-->
 
@@ -90,7 +90,7 @@ inkscape --actions="select-by-element:ellipse;transform-rotate:30" --export-over
 #### Select all and reszie
 
 ```bash
-inkscape --actions="select-all:ellipse;transform-rotate:30" --export-overwrite filename.svg
+inkscape --actions="select-all:page-fit-to-selection;transform-rotate:30" --export-overwrite filename.svg
 ```
 
 
