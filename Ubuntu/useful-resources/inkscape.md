@@ -14,7 +14,7 @@
    * [Reference](#reference-1)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Sun 26 Feb 2023 01:13:24 AM IST -->
+<!-- Added by: gil_diy, at: Sun 26 Feb 2023 01:13:49 AM IST -->
 
 <!--te-->
 
@@ -87,7 +87,7 @@ inkscape --actions="select-by-element:ellipse;transform-rotate:30" --export-over
 
 #### Reference
 
-See all in the following path:
+See all in the following source code of inkscape (cpp files):
 
 ```bash
 inkscape/src/actions
