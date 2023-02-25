@@ -10,12 +10,12 @@
       * [Export an SVG file into PNG with the default resolution of 96 dpi](#export-an-svg-file-into-png-with-the-default-resolution-of-96-dpi)
       * [Actions](#actions)
          * [Select all objects with ellipse tag, rotate them 30 degrees, save the file, and quit.](#select-all-objects-with-ellipse-tag-rotate-them-30-degrees-save-the-file-and-quit)
-         * [Select all and reszie](#select-all-and-reszie)
+         * [Select all and resize](#select-all-and-resize)
          * [Reference](#reference)
    * [Reference](#reference-1)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Sun 26 Feb 2023 01:16:09 AM IST -->
+<!-- Added by: gil_diy, at: Sun 26 Feb 2023 01:16:14 AM IST -->
 
 <!--te-->
 
@@ -87,7 +87,7 @@ inkscape --actions="select-by-element:ellipse;transform-rotate:30" --export-over
 ```
 
 
-#### Select all and reszie
+#### Select all and resize
 
 ```bash
 inkscape --actions="select-all:page-fit-to-selection;transform-rotate:30" --export-overwrite filename.svg
