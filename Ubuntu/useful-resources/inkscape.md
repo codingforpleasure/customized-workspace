@@ -7,9 +7,10 @@
       * [Operations on path](#operations-on-path)
       * [Setting up the relevant python interpreter for inkscape](#setting-up-the-relevant-python-interpreter-for-inkscape)
    * [SVG processing on the command line](#svg-processing-on-the-command-line)
+      * [Export an SVG file into PNG with the default resolution of 96 dpi (](#export-an-svg-file-into-png-with-the-default-resolution-of-96-dpi-)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Sun 26 Feb 2023 01:06:56 AM IST -->
+<!-- Added by: gil_diy, at: Sun 26 Feb 2023 01:07:31 AM IST -->
 
 <!--te-->
 
@@ -53,3 +54,8 @@ Since Inkscape version 0.92.5 (Released on 2020-04-09)
 
 ## SVG processing on the command line
 
+### Export an SVG file into PNG with the default resolution of 96 dpi (
+
+```
+inkscape --export-filename=filename.png filename.svg
+```
