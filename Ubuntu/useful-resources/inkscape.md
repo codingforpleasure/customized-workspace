@@ -15,7 +15,7 @@
    * [Reference](#reference-1)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Sun 26 Feb 2023 01:40:02 AM IST -->
+<!-- Added by: gil_diy, at: Sun 26 Feb 2023 01:40:31 AM IST -->
 
 <!--te-->
 
@@ -95,7 +95,10 @@ inkscape <input-svg-file> --actions="select-all;transform-scale:2;page-fit-to-se
 
 
 
-table
+Command property | Description
+------------|-----
+  | 
+
 
 #### Reference
 
