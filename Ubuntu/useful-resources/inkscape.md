@@ -16,7 +16,7 @@
    * [Reference](#reference-1)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Sun 26 Feb 2023 02:38:50 AM IST -->
+<!-- Added by: gil_diy, at: Sun 26 Feb 2023 08:58:29 AM IST -->
 
 <!--te-->
 
@@ -114,6 +114,9 @@ See all in the following source code of inkscape (cpp files):
 ```bash
 inkscape/src/actions
 ```
+
+
+https://wiki.inkscape.org/wiki/Using_the_Command_Line
 
 ## Reference
 
