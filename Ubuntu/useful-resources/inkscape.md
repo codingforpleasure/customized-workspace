@@ -11,11 +11,12 @@
       * [Actions](#actions)
          * [Select all objects with ellipse tag, rotate them 30 degrees, save the file, and quit.](#select-all-objects-with-ellipse-tag-rotate-them-30-degrees-save-the-file-and-quit)
          * [Select all objects, rescale and resize the page to selection and export](#select-all-objects-rescale-and-resize-the-page-to-selection-and-export)
+         * [Get all list of actions](#get-all-list-of-actions)
          * [Reference](#reference)
    * [Reference](#reference-1)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Sun 26 Feb 2023 01:40:40 AM IST -->
+<!-- Added by: gil_diy, at: Sun 26 Feb 2023 02:38:50 AM IST -->
 
 <!--te-->
 
@@ -99,6 +100,12 @@ Command property | Description
 -----------------|-------------
   | 
 
+
+#### Get all list of actions
+
+```bash
+inkscape --action-list
+```
 
 #### Reference
 
