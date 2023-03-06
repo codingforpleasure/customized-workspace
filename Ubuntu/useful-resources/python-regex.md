@@ -14,7 +14,7 @@
    * [Regex Flags](#regex-flags)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Mon 06 Mar 2023 10:44:41 AM IST -->
+<!-- Added by: gil_diy, at: Mon 06 Mar 2023 10:50:04 AM IST -->
 
 <!--te-->
 
@@ -57,7 +57,12 @@ for email in emails:
    print(email)
 ```
 
+```python
+import re
 
+print(re.findall(r'\w\w', str1, overlapped = True))
+
+```
 ## re.split
 
 ## re.sub
