@@ -13,7 +13,7 @@
    * [Regular-expression patterns:](#regular-expression-patterns)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Mon 06 Mar 2023 10:22:01 AM IST -->
+<!-- Added by: gil_diy, at: Mon 06 Mar 2023 10:23:01 AM IST -->
 
 <!--te-->
 
@@ -23,7 +23,8 @@
 
 ```python
 str1 = "I am IP Guy"
-print(re.match(r'am', str1)) # we will get "am" 
+print(f' "am" was found: {re.match(r'am', str1)}') 
+# Output is: "am" was found:
 
 ```
 
