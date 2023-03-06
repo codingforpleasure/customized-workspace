@@ -5,6 +5,7 @@
    * [re.findall](#refindall)
       * [Usage of overflapped argument](#usage-of-overflapped-argument)
    * [re.split - split string into list](#resplit---split-string-into-list)
+      * [Control number of splits](#control-number-of-splits)
    * [re.sub](#resub)
    * [Matching](#matching)
    * [flags](#flags)
@@ -15,7 +16,7 @@
    * [Regex Flags](#regex-flags)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Mon 06 Mar 2023 10:54:55 AM IST -->
+<!-- Added by: gil_diy, at: Mon 06 Mar 2023 10:55:45 AM IST -->
 
 <!--te-->
 
@@ -77,9 +78,17 @@ str1 = 'I am IP guy but python is good'
 
 print(re.split(r'\s', str1))
 # ['I', 'am', 'IP', 'guy', 'but', 'python', 'is', 'good']
-
-
 ```
+
+### Control number of splits
+
+```python
+str1 = 'I am IP guy but python is good'
+
+print(re.split(r'\s', str1), maxsplit = 1)
+# ['I', 'am', 'IP', 'guy', 'but', 'python', 'is', 'good']
+```
+
 
 ## re.sub
 
