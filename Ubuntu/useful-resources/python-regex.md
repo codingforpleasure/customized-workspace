@@ -14,7 +14,7 @@
    * [Regex Flags](#regex-flags)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Mon 06 Mar 2023 10:30:09 AM IST -->
+<!-- Added by: gil_diy, at: Mon 06 Mar 2023 10:31:00 AM IST -->
 
 <!--te-->
 
@@ -35,6 +35,8 @@ print(f' "am" was found: {re.match(r'am', str1)}')
 ## re.search (Find something anywhere in the string and return a match object)
 
 ## re.findall
+
+Search all occurances of given pattern with output as list
 
 re.findall(pattern, string, Flags)
 
