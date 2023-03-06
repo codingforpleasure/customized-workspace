@@ -11,9 +11,10 @@
       * [Simple substitute](#simple-substitute)
       * [Advance replace](#advance-replace)
    * [Regular-expression patterns:](#regular-expression-patterns)
+   * [Flags](#flags-1)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Mon 06 Mar 2023 10:23:30 AM IST -->
+<!-- Added by: gil_diy, at: Mon 06 Mar 2023 10:26:06 AM IST -->
 
 <!--te-->
 
@@ -141,6 +142,8 @@ re{n,m} | Matches at least n and at most m occurrences of preceding expression
 
 *re = is the actual regular expression
 
+
+## Flags
 
 
 
