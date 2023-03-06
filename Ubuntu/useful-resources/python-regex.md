@@ -7,6 +7,7 @@
    * [re.split - split string into list](#resplit---split-string-into-list)
       * [Control number of splits](#control-number-of-splits)
    * [re.sub](#resub)
+      * [Control the number of replacements](#control-the-number-of-replacements)
    * [Matching](#matching)
    * [flags](#flags)
    * [Search and replace](#search-and-replace)
@@ -16,7 +17,7 @@
    * [Regex Flags](#regex-flags)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Mon 06 Mar 2023 11:05:59 AM IST -->
+<!-- Added by: gil_diy, at: Mon 06 Mar 2023 11:16:36 AM IST -->
 
 <!--te-->
 
@@ -91,10 +92,34 @@ print(re.split(r'\s', str1, maxsplit=2))
 
 ## re.sub
 
+Prototype is: 
 
-```
+`re.sub(pattern, repl, string)`
+
+
+The code:
+
+```python
+str1 = "Welcome to the era of Big-Data, Enjoy! This is Big-Data era"
 print(re.sub(pattern = r'Big-Data', repl = 'Nerual-Networks', string=str1))
 ```
+
+**Output:**
+
+`Welcome to the era of Nerual-Networks, Enjoy! This is Nerual-Networks era`
+
+### Control the number of replacements
+
+```python
+str1 = "Welcome to the era of Big-Data, Enjoy! This is Big-Data era"
+print(re.sub(pattern = r'Big-Data', repl = 'Nerual-Networks', string=str1, count = 1))
+```
+
+**Output:**
+
+`Welcome to the era of Nerual-Networks, Enjoy! This is Big-Data era`
+
+* repl = replace
 
 ## Matching
 ```python
