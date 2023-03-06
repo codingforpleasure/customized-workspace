@@ -11,10 +11,10 @@
       * [Simple substitute](#simple-substitute)
       * [Advance replace](#advance-replace)
    * [Regular-expression patterns:](#regular-expression-patterns)
-   * [Flags](#flags-1)
+   * [Regex Flags](#regex-flags)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Mon 06 Mar 2023 10:26:09 AM IST -->
+<!-- Added by: gil_diy, at: Mon 06 Mar 2023 10:28:07 AM IST -->
 
 <!--te-->
 
@@ -143,7 +143,19 @@ re{n,m} | Matches at least n and at most m occurrences of preceding expression
 *re = is the actual regular expression
 
 
-## Flags
+## Regex Flags
 
 
+ Meaning | Title2
+------------|-----
+Ignore case | re.IGNORECASE | re.I
+Make anchors look for newline | re.MULTILINE | re.M
+Make anchors look for newline | re.MULTILINE | re.M
+
+
+ASCII = A = sre_compile.SRE_FLAG_ASCII # assume ascii "locale"
+IGNORECASE = I = sre_compile.SRE_FLAG_IGNORECASE # ignore case
+LOCALE = L = sre_compile.SRE_FLAG_LOCALE # assume current 8-bit locale
+UNICODE = U = sre_compile.SRE_FLAG_UNICODE # assume unicode "locale"
+MULTILINE = M = sre_compile.SRE_FLAG_MULTILINE # make anchors look for newline
 
