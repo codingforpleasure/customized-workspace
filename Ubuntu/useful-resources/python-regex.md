@@ -6,18 +6,17 @@
       * [Usage of overflapped argument](#usage-of-overflapped-argument)
    * [re.split - split string into list](#resplit---split-string-into-list)
       * [Control number of splits](#control-number-of-splits)
-   * [re.sub](#resub)
-      * [Control the number of replacements](#control-the-number-of-replacements)
    * [Matching](#matching)
    * [flags](#flags)
    * [Search and replace](#search-and-replace)
       * [Simple substitute](#simple-substitute)
       * [Advance replace](#advance-replace)
+      * [Control the number of replacements](#control-the-number-of-replacements)
    * [Regular-expression patterns:](#regular-expression-patterns)
    * [Regex Flags](#regex-flags)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Mon 06 Mar 2023 11:16:39 AM IST -->
+<!-- Added by: gil_diy, at: Mon 06 Mar 2023 11:18:17 AM IST -->
 
 <!--te-->
 
@@ -90,36 +89,7 @@ print(re.split(r'\s', str1, maxsplit=2))
 # ['I', 'am','IP guy but python is good']
 ```
 
-## re.sub
 
-Prototype is: 
-
-`re.sub(pattern, repl, string)`
-
-
-The code:
-
-```python
-str1 = "Welcome to the era of Big-Data, Enjoy! This is Big-Data era"
-print(re.sub(pattern = r'Big-Data', repl = 'Nerual-Networks', string=str1))
-```
-
-**Output:**
-
-`Welcome to the era of Nerual-Networks, Enjoy! This is Nerual-Networks era`
-
-### Control the number of replacements
-
-```python
-str1 = "Welcome to the era of Big-Data, Enjoy! This is Big-Data era"
-print(re.sub(pattern = r'Big-Data', repl = 'Nerual-Networks', string=str1, count = 1))
-```
-
-**Output:**
-
-`Welcome to the era of Nerual-Networks, Enjoy! This is Big-Data era`
-
-* repl = replace
 
 ## Matching
 ```python
@@ -163,7 +133,11 @@ re.M | Makes $ match the end of a line (not just the end of the string ) and mak
 ## Search and replace
 
 ### Simple substitute
-re.sub(pattern, repl, string, max=0)
+
+Prototype is: 
+
+`re.sub(pattern, repl, string)`
+
 
 ```python
 #!/usr/bin/python
@@ -187,7 +161,29 @@ large_image_url = re.sub(r'(.+\d+)(s)(\/\d+.jpg)', r'\1l\3', small_image_url)
 # So the output would be: "https://images.gr-assets.com/books/1553383690l/2657.jpg"
 print("The new url is : "  + large_image_url)
 ```
+The code:
 
+```python
+str1 = "Welcome to the era of Big-Data, Enjoy! This is Big-Data era"
+print(re.sub(pattern = r'Big-Data', repl = 'Nerual-Networks', string=str1))
+```
+
+**Output:**
+
+`Welcome to the era of Nerual-Networks, Enjoy! This is Nerual-Networks era`
+
+### Control the number of replacements
+
+```python
+str1 = "Welcome to the era of Big-Data, Enjoy! This is Big-Data era"
+print(re.sub(pattern = r'Big-Data', repl = 'Nerual-Networks', string=str1, count = 1))
+```
+
+**Output:**
+
+`Welcome to the era of Nerual-Networks, Enjoy! This is Big-Data era`
+
+* repl = replace
 ## Regular-expression patterns:
 
 pattern | Description
