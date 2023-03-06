@@ -1,6 +1,6 @@
 <!--ts-->
 * [Python Regular expressions](#python-regular-expressions)
-   * [re.match (Find something at the <strong>beginning</strong> of the string and return a match object)](#rematch-find-something-at-the-beginning-of-the-string-and-return-a-match-object)
+   * [re.match (Find something at the <strong>beginning of the string</strong> and return a match object)](#rematch-find-something-at-the-beginning-of-the-string-and-return-a-match-object)
    * [re.search (Find something anywhere in the string and return a match object)](#research-find-something-anywhere-in-the-string-and-return-a-match-object)
    * [re.findall](#refindall)
    * [re.split](#resplit)
@@ -13,13 +13,13 @@
    * [Regular-expression patterns:](#regular-expression-patterns)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Mon 06 Mar 2023 10:23:23 AM IST -->
+<!-- Added by: gil_diy, at: Mon 06 Mar 2023 10:23:27 AM IST -->
 
 <!--te-->
 
 # Python Regular expressions
 
-##  re.match (Find something at the **beginning** of the string and return a match object)
+##  re.match (Find something at the **beginning of the string** and return a match object)
 
 ```python
 str1 = "I am IP Guy"
