@@ -14,7 +14,7 @@
    * [Regex Flags](#regex-flags)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Mon 06 Mar 2023 10:34:36 AM IST -->
+<!-- Added by: gil_diy, at: Mon 06 Mar 2023 10:35:44 AM IST -->
 
 <!--te-->
 
@@ -147,7 +147,7 @@ re{n,} | Matches n or more occurrences of preceding expression
 re{n,m} | Matches at least n and at most m occurrences of preceding expression
 `a|b` | Matches either a or b
 (re) | Groups regular expressions and remembers matched text
-\w  | Matches word characters.
+\w  | Matches word characters (a letter or digit or underbar [a-zA-Z0-9_])
 \W | Matches non-word characters.
 \s | Matches whitespace. Equivalent to [\t\n\r\f].
 \S | Matches non-whitespace.
