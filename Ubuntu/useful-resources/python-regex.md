@@ -6,7 +6,6 @@
       * [Usage of overflapped argument](#usage-of-overflapped-argument)
    * [re.split - split string into list](#resplit---split-string-into-list)
       * [Control number of splits](#control-number-of-splits)
-      * [split and exclude pattern not part of output list](#split-and-exclude-pattern-not-part-of-output-list)
    * [re.sub](#resub)
    * [Matching](#matching)
    * [flags](#flags)
@@ -17,7 +16,7 @@
    * [Regex Flags](#regex-flags)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Mon 06 Mar 2023 11:03:20 AM IST -->
+<!-- Added by: gil_diy, at: Mon 06 Mar 2023 11:05:56 AM IST -->
 
 <!--te-->
 
@@ -90,14 +89,12 @@ print(re.split(r'\s', str1, maxsplit=2))
 # ['I', 'am','IP guy but python is good']
 ```
 
-### split and exclude pattern not part of output list
-
-
-
 ## re.sub
 
 
-
+```
+print(re.sub(pattern = r'Big-Data', repl = 'Nerual-Networks', string=str1))
+```
 
 ## Matching
 ```python
