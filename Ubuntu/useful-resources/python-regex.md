@@ -4,7 +4,7 @@
    * [re.search (Find something anywhere in the string and return a match object)](#research-find-something-anywhere-in-the-string-and-return-a-match-object)
    * [re.findall](#refindall)
       * [Usage of overflapped argument](#usage-of-overflapped-argument)
-   * [re.split](#resplit)
+   * [re.split - split string into list](#resplit---split-string-into-list)
    * [re.sub](#resub)
    * [Matching](#matching)
    * [flags](#flags)
@@ -15,7 +15,7 @@
    * [Regex Flags](#regex-flags)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Mon 06 Mar 2023 10:52:28 AM IST -->
+<!-- Added by: gil_diy, at: Mon 06 Mar 2023 10:53:21 AM IST -->
 
 <!--te-->
 
@@ -70,7 +70,9 @@ print(re.findall(r'\w\w', str1, overlapped = True))
 # ['aB', 'Bc', 'cD']
 
 ```
-## re.split
+## re.split - split string into list
+
+
 
 ## re.sub
 
