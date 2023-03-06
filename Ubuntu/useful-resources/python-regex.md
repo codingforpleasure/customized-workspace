@@ -17,7 +17,7 @@
    * [Regex Flags](#regex-flags)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Mon 06 Mar 2023 11:16:36 AM IST -->
+<!-- Added by: gil_diy, at: Mon 06 Mar 2023 11:16:39 AM IST -->
 
 <!--te-->
 
