@@ -16,7 +16,7 @@
    * [Regex Flags](#regex-flags)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Mon 06 Mar 2023 10:55:57 AM IST -->
+<!-- Added by: gil_diy, at: Mon 06 Mar 2023 10:56:15 AM IST -->
 
 <!--te-->
 
@@ -85,8 +85,8 @@ print(re.split(r'\s', str1))
 ```python
 str1 = 'I am IP guy but python is good'
 
-print(re.split(r'\s', str1), maxsplit = 1)
-# ['I', 'am IP guy but python is good']
+print(re.split(r'\s', str1), maxsplit = 2)
+# ['I', 'am','IP guy but python is good']
 ```
 
 
