@@ -14,7 +14,7 @@
    * [Regex Flags](#regex-flags)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Mon 06 Mar 2023 10:35:52 AM IST -->
+<!-- Added by: gil_diy, at: Mon 06 Mar 2023 10:35:55 AM IST -->
 
 <!--te-->
 
