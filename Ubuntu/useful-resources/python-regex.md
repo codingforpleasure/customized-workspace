@@ -14,7 +14,7 @@
    * [Regex Flags](#regex-flags)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Mon 06 Mar 2023 10:50:27 AM IST -->
+<!-- Added by: gil_diy, at: Mon 06 Mar 2023 10:50:58 AM IST -->
 
 <!--te-->
 
@@ -63,6 +63,9 @@ import re
 str1 = 'aBcD'
 
 print(re.findall(r'\w\w', str1, overlapped = True))
+
+# The output would be:
+# ['aB', 'Bc', 'cD']
 
 ```
 ## re.split
