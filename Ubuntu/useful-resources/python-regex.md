@@ -15,7 +15,7 @@
    * [Regex Flags](#regex-flags)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Mon 06 Mar 2023 10:53:26 AM IST -->
+<!-- Added by: gil_diy, at: Mon 06 Mar 2023 10:54:13 AM IST -->
 
 <!--te-->
 
@@ -73,6 +73,9 @@ print(re.findall(r'\w\w', str1, overlapped = True))
 ## re.split - split string into list
 
 ```python
+str1 = 'I am IP guy but python is good'
+
+print(re.split(r'\s', str1))
 
 ```
 
