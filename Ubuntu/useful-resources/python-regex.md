@@ -14,7 +14,7 @@
    * [Regex Flags](#regex-flags)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Mon 06 Mar 2023 10:31:03 AM IST -->
+<!-- Added by: gil_diy, at: Mon 06 Mar 2023 10:33:16 AM IST -->
 
 <!--te-->
 
@@ -33,6 +33,10 @@ print(f' "am" was found: {re.match(r'am', str1)}')
 
 
 ## re.search (Find something anywhere in the string and return a match object)
+
+`re.search()` to find the first match for a pattern.
+
+
 
 ## re.findall
 
