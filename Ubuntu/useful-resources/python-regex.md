@@ -3,6 +3,7 @@
    * [re.match (Find something at the <strong>beginning of the string</strong> and return a match object)](#rematch-find-something-at-the-beginning-of-the-string-and-return-a-match-object)
    * [re.search (Find something anywhere in the string and return a match object)](#research-find-something-anywhere-in-the-string-and-return-a-match-object)
    * [re.findall](#refindall)
+      * [Usage of overflapped argument](#usage-of-overflapped-argument)
    * [re.split](#resplit)
    * [re.sub](#resub)
    * [Matching](#matching)
@@ -14,7 +15,7 @@
    * [Regex Flags](#regex-flags)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Mon 06 Mar 2023 10:51:01 AM IST -->
+<!-- Added by: gil_diy, at: Mon 06 Mar 2023 10:52:25 AM IST -->
 
 <!--te-->
 
@@ -57,6 +58,7 @@ for email in emails:
    print(email)
 ```
 
+### Usage of `overflapped` argument
 ```python
 import re
 
@@ -64,7 +66,7 @@ str1 = 'aBcD'
 
 print(re.findall(r'\w\w', str1, overlapped = True))
 
-# The output would be:
+# The output would be, now we have match for overlapping two consecutives letter:
 # ['aB', 'Bc', 'cD']
 
 ```
