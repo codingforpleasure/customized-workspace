@@ -14,7 +14,7 @@
    * [Regex Flags](#regex-flags)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Mon 06 Mar 2023 10:33:16 AM IST -->
+<!-- Added by: gil_diy, at: Mon 06 Mar 2023 10:34:30 AM IST -->
 
 <!--te-->
 
@@ -40,12 +40,21 @@ print(f' "am" was found: {re.match(r'am', str1)}')
 
 ## re.findall
 
-Search all occurances of given pattern with output as list
+Search all occurances of given pattern with output as list.
+findall() finds *all* the matches and returns them as a list of strings, with each string representing one match. 
 
 re.findall(pattern, string, Flags)
 
 ```python
+## Suppose we have a text with many email addresses
+str = 'purple alice@google.com, blah monkey bob@abc.com blah dishwasher'
 
+## Here re.findall() returns a list of all the found email strings
+emails = re.findall(r'[\w\.-]+@[\w\.-]+', str) ## ['alice@google.com', 'bob@abc.com']
+
+for email in emails:
+   # do something with each found email string
+   print(email)
 ```
 
 
