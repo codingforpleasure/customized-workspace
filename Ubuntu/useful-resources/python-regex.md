@@ -14,7 +14,7 @@
    * [Regex Flags](#regex-flags)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Mon 06 Mar 2023 10:50:15 AM IST -->
+<!-- Added by: gil_diy, at: Mon 06 Mar 2023 10:50:19 AM IST -->
 
 <!--te-->
 
@@ -59,6 +59,8 @@ for email in emails:
 
 ```python
 import re
+
+str1 = 'aBcD'
 
 print(re.findall(r'\w\w', str1, overlapped = True))
 
