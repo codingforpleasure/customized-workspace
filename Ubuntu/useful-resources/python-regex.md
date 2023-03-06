@@ -16,7 +16,7 @@
    * [Regex Flags](#regex-flags)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Mon 06 Mar 2023 11:18:17 AM IST -->
+<!-- Added by: gil_diy, at: Mon 06 Mar 2023 11:27:31 AM IST -->
 
 <!--te-->
 
@@ -140,7 +140,6 @@ Prototype is:
 
 
 ```python
-#!/usr/bin/python
 import re
 phone = "2004-959-559" # This is Phone Number"
 # Remove anything other than digits
@@ -150,7 +149,6 @@ print("Phone Num : "  + str(num))
 
 ### Advance replace
 ```python
-#!/usr/bin/python
 import re
 small_image_url = "https://images.gr-assets.com/books/1553383690s/2657.jpg"
 
