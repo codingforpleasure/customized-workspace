@@ -13,13 +13,20 @@
    * [Regular-expression patterns:](#regular-expression-patterns)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Mon 06 Mar 2023 10:16:14 AM IST -->
+<!-- Added by: gil_diy, at: Mon 06 Mar 2023 10:21:14 AM IST -->
 
 <!--te-->
 
 # Python Regular expressions
 
 ##  re.match (Find something at the beginning of the string and return a match object)
+
+```python
+str1 = "I am IP Guy"
+print(re.match(r'am', str1)) # we will get "am"
+
+```
+
 
 ## re.search (Find something anywhere in the string and return a match object)
 
