@@ -13,7 +13,7 @@
    * [Regular-expression patterns:](#regular-expression-patterns)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Mon 06 Mar 2023 10:21:16 AM IST -->
+<!-- Added by: gil_diy, at: Mon 06 Mar 2023 10:21:55 AM IST -->
 
 <!--te-->
 
@@ -23,7 +23,7 @@
 
 ```python
 str1 = "I am IP Guy"
-print(re.match(r'am', str1)) # we will get "am"
+print(re.match(r'am', str1)) # we will get "am" 
 
 ```
 
