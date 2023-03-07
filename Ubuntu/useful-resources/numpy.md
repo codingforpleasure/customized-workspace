@@ -15,7 +15,7 @@
       * [Random generation](#random-generation)
          * [random](#random)
          * [Generate random array](#generate-random-array)
-         * [Generate vector with normal distribution](#generate-vector-with-normal-distribution)
+         * [Generate vector with normal distribution (Simulating gaussian noise)](#generate-vector-with-normal-distribution-simulating-gaussian-noise)
          * [Generates samples from the normal distribution](#generates-samples-from-the-normal-distribution)
          * [rand](#rand)
          * [Get random sample from a given 1-D array](#get-random-sample-from-a-given-1-d-array)
@@ -94,7 +94,7 @@
    * [Reference](#reference)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Tue 07 Mar 2023 10:59:22 AM IST -->
+<!-- Added by: gil_diy, at: Tue 07 Mar 2023 11:00:43 AM IST -->
 
 <!--te-->
 
@@ -305,7 +305,7 @@ np.random.randint(5, size=(2, 4))
 # array([[4, 0, 2, 1],[3, 2, 2, 0]])
 ```
 
-#### Generate vector with normal distribution
+#### Generate vector with normal distribution (Simulating gaussian noise)
 
 ```python
 x = np.arange(-5.0, 5.0, 0.1)
