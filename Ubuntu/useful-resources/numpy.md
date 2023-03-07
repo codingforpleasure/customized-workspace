@@ -15,6 +15,7 @@
       * [Random generation](#random-generation)
          * [random](#random)
          * [Generate random array](#generate-random-array)
+         * [Generate vector with normal distribution](#generate-vector-with-normal-distribution)
          * [Generates samples from the normal distribution](#generates-samples-from-the-normal-distribution)
          * [rand](#rand)
          * [Get random sample from a given 1-D array](#get-random-sample-from-a-given-1-d-array)
@@ -93,7 +94,7 @@
    * [Reference](#reference)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Fri 06 Jan 2023 17:41:10 IST -->
+<!-- Added by: gil_diy, at: Tue 07 Mar 2023 10:59:16 AM IST -->
 
 <!--te-->
 
@@ -302,6 +303,14 @@ Generate a 2 x 4 array of ints between 0 and 4, inclusive:
 ```python
 np.random.randint(5, size=(2, 4)) 
 # array([[4, 0, 2, 1],[3, 2, 2, 0]])
+```
+
+#### Generate vector with normal distribution
+
+```python
+x = np.arange(-5.0, 5.0, 0.1)
+
+noise = 2 * np.random.normal(size=x.size)
 ```
 
 #### Generates samples from the normal distribution
