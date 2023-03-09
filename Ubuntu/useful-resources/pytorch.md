@@ -116,7 +116,7 @@
    * [References](#references)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Thu 09 Mar 2023 02:15:30 AM IST -->
+<!-- Added by: gil_diy, at: Thu 09 Mar 2023 02:15:54 AM IST -->
 
 <!--te-->
 
@@ -788,7 +788,7 @@ p = torch.rand(3, generator=g)
 
 ## torch multinomial
 
-Ii will give you integers which are sampled according to the property distribution
+Give me probabilities and I will give you integers which are sampled according to the property distribution
 
 ```
 g = torch.Generator().manual_seed(123456)
