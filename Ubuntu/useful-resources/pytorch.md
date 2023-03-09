@@ -116,7 +116,7 @@
    * [References](#references)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Thu 09 Mar 2023 02:16:04 AM IST -->
+<!-- Added by: gil_diy, at: Thu 09 Mar 2023 02:20:11 AM IST -->
 
 <!--te-->
 
@@ -793,6 +793,7 @@ Give me probabilities and I will give you integers which are sampled according t
 ```
 g = torch.Generator().manual_seed(123456)
 p = torch.rand(3, generator=g)
+p = p/p.sum()
 
 torch.multinomial(p, num_samples=10, replacement = True, generator = g)
 ```
