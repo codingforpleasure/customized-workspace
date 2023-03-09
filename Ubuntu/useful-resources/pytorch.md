@@ -43,6 +43,7 @@
    * [matrix multiplication](#matrix-multiplication-1)
    * [Basic functions in pytorch](#basic-functions-in-pytorch)
    * [torch](#torch)
+   * [torch multinomial](#torch-multinomial)
    * [Clipping tensors](#clipping-tensors)
    * [Converting tensors into numpy arrays](#converting-tensors-into-numpy-arrays)
    * [Concatenating torches:](#concatenating-torches)
@@ -115,7 +116,7 @@
    * [References](#references)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Sun 22 Jan 2023 04:06:00 PM IST -->
+<!-- Added by: gil_diy, at: Thu 09 Mar 2023 02:15:26 AM IST -->
 
 <!--te-->
 
@@ -786,6 +787,8 @@ p = torch.rand(3, generator=g)
 ```
 
 ## torch multinomial
+
+Ii will give you integers which are sampled according to the property distribution
 
 ```
 g = torch.Generator().manual_seed(123456)
