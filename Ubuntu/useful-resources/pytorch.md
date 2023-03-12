@@ -116,7 +116,7 @@
    * [References](#references)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Thu 09 Mar 2023 02:21:21 AM IST -->
+<!-- Added by: gil_diy, at: Sun 12 Mar 2023 06:04:51 PM IST -->
 
 <!--te-->
 
@@ -795,7 +795,7 @@ g = torch.Generator().manual_seed(123456)
 p = torch.rand(3, generator=g)
 p = p/p.sum()
 
-# We will get: 
+# For p We will get the vector:
 # tensor([0.6064, 0.3033, 0.0903])
 
 torch.multinomial(p, num_samples=10, replacement = True, generator = g)
