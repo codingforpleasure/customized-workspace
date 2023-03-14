@@ -94,7 +94,7 @@
    * [Reference](#reference)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Tue 07 Mar 2023 11:00:45 AM IST -->
+<!-- Added by: gil_diy, at: Tue 14 Mar 2023 08:17:51 PM IST -->
 
 <!--te-->
 
@@ -273,7 +273,7 @@ dataset = np.loadtxt('pima-indians-diabetes.csv' , delimiter=",")
 ```python
 x = np.zeros((3, 4, 5))
 
-np.moveaxis(x, 0, -1).shape
+np.moveaxis(x, source = 0, destination = -1).shape
 (4, 5, 3)
 
 np.moveaxis(x, -1, 0).shape
