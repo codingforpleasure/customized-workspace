@@ -94,7 +94,7 @@
    * [Reference](#reference)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Tue 14 Mar 2023 08:18:35 PM IST -->
+<!-- Added by: gil_diy, at: Tue 14 Mar 2023 08:19:05 PM IST -->
 
 <!--te-->
 
@@ -269,6 +269,8 @@ dataset = np.loadtxt('pima-indians-diabetes.csv' , delimiter=",")
 
 ### move axis
 
+Move axes of an array to new positions.
+Other axes remain in their original order.
 
 ```python
 x = np.zeros((3, 4, 5))
