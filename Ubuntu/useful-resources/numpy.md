@@ -94,7 +94,7 @@
    * [Reference](#reference)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Tue 14 Mar 2023 08:18:28 PM IST -->
+<!-- Added by: gil_diy, at: Tue 14 Mar 2023 08:18:32 PM IST -->
 
 <!--te-->
 
@@ -274,7 +274,7 @@ dataset = np.loadtxt('pima-indians-diabetes.csv' , delimiter=",")
 x = np.zeros((3, 4, 5))
 
 # source = Original positions of the axes to move
-# source = Destination positions for each of the original axes
+# destination = Destination positions for each of the original axes
 np.moveaxis(x, source = 0, destination = -1).shape
 (4, 5, 3)
 
