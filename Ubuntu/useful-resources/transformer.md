@@ -8,7 +8,7 @@
       * [Decoder Self-Attention](#decoder-self-attention)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Sat 25 Mar 2023 12:42:46 PM IDT -->
+<!-- Added by: gil_diy, at: Sat 25 Mar 2023 12:42:49 PM IDT -->
 
 <!--te-->
 
@@ -96,7 +96,8 @@ these could be things like whether the word is verb or an entity or something el
 
 Into word embeddings then these get passed further on to the next layer
 so let us move on to the next component **position embeddings** but why do we need them?
-consider this if a **LSTM** were to take up these embeddings it would do so **sequentially one embedding at a time which is why they're so slow** there is a positive side to this however since LSTM take the **embeddings sequentially in their designated order they know which word came first which word came second** and so on.
+
+*consider this if a **LSTM** were to take up these embeddings it would do so **sequentially one embedding at a time which is why they're so slow** there is a positive side to this however since LSTM take the **embeddings sequentially in their designated order they know which word came first which word came second** and so on.
 
 * Transformers on the other hand take up all embeddings at once now even though this is a huge plus and makes transformers much faster the downside is that they **lose the critical information related to word ordering in simple words** they are not aware of which word came first in the sequence and which came last now that is a problem.
 
