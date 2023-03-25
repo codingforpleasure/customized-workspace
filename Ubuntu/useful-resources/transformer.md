@@ -7,7 +7,7 @@
       * [Decoder Self-Attention](#decoder-self-attention)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Sat 25 Mar 2023 12:01:01 PM IDT -->
+<!-- Added by: gil_diy, at: Sat 25 Mar 2023 12:01:12 PM IDT -->
 
 <!--te-->
 
@@ -58,7 +58,7 @@ First step to any machine learning is **input data processing**
 First we take all our words in our training data and create vocabulary dictionary out of it. next we assign numeric number next to each word:
 
 <p align="center">
-  <img width="400" src="images/transformers/mapping_vocabulary_dictionary_step1.jpg" title="Look into the image">
+  <img width="100" src="images/transformers/mapping_vocabulary_dictionary_step1.jpg" title="Look into the image">
 </p>
 
 ## Types of Attention
