@@ -2,7 +2,7 @@
 
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Sat 25 Mar 2023 03:46:02 PM IDT -->
+<!-- Added by: gil_diy, at: Sat 25 Mar 2023 03:47:08 PM IDT -->
 
 <!--te-->
 
@@ -29,5 +29,9 @@ stems from the adversarial setup which can cause problems such as **vanishing
 gradients** or **mode collapse**
 
 
+
+* Fusion models work by destroying the input until noise is left over and
+then recovering the input from noise using a neural network .
+
 * Diffusion model downsides for example the sampling speed because of the sequential reverse
-process they are much slower compared to gans or vaes
+process they are much slower compared to gans or vaes.
