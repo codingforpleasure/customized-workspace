@@ -2,7 +2,7 @@
 
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Sat 25 Mar 2023 03:41:43 PM IDT -->
+<!-- Added by: gil_diy, at: Sat 25 Mar 2023 03:43:16 PM IDT -->
 
 <!--te-->
 
@@ -22,3 +22,8 @@ VAE - Variational Autoencoders
 * VAEs compresses an input into a latent distribution and then samples from this distribution
   to recover the inputs after training we can sample from the latent space to generate
   new data points usually VAEs are quite easy to train but as mentioned the outputs can be **blury**
+
+
+* GANs produce **high quality outputs** but are most of the time difficult to train this
+stems from the adversarial setup which can cause problems such as **vanishing
+gradients** or **mode collapse**
