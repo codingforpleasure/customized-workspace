@@ -8,7 +8,7 @@
       * [Decoder Self-Attention](#decoder-self-attention)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Sat 25 Mar 2023 10:43:51 PM IDT -->
+<!-- Added by: gil_diy, at: Sat 25 Mar 2023 10:43:58 PM IDT -->
 
 <!--te-->
 
@@ -99,9 +99,9 @@ so let us move on to the next component **position embeddings** but why do we ne
 
 * If a **LSTM** were to take up these embeddings it would do so **sequentially one embedding at a time which is why they're so slow** there is a positive side to this however since LSTM take the **embeddings sequentially in their designated order they know which word came first which word came second** and so on.
 
-* Transformers on the other hand take up all embeddings at once now even though this is a huge plus and makes transformers much faster the downside is that they **lose the critical information related to word ordering in simple words** they are not aware of which word came first in the sequence and which came last now that is a problem.
-
 * In languages, the order of the words and their position in a sentence really matters. The meaning of the entire sentence can change if the words are re-ordered. When implementing NLP solutions, **recurrent neural networks** have an **inbuilt mechanism that deals with the order of sequences**.
+
+* Transformers on the other hand take up all embeddings at once now even though this is a huge plus and makes transformers much faster the downside is that they **lose the critical information related to word ordering in simple words** they are not aware of which word came first in the sequence and which came last now that is a problem.
 
 * **The transformer model**, however, does not use recurrence or convolution and **treats each data point as independent of the other**. Hence, positional information is added to the model explicitly to retain the information regarding the order of words in a sentence
 
