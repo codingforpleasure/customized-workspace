@@ -7,7 +7,7 @@
       * [Decoder Self-Attention](#decoder-self-attention)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Sat 25 Mar 2023 11:42:40 AM IDT -->
+<!-- Added by: gil_diy, at: Sat 25 Mar 2023 11:42:52 AM IDT -->
 
 <!--te-->
 
@@ -53,7 +53,8 @@ Now the model can output the best contextual representation of the word.
 </p>
 
 **Input**: When you play the game of Thrones ...
-First step to any machine learning is:
+
+First step to any machine learning is **input data processing**
 
 
 ## Types of Attention
