@@ -7,7 +7,7 @@
       * [Decoder Self-Attention](#decoder-self-attention)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Sat 25 Mar 2023 11:42:53 AM IDT -->
+<!-- Added by: gil_diy, at: Sat 25 Mar 2023 11:49:24 AM IDT -->
 
 <!--te-->
 
@@ -54,7 +54,10 @@ Now the model can output the best contextual representation of the word.
 
 **Input**: When you play the game of Thrones ...
 
-First step to any machine learning is **input data processing**
+First step to any machine learning is **input data processing** 
+First we take all our words in our training data and create vocabulary dictionary out of it. next we assign numeric number for each word:
+
+Euler's identity: $ e^{i \pi} + 1 = 0 $
 
 
 ## Types of Attention
