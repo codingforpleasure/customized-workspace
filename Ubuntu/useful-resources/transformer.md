@@ -7,7 +7,7 @@
       * [Decoder Self-Attention](#decoder-self-attention)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Sat 25 Mar 2023 11:38:10 AM IDT -->
+<!-- Added by: gil_diy, at: Sat 25 Mar 2023 11:38:23 AM IDT -->
 
 <!--te-->
 
@@ -40,9 +40,6 @@ The key of success of transformer is self-attention.
 as you recall RNN has the problem of sequensial processing make sit difficult to learn long term dependecies long term relationships.
 
 
-
-
-
 **The Animal didn't cross the street because it was too tired**
 
 Self attention does is allow words to learn relationships as all other words, so using self attention the model can learn **it** here has a very strong collection with **animal**.
@@ -50,6 +47,8 @@ That helps the model learn representation .
 
 
 Now the model can output the best contextual representation of the word.
+
+## 
 
 
 ## Types of Attention
