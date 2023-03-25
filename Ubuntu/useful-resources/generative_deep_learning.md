@@ -2,7 +2,7 @@
 
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Sat 25 Mar 2023 03:43:16 PM IDT -->
+<!-- Added by: gil_diy, at: Sat 25 Mar 2023 03:45:36 PM IDT -->
 
 <!--te-->
 
@@ -27,3 +27,7 @@ VAE - Variational Autoencoders
 * GANs produce **high quality outputs** but are most of the time difficult to train this
 stems from the adversarial setup which can cause problems such as **vanishing
 gradients** or **mode collapse**
+
+
+* downsides for example the sampling speed because of the sequential reverse
+process they are much slower compared to gans or vaes
