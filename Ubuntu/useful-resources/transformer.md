@@ -7,7 +7,7 @@
       * [Decoder Self-Attention](#decoder-self-attention)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Sat 25 Mar 2023 12:04:33 PM IDT -->
+<!-- Added by: gil_diy, at: Sat 25 Mar 2023 12:06:10 PM IDT -->
 
 <!--te-->
 
@@ -65,7 +65,7 @@ then we pick only the words that appear in the current input text.
 get fed into the transformer the cprresponding indices.
 
 <p align="center">
-  <img width="200" src="images/transformers/mapping_vocabulary_dictionary_step1.jpg" title="Look into the image">
+  <img width="200" src="images/transformers/current_indices_step1_1.jpg" title="Look into the image">
 </p>
 
 
