@@ -7,7 +7,7 @@
       * [Decoder Self-Attention](#decoder-self-attention)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Sat 25 Mar 2023 12:03:30 PM IDT -->
+<!-- Added by: gil_diy, at: Sat 25 Mar 2023 12:04:32 PM IDT -->
 
 <!--te-->
 
@@ -64,6 +64,9 @@ First we take all our words in our training data and create vocabulary dictionar
 then we pick only the words that appear in the current input text.
 get fed into the transformer the cprresponding indices.
 
+<p align="center">
+  <img width="200" src="images/transformers/mapping_vocabulary_dictionary_step1.jpg" title="Look into the image">
+</p>
 
 
 ## Types of Attention
