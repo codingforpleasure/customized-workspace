@@ -2,7 +2,7 @@
 
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Sat 25 Mar 2023 03:45:36 PM IDT -->
+<!-- Added by: gil_diy, at: Sat 25 Mar 2023 03:46:00 PM IDT -->
 
 <!--te-->
 
@@ -29,5 +29,5 @@ stems from the adversarial setup which can cause problems such as **vanishing
 gradients** or **mode collapse**
 
 
-* downsides for example the sampling speed because of the sequential reverse
+* Diffusion model downsides for example the sampling speed because of the sequential reverse
 process they are much slower compared to gans or vaes
