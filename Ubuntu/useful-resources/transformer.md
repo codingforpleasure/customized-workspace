@@ -8,7 +8,7 @@
       * [Decoder Self-Attention](#decoder-self-attention)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Sat 25 Mar 2023 12:41:47 PM IDT -->
+<!-- Added by: gil_diy, at: Sat 25 Mar 2023 12:41:49 PM IDT -->
 
 <!--te-->
 
@@ -105,7 +105,7 @@ consider this if a **LSTM** were to take up these embeddings it would do so **se
 </p>
 
 <p align="center">
-  <img width="400" src="images/transformers//Transformer.gif" title="Look into the image">
+  <img width="400" src="images/transformers/Transformer.gif" title="Look into the image">
 </p>
 
 
