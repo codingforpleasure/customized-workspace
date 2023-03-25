@@ -7,7 +7,7 @@
       * [Decoder Self-Attention](#decoder-self-attention)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Sat 25 Mar 2023 11:55:30 AM IDT -->
+<!-- Added by: gil_diy, at: Sat 25 Mar 2023 12:00:54 PM IDT -->
 
 <!--te-->
 
@@ -57,7 +57,9 @@ Now the model can output the best contextual representation of the word.
 First step to any machine learning is **input data processing** 
 First we take all our words in our training data and create vocabulary dictionary out of it. next we assign numeric number next to each word:
 
-
+<p align="center">
+  <img width="400" src="images/transformers/mapping_vocabulary_dictionary_step1.jpg" title="Look into the image">
+</p>
 
 ## Types of Attention
 ### Encode-Decoder Attention
