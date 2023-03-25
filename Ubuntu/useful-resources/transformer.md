@@ -7,7 +7,7 @@
       * [Decoder Self-Attention](#decoder-self-attention)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Sat 25 Mar 2023 11:41:15 AM IDT -->
+<!-- Added by: gil_diy, at: Sat 25 Mar 2023 11:42:40 AM IDT -->
 
 <!--te-->
 
@@ -51,6 +51,9 @@ Now the model can output the best contextual representation of the word.
 <p align="center">
   <img width="400" src="images/transformers/transformer_architecture.jpg" title="Look into the image">
 </p>
+
+**Input**: When you play the game of Thrones ...
+First step to any machine learning is:
 
 
 ## Types of Attention
