@@ -2,7 +2,7 @@
 
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Sat 25 Mar 2023 03:47:09 PM IDT -->
+<!-- Added by: gil_diy, at: Sat 25 Mar 2023 03:48:26 PM IDT -->
 
 <!--te-->
 
@@ -35,3 +35,5 @@ then recovering the input from noise using a neural network .
 
 * Diffusion model downsides for example the sampling speed because of the sequential reverse
 process they are much slower compared to gans or vaes.
+
+[Article - Denoising Diffusion Probabilistic Models](https://arxiv.org/pdf/2006.11239.pdf)
