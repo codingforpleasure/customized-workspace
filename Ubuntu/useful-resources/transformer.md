@@ -7,7 +7,7 @@
       * [Decoder Self-Attention](#decoder-self-attention)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Sat 25 Mar 2023 11:39:18 AM IDT -->
+<!-- Added by: gil_diy, at: Sat 25 Mar 2023 11:39:42 AM IDT -->
 
 <!--te-->
 
@@ -49,7 +49,7 @@ That helps the model learn representation .
 Now the model can output the best contextual representation of the word.
 
 <p align="center">
-  <img width="400" src="images/transformers/transformer.svg" title="Look into the image">
+  <img width="400" src="images/transformer.svg" title="Look into the image">
 </p>
 
 
