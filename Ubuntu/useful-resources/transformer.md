@@ -7,7 +7,7 @@
       * [Decoder Self-Attention](#decoder-self-attention)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Sat 25 Mar 2023 12:09:16 PM IDT -->
+<!-- Added by: gil_diy, at: Sat 25 Mar 2023 12:10:37 PM IDT -->
 
 <!--te-->
 
@@ -73,6 +73,8 @@ Now this input is passed into the embedding layer:
 <p align="center">
   <img width="600" src="images/transformers/embedding_layer_step2.jpg" title="Look into the image">
 </p>
+
+Embedding layer has an index to evry word in our vocabulary, and against of this indices a vector is attached.
 
 ## Types of Attention
 ### Encode-Decoder Attention
