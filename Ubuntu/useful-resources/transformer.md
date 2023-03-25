@@ -7,7 +7,7 @@
       * [Decoder Self-Attention](#decoder-self-attention)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Sat 25 Mar 2023 12:06:23 PM IDT -->
+<!-- Added by: gil_diy, at: Sat 25 Mar 2023 12:07:01 PM IDT -->
 
 <!--te-->
 
@@ -67,6 +67,9 @@ get fed into the transformer the cprresponding indices.
 <p align="center">
   <img width="400" src="images/transformers/current_indices_step1_1.jpg" title="Look into the image">
 </p>
+
+Now this input is passed into the embedding layer:
+
 
 
 ## Types of Attention
