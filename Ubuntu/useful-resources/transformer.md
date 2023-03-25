@@ -1,13 +1,14 @@
 <!--ts-->
 * [General Language Model](#general-language-model)
 * [BERT - (Bidirectional Encoder Represetation Transformer)](#bert---bidirectional-encoder-represetation-transformer)
+      * [Position embeddings](#position-embeddings)
    * [Types of Attention](#types-of-attention)
       * [Encode-Decoder Attention](#encode-decoder-attention)
       * [Encoder Self-Attention](#encoder-self-attention)
       * [Decoder Self-Attention](#decoder-self-attention)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Sat 25 Mar 2023 12:10:48 PM IDT -->
+<!-- Added by: gil_diy, at: Sat 25 Mar 2023 12:40:24 PM IDT -->
 
 <!--te-->
 
@@ -74,7 +75,37 @@ Now this input is passed into the embedding layer:
   <img width="600" src="images/transformers/embedding_layer_step2.jpg" title="Look into the image">
 </p>
 
-Embedding layer has an index to every word in our vocabulary, and against of those indices a vector is attached.
+Embedding layer has an index to every word in our vocabulary, and against of those indices a vector is attached. initialy this vectors are filled up with random numbers. later during train phase...
+
+
+<p align="center">
+  <img width="300" src="images/transformers/word_embedding_step2_1.jpg" title="Look into the image">
+</p>
+
+* In the image above I have chosen word embedding size of 5 so that they fit my
+screen.
+
+* Just to let you know the **original transformer paper** on the other hand
+went with the **embedding size of 521** so what are what embeddings well these
+are just vector representation of a given word each dimension of the
+word embedding tries to **capture some linguistic feature** about that word
+these could be things like whether the word is verb or an entity or something else but in reality since the model decides these features itself during training .
+
+
+### Position embeddings
+
+Into word embeddings then these get passed further on to the next layer
+so let us move on to the next component **position embeddings** but why do we need them?
+consider this if a **LSTM** were to take up these embeddings it would do so **sequentially one embedding at a time which is why they're so slow** there is a positive side to this however since LSTM take the embeddings sequentially in their designated order they know which word came first which word came second and so on transformers on the other hand take up all embeddings at once now even though this is a huge plus and makes transformers much faster the downside is that they **lose the critical information related to word ordering in simple words** they are not aware of which word came first in the sequence and which came last now that is a problem.
+
+<p align="center">
+  <img width="400" src="/images/transformers/transformer.gif" title="Look into the image">
+</p>
+
+
+<p align="center">
+  <img width="400" src="images/transformers/LSTM.gif" title="Look into the image">
+</p>
 
 ## Types of Attention
 ### Encode-Decoder Attention
