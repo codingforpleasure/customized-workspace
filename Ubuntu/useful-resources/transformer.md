@@ -1,4 +1,14 @@
 <!--ts-->
+* [General Language Model](#general-language-model)
+* [BERT - (Bidirectional Encoder Represetation Transformer)](#bert---bidirectional-encoder-represetation-transformer)
+   * [Types of Attention](#types-of-attention)
+      * [Encode-Decoder Attention](#encode-decoder-attention)
+      * [Encoder Self-Attention](#encoder-self-attention)
+      * [Decoder Self-Attention](#decoder-self-attention)
+
+<!-- Created by https://github.com/ekalinin/github-markdown-toc -->
+<!-- Added by: gil_diy, at: Sat 25 Mar 2023 11:38:10 AM IDT -->
+
 <!--te-->
 
 # General Language Model
@@ -28,6 +38,10 @@ naturally bi-directional it's means bi-directional in a set and this allows for 
 
 The key of success of transformer is self-attention.
 as you recall RNN has the problem of sequensial processing make sit difficult to learn long term dependecies long term relationships.
+
+
+
+
 
 **The Animal didn't cross the street because it was too tired**
 
