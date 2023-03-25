@@ -2,7 +2,7 @@
 
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Sat 25 Mar 2023 03:41:27 PM IDT -->
+<!-- Added by: gil_diy, at: Sat 25 Mar 2023 03:41:42 PM IDT -->
 
 <!--te-->
 
@@ -21,4 +21,4 @@ VAE - Variational Autoencoders
 
 * VAEs compresses an input into a latent distribution and then samples from this distribution
   to recover the inputs after training we can sample from the latent space to generate
-  new data points usually VAEs are quite easy to train but as mentioned the outputs can be blurry gans
+  new data points usually VAEs are quite easy to train but as mentioned the outputs can be **blury**
