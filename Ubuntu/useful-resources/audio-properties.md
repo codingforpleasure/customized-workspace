@@ -4,7 +4,7 @@
 * [Mel-Frequency Cepstral Coefficients Explained Easily](#mel-frequency-cepstral-coefficients-explained-easily)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Sat 01 Apr 2023 02:41:59 PM IDT -->
+<!-- Added by: gil_diy, at: Sat 01 Apr 2023 02:44:12 PM IDT -->
 
 <!--te-->
 
@@ -34,6 +34,11 @@
 * This is possible because every signal can be decomposed into a set of sine and cosine waves that add up to the original signal. 
 
 * This is a remarkable theorem known as Fourier’s theorem.
+
+<p align="center">
+  <img width="400" src="/home/gil_diy/customized-workspace/Ubuntu/useful-resources/images/audio/" title="Look into the image">
+</p>
+
 
 # What is Mel spectogram?
 
