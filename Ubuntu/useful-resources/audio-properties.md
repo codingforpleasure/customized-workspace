@@ -1,10 +1,11 @@
 <!--ts-->
+   * [Signal](#signal)
    * [The Fourier Transform](#the-fourier-transform)
 * [What is Mel spectogram?](#what-is-mel-spectogram)
 * [Mel-Frequency Cepstral Coefficients Explained Easily](#mel-frequency-cepstral-coefficients-explained-easily)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Sat 01 Apr 2023 02:44:49 PM IDT -->
+<!-- Added by: gil_diy, at: Sat 01 Apr 2023 02:45:49 PM IDT -->
 
 <!--te-->
 
@@ -13,7 +14,13 @@
 [understanding-the-mel-spectrogram](https://medium.com/analytics-vidhya/understanding-the-mel-spectrogram-fca2afa2ce53)
 
 
-## 
+## Signal
+
+<p align="center">
+  <img width="400" src="<p align="center">
+  <img width="600" src="/home/gil_diy/customized-workspace/Ubuntu/useful-resources/images/audio/Signal.png" title="Look into the image">
+</p>" title="Look into the image">
+</p>
 
 
 ## The Fourier Transform
@@ -35,9 +42,6 @@
 
 * This is a remarkable theorem known as Fourier’s theorem.
 
-<p align="center">
-  <img width="400" src="/home/gil_diy/customized-workspace/Ubuntu/useful-resources/images/audio/Signal.png" title="Look into the image">
-</p>
 
 
 # What is Mel spectogram?
