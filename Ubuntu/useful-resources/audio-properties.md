@@ -5,7 +5,7 @@
 * [Mel-Frequency Cepstral Coefficients Explained Easily](#mel-frequency-cepstral-coefficients-explained-easily)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Sat 01 Apr 2023 02:45:49 PM IDT -->
+<!-- Added by: gil_diy, at: Sat 01 Apr 2023 02:45:52 PM IDT -->
 
 <!--te-->
 
@@ -17,9 +17,7 @@
 ## Signal
 
 <p align="center">
-  <img width="400" src="<p align="center">
   <img width="600" src="/home/gil_diy/customized-workspace/Ubuntu/useful-resources/images/audio/Signal.png" title="Look into the image">
-</p>" title="Look into the image">
 </p>
 
 
