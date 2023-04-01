@@ -5,7 +5,7 @@
 * [Mel-Frequency Cepstral Coefficients Explained Easily](#mel-frequency-cepstral-coefficients-explained-easily)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Sat 01 Apr 2023 03:06:36 PM IDT -->
+<!-- Added by: gil_diy, at: Sat 01 Apr 2023 03:39:08 PM IDT -->
 
 <!--te-->
 
@@ -15,6 +15,7 @@
 
 
 ## Signal
+
 
 <p align="center">
   <img width="600" src="/home/gil_diy/customized-workspace/Ubuntu/useful-resources/images/audio/Signal.png" title="Look into the image">
@@ -66,6 +67,24 @@
 
 *  The y-axis is converted to a log scale, and the color dimension is converted to decibels (you can think of this as the log scale of the amplitude).
 
+
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+import librosa
+
+if __name__ == '__main__':
+    y, sr = librosa.load(librosa.ex('trumpet'))
+    D = librosa.stft(y)  # STFT (short-time Fourier transform) of y
+    S_db = librosa.amplitude_to_db(np.abs(D), ref=np.max)
+
+    fig, ax = plt.subplots()
+    img = librosa.display.specshow(S_db, x_axis='time', y_axis='linear', ax=ax)
+    ax.set(title='Now with labeled axes!')
+    fig.colorbar(img, ax=ax, format="%+2.f dB")
+    plt.show()
+```
 
 
 # What is Mel spectogram?
