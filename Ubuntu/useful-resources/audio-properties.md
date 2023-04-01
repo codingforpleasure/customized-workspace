@@ -5,7 +5,7 @@
 * [Mel-Frequency Cepstral Coefficients Explained Easily](#mel-frequency-cepstral-coefficients-explained-easily)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Sat 01 Apr 2023 03:05:50 PM IDT -->
+<!-- Added by: gil_diy, at: Sat 01 Apr 2023 03:06:36 PM IDT -->
 
 <!--te-->
 
@@ -62,6 +62,11 @@
 * You can think of a spectrogram as a bunch of FFTs stacked on top of each other. It is a way to visually represent a signal’s loudness, or amplitude, as it varies over time at different frequencies. 
 
 * There are some additional details going on behind the scenes when computing the spectrogram
+
+
+*  The y-axis is converted to a log scale, and the color dimension is converted to decibels (you can think of this as the log scale of the amplitude).
+
+
 
 # What is Mel spectogram?
 
