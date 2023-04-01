@@ -5,7 +5,7 @@
 * [Mel-Frequency Cepstral Coefficients Explained Easily](#mel-frequency-cepstral-coefficients-explained-easily)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Sat 01 Apr 2023 03:00:51 PM IDT -->
+<!-- Added by: gil_diy, at: Sat 01 Apr 2023 03:02:49 PM IDT -->
 
 <!--te-->
 
@@ -52,6 +52,11 @@
 
 * The FFT is computed on overlapping windowed segments of the signal, and we get what is called the spectrogram.
 * Wow! That’s a lot to take in. There’s a lot going on here. A good visual is in order.
+
+
+<p align="center">
+  <img width="400" src="/home/gil_diy/customized-workspace/Ubuntu/useful-resources/images/audio/" title="Look into the image">
+</p>
 
 
 # What is Mel spectogram?
