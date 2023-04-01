@@ -5,7 +5,7 @@
 * [Mel-Frequency Cepstral Coefficients Explained Easily](#mel-frequency-cepstral-coefficients-explained-easily)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Sat 01 Apr 2023 03:03:24 PM IDT -->
+<!-- Added by: gil_diy, at: Sat 01 Apr 2023 03:04:58 PM IDT -->
 
 <!--te-->
 
@@ -47,8 +47,7 @@
 
 
 * These signals are known as non periodic signals. We need a way to represent the spectrum of these signals as they vary over time.
-* You may be thinking, “hey, can’t we compute several spectrums by performing FFT on several windowed segments of the signal?” 
-* Yes! This is exactly what is done, and it is called the short-time Fourier transform
+* You may be thinking, “hey, can’t we compute several spectrums by performing FFT on several windowed segments of the signal?” This is exactly what is done, and it is called the **short-time Fourier transform**
 
 * The FFT is computed on overlapping windowed segments of the signal, and we get what is called the spectrogram.
 * A good visual is in order:
