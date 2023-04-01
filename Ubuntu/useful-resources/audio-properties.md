@@ -5,6 +5,14 @@
 * [Mel-Frequency Cepstral Coefficients Explained Easily](#mel-frequency-cepstral-coefficients-explained-easily)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
+<!-- Added by: gil_diy, at: Sat 01 Apr 2023 02:58:53 PM IDT -->
+
+   * [Signal](#signal)
+   * [The Fourier Transform](#the-fourier-transform)
+* [What is Mel spectogram?](#what-is-mel-spectogram)
+* [Mel-Frequency Cepstral Coefficients Explained Easily](#mel-frequency-cepstral-coefficients-explained-easily)
+
+<!-- Created by https://github.com/ekalinin/github-markdown-toc -->
 <!-- Added by: gil_diy, at: Sat 01 Apr 2023 02:47:14 PM IDT -->
 
 <!--te-->
@@ -44,6 +52,11 @@
 <p align="center">
   <img width="400" src="/home/gil_diy/customized-workspace/Ubuntu/useful-resources/images/audio/Spectogram.png" title="Look into the image">
 </p>
+
+
+* These signals are known as non periodic signals. We need a way to represent the spectrum of these signals as they vary over time.
+* You may be thinking, “hey, can’t we compute several spectrums by performing FFT on several windowed segments of the signal?” 
+* Yes! This is exactly what is done, and it is called the short-time Fourier transform
 
 
 # What is Mel spectogram?
