@@ -5,15 +5,7 @@
 * [Mel-Frequency Cepstral Coefficients Explained Easily](#mel-frequency-cepstral-coefficients-explained-easily)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Sat 01 Apr 2023 02:58:53 PM IDT -->
-
-   * [Signal](#signal)
-   * [The Fourier Transform](#the-fourier-transform)
-* [What is Mel spectogram?](#what-is-mel-spectogram)
-* [Mel-Frequency Cepstral Coefficients Explained Easily](#mel-frequency-cepstral-coefficients-explained-easily)
-
-<!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Sat 01 Apr 2023 02:47:14 PM IDT -->
+<!-- Added by: gil_diy, at: Sat 01 Apr 2023 02:58:54 PM IDT -->
 
 <!--te-->
 
