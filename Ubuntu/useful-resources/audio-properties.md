@@ -5,7 +5,7 @@
 * [Mel-Frequency Cepstral Coefficients Explained Easily](#mel-frequency-cepstral-coefficients-explained-easily)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Sat 01 Apr 2023 03:02:59 PM IDT -->
+<!-- Added by: gil_diy, at: Sat 01 Apr 2023 03:03:18 PM IDT -->
 
 <!--te-->
 
@@ -51,7 +51,7 @@
 * Yes! This is exactly what is done, and it is called the short-time Fourier transform
 
 * The FFT is computed on overlapping windowed segments of the signal, and we get what is called the spectrogram.
-* Wow! That’s a lot to take in. There’s a lot going on here. A good visual is in order.
+* A good visual is in order.
 
 
 <p align="center">
