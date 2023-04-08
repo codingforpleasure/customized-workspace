@@ -116,7 +116,7 @@
    * [References](#references)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Sun 09 Apr 2023 12:24:09 AM IDT -->
+<!-- Added by: gil_diy, at: Sun 09 Apr 2023 12:24:11 AM IDT -->
 
 <!--te-->
 
@@ -1531,7 +1531,7 @@ with what's called the **log likelihood** so the product of these is the likelih
 to get the log likelihood we just have to take the log of the probability.
 
 * Because what we'd like is a loss function and a loss function has the semantics that low is good
-because we're trying to minimize the loss so we actually need to invert this and that's what gives us
+ because we're trying to minimize the loss so we actually need to invert this and that's what gives us
  something called the negative log likelihood negative log likelihood.
 
 The negative log likelihood loss is mostly used in **classification problems**, 
