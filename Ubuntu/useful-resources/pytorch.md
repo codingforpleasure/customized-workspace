@@ -116,7 +116,7 @@
    * [References](#references)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Sun 09 Apr 2023 12:24:12 AM IDT -->
+<!-- Added by: gil_diy, at: Sun 09 Apr 2023 12:27:01 AM IDT -->
 
 <!--te-->
 
@@ -1533,6 +1533,10 @@ to get the log likelihood we just have to take the log of the probability.
 * Because what we'd like is a loss function and a loss function has the semantics that low is good
  because we're trying to minimize the loss so we actually need to invert this and that's what gives us
  something called the negative log likelihood negative log likelihood.
+
+
+* The negative log is a very nice loss function because the lowest it can get is zero and the higher 
+it is the worse off the predictions are that you're making
 
 The negative log likelihood loss is mostly used in **classification problems**, 
 here Likelihood refers to the chances of some calculated parameters producing some known data.
