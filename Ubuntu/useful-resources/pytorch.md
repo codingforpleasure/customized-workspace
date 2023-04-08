@@ -43,7 +43,7 @@
    * [matrix multiplication](#matrix-multiplication-1)
    * [Basic functions in pytorch](#basic-functions-in-pytorch)
    * [torch](#torch)
-   * [torch multinomial](#torch-multinomial)
+   * [Sample according to a given custom distribution - torch multinomial](#sample-according-to-a-given-custom-distribution---torch-multinomial)
    * [Clipping tensors](#clipping-tensors)
    * [Converting tensors into numpy arrays](#converting-tensors-into-numpy-arrays)
    * [Concatenating torches:](#concatenating-torches)
@@ -116,7 +116,7 @@
    * [References](#references)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Sun 12 Mar 2023 06:04:51 PM IST -->
+<!-- Added by: gil_diy, at: Sun 09 Apr 2023 12:23:51 AM IDT -->
 
 <!--te-->
 
@@ -786,11 +786,14 @@ g = torch.Generator().manual_seed(123456)
 p = torch.rand(3, generator=g)
 ```
 
-## torch multinomial
+## Sample according to a given custom distribution - torch multinomial
 
 Give me probabilities and I will give you integers which are sampled according to the property distribution.
 
 ```
+# Deterministic way of creating a torch generator object seeding it with some
+# number that we can agree on so that seeds a generator gets gives us an object g
+# and then we can pass that g to a function that creates um here random numbers
 g = torch.Generator().manual_seed(123456)
 p = torch.rand(3, generator=g)
 p = p/p.sum()
@@ -800,6 +803,8 @@ p = p/p.sum()
 
 torch.multinomial(p, num_samples=10, replacement = True, generator = g)
 ```
+
+* The more we sample (num_samples) the more these numbers should roughly have the distribution here.
 
 
 ## Clipping tensors
@@ -1518,6 +1523,17 @@ criterion(output, target)  # -log(sigmoid(1.5))
 ```
 
 ### Negative Log-Likelihood Loss(nn.NLLLoss)
+
+
+* Product of probablities give us be a very tiny number,
+ so for convenience what people work with usually is not the likelihood but they work
+with what's called the **log likelihood** so the product of these is the likelihood
+to get the log likelihood we just have to take the log of the probability.
+
+* Because what we'd like is a loss function and a loss function has the semantics that low is good
+because we're trying to minimize the loss so we actually need to invert this
+and that's what gives us something called the negative log likelihood negative
+log likelihood
 
 The negative log likelihood loss is mostly used in **classification problems**, 
 here Likelihood refers to the chances of some calculated parameters producing some known data.
