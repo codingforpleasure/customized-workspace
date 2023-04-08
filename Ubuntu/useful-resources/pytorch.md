@@ -116,7 +116,7 @@
    * [References](#references)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Sun 09 Apr 2023 12:36:52 AM IDT -->
+<!-- Added by: gil_diy, at: Sun 09 Apr 2023 12:36:53 AM IDT -->
 
 <!--te-->
 
@@ -1573,7 +1573,7 @@ In PyTorch, the loss function is called a **criterion**, and so we named our los
 
 **Summarization:**
 
- GOAL: maximize likelihhod of the data w.r.t model parameters (statostocal modeling)
+ **GOAL: maximize likelihhod of the data w.r.t model parameters (statostocal modeling)**
 * Equivalent to maximizing the log likelihood (because log is monotonic)
 * Equivalent to minimizing the negative log likelihood
 * Equivalent to minimizing the average negative log likelihood
