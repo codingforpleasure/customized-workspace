@@ -116,7 +116,7 @@
    * [References](#references)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Sun 09 Apr 2023 12:27:03 AM IDT -->
+<!-- Added by: gil_diy, at: Sun 09 Apr 2023 12:36:50 AM IDT -->
 
 <!--te-->
 
@@ -1570,6 +1570,14 @@ The negative log-likelihood becomes unhappy at smaller values, where it can reac
 In PyTorch, the loss function is called a **criterion**, and so we named our loss function criterion.
 
 [Nice Reference](https://ljvmiranda921.github.io/notebook/2017/08/13/softmax-and-the-negative-log-likelihood/)
+
+**Summarization:**
+
+ GOAL: maximize likelihhod of the data w.r.t model parameters (statostocal modeling)
+* Equivalent to maximizing the log likelihood (because log is monotonic)
+* Equivalent to minimizing the negative log likelihood
+* Equivalent to minimizing the average negative log likelihood
+
 
 ### Cross-Entropy Loss(nn.CrossEntropyLoss)
 
