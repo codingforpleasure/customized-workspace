@@ -89,7 +89,7 @@
          * [1. Mean subtraction](#1-mean-subtraction)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Thu 13 Apr 2023 02:55:12 PM IDT -->
+<!-- Added by: gil_diy, at: Thu 13 Apr 2023 02:55:23 PM IDT -->
 
 <!--te-->
 
@@ -1061,7 +1061,7 @@ Let's delve into each one:
 
 Mean subtraction is used to help combat illumination changes in the input images in our dataset. We can therefore view mean subtraction as a **technique used to aid our Convolutional Neural Networks**.
 
-Before we even begin training our deep neural network, we first **compute the average pixel intensity across all images in the training set for each of the Red, Green, and Blue channels**.
+Before we even begin training our deep neural network, autoc we first **compute the average pixel intensity across all images in the training set for each of the Red, Green, and Blue channels**.
 
 
 <p align="center"> <!-- style="width:400px;" -->
@@ -1069,7 +1069,7 @@ Before we even begin training our deep neural network, we first **compute the av
 </p>
 
 
-[opencv fails in pycharm](https://stackoverflow.com/questions/68669767/pycharm-can%c2%b4t-find-reference-of-any-opencv-function-in-init-py/73087052#73087052)
+[opencv fails in pycharm in autocomplete](https://stackoverflow.com/questions/68669767/pycharm-can%c2%b4t-find-reference-of-any-opencv-function-in-init-py/73087052#73087052)
 
 [ First Principles of Computer Vision ](https://www.youtube.com/channel/UCf0WB91t8Ky6AuYcQV0CcLw/videos)
 
