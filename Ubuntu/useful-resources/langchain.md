@@ -2,7 +2,7 @@
 * [Langchain](#langchain)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Tue 18 Apr 2023 11:50:00 PM IDT -->
+<!-- Added by: gil_diy, at: Tue 18 Apr 2023 11:51:27 PM IDT -->
 
 <!--te-->
 
@@ -17,5 +17,5 @@
 
 
 <p align="center">
-  <img width="400" src="images/langchain" title="Look into the image">
+  <img width="400" src="images/langchain/langchain.jpg" title="Look into the image">
 </p>
