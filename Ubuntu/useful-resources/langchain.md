@@ -2,7 +2,7 @@
 * [Langchain](#langchain)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Wed 19 Apr 2023 12:12:13 AM IDT -->
+<!-- Added by: gil_diy, at: Wed 19 Apr 2023 01:02:22 AM IDT -->
 
 <!--te-->
 
@@ -36,3 +36,6 @@ Agency - Allow your LLMs to interact with it's environment via decision making. 
 
 
 [LangChain Cookbook](https://github.com/gkamradt/langchain-tutorials/blob/main/LangChain%20Cookbook.ipynb)
+
+
+[Ask Questions On Your Custom (or Private) Files](https://youtu.be/EnT-ZTrcPrg?list=PLqZXAkvF1bPNQER9mLmDbntNfSpzdDIU5)
