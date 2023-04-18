@@ -2,7 +2,7 @@
 * [Langchain](#langchain)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Tue 18 Apr 2023 11:53:09 PM IDT -->
+<!-- Added by: gil_diy, at: Wed 19 Apr 2023 12:08:53 AM IDT -->
 
 <!--te-->
 
@@ -28,3 +28,7 @@ LangChain is a **framework for developing applications powered by language model
 <p align="center">
   <img width="600" src="images/langchain/langchain.jpg" title="Look into the image">
 </p>
+
+
+
+[LangChain Cookbook](https://github.com/gkamradt/langchain-tutorials/blob/main/LangChain%20Cookbook.ipynb)
