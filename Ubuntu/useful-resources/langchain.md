@@ -2,7 +2,7 @@
 * [Langchain](#langchain)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Tue 18 Apr 2023 11:52:42 PM IDT -->
+<!-- Added by: gil_diy, at: Tue 18 Apr 2023 11:53:05 PM IDT -->
 
 <!--te-->
 
@@ -18,11 +18,11 @@
 
 **With langchain**:
 
-LangChain is a **framework for developing applications powered by language models**. We believe that the most powerful and differentiated applications will not only call out to a language model via an API, but will also:
+LangChain is a **framework for developing applications powered by language models**. We believe that the most powerful and differentiated **applications will not only call out to a language model via an API**, but will also:
 
-    Be data-aware: connect a language model to other sources of data
+**Be data-aware: connect a language model to other sources of data**
 
-    Be agentic: allow a language model to interact with its environment
+**Be agentic: allow a language model to interact with its environment**
 
 
 <p align="center">
