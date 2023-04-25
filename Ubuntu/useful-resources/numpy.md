@@ -94,7 +94,7 @@
    * [Reference](#reference)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Tue 25 Apr 2023 05:31:36 PM IDT -->
+<!-- Added by: gil_diy, at: Tue 25 Apr 2023 05:34:46 PM IDT -->
 
 <!--te-->
 
@@ -962,6 +962,11 @@ np.insert([1,23,45,9,100], list(range(2,6, 2)), 2)
 ## Multiplication:
 
 ### Cross product
+
+
+<p align="center">
+  <img width="400" src="images/numpy/" title="Look into the image">
+</p>
 
 ```python
 u = np.array([2,3,1])
