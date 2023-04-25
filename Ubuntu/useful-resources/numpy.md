@@ -94,7 +94,7 @@
    * [Reference](#reference)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Tue 25 Apr 2023 05:36:13 PM IDT -->
+<!-- Added by: gil_diy, at: Tue 25 Apr 2023 05:37:41 PM IDT -->
 
 <!--te-->
 
@@ -963,6 +963,7 @@ np.insert([1,23,45,9,100], list(range(2,6, 2)), 2)
 
 ### Cross product
 
+ Given two linearly independent vectors a and b, the cross product, a × b (read "a cross b"), is a vector that is perpendicular to both a and b,and thus **normal to the plane containing them**. It has many applications in mathematics, physics, engineering, and computer programming
 
 <p align="center">
   <img width="400" src="images/numpy/cross_product2.jpg" title="Look into the image">
