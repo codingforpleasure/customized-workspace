@@ -94,7 +94,7 @@
    * [Reference](#reference)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Tue 25 Apr 2023 06:12:31 PM IDT -->
+<!-- Added by: gil_diy, at: Tue 25 Apr 2023 06:31:35 PM IDT -->
 
 <!--te-->
 
@@ -1019,7 +1019,7 @@ The outer product of two coordinate vectors is a matrix. If the two vectors have
 
 
 <p align="center">
-  <img width="600"  src="images/numpy/outer_product.png" title="tool tip here">
+  <img width="800"  src="images/numpy/outer_product.png" title="tool tip here">
 </p>
 
 
