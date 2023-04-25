@@ -94,7 +94,7 @@
    * [Reference](#reference)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Tue 25 Apr 2023 06:09:55 PM IDT -->
+<!-- Added by: gil_diy, at: Tue 25 Apr 2023 06:10:28 PM IDT -->
 
 <!--te-->
 
@@ -1006,9 +1006,9 @@ mat2 = np.array([[7, 8],[9,10],[1,0]]) # mat2.shape => (3,2)
 
 dot_res = np.dot(mat1,mat2)
 
-# dot_res = array([[ 58,  64],
-#                  [139, 154],
-#                  [ 83,  92]])
+# dot_res = array([[ 28, 28],
+#                  [ 79, 82],
+#                  [ 63, 68]])
 
 # dot_res.shape => (3,2)
 ```
