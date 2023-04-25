@@ -94,7 +94,7 @@
    * [Reference](#reference)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Tue 25 Apr 2023 05:40:26 PM IDT -->
+<!-- Added by: gil_diy, at: Tue 25 Apr 2023 06:09:12 PM IDT -->
 
 <!--te-->
 
@@ -995,6 +995,10 @@ dot_res = np.dot(x1,x2)
 
 
 Another example:
+
+<p align="center">
+  <img width="400" src="images/numpy/dot_product.jpg" title="Look into the image">
+</p>
 
 ```python
 mat1 = np.array([[1, 2, 3], [4, 5, 6], [1, 6, 2]])  # mat1.shape => (3,3)
