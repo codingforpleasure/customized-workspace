@@ -94,7 +94,7 @@
    * [Reference](#reference)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Tue 14 Mar 2023 08:19:12 PM IST -->
+<!-- Added by: gil_diy, at: Tue 25 Apr 2023 05:31:33 PM IDT -->
 
 <!--te-->
 
@@ -964,8 +964,8 @@ np.insert([1,23,45,9,100], list(range(2,6, 2)), 2)
 ### Cross product
 
 ```python
-u = [2,3,1]
-v = [0,5,4]
+u = np.array([2,3,1])
+v = np.array([0,5,4])
 np.cross(u,v)
 ```
 
