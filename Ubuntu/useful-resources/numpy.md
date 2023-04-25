@@ -94,7 +94,7 @@
    * [Reference](#reference)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Tue 25 Apr 2023 05:34:59 PM IDT -->
+<!-- Added by: gil_diy, at: Tue 25 Apr 2023 05:36:13 PM IDT -->
 
 <!--te-->
 
@@ -974,7 +974,9 @@ v = np.array([0,5,4])
 np.cross(u,v)
 ```
 
-
+<p align="center">
+  <img width="400" src="images/numpy/Cross_product_animation.gif" title="Look into the image">
+</p>
 
 ### Vectorized dot product of vectors
 The dot product or **scalar product** is an algebraic operation that takes two equal-length sequences of numbers (usually coordinate vectors) and returns a single number.
