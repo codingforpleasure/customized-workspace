@@ -94,7 +94,7 @@
    * [Reference](#reference)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Tue 25 Apr 2023 06:09:15 PM IDT -->
+<!-- Added by: gil_diy, at: Tue 25 Apr 2023 06:09:54 PM IDT -->
 
 <!--te-->
 
@@ -1002,7 +1002,7 @@ Another example:
 
 ```python
 mat1 = np.array([[1, 2, 3], [4, 5, 6], [1, 6, 2]])  # mat1.shape => (3,3)
-mat2 = np.array([[7, 8],[9,10],[11,12]]) # mat2.shape => (3,2)
+mat2 = np.array([[7, 8],[9,10],[1,0]]) # mat2.shape => (3,2)
 
 dot_res = np.dot(mat1,mat2)
 
