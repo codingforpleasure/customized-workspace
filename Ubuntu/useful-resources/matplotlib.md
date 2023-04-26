@@ -28,6 +28,7 @@
    * [Adding patches](#adding-patches)
    * [QQplot](#qqplot)
    * [Draw arrows](#draw-arrows)
+   * [Drawing an arrow](#drawing-an-arrow)
       * [Draw 3d vectors](#draw-3d-vectors)
       * [Plotting time series](#plotting-time-series)
       * [Plotting Live data in real-time](#plotting-live-data-in-real-time)
@@ -63,7 +64,7 @@
 * [Reference](#reference)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Mon 10 Apr 2023 11:03:28 PM IDT -->
+<!-- Added by: gil_diy, at: Wed 26 Apr 2023 11:56:46 PM IDT -->
 
 <!--te-->
 
@@ -720,6 +721,33 @@ for length, vector in zip(pca.explained_variance_, pca.components_):
 ```
 
 [Taken from here](https://jakevdp.github.io/PythonDataScienceHandbook/05.09-principal-component-analysis.html)
+
+
+## Drawing an arrow
+
+```python
+import matplotlib.pyplot as plt
+
+def draw_arrow(plt, arrow_start, arrow_end):
+    # The length of the arrow along x and y direction:
+    dist_x = arrow_end[0] - arrow_start[0]
+    dist_y = arrow_end[1] - arrow_start[1]
+    plt.arrow(x=arrow_start[0], y=arrow_start[1], dx=dist_x, dy=dist_y,
+              head_width=0.5, head_length=1.5 * 0.5,
+              length_includes_head=True,
+              overhang=0.3,
+              color='black')
+
+
+if __name__ == '__main__':
+    plt.xlim(-5, 5)
+    plt.ylim(-5, 5)
+    draw_arrow(plt,
+               arrow_start=[-1, -2],
+               arrow_end=[3, 4])
+    plt.show()
+
+```
 
 
 ### Draw 3d vectors 
