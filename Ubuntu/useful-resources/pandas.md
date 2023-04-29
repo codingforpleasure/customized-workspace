@@ -24,6 +24,7 @@
          * [Get column index for a given specific name](#get-column-index-for-a-given-specific-name)
          * [Dropping columns in pandas](#dropping-columns-in-pandas)
          * [Concatentaing columns and rows](#concatentaing-columns-and-rows)
+         * [Shift column down or up](#shift-column-down-or-up)
          * [Treat pandas strings as numeric value  (casting)](#treat-pandas-strings-as-numeric-value--casting)
          * [Converting from numpy table to pandas dataframe](#converting-from-numpy-table-to-pandas-dataframe)
          * [Converting from pandas dataframe to numpy table](#converting-from-pandas-dataframe-to-numpy-table)
@@ -97,7 +98,7 @@
    * [Reference](#reference)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Sat 29 Apr 2023 01:07:22 PM IDT -->
+<!-- Added by: gil_diy, at: Sat 29 Apr 2023 01:08:57 PM IDT -->
 
 <!--te-->
 
@@ -366,7 +367,10 @@ my_df.loc["two"] = [4,5,6]
 my_df.append(df2)
 ```
 
-#### 
+#### Shift column down or up
+
+
+[Link](https://towardsdatascience.com/the-complete-guide-to-time-series-forecasting-using-sklearn-pandas-and-numpy-7694c90e45c1)
 
 #### Treat pandas strings as numeric value  (casting)
 
