@@ -199,6 +199,35 @@ f'Hello, {name}!'
 
 [Five wonderful uses of ‘f- Strings’ in Python](https://towardsdatascience.com/five-wonderful-uses-of-f-strings-in-python-7980cfd31c0d)
 
+[f-string examples](https://zetcode.com/python/fstring/)
+
+## F-Strings tricks
+
+
+### Print variable's content easily
+
+```python 
+name = 'gil'
+
+print(f'{name=}') 
+
+# Output:
+# name = gil
+```
+
+
+### Print float number with fixes digits after decimal point
+
+```python
+num = 14.121545646
+print('f{num:.3f}') # 3 deicmal places
+
+# Output:
+# 14.121
+
+```
+
+
 ## Type hints
 
 [Reference](https://docs.python.org/3/library/typing.html)
@@ -250,8 +279,40 @@ for settings in grid_parameters(parameters):
 [Reference](https://towardsdatascience.com/how-to-write-your-grid-search-function-in-python-43ad0da97522)
 
 
-## try, Except 
+## Try, exception
 
+```python
+try:
+    do_complicated_task(....)
+except Exception as e:
+    print(e)
+    raise e
+```
+
+## Get traceback of exception
+
+```python
+import traceback
+
+traceback.print_exc()
+```
+
+## raise exception
+```python
+if not(len(paths) == len(colors) == len(names)):
+    raise ValueError
+```
+
+## Not yet implemented function
+
+```python
+def funct_example():
+    raise NotImplementedError("Error you have not implemented!")
+
+
+if __name__ == '__main__':
+    funct_example()
+```
 
 ## Dectorators
 
@@ -473,29 +534,6 @@ print(counter)
 
 ```
 
-## Try, exception
-
-```python
-try:
-    do_complicated_task(....)
-except Exception as e:
-    print(e)
-    raise e
-```
-
-## Get traceback of exception
-
-```python
-import traceback
-
-traceback.print_exc()
-```
-
-## raise exception
-```python
-if not(len(paths) == len(colors) == len(names)):
-    raise ValueError
-```
 
 
 ## Make logger colorful
