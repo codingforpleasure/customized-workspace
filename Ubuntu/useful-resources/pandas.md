@@ -98,7 +98,7 @@
    * [Reference](#reference)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Sat 29 Apr 2023 01:36:07 PM IDT -->
+<!-- Added by: gil_diy, at: Sat 29 Apr 2023 01:36:51 PM IDT -->
 
 <!--te-->
 
@@ -382,7 +382,7 @@ df['shifted-col1'] = df['Col1'].shift(-1)
   <img width="400" src="images/pandas/shift.jpg" title="Look into the image">
 </p>
 
-[Link](https://towardsdatascience.com/the-complete-guide-to-time-series-forecasting-using-sklearn-pandas-and-numpy-7694c90e45c1)
+[Useful for Timeseries](https://towardsdatascience.com/the-complete-guide-to-time-series-forecasting-using-sklearn-pandas-and-numpy-7694c90e45c1)
 
 #### Treat pandas strings as numeric value  (casting)
 
