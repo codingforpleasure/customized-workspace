@@ -97,7 +97,7 @@
    * [Reference](#reference)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Fri 25 Nov 2022 22:43:36 IST -->
+<!-- Added by: gil_diy, at: Sat 29 Apr 2023 01:07:20 PM IDT -->
 
 <!--te-->
 
@@ -366,7 +366,7 @@ my_df.loc["two"] = [4,5,6]
 my_df.append(df2)
 ```
 
-
+#### 
 
 #### Treat pandas strings as numeric value  (casting)
 
