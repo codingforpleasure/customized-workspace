@@ -98,7 +98,7 @@
    * [Reference](#reference)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Sat 29 Apr 2023 01:34:03 PM IDT -->
+<!-- Added by: gil_diy, at: Sat 29 Apr 2023 01:36:06 PM IDT -->
 
 <!--te-->
 
@@ -376,6 +376,11 @@ df = pd.DataFrame({"Col1": np.random.randint(low=1, high=15, size=10)},
 
 df['shifted-col1'] = df['Col1'].shift(-1)
 ```
+
+
+<p align="center">
+  <img width="400" src="images/pandas/shift.jpg" title="Look into the image">
+</p>
 
 [Link](https://towardsdatascience.com/the-complete-guide-to-time-series-forecasting-using-sklearn-pandas-and-numpy-7694c90e45c1)
 
