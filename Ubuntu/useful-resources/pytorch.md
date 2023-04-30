@@ -116,7 +116,7 @@
    * [References](#references)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Mon 01 May 2023 01:39:02 AM IDT -->
+<!-- Added by: gil_diy, at: Mon 01 May 2023 01:39:06 AM IDT -->
 
 <!--te-->
 
@@ -179,7 +179,7 @@ print(torch.cuda.get_device_name(torch.cuda.current_device()))
 
 ```
 
-Attention: The torch.version.cuda should match to the driver version
+Attention: The **torch.version.cuda** should match to the driver version
 when exeucting `nvidia-smi` in the field **CUDA Version**
 
 ## Set printing tensors nicely
