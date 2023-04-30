@@ -116,7 +116,7 @@
    * [References](#references)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Sun 09 Apr 2023 12:37:01 AM IDT -->
+<!-- Added by: gil_diy, at: Mon 01 May 2023 01:31:20 AM IDT -->
 
 <!--te-->
 
@@ -175,6 +175,7 @@ print(torch.__version__)
 ```python
 print("torch version = ", torch.__version__)
 print("torch.version.cuda = ", torch.version.cuda)
+print(torch.cuda.get_device_name(torch.cuda.current_device()))
 ```
 
 ## Set printing tensors nicely
