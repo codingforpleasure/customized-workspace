@@ -929,11 +929,22 @@ np.array_split(x, 3)
 ### np.split()
 
 ```python
+
+# Example of splitting numpy array
 x = np.arange(8.0)
 np.split(x, [3, 5])
 
 # We will recieve:
 # [array([0., 1., 2.]), array([3., 4.]), array([5., 6., 7.])]
+
+
+# Example of splitting pandas dataframe
+
+df = pd.DataFrame({"Col1": np.random.randint(low=1, high=15, size=10)})
+    res_dfs = np.split(df, [5, 8])
+
+    for current_df in res_dfs:
+        print(f'current_df: \n{current_df}')
 ```
 
 ## Removing rows/columns
