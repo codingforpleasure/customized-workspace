@@ -675,6 +675,28 @@ A python package that simplifies the task of finding exact and near duplicates i
 
 [Link](https://github.com/albumentations-team/albumentations)
 
+
+## Quickdraw download images (handwritten)
+
+```
+pip install quickdraw
+```
+
+```python
+from quickdraw import QuickDrawDataGroup
+from quickdraw import QuickDrawData
+
+if __name__ == '__main__':
+    circles = QuickDrawDataGroup("circle")
+    num_circles = circles.drawing_count
+    print(circles.get_drawing())
+    qd = QuickDrawData()
+
+    for idx in range(num_circles):
+        circle = qd.get_drawing("circle", index=idx)
+        circle.image.save(f"/home/gil_diy/PycharmProjects/nn_andrej_karpathy_tutorials/circles/circle_{idx}.png")
+```
+
 ## Resources
 
 [Sparse_categorical_crossentropy vs categorical_crossentropy (keras, accuracy)](https://datascience.stackexchange.com/questions/41921/sparse-categorical-crossentropy-vs-categorical-crossentropy-keras-accuracy)
