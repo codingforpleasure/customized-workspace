@@ -2,7 +2,7 @@
 * [Few-shot learning](#few-shot-learning)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Thu 11 May 2023 08:33:10 AM IDT -->
+<!-- Added by: gil_diy, at: Thu 11 May 2023 08:33:13 AM IDT -->
 
 <!--te-->
 
@@ -29,6 +29,5 @@ Few-shot learning is the problem of making predictions based on a limited number
 
 
 
-[Reference - 
-An Introduction to Few-Shot Learning
+[Reference - An Introduction to Few-Shot Learning
 ](https://www.analyticsvidhya.com/blog/2021/05/an-introduction-to-few-shot-learning/)
