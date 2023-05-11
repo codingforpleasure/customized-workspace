@@ -44,3 +44,4 @@ Article name | Description
 [Arbitrary Style Transfer in Real-time with Adaptive Instance Normalization](https://arxiv.org/pdf/1703.06868.pdf)
 [Universal Style Transfer via Feature Transforms](https://arxiv.org/pdf/1705.08086.pdf)| 
 [Perceptual Losses for Real-Time Style Transfer and Super-Resolution](https://arxiv.org/pdf/1603.08155.pdf) | 
+[LORA: LOW-RANK ADAPTATION OF LARGE LANGUAGE MODELS](https://arxiv.org/pdf/2106.09685.pdf)

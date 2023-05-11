@@ -281,6 +281,9 @@ for settings in grid_parameters(parameters):
 
 ## Try, exception
 
+
+[Guide-to-exception-handling](https://towardsdatascience.com/catch-me-if-you-can-a-guide-to-exception-handling-in-python-3efc7b2477f9)
+
 ```python
 try:
     do_complicated_task(....)

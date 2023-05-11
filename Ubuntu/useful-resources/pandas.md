@@ -367,6 +367,13 @@ my_df.loc["two"] = [4,5,6]
 my_df.append(df2)
 ```
 
+#### Sort columns' order by alphabetical order
+
+```python
+# sort columns in alphabetical order
+df = df.sort_index(axis=1)
+```
+
 #### Shift column down or up
 
 
