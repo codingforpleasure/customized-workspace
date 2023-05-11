@@ -2,7 +2,7 @@
 * [Few-shot learning](#few-shot-learning)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: gil_diy, at: Thu 11 May 2023 08:28:02 AM IDT -->
+<!-- Added by: gil_diy, at: Thu 11 May 2023 08:28:32 AM IDT -->
 
 <!--te-->
 
@@ -24,3 +24,5 @@ Few-shot learning is the problem of making predictions based on a limited number
 
 
 * I train the model on a big training set. The goal of training is not to know what an elephant is and what a tiger is. Instead, the goal is to **know the similarity and difference between objects**.
+
+* After training, you can show the two images to the model and ask whether the two are the same kind of animals. The model has similarities and differences between objects. So, the model is able to tell that the contents in the two images are the same kind of objects.
