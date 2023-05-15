@@ -46,6 +46,12 @@ pdfunite ~/Desktop/file1.pdf ~/Desktop/syllabusfile2.pdf  output.pdf
 pdfimages 1.pdf -f 1 -l 1 -j 1.jpg
 ```
 
+```
+-f <int>       : first page to convert
+-l <int>       : last page to convert
+-j             : write JPEG images as JPEG files
+```
+
 ## For rotating clockwise:
 
 ```bash
