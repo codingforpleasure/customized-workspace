@@ -1,12 +1,13 @@
 <!--ts-->
-   * [Useful pdf tools for linux on the go](#useful-pdf-tools-for-linux-on-the-go)
-      * [Extracting group of pages from large pdf into pdf:](#extracting-group-of-pages-from-large-pdf-into-pdf)
-      * [PDF concatenate files (Join PDF files)](#pdf-concatenate-files-join-pdf-files)
-      * [Extract specific pages from PDF as png](#extract-specific-pages-from-pdf-as-png)
-      * [For rotating clockwise:](#for-rotating-clockwise)
-      * [For rotating anti-clockwise:](#for-rotating-anti-clockwise)
+* [Useful pdf tools for linux on the go](#useful-pdf-tools-for-linux-on-the-go)
+   * [Extracting group of pages from large pdf into pdf:](#extracting-group-of-pages-from-large-pdf-into-pdf)
+   * [PDF concatenate files (Join PDF files)](#pdf-concatenate-files-join-pdf-files)
+   * [Extract specific pages from PDF as png](#extract-specific-pages-from-pdf-as-png)
+   * [For rotating clockwise:](#for-rotating-clockwise)
+   * [For rotating anti-clockwise:](#for-rotating-anti-clockwise)
 
-<!-- Added by: gil_diy, at: Fri 05 Aug 2022 11:56:46 IDT -->
+<!-- Created by https://github.com/ekalinin/github-markdown-toc -->
+<!-- Added by: gil_diy, at: Mon 15 May 2023 06:59:56 AM IDT -->
 
 <!--te-->
 
@@ -42,7 +43,7 @@ pdfunite ~/Desktop/file1.pdf ~/Desktop/syllabusfile2.pdf  output.pdf
 ## Extract specific pages from PDF as png
 
 ```bash
-pdfimages
+pdfimages 1.pdf -f 1 -l 1 -j 1.jpg
 ```
 
 ## For rotating clockwise:
