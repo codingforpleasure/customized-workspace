@@ -381,7 +381,7 @@ df = df.sort_index(axis=1)
 df = pd.DataFrame({"Col1": np.random.randint(low=1, high=15, size=10)},
                 index=pd.date_range(start="2020-01-01", periods=10, freq='D'))
 
-df['shifted-col1'] = df['Col1'].shift(-1)
+df['shifted-Col1'] = df['Col1'].shift(-1)
 ```
 
 
@@ -390,6 +390,36 @@ df['shifted-col1'] = df['Col1'].shift(-1)
 </p>
 
 [Useful for Timeseries](https://towardsdatascience.com/the-complete-guide-to-time-series-forecasting-using-sklearn-pandas-and-numpy-7694c90e45c1)
+
+#### Rolling window
+
+```python
+df_example = pd.DataFrame(index=output_date_range,
+                              columns=['Weight'],
+                              data=np.arange(30, 39))
+
+# Moving Average of 5 days
+df_example["Weight_rolling_5_mean"] = df_example['Weight'].rolling(window=5).mean()
+```
+
+<p align="center">
+  <img width="200" src="images/pandas/df_rolled.jpg" title="Look into the image">
+</p>
+
+
+#### Expanding average
+
+```python
+df_example = pd.DataFrame(index=output_date_range,
+                              columns=['Weight'],
+                              data=np.arange(30, 39))
+
+df_example["Weight_expanding_mean"] = df_example[['Weight']].expanding().mean()
+```
+
+<p align="center">
+  <img width="300" src="images/pandas/df_expanding.jpg" title="Look into the image">
+</p>
 
 #### Treat pandas strings as numeric value  (casting)
 
