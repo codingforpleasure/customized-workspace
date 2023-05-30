@@ -32,3 +32,8 @@ For newbie install the `.ignore` plugin.
 ## How to Clone Including Git Submodules
 
 [Link](https://www.w3docs.com/snippets/git/how-to-clone-including-submodules.html)
+
+
+## Setup HTTPs correctly for pushing code for you repository (after new disk)
+
+[Link](https://docs.github.com/en/get-started/getting-started-with-git/caching-your-github-credentials-in-git)
