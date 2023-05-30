@@ -93,8 +93,10 @@ pipenv install flask==0.12.1
 ## Install something directly from a version control system (VCS)
 
 ```bash
-pipenv install -e git+https://github.com/requests/requests.git#egg=requests
+pipenv install -e git+https://github.com/requests/requests.git#egg=<fill here>
 ```
+
+* To determine the egg: look up the name argument to the setup() function in the package's setup.py
 
 ## Create/update your Pipfile.lock
 
