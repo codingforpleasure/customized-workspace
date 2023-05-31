@@ -1144,6 +1144,7 @@ df = pd.DataFrame({
     "D": [2000, np.nan, 1000]
 })
 ```
+[Great Reference](https://betterdatascience.com/style-pandas-dataframes)
 
 ### Remove row indices 
 
