@@ -103,7 +103,7 @@
     - [Null highlighter](#null-highlighter)
     - [Custom properties](#custom-properties)
     - [Mark specific columns](#mark-specific-columns)
-    - [](#)
+    - [Mark specific rows](#mark-specific-rows)
   - [Mathematical functions](#mathematical-functions)
     - [Calculate correlation for all numerical columns pairs](#calculate-correlation-for-all-numerical-columns-pairs)
   - [Execute sql](#execute-sql)
@@ -1146,6 +1146,8 @@ df = pd.DataFrame({
 ```
 [Great Reference](https://betterdatascience.com/style-pandas-dataframes)
 
+[Great Reference 2](https://coderzcolumn.com/tutorials/python/simple-guide-to-style-display-of-pandas-dataframes)
+
 ### Remove row indices 
 
 ```python
@@ -1219,7 +1221,26 @@ dfi.export(df, filename='highlight_columns.png')
 </p>
 
 
-### 
+### Mark specific rows
+
+```python
+    data = {'A': [1, 2, 3],
+            'B': [4, 5, 6],
+            'C': [7, 8, 9]}
+    df = pd.DataFrame(data, index=['row_0', 'row_1', 'row_2'])
+
+    rows_to_mark = {'row_1', 'row_2'}
+    highlighted_df = df.style.apply(lambda x: ['background: lightgreen' if x.name in rows_to_mark else '' for i in x],
+                                    axis=1)
+
+    dfi.export(highlighted_df, filename='highlighted_rows.png')
+```
+
+<p align="center""> 
+  <img width="200" src="images/pandas/highlight_rows.png" title="style_properties">
+</p>
+
+
 
 ```python
 def mean_highlighter(x):
