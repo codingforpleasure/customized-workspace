@@ -1,12 +1,25 @@
 <!--ts-->
-   * [Time-Series](#time-series)
-      * [Converting to Time-Stamp](#converting-to-time-stamp)
-      * [Slicing date-time type](#slicing-date-time-type)
-      * [Rolling Window Statistics](#rolling-window-statistics)
-      * [Expanding Window Statistics](#expanding-window-statistics)
-      * [Exponentially Weighted Moving Average (EWMA)](#exponentially-weighted-moving-average-ewma)
-      * [Statsmodels](#statsmodels)
-      * [Useful packages for time series](#useful-packages-for-time-series)
+- [Time-Series](#time-series)
+  - [Converting to Time-Stamp](#converting-to-time-stamp)
+  - [Slicing date-time type](#slicing-date-time-type)
+  - [Rolling Window Statistics](#rolling-window-statistics)
+  - [Expanding Window Statistics](#expanding-window-statistics)
+  - [Exponentially Weighted Moving Average (EWMA)](#exponentially-weighted-moving-average-ewma)
+  - [Baseline Forecasts using darts](#baseline-forecasts-using-darts)
+    - [NaiveSeasonal](#naiveseasonal)
+    - [NaiveMean](#naivemean)
+    - [NaiveDrift](#naivedrift)
+    - [ExponentialSmoothing](#exponentialsmoothing)
+    - [AutoARIMA](#autoarima)
+    - [ARIMA (autoregressive integrated moving average)](#arima-autoregressive-integrated-moving-average)
+    - [Theta](#theta)
+    - [FFT (Fast Fourier Transform)](#fft-fast-fourier-transform)
+  - [Classical Machine Learning approaches](#classical-machine-learning-approaches)
+  - [Deep Learning approaches](#deep-learning-approaches)
+  - [Hyper parameters with Grid search](#hyper-parameters-with-grid-search)
+  - [Statsmodels](#statsmodels)
+  - [Useful packages for time series](#useful-packages-for-time-series)
+- [Reference](#reference)
 
 <!-- Added by: gil_diy, at: Wed 23 Feb 2022 13:13:15 IST -->
 
@@ -96,6 +109,25 @@ or the window can consist of four values:
 
 [Reference](https://corporatefinanceinstitute.com/resources/knowledge/trading-investing/exponentially-weighted-moving-average-ewma/)
 
+
+
+## Baseline Forecasts using darts
+### NaiveSeasonal
+### NaiveMean
+### NaiveDrift
+### ExponentialSmoothing
+### AutoARIMA
+### ARIMA (autoregressive integrated moving average)
+### Theta
+### FFT (Fast Fourier Transform)
+
+## Classical Machine Learning approaches
+
+## Deep Learning approaches
+
+## Hyper parameters with Grid search
+
+
 ## Statsmodels
 
 ```python
@@ -120,6 +152,14 @@ for t in range(test_ts.shape[0]):
 
 ## Useful packages for time series
 
+
+[Darts](https://github.com/unit8co/darts)
+
 [Merlion](https://github.com/salesforce/Merlion)
 
 [Pycaret](https://towardsdatascience.com/new-time-series-with-pycaret-4e8ce347556a)
+
+
+# Reference
+
+[Great resource](https://www.kaggle.com/competitions/amp-parkinsons-disease-progression-prediction/discussion/388550)

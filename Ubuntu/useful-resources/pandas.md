@@ -1237,7 +1237,7 @@ dfi.export(df, filename='highlight_columns.png')
 ```
 
 <p align="center""> 
-  <img width="200" src="images/pandas/highlight_rows.png" title="style_properties">
+  <img width="150" src="images/pandas/highlight_rows.png" title="style_properties">
 </p>
 
 

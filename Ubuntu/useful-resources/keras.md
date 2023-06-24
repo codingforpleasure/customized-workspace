@@ -91,3 +91,89 @@ model.add(layers.Conv2D(64, (3, 3), activation='relu'))
 ```
 I can I easily the by entering `model.summary()`, the output of every Conv2D and MaxPooling2D layer is a 3D tensor of shape (height, width, channels). The width and height dimensions tend to shrink as you go deeper in the network.
 
+
+```python
+import keras
+from keras.layers import Activation
+from keras.layers import Conv2D, BatchNormalization, Dense, Flatten, Reshape
+
+
+def get_model():
+    model = keras.models.Sequential()
+    # 64 the dimensionality of the output space (i.e. the number of output filters in the convolution
+    model.add(Conv2D(64, kernel_size=(3, 3), activation='relu', padding='same', input_shape=(9, 9, 1)))
+    model.add(BatchNormalization())
+    model.add(Conv2D(64, kernel_size=(3, 3), activation='relu', padding='same'))
+    model.add(BatchNormalization())
+    model.add(Conv2D(128, kernel_size=(1, 1), activation='relu', padding='same'))
+
+    model.add(Flatten())
+    model.add(Dense(81 * 9))
+    model.add(Reshape((-1, 9)))
+    model.add(Activation('softmax'))
+
+    return model
+
+if __name__ == '__main__':
+  model = get_model()
+  print(model.summary())
+```
+
+The output of the model's summary is:
+
+```python
+print(model.summary())
+```
+
+```
+Model: "sequential"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ conv2d (Conv2D)             (None, 9, 9, 64)          640       
+                                                                 
+ batch_normalization (BatchN  (None, 9, 9, 64)         256       
+ ormalization)                                                   
+                                                                 
+ conv2d_1 (Conv2D)           (None, 9, 9, 64)          36928     
+                                                                 
+ batch_normalization_1 (Batc  (None, 9, 9, 64)         256       
+ hNormalization)                                                 
+                                                                 
+ conv2d_2 (Conv2D)           (None, 9, 9, 128)         8320      
+                                                                 
+ flatten (Flatten)           (None, 10368)             0         
+                                                                 
+ dense (Dense)               (None, 729)               7559001   
+                                                                 
+ reshape (Reshape)           (None, 81, 9)             0         
+                                                                 
+ activation (Activation)     (None, 81, 9)             0         
+                                                                 
+=================================================================
+Total params: 7,605,401
+Trainable params: 7,605,145
+Non-trainable params: 256
+_________________________________________________________________
+```
+
+
+
+The same thing we can easily write in pytorch:
+
+```python
+    network2 = nn.Sequential(
+        nn.Conv2d(in_channels=1, out_channels=64, kernel_size=3, padding='same'),
+        nn.ReLU(),
+        nn.BatchNorm2d(64),
+        nn.Conv2d(in_channels=64, out_channels=64, kernel_size=3, padding='same'),
+        nn.ReLU(),
+        nn.Conv2d(in_channels=64, out_channels=128, kernel_size=1, padding='same'),
+        nn.ReLU(),
+        nn.Flatten(),
+        nn.Linear(in_features=9 * 9 * 128, out_features=81 * 9),
+        nn.Unflatten(1, (-1, 9)),
+        nn.Softmax()
+    )
+```
+

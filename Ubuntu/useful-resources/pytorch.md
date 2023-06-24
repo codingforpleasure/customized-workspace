@@ -90,7 +90,7 @@
     - [Install torchvision](#install-torchvision)
     - [Show all pretrained models available in pytorch vision](#show-all-pretrained-models-available-in-pytorch-vision)
     - [Finetuning Torchvision Models](#finetuning-torchvision-models)
-    - [torchsummary](#torchsummary)
+    - [torchinfo (previously torch-summary)](#torchinfo-previously-torch-summary)
     - [Display images as grid](#display-images-as-grid)
     - [Augmentations](#augmentations)
   - [Transfer learning](#transfer-learning)
@@ -1781,13 +1781,24 @@ Model | Finetune | Prerequisite
 
 [Reference](https://pytorch.org/tutorials/beginner/finetuning_torchvision_models_tutorial.html)
 
-### torchsummary
+### torchinfo (previously torch-summary)
 
-Here are three examples of using torchsummary to calculate total parameters and memory:
+```python
+from torchinfo import summary
+import torchvision
 
-<p align="center">
-  <img width="700" src="images/pytorch/pytorch_summary.png" title="Look into the image">
-</p>
+if __name__ == '__main__':
+    model = torchvision.models.resnet18().cuda()
+    batch_size = 16
+    print(summary(model, (3, 224, 224), batch_dim=0,
+                  col_names=("input_size", 
+                             "output_size",
+                             "num_params",
+                             "kernel_size",
+                             "mult_adds"),
+                             verbose=0))
+```
+
 
 ### Display images as grid
 
@@ -2091,6 +2102,7 @@ There are two type of hooks:
 
 
 ## References
+[ Debugging PyTorch Tensors easily](https://github.com/xl0/lovely-tensors)
 
 [collection of simple PyTorch implementations of neural networks and related algorithms](https://nn.labml.ai/)
 

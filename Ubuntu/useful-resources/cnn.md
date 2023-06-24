@@ -1,53 +1,53 @@
 
 <!--ts-->
-   * [CNN](#cnn)
-      * [What are the effects of the kernel?](#what-are-the-effects-of-the-kernel)
-      * [Features/Activation maps and image features](#featuresactivation-maps-and-image-features)
-      * [Designing feature maps](#designing-feature-maps)
-         * [Depth](#depth)
-         * [Stride](#stride)
-         * [Zero-Padding](#zero-padding)
-         * [Calculating our Convolution Output](#calculating-our-convolution-output)
-            * [<strong>Formula for the size of our feature maps (Square kernel)</strong>](#formula-for-the-size-of-our-feature-maps-square-kernel)
-            * [<strong>Formula for the size of our feature maps (Non Square kernel)</strong>](#formula-for-the-size-of-our-feature-maps-non-square-kernel)
-            * [Number of parameters for convolution layer](#number-of-parameters-for-convolution-layer)
-            * [Number of parameters for Dense Layer](#number-of-parameters-for-dense-layer)
-      * [ReLU the Activation layer of choice for CNNs](#relu-the-activation-layer-of-choice-for-cnns)
-      * [Pooling](#pooling)
-      * [Recap](#recap)
-      * [The Fully connected (FC) Layer (final Layer)](#the-fully-connected-fc-layer-final-layer)
-      * [Training CNNs](#training-cnns)
-      * [Basic CNN Design Rules](#basic-cnn-design-rules)
-      * [Building a CNN in Keras](#building-a-cnn-in-keras)
-         * [Loading out data](#loading-out-data)
-         * [Hot One Encoding](#hot-one-encoding)
-         * [building &amp; compiling our model](#building--compiling-our-model)
-            * [Demo](#demo)
-         * [Compile our model](#compile-our-model)
-         * [Training our classifier](#training-our-classifier)
-         * [Evaluate our Model and Generate Predictions](#evaluate-our-model-and-generate-predictions)
-         * [Plotting loss and accuracy Charts](#plotting-loss-and-accuracy-charts)
-         * [Saving and loading your model](#saving-and-loading-your-model)
-         * [Displaying your model visually](#displaying-your-model-visually)
-         * [Visualizing the effect of convolutions](#visualizing-the-effect-of-convolutions)
-      * [Data Augmentation](#data-augmentation)
-         * [Benefits of Data Augmentation](#benefits-of-data-augmentation)
-         * [Displaying our misclassified data](#displaying-our-misclassified-data)
-         * [Displaying the misclassfications](#displaying-the-misclassfications)
-      * [Types of optimizers available in Keras](#types-of-optimizers-available-in-keras)
-         * [Optimizers](#optimizers)
-            * [Stochastic Gradient Descent](#stochastic-gradient-descent)
-      * [Keras Checkpoint models and Callbacks](#keras-checkpoint-models-and-callbacks)
-         * [Creating checkpoint models](#creating-checkpoint-models)
-         * [Early stopping](#early-stopping)
-         * [Reducing Learning rate on plateau](#reducing-learning-rate-on-plateau)
-         * [Transfer learning](#transfer-learning)
-      * [Annotation tools for image segmentation and drawing bbox](#annotation-tools-for-image-segmentation-and-drawing-bbox)
-      * [Tool for finding duplicates images](#tool-for-finding-duplicates-images)
-      * [Augmentation library](#augmentation-library)
-      * [Resources](#resources)
-      * [Well known CNN Architectures](#well-known-cnn-architectures)
-      * [Videos of handwritten flowchart](#videos-of-handwritten-flowchart)
+- [CNN](#cnn)
+  - [What are the effects of the kernel?](#what-are-the-effects-of-the-kernel)
+  - [Features/Activation maps and image features](#featuresactivation-maps-and-image-features)
+  - [Designing feature maps](#designing-feature-maps)
+    - [Depth](#depth)
+    - [Stride](#stride)
+    - [Zero-Padding](#zero-padding)
+    - [Calculating our Convolution Output](#calculating-our-convolution-output)
+      - [**Formula for the size of our feature maps (Non Square kernel)**](#formula-for-the-size-of-our-feature-maps-non-square-kernel)
+      - [Number of parameters for convolution layer](#number-of-parameters-for-convolution-layer)
+      - [Number of parameters for Dense Layer](#number-of-parameters-for-dense-layer)
+  - [ReLU the Activation layer of choice for CNNs](#relu-the-activation-layer-of-choice-for-cnns)
+  - [Pooling](#pooling)
+  - [Recap](#recap)
+  - [The Fully connected (FC) Layer (final Layer)](#the-fully-connected-fc-layer-final-layer)
+  - [Training CNNs](#training-cnns)
+  - [Basic CNN Design Rules](#basic-cnn-design-rules)
+  - [Building a CNN in Keras](#building-a-cnn-in-keras)
+    - [Loading out data](#loading-out-data)
+    - [Hot One Encoding](#hot-one-encoding)
+    - [building \& compiling our model](#building--compiling-our-model)
+      - [Demo](#demo)
+    - [Compile our model](#compile-our-model)
+    - [Training our classifier](#training-our-classifier)
+    - [Evaluate our Model and Generate Predictions](#evaluate-our-model-and-generate-predictions)
+    - [Plotting loss and accuracy Charts](#plotting-loss-and-accuracy-charts)
+    - [Saving and loading your model](#saving-and-loading-your-model)
+    - [Displaying your model visually](#displaying-your-model-visually)
+    - [Visualizing the effect of convolutions](#visualizing-the-effect-of-convolutions)
+  - [Data Augmentation](#data-augmentation)
+    - [Benefits of Data Augmentation](#benefits-of-data-augmentation)
+    - [Displaying our misclassified data](#displaying-our-misclassified-data)
+    - [Displaying the misclassfications](#displaying-the-misclassfications)
+  - [Types of optimizers available in Keras](#types-of-optimizers-available-in-keras)
+    - [Optimizers](#optimizers)
+      - [Stochastic Gradient Descent](#stochastic-gradient-descent)
+  - [Keras Checkpoint models and Callbacks](#keras-checkpoint-models-and-callbacks)
+    - [Creating checkpoint models](#creating-checkpoint-models)
+    - [Early stopping](#early-stopping)
+    - [Reducing Learning rate on plateau](#reducing-learning-rate-on-plateau)
+    - [Transfer learning](#transfer-learning)
+  - [Annotation tools for image segmentation and drawing bbox](#annotation-tools-for-image-segmentation-and-drawing-bbox)
+  - [Tool for finding duplicates images](#tool-for-finding-duplicates-images)
+  - [Augmentation library](#augmentation-library)
+  - [Quickdraw download images (handwritten)](#quickdraw-download-images-handwritten)
+  - [Resources](#resources)
+  - [Well known CNN Architectures](#well-known-cnn-architectures)
+  - [Videos of handwritten flowchart](#videos-of-handwritten-flowchart)
 
 <!-- Added by: gil_diy, at: Thu 07 Apr 2022 11:21:03 IDT -->
 
@@ -63,8 +63,8 @@ we produce different maps. Applying our kernel produces scalar ourput as we just
 
 - Convolution keeps rhe spatial relationships between pixels by learning image features over the small segments we pass of the input image
 
-[Types of kernels](https://en.wikipedia.org/wiki/Kernel_(image_processing)
 
+[Types of kernels](https://en.wikipedia.org/wiki/Kernel(image_processing))
 
 
 ## Features/Activation maps and image features
@@ -91,7 +91,7 @@ patterns can be
 
 ### Depth
 
-- Depth describes the number of filters used it does not relate the image depth (2 channels) nor does it describe the number of hidden layers in our CNN.
+- Depth describes the number of filters used it does not relate the image depth (3 channels) nor does it describe the number of hidden layers in our CNN.
 
 - Each filter learns different feature maps that are activated in the presence of different image  features (edges, patterns, colors layouts)
 
@@ -121,7 +121,7 @@ patterns can be
 
 **Keras supports these types of padding:**
 
-  Valid padding, which meaas no padding
+  Valid padding, which means no padding
 
   Same padding, which means zero padding
 
@@ -139,37 +139,13 @@ I | Input Image Size
 
 To ensure our filters cover the full input image symetrically, we used the following equation to do this sanity check. Once the result of this equation is an integer, out setting are valid.
 
-`((I-K+2P))/S +1`
-
-
-**Example #1:**
-
-<p align="center"> <!-- style="width:400px;" -->
-  <img src="images/cnn/padding_1.jpg" title="tool tip here">
-</p>
-
- it perfectly fits and your pooling layer does not require any padding
-
-**Example #2:**
-
-<p align="center"> <!-- style="width:400px;" -->
-  <img src="images/cnn/padding_2.jpg" title="tool tip here">
-</p>
-
-Here you need padding since your input size is not an integer multiple of your kernel size. Therefore, you need to add padding on one side in order make it work. 
-
-#### **Formula for the size of our feature maps (Square kernel)**
-
-
-<p align="center"> <!-- style="width:400px;" -->
-  <img src="images/pytorch/cnn_output_size_square.png" title="tool tip here">
-</p>
-
 
 #### **Formula for the size of our feature maps (Non Square kernel)**
 
+Taken from pytorch documentation [Reference](https://pytorch.org/docs/stable/generated/torch.nn.Conv2d.html#torch.nn.Conv2d)
+
 <p align="center"> <!-- style="width:400px;" -->
-  <img src="images/pytorch/cnn_output_size_non_square.png" title="tool tip here">
+  <img src="images/cnn/output_after_convolution.png" title="tool tip here">
 </p>
 
 [Link](https://youtu.be/cin4YcGBh3Q?list=PLZbbT5o_s2xrfNyHZsM6ufI0iZENK9xgG)
