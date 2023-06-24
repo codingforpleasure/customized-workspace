@@ -1,0 +1,32 @@
+{
+    "window.zoomLevel": 2,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "liveServer.settings.donotVerifyTags": true,
+    "liveServer.settings.donotShowInfoMsg": true,
+    "workbench.colorTheme": "Visual Studio Light",
+    "emeraldwalk.runonsave": {
+        "commands": [
+            {
+                "match": "*.md$",
+                "isAsync": false,
+                "cmd": "git add -A",
+            },
+            {
+                "match": "*.md$",
+                "isAsync": false,
+                "cmd":"git commit -a -m \"vscode autosave\"",
+            },
+            {
+                "match": "*.md$",
+                "isAsync": false,
+                "cmd": "git push",
+            },
+            {
+                "match": "*.md$",
+                "cmd": "echo 'code was pushed' > bla"
+            }
+        ]
+    }
+}
+
+
