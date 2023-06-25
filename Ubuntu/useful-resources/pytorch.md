@@ -395,13 +395,16 @@ t.flatten(start_dim = 1) # The output would be: torch.Size([3,16])
 **Explanation:** [Link](https://youtu.be/mFAIBMbACMA?list=PLZbbT5o_s2xrfNyHZsM6ufI0iZENK9xgG)
 
 ##### unflatten 
+
 ```python
+
 input = torch.randn(2, 50)
+
+
 
 m = nn.Sequential(
 nn.Linear(50, 50),
 nn.Unflatten(1, (2, 5, 5))
-
 output = m(input)
 output.size()
 # torch.Size([2, 2, 5, 5])
