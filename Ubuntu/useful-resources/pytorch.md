@@ -396,11 +396,11 @@ t.flatten(start_dim = 1) # The output would be: torch.Size([3,16])
 
 ##### unflatten 
 
+Unflattens a tensor dim expanding it to a desired shape. For use with Sequential.
+
 ```python
 
 input = torch.randn(2, 50)
-
-
 
 m = nn.Sequential(
 nn.Linear(50, 50),
