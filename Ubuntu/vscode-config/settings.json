@@ -4,29 +4,35 @@
     "liveServer.settings.donotVerifyTags": true,
     "liveServer.settings.donotShowInfoMsg": true,
     "workbench.colorTheme": "Visual Studio Light",
-    "emeraldwalk.runonsave": {
-        "commands": [
+
+    // Please add this block for Automatic git add, commit and push.
+     "runOnSave.commands": [
+
             {
-                "match": "*.md$",
-                "isAsync": false,
-                "cmd": "git add -A",
+                "match": ".*\\.md$",
+                "command": "cd ${cwd} && git add ${fileBasename}",
+                "runIn": "terminal",
+                "async":false,
+                "runningStatusMessage": "git adding the file ${fileBasename}",
+                "finishStatusMessage": "${fileBasename} compiled"
             },
             {
-                "match": "*.md$",
-                "isAsync": false,
-                "cmd":"git commit -a -m \"vscode autosave\"",
+                "match": ".*\\.md$",
+                "command": "git commit -m 'update from vscode' ${fileBasename}",
+                "runIn": "terminal",
+                "async":false,
+                "runningStatusMessage": "git commiting with message file: ${fileBasename}",
+                "finishStatusMessage": "${fileBasename} compiled"
             },
             {
-                "match": "*.md$",
-                "isAsync": false,
-                "cmd": "git push",
-            },
-            {
-                "match": "*.md$",
-                "cmd": "echo 'code was pushed' > bla"
+                "match": ".*\\.md$",
+                "command": "git push",
+                "runIn": "terminal",
+                "async":false,
+                "runningStatusMessage": "Compiling ${fileBasename}",
+                "finishStatusMessage": "${fileBasename} compiled"
             }
         ]
     }
-}
 
 
