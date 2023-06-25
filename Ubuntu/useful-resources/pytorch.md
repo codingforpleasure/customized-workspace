@@ -409,6 +409,9 @@ output = m(input)
 output.size()
 # torch.Size([2, 2, 5, 5])
 ```
+
+[Unflatten - pytorch documentation](https://pytorch.org/docs/stable/generated/torch.nn.Unflatten.html)
+
 ##### unsqueeze
 
 Adds a dummy dimension, usually so it will look like a batch.
