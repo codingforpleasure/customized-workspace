@@ -1,29 +1,29 @@
 # sed (stream editor for filtering and transforming text)
 
 <!--ts-->
-* [sed (stream editor for filtering and transforming text)](#sed-stream-editor-for-filtering-and-transforming-text)
-   * [<strong>Selective Print</strong>](#selective-print)
-      * [Example #1: Warm-up - Print everything through sed:](#example-1-warm-up---print-everything-through-sed)
-      * [Example #2: Print specific lines (line 6 to 8):](#example-2-print-specific-lines-line-6-to-8)
-      * [Example #3: Print lines with "80/tcp" in /etc/services:](#example-3-print-lines-with-80tcp-in-etcservices)
-      * [Example #4: Print only lines with ports in a script "/tcp":](#example-4-print-only-lines-with-ports-in-a-script-tcp)
-      * [Example #5: Prints only the last line:](#example-5-prints-only-the-last-line)
-      * [<strong>Selective Delete</strong>](#selective-delete)
-      * [Deleting lines with specific criteria](#deleting-lines-with-specific-criteria)
-      * [Deleting specific lines according to their position](#deleting-specific-lines-according-to-their-position)
-      * [Example #5: Deletes a line which holds specific word like Lions:](#example-5-deletes-a-line-which-holds-specific-word-like-lions)
-      * [Example #6: Print everything through sed but delete lines 3-5 output:](#example-6-print-everything-through-sed-but-delete-lines-3-5-output)
-      * [<strong>Selective Substitute</strong>](#selective-substitute)
-      * [Example #7: Substitute a specific word with other word (like Lions with Zebras):](#example-7-substitute-a-specific-word-with-other-word-like-lions-with-zebras)
-      * [Example #8: Substitute a specific word with other word globally (like Lions with Zebras):](#example-8-substitute-a-specific-word-with-other-word-globally-like-lions-with-zebras)
-      * [Example #9: Substitute a specific word not case sensitive globally (like Lions with Zebras):](#example-9-substitute-a-specific-word-not-case-sensitive-globally-like-lions-with-zebras)
-      * [Example #10: Substitute a specific word only on lines 3-5:](#example-10-substitute-a-specific-word-only-on-lines-3-5)
-      * [Example #11: Iterate over files substitutes string foo with bar](#example-11-iterate-over-files-substitutes-string-foo-with-bar)
-      * [Example #12: Append a spcific string to each line in a file:](#example-12-append-a-spcific-string-to-each-line-in-a-file)
-      * [Example #13: Remove empty lines in a file](#example-13-remove-empty-lines-in-a-file)
-      * [Example #14: Prepend characters to the beginning of a file](#example-14-prepend-characters-to-the-beginning-of-a-file)
-      * [Example #15: replace groups with sed](#example-15-replace-groups-with-sed)
-      * [Example #16: replace text in multiple files in current directory](#example-16-replace-text-in-multiple-files-in-current-directory)
+- [sed (stream editor for filtering and transforming text)](#sed-stream-editor-for-filtering-and-transforming-text)
+  - [**Selective Print**](#selective-print)
+    - [Example #1: Warm-up - Print everything through sed:](#example-1-warm-up---print-everything-through-sed)
+    - [Example #2: Print specific lines (line 6 to 8):](#example-2-print-specific-lines-line-6-to-8)
+    - [Example #3: Print lines with "80/tcp" in /etc/services:](#example-3-print-lines-with-80tcp-in-etcservices)
+    - [Example #4: Print only lines with ports in a script "/tcp":](#example-4-print-only-lines-with-ports-in-a-script-tcp)
+    - [Example #5: Prints only the last line:](#example-5-prints-only-the-last-line)
+    - [**Selective Delete**](#selective-delete)
+    - [Deleting lines with specific criteria](#deleting-lines-with-specific-criteria)
+    - [Deleting specific lines according to their position](#deleting-specific-lines-according-to-their-position)
+    - [Example #5: Deletes a line which holds specific word like Lions:](#example-5-deletes-a-line-which-holds-specific-word-like-lions)
+    - [Example #6: Print everything through sed but delete lines 3-5 output:](#example-6-print-everything-through-sed-but-delete-lines-3-5-output)
+    - [**Selective Substitute**](#selective-substitute)
+    - [Example #7: Substitute a specific word with other word (like Lions with Zebras):](#example-7-substitute-a-specific-word-with-other-word-like-lions-with-zebras)
+    - [Example #8: Substitute a specific word with other word globally (like Lions with Zebras):](#example-8-substitute-a-specific-word-with-other-word-globally-like-lions-with-zebras)
+    - [Example #9: Substitute a specific word not case sensitive globally (like Lions with Zebras):](#example-9-substitute-a-specific-word-not-case-sensitive-globally-like-lions-with-zebras)
+    - [Example #10: Substitute a specific word only on lines 3-5:](#example-10-substitute-a-specific-word-only-on-lines-3-5)
+    - [Example #11: Iterate over files substitutes string foo with bar](#example-11-iterate-over-files-substitutes-string-foo-with-bar)
+    - [Example #12: Append a spcific string to each line in a file:](#example-12-append-a-spcific-string-to-each-line-in-a-file)
+    - [Example #13: Remove empty lines in a file](#example-13-remove-empty-lines-in-a-file)
+    - [Example #14: Prepend characters to the beginning of a file](#example-14-prepend-characters-to-the-beginning-of-a-file)
+    - [Example #15: replace groups with sed](#example-15-replace-groups-with-sed)
+    - [Example #16: replace text in multiple files in current directory](#example-16-replace-text-in-multiple-files-in-current-directory)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
 <!-- Added by: gil_diy, at: Sun 13 Nov 2022 00:30:18 IST -->
@@ -182,5 +182,11 @@ echo "eat it works" | sed -
 ### Example #16: replace text in multiple files in current directory
 
 ```bash
-ind ./ -type f -exec sed -i 's/example/assets/g' {} \;
+find ./ -type f -exec sed -i 's/example/assets/g' {} \;
+```
+
+in case we would like to replace paths you can replace the `/` of the sed to other symbol,
+i.e:
+```bash
+find . -type f -name "*.md" -exec sed -i 's#assets/images#assets/imgs/for_posts#g' {} \;
 ```
