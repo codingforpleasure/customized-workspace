@@ -185,7 +185,8 @@ echo "eat it works" | sed -
 find ./ -type f -exec sed -i 's/example/assets/g' {} \;
 ```
 
-in case we would like to replace paths you can replace the `/` of the sed to other symbol,
+in case we would like to replace paths you can replace the `/` of the sed with other symbol,
+so the sed command will be able to  distinguish between the actual pattern and the symbol of the command:
 i.e:
 ```bash
 find . -type f -name "*.md" -exec sed -i 's#assets/images#assets/imgs/for_posts#g' {} \;
