@@ -85,3 +85,11 @@ Observations/State
 
     Another approach to solving RL problems.
     Here, instead of training a policy, we train a value function that maps each state to the expected value of being in that state.
+
+
+## Gymnasium is the new version of Gym library maintained by the Farama Foundation.
+
+The Gymnasium library provides two things:
+
+* An interface that allows you to create RL environments.
+* A collection of environments (gym-control, atari, box2D...).
