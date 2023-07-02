@@ -14,6 +14,8 @@
       - [Create a numpy array from tensor](#create-a-numpy-array-from-tensor)
       - [Casting a tensor to another type](#casting-a-tensor-to-another-type)
     - [Tensor Operation types](#tensor-operation-types)
+      - [Indexing operations](#indexing-operations)
+        - [Gather](#gather)
       - [Reshape operations](#reshape-operations)
         - [squeeze](#squeeze)
         - [permute](#permute)
@@ -135,6 +137,8 @@ for example:
 `nn.Softmax` - Not callable 
 
 `F.softmax` - callable 
+
+
 
 
 ## Road map
@@ -270,6 +274,33 @@ print(tensor_float.mean(dim=0))
 ```
 
 ### Tensor Operation types
+
+#### Indexing operations
+
+##### Gather
+
+```python
+dim = 0
+input = torch.tensor([[10, 11, 12], [13, 14, 15], [16, 17, 18]])
+index = torch.tensor([[0, 1, 2], [1, 2, 0]]
+
+output = torch.gather(input, dim, index))
+# tensor([[10, 14, 18],
+#         [13, 17, 12]])
+```
+
+
+```python
+dim = 1
+input = torch.tensor([[10, 11, 12], [13, 14, 15], [16, 17, 18]])
+index = torch.tensor([[0, 1], [1, 2], [2, 0]]
+
+output = torch.gather(input, dim, index))
+# tensor([[10, 11],
+#         [14, 15],
+#         [18, 16]])
+```
+
 #### Reshape operations
 
 ##### squeeze
