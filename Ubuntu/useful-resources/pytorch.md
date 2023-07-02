@@ -301,6 +301,8 @@ output = torch.gather(input, dim, index))
 #         [18, 16]])
 ```
 
+[Great explanation](https://stackoverflow.com/a/67623659/1305700)
+
 #### Reshape operations
 
 ##### squeeze
