@@ -71,10 +71,12 @@ network.summary()
 
 
 
-## Convolutional neural networks (*convents*)
+## Convolutional neural networks (*convnets*)
 A type of deep-learning model almost universally used in comuter vision applications.
 
-**Ho does convent look like?**
+inputs with shape (batch_size, height, width, channels) 
+
+**Ho does convnet look like?**
 It's a stack of Conv2D and MaxPooling2D layers.
 
 ```python
