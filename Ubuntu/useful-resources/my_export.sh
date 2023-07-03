@@ -1,7 +1,7 @@
 #!/bin/zsh
 
 
-MD_DIRECTORY="/home/gil_diy/customized-workspace/Ubuntu/useful-resources"
+MD_DIRECTORY="$HOME/customized-workspace/Ubuntu/useful-resources"
 
 if [[ $# -eq 0 ]]; then
 	
@@ -22,11 +22,11 @@ if [[ $# -eq 0 ]]; then
 	done
 
 	# Taking care of images:
-	rm -rf /home/gil_diy/my_documentation_helper/images
-	cp -rf /home/gil_diy/customized-workspace/Ubuntu/useful-resources/images /home/gil_diy/my_documentation_helper/
+	rm -rf $HOME/my_documentation_helper/images
+	cp -rf $HOME/customized-workspace/Ubuntu/useful-resources/images /home/gil_diy/my_documentation_helper/
 
 	echo "Before fix_to_images.zsh"
-	cd /home/gil_diy/my_documentation_helper/
+	cd $HOME/my_documentation_helper/
 	zsh ./fix_to_images.zsh
 	#zsh /home/gil_diy/my_documentation_helper/fix_to_images.zsh
 
@@ -44,7 +44,7 @@ else #In case of a single file, must hold extension
 
 	cp -rf ${OUTPUT_DIR} /home/gil_diy/my_documentation_helper
 
-	zsh /home/gil_diy/my_documentation_helper/fix_to_images.zsh
+	zsh $HOME/my_documentation_helper/fix_to_images.zsh
 
 fi
 
