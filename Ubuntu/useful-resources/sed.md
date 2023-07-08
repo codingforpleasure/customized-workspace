@@ -196,5 +196,5 @@ find . -type f -name "*.md" -exec sed -i 's#assets/images#assets/imgs/for_posts#
 ### Remove CRLF line terminators in linux
 
 ```bash
-
+sed 's/\r//' log_00000.csv > log_00000_new.csv
 ```
