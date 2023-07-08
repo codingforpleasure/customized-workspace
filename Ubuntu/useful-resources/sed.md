@@ -198,3 +198,9 @@ find . -type f -name "*.md" -exec sed -i 's#assets/images#assets/imgs/for_posts#
 ```bash
 sed 's/\r//' log_00000.csv > log_00000_new.csv
 ```
+
+You can see the difference before and after using the following command:
+
+```bash
+enca -L none log_00000_new.csv
+```
