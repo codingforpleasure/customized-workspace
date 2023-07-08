@@ -24,6 +24,7 @@
     - [Example #14: Prepend characters to the beginning of a file](#example-14-prepend-characters-to-the-beginning-of-a-file)
     - [Example #15: replace groups with sed](#example-15-replace-groups-with-sed)
     - [Example #16: replace text in multiple files in current directory](#example-16-replace-text-in-multiple-files-in-current-directory)
+    - [Remove CRLF line terminators in linux](#remove-crlf-line-terminators-in-linux)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
 <!-- Added by: gil_diy, at: Sun 13 Nov 2022 00:30:18 IST -->
@@ -190,4 +191,10 @@ so the sed command will be able to  distinguish between the actual pattern and t
 i.e:
 ```bash
 find . -type f -name "*.md" -exec sed -i 's#assets/images#assets/imgs/for_posts#g' {} \;
+```
+
+### Remove CRLF line terminators in linux
+
+```bash
+
 ```
