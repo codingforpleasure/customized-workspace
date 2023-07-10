@@ -203,5 +203,8 @@ You can see the difference before and after using the following command:
 way to find file encoding is to use **enca**:
 
 ```bash
+# Before:
+enca -L none log_00000.csv 
+# After:
 enca -L none log_00000_new.csv
 ```
