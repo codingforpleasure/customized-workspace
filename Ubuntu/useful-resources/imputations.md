@@ -1,16 +1,20 @@
 <!--ts-->
-   * [Imputations](#imputations)
-      * [Categorical columns](#categorical-columns)
-         * [Mode (By frequency)](#mode-by-frequency)
-      * [Numerical columns](#numerical-columns)
-         * [Mean](#mean)
-         * [Median](#median)
-         * [Create a seperate model just for predicting the NaN values](#create-a-seperate-model-just-for-predicting-the-nan-values)
+- [Imputations](#imputations)
+  - [Categorical columns](#categorical-columns)
+    - [Mode (By frequency)](#mode-by-frequency)
+  - [Numerical columns](#numerical-columns)
+    - [Mean](#mean)
+    - [Median](#median)
+    - [Create a seperate model just for predicting the NaN values](#create-a-seperate-model-just-for-predicting-the-nan-values)
 
 <!-- Added by: gil_diy, at: Wed 26 Jan 2022 20:44:24 IST -->
 
 <!--te-->
 
+
+<p align="center"> <!-- style="width:400px;" -->
+  <img src="images/handling_missing_values.jpeg" title="tool tip here">
+</p>
 
 # Imputations
 
