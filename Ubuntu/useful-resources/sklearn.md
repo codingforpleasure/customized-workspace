@@ -152,12 +152,12 @@ df["cylinders"] = ordinal_encoder_for_cylinders.fit_transform(df["cylinders"])
 
 ##### Dumping encoding
 ```
-col_names = ['name', 'age']
-data = [['tom', 10], ['nick', 15], ['juli', 14]]
+col_names = ['private_name', 'family_name', 'age']
+data = [['tom', 'swift', 10], ['nick', 'carter', 15], ['juli', 'andrews', 14]]
 data_df = pd.DataFrame(data=data, columns=col_names)
 
 enc = OneHotEncoder(handle_unknown='error')
-enc.fit(data_df[['name']])
+enc.fit(data_df[['private_name', 'family_name']])
 joblib.dump(enc, 'encoder.joblib')
 ```
 
