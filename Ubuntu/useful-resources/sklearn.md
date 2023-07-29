@@ -9,6 +9,8 @@
         - [Using Scikit's LabelEncoder correctly across multiple programs](#using-scikits-labelencoder-correctly-across-multiple-programs)
         - [Ordinal label encoding](#ordinal-label-encoding)
       - [One-Hot Encoding](#one-hot-encoding)
+        - [Dumping encoding](#dumping-encoding)
+        - [Loading encoding](#loading-encoding)
     - [Imputation of missing values](#imputation-of-missing-values)
       - [Missing value for numeric columns](#missing-value-for-numeric-columns)
       - [Missing value for categorical columns](#missing-value-for-categorical-columns)
@@ -147,13 +149,21 @@ df["cylinders"] = ordinal_encoder_for_cylinders.fit_transform(df["cylinders"])
 
 [Link](https://www.analyticsvidhya.com/blog/2020/03/one-hot-encoding-vs-label-encoding-using-scikit-learn/)
 
-```
-from seaborn import load_dataset # For dataset
 
-df = load_dataset('penguins')
-ohe = OneHotEncoder()
-transformed = ohe.fit_transform(df[['island']])
-print(transformed.toarray())
+##### Dumping encoding
+```
+col_names = ['name', 'age']
+data = [['tom', 10], ['nick', 15], ['juli', 14]]
+
+enc = OneHotEncoder(handle_unknown='error')
+enc.fit(data)
+joblib.dump(enc, 'encoder.joblib')
+```
+
+##### Loading encoding
+
+```
+
 ```
 
 ### Imputation of missing values
