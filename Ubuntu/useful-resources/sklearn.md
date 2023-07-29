@@ -165,7 +165,7 @@ joblib.dump(enc, 'encoder.joblib')
 
 ```
 enc = joblib.load('encoder.joblib')
-
+col_names = ['private_name', 'family_name', 'age']
 data = [['tom', 'swift', 10], ['juli', 'andrews', 14]]
 data_df = pd.DataFrame(data=data, columns=col_names)
 
