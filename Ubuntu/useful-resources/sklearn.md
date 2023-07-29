@@ -154,15 +154,27 @@ df["cylinders"] = ordinal_encoder_for_cylinders.fit_transform(df["cylinders"])
 ```
 col_names = ['name', 'age']
 data = [['tom', 10], ['nick', 15], ['juli', 14]]
+data_df = pd.DataFrame(data=data, columns=col_names)
 
 enc = OneHotEncoder(handle_unknown='error')
-enc.fit(data)
+enc.fit(data_df[['name']])
 joblib.dump(enc, 'encoder.joblib')
 ```
 
 ##### Loading encoding
 
 ```
+col_names = ['name', 'age']
+data = [['tom', 10], ['juli', 14]]
+data_df = pd.DataFrame(data=data, columns=col_names)
+enc = joblib.load('encoder.joblib')
+
+enc_df = pd.DataFrame(data=enc.transform(data_df[["name"]]).toarray(),
+                        columns=enc.get_feature_names_out(["name"]),
+                        dtype=float)
+
+df = pd.concat([data_df, enc_df], axis=1)
+df.drop(["name"], axis=1, inplace=True)
 
 ```
 
