@@ -156,7 +156,6 @@ transformed = ohe.fit_transform(df[['island']])
 print(transformed.toarray())
 ```
 
-
 ### Imputation of missing values
 
 For various reasons, **many real world datasets contain missing values**, often encoded as blanks, NaNs or other placeholders. Such datasets however are incompatible with scikit-learn estimators which assume that all values in an array are numerical, and that all have and hold meaning. 
