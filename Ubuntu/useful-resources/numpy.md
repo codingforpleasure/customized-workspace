@@ -87,6 +87,8 @@
       - [qr factorization of a matrix](#qr-factorization-of-a-matrix)
     - [Distance of vectors](#distance-of-vectors)
     - [Matrix rank](#matrix-rank)
+  - [Dump label encoding](#dump-label-encoding)
+  - [Load label encoding](#load-label-encoding)
   - [NPZ files](#npz-files)
     - [Saving our datasets to NPZ files](#saving-our-datasets-to-npz-files)
   - [Exporting txt files easily with specific format](#exporting-txt-files-easily-with-specific-format)
@@ -1362,6 +1364,20 @@ r = np.linalg.matrix_rank(B)
 prink("The rank of B is: ", r)
 
 # You will get "The rank of B is: 1"
+```
+
+## Dump label encoding
+
+```
+encoder = LabelEncoder()
+encoder.fit(X)
+numpy.save('classes.npy', encoder.classes_)
+```
+
+## Load label encoding
+```
+encoder = LabelEncoder()
+encoder.classes_ = numpy.load('classes.npy')
 ```
 
 ## NPZ files
