@@ -6,7 +6,7 @@
     - [Categorical encoding](#categorical-encoding)
       - [Label encoding](#label-encoding)
         - [Not an Ordinal variable](#not-an-ordinal-variable)
-          - [Using Scikit's LabelEncoder correctly across multiple programs](#using-scikits-labelencoder-correctly-across-multiple-programs)
+        - [Using Scikit's LabelEncoder correctly across multiple programs](#using-scikits-labelencoder-correctly-across-multiple-programs)
         - [Ordinal label encoding](#ordinal-label-encoding)
       - [One-Hot Encoding](#one-hot-encoding)
     - [Imputation of missing values](#imputation-of-missing-values)
@@ -117,7 +117,8 @@ label_encoder = LabelEncoder()
 df['fuel'] = label_encoder.fit_transform(df['fuel'])
 ```
 
-###### Using Scikit's LabelEncoder correctly across multiple programs
+
+##### Using Scikit's LabelEncoder correctly across multiple programs
 
 ```
 import joblib
