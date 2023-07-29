@@ -164,24 +164,24 @@ joblib.dump(enc, 'encoder.joblib')
 ##### Loading encoding
 
 ```
-col_names = ['name', 'age']
-data = [['tom', 10], ['juli', 14]]
-data_df = pd.DataFrame(data=data, columns=col_names)
 enc = joblib.load('encoder.joblib')
 
-enc_df = pd.DataFrame(data=enc.transform(data_df[["name"]]).toarray(),
-                        columns=enc.get_feature_names_out(["name"]),
+data = [['tom', 'swift', 10], ['juli', 'andrews', 14]]
+data_df = pd.DataFrame(data=data, columns=col_names)
+
+enc_df = pd.DataFrame(data=enc.transform(data_df[['private_name', 'family_name']]).toarray(),
+                        columns=enc.get_feature_names_out(['private_name', 'family_name']),
                         dtype=float)
 
 df = pd.concat([data_df, enc_df], axis=1)
-df.drop(["name"], axis=1, inplace=True)
+df.drop(['private_name', 'family_name'], axis=1, inplace=True)
 print(df)
 ```
 Output:
 ```
-   age  name_juli  name_nick  name_tom
-0   10        0.0        0.0       1.0
-1   14        1.0        0.0       0.0
+   age  private_name_juli  private_name_nick  private_name_tom  family_name_andrews  family_name_carter  family_name_swift
+0   10                0.0                0.0               1.0                  0.0                 0.0                1.0
+1   14                1.0                0.0               0.0                  1.0                 0.0                0.0
 ```
 ### Imputation of missing values
 
