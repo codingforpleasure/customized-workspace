@@ -175,9 +175,14 @@ enc_df = pd.DataFrame(data=enc.transform(data_df[["name"]]).toarray(),
 
 df = pd.concat([data_df, enc_df], axis=1)
 df.drop(["name"], axis=1, inplace=True)
-
+print(df)
 ```
-
+Output:
+```
+   age  name_juli  name_nick  name_tom
+0   10        0.0        0.0       1.0
+1   14        1.0        0.0       0.0
+```
 ### Imputation of missing values
 
 For various reasons, **many real world datasets contain missing values**, often encoded as blanks, NaNs or other placeholders. Such datasets however are incompatible with scikit-learn estimators which assume that all values in an array are numerical, and that all have and hold meaning. 
