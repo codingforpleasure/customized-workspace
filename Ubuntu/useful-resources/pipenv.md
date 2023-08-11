@@ -1,7 +1,7 @@
 <!--ts-->
 - [pipenv (Package Manager + Environment Manager + Python Version Manager)](#pipenv-package-manager--environment-manager--python-version-manager)
   - [how to install?](#how-to-install)
-  - [Make sure the correct virtualenv is running:](#make-sure-the-correct-virtualenv-is-running)
+  - [Make sure the correct virtualenv is running from your python file:](#make-sure-the-correct-virtualenv-is-running-from-your-python-file)
   - [useful commands](#useful-commands)
   - [Create a virtual environment if one doesn’t already exist](#create-a-virtual-environment-if-one-doesnt-already-exist)
   - [Install package](#install-package)
@@ -33,11 +33,16 @@ You don't need to manage your virtual environment. it will take care for you.
 ```bash
 $ sudo pip install pipenv
 ```
-## Make sure the correct virtualenv is running:
+## Make sure the correct virtualenv is running from your python file:
+
+```
+import sys
+import os
 
 print(f'Python Executable: {sys.executable}')
 print(f'Python Version: {sys.version}')
 print(f'Virtualenv: {os.getenv("VIRTUAL_ENV")}')
+```
 
 ## useful commands
 
