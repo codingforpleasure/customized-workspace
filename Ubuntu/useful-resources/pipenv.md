@@ -1,25 +1,25 @@
 <!--ts-->
-   * [pipenv (Package Manager + Environment Manager + Python Version Manager) <g-emoji class="g-emoji" alias="+1" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f44d.png">👍</g-emoji>](#pipenv-package-manager--environment-manager--python-version-manager-thumbsup)
-      * [how to install?](#how-to-install)
-      * [useful commands](#useful-commands)
-      * [Create a virtual environment if one doesn’t already exist](#create-a-virtual-environment-if-one-doesnt-already-exist)
-      * [Install package](#install-package)
-      * [Install specific package version](#install-specific-package-version)
-      * [Install something directly from a version control system (VCS)](#install-something-directly-from-a-version-control-system-vcs)
-      * [Create/update your Pipfile.lock](#createupdate-your-pipfilelock)
-      * [Completely wipe all the installed packages from your virtual environment](#completely-wipe-all-the-installed-packages-from-your-virtual-environment)
-      * [Where your virtual environment is](#where-your-virtual-environment-is)
-      * [Find out where your project home is](#find-out-where-your-project-home-is)
-   * [Virtualenv](#virtualenv)
-      * [useful commands](#useful-commands-1)
-      * [Pip commands](#pip-commands)
-         * [Remove all packages installed by pip](#remove-all-packages-installed-by-pip)
-      * [Pip vs Anaconda](#pip-vs-anaconda)
-      * [Anaconda](#anaconda)
-      * [Pip cache folder](#pip-cache-folder)
-      * [Pipenv cache folder](#pipenv-cache-folder)
-      * [Libraries on local hard-drive:](#libraries-on-local-hard-drive)
-      * [Reference](#reference)
+- [pipenv (Package Manager + Environment Manager + Python Version Manager) :thumbsup:](#pipenv-package-manager--environment-manager--python-version-manager-thumbsup)
+  - [how to install?](#how-to-install)
+  - [useful commands](#useful-commands)
+  - [Create a virtual environment if one doesn’t already exist](#create-a-virtual-environment-if-one-doesnt-already-exist)
+  - [Install package](#install-package)
+  - [Install specific package version](#install-specific-package-version)
+  - [Install something directly from a version control system (VCS)](#install-something-directly-from-a-version-control-system-vcs)
+  - [Create/update your Pipfile.lock](#createupdate-your-pipfilelock)
+  - [Completely wipe all the installed packages from your virtual environment](#completely-wipe-all-the-installed-packages-from-your-virtual-environment)
+  - [Where your virtual environment is](#where-your-virtual-environment-is)
+  - [Find out where your project home is](#find-out-where-your-project-home-is)
+- [Virtualenv](#virtualenv)
+  - [useful commands](#useful-commands-1)
+  - [Pip commands](#pip-commands)
+    - [Remove all packages installed by pip](#remove-all-packages-installed-by-pip)
+  - [Pip vs Anaconda](#pip-vs-anaconda)
+  - [Anaconda](#anaconda)
+  - [Pip cache folder](#pip-cache-folder)
+  - [Pipenv cache folder](#pipenv-cache-folder)
+  - [Libraries on local hard-drive:](#libraries-on-local-hard-drive)
+  - [Reference](#reference)
 
 <!-- Added by: gil_diy, at: Thu 09 Jun 2022 11:34:01 IDT -->
 
@@ -40,6 +40,7 @@ Create a new virtual environment and generate a Pipfile|  **pipenv install**
 Activate the virtual environment|   **pipenv shell**
 Install a package|  **pipenv install** &lt;package-name&gt;
 Install a package from a local file|  **pipenv install ./opencv_python-4.5.whl**
+if the virtualenv is already activated, you can also use Install packages from Pipfile | **pipenv sync**
 Export requriments file | pipenv run pip freeze > requirements.txt
 Install packages in case you have only `requirements.txt` file available | **pipenv install -r path/to/requirements.txt**
 Uninstall a package|  **pipenv uninstall** &lt;package-name&gt;
