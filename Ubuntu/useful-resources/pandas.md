@@ -26,6 +26,7 @@
       - [Get categorical columns in pandas](#get-categorical-columns-in-pandas)
       - [Get column index for a given specific name](#get-column-index-for-a-given-specific-name)
       - [Dropping columns in pandas](#dropping-columns-in-pandas)
+      - [Dropping duplicate rows(identical rows)](#dropping-duplicate-rowsidentical-rows)
       - [Concatentaing columns and rows](#concatentaing-columns-and-rows)
       - [Sort columns' order by alphabetical order](#sort-columns-order-by-alphabetical-order)
       - [Shift column down or up](#shift-column-down-or-up)
@@ -336,6 +337,14 @@ df.drop('column_name',axis = 1,inplace=True)
 Axis = 1 => Column
 
 Axis = 0 => Row
+
+#### Dropping duplicate rows(identical rows)
+
+```python
+df = pd.DataFrame(data=[[1, 2, 5], [7, 7, 8], [1, 2, 5]], columns=['col1', 'col2', 'col3'])
+
+df.drop_duplicates(inplace=True)
+```
 
 #### Concatentaing columns and rows
 
