@@ -163,3 +163,10 @@ df_left_join = df_customers.join(df_orders, on="customer_id", how="left")
 print(df_left_join)
 
 ```
+
+### Outer Join
+
+```python
+df_outer_join = df_customers.join(df_orders, on="customer_id", how="outer")
+print(df_outer_join)
+```
