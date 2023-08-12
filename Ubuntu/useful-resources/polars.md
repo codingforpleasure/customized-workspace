@@ -65,6 +65,8 @@ print(df.describe())
 
 ## Select
 
+
+
 ```
 df = pl.DataFrame(
     {
@@ -75,8 +77,14 @@ df = pl.DataFrame(
     }
 )
 print(df)
+```
+
+As you can see from the query the select context is very powerful and allows you to perform arbitrary expressions independent (and in parallel) of each other. 
 
 
+select drops the original columns
+
+```
 out = df.select(
     pl.sum("nrs"),
     pl.col("names").sort(),
@@ -84,4 +92,74 @@ out = df.select(
     (pl.mean("nrs") * 10).alias("10xnrs"),
 )
 print(out)
+```
+
+## with_columns
+
+`with_columns` retains the original columns and adds new ones
+
+```python
+out2 = df.with_columns(
+    pl.sum("nrs"),
+    pl.col("names").sort(),
+    pl.col("names").first().alias("first name"),
+    (pl.mean("nrs") * 10).alias("10xnrs"),
+)
+```
+
+## filter
+
+```python
+out = df.filter(pl.col("nrs") > 2)
+print(out)
+```
+
+## groupby
+
+```python
+out = df.groupby("groups").agg(
+    pl.sum("nrs"),  # sum nrs by groups
+    pl.col("random").count().alias("count"),  # count group members
+    # sum random where name != null
+    pl.col("random").filter(pl.col("names").is_not_null()).sum().suffix("_sum"),
+    pl.col("names").reverse().alias("reversed names"),
+)
+print(out)
+```
+
+## Join
+
+### Inner Join
+```python
+df_customers = pl.DataFrame(
+    {
+        "customer_id": [1, 2, 3],
+        "name": ["Alice", "Bob", "Charlie"],
+    }
+)
+print(df_customers)
+```
+
+```python
+df_orders = pl.DataFrame(
+    {
+        "order_id": ["a", "b", "c"],
+        "customer_id": [1, 2, 2],
+        "amount": [100, 200, 300],
+    }
+)
+print(df_orders)
+```
+
+```python
+df_inner_customer_join = df_customers.join(df_orders, on="customer_id", how="inner")
+print(df_inner_customer_join)
+```
+
+### Left Join
+
+```python
+df_left_join = df_customers.join(df_orders, on="customer_id", how="left")
+print(df_left_join)
+
 ```
