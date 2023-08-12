@@ -42,8 +42,8 @@ s = pl.Series("a", [1, 2, 3, 4, 5])
 print(s)
 ```
 ### Dataframe
-```python
 
+```python
 df = pl.DataFrame(
     {
         "integer": [1, 2, 3, 4, 5],
