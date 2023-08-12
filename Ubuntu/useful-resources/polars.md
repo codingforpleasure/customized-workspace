@@ -170,3 +170,57 @@ print(df_left_join)
 df_outer_join = df_customers.join(df_orders, on="customer_id", how="outer")
 print(df_outer_join)
 ```
+
+### Concat
+
+#### Vertical concatenation - getting longer
+
+```python
+df_v1 = pl.DataFrame(
+    {
+        "a": [1],
+        "b": [3],
+    }
+)
+df_v2 = pl.DataFrame(
+    {
+        "a": [2],
+        "b": [4],
+    }
+)
+df_vertical_concat = pl.concat(
+    [
+        df_v1,
+        df_v2,
+    ],
+    how="vertical",
+)
+print(df_vertical_concat)
+
+```
+
+#### Horizontal concatenation - getting wider
+
+```python
+df_h1 = pl.DataFrame(
+    {
+        "l1": [1, 2],
+        "l2": [3, 4],
+    }
+)
+df_h2 = pl.DataFrame(
+    {
+        "r1": [5, 6],
+        "r2": [7, 8],
+        "r3": [9, 10],
+    }
+)
+df_horizontal_concat = pl.concat(
+    [
+        df_h1,
+        df_h2,
+    ],
+    how="horizontal",
+)
+print(df_horizontal_concat)
+```
