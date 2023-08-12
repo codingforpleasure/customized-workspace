@@ -1,3 +1,23 @@
+- [Polars](#polars)
+  - [Data structures](#data-structures)
+    - [Series](#series)
+    - [Dataframe](#dataframe)
+  - [Read from csv](#read-from-csv)
+  - [Sample](#sample)
+  - [Get summary statistics of a dataframe](#get-summary-statistics-of-a-dataframe)
+  - [Select](#select)
+  - [with\_columns](#with_columns)
+  - [filter](#filter)
+  - [groupby](#groupby)
+  - [Join](#join)
+    - [Inner Join](#inner-join)
+    - [Left Join](#left-join)
+    - [Outer Join](#outer-join)
+  - [Concat](#concat)
+    - [Vertical concatenation - getting longer](#vertical-concatenation---getting-longer)
+    - [Horizontal concatenation - getting wider](#horizontal-concatenation---getting-wider)
+
+
 # Polars
 
 Polars is written in Rust which gives it C/C++ performance and allows it to fully control performance critical parts in a query engine.
@@ -171,9 +191,9 @@ df_outer_join = df_customers.join(df_orders, on="customer_id", how="outer")
 print(df_outer_join)
 ```
 
-### Concat
+## Concat
 
-#### Vertical concatenation - getting longer
+### Vertical concatenation - getting longer
 
 ```python
 df_v1 = pl.DataFrame(
@@ -199,7 +219,7 @@ print(df_vertical_concat)
 
 ```
 
-#### Horizontal concatenation - getting wider
+### Horizontal concatenation - getting wider
 
 ```python
 df_h1 = pl.DataFrame(
