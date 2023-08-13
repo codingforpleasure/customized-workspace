@@ -9,6 +9,7 @@
   - [with\_columns](#with_columns)
   - [filter](#filter)
   - [groupby](#groupby)
+    - [groupby is iterable, returning the name and data of each group.](#groupby-is-iterable-returning-the-name-and-data-of-each-group)
   - [Join](#join)
     - [Inner Join](#inner-join)
     - [Left Join](#left-join)
@@ -145,6 +146,15 @@ out = df.groupby("groups").agg(
     pl.col("names").reverse().alias("reversed names"),
 )
 print(out)
+```
+
+
+###  groupby is iterable, returning the name and data of each group.
+
+```
+for name, data in df.groupby("a"):  
+    print(name)
+    print(data)
 ```
 
 ## Join
