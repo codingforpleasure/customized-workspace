@@ -238,3 +238,6 @@ You can think of it as a smoothed histogram
 sns.kdeplot(data=iris_data['Petal Length (cm)'], shade=True)
 ```
 
+## Reference
+
+https://medium.com/the-researchers-guide/generate-publication-ready-plots-using-seaborn-library-part-1-f4c9a6d0489c
