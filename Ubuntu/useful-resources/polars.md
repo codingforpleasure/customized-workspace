@@ -3,10 +3,12 @@
     - [Series](#series)
     - [Dataframe](#dataframe)
   - [Read from csv](#read-from-csv)
+  - [Casting](#casting)
   - [Sample](#sample)
   - [Get summary statistics of a dataframe](#get-summary-statistics-of-a-dataframe)
   - [Select](#select)
   - [with\_columns](#with_columns)
+  - [Handling missing values](#handling-missing-values)
   - [filter](#filter)
   - [groupby](#groupby)
     - [groupby is iterable, returning the name and data of each group.](#groupby-is-iterable-returning-the-name-and-data-of-each-group)
@@ -68,6 +70,17 @@ print(df)
 df = pl.read_csv('log_total.csv')
 ```
 
+## Casting
+
+```Python
+    out = df.select(
+        pl.col("date").str.to_datetime(),
+        pl.col("case_status"),
+        pl.col("detective_id"),
+        pl.col("case_id")
+    )
+```
+
 ## Sample
 If you want to get an impression of the data of your DataFrame, 
 you can also use sample. 
@@ -127,6 +140,14 @@ out2 = df.with_columns(
     (pl.mean("nrs") * 10).alias("10xnrs"),
 )
 ```
+
+## Handling missing values
+
+```python
+df_pd.with_column(pl.col('col2').fill_null(-999))
+```
+
+
 
 ## filter
 
