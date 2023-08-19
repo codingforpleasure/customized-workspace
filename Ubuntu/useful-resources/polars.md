@@ -13,6 +13,7 @@
   - [filter](#filter)
   - [groupby](#groupby)
     - [groupby is iterable, returning the name and data of each group.](#groupby-is-iterable-returning-the-name-and-data-of-each-group)
+  - [Histogram](#histogram)
   - [Join](#join)
     - [Inner Join](#inner-join)
     - [Left Join](#left-join)
@@ -108,8 +109,6 @@ print(df.describe())
 
 ## Select
 
-
-
 ```
 df = pl.DataFrame(
     {
@@ -185,6 +184,13 @@ print(out)
 for name, data in df.groupby("a"):  
     print(name)
     print(data)
+```
+
+## Histogram
+
+```python
+a = pl.Series("a", [1, 3, 8, 8, 2, 1, 3])
+a.hist(bin_count=4)
 ```
 
 ## Join
