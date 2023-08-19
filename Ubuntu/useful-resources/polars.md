@@ -2,6 +2,7 @@
   - [Data structures](#data-structures)
     - [Series](#series)
     - [Dataframe](#dataframe)
+  - [Polars configurations](#polars-configurations)
   - [Read from csv](#read-from-csv)
   - [Casting](#casting)
   - [Sample](#sample)
@@ -19,6 +20,7 @@
   - [Concat](#concat)
     - [Vertical concatenation - getting longer](#vertical-concatenation---getting-longer)
     - [Horizontal concatenation - getting wider](#horizontal-concatenation---getting-wider)
+  - [Get number of threads](#get-number-of-threads)
 
 
 # Polars
@@ -63,6 +65,13 @@ df = pl.DataFrame(
 
 print(df)
 ```
+
+## Polars configurations
+
+pl.Config.set_tbl_rows(n=100)
+pl.Config.set_fmt_str_lengths(300)
+pl.Config.set_tbl_cols(n=20)
+pl.Config.set_tbl_width_chars(width=150)
 
 ## Read from csv
 
@@ -274,4 +283,11 @@ df_horizontal_concat = pl.concat(
     how="horizontal",
 )
 print(df_horizontal_concat)
+```
+## Get number of threads
+
+```python
+from polars.utils.meta import threadpool_size
+
+print(f'Number of threads is: {threadpool_size():=}')
 ```
