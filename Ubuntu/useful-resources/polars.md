@@ -292,5 +292,6 @@ from polars.utils.meta import threadpool_size
 print(f'Number of threads is: {threadpool_size():=}')
 ```
 
-if you would like to modify the number of threads pass environment variable, ie:
+if you would like to modify the number of threads set the environment variable `POLARS_MAX_THREADS`, for example:
+
 `POLARS_MAX_THREADS=6`
