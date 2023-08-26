@@ -21,6 +21,7 @@
   - [Concat](#concat)
     - [Vertical concatenation - getting longer](#vertical-concatenation---getting-longer)
     - [Horizontal concatenation - getting wider](#horizontal-concatenation---getting-wider)
+  - [GEt literal value](#get-literal-value)
   - [Get number of threads](#get-number-of-threads)
 
 
@@ -290,6 +291,23 @@ df_horizontal_concat = pl.concat(
 )
 print(df_horizontal_concat)
 ```
+
+
+## GEt literal value
+
+```python
+import polars as pl
+from datetime import date, datetime
+
+print(pl.lit(1)) # 1
+print(pl.lit(5.5)) # 5.5
+print(pl.lit(None)) # null
+print(pl.lit("foo_bar")) # Utf8(foo_bar)
+print(pl.lit(date(2021, 1, 20))) # 1611100800000000.strict_cast(Datetime(Microseconds, None)).strict_cast(Date)
+print(pl.lit(datetime(2023, 3, 31, 10, 30, 45))) #1680258645000000.strict_cast(Datetime(Microseconds, None))
+
+```
+
 ## Get number of threads
 
 ```python
