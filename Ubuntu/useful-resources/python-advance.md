@@ -14,10 +14,17 @@
     - [Approach one - “Old Style” String Formatting (% Operator)](#approach-one---old-style-string-formatting--operator)
     - [Approach Two](#approach-two)
     - [Approach Three: f-Strings (Python 3.6+)](#approach-three-f-strings-python-36)
+  - [F-Strings tricks](#f-strings-tricks)
+    - [Print variable's content easily](#print-variables-content-easily)
+    - [Print float number with fixes digits after decimal point](#print-float-number-with-fixes-digits-after-decimal-point)
+    - [Print Number as binary](#print-number-as-binary)
   - [Type hints](#type-hints)
     - [Type aliases](#type-aliases)
   - [Create gridsearch easily](#create-gridsearch-easily)
-  - [try, Except](#try-except)
+  - [Try, exception](#try-exception)
+  - [Get traceback of exception](#get-traceback-of-exception)
+  - [raise exception](#raise-exception)
+  - [Not yet implemented function](#not-yet-implemented-function)
   - [Dectorators](#dectorators)
     - [Example #1: For Logging a function](#example-1-for-logging-a-function)
     - [Example #2: profiling function with Timer](#example-2-profiling-function-with-timer)
@@ -30,9 +37,6 @@
   - [Easy to use advanced collections (Datastructures)](#easy-to-use-advanced-collections-datastructures)
     - [DefaultDict](#defaultdict)
     - [Counter](#counter)
-  - [Try, exception](#try-exception)
-  - [Get traceback of exception](#get-traceback-of-exception)
-  - [raise exception](#raise-exception)
   - [Make logger colorful](#make-logger-colorful)
   - [The use of an __init__.py in a directory](#the-use-of-an-initpy-in-a-directory)
   - [Check python libraries for license constraints?](#check-python-libraries-for-license-constraints)
@@ -227,7 +231,22 @@ print('f{num:.3f}') # 3 deicmal places
 
 ```
 
+### Print Number as binary
 
+```python
+print(f'{245:b}') 
+
+# Output:
+# 11110101
+
+print(f'{64:b}') 
+
+# Output:
+# 1000000
+
+number = 13
+print(f'{number:b}')
+```
 ## Type hints
 
 [Reference](https://docs.python.org/3/library/typing.html)
