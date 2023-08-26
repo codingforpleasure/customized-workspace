@@ -21,7 +21,8 @@
   - [Concat](#concat)
     - [Vertical concatenation - getting longer](#vertical-concatenation---getting-longer)
     - [Horizontal concatenation - getting wider](#horizontal-concatenation---getting-wider)
-  - [GEt literal value](#get-literal-value)
+  - [Explode](#explode)
+  - [Get literal value](#get-literal-value)
   - [Get number of threads](#get-number-of-threads)
 
 
@@ -293,7 +294,25 @@ print(df_horizontal_concat)
 ```
 
 
-## GEt literal value
+## Explode 
+
+Explode the dataframe to long format by exploding the given columns.
+
+```python
+df = pl.DataFrame(
+
+    {
+
+        "letters": ["a", "a", "b", "c"],
+
+        "numbers": [[1], [2, 3], [4, 5], [6, 7, 8]],
+
+    }
+
+)
+```
+
+## Get literal value
 
 ```python
 import polars as pl
