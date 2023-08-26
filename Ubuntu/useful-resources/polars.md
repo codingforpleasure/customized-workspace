@@ -300,27 +300,23 @@ Explode the dataframe to long format by exploding the given columns.
 
 ```python
 df = pl.DataFrame(
-
     {
-
         "letters": ["a", "a", "b", "c"],
         "numbers": [[1], [2, 3], [4, 5], [6, 7, 8]],
-
     }
-
 )
 
-shape: (4, 2)
-┌─────────┬───────────┐
-│ letters ┆ numbers   │
-│ ---     ┆ ---       │
-│ str     ┆ list[i64] │
-╞═════════╪═══════════╡
-│ a       ┆ [1]       │
-│ a       ┆ [2, 3]    │
-│ b       ┆ [4, 5]    │
-│ c       ┆ [6, 7, 8] │
-└─────────┴───────────┘
+# shape: (4, 2)
+# ┌─────────┬───────────┐
+# │ letters ┆ numbers   │
+# │ ---     ┆ ---       │
+# │ str     ┆ list[i64] │
+# ╞═════════╪═══════════╡
+# │ a       ┆ [1]       │
+# │ a       ┆ [2, 3]    │
+# │ b       ┆ [4, 5]    │
+# │ c       ┆ [6, 7, 8] │
+# └─────────┴───────────┘
 
 df.explode("numbers")
 
