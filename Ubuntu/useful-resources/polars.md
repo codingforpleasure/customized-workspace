@@ -2,6 +2,7 @@
   - [Data structures](#data-structures)
     - [Series](#series)
     - [Dataframe](#dataframe)
+      - [Dataframe with schema](#dataframe-with-schema)
   - [Polars configurations](#polars-configurations)
   - [Read from csv](#read-from-csv)
   - [Casting](#casting)
@@ -67,6 +68,15 @@ df = pl.DataFrame(
 )
 
 print(df)
+```
+
+#### Dataframe with schema
+
+```python
+data = {"col1": [1, 5, 3, 8, 7, 9, 3, 55],
+        "col2": [3, 7, 55, 99, 240, 235, 85, 111]}
+        
+df = pl.DataFrame(data, schema={"col1": pl.Float32, "col2": pl.UInt8})
 ```
 
 ## Polars configurations
