@@ -25,6 +25,7 @@
   - [Explode](#explode)
   - [Get literal value](#get-literal-value)
   - [Get number of threads](#get-number-of-threads)
+  - [Set number of threads on dataframe](#set-number-of-threads-on-dataframe)
 
 
 # Polars
@@ -375,3 +376,10 @@ print(f'Number of threads is: {threadpool_size():=}')
 If you would like to modify the number of threads set the environment variable `POLARS_MAX_THREADS`, for example:
 
 `POLARS_MAX_THREADS=6`
+
+
+## Set number of threads on dataframe
+
+```python
+
+```
