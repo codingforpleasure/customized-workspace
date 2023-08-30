@@ -3,6 +3,7 @@
     - [Series](#series)
     - [Dataframe](#dataframe)
       - [Dataframe with schema](#dataframe-with-schema)
+      - [Rename columns](#rename-columns)
   - [Polars configurations](#polars-configurations)
   - [Read from csv](#read-from-csv)
   - [Casting](#casting)
@@ -78,6 +79,12 @@ data = {"col1": [1, 5, 3, 8, 7, 9, 3, 55],
         "col2": [3, 7, 55, 99, 240, 235, 85, 111]}
         
 df = pl.DataFrame(data, schema={"col1": pl.Float32, "col2": pl.UInt8})
+```
+
+#### Rename columns
+
+```python
+df.rename({"count": "number of rows"})
 ```
 
 ## Polars configurations
@@ -383,3 +390,4 @@ If you would like to modify the number of threads set the environment variable `
 ```python
 network_metric_df = pl.read_csv('log_total_challenge5.csv', n_threads = 10)
 ```
+
