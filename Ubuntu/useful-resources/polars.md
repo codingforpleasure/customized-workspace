@@ -14,6 +14,7 @@
   - [Handling missing values](#handling-missing-values)
   - [filter](#filter)
   - [groupby](#groupby)
+  - [groupby more advance](#groupby-more-advance)
     - [groupby is iterable, returning the name and data of each group.](#groupby-is-iterable-returning-the-name-and-data-of-each-group)
   - [Histogram](#histogram)
   - [Join](#join)
@@ -196,6 +197,22 @@ out = df.groupby("groups").agg(
 )
 print(out)
 ```
+
+## groupby more advance
+
+```python
+.groupby(by=['year','make'])
+    .agg(
+        [
+            'model',
+            pl.first('model').alias('first'),
+            pl.last('model').alias('last'),
+        ]    
+    )
+    .sort(by=['year','make'])
+```
+
+[Nice Examples](https://towardsdatascience.com/understanding-groupby-in-polars-dataframe-by-examples-1e910e4095b3)
 
 
 ###  groupby is iterable, returning the name and data of each group.
