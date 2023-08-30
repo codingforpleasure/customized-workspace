@@ -381,5 +381,5 @@ If you would like to modify the number of threads set the environment variable `
 ## Set number of threads on dataframe
 
 ```python
-
+network_metric_df = pl.read_csv('log_total_challenge5.csv', n_threads = 10)
 ```
