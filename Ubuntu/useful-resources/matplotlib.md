@@ -60,7 +60,7 @@
       - [Adding Legend to plot](#adding-legend-to-plot)
       - [Legend position](#legend-position)
       - [Legend text size](#legend-text-size)
-      - [Legend number of columns](#legend-number-of-columns)
+      - [number of columns inside the legend](#number-of-columns-inside-the-legend)
       - [Ticks text size](#ticks-text-size)
     - [Draw contour lines and filled contours](#draw-contour-lines-and-filled-contours)
   - [Writing mathematical expression](#writing-mathematical-expression)
@@ -1288,7 +1288,7 @@ center	| 10
 ax.legend(fontsize='x-large')  # 'xx-small', 'x-small', 'small', 'medium', 'large', 'x-large', 'xx-large'
 ```
 
-#### Legend number of columns
+#### number of columns inside the legend
 
 ```python
 ax.legend(ncol=3)
