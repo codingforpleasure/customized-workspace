@@ -58,7 +58,9 @@
       - [Change font](#change-font)
       - [List fonts installed on your machine which Matplotlic can use of them](#list-fonts-installed-on-your-machine-which-matplotlic-can-use-of-them)
       - [Adding Legend to plot](#adding-legend-to-plot)
+      - [Legend position](#legend-position)
       - [Legend text size](#legend-text-size)
+      - [Legend number of columns](#legend-number-of-columns)
       - [Ticks text size](#ticks-text-size)
     - [Draw contour lines and filled contours](#draw-contour-lines-and-filled-contours)
   - [Writing mathematical expression](#writing-mathematical-expression)
@@ -1263,10 +1265,33 @@ plt.legend(
 plt.show()
 ```
 
+#### Legend position
+
+Location String | Description
+------------|-----
+Best	| 0
+Upper right|	1
+Upper left	| 2
+Lower left	| 3
+Lower right	| 4
+Right	| 5
+Center left	| 6
+Center right |	7
+Lower center	| 8
+Upper center	| 9
+center	| 10
+
+
 #### Legend text size
 
 ```python
 ax.legend(fontsize='x-large')  # 'xx-small', 'x-small', 'small', 'medium', 'large', 'x-large', 'xx-large'
+```
+
+#### Legend number of columns
+
+```python
+ax.legend(ncol=3)
 ```
 
 #### Ticks text size
