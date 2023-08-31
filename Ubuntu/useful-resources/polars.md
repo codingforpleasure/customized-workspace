@@ -89,12 +89,12 @@ df.rename({"count": "number of rows"})
 ```
 
 ## Polars configurations
-
+```
 pl.Config.set_tbl_rows(n=100)
 pl.Config.set_fmt_str_lengths(300)
 pl.Config.set_tbl_cols(n=20)
 pl.Config.set_tbl_width_chars(width=150)
-
+```
 ## Read from csv
 
 ```python
