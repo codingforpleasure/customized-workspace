@@ -106,7 +106,7 @@ print(f"Number of colors in the pallete is: {plt.cm.Dark2.N}")
 Let's take 6 distinct colors from the palette named: `Dark2` 
 
 ```python
-list_of_6_distict_colors = plt.cm.Dark2(range(6))
+list_of_6_distinct_colors = plt.cm.Dark2(range(6))
 ```
 
 ### Usage of color map in seaborn
