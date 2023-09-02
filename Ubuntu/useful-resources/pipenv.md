@@ -193,7 +193,7 @@ Deactivate | **source my_env/bin/deactivate**
 Description | command
 -------------|-------------
 Create a new virtual environment and generate a Pipfile|  
-Activate the virtual environment| in the directory run `. venv/bin/activate`
+Activate the virtual environment| in the directory with venv run: `. venv/bin/activate`
 Install a package |  `pip install requests`
 Install a package from a local file | `pip install requests-2.22.0-py2.py3-none-any.whl`
 Install package from a Git repository | `pip install git+https://github.com/psf/requests.git`
