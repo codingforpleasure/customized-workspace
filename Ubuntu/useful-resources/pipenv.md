@@ -193,7 +193,7 @@ Deactivate | **source my_env/bin/deactivate**
 Description | command
 -------------|-------------
 Create a new virtual environment and generate a Pipfile|  
-Activate the virtual environment|
+Activate the virtual environment| in the directory run `. venv/bin/activate`
 Install a package |  `pip install requests`
 Install a package from a local file | `pip install requests-2.22.0-py2.py3-none-any.whl`
 Install package from a Git repository | `pip install git+https://github.com/psf/requests.git`
@@ -201,7 +201,6 @@ search for packages mentioning “term” | `pip search <term>`
 Capture all currently installed versions in a text file | `pip freeze > requirements.txt`
 Install packages from a requirements file |`pip install -r requirements.txt`
 if the virtualenv is already activated, you can also use Install packages from Pipfile | 
-Export requriments file |
 Install packages in case you have only `requirements.txt` file available | requirements.txt**
 Uninstall a package|  
 Generate a lockfile | 
