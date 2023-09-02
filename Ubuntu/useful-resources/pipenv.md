@@ -11,6 +11,7 @@
   - [Completely wipe all the installed packages from your virtual environment](#completely-wipe-all-the-installed-packages-from-your-virtual-environment)
   - [Where your virtual environment is](#where-your-virtual-environment-is)
   - [Find out where your project home is](#find-out-where-your-project-home-is)
+- [Pip](#pip)
 - [Virtualenv](#virtualenv)
   - [useful commands](#useful-commands-1)
   - [Pip commands](#pip-commands)
@@ -19,6 +20,7 @@
   - [Anaconda](#anaconda)
   - [Pip cache folder](#pip-cache-folder)
   - [Pipenv cache folder](#pipenv-cache-folder)
+  - [Pip cache folder](#pip-cache-folder-1)
   - [Libraries on local hard-drive:](#libraries-on-local-hard-drive)
   - [Reference](#reference)
 
@@ -68,7 +70,7 @@ Initialize a Python 3 virtual environment | **pipenv `--`three**
 Initialize virtual environment with specific version of python | **pipenv install `--`python 3.8**
 Print a pretty graph of all your installed dependencies | **pipenv graph**
 Upgrade pipenv | **pip install `--`upgrade pipenv**
-Install
+
 
 It will automatically create a virtual env for this project,
 and after setting things up:
@@ -141,6 +143,10 @@ pipenv --venv
 pipenv --where
 ```
 
+# Pip
+
+
+
 # Virtualenv
 
 ```bash
@@ -183,6 +189,34 @@ Deactivate | **source my_env/bin/deactivate**
 
 
 ## Pip commands 
+
+Description | command
+-------------|-------------
+Create a new virtual environment and generate a Pipfile|  
+Activate the virtual environment|
+Install a package |  `pip install requests`
+Install a package from a local file | `pip install requests-2.22.0-py2.py3-none-any.whl`
+Install package from a Git repository | `pip install git+https://github.com/psf/requests.git`
+search for packages mentioning “term” | `pip search <term>`
+Capture all currently installed versions in a text file | `pip freeze > requirements.txt`
+Install packages from a requirements file |`pip install -r requirements.txt`
+if the virtualenv is already activated, you can also use Install packages from Pipfile | 
+Export requriments file |
+Install packages in case you have only `requirements.txt` file available | requirements.txt**
+Uninstall a package|  
+Generate a lockfile | 
+If stuck on `Locking packages dependecies` |
+Run a given command from the virtualenv, with any arguments forwarded| 
+Locate the project| 
+Locate the virtualenv| 
+Locate the Python interpreter | 
+Checks if all dependencies are satisfied| 
+Initialize a Python 2 virtual environment | 
+Initialize a Python 3 virtual environment | 
+Initialize virtual environment with specific version of python | 
+Print a pretty graph of all your installed dependencies | 
+Upgrade pipenv | 
+
 
 ### Remove all packages installed by pip
 
@@ -227,6 +261,9 @@ pip3 install --no-cache-dir <package-name>
 ## Pipenv cache folder
 
 In my workstation it's: `/home/gil_diy/.cache/pipenv`
+
+## Pip cache folder
+
 
 ## Libraries on local hard-drive:
 
