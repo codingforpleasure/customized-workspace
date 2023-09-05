@@ -1,24 +1,31 @@
 # Inkscape
 
 <!--ts-->
-* [Inkscape](#inkscape)
-   * [Useful Hotkeys](#useful-hotkeys)
-      * [Operations on objects](#operations-on-objects)
-      * [Operations on path](#operations-on-path)
-      * [Setting up the relevant python interpreter for inkscape](#setting-up-the-relevant-python-interpreter-for-inkscape)
-   * [SVG processing on the command line](#svg-processing-on-the-command-line)
-      * [Export an SVG file into PNG with the default resolution of 96 dpi](#export-an-svg-file-into-png-with-the-default-resolution-of-96-dpi)
-      * [Actions](#actions)
-         * [Select all objects with ellipse tag, rotate them 30 degrees, save the file, and quit.](#select-all-objects-with-ellipse-tag-rotate-them-30-degrees-save-the-file-and-quit)
-         * [Select all objects, rescale and resize the page to selection and export](#select-all-objects-rescale-and-resize-the-page-to-selection-and-export)
-         * [Get all list of actions](#get-all-list-of-actions)
-         * [Reference](#reference)
-   * [Reference](#reference-1)
+- [Inkscape](#inkscape)
+  - [Get the outline of a complex shape](#get-the-outline-of-a-complex-shape)
+  - [Useful Hotkeys](#useful-hotkeys)
+    - [Operations on objects](#operations-on-objects)
+    - [Operations on path](#operations-on-path)
+    - [Setting up the relevant python interpreter for inkscape](#setting-up-the-relevant-python-interpreter-for-inkscape)
+  - [SVG processing on the command line](#svg-processing-on-the-command-line)
+    - [Export an SVG file into PNG with the default resolution of 96 dpi](#export-an-svg-file-into-png-with-the-default-resolution-of-96-dpi)
+    - [Actions](#actions)
+      - [Select all objects with ellipse tag, rotate them 30 degrees, save the file, and quit.](#select-all-objects-with-ellipse-tag-rotate-them-30-degrees-save-the-file-and-quit)
+      - [Select all objects, rescale and resize the page to selection and export](#select-all-objects-rescale-and-resize-the-page-to-selection-and-export)
+      - [Get all list of actions](#get-all-list-of-actions)
+      - [Reference](#reference)
+  - [Reference](#reference-1)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
 <!-- Added by: gil_diy, at: Sun 26 Feb 2023 08:58:29 AM IST -->
 
 <!--te-->
+
+## Get the outline of a complex shape
+
+Ungroup all elemnts in the complex shape (Do it couple of times until all elements are ungrouped), and then go to the menu pick: `path` and pick `Union`
+
+Reference: https://youtu.be/GjkVKpB2Gh0
 
 ## Useful Hotkeys
 
