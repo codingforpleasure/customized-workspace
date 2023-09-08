@@ -49,6 +49,7 @@
   - [Resizing animated gif's width/Height](#resizing-animated-gifs-widthheight)
   - [Make gif run once (no loops)](#make-gif-run-once-no-loops)
   - [Editing Gif](#editing-gif)
+  - [Python code for ffmpeg](#python-code-for-ffmpeg)
   - [Documentation](#documentation)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
@@ -479,6 +480,9 @@ Cropping gif screen (horizontal, Vertical) with gui
 https://github.com/lettier/gifcurry
 ```
 
+## Python code for ffmpeg
+
+See the directory in the repo: `ffmpeg-scripts`
 
 
 ## Documentation
