@@ -30,7 +30,7 @@ Default is 2.
 
 ## Filter files by their extensions
 
-Get list of extensions:
+**Get list of extensions:**
 
 ```bash
 ag --list-file-types
