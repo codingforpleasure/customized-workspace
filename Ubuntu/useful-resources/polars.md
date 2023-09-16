@@ -3,6 +3,7 @@
     - [Series](#series)
     - [Dataframe](#dataframe)
       - [Dataframe with schema](#dataframe-with-schema)
+      - [Get summary statistics of your](#get-summary-statistics-of-your)
       - [Rename columns](#rename-columns)
   - [Polars configurations](#polars-configurations)
   - [Read from csv](#read-from-csv)
@@ -80,6 +81,12 @@ data = {"col1": [1, 5, 3, 8, 7, 9, 3, 55],
         "col2": [3, 7, 55, 99, 240, 235, 85, 111]}
         
 df = pl.DataFrame(data, schema={"col1": pl.Float32, "col2": pl.UInt8})
+```
+
+#### Get summary statistics of your 
+
+```python
+print(df.describe())
 ```
 
 #### Rename columns
