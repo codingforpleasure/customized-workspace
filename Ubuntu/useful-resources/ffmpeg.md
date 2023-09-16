@@ -28,6 +28,7 @@
   - [Selected filters](#selected-filters)
     - [Audio Volume](#audio-volume)
     - [Channel remapping](#channel-remapping)
+    - [Preview before video](#preview-before-video)
     - [Crop video](#crop-video)
     - [Scaling with arithmetic \& variables:](#scaling-with-arithmetic--variables)
     - [Proportional scaling](#proportional-scaling)
@@ -276,6 +277,18 @@ The `volume=2` means the output will be higher by multiplying by 2 the volume.
 
 ### Channel remapping
 
+
+### Preview before video
+
+```bash
+ffplay -vf crop=1280:720:0:0 output_all.gif
+
+# 1200 = Width
+# 720 = hight
+# top = 0
+# left = 0
+```
+
 ### Crop video
 
 ```bash
@@ -285,6 +298,9 @@ ffmpeg -i in.mp4 -filter:v "crop=w=<width>:h=<height>:x=<x top left corner>:y=<y
 [Link](https://www.linuxuprising.com/2020/01/ffmpeg-how-to-crop-videos-with-examples.html)
 
 [video link](https://youtu.be/MPV7JXTWPWI?t=589)
+
+
+
 
 ### Scaling with arithmetic & variables:
 ```bash
