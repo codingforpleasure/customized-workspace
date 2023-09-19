@@ -1,5 +1,12 @@
 # librosa
 
+- [librosa](#librosa)
+  - [Downsmapling](#downsmapling)
+  - [Trim](#trim)
+  - [Get length in seconds](#get-length-in-seconds)
+  - [Split Audio file](#split-audio-file)
+
+
 ## Downsmapling
 ```python
 import librosa
@@ -20,6 +27,12 @@ librosa.output.write_wav('file_trim_5s.wav', y, sr)
 
 ## Get length in seconds
 ```python
-    # duration_in_seconds = librosa.get_duration(path='/home/gil/music.wav')
-    # print(f'Duration in seconds: {duration_in_seconds} seconds')
+duration_in_seconds = librosa.get_duration(path='/home/gil/music.wav')
+print(f'Duration in seconds: {duration_in_seconds} seconds')
+```
+
+## Split Audio file
+
+```python
+
 ```
