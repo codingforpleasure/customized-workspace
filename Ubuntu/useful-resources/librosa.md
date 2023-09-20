@@ -34,5 +34,12 @@ print(f'Duration in seconds: {duration_in_seconds} seconds')
 ## Split Audio file
 
 ```python
-
+    x, sr = librosa.load('/home/gil/downloads/words.wav')
+    # print(x.shape, sr)
+    sections = librosa.effects.split(x)
+    dir_output = '/home/gil/downloads/collection_of_words'
+    for idx, section in enumerate(sections):
+        out_filename = f'audio_{idx}.wav'
+        full_path = os.path.join(dir_output, out_filename)
+        sf.write(full_path, x[section[0]:section[1]], sr)
 ```
