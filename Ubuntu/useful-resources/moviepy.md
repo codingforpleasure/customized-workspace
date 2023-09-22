@@ -42,7 +42,7 @@ text = TextClip(txt="This is my text example",
     .set_start(t = 2)
 ```
 
-## Stiching two clips one next to the other
+## Stitching two clips one next to the other
 
 ```python
 c = VideoFileClip('/home/gil/PycharmProjects/whisperX_exploration/videos/Oddly_Satisfying_Video.mp4')
