@@ -18,7 +18,8 @@ c = VideoClip('/home/gil/Desktop/my_clip.mp4').subclip(10,20)
 ```python
 from moviepy.editor import *
 c = VideoClip('/home/gil/Desktop/my_clip.mp4'.subclip(10,20)
-c.write_videofile(filename='output.mp4')
+
+c.write_videofile(filename='output.mp4') # Exporting here
 ```
 
 ## Put some text on a clip
