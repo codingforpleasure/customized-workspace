@@ -23,14 +23,12 @@ c.write_videofile(filename='output.mp4') # Exporting here
 ```
 
 ## Put some text on a clip
+
 ```python
 text = TextClip("This is may text example", fontsize = 10, color = 'red').set_position(('left','top')).set_duration(10)
 
 final = CompositeVideoClip((c,text))
 ```
-
-
-
 
 ## Stiching two clips one next to the other
 
