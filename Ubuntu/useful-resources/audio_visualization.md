@@ -1,4 +1,4 @@
-# Audio Visualization
+# Audio wave Visualization
 
 ## Astrofox
 
