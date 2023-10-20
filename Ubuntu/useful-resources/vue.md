@@ -59,10 +59,22 @@ const app = Vue.createApp({
 
 ### Attribute binding
 
+```js
+const app = Vue.createApp({
+    data(){
+        return {
+            product:'Socks',
+            image: './assets/images/socks_green.jpg'
+        }
+    }
+})
+```
+
+
 ```html
 <img v-bind:src="image">
 ```
-The attribute is the `src` and the expression is `image`
+The attribute is the `src` and the value of the expression is `image`.
 
 
 ## Creating project from start
