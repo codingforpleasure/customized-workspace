@@ -9,6 +9,7 @@
     - [Example 2 (v-show)](#example-2-v-show)
     - [Example 3](#example-3)
   - [List rendering](#list-rendering)
+    - [](#)
   - [Creating project from start](#creating-project-from-start)
 
 
@@ -178,7 +179,18 @@ const app = Vue.createApp({
 
 ## List rendering
 
+A simple for loop
+
 ```js
+const app = Vue.createApp({
+    data(){
+        return {
+            product:'Socks',
+            image: './assets/images/socks_green.jpg',
+            details: ['50% cotton', '30% wool', '20% polyester']
+        }
+    }
+})
 ```
 
 ```html
@@ -187,6 +199,28 @@ const app = Vue.createApp({
 </ul>
 ```
 
+
+### 
+
+```js
+const app = Vue.createApp({
+    data(){
+        return {
+            product:'Socks',
+            image: './assets/images/socks_green.jpg',
+            details: ['50% cotton', '30% wool', '20% polyester']
+            variants: [
+                {id:2234, color:'green'},
+                {id:2235, color:'blue'}
+            ]
+        }
+    }
+})
+```
+
+```html
+<div v-for="variant in variants" :key="variant.id">{{ variant.color }}</div>
+```
 ## Creating project from start
 
 ```
