@@ -11,7 +11,7 @@
     - [Example 3](#example-3)
   - [List rendering](#list-rendering)
     - [Key Attribute: An essential for list items](#key-attribute-an-essential-for-list-items)
-  - [Event Handling](#event-handling)
+  - [Event Handling (v-on:click)](#event-handling-v-onclick)
   - [Creating project from start](#creating-project-from-start)
 
 
@@ -233,7 +233,7 @@ const app = Vue.createApp({
 ```
 
 
-## Event Handling
+## Event Handling (v-on:click)
 
 How do we listen to events on an element?
 
@@ -247,7 +247,7 @@ const app = Vue.createApp({
     }
     methods:{
         addToCart(){
-            this.cart +=1
+            this.cart +=1 
         }
     }
 })
