@@ -2,8 +2,8 @@
 - [Vuejs- Vuejs](#vuejs--vuejs)
   - [Course 1 - Intro to Vue 3](#course-1---intro-to-vue-3)
     - [Creating Vue app](#creating-vue-app)
-  - [V-directives](#v-directives)
-    - [Attribute binding](#attribute-binding)
+- [V-directives](#v-directives)
+  - [Attribute binding](#attribute-binding)
     - [v-bind: shorthand](#v-bind-shorthand)
   - [Conditional rendering](#conditional-rendering)
     - [Example 1 (v-if, v-else)](#example-1-v-if-v-else)
@@ -11,7 +11,7 @@
     - [Example 3](#example-3)
   - [List rendering](#list-rendering)
     - [Key Attribute: An essential for list items](#key-attribute-an-essential-for-list-items)
-    - [Event Handling](#event-handling)
+  - [Event Handling](#event-handling)
   - [Creating project from start](#creating-project-from-start)
 
 
@@ -66,9 +66,9 @@ const app = Vue.createApp({
 </html>
 ```
 
-## V-directives
+# V-directives
 
-### Attribute binding
+## Attribute binding
 
 ```js
 const app = Vue.createApp({
@@ -233,7 +233,7 @@ const app = Vue.createApp({
 ```
 
 
-### Event Handling
+## Event Handling
 
 ```js
 
