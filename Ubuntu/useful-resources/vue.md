@@ -70,6 +70,7 @@ const app = Vue.createApp({
 })
 ```
 
+Using **v-bind** it will dinamically bind an attribute to an expression
 
 ```html
 <img v-bind:src="image">
