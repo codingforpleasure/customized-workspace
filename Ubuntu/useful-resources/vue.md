@@ -156,6 +156,7 @@ const app = Vue.createApp({
         }
     }
 })
+```
 
 
 ```html
