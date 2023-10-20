@@ -9,7 +9,7 @@
     - [Example 2 (v-show)](#example-2-v-show)
     - [Example 3](#example-3)
   - [List rendering](#list-rendering)
-    - [](#)
+    - [Key Attribute: An essential for list items](#key-attribute-an-essential-for-list-items)
   - [Creating project from start](#creating-project-from-start)
 
 
@@ -200,7 +200,9 @@ const app = Vue.createApp({
 ```
 
 
-### 
+### Key Attribute: An essential for list items
+
+By saying :key="variant.id", we’re using the shorthand for v-bind to bind the variant’s id to the key attribute. This gives each DOM element a unique key so that Vue can grasp onto the element and not lose track of it as things update within the app.
 
 ```js
 const app = Vue.createApp({
