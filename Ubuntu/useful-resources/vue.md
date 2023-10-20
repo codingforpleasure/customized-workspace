@@ -152,7 +152,6 @@ const app = Vue.createApp({
             product:'Socks',
             image: './assets/images/socks_green.jpg',
             inventory: 10
-
         }
     }
 })
