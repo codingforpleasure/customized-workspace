@@ -20,6 +20,35 @@ const app = Vue.createApp({
 })
 ```
 
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Vue Mastery</title>
+    <!-- Import Styles -->
+    <link rel="stylesheet" href="./assets/styles.css" />
+    <!-- Import Vue.js -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  </head>
+  <body>
+
+    <!--I'm accesing the fields after I have mounted the Vue app-->
+    <div id="app">
+      <h1>{{ product }}  </h1>
+    </div>
+    <!-- Import app -->
+    <script src="./main.js"></script>
+    
+    <!-- Mounting the app (Here is the secret souce)-->
+    <script>
+      const mountedApp = app.mount('#app')
+    </script>
+
+  </body>
+</html>
+```
+
 
 ## Creating project from start
 
