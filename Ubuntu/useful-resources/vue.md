@@ -8,6 +8,7 @@
     - [Example 1 (v-if, v-else)](#example-1-v-if-v-else)
     - [Example 2 (v-show)](#example-2-v-show)
     - [Example 3](#example-3)
+  - [List rendering](#list-rendering)
   - [Creating project from start](#creating-project-from-start)
 
 
@@ -174,6 +175,17 @@ const app = Vue.createApp({
 <p v-else-if="inventory <= 10 && inventory > 0">Almost sold out!</p>
 <p v-else>Out of Stock</p>
 ``` 
+
+## List rendering
+
+```js
+```
+
+```html
+<ul>
+    <li v-for="detail in details">{{ detail }}</li>
+</ul>
+```
 
 ## Creating project from start
 
