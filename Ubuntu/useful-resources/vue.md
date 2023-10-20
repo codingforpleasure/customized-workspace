@@ -2,6 +2,7 @@
 - [Vuejs- Vuejs](#vuejs--vuejs)
   - [Course 1 - Intro to Vue 3](#course-1---intro-to-vue-3)
     - [Creating Vue app](#creating-vue-app)
+  - [V-directives](#v-directives)
     - [Attribute binding](#attribute-binding)
     - [v-bind: shorthand](#v-bind-shorthand)
   - [Conditional rendering](#conditional-rendering)
@@ -10,6 +11,7 @@
     - [Example 3](#example-3)
   - [List rendering](#list-rendering)
     - [Key Attribute: An essential for list items](#key-attribute-an-essential-for-list-items)
+    - [Event Handling](#event-handling)
   - [Creating project from start](#creating-project-from-start)
 
 
@@ -63,6 +65,8 @@ const app = Vue.createApp({
   </body>
 </html>
 ```
+
+## V-directives
 
 ### Attribute binding
 
@@ -211,6 +215,7 @@ const app = Vue.createApp({
             product:'Socks',
             image: './assets/images/socks_green.jpg',
             details: ['50% cotton', '30% wool', '20% polyester']
+            sizes: ['S', 'M', 'L', 'XL'],
             variants: [
                 {id:2234, color:'green'},
                 {id:2235, color:'blue'}
@@ -222,7 +227,18 @@ const app = Vue.createApp({
 
 ```html
 <div v-for="variant in variants" :key="variant.id">{{ variant.color }}</div>
+<ul>
+    <li v-for="(size, index) in sizes" :key="index">{{ size }}</li>
+</ul>
 ```
+
+
+### Event Handling
+
+```js
+
+```
+
 ## Creating project from start
 
 ```
