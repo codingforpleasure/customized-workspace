@@ -3,6 +3,7 @@
   - [Course 1 - Intro to Vue 3](#course-1---intro-to-vue-3)
     - [Creating Vue app](#creating-vue-app)
     - [Attribute binding](#attribute-binding)
+    - [v-bind: shorthand](#v-bind-shorthand)
   - [Creating project from start](#creating-project-from-start)
 
 
@@ -115,6 +116,18 @@ The attribute is the `src` and the value of the expression is `image`.
     </script>
   </body>
 </html>
+```
+
+
+### v-bind: shorthand
+
+```
+<img :src="image">
+<img :alt="description">
+<a :href="url">
+<div :class="isActive">
+<span :style="isActive">
+<span :disabled="isDisabled">
 ```
 
 ## Creating project from start
