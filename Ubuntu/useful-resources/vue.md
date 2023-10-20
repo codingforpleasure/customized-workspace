@@ -1,4 +1,10 @@
-# Vuejs
+# Vuejs- [Vuejs](#vuejs)
+- [Vuejs- Vuejs](#vuejs--vuejs)
+  - [Course 1 - Intro to Vue 3](#course-1---intro-to-vue-3)
+    - [Creating Vue app](#creating-vue-app)
+    - [Attribute binding](#attribute-binding)
+  - [Creating project from start](#creating-project-from-start)
+
 
 ## Course 1 - Intro to Vue 3
 
@@ -50,6 +56,13 @@ const app = Vue.createApp({
   </body>
 </html>
 ```
+
+### Attribute binding
+
+```html
+<img v-bind:src="image">
+```
+The attribute is the `src` and the expression is `image`
 
 
 ## Creating project from start
