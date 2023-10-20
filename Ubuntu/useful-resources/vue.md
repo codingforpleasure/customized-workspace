@@ -235,8 +235,26 @@ const app = Vue.createApp({
 
 ## Event Handling
 
-```js
+How do we listen to events on an element?
 
+```js
+const app = Vue.createApp({
+    data() {
+        return {
+            cart:0,
+            product: 'Socks',
+            image: './assets/images/socks_blue.jpg'
+    }
+    methods:{
+        addToCart(){
+            this.cart +=1
+        }
+    }
+})
+```
+
+```html
+<button class="button" v-on:click="addToCart"></button>
 ```
 
 ## Creating project from start
