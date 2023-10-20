@@ -37,7 +37,9 @@ const app = Vue.createApp({
     <div id="app">
       <h1>{{ product }}  </h1>
     </div>
+    
     <!-- Import app -->
+
     <script src="./main.js"></script>
     
     <!-- Mounting the app (Here is the secret souce)-->
