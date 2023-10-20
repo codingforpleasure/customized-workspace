@@ -5,8 +5,9 @@
     - [Attribute binding](#attribute-binding)
     - [v-bind: shorthand](#v-bind-shorthand)
   - [Conditional rendering](#conditional-rendering)
-    - [Example 1](#example-1)
-    - [Example 2](#example-2)
+    - [Example 1 (v-if, v-else)](#example-1-v-if-v-else)
+    - [Example 2 (v-show)](#example-2-v-show)
+    - [Example 3](#example-3)
   - [Creating project from start](#creating-project-from-start)
 
 
@@ -136,14 +137,24 @@ The attribute is the `src` and the value of the expression is `image`.
 
 ## Conditional rendering
 
-### Example 1
+### Example 1 (v-if, v-else)
 
 ```
 <p v-if="inStock">In Stock</p>
 <p v-else>Out of Stock</p>
 ```
+### Example 2 (v-show)
 
-### Example 2
+
+The **v-show** directive is used for toggling an element’s visibility instead of adding and removing the element from the DOM entirely, like v-if does.
+
+```
+<p v-show="inStock">In Stock</p>
+```
+We can verify this by setting inStock to false and viewing the element in the browser’s Developer Tools.
+When v-show is used, we can see that the element is still present in the DOM, but **it’s now hidden** with an inline style of display: none; added to it.
+
+### Example 3
 
 ```js
 const app = Vue.createApp({
