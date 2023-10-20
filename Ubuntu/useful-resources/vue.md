@@ -4,6 +4,9 @@
     - [Creating Vue app](#creating-vue-app)
     - [Attribute binding](#attribute-binding)
     - [v-bind: shorthand](#v-bind-shorthand)
+  - [Conditional rendering](#conditional-rendering)
+    - [Example 1](#example-1)
+    - [Example 2](#example-2)
   - [Creating project from start](#creating-project-from-start)
 
 
@@ -129,6 +132,23 @@ The attribute is the `src` and the value of the expression is `image`.
 <span :style="isActive">
 <span :disabled="isDisabled">
 ```
+
+
+## Conditional rendering
+
+### Example 1
+
+```
+<p v-if="inStock">In Stock</p>
+<p v-else>Out of Stock</p>
+```
+
+### Example 2
+
+<p v-if="inventory > 10">In Stock</p>
+<p v-else-if="inventory <= 10 && inventory > 0">Almost sold out!</p>
+<p v-else>Out of Stock</p>
+
 
 ## Creating project from start
 
