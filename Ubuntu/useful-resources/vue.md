@@ -145,10 +145,24 @@ The attribute is the `src` and the value of the expression is `image`.
 
 ### Example 2
 
+```js
+const app = Vue.createApp({
+    data(){
+        return {
+            product:'Socks',
+            image: './assets/images/socks_green.jpg',
+            inventory: 10
+
+        }
+    }
+})
+
+
+```html
 <p v-if="inventory > 10">In Stock</p>
 <p v-else-if="inventory <= 10 && inventory > 0">Almost sold out!</p>
 <p v-else>Out of Stock</p>
-
+``` 
 
 ## Creating project from start
 
