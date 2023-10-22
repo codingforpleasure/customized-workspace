@@ -22,6 +22,7 @@
     - [Inner Join](#inner-join)
     - [Left Join](#left-join)
     - [Outer Join](#outer-join)
+    - [Anti Join](#anti-join)
   - [Concat](#concat)
     - [Vertical concatenation - getting longer](#vertical-concatenation---getting-longer)
     - [Horizontal concatenation - getting wider](#horizontal-concatenation---getting-wider)
@@ -279,6 +280,66 @@ print(df_left_join)
 ```python
 df_outer_join = df_customers.join(df_orders, on="customer_id", how="outer")
 print(df_outer_join)
+```
+
+### Anti Join
+
+```python
+import polars as pl
+if __name__ == '__main__':
+    df_customers = pl.DataFrame(
+        {
+            "customer_id": [1, 2, 3],
+            "name": ["Alice", "Bob", "Charlie"],
+        }
+    )
+    print(df_customers)
+
+    df_orders = pl.DataFrame(
+        {
+            "order_id": ["a", "b", "c"],
+            "customer_id": [1, 2, 2],
+            "amount": [100, 200, 300],
+        }
+    )
+    print(df_orders)
+
+    df_inner_customer_join = df_customers.join(df_orders, on="customer_id", how="anti")
+    print(df_inner_customer_join)
+```
+
+```
+shape: (3, 2)
+┌─────────────┬─────────┐
+│ customer_id ┆ name    │
+│ ---         ┆ ---     │
+│ i64         ┆ str     │
+╞═════════════╪═════════╡
+│ 1           ┆ Alice   │
+│ 2           ┆ Bob     │
+│ 3           ┆ Charlie │
+└─────────────┴─────────┘
+shape: (3, 3)
+┌──────────┬─────────────┬────────┐
+│ order_id ┆ customer_id ┆ amount │
+│ ---      ┆ ---         ┆ ---    │
+│ str      ┆ i64         ┆ i64    │
+╞══════════╪═════════════╪════════╡
+│ a        ┆ 1           ┆ 100    │
+│ b        ┆ 2           ┆ 200    │
+│ c        ┆ 2           ┆ 300    │
+└──────────┴─────────────┴────────┘
+shape: (1, 2)
+┌─────────────┬─────────┐
+│ customer_id ┆ name    │
+│ ---         ┆ ---     │
+│ i64         ┆ str     │
+╞═════════════╪═════════╡
+│ 3           ┆ Charlie │
+└─────────────┴─────────┘
+
+Process finished with exit code 0
+
 ```
 
 ## Concat
