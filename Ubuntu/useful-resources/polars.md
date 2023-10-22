@@ -22,7 +22,7 @@
     - [Inner Join](#inner-join)
     - [Left Join](#left-join)
     - [Outer Join](#outer-join)
-    - [Anti Join](#anti-join)
+    - [anti Join - The differece between one table to another](#anti-join---the-differece-between-one-table-to-another)
   - [Concat](#concat)
     - [Vertical concatenation - getting longer](#vertical-concatenation---getting-longer)
     - [Horizontal concatenation - getting wider](#horizontal-concatenation---getting-wider)
@@ -282,7 +282,7 @@ df_outer_join = df_customers.join(df_orders, on="customer_id", how="outer")
 print(df_outer_join)
 ```
 
-### Anti Join
+### anti Join - The differece between one table to another
 
 ```python
 import polars as pl
