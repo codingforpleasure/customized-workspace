@@ -257,6 +257,14 @@ const app = Vue.createApp({
 <button class="button" v-on:click="addToCart"></button>
 ```
 
+## Class & Style Binding
+
+```js
+```
+
+``` html
+```
+
 ## Creating project from start
 
 ```
