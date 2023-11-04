@@ -75,31 +75,31 @@ The docker-compose.yml file is used to define an application's services and incl
 ### pull/create and start container
 Create and start containers, if the containers are not reside locally the images will be pulled from the web:
 ```bash
-docker-compose up
+docker compose up
 ```
 
 ### Bring down the app
 Bring down the app
 ```bash
-docker-compose down
+docker compose down
 ```
 
 ### Get which apps are running
 
 To see the status of each container and the actual ports:
 ```bash
-docker-compose ps
+docker compose ps
 ```
 
 ###  list all services
 ```bash
-docker-compose config --services
+docker compose config --services
 ```
 ###  View logs
 
 To view logs (from a node app), just run:
 ```bash
-docker-compose logs -f <service-name>
+docker compose logs -f <service-name>
 ```
 
 ### Creating block diagrams from docker-compose.yml
