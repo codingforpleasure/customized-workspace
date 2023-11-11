@@ -306,6 +306,9 @@ if __name__ == '__main__':
     plt.bar(courses, values, color='lightblue',
             width=0.4)
 
+    # If you would like different color for bar
+    # color=['#03045e', '#0077b6', '#00b4d8','#90e0ef' ]
+
     plt.xlabel("Courses offered")
     plt.ylabel("No. of students enrolled")
     plt.title("Students enrolled in different courses")
