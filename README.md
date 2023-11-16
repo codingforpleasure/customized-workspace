@@ -9,6 +9,7 @@ These instructions will get you a copy of the project up and running on your loc
 ### Prerequisites
 
 The things you need to install are:
+- Limit Time you spend on Computer (Timekpr-nExT) - [Link](https://www.baeldung.com/linux/limit-user-computer-time)
 - Clipboard manager with advanced features for Linux - [Link](https://github.com/hluk/CopyQ)
 - Solaar -  Linux manager for many Logitech keyboards, mice, and trackpads that connect wirelessly
             [Link](https://github.com/pwr-Solaar/Solaar)
