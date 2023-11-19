@@ -556,7 +556,39 @@ print(counter)
 
 ```
 
+## Enum in python
 
+
+```python
+from enum import Enum,auto
+class Color(Enum):
+    RED = 1
+    GREEN = 2
+    BLUE = 3
+    PINK = auto()
+    ORANGE = auto()
+
+
+if __name__ == '__main__':
+    print(Color.BLUE)
+    print(f'{Color.BLUE.name} -> {Color.BLUE.value}')
+    print(f'{Color.PINK.name} -> {Color.PINK.value}')
+    print(f'{Color.ORANGE.name} -> {Color.ORANGE.value}')
+    print(repr(Color.RED))  # Output: <Color.RED: 1>
+    print(str(Color.RED))  # Output: Color.RED
+
+```
+
+Output:
+
+```
+Color.BLUE
+BLUE -> 3
+PINK -> 4
+ORANGE -> 5
+<Color.RED: 1>
+Color.RED
+```
 
 ## Make logger colorful
 
@@ -619,6 +651,9 @@ if __name__ == '__main__':
 ## The use of an __init__.py in a directory
 
 [Link](https://www.youtube.com/watch?v=cONc0NcKE7s)
+
+
+
 
 
 ## Check python libraries for license constraints?
