@@ -64,6 +64,7 @@ Run a given command from the virtualenv, with any arguments forwarded|   **pipen
 Locate the project| **pipenv `--`where**
 Locate the virtualenv| **pipenv `--`venv**
 Locate the Python interpreter | **pipenv `--`py**
+Given Pipfile install all requirements in directory | **pipenv sync**
 Checks if all dependencies are satisfied| **pipenv check**
 Initialize a Python 2 virtual environment | **pipenv `--`two**
 Initialize a Python 3 virtual environment | **pipenv `--`three**
