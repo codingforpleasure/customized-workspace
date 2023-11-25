@@ -16,3 +16,8 @@ sudo ./aws/install
 ```bash
 sudo ./aws/install --bin-dir /usr/local/bin --install-dir /usr/local/aws-cli --update
 ```
+
+
+## File transfer easily from local to remote ec2 using Filezila
+
+https://angus.readthedocs.io/en/2014/amazon/transfer-files-between-instance.html
