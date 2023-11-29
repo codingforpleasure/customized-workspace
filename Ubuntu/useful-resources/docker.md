@@ -1,32 +1,34 @@
 <!--ts-->
-   * [Docker](#docker)
-      * [Docker-compose](#docker-compose)
-      * [Docker](#docker-1)
-         * [Docker list all images](#docker-list-all-images)
-         * [Remove docker image which resides on your harddrive:](#remove-docker-image-which-resides-on-your-harddrive)
-         * [Removing docker images and make sure all containers are down](#removing-docker-images-and-make-sure-all-containers-are-down)
-         * [Search for images in docker hub](#search-for-images-in-docker-hub)
-         * [Pull an image from docker hub](#pull-an-image-from-docker-hub)
-         * [Start container/s](#start-containers)
-         * [Show which containers are running](#show-which-containers-are-running)
-         * [Stop running containers](#stop-running-containers)
-         * [Restart a container](#restart-a-container)
-         * [Connect to a running container](#connect-to-a-running-container)
-         * [Running a command in the contianer from outside](#running-a-command-in-the-contianer-from-outside)
-         * [Start a container from an image and run a command in it](#start-a-container-from-an-image-and-run-a-command-in-it)
-            * [Mount a directory in host into a docker container](#mount-a-directory-in-host-into-a-docker-container)
-         * [Remove a container](#remove-a-container)
-         * [Kill a container](#kill-a-container)
-         * [Copying files from container to host and vice versa](#copying-files-from-container-to-host-and-vice-versa)
-         * [Connecting to a service](#connecting-to-a-service)
-      * [Inside a docker image](#inside-a-docker-image)
-         * [Inspect the image](#inspect-the-image)
-         * [Inspecting a Dockerfile](#inspecting-a-dockerfile)
-         * [Build the image](#build-the-image)
-      * [Copying files from container to host and vice versa](#copying-files-from-container-to-host-and-vice-versa-1)
-      * [Mapping](#mapping)
-         * [Mapping ports](#mapping-ports)
-         * [Mapping volumes](#mapping-volumes)
+- [Docker](#docker)
+  - [Docker-compose](#docker-compose)
+  - [Docker](#docker-1)
+    - [Docker list all images](#docker-list-all-images)
+    - [](#)
+    - [Remove docker image which resides on your harddrive:](#remove-docker-image-which-resides-on-your-harddrive)
+    - [Removing docker images and make sure all containers are down](#removing-docker-images-and-make-sure-all-containers-are-down)
+    - [Search for images in docker hub](#search-for-images-in-docker-hub)
+    - [Pull an image from docker hub](#pull-an-image-from-docker-hub)
+    - [Print the IDs of all containers that have exited](#print-the-ids-of-all-containers-that-have-exited)
+    - [Start container/s](#start-containers)
+    - [Show which containers are running](#show-which-containers-are-running)
+    - [Stop running containers](#stop-running-containers)
+    - [Restart a container](#restart-a-container)
+    - [Connect to a running container](#connect-to-a-running-container)
+    - [Running a command in the contianer from outside](#running-a-command-in-the-contianer-from-outside)
+    - [Start a container from an image and run a command in it](#start-a-container-from-an-image-and-run-a-command-in-it)
+      - [Mount a directory in host into a docker container](#mount-a-directory-in-host-into-a-docker-container)
+    - [Remove a container](#remove-a-container)
+    - [Kill a container](#kill-a-container)
+    - [Copying files from container to host and vice versa](#copying-files-from-container-to-host-and-vice-versa)
+    - [Connecting to a service](#connecting-to-a-service)
+  - [Inside a docker image](#inside-a-docker-image)
+    - [Inspect the image](#inspect-the-image)
+    - [Inspecting a Dockerfile](#inspecting-a-dockerfile)
+    - [Build the image](#build-the-image)
+  - [Copying files from container to host and vice versa](#copying-files-from-container-to-host-and-vice-versa-1)
+  - [Mapping](#mapping)
+    - [Mapping ports](#mapping-ports)
+    - [Mapping volumes](#mapping-volumes)
 
 <!-- Added by: gil_diy, at: Wed 21 Sep 2022 01:03:25 IDT -->
 
@@ -125,6 +127,12 @@ For example:
 
 ```bash
 docker image pull alipne:latest
+```
+
+### Print the IDs of all containers that have exited
+
+```
+docker ps -q
 ```
 
 ### Start container/s
