@@ -131,8 +131,12 @@ docker image pull alipne:latest
 
 ### Print the IDs of all containers that have exited
 
-```
+```bash
 docker ps -q
+```
+
+```bash
+docker ps --filter status=exited
 ```
 
 ### Start container/s
