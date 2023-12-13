@@ -36,6 +36,13 @@ Other parts include a logging daemon, utilities to control basic system configur
 ### systemctl
 Analyzing the system state is done by **systemctl**, which is a tool for introspecting and controling the state of the systemd system and service manager (see examples in the table below).
 
+Threre are different type of unit files:
+
+* Service
+* Socket
+*
+
+
 
 Description | command
 ------------|-----
@@ -55,9 +62,37 @@ Mask a unit to make it impossible to start it | systemctl mask &lt;unit-name&gt;
 
 ### Where do configuration files for each process resides?
 
+Priority order:
+
+```bash
+/etc/systemd/system
+```
+
 ```bash
 /usr/lib/systemd/system
 ```
+
+### systemd unit files
+
+I have created a config file, in: `/etc/systemd/system/fastapi.service`
+
+```
+[Unit]
+Description=FastAPI Service
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/zsh -c 'source /home/gil/.local/share/virtualenvs/fastapi_robust_improvements-UxCX4V84/bin/activate && /home/gil/.local/share/virtualenvs/fastapi_robust_improvements-UxCX4V84/bin/uvicorn app.main:app --reload --host 0.0.0.0'
+
+WorkingDirectory=/home/gil/PycharmProjects/fastapi_robust_improvements
+User=gil
+Group=gil
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
+```
+
 
 
 ### systemd-analyze
