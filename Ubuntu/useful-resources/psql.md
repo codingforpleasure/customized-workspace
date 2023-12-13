@@ -19,6 +19,12 @@ sudo -u postgres createuser <username>
 ```
 
 
+### Restart service
+
+```bash
+sudo /etc/init.d/postgresql restart
+```
+
 ### Create
 
 ```
@@ -27,12 +33,35 @@ CREATE USER youruser WITH ENCRYPTED PASSWORD 'yourpass';
 GRANT ALL PRIVILEGES ON DATABASE yourdbname TO youruser;
 ```
 
+### Use Password Authentication
+
+
+you can use password authentication. This involves creating a PostgreSQL user with a password and configuring your connection accordingly.
+
+Open the sudo nano /etc/postgresql/{version}/main/pg_hba.conf
+
+Add a line for your user with md5 authentication. For example:
+
+```
+local   all             my_username                           md5
+```
+Replace my_username with the PostgreSQL username you are using.
+
+Save the file and restart PostgreSQL:
+
+```
+sudo service postgresql restart
+```
+
 ### Connect with user to existed DB
 
 ```
 psql -U gil -d nvox
 ```
 
+### List all databases
+
+`\l`
 
 ### List all tables in the current database
 
@@ -57,6 +86,12 @@ CREATE TABLE tbl_test_takers_details (
 );
 ```
 
+### Drop database
+
+```
+drop database my_db;
+```
+
 ### Drop table
 
 ```
@@ -66,4 +101,11 @@ DROP TABLE tbl_test_takers_details;
 
 ```bash
 \copy tbl_test_takers_details FROM '/home/gil/PycharmProjects/db_generate_fake_data/df_tbl_test_takers_details.csv' DELIMITER ',' CSV HEADER;
+```
+
+
+### Run script
+
+```
+psql -U gil -d nvox -a -f create_tables.pgsql
 ```
