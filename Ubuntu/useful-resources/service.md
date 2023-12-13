@@ -47,9 +47,18 @@ Stop a unit immediately | systemctl stop &lt;unit-name&gt;
 Restart a unit | systemctl restart &lt;unit-name&gt;
 Ask a unit to reload its configuration | systemctl reload &lt;unit-name&gt;
 Show the status of a unit, including whether it is running or not | systemctl status &lt;unit-name&gt;
+Make a service start on reboot | systemctl enable &lt;unit-name&gt;
 Mask a unit to make it impossible to start it | systemctl mask &lt;unit-name&gt;
  | systemctl -l --type service --all
  For root | systemctl -r --type service --all
+
+
+### Where do configuration files for each process resides?
+
+```bash
+/usr/lib/systemd/system
+```
+
 
 ### systemd-analyze
 
