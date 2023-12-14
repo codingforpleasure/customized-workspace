@@ -5,6 +5,7 @@
     - [Restart service](#restart-service)
     - [Create](#create)
     - [Use Password Authentication](#use-password-authentication)
+    - [Connect with user to existed DB](#connect-with-user-to-existed-db)
     - [List all databases](#list-all-databases)
     - [List all tables in the current database](#list-all-tables-in-the-current-database)
     - [Create table](#create-table)
@@ -32,7 +33,6 @@ GRANT ALL PRIVILEGES ON DATABASE db_name to user_name;
 ```bash
 sudo -u postgres createuser <username>
 ```
-
 
 ### Restart service
 
@@ -66,6 +66,12 @@ Save the file and restart PostgreSQL:
 
 ```
 sudo service postgresql restart
+```
+
+### Connect with user to existed DB
+
+```
+psql -U gil -d nvox
 ```
 
 ### List all databases
