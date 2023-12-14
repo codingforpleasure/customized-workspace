@@ -1,3 +1,18 @@
+- [PostgreSQL](#postgresql)
+  - [Install Postgres](#install-postgres)
+  - [Grant access to the new user:](#grant-access-to-the-new-user)
+    - [Creating user](#creating-user)
+    - [Restart service](#restart-service)
+    - [Create](#create)
+    - [Use Password Authentication](#use-password-authentication)
+    - [List all databases](#list-all-databases)
+    - [List all tables in the current database](#list-all-tables-in-the-current-database)
+    - [Create table](#create-table)
+    - [Drop database](#drop-database)
+    - [Drop table](#drop-table)
+    - [Run script](#run-script)
+
+
 # PostgreSQL
 
 ## Install Postgres
@@ -51,12 +66,6 @@ Save the file and restart PostgreSQL:
 
 ```
 sudo service postgresql restart
-```
-
-### Connect with user to existed DB
-
-```
-psql -U gil -d nvox
 ```
 
 ### List all databases
