@@ -1,6 +1,7 @@
 
 - [PostgreSQL](#postgresql)
   - [Install Postgres](#install-postgres)
+  - [Install autocomplete](#install-autocomplete)
   - [Grant access to the new user:](#grant-access-to-the-new-user)
     - [Creating user](#creating-user)
     - [Restart service](#restart-service)
@@ -22,6 +23,22 @@
 ```bash
 sudo apt install postgresql postgresql-contrib
 ```
+
+## Install autocomplete
+
+```
+https://github.com/dbcli/pgcli
+```
+
+
+after installing:
+
+```
+pgcli <local database>
+```
+
+
+[Reference](https://github.com/dbcli/pgcli)
 
 ## Grant access to the new user:
 
