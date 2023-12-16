@@ -31,7 +31,7 @@ https://github.com/dbcli/pgcli
 ```
 
 
-after installing:
+After installing:
 
 ```
 pgcli <local database>
