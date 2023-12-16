@@ -26,8 +26,8 @@ sudo apt install postgresql postgresql-contrib
 
 ## Install autocomplete
 
-```
-https://github.com/dbcli/pgcli
+```bash
+sudo apt-get install pgcli
 ```
 
 
