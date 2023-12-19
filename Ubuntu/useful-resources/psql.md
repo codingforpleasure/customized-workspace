@@ -12,6 +12,7 @@
     - [List all tables in the current database](#list-all-tables-in-the-current-database)
     - [Create table](#create-table)
     - [Drop database](#drop-database)
+    - [Remove all rows in table](#remove-all-rows-in-table)
     - [Drop table](#drop-table)
     - [Run script](#run-script)
 
@@ -124,6 +125,13 @@ CREATE TABLE tbl_test_takers_details (
 ```
 drop database my_db;
 ```
+
+### Remove all rows in table
+
+```
+DELETE FROM examinee_child_details;
+```
+
 
 ### Drop table
 
