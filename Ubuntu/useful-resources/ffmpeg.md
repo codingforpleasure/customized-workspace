@@ -43,9 +43,14 @@
     - [Extract audio file from video file (Pull audio track)](#extract-audio-file-from-video-file-pull-audio-track)
     - [Convert either m4a or mp3  to WAV file](#convert-either-m4a-or-mp3--to-wav-file)
     - [Generate video with waveform](#generate-video-with-waveform)
+    - [Split a video file](#split-a-video-file)
     - [Split an audio file into multiple files](#split-an-audio-file-into-multiple-files)
+    - [Join videos listed in text file](#join-videos-listed-in-text-file)
     - [Extend audio length](#extend-audio-length)
     - [Modify sample rate](#modify-sample-rate)
+  - [ffmpeg-python](#ffmpeg-python)
+    - [Modify sample rate](#modify-sample-rate-1)
+    - [Extract audio (mp3) from the video file using ffmpeg-python](#extract-audio-mp3-from-the-video-file-using-ffmpeg-python)
   - [Convert to gif](#convert-to-gif)
   - [Resizing animated gif's width/Height](#resizing-animated-gifs-widthheight)
   - [Make gif run once (no loops)](#make-gif-run-once-no-loops)
@@ -413,6 +418,12 @@ ffmpeg -i input.mp3 -filter_complex "mode=line" output.avi
 [Reference](https://youtu.be/M58rc7cxl_s?list=PLJse9iV6Reqiy8wP0rXTgFQkMNutRMN0j&t=565) 
 
 
+### Split a video file
+
+If you want to just split the video without re-encoding it, use the copy codec for audio and video. Try this:
+
+ffmpeg -ss 00:00:00 -t 00:50:00 -i largefile.mp4 -acodec copy -vcodec copy smallfile.mp4
+
 ### Split an audio file into multiple files
 
 ```bash
@@ -420,6 +431,20 @@ ffmpeg -i somefile.mp3 -f segment -segment_time 3 -c copy out%03d.mp3
 ```
 
 `-segment_time` is the amount of time you want per each file
+
+### Join videos listed in text file
+
+```bash
+ffmpeg -f concat -i vidlist.txt -c copy out.mp4
+```
+
+The `video_list.txt` should be of the following way:
+```
+file 'My_name.mp4'
+file 'Greeting.mp4'
+```
+
+
 
 ### Extend audio length
 
@@ -440,6 +465,9 @@ ffmpeg -i 111.mp3 -acodec pcm_s16le -ac 1 -ar 16000 out.wav
 
 `-ac 1 for audio channel`
 
+## ffmpeg-python
+
+### Modify sample rate 
 
 Python code:
 
@@ -458,6 +486,10 @@ out, _ = (ffmpeg
           .run(capture_stdout=True, capture_stderr=True)
           )
 ```
+
+### Extract audio (mp3) from the video file using ffmpeg-python
+
+
 
 ## Convert to gif
 
