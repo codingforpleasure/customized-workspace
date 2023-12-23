@@ -438,7 +438,7 @@ ffmpeg -i somefile.mp3 -f segment -segment_time 3 -c copy out%03d.mp3
 ffmpeg -f concat -i video_list.txt -c copy out.mp4
 ```
 
-The `video_list.txt` should be of the following way:
+The `video_list.txt` should be of the following way (files located in the current directory):
 ```
 file 'My_name.mp4'
 file 'Greeting.mp4'
