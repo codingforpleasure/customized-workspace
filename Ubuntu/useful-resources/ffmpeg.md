@@ -435,7 +435,7 @@ ffmpeg -i somefile.mp3 -f segment -segment_time 3 -c copy out%03d.mp3
 ### Join videos listed in text file
 
 ```bash
-ffmpeg -f concat -i vidlist.txt -c copy out.mp4
+ffmpeg -f concat -i video_list.txt -c copy out.mp4
 ```
 
 The `video_list.txt` should be of the following way:
