@@ -653,3 +653,6 @@ plt.show()
 [Link](https://aegis4048.github.io/optimize_computational_efficiency_of_skip-gram_with_negative_sampling)
 
 [optimize_computational_efficiency_of_skip-gram_with_negative_sampling](https://aegis4048.github.io/optimize_computational_efficiency_of_skip-gram_with_negative_sampling)
+
+
+[Annotation tool for text](https://github.com/doccano/doccano)
